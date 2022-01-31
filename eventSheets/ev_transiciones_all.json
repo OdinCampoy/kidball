@@ -14,6 +14,10 @@
 			"includeSheet": "Pausa"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "ARREGLO TAMANYOS"
+		},
+		{
 			"eventType": "variable",
 			"name": "AA_numero_de_nivel_para_guardado",
 			"type": "number",
@@ -204,6 +208,41 @@
 						{
 							"callFunction": "GUARDADO EN CHECKPOINT",
 							"sid": 842686138446550
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 481789695063734,
+							"parameters": {
+								"object": "bola_estela_roja",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "bola_estela_roja",
+							"sid": 230653117300240,
+							"parameters": {
+								"where": "behind",
+								"object": "bola"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "bola_estela_roja",
+							"sid": 277865912983869,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "bola",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 864394923945751
@@ -235,6 +274,41 @@
 						{
 							"callFunction": "GUARDADO EN CHECKPOINT",
 							"sid": 461524097035597
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 839074626492103,
+							"parameters": {
+								"object": "bola_estela_roja",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "bola_estela_roja",
+							"sid": 800980083505651,
+							"parameters": {
+								"where": "behind",
+								"object": "bola"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "bola_estela_roja",
+							"sid": 465529920699249,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "bola",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 645799996360339
@@ -266,6 +340,41 @@
 						{
 							"callFunction": "GUARDADO EN CHECKPOINT",
 							"sid": 799609504853970
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 653641688807530,
+							"parameters": {
+								"object": "bola_estela_roja",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "bola_estela_roja",
+							"sid": 425855272318985,
+							"parameters": {
+								"where": "behind",
+								"object": "bola"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "bola_estela_roja",
+							"sid": 273580634598878,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "bola",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 117497178420317
@@ -297,6 +406,41 @@
 						{
 							"callFunction": "GUARDADO EN CHECKPOINT",
 							"sid": 786371485538326
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 629851654851565,
+							"parameters": {
+								"object": "bola_estela_roja",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "bola_estela_roja",
+							"sid": 662646155158185,
+							"parameters": {
+								"where": "behind",
+								"object": "bola"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "bola_estela_roja",
+							"sid": 188973739864503,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "bola",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 831979286412642
@@ -328,6 +472,41 @@
 						{
 							"callFunction": "GUARDADO EN CHECKPOINT",
 							"sid": 555585132670411
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 729129437064661,
+							"parameters": {
+								"object": "bola_estela_roja",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "bola_estela_roja",
+							"sid": 656149747107009,
+							"parameters": {
+								"where": "behind",
+								"object": "bola"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "bola_estela_roja",
+							"sid": 144604184125808,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "bola",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 399203322266928
@@ -359,6 +538,41 @@
 						{
 							"callFunction": "GUARDADO EN CHECKPOINT",
 							"sid": 235716876107808
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 212689599574393,
+							"parameters": {
+								"object": "bola_estela_rosa",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "bola_estela_rosa",
+							"sid": 713680854000523,
+							"parameters": {
+								"where": "behind",
+								"object": "bola"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "bola_estela_rosa",
+							"sid": 753222475552687,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "bola",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 149953736065705
@@ -390,6 +604,41 @@
 						{
 							"callFunction": "GUARDADO EN CHECKPOINT",
 							"sid": 529606054620649
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 933885817758277,
+							"parameters": {
+								"object": "bola_estela_rosa",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "bola_estela_rosa",
+							"sid": 191881665323809,
+							"parameters": {
+								"where": "behind",
+								"object": "bola"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "bola_estela_rosa",
+							"sid": 895496234144369,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "bola",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 528284691704585
@@ -421,6 +670,41 @@
 						{
 							"callFunction": "GUARDADO EN CHECKPOINT",
 							"sid": 477600746812290
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 945172862826673,
+							"parameters": {
+								"object": "bola_estela_rosa",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "bola_estela_rosa",
+							"sid": 119857535497649,
+							"parameters": {
+								"where": "behind",
+								"object": "bola"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "bola_estela_rosa",
+							"sid": 866372589281418,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "bola",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 877185456717306
@@ -452,6 +736,41 @@
 						{
 							"callFunction": "GUARDADO EN CHECKPOINT",
 							"sid": 505212594153180
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 304972366725258,
+							"parameters": {
+								"object": "bola_estela_rosa",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "bola_estela_rosa",
+							"sid": 234218542717967,
+							"parameters": {
+								"where": "behind",
+								"object": "bola"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "bola_estela_rosa",
+							"sid": 963887713903702,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "bola",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 531955532667844
@@ -483,6 +802,41 @@
 						{
 							"callFunction": "GUARDADO EN CHECKPOINT",
 							"sid": 123475171766704
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 249154241541482,
+							"parameters": {
+								"object": "bola_estela_rosa",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "bola_estela_rosa",
+							"sid": 987931567031794,
+							"parameters": {
+								"where": "behind",
+								"object": "bola"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "bola_estela_rosa",
+							"sid": 271215982061520,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "bola",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 691471017447954
@@ -607,27 +961,164 @@
 					"behaviorType": "Platform"
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 313265763677861,
+			"children": [
 				{
-					"id": "simulate-control",
-					"objectClass": "bola",
-					"sid": 786186481095327,
-					"behaviorType": "Platform",
-					"parameters": {
-						"control": "right"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 455570277980290,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"1M_CHECKPOINT\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 206692116030448,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"2M_CHECKPOINT\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 245374294414301,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"3M_CHECKPOINT\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 675772452735951,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"4M_CHECKPOINT\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 669148373368247,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"5M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "bola",
+							"sid": 227899963687364,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "bola",
+							"sid": 735608005459476,
+							"parameters": {
+								"animation": "\"DERECHA_4\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 695146107217558,
+					"isOrBlock": true
 				},
 				{
-					"id": "set-animation",
-					"objectClass": "bola",
-					"sid": 221273140389270,
-					"parameters": {
-						"animation": "\"DERECHA_4\"",
-						"from": "current-frame"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 823009595255736,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"6M_CHECKPOINT\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 990786357354684,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"7M_CHECKPOINT\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 186850611394654,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"8M_CHECKPOINT\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 834601491751082,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"9M_CHECKPOINT\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 890387875295082,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"10M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "bola",
+							"sid": 734196203974992,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "bola",
+							"sid": 540662352256149,
+							"parameters": {
+								"animation": "\"derecha_rosa\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 797237566581549,
+					"isOrBlock": true
 				}
-			],
-			"sid": 313265763677861
+			]
 		},
 		{
 			"eventType": "block",

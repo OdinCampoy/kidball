@@ -14741,6 +14741,118 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
+									"sid": 543490233239093,
+									"parameters": {
+										"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+										"comparison": 0,
+										"value": "\"ROJA\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 425289596508981,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 880100669793587
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "bola",
+											"sid": 162919562134362,
+											"parameters": {
+												"animation": "\"DERECHA_4\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "bola",
+											"sid": 141624910849051,
+											"parameters": {
+												"object": "bola_estela_roja",
+												"layer": "Self.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "bola_estela_roja",
+											"sid": 182151855404598,
+											"parameters": {
+												"where": "behind",
+												"object": "bola"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "bola_estela_roja",
+											"sid": 713699383632846,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "bola",
+												"x": true,
+												"y": true,
+												"angle": false,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "bola",
+											"sid": 766156141868361,
+											"parameters": {
+												"frame-number": "3"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "bola",
+											"sid": 319154219259991,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 967098661312186,
+											"parameters": {
+												"object-to-create": "Bola_HUD",
+												"layer": "\"HUD\"",
+												"x": "50",
+												"y": "20",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Bola_HUD",
+											"sid": 632263145107242,
+											"parameters": {
+												"frame-number": "0"
+											}
+										}
+									],
+									"sid": 306087003107453
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
 									"sid": 545568798508126,
 									"parameters": {
 										"variable": "bola_ROJA_o_ROSA_sin_SLOT",
@@ -14844,118 +14956,6 @@
 										}
 									],
 									"sid": 194216854131156
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 549067117642342,
-									"parameters": {
-										"variable": "bola_ROJA_o_ROSA_sin_SLOT",
-										"comparison": 0,
-										"value": "\"ROJA\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 750022614923100,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 324291832021249
-										}
-									],
-									"actions": [
-										{
-											"id": "set-animation",
-											"objectClass": "bola",
-											"sid": 784598119778734,
-											"parameters": {
-												"animation": "\"DERECHA_4\"",
-												"from": "beginning"
-											}
-										},
-										{
-											"id": "spawn-another-object",
-											"objectClass": "bola",
-											"sid": 574387123629485,
-											"parameters": {
-												"object": "bola_estela_roja",
-												"layer": "Self.LayerName",
-												"image-point": "0",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "move-to-object",
-											"objectClass": "bola_estela_roja",
-											"sid": 956305632857508,
-											"parameters": {
-												"where": "behind",
-												"object": "bola"
-											}
-										},
-										{
-											"id": "pin-to-object-properties",
-											"objectClass": "bola_estela_roja",
-											"sid": 832933200205744,
-											"behaviorType": "Pin",
-											"parameters": {
-												"pin-to": "bola",
-												"x": true,
-												"y": true,
-												"angle": false,
-												"width-type": "no",
-												"height-type": "no",
-												"z": false
-											}
-										},
-										{
-											"id": "set-animation-frame",
-											"objectClass": "bola",
-											"sid": 950259626682378,
-											"parameters": {
-												"frame-number": "3"
-											}
-										},
-										{
-											"id": "set-visible",
-											"objectClass": "bola",
-											"sid": 907788289339153,
-											"parameters": {
-												"visibility": "visible"
-											}
-										},
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 398837633279448,
-											"parameters": {
-												"object-to-create": "Bola_HUD",
-												"layer": "\"HUD\"",
-												"x": "50",
-												"y": "20",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "set-animation-frame",
-											"objectClass": "Bola_HUD",
-											"sid": 463141274656607,
-											"parameters": {
-												"frame-number": "0"
-											}
-										}
-									],
-									"sid": 848918630650650
 								}
 							]
 						}
