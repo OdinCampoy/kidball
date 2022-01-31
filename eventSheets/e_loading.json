@@ -1,0 +1,3961 @@
+{
+	"name": "e_LOADING",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Ev_desarrollador"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 237089808984696
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 245209135606000,
+					"parameters": {
+						"variable": "CONTADOR_LOADING",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 924457313904459,
+					"parameters": {
+						"variable": "FECHA_FACEBOOK",
+						"value": "mid(Browser.ExecJS(\"Date()\"),8,2)"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "SLOTS 1"
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 861037706048778,
+					"parameters": {
+						"key": "\"Nivel_actual_1\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 307868695845346,
+					"parameters": {
+						"key": "\"GEMAS_1\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 634816868674880,
+					"parameters": {
+						"key": "\"VIDAS_1\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 209186804219222,
+					"parameters": {
+						"key": "\"BOLA_ROJA_o_ROSA_1\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 214162304484391,
+					"parameters": {
+						"key": "\"INTRO_HECHA_SI_NO_1\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 227541568667102,
+					"parameters": {
+						"key": "\"Captura_Slot_1\""
+					}
+				},
+				{
+					"type": "comment",
+					"text": "SLOTS 2"
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 533751403276556,
+					"parameters": {
+						"key": "\"Nivel_actual_2\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 390858798438689,
+					"parameters": {
+						"key": "\"GEMAS_2\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 388172488924917,
+					"parameters": {
+						"key": "\"VIDAS_2\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 460229485182157,
+					"parameters": {
+						"key": "\"BOLA_ROJA_o_ROSA_2\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 962189065686674,
+					"parameters": {
+						"key": "\"INTRO_HECHA_SI_NO_2\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 501592721499619,
+					"parameters": {
+						"key": "\"Captura_Slot_2\""
+					}
+				},
+				{
+					"type": "comment",
+					"text": "SLOTS 3"
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 718231390995636,
+					"parameters": {
+						"key": "\"Nivel_actual_3\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 350928971624575,
+					"parameters": {
+						"key": "\"GEMAS_3\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 817058880221658,
+					"parameters": {
+						"key": "\"VIDAS_3\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 169364810732660,
+					"parameters": {
+						"key": "\"BOLA_ROJA_o_ROSA_3\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 694163087760985,
+					"parameters": {
+						"key": "\"INTRO_HECHA_SI_NO_3\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 976968016650684,
+					"disabled": true,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_time\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 280337436825952,
+					"disabled": true,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_death\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 606486491301470,
+					"disabled": true,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_doom\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 683438844079760,
+					"parameters": {
+						"key": "\"Captura_Slot_3\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 467975935913764,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_TIME\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 702164834196773,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_DEATH\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 987233489665758,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_DOOM\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 909052956746375,
+					"disabled": true,
+					"parameters": {
+						"variable": "contador_de_publicidad",
+						"value": "0"
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 739278233786361,
+					"disabled": true,
+					"parameters": {
+						"key": "\"PROMO_JUEGO\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 799664272727315,
+					"disabled": true,
+					"parameters": {
+						"key": "\"PROMO_JUEGO_PULSADA\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 928490941199809,
+					"disabled": true,
+					"parameters": {
+						"key": "\"Valorar_APP\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 205922119042290,
+					"disabled": true,
+					"parameters": {
+						"key": "\"MUERTES_EN_JUEGO\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 515289773104282,
+					"disabled": true,
+					"parameters": {
+						"key": "\"PARTIDAS_JUGADAS\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 829372817570013,
+					"disabled": true,
+					"parameters": {
+						"object": "\"FONDO_M1\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 623659666748792,
+					"disabled": true,
+					"parameters": {
+						"object": "\"FONDO_M2\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 772406704208068,
+					"disabled": true,
+					"parameters": {
+						"object": "\"FONDO_M3\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 747752505489538,
+					"disabled": true,
+					"parameters": {
+						"object": "\"FONDO_M4\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 786593800058332,
+					"disabled": true,
+					"parameters": {
+						"object": "\"FONDO_M5\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 451728073583990,
+					"disabled": true,
+					"parameters": {
+						"object": "\"SOLIDO_M1\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 403632626652473,
+					"disabled": true,
+					"parameters": {
+						"object": "\"SOLIDO_M2\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 122059417019111,
+					"disabled": true,
+					"parameters": {
+						"object": "\"SOLIDO_M3\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 795699014958245,
+					"disabled": true,
+					"parameters": {
+						"object": "\"SOLIDO_M4\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 189550536795775,
+					"disabled": true,
+					"parameters": {
+						"object": "\"SOLIDO_M5\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 899079149771303,
+					"disabled": true,
+					"parameters": {
+						"object": "\"FONDO_intro\""
+					}
+				},
+				{
+					"id": "load-object-images-by-name",
+					"objectClass": "System",
+					"sid": 383290370057993,
+					"disabled": true,
+					"parameters": {
+						"object": "\"SOLIDO_INTRO\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 160939337229273,
+					"disabled": true,
+					"parameters": {
+						"key": "\"MUSICA\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 420397298505059,
+					"parameters": {
+						"key": "\"SAVE_GIRL\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 431674948188331,
+					"parameters": {
+						"key": "\"MUSICA\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 105887658276679,
+					"parameters": {
+						"key": "\"Musica_Volumen_Master\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 485514703338442,
+					"parameters": {
+						"key": "\"SonidoFX_Volumen_Master\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 564979745519701,
+					"parameters": {
+						"key": "\"Idoma_Master\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 482752427599970,
+					"parameters": {
+						"key": "\"Idioma_numerico\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 836661252627332,
+					"parameters": {
+						"key": "\"Last_Save\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 840401115905902,
+					"disabled": true,
+					"parameters": {
+						"key": "\"logro_1_demo\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 251316592511238,
+					"disabled": true,
+					"parameters": {
+						"key": "\"logro_2_demo\""
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 532975553094209,
+					"parameters": {
+						"tag": "\"Traducciones\"",
+						"file": "TRADUCCIONES.json"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "bola",
+					"sid": 523675228742162,
+					"parameters": {
+						"animation": "\"DERECHA_4\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 729524214562225,
+					"parameters": {
+						"object-to-create": "Portada_Fondo_Opciones",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 911563487602049,
+					"parameters": {
+						"object-to-create": "Portada_Tablon_opciones",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 395680400268207,
+					"parameters": {
+						"object-to-create": "PAUSE_pause_TXT",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 702573580643629,
+					"parameters": {
+						"object-to-create": "PORTADA_Opc_SoundFx_txt",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 151252357338034,
+					"parameters": {
+						"object-to-create": "PORTADA_Opc_SoundFx_icon_L",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 442854357494188,
+					"parameters": {
+						"object-to-create": "PORTADA_Opc_SoundFx_icon",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 611183824608232,
+					"parameters": {
+						"object-to-create": "PORTADA_Opc_SoundFx_icon_R",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 504442205012893,
+					"parameters": {
+						"object-to-create": "PORTADA_Opc_Music_txt",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 733263157505588,
+					"parameters": {
+						"object-to-create": "PORTADA_Opc_Music_icon_L",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 760867602379301,
+					"parameters": {
+						"object-to-create": "PORTADA_Opc_Music_icon",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 530850873169744,
+					"parameters": {
+						"object-to-create": "PORTADA_Opc_Music_icon_R",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 557241107948746,
+					"parameters": {
+						"object-to-create": "PAUSE_Exit_txt_MAIN_MENU",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 677706690853233,
+					"parameters": {
+						"object-to-create": "PAUSE_Resume_game_TXT",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 335534920429917,
+					"parameters": {
+						"object-to-create": "PORTADA_Opc_Selected_txt",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 643938151255726,
+					"parameters": {
+						"object-to-create": "PORTADA_Opc_Button_Leyend",
+						"layer": "\"fondo\"",
+						"x": "-5000",
+						"y": "-5000",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 662753369365978,
+					"parameters": {
+						"tag": "\"SPEEDRUN_10_SLOTS_JSON_GUARDADO\"",
+						"file": "DICCIONARIO_SPEEDRUN_10_SLOTS_JSON_GUARDADO.json"
+					}
+				}
+			],
+			"sid": 438069072872123
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 410071869878916,
+					"parameters": {
+						"tag": "\"Traducciones\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Array_Traducciones_IDOMAS",
+					"sid": 455660991746151,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 287722763379987
+				}
+			],
+			"sid": 495462801465369
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 181179744400767,
+					"parameters": {
+						"tag": "\"SPEEDRUN_10_SLOTS_JSON_GUARDADO\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Array_SPR_10_SLOTS_1_TIME",
+					"sid": 291668480348685,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 786321767409689
+				}
+			],
+			"sid": 334603340840987,
+			"disabled": true
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "LOCAL STORAGE PARA MOVILES",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "*******************************************************************"
+				},
+				{
+					"eventType": "comment",
+					"text": "VALORAR APP"
+				},
+				{
+					"eventType": "comment",
+					"text": "*******************************************************************"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 138122825869909,
+							"parameters": {
+								"key": "\"Valorar_APP\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 175684695727238,
+							"parameters": {
+								"variable": "Valorar_APP",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 385700029557340,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 656537034163657,
+							"parameters": {
+								"key": "\"Valorar_APP\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 247470791806156,
+							"parameters": {
+								"key": "\"Valorar_APP\""
+							}
+						}
+					],
+					"sid": 413032248372363,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 481417239856097,
+							"parameters": {
+								"key": "\"Valorar_APP\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 779136575767069,
+							"parameters": {
+								"variable": "Valorar_APP",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 642437061581587,
+					"disabled": true
+				},
+				{
+					"eventType": "comment",
+					"text": "*******************************************************************"
+				},
+				{
+					"eventType": "comment",
+					"text": "PROMO JUEGO"
+				},
+				{
+					"eventType": "comment",
+					"text": "*******************************************************************"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 155978181048119,
+							"parameters": {
+								"key": "\"PROMO_JUEGO\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 479164100799737,
+							"parameters": {
+								"variable": "PROMO_JUEGO",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 411817733802274,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 709165466701362,
+							"parameters": {
+								"key": "\"PROMO_JUEGO\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 285371869832225,
+							"parameters": {
+								"key": "\"PROMO_JUEGO\""
+							}
+						}
+					],
+					"sid": 418167440116516,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 744490843880100,
+							"parameters": {
+								"key": "\"PROMO_JUEGO\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 464496877881513,
+							"parameters": {
+								"variable": "PROMO_JUEGO",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 970770757037937,
+					"disabled": true
+				},
+				{
+					"eventType": "comment",
+					"text": "*******************************************************************"
+				},
+				{
+					"eventType": "comment",
+					"text": "PROMO JUEGO PULSADA"
+				},
+				{
+					"eventType": "comment",
+					"text": "*******************************************************************"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 612155423676985,
+							"parameters": {
+								"key": "\"PROMO_JUEGO_PULSADA\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 645524919119634,
+							"parameters": {
+								"variable": "PROMO_JUEGO_PULSADA",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 699631902032672,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 891094292122748,
+							"parameters": {
+								"key": "\"PROMO_JUEGO_PULSADA\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 257529834337999,
+							"parameters": {
+								"key": "\"PROMO_JUEGO_PULSADA\""
+							}
+						}
+					],
+					"sid": 312203938807181,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 580463680368432,
+							"parameters": {
+								"key": "\"PROMO_JUEGO_PULSADA\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 613541717263570,
+							"parameters": {
+								"variable": "PROMO_JUEGO_PULSADA",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 780354578445482,
+					"disabled": true
+				},
+				{
+					"eventType": "comment",
+					"text": "*******************************************************************"
+				},
+				{
+					"eventType": "comment",
+					"text": "MUERTES TOTALES EN EL JUEGO"
+				},
+				{
+					"eventType": "comment",
+					"text": "*******************************************************************"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 875906465677011,
+							"parameters": {
+								"key": "\"MUERTES_EN_JUEGO\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 464059290816821,
+							"parameters": {
+								"variable": "MUERTES_EN_JUEGO",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 273590978056821,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 504486492373810,
+							"parameters": {
+								"key": "\"MUERTES_EN_JUEGO\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 946817874223632,
+							"parameters": {
+								"key": "\"MUERTES_EN_JUEGO\""
+							}
+						}
+					],
+					"sid": 791009581966383,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 431649763692543,
+							"parameters": {
+								"key": "\"MUERTES_EN_JUEGO\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 307833762251319,
+							"parameters": {
+								"variable": "MUERTES_EN_JUEGO",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 526873773482919,
+					"disabled": true
+				},
+				{
+					"eventType": "comment",
+					"text": "*******************************************************************"
+				},
+				{
+					"eventType": "comment",
+					"text": "PARTIDAS JUGADAS TOTALES"
+				},
+				{
+					"eventType": "comment",
+					"text": "*******************************************************************"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 911196490775515,
+							"parameters": {
+								"key": "\"PARTIDAS_JUGADAS\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 673799452076299,
+							"parameters": {
+								"variable": "PARTIDAS_JUGADAS",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 901764654494717,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 819575036793211,
+							"parameters": {
+								"key": "\"PARTIDAS_JUGADAS\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 685637655126750,
+							"parameters": {
+								"key": "\"PARTIDAS_JUGADAS\""
+							}
+						}
+					],
+					"sid": 439605862610459,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 902472864894354,
+							"parameters": {
+								"key": "\"PARTIDAS_JUGADAS\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 395115703704516,
+							"parameters": {
+								"variable": "PARTIDAS_JUGADAS",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 419629062436989,
+					"disabled": true
+				}
+			],
+			"sid": 828792596176941
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SLOT 1 CARGADO DE DATOS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "NIVEL ACTUAL slot 1"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 195571875351465,
+							"parameters": {
+								"key": "\"Nivel_actual_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 573258688316570,
+							"parameters": {
+								"variable": "Nivel_actual_1",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 269587215268622
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 750366188572811,
+							"parameters": {
+								"key": "\"Nivel_actual_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 639753864899717,
+							"parameters": {
+								"key": "\"Nivel_actual_1\""
+							}
+						}
+					],
+					"sid": 758526572623667
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 868112474524447,
+							"parameters": {
+								"key": "\"Nivel_actual_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 296872538786569,
+							"parameters": {
+								"variable": "Nivel_actual_1",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 237715078510087
+				},
+				{
+					"eventType": "comment",
+					"text": "GEMAS slot 1"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 175459336254702,
+							"parameters": {
+								"key": "\"GEMAS_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 225858803146868,
+							"parameters": {
+								"variable": "GEMAS_1",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 375452041963138
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 993349920051968,
+							"parameters": {
+								"key": "\"GEMAS_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 925942674763455,
+							"parameters": {
+								"key": "\"GEMAS_1\""
+							}
+						}
+					],
+					"sid": 760724807504598
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 176360937442046,
+							"parameters": {
+								"key": "\"GEMAS_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 562955126369469,
+							"parameters": {
+								"variable": "GEMAS_1",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 438833318950219
+				},
+				{
+					"eventType": "comment",
+					"text": "VIDAS slot 1"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 946982371008437,
+							"parameters": {
+								"key": "\"VIDAS_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 634699791339411,
+							"parameters": {
+								"variable": "VIDAS_1",
+								"value": "9"
+							}
+						}
+					],
+					"sid": 518159720795597
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 165628169342664,
+							"parameters": {
+								"key": "\"VIDAS_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 809721134842911,
+							"parameters": {
+								"key": "\"VIDAS_1\""
+							}
+						}
+					],
+					"sid": 700608869579034
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 242143333441712,
+							"parameters": {
+								"key": "\"VIDAS_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 825862205013602,
+							"parameters": {
+								"variable": "VIDAS_1",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 536865155892602
+				},
+				{
+					"eventType": "comment",
+					"text": "NIVEL DIFICULTAD slot 1"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 495849841502713,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 180563212942558,
+							"parameters": {
+								"variable": "BOLA_ROJA_o_ROSA_1",
+								"value": "\"ROJA\""
+							}
+						}
+					],
+					"sid": 502721039257958
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 742940798454959,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 226161491773348,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_1\""
+							}
+						}
+					],
+					"sid": 697878862597660
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 374972219011116,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 515148029592834,
+							"parameters": {
+								"variable": "BOLA_ROJA_o_ROSA_1",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 194595044508856
+				},
+				{
+					"eventType": "comment",
+					"text": "INTRO HECHA SI O NO slot 1"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 139460858825191,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 762198222653239,
+							"parameters": {
+								"variable": "INTRO_HECHA_SI_NO_1",
+								"value": "\"NO\""
+							}
+						}
+					],
+					"sid": 375042712881739
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 623770750662574,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 146717162170054,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_1\""
+							}
+						}
+					],
+					"sid": 240554960749717
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 677632344785613,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 570738797730002,
+							"parameters": {
+								"variable": "INTRO_HECHA_SI_NO_1",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 441510875679617
+				},
+				{
+					"eventType": "comment",
+					"text": "captura para el slot 1"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 945443912635711,
+							"parameters": {
+								"key": "\"Captura_Slot_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 148425150316760,
+							"parameters": {
+								"variable": "Captura_Slot_1",
+								"value": "\"\""
+							}
+						}
+					],
+					"sid": 448952449531852
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 615266725686151,
+							"parameters": {
+								"key": "\"Captura_Slot_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 256572191581097,
+							"parameters": {
+								"key": "\"Captura_Slot_1\""
+							}
+						}
+					],
+					"sid": 677569265901452
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 722611009974464,
+							"parameters": {
+								"key": "\"Captura_Slot_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 407022610146732,
+							"parameters": {
+								"variable": "Captura_Slot_1",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 960777968806760
+				}
+			],
+			"sid": 219750815797461
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SLOT 2 CARGADO DE DATOS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "NIVEL ACTUAL slot 2"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 757011475332704,
+							"parameters": {
+								"key": "\"Nivel_actual_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 560547562312857,
+							"parameters": {
+								"variable": "Nivel_actual_2",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 401399170104475
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 607172352844647,
+							"parameters": {
+								"key": "\"Nivel_actual_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 265527671754819,
+							"parameters": {
+								"key": "\"Nivel_actual_2\""
+							}
+						}
+					],
+					"sid": 950869657071195
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 828339772687325,
+							"parameters": {
+								"key": "\"Nivel_actual_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 655731201243709,
+							"parameters": {
+								"variable": "Nivel_actual_2",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 187840983139486
+				},
+				{
+					"eventType": "comment",
+					"text": "GEMAS slot 2"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 739846651014087,
+							"parameters": {
+								"key": "\"GEMAS_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 986733660449280,
+							"parameters": {
+								"variable": "GEMAS_2",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 693588010826491
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 893598988219205,
+							"parameters": {
+								"key": "\"GEMAS_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 662464998532351,
+							"parameters": {
+								"key": "\"GEMAS_2\""
+							}
+						}
+					],
+					"sid": 358546902322784
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 148994236440811,
+							"parameters": {
+								"key": "\"GEMAS_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 612574919444758,
+							"parameters": {
+								"variable": "GEMAS_2",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 776884869518445
+				},
+				{
+					"eventType": "comment",
+					"text": "VIDAS slot 2"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 545273528714239,
+							"parameters": {
+								"key": "\"VIDAS_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 423146021191530,
+							"parameters": {
+								"variable": "VIDAS_2",
+								"value": "9"
+							}
+						}
+					],
+					"sid": 991901763415553
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 338408996503518,
+							"parameters": {
+								"key": "\"VIDAS_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 281053891145724,
+							"parameters": {
+								"key": "\"VIDAS_2\""
+							}
+						}
+					],
+					"sid": 566733179691888
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 620393449222609,
+							"parameters": {
+								"key": "\"VIDAS_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 971414135633285,
+							"parameters": {
+								"variable": "VIDAS_2",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 372364105813334
+				},
+				{
+					"eventType": "comment",
+					"text": "NIVEL DIFICULTAD slot 2"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 882904345856912,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 585420964381639,
+							"parameters": {
+								"variable": "BOLA_ROJA_o_ROSA_2",
+								"value": "\"ROJA\""
+							}
+						}
+					],
+					"sid": 946862996937212
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 129792912629358,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 934694764929857,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_2\""
+							}
+						}
+					],
+					"sid": 721194243856379
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 783032774319522,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 518312752759532,
+							"parameters": {
+								"variable": "BOLA_ROJA_o_ROSA_2",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 280188819429552
+				},
+				{
+					"eventType": "comment",
+					"text": "INTRO HECHA SI O NO slot 2"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 407165179691265,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 776361092217043,
+							"parameters": {
+								"variable": "INTRO_HECHA_SI_NO_2",
+								"value": "\"NO\""
+							}
+						}
+					],
+					"sid": 796240649123894
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 618591824418981,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 710023334591496,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_2\""
+							}
+						}
+					],
+					"sid": 712206650829527
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 173230303791969,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 203316674067747,
+							"parameters": {
+								"variable": "INTRO_HECHA_SI_NO_2",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 295403443332433
+				},
+				{
+					"eventType": "comment",
+					"text": "captura para el slot 2"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 160665267880075,
+							"parameters": {
+								"key": "\"Captura_Slot_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 853780409087049,
+							"parameters": {
+								"variable": "Captura_Slot_2",
+								"value": "\"\""
+							}
+						}
+					],
+					"sid": 321674873136887
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 240775531596702,
+							"parameters": {
+								"key": "\"Captura_Slot_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 761145348443633,
+							"parameters": {
+								"key": "\"Captura_Slot_2\""
+							}
+						}
+					],
+					"sid": 255426527418627
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 450497620441460,
+							"parameters": {
+								"key": "\"Captura_Slot_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 872085838922303,
+							"parameters": {
+								"variable": "Captura_Slot_2",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 598304861155457
+				}
+			],
+			"sid": 563539872754728
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SLOT 3 CARGADO DE DATOS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "NIVEL ACTUAL slot 3"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 328891517927621,
+							"parameters": {
+								"key": "\"Nivel_actual_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 961384353930313,
+							"parameters": {
+								"variable": "Nivel_actual_3",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 849873017457802
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 398962411266901,
+							"parameters": {
+								"key": "\"Nivel_actual_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 265265213782999,
+							"parameters": {
+								"key": "\"Nivel_actual_3\""
+							}
+						}
+					],
+					"sid": 513963889050497
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 761626101503733,
+							"parameters": {
+								"key": "\"Nivel_actual_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 399641432961349,
+							"parameters": {
+								"variable": "Nivel_actual_3",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 209018852603841
+				},
+				{
+					"eventType": "comment",
+					"text": "GEMAS slot 3"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 978903161123451,
+							"parameters": {
+								"key": "\"GEMAS_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 526376106292417,
+							"parameters": {
+								"variable": "GEMAS_3",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 624841012271283
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 634238153963403,
+							"parameters": {
+								"key": "\"GEMAS_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 988959439593398,
+							"parameters": {
+								"key": "\"GEMAS_3\""
+							}
+						}
+					],
+					"sid": 154674210233081
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 891687923744088,
+							"parameters": {
+								"key": "\"GEMAS_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 185895416034966,
+							"parameters": {
+								"variable": "GEMAS_3",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 627608350663381
+				},
+				{
+					"eventType": "comment",
+					"text": "VIDAS slot 3"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 895639272389023,
+							"parameters": {
+								"key": "\"VIDAS_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 482641552529859,
+							"parameters": {
+								"variable": "VIDAS_3",
+								"value": "9"
+							}
+						}
+					],
+					"sid": 415037809272029
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 594512622618666,
+							"parameters": {
+								"key": "\"VIDAS_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 673444424914129,
+							"parameters": {
+								"key": "\"VIDAS_3\""
+							}
+						}
+					],
+					"sid": 674981424521715
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 647963756613309,
+							"parameters": {
+								"key": "\"VIDAS_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 467366501491242,
+							"parameters": {
+								"variable": "VIDAS_3",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 831891521496332
+				},
+				{
+					"eventType": "comment",
+					"text": "NIVEL DIFICULTAD slot 3"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 501878847327841,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 438624698780284,
+							"parameters": {
+								"variable": "BOLA_ROJA_o_ROSA_3",
+								"value": "\"ROJA\""
+							}
+						}
+					],
+					"sid": 753280723411812
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 820445365642491,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 547756113437441,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_3\""
+							}
+						}
+					],
+					"sid": 966880633749792
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 734217539266079,
+							"parameters": {
+								"key": "\"BOLA_ROJA_o_ROSA_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 603619171635191,
+							"parameters": {
+								"variable": "BOLA_ROJA_o_ROSA_3",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 891246107493580
+				},
+				{
+					"eventType": "comment",
+					"text": "INTRO HECHA SI O NO slot 3"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 390283032385417,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 463490382627798,
+							"parameters": {
+								"variable": "INTRO_HECHA_SI_NO_3",
+								"value": "\"NO\""
+							}
+						}
+					],
+					"sid": 919948103891782
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 448384705719676,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 975144123749175,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_3\""
+							}
+						}
+					],
+					"sid": 507018797009809
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 252573741685607,
+							"parameters": {
+								"key": "\"INTRO_HECHA_SI_NO_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 695578709271369,
+							"parameters": {
+								"variable": "INTRO_HECHA_SI_NO_3",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 474292863588155
+				},
+				{
+					"eventType": "comment",
+					"text": "captura para el slot 3"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 735627469879234,
+							"parameters": {
+								"key": "\"Captura_Slot_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 557983794317029,
+							"parameters": {
+								"variable": "Captura_Slot_3",
+								"value": "\"\""
+							}
+						}
+					],
+					"sid": 436990318764503
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 975113053081901,
+							"parameters": {
+								"key": "\"Captura_Slot_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 386060338171971,
+							"parameters": {
+								"key": "\"Captura_Slot_3\""
+							}
+						}
+					],
+					"sid": 814393125982670
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 493380345213341,
+							"parameters": {
+								"key": "\"Captura_Slot_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 673633470768918,
+							"parameters": {
+								"variable": "Captura_Slot_3",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 392624787456018
+				}
+			],
+			"sid": 578887291799314
+		},
+		{
+			"eventType": "comment",
+			"text": "MUSICA"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 132740369898524,
+					"parameters": {
+						"key": "\"MUSICA\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 173270831913096,
+					"parameters": {
+						"variable": "MUSIC_sound",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 646496035796148
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 101294433435786,
+					"parameters": {
+						"key": "\"MUSICA\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 200383972841961,
+					"parameters": {
+						"key": "\"MUSICA\""
+					}
+				}
+			],
+			"sid": 219100641901542
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 832984816348022,
+					"parameters": {
+						"key": "\"MUSICA\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 167289296413620,
+					"parameters": {
+						"variable": "MUSIC_sound",
+						"value": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 217958439236208
+		},
+		{
+			"eventType": "comment",
+			"text": "SAVE THE GIRL, SI YA TE HAS PASADO EL JUEGO SIN RESETEAR"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 235331592146358,
+					"parameters": {
+						"key": "\"SAVE_GIRL\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 279828484356186,
+					"parameters": {
+						"variable": "PASOS_SAVE_THE_GIRL",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 705054199302170,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 163998448532946,
+					"parameters": {
+						"key": "\"SAVE_GIRL\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 741058716751452,
+					"parameters": {
+						"key": "\"SAVE_GIRL\""
+					}
+				}
+			],
+			"sid": 861950551798791,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 530466720369986,
+					"parameters": {
+						"key": "\"SAVE_GIRL\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 426181193728606,
+					"parameters": {
+						"variable": "PASOS_SAVE_THE_GIRL",
+						"value": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 536281693660808,
+			"disabled": true
+		},
+		{
+			"eventType": "comment",
+			"text": "SONIDO FX VOLUMEN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 598204041559742,
+					"parameters": {
+						"key": "\"SonidoFX_Volumen_Master\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 713437899852292,
+					"parameters": {
+						"variable": "SonidoFX_Volumen_Master",
+						"value": "5"
+					}
+				}
+			],
+			"sid": 341234955149073
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 813193934409530,
+					"parameters": {
+						"key": "\"SonidoFX_Volumen_Master\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 361368037698424,
+					"parameters": {
+						"key": "\"SonidoFX_Volumen_Master\""
+					}
+				}
+			],
+			"sid": 991561162773028
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 391555034698226,
+					"parameters": {
+						"key": "\"SonidoFX_Volumen_Master\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 588296594007708,
+					"parameters": {
+						"variable": "SonidoFX_Volumen_Master",
+						"value": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"callFunction": "VOLUMEN MASTER SONIDO FX",
+					"sid": 584448994442817
+				}
+			],
+			"sid": 699146019252129
+		},
+		{
+			"eventType": "comment",
+			"text": "MUSICA VOLUMEN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 220900149171038,
+					"parameters": {
+						"key": "\"Musica_Volumen_Master\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 107781265211372,
+					"parameters": {
+						"variable": "Musica_Volumen_Master",
+						"value": "5"
+					}
+				}
+			],
+			"sid": 290945157134519
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 568903808399250,
+					"parameters": {
+						"key": "\"Musica_Volumen_Master\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 786527346821159,
+					"parameters": {
+						"key": "\"Musica_Volumen_Master\""
+					}
+				}
+			],
+			"sid": 363597386188565
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 713956319579582,
+					"parameters": {
+						"key": "\"Musica_Volumen_Master\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 258399961530865,
+					"parameters": {
+						"variable": "Musica_Volumen_Master",
+						"value": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"callFunction": "VOLUMEN MASTER MUSICA",
+					"sid": 552352885950135
+				}
+			],
+			"sid": 753886683958083
+		},
+		{
+			"eventType": "comment",
+			"text": "IDIOMA MASTER"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 172489687977010,
+					"parameters": {
+						"key": "\"Idoma_Master\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 441198339316809,
+					"parameters": {
+						"variable": "Idoma_Master",
+						"value": "\"ING\""
+					}
+				}
+			],
+			"sid": 973625939504624
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 687115998286075,
+					"parameters": {
+						"key": "\"Idoma_Master\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 684301178120095,
+					"parameters": {
+						"key": "\"Idoma_Master\""
+					}
+				}
+			],
+			"sid": 954291094112835
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 691105116416244,
+					"parameters": {
+						"key": "\"Idoma_Master\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 821113893910030,
+					"parameters": {
+						"variable": "Idoma_Master",
+						"value": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 804663532395266
+		},
+		{
+			"eventType": "comment",
+			"text": "IDIOMA NUMERICO"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 859553135763235,
+					"parameters": {
+						"key": "\"Idioma_numerico\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 880627028652573,
+					"parameters": {
+						"variable": "Idioma_numerico",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 256298654875063
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 692089337117336,
+					"parameters": {
+						"key": "\"Idioma_numerico\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 546746733618240,
+					"parameters": {
+						"key": "\"Idioma_numerico\""
+					}
+				}
+			],
+			"sid": 891678042428659
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 135230899372406,
+					"parameters": {
+						"key": "\"Idioma_numerico\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 782136574332838,
+					"parameters": {
+						"variable": "Idioma_numerico",
+						"value": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 458029413326603
+		},
+		{
+			"eventType": "comment",
+			"text": "GUARDADO DEL ULTIMO SLOT GUARDADO CON EL LAST SAVE"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 600659258690624,
+					"parameters": {
+						"key": "\"Last_Save\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 711161764055159,
+					"parameters": {
+						"variable": "Last_Save",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 411390127264428
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 555093347736700,
+					"parameters": {
+						"key": "\"Last_Save\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 138379513643548,
+					"parameters": {
+						"key": "\"Last_Save\""
+					}
+				}
+			],
+			"sid": 994309749867639
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 396887801029990,
+					"parameters": {
+						"key": "\"Last_Save\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 835843061846622,
+					"parameters": {
+						"variable": "Last_Save",
+						"value": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 974937641984060
+		},
+		{
+			"eventType": "comment",
+			"text": "SPEED RUN GUARDADO DEL ARRAY DE LOS DATOS DE SPEED RUN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 264080860204656,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_time\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 989195527781897,
+					"parameters": {
+						"variable": "SpeedRun_Guardado",
+						"value": "\"\""
+					}
+				}
+			],
+			"sid": 192707109203623,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 982202039827156,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_time\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 750397118080384,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_time\""
+					}
+				}
+			],
+			"sid": 529553105339110,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 465125739854247,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_time\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 236307780650023,
+					"parameters": {
+						"variable": "SpeedRun_Guardado",
+						"value": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 810252530109506
+				},
+				{
+					"id": "load",
+					"objectClass": "Array_1_SPR_DATOS_por_nivel_TIME",
+					"sid": 597708122160919,
+					"parameters": {
+						"json": "SpeedRun_Guardado"
+					}
+				}
+			],
+			"sid": 462964800709459,
+			"disabled": true
+		},
+		{
+			"eventType": "comment",
+			"text": "SPEED RUN GUARDADO DEL ARRAY DE LOS DATOS DE SPEED RUN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 405991034994177,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_death\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 343293328880527,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 450220219627705,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_death\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 152361100343474,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_death\""
+					}
+				}
+			],
+			"sid": 873454757387239,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 281916690144523,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_death\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Array_2_SPR_DATOS_por_NO_DEATH",
+					"sid": 364840990331539,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 319306858742753,
+			"disabled": true
+		},
+		{
+			"eventType": "comment",
+			"text": "SPEED RUN GUARDADO DEL ARRAY DE LOS DATOS DE SPEED RUN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 200644020009545,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_doom\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 519564727937944,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 669865869474937,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_doom\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 118186103247735,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_doom\""
+					}
+				}
+			],
+			"sid": 210556542843276,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 739662771857746,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_doom\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Array_3_SPR_DATOS_por_DOOM_MODE",
+					"sid": 314968794444978,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 787159965453228,
+			"disabled": true
+		},
+		{
+			"eventType": "comment",
+			"text": "SPEED RUN GUARDADO DEL ARRAY DE LOS DATOS DE SPEED RUN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 828659605430291,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_TIME\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 137263686831316
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 263830993514222,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_TIME\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 907962457335692,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_TIME\""
+					}
+				}
+			],
+			"sid": 201752477781856
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 289917848734580,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_TIME\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Array_SPR_10_SLOTS_1_TIME",
+					"sid": 910356105023762,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 673818314241931
+		},
+		{
+			"eventType": "comment",
+			"text": "SPEED RUN GUARDADO DEL ARRAY DE LOS DATOS DE SPEED RUN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 561423184135269,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_DEATH\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 102244554040465
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 262776975230397,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_DEATH\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 389669532897523,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_DEATH\""
+					}
+				}
+			],
+			"sid": 634255563066195
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 441927607472537,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_DEATH\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Array_SPR_10_SLOTS_2_DEATH",
+					"sid": 317474626445473,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 284195382345080
+		},
+		{
+			"eventType": "comment",
+			"text": "SPEED RUN GUARDADO DEL ARRAY DE LOS DATOS DE SPEED RUN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 208522074492241,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_DOOM\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 147354250676684
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 122899233767814,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_DOOM\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 303808320047608,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_DOOM\""
+					}
+				}
+			],
+			"sid": 395463484515259
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 733091096677895,
+					"parameters": {
+						"key": "\"SpeedRun_Guardado_10_slots_DOOM\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+					"sid": 465823693827841,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 163001054513811
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "LOGROS PARA LA DEMO",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "LOGROS PARA LA DEMO 1"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 555221619610610,
+							"parameters": {
+								"key": "\"logro_1_demo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 861482838106152,
+							"parameters": {
+								"variable": "logro_1_demo",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 756783529861216
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 504160044412684,
+							"parameters": {
+								"key": "\"logro_1_demo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 547301747463983,
+							"parameters": {
+								"key": "\"logro_1_demo\""
+							}
+						}
+					],
+					"sid": 495282325946029
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 728421642153552,
+							"parameters": {
+								"key": "\"logro_1_demo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 264842966267037,
+							"parameters": {
+								"variable": "logro_1_demo",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 117611642980170
+				},
+				{
+					"eventType": "comment",
+					"text": "LOGROS PARA LA DEMO 2"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 282014847227797,
+							"parameters": {
+								"key": "\"logro_2_demo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 356406046072822,
+							"parameters": {
+								"variable": "logro_2_demo",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 567667972544529
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 431146520765813,
+							"parameters": {
+								"key": "\"logro_2_demo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 998549534967974,
+							"parameters": {
+								"key": "\"logro_2_demo\""
+							}
+						}
+					],
+					"sid": 649456464844455
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 566577730465462,
+							"parameters": {
+								"key": "\"logro_2_demo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 908678226042606,
+							"parameters": {
+								"variable": "logro_2_demo",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 222093375945567
+				}
+			],
+			"sid": 233479318483358
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-floor",
+					"objectClass": "bola",
+					"sid": 467028808426883,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "bola",
+					"sid": 563348321598199,
+					"disabled": true,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				},
+				{
+					"id": "set-vector-y",
+					"objectClass": "bola",
+					"sid": 795500067843886,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "-550"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "bola",
+					"sid": 850147775548925,
+					"parameters": {
+						"object": "polvo",
+						"layer": "\"TEXTO\"",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "polvo",
+					"sid": 249014936983928,
+					"parameters": {
+						"angle": "270"
+					}
+				}
+			],
+			"sid": 882107363412711
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 969642623947789
+				}
+			],
+			"actions": [
+				{
+					"id": "set-max-speed",
+					"objectClass": "bola",
+					"sid": 580450394365905,
+					"behaviorType": "Platform",
+					"parameters": {
+						"max-speed": "200"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "bola",
+					"sid": 442810138582747,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 148491814072396
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 121437962880867,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 330405819993664,
+							"parameters": {
+								"variable": "CONTADOR_LOADING",
+								"comparison": 2,
+								"value": "350"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 456770398905200,
+							"parameters": {
+								"variable": "CONTADOR_LOADING",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 999442364030786
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 210259847054324,
+							"parameters": {
+								"variable": "CONTADOR_LOADING",
+								"comparison": 5,
+								"value": "350"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 984192724223015,
+							"parameters": {
+								"layout": "PORTADA_NUEVA"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 961940275768799,
+							"parameters": {
+								"variable": "CONTADOR_LOADING",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 720563598514696,
+					"isOrBlock": true
+				}
+			]
+		}
+	],
+	"sid": 737633904778516
+}

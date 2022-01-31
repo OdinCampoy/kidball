@@ -1,0 +1,71 @@
+{
+	"name": "Clasificacion Google Play",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 338935496353877
+				}
+			],
+			"actions": [
+				{
+					"id": "sign-in",
+					"objectClass": "GooglePlay",
+					"sid": 741570318644774
+				}
+			],
+			"sid": 498755553516157
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-signed-in",
+					"objectClass": "GooglePlay",
+					"sid": 552881938354896
+				}
+			],
+			"actions": [
+				{
+					"id": "submit-score",
+					"objectClass": "GooglePlay",
+					"sid": 881659281479781,
+					"parameters": {
+						"leaderboard-id": "\"\"",
+						"score": "MUERTES_EN_JUEGO",
+						"tag": "\"muertes\""
+					}
+				}
+			],
+			"sid": 190456232617191
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signed-in",
+					"objectClass": "GooglePlay",
+					"sid": 132413164164701
+				}
+			],
+			"actions": [
+				{
+					"id": "submit-score",
+					"objectClass": "GooglePlay",
+					"sid": 415864852104268,
+					"parameters": {
+						"leaderboard-id": "\"\"",
+						"score": "MUERTES_EN_JUEGO",
+						"tag": "\"muertes\""
+					}
+				}
+			],
+			"sid": 605023020200027,
+			"disabled": true
+		}
+	],
+	"sid": 918536528435210
+}

@@ -1,0 +1,1008 @@
+{
+	"name": "Ev_SpeedRun_Resumen",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "SpeedRun_Resumen_tiempo",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Hasta que no vale 1 no puedes pasar de pantalla",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 317981523149537
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 184424805345287
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 778898585034106,
+					"parameters": {
+						"variable": "SpeedRun_tiempo_nivel",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "SPEEDRUN RESUMEN - textos y tiempos",
+					"sid": 481186427460084
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 850522167438509,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 383930566228929,
+					"parameters": {
+						"variable": "SpeedRun_tiempo_nivel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SLOTS_txt_leyenda_bACK",
+					"sid": 390788266196188,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,62)"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SLOTS_txt_leyenda_bACK",
+					"sid": 242395799395385,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Botones_Consola_iconos_B",
+					"sid": 974509069162046,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 409619702181817,
+					"parameters": {
+						"tag": "\"Traducciones\"",
+						"file": "TRADUCCIONES.json"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 402691202409569,
+					"parameters": {
+						"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+						"value": "\"TIME\""
+					}
+				}
+			],
+			"sid": 340306145439853
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 272730457071562,
+					"parameters": {
+						"tag": "\"Traducciones\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Array_Traducciones_IDOMAS",
+					"sid": 183901682231633,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 910595151783260
+				},
+				{
+					"callFunction": "SPEEDRUN RESUMEN - textos y tiempos",
+					"sid": 747041022741655
+				}
+			],
+			"sid": 206493789751184
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 421433242355699,
+					"parameters": {
+						"instance-variable": "Castillo_num",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 531550837207685,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_1&\"[/color]\""
+					}
+				}
+			],
+			"sid": 292495670858658
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 356014168753633,
+					"parameters": {
+						"instance-variable": "Castillo_num",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 848975813817519,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_2&\"[/color]\""
+					}
+				}
+			],
+			"sid": 880585846186616
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 227967947957214,
+					"parameters": {
+						"instance-variable": "Castillo_num",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 559072646808526,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_3&\"[/color]\""
+					}
+				}
+			],
+			"sid": 380376901989073
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 716486126481759,
+					"parameters": {
+						"instance-variable": "Castillo_num",
+						"comparison": 0,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 410423786497196,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_4&\"[/color]\""
+					}
+				}
+			],
+			"sid": 676851867689048
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 802960037071500,
+					"parameters": {
+						"instance-variable": "Castillo_num",
+						"comparison": 0,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 158905152241781,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_5&\"[/color]\""
+					}
+				}
+			],
+			"sid": 588426371371732
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 103234121026526,
+					"parameters": {
+						"instance-variable": "Castillo_num",
+						"comparison": 0,
+						"value": "6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 510871982738791,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_6&\"[/color]\""
+					}
+				}
+			],
+			"sid": 821399792390920
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 435020809877241,
+					"parameters": {
+						"instance-variable": "Castillo_num",
+						"comparison": 0,
+						"value": "7"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 664539315614205,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_7&\"[/color]\""
+					}
+				}
+			],
+			"sid": 474981955201627
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 119572698807668,
+					"parameters": {
+						"instance-variable": "Castillo_num",
+						"comparison": 0,
+						"value": "8"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 689814949850213,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_8&\"[/color]\""
+					}
+				}
+			],
+			"sid": 342292866696607
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 846051316278195,
+					"parameters": {
+						"instance-variable": "Castillo_num",
+						"comparison": 0,
+						"value": "9"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 977307601358418,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_9&\"[/color]\""
+					}
+				}
+			],
+			"sid": 685781198430289
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 497634394167388,
+					"parameters": {
+						"instance-variable": "Castillo_num",
+						"comparison": 0,
+						"value": "10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Resumen_Castillo_txt",
+					"sid": 382288110501419,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_10&\"[/color]\""
+					}
+				}
+			],
+			"sid": 266384441291505
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MOVIMIENTO FONDO LOGOS SPEEDRUN RESUMEN",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 502542103348070
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "portada_imagenes_5",
+							"sid": 380274525297342,
+							"parameters": {
+								"x": "Self.X-20*dt"
+							}
+						}
+					],
+					"sid": 709686949032664,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "portada_imagenes_5",
+									"sid": 911220846340342,
+									"parameters": {
+										"comparison": 3,
+										"x-co-ordinate": "-200"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "portada_imagenes_5",
+									"sid": 429813523673478,
+									"parameters": {
+										"x": "1085"
+									}
+								}
+							],
+							"sid": 717658069993269
+						}
+					]
+				}
+			],
+			"sid": 204302531826244
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "TRADUCCIONES Y TIEMPOS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "SPEEDRUN RESUMEN - textos y tiempos",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 567103619998523,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 242690966882285,
+									"parameters": {
+										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+										"comparison": 0,
+										"value": "\"TIME\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_TXT",
+									"sid": 395037322251735,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,59)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_ROOM_TXT",
+									"sid": 885174265463376,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,63)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_ROOM",
+									"sid": 278524308584943,
+									"parameters": {
+										"text": "0_NIVEL_MAXIMO"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_TIME_TXT",
+									"sid": 981404433579054,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,64)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_TIME",
+									"sid": 311489075518749,
+									"parameters": {
+										"text": "1_TIEMPO_TOTAL_JUEGO"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_DEATHS_TXT",
+									"sid": 189781030749195,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,65)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_DEATHS",
+									"sid": 276605074074657,
+									"parameters": {
+										"text": "2_MUERTES_TOTALES"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_GEMS_TXT",
+									"sid": 969467745952609,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,66)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_GEMS",
+									"sid": 807541305957196,
+									"parameters": {
+										"text": "3_SUMA_GEMAS_COGIDA&\" / \"&4_SUMA_GEMAS_TOTALES"
+									}
+								}
+							],
+							"sid": 247213510613890
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 612249272723000,
+									"parameters": {
+										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+										"comparison": 0,
+										"value": "\"DEATH\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_TXT",
+									"sid": 647189472188696,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,60)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_ROOM_TXT",
+									"sid": 628923197162587,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,63)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_ROOM",
+									"sid": 784543141029851,
+									"parameters": {
+										"text": "0"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_TIME_TXT",
+									"sid": 408574691087582,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,64)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_TIME",
+									"sid": 709453428210453,
+									"parameters": {
+										"text": "0"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_DEATHS_TXT",
+									"sid": 846212658194292,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,65)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_DEATHS",
+									"sid": 986780458442126,
+									"parameters": {
+										"text": "0"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_GEMS_TXT",
+									"sid": 519330158277794,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,66)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_GEMS",
+									"sid": 633199587590685,
+									"parameters": {
+										"text": "0&\" / \"&0"
+									}
+								}
+							],
+							"sid": 532028987862374
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 126557340121869,
+									"parameters": {
+										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+										"comparison": 0,
+										"value": "\"DOOM\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_TXT",
+									"sid": 275558009687455,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,61)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_ROOM_TXT",
+									"sid": 884946989957376,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,63)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_ROOM",
+									"sid": 419134167027555,
+									"parameters": {
+										"text": "0"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_TIME_TXT",
+									"sid": 718386066348665,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,64)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_TIME",
+									"sid": 887289478769005,
+									"parameters": {
+										"text": "0"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_DEATHS_TXT",
+									"sid": 565588040383031,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,65)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_DEATHS",
+									"sid": 817402595307499,
+									"parameters": {
+										"text": "0"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_GEMS_TXT",
+									"sid": 402929221491621,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,66)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_Resumen_GEMS",
+									"sid": 881617375406919,
+									"parameters": {
+										"text": "0&\" / \"&0"
+									}
+								}
+							],
+							"sid": 490688351581132,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 162618373541084,
+											"parameters": {
+												"instance-variable": "Castillo_num",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 121320648419768,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_1&\"[/color]\""
+											}
+										}
+									],
+									"sid": 903289278045962
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 770345219364648,
+											"parameters": {
+												"instance-variable": "Castillo_num",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 963861795799029,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_2&\"[/color]\""
+											}
+										}
+									],
+									"sid": 284494960472504
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 182220622521587,
+											"parameters": {
+												"instance-variable": "Castillo_num",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 980747471820801,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_3&\"[/color]\""
+											}
+										}
+									],
+									"sid": 581934070647682
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 222815314743332,
+											"parameters": {
+												"instance-variable": "Castillo_num",
+												"comparison": 0,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 474671792081469,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_4&\"[/color]\""
+											}
+										}
+									],
+									"sid": 658789969048631
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 563359037387805,
+											"parameters": {
+												"instance-variable": "Castillo_num",
+												"comparison": 0,
+												"value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 456164787639981,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_5&\"[/color]\""
+											}
+										}
+									],
+									"sid": 519113222489992
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 451801018955457,
+											"parameters": {
+												"instance-variable": "Castillo_num",
+												"comparison": 0,
+												"value": "6"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 469820997308837,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_6&\"[/color]\""
+											}
+										}
+									],
+									"sid": 790641981285138
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 864518649226619,
+											"parameters": {
+												"instance-variable": "Castillo_num",
+												"comparison": 0,
+												"value": "7"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 738722908629314,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_7&\"[/color]\""
+											}
+										}
+									],
+									"sid": 236896324793385
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 859379085405169,
+											"parameters": {
+												"instance-variable": "Castillo_num",
+												"comparison": 0,
+												"value": "8"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 700550572479776,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_8&\"[/color]\""
+											}
+										}
+									],
+									"sid": 338181007490159
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 877109069498891,
+											"parameters": {
+												"instance-variable": "Castillo_num",
+												"comparison": 0,
+												"value": "9"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 702548967935877,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_9&\"[/color]\""
+											}
+										}
+									],
+									"sid": 611512049814529
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 350069079665964,
+											"parameters": {
+												"instance-variable": "Castillo_num",
+												"comparison": 0,
+												"value": "10"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "SpeedRun_Resumen_Castillo_txt",
+											"sid": 697264128836337,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_10&\"[/color]\""
+											}
+										}
+									],
+									"sid": 552911759931987
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 786507076132624
+		}
+	],
+	"sid": 140584457252411
+}

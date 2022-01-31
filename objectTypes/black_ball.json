@@ -1,0 +1,83 @@
+{
+	"name": "Black_ball",
+	"plugin-id": "Sprite",
+	"sid": 687155819332089,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "direccion",
+			"type": "number",
+			"desc": "0=quieto    1=der ;     2=izq",
+			"sid": 180241656863403
+		},
+		{
+			"name": "time_scale",
+			"type": "number",
+			"desc": "",
+			"sid": 466453892917794
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 251789999993120
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 36,
+						"height": 36,
+						"originX": 0.548781,
+						"originY": 0.529412,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\black_ball.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5912389,
+						"collisionPoly": {
+							"points": [
+								0.237805,
+								0.267647,
+								0.521341,
+								0.147059,
+								0.841463,
+								0.235294,
+								0.984756,
+								0.529412,
+								0.853659,
+								0.858824,
+								0.5,
+								0.976471,
+								0.207317,
+								0.8,
+								0.134146,
+								0.508824
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Imagepoint 1",
+								"x": 0.536585,
+								"y": 0.964706
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 576501492514258,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

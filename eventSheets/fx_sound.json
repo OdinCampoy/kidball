@@ -1,0 +1,365 @@
+{
+	"name": "FX_sound",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "logros_DEMO"
+		},
+		{
+			"eventType": "variable",
+			"name": "fx_click_boton",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 244060081920273
+		},
+		{
+			"eventType": "variable",
+			"name": "fx_muerte_pelota",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 276574343052578
+		},
+		{
+			"eventType": "variable",
+			"name": "fx_abre_puerta",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 874111058686092
+		},
+		{
+			"eventType": "variable",
+			"name": "fx_corazones",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 199604912362650
+		},
+		{
+			"eventType": "variable",
+			"name": "fx_rebolte_pelota",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 829380747498451
+		},
+		{
+			"eventType": "comment",
+			"text": "************************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "************************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tSONIDO   FX"
+		},
+		{
+			"eventType": "comment",
+			"text": "************************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "************************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 259712313181020
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "bola",
+					"sid": 188468306980505,
+					"parameters": {
+						"animation": "\"DERECHA_4\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 812422430812075
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 329998835292501,
+					"parameters": {
+						"variable": "FX_sound",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 548559799046883,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 631836636879582,
+							"parameters": {
+								"variable": "fx_rebolte_pelota",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 793600519868190,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 746378402881620,
+									"parameters": {
+										"tag": "\"MUSICA_PORTADA\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 816614179808754,
+									"parameters": {
+										"audio-file": "Rebote_pelota",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX-20",
+										"tag-optional": "\"pelota\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 487541634392604,
+									"parameters": {
+										"variable": "fx_rebolte_pelota",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 852776853473557
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 707771181836522,
+									"parameters": {
+										"tag": "\"MUSICA_PORTADA\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 315028527718851,
+									"parameters": {
+										"audio-file": "Rebote_pelota",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX-25",
+										"tag-optional": "\"pelota\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 244253136258706,
+									"parameters": {
+										"variable": "fx_rebolte_pelota",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 854126216801700
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 756762448952150,
+							"parameters": {
+								"variable": "fx_corazones",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 540667927093283,
+							"parameters": {
+								"audio-file": "coge_corazones",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX-8",
+								"tag-optional": "\"pelota\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 592254383480358,
+							"parameters": {
+								"variable": "fx_corazones",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 338811394337829
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 471383278132664,
+							"parameters": {
+								"variable": "fx_abre_puerta",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 519883209923152,
+							"parameters": {
+								"audio-file": "abre puerta",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX",
+								"tag-optional": "\"pelota\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 974632759961484,
+							"parameters": {
+								"variable": "fx_abre_puerta",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 145291191166796
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 854392366442406,
+							"parameters": {
+								"variable": "fx_muerte_pelota",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 240477162812907,
+							"parameters": {
+								"audio-file": "muerte_ruidito",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX",
+								"tag-optional": "\"pelota\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 613464792839173,
+							"parameters": {
+								"variable": "fx_muerte_pelota",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 957536518770249
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 831535469000720,
+							"parameters": {
+								"variable": "fx_click_boton",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 946761189834604,
+							"parameters": {
+								"audio-file": "Click_boton",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX",
+								"tag-optional": "\"pelota\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 823966816069674,
+							"parameters": {
+								"variable": "fx_click_boton",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 689470085798883
+				}
+			]
+		}
+	],
+	"sid": 333343782833205
+}

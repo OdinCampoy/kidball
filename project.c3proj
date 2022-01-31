@@ -1,0 +1,2091 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 27602,
+	"name": "Red Ball vs Dark King",
+	"runtime": "c3",
+	"useWorker": "dom",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "advert",
+			"name": "Mobile advert",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "BinaryData",
+			"name": "Binary Data",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Share",
+			"name": "Share",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "googleplay",
+			"name": "Google Play",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "DrawingCanvas",
+			"name": "Drawing canvas",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Timeline",
+			"name": "Timeline",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Date",
+			"name": "Date",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Persist",
+			"name": "Persist",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "jumpthru",
+			"name": "Jump-thru",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "swirl",
+			"name": "Swirl",
+			"author": "Brad Larson",
+			"version": "r276.2",
+			"bundled": false
+		}
+	],
+	"uniqueId": "or5wj573sdyf",
+	"objectTypes": {
+		"items": [
+			"bola",
+			"Sprite",
+			"Enemies_colision",
+			"Keyboard",
+			"muete",
+			"PINCHO",
+			"game_Over_TXT",
+			"LIFES",
+			"volver_a_jugar",
+			"Touch",
+			"Mouse",
+			"left_BTN",
+			"left_BTN2",
+			"left_arrow",
+			"Right_arrow",
+			"Ladrillos_fondo",
+			"Ladrillo_muro",
+			"Texto_tutorial",
+			"Texto_tutorial2",
+			"mano",
+			"Portada",
+			"bola_portada",
+			"Portada_rebota_der",
+			"Portada_rebota_izq",
+			"llave",
+			"vidas",
+			"Inicio_POS",
+			"puerta",
+			"polvo",
+			"polvo2",
+			"key_particles",
+			"enemy_in_floor",
+			"enemy_in_floor_particles",
+			"enemy_VOLADOR",
+			"fondo_niiveles",
+			"pantalla_nivel",
+			"puerta_INTRO",
+			"setos_portada",
+			"portada_cera",
+			"portada_cera2",
+			"portada_floor",
+			"portada_scroll",
+			"TESTER_GRAFICO",
+			"TUBO_ASCENSOR",
+			"ASCENSOR",
+			"TXT_visor_TOUCH",
+			"zone_right",
+			"zone_left",
+			"TXT_left",
+			"TXT_right",
+			"PLATAFORMA_LATERAL",
+			"sierras",
+			"sierras_palo",
+			"PINCHO_GIRATORIOS",
+			"Black_ball",
+			"TXT_touch_to_start",
+			"Pause_BTN",
+			"fondo_pausa",
+			"TXT_PAUSE",
+			"Titulo_juego",
+			"Portada_play",
+			"game_over_touch_again",
+			"GAME_OVER_TITULO",
+			"Audio",
+			"BTN_MUSIC",
+			"BTN_FX_SOUND",
+			"RESUME",
+			"bola_ROSA",
+			"CORAZONES_INTRO",
+			"jefe_final_INTRO",
+			"IMAN",
+			"INTRO_TXT_1",
+			"INTRO_TXT_2",
+			"TXT_HELP",
+			"INTRO_TXT_3",
+			"INTRO_TXT_4",
+			"Saving_Game_Icon",
+			"carcel_bola_rosa",
+			"JEFE_FINAL",
+			"SKIP_INTRO",
+			"FUNDIDO_A_NEGRO",
+			"PLATAFORMA_con_pincho",
+			"PINCHO_plataformas",
+			"Enemigo_piedra",
+			"muelle",
+			"btn_BACK",
+			"Ex_life_cabecera",
+			"Ex_life_video",
+			"Ex_life_facebook",
+			"Ex_life_rate",
+			"Browser",
+			"atasco_saltarines_DER",
+			"atasco_saltarines_IZQ",
+			"Tope_ascensor",
+			"Punto_ascensor",
+			"llave_final_BOSS",
+			"VIDA_JEFE_FINAL",
+			"BOSS_TXT",
+			"TUTORIAL_FINAL_BOSS",
+			"BTN_FINAL_BOSS_OK",
+			"START_TXT",
+			"boss_colision_left",
+			"boss_colision_right",
+			"PINCHO_FINAL_BOSS",
+			"Zona_salto_alto",
+			"Ladrillo_muro2",
+			"sierras_final_boss",
+			"sierras_final_boss2",
+			"sierras_destruccion",
+			"muerte_jefe_final",
+			"FINAL_BOOS_ELIMINA_OBJETOS",
+			"Punto_CARCEL",
+			"CORAZONES_FINAL",
+			"THE_END_TXT",
+			"FINAL_Share_screenshoot",
+			"FINAL_Exit",
+			"FINAL_reset_game",
+			"FINAL_reset_game_panel",
+			"FINAL_reset_game_YES",
+			"FINAL_reset_game_NO",
+			"EXTRA_LIFES_particulas",
+			"FONDO_LOADING",
+			"Sprite2",
+			"Ladrillo_muro3",
+			"TXT_TUTORIAL",
+			"PAUSE_EXIT_GAME",
+			"TOPE_volador_DER",
+			"TOPE_volador_IZQ",
+			"MUERTE_BNT_VIDEO",
+			"MUERTE_BNT_RATE",
+			"MUERTE_BNT_FACEBOOK",
+			"MUERTE_PANEL_PLAY_AGAIN",
+			"MUERTE_BOTON_RESTART",
+			"MUERTE_BOTON_HOME",
+			"MUERTE_CONTINUE_TXT",
+			"MUERTE_BOTON_RESTART_flechas",
+			"Pharaoh_descarga",
+			"google_play_cierre",
+			"fondo_pausa2",
+			"MobileAdvert_intersticial",
+			"LocalStorage",
+			"FONDO_M1",
+			"SOLIDO_M1",
+			"DECORACION_M1_14",
+			"torchFire",
+			"M1_PlataformaSuelta",
+			"M1_PlataformaSuelta2",
+			"Sprite3",
+			"Particles",
+			"SOLIDO_M2",
+			"M2_PlataformaSuelta2",
+			"FONDO_M2",
+			"puerta_M2_Falsa",
+			"M2_PlataformaSuelta3",
+			"Fondo_Mundo_2_GMP",
+			"M2_PlataformaSuelta4",
+			"sombra",
+			"FONDO_M3",
+			"SOLIDO_M3",
+			"puerta_M3",
+			"PLATAFORMA_LATERAL3",
+			"M3_PlataformaSuelta",
+			"M3_PlataformaSuelta2",
+			"M3_PlataformaSuelta3",
+			"PLATAFORMA_LATERAL4",
+			"SOLIDO_M4",
+			"FONDO_M4",
+			"puerta_M4",
+			"PLATAFORMA_LATERAL5",
+			"FPS_TXT",
+			"M3_PlataformaSuelta4",
+			"M3_PlataformaSuelta5",
+			"FONDO_M5",
+			"SOLIDO_M5",
+			"M3_PlataformaSuelta7",
+			"M3_PlataformaSuelta8",
+			"M3_PlataformaSuelta9",
+			"PLATAFORMA_LATERAL6",
+			"puerta_M2_Falsa2",
+			"M3_PlataformaSuelta10",
+			"M3_PlataformaSuelta11",
+			"PLATAFORMA_con_pincho2",
+			"M3_PlataformaSuelta12",
+			"PLATAFORMA_con_pincho3",
+			"Sprite5",
+			"SOLIDO_INTRO",
+			"FONDO_M6",
+			"FONDO_intro",
+			"intro_columnaTop",
+			"intro_columnaCenter",
+			"intro_columnaButtom",
+			"Intro_transicion",
+			"Intro_Alfombra_suelo",
+			"Intro_AlfombraSuelo",
+			"Intro_Antorcha",
+			"Intro_Portal",
+			"Intro_PortalCentro",
+			"Intro_JEFE_FINAL",
+			"Intro_admircion_rojo",
+			"Intro_admircion_rojo2",
+			"intro_chivato_Help",
+			"Intro_admircion_rojo3",
+			"Intro_admircion_rojo4",
+			"Intro_admircion_rojo5",
+			"Tutorial_Panel",
+			"LeftZone",
+			"RightZone",
+			"SCENE_TXT",
+			"SlotScreenshotSprite_1",
+			"AJAX",
+			"BinaryData",
+			"Share",
+			"MuertesTotalesPanel",
+			"TotalDeaths",
+			"TotalPlayed",
+			"Antorcha_Portada",
+			"MUERTE_BNT_CLOSE",
+			"CHECK_POINT_HRCHO",
+			"PANEL_FINAL_DEATHS",
+			"GooglePlay",
+			"CAMARA",
+			"Exit_M2",
+			"Exit_M4",
+			"bola_estela_roja",
+			"llave_en_cabeza",
+			"RESPLANDOR",
+			"bola_aparece_2",
+			"bola_aparece_1",
+			"bola_aparece_3",
+			"bola_aparece_4",
+			"llaven_en_cabeza_Dummie",
+			"Llave_POS_Dummie",
+			"keys_particles_sprite",
+			"Snow_particula_Spawn",
+			"Snow_particcles",
+			"JEFE_FINAL_imagen",
+			"boss_colision_left2",
+			"BOSS_image",
+			"aaaaaaa_prueba",
+			"aaaaaaa_prueba2",
+			"LIFES_SOMBRA",
+			"fondo_intro_nuevo",
+			"muerte_sangre_trasera",
+			"muerte_sangre_physics",
+			"Muerte_sangre",
+			"DrawingCanvas",
+			"Timeline",
+			"intro_jefe_final_marcha",
+			"fondo_transicion__M2",
+			"camara_transiciones",
+			"Jefe_final_marcha_M1_M2",
+			"Intro_transicion2",
+			"fondo_transicion__M3",
+			"fondo_transicion__M4",
+			"Jefe_final_marcha_M2_M3",
+			"fondo_transicion__M5",
+			"ending_JEFE_FINAL",
+			"Difficulty_TXT",
+			"M1_PlataformaSuelta3",
+			"Gamepad",
+			"Final_Scene_FINAL_BOSS",
+			"M3_PlataformaSuelta14",
+			"M2_PlataformaSuelta5",
+			"PLATAFORMA_LATERAL7",
+			"M2_PlataformaSuelta6",
+			"Sierras_linea",
+			"2_JEFE_FINAL",
+			"2_JEFE_FINAL2",
+			"JEFE_FINAL2",
+			"Admiracion",
+			"muerte_FB_2",
+			"GAME_OVER_Panel_Fall",
+			"GAME_OVER_Fondo",
+			"Consola_Stick_Tutorial",
+			"TUTORIAL_TXT_move_left",
+			"TUTORIAL_TXT_move_right",
+			"TUTORIAL_TXT_or",
+			"LIFES_TXT",
+			"Fondo_RedBall_MOCKUP",
+			"PORTADA_play_TXT",
+			"PORTADA_setting_TXT",
+			"PORTADA_credits_TXT",
+			"PORTADA_SELECTOR_ICONO",
+			"portada_imagenes_1",
+			"portada_imagenes_2",
+			"portada_imagenes_3",
+			"portada_imagenes_4",
+			"portada_imagenes_5",
+			"portada_imagenes_6",
+			"portada_imagenes_7",
+			"portada_imagenes_8",
+			"Portada_Suelo_Salto",
+			"portada_sombras",
+			"portada_imagenes_9",
+			"portada_imagenes_10",
+			"portada_nubes",
+			"NUBES",
+			"Portada_Tablon_opciones",
+			"Portada_Fondo_Opciones",
+			"PORTADA_Opc_SoundFx_txt",
+			"PORTADA_Opc_Music_txt",
+			"PORTADA_Opc_Leng_txt",
+			"PORTADA_Opc_Exit_txt",
+			"PORTADA_Opc_Selector",
+			"PORTADA_Opc_SoundFx_icon",
+			"PORTADA_Opc_Music_icon",
+			"PORTADA_Opc_Leng_Txt_Center",
+			"PORTADA_Opc_Leng_Icon_left",
+			"PORTADA_Opc_Leng_Icon_left2",
+			"PORTADA_Opc_SoundFx_icon_L",
+			"PORTADA_Opc_SoundFx_icon_R",
+			"PORTADA_Opc_Music_icon_R",
+			"PORTADA_Opc_Music_icon_L",
+			"PORTADA_Opc_Button_Leyend",
+			"PORTADA_Opc_Selected_txt",
+			"Portada_Tablon_creditos",
+			"PORTADA_Creditos_1",
+			"PORTADA_Opc_Creditos_Back",
+			"PORTADA_Creditos_2",
+			"PORTADA_creditos_Button_Leyend",
+			"PAUSE_pause_TXT",
+			"PAUSE_Resume_game_TXT",
+			"PAUSE_Exit_txt_MAIN_MENU",
+			"PAUSA_pausa_selector",
+			"FINAL_BOSS_TUTORIAL",
+			"FINAL_BOSS_confirmacion_Button",
+			"GAMEOVER_gameover_TXT",
+			"GAMEOVER_tryAgain_TXT",
+			"GAMEOVER_Buttons",
+			"GAMEOVER_continue_txt",
+			"GAMEOVER_Back_txt",
+			"Logros_PROVISIONALES",
+			"FINALBOSS_life_TXT",
+			"M1_PlataformaSuelta4",
+			"M2_PlataformaSuelta7",
+			"PLATAFORMA_LATERAL8",
+			"PLATAFORMA_LATERAL9",
+			"PLATAFORMA_LATERAL10",
+			"PLATAFORMA_LATERAL11",
+			"PLATAFORMA_LATERAL12",
+			"muelle_izquierda",
+			"Bola_de_fuego_L",
+			"Bola_de_fuego_humo",
+			"bola_de_fuego_pared_L",
+			"Bola_de_fuego_R",
+			"bola_de_fuego_pared_R",
+			"Palancas",
+			"Plataforma_palanca_M1",
+			"PINCHO_plataforma_palanca",
+			"Bloque_se_rompe_M1",
+			"Bloque_se_rompe_sombra_M1",
+			"Bloque_se_rompe_particulas",
+			"Bloque_se_rompe_trozos_M1",
+			"Plataforma_sine_M1",
+			"torch_new",
+			"Gema_currency",
+			"Gema_HUD",
+			"Gema_Currency_TXT",
+			"Bola_HUD",
+			"Gemas_Particulas",
+			"LIFES_x",
+			"Transicion_Animacion",
+			"Transicion_Animacion_entrada",
+			"Gemas_particles",
+			"plataforma_giratoria_engranaje",
+			"plataforma_giratoria_dummie",
+			"plataforma_giratoria_solido",
+			"plataforma_giratoria_centro",
+			"plat_giratoria_brazos",
+			"Bloque_se_rompe_M2",
+			"Bloque_se_rompe_particulas2",
+			"Bloque_se_rompe_trozos_M2",
+			"Barril_dash",
+			"bola_dash",
+			"Bloque_se_rompe_M3",
+			"Bloque_se_rompe_trozos_M3",
+			"Bloque_se_rompe_particulas3",
+			"Canyon_Dust",
+			"Portada_Fondo_Opciones2",
+			"Slot_box_graphic_1",
+			"Slot_box_explication_1",
+			"Slot_box_graphic_2",
+			"Slot_box_explication_2",
+			"Slot_box_graphic_3",
+			"Slot_box_explication_3",
+			"SLOTS_txt_choose",
+			"SLOT_Bola_1",
+			"SLOTS_LIFE_TXT_1",
+			"SLOT_gema_1",
+			"SLOTS_GEMAS_TXT_1",
+			"SLOTS_TXT_1",
+			"SLOTS_ROOM_TXT_1",
+			"SLOT_selector_slot",
+			"SLOTS_TXT_description_1",
+			"SLOTS_TXT_description_PLAY_1",
+			"SLOTS_TXT_description_DELETE_1",
+			"SLOTS_TXT_description_NEWGAME_1",
+			"SLOTS_TXT_2",
+			"SLOTS_ROOM_TXT_2",
+			"SLOT_Bola_2",
+			"SLOTS_LIFE_TXT_2",
+			"SLOT_gema_2",
+			"SLOTS_GEMAS_TXT_2",
+			"SLOTS_TXT_description_2",
+			"SLOTS_TXT_description_PLAY_2",
+			"SLOTS_TXT_description_NEWGAME_2",
+			"SLOTS_TXT_description_DELETE_2",
+			"SLOTS_TXT_3",
+			"SLOTS_ROOM_TXT_3",
+			"SLOTS_LIFE_TXT_3",
+			"SLOTS_GEMAS_TXT_3",
+			"SLOT_gema_3",
+			"SLOT_Bola_3",
+			"SLOTS_TXT_description_3",
+			"SLOTS_TXT_description_PLAY_3",
+			"SLOTS_TXT_description_DELETE_3",
+			"SLOT_selector_descrition_1",
+			"SLOTS_TXT_lastSaved_1",
+			"SLOTS_TXT_lastSaved_2",
+			"SLOTS_TXT_lastSaved_3",
+			"SLOTS_TXT_description_NEWGAME_3",
+			"SLOT_selector_descrition_2",
+			"SLOT_selector_descrition_3",
+			"SlotScreenshotSprite_2",
+			"SlotScreenshotSprite_3",
+			"SLOTS_txt_leyenda_Select",
+			"Botones_Consola_iconos_A",
+			"SLOTS_txt_leyenda_bACK",
+			"Botones_Consola_iconos_B",
+			"SLOTS_txt_NEWGAME_1",
+			"SLOTS_txt_NEWGAME_2",
+			"SLOTS_txt_NEWGAME_3",
+			"Array_Traducciones_IDOMAS",
+			"SLOTS_TXT_startgame_1",
+			"SLOTS_TXT_startgame_2",
+			"SLOTS_TXT_startgame_3",
+			"SLOTS_TXT_borrarJuego_pregunta_1",
+			"SLOTS_TXT_borrarJuego_pregunta_2",
+			"SLOTS_TXT_borrarJuego_pregunta_3",
+			"SLOTS_TXT_borrarJuego_NO_1",
+			"SLOTS_TXT_borrarJuego_SI_1",
+			"SLOTS_TXT_borrarJuego_NO_2",
+			"SLOTS_TXT_borrarJuego_SI_2",
+			"SLOTS_TXT_borrarJuego_NO_3",
+			"SLOTS_TXT_borrarJuego_SI_3",
+			"SLOTS_TXT_juego_borrado_1",
+			"SLOTS_TXT_juego_borrado_2",
+			"SLOTS_TXT_juego_borrado_3",
+			"LEVEL_DESIGN_TXT_EXPLICACION_ODIN",
+			"Bloque_se_rompe_M4",
+			"Bloque_se_rompe_M5",
+			"Bloque_se_rompe_particulas4",
+			"Bloque_se_rompe_particulas5",
+			"Bloque_se_rompe_trozos_M4",
+			"Bloque_se_rompe_trozos_M5",
+			"SpeedRun_TXT_in_Levels",
+			"Date",
+			"Timer",
+			"PORTADA_speedrun_TXT",
+			"Array_SPR_10_SLOTS_1_TIME",
+			"Array_1_SPR_DATOS_por_nivel_TIME",
+			"SpeedRun_CuadroTrasero",
+			"SpeedRun_FlechaSeleccion",
+			"SpeedRun_SelectorFlecha",
+			"SpeedRun_MarcoExterior",
+			"SpeedRun_File",
+			"SpeedRun_MaxRoom",
+			"SpeedRun_TotalTime",
+			"SpeedRun_TotalKills",
+			"SpeedRun_TotalGems",
+			"SpeedRun_File_number",
+			"SpeedRun_MaxRoom_num",
+			"SpeedRun_TotalTime_num",
+			"SpeedRun_TotalKills_num",
+			"SpeedRun_TotalGems_num",
+			"Speedrun_MODE_A",
+			"Speedrun_MODE_B",
+			"SpeedRun_TXT_Choose_MODE",
+			"SpeedRun_TXT_mode_CLASSIC",
+			"SpeedRun_TXT_mode_NO_DEATH",
+			"SpeedRun_TXT_mode_CLASSIC_desc",
+			"SpeedRun_TXT_mode_NO_DEATH_desc",
+			"Speedrun_SELECTOR_selector",
+			"Speedrun_MODE_C",
+			"SpeedRun_TXT_mode_DOOM",
+			"SpeedRun_TXT_mode_NO_DEATH_desc2",
+			"Array_2_SPR_DATOS_por_NO_DEATH",
+			"Array_3_SPR_DATOS_por_DOOM_MODE",
+			"Array_SPR_10_SLOTS_2_DEATH",
+			"Array_SPR_10_SLOTS_3_DOOM",
+			"Text",
+			"SpeedRun_Sobreescribir_Panel",
+			"SpeedRun_Sobreescribir_Panel_TXT",
+			"SpeedRun_Sobreescribir_Panel_Continue_TXT",
+			"SpeedRun_Sobreescribir_Panel_Continue_TXT2",
+			"SpeedRun_Resumen_TXT",
+			"SpeedRun_Resumen_TIME_TXT",
+			"SpeedRun_Resumen_TIME",
+			"SpeedRun_Resumen_DEATHS_TXT",
+			"SpeedRun_Resumen_DEATHS",
+			"SpeedRun_Resumen_GEMS_TXT",
+			"SpeedRun_Resumen_GEMS",
+			"SpeedRun_Resumen_ROOM_TXT",
+			"SpeedRun_Resumen_ROOM",
+			"SpeedRun_Resumen_Castillo_txt",
+			"TiledBackground2",
+			"Mundo_5_pilar_med",
+			"Mundo_5_pilar_med2",
+			"Mundo_5_pilar_med3",
+			"argolla_gr",
+			"cadena",
+			"cadena_argolla",
+			"columna_bot",
+			"Mundo_3_columna_mid2",
+			"columna_top",
+			"contrafuerte_dch_sin",
+			"contrafuerte_dcha",
+			"Mundo_3_contrafuerte_ex_dcha",
+			"Mundo_3_contrafuerte_ex_izqd",
+			"contrafuerte_iz",
+			"contrafuerte_iz_sin",
+			"pendon_corto",
+			"pendon_largo",
+			"Mundo_3_pilar_1",
+			"Mundo_3_pilar_2",
+			"Mundo_3_pilar_3",
+			"reja_tile_centro",
+			"reja_tile_derecha",
+			"reja_tile_izquierda",
+			"telaranya_",
+			"telaranya",
+			"telaranya2",
+			"telaranya3",
+			"ventana",
+			"viga_derecha",
+			"viga_izquierda",
+			"viga_medio",
+			"viga_medio_deco",
+			"Mundo_3_fondo_telaranyas",
+			"Mundo_2_plataforma_suelta",
+			"Mundo_2_viga_medio_tile",
+			"columna_top2",
+			"Mundo_4_columna_top2",
+			"Mundo_5_columna_top2",
+			"Palancas_final",
+			"fondo_mundo_1_sinCastillo_niCamino",
+			"fondo_mundo_2_sinCastillo",
+			"fondo_sin_castillo_mundo_3",
+			"fondo_sin_castillo_mundo_4",
+			"fondo_sin_castillo_mundo_5",
+			"SOLIDO_INTRO_tileback",
+			"bola_estela_rosa",
+			"Mundo_2_columna_top2",
+			"Mundo1_pilar_arriba2",
+			"fondo_CORTO_mundo_1_sinCastillo_niCamino2",
+			"Mundo_2_columna_top3",
+			"Gemas_particlesTrozos",
+			"fondo_mundo_3_corto",
+			"portada_fondo_completo",
+			"Mundo_4_columna_top3",
+			"bola_ANTIGUA",
+			"fondo_mundo_4_corto",
+			"bola_collision"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"Mundo1_Argolla",
+							"Mundo1_cadena_argallo",
+							"Mundo1_cadena_fina",
+							"Mundo1_escudo1",
+							"Mundo1_madera1",
+							"Mundo1_madera2",
+							"Mundo1_madera3",
+							"Mundo1_madera5",
+							"Mundo1_madera6",
+							"Mundo1_madera7",
+							"Mundo1_pendon1",
+							"Mundo1_pendon2",
+							"Mundo1_Pilar_ancho",
+							"Mundo1_pilar_arriba",
+							"Mundo1_pilar_base",
+							"Mundo1_pilar_base_medio",
+							"Mundo1_Pilar_fino",
+							"Mundo1_Pilar_medio",
+							"Mundo1_puerta_reja",
+							"Mundo1_tlbgnd_der",
+							"Mundo1_tlbgnd_izq",
+							"Mundo1_ventana1",
+							"Mundo1_ventana2",
+							"Mundo1_ventana3",
+							"Mundo1_ventana4",
+							"Mundo1_vigaMadera1",
+							"Mundo1_vigaMadera2",
+							"Mundo1_vigaMadera3",
+							"Mundo1_vigaMadera4"
+						],
+						"subfolders": [],
+						"name": "assets"
+					}
+				],
+				"name": "mundo 1"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"Mundo_2_barra_derecha",
+							"Mundo_2_barra_izquierda",
+							"Mundo_2_barra_mid",
+							"Mundo_2_columna_bot",
+							"Mundo_2_columna_top",
+							"Mundo_2_contrafuerte_cha",
+							"Mundo_2_contrafuerte_dch_sin",
+							"Mundo_2_contrafuerte_ex_dcha",
+							"Mundo_2_contrafuerte_ex_izq",
+							"Mundo_2_contrafuerte_iz",
+							"Mundo_2_contrafuerte_iz_sin",
+							"Mundo_2_pendon_corto",
+							"Mundo_2_pendon_largo",
+							"Mundo_2_reja_tile_centro",
+							"Mundo_2_reja_tile_derecha",
+							"Mundo_2_reja_tile_izquierda",
+							"Mundo_2_ventana",
+							"Mundo_2_viga_derecha",
+							"Mundo_2_viga_izquierda",
+							"Mundo_2_viga_medio",
+							"Mundo_2_viga_medio_deco",
+							"Mundo_2_columna_mid",
+							"Mundo_2_pilar_der3",
+							"Mundo_2_pilar_der4",
+							"Mundo_2_pilar_der5"
+						],
+						"subfolders": [],
+						"name": "assets"
+					}
+				],
+				"name": "mundo 2"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [],
+						"subfolders": [],
+						"name": "assets"
+					}
+				],
+				"name": "mundo 3"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"Mundo_5_argolla_gr",
+							"Mundo_5_cadena",
+							"Mundo_5_cadena_argolla",
+							"Mundo_5_columna_bot",
+							"Mundo_5_columna_mid",
+							"Mundo_5_columna_top",
+							"Mundo_5_contrafuerte_dch_sin",
+							"Mundo_5_contrafuerte_dcha",
+							"Mundo_5_contrafuerte_ex_dcha",
+							"Mundo_5_contrafuerte_ex_izq",
+							"Mundo_5_contrafuerte_iz",
+							"Mundo_5_contrafuerte_iz_sin",
+							"Mundo_5_pendon_corto",
+							"Mundo_5_pendon_corto_deco",
+							"Mundo_5_pendon_largo",
+							"Mundo_5_pendon_largo_deco",
+							"Mundo_5_reja_tile_centro",
+							"Mundo_5_reja_tile_derecha",
+							"Mundo_5_reja_tile_izquierda",
+							"Mundo_5_ventana",
+							"Mundo_5_viga_derecha",
+							"Mundo_5_viga_izquierda",
+							"Mundo_5_viga_medio",
+							"Mundo_5_viga_medio_deco"
+						],
+						"subfolders": [],
+						"name": "assets"
+					}
+				],
+				"name": "mundo 5"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"Mundo_4_argolla_gr",
+							"Mundo_4_cadena",
+							"Mundo_4_cadena_argolla",
+							"Mundo_4_cenefa_esquina_bot_iz",
+							"Mundo_4_cenefa_esquina_top_iz",
+							"Mundo_4_cenefa_esquina_topder",
+							"Mundo_4_cenefa_hor_",
+							"Mundo_4_cenefa_hor_2",
+							"Mundo_4_cenefa_hor_3",
+							"Mundo_4_cenefa_ver_",
+							"Mundo_4_cenefa_ver_2",
+							"Mundo_4_cenefa_ver_3",
+							"Mundo_4_cenfa_esquina_bot_dcha",
+							"Mundo_4_columna_bot",
+							"Mundo_4_columna_mid",
+							"Mundo_4_columna_top",
+							"Mundo_4_contrafuerte_dch_sin",
+							"Mundo_4_contrafuerte_dcha",
+							"Mundo_4_contrafuerte_ex_dcha",
+							"Mundo_4_contrafuerte_ex_iz",
+							"Mundo_4_contrafuerte_iz",
+							"Mundo_4_contrafuerte_iz_sin",
+							"Mundo_4_cubo_gr_",
+							"Mundo_4_cubo_gr_2",
+							"Mundo_4_cubo_gr_3",
+							"Mundo_4_cubo_gr_4",
+							"Mundo_4_cubo_gr_5",
+							"Mundo_4_cubo_gr_6",
+							"Mundo_4_cubo_gr_7",
+							"Mundo_4_cubo_gr_8",
+							"Mundo_4_pilar_de1",
+							"Mundo_4_pilar_de2",
+							"Mundo_4_pilar_de3",
+							"Mundo_4_refuerzo_dcha",
+							"Mundo_4_refuerzo_izquierda",
+							"Mundo_4_reja_tile_centro",
+							"Mundo_4_reja_tile_derecha",
+							"Mundo_4_reja_tile_izquierda",
+							"Mundo_4_torch_new",
+							"Mundo_4_ventana",
+							"Mundo_4_viga_derecha",
+							"Mundo_4_viga_izquierda",
+							"Mundo_4_viga_medio",
+							"Mundo_4_viga_medio_deco"
+						],
+						"subfolders": [],
+						"name": "assets"
+					}
+				],
+				"name": "mundo 4 "
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"Enemigos_mantan",
+			"Enemigos_GIRAN",
+			"PAUSA_elementos",
+			"Solidos",
+			"Palancas_Plataformas"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"LEVEL DESIGN"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"PORTADA",
+					"juego",
+					"SPRITES"
+				],
+				"subfolders": [],
+				"name": "VIEJO"
+			},
+			{
+				"items": [
+					"LOADING"
+				],
+				"subfolders": [],
+				"name": "LOADING"
+			},
+			{
+				"items": [
+					"PORTADA_NUEVA",
+					"SLOTS"
+				],
+				"subfolders": [],
+				"name": "PORTADA"
+			},
+			{
+				"items": [
+					"SpeedRun_SELECTOR",
+					"SpeedRun_TIME",
+					"SpeedRun_DEATH",
+					"SpeedRun_DOOM",
+					"SpeedRun_NOADxxxxxx_DEATHS",
+					"SpeedRun_Resumen"
+				],
+				"subfolders": [],
+				"name": "SPEED RUNER"
+			},
+			{
+				"items": [
+					"INTRO JUEGO"
+				],
+				"subfolders": [],
+				"name": "INTRO "
+			},
+			{
+				"items": [
+					"ENDING_VOLADOR_1",
+					"ENDING_VOLADOR_2",
+					"ENDING_VOLADOR_3",
+					"ENDING_VOLADOR_4",
+					"ENDING_VOLADOR_5"
+				],
+				"subfolders": [],
+				"name": "ENDINGS"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"Room_1",
+							"Room_2",
+							"Room_3",
+							"Room_3B",
+							"Room_4",
+							"Room_5",
+							"1M_CHECKPOINT"
+						],
+						"subfolders": [],
+						"name": "1-5"
+					},
+					{
+						"items": [
+							"Room_6",
+							"Room_6B",
+							"Room_7",
+							"Room_8",
+							"Room_9",
+							"Room_10",
+							"1M_TRANSICION_CASTILLOS"
+						],
+						"subfolders": [],
+						"name": "6-10"
+					},
+					{
+						"items": [
+							"Room_11",
+							"Room_12",
+							"Room_13",
+							"Room_13B",
+							"Room_14",
+							"Room_15",
+							"2M_CHECKPOINT"
+						],
+						"subfolders": [],
+						"name": "11-15"
+					},
+					{
+						"items": [
+							"Room_16",
+							"Room_17",
+							"Room_18",
+							"Room_19",
+							"Room_15B",
+							"Room_20",
+							"2M_TRANSICION_CASTILLOS"
+						],
+						"subfolders": [],
+						"name": "16-20"
+					},
+					{
+						"items": [
+							"Room_21",
+							"Room_21B",
+							"Room_22",
+							"Room_23",
+							"Room_24",
+							"Room_25",
+							"3M_CHECKPOINT"
+						],
+						"subfolders": [],
+						"name": "21-25"
+					},
+					{
+						"items": [
+							"Room_26",
+							"Room_26B",
+							"Room_27",
+							"Room_28",
+							"Room_29",
+							"Room_30",
+							"3M_TRANSICION_CASTILLOS"
+						],
+						"subfolders": [],
+						"name": "26-30"
+					},
+					{
+						"items": [
+							"Room_31",
+							"Room_32",
+							"Room_33",
+							"Room_34",
+							"Room_35",
+							"4M_CHECKPOINT"
+						],
+						"subfolders": [],
+						"name": "31-35"
+					},
+					{
+						"items": [
+							"Room_36",
+							"Room_37",
+							"Room_38",
+							"Room_39",
+							"Room_40",
+							"4M_TRANSICION_CASTILLOS"
+						],
+						"subfolders": [],
+						"name": "36-40"
+					},
+					{
+						"items": [
+							"Room_41",
+							"Room_42",
+							"Room_43",
+							"Room_44",
+							"Room_45",
+							"5M_CHECKPOINT"
+						],
+						"subfolders": [],
+						"name": "41-45"
+					},
+					{
+						"items": [
+							"Room_46",
+							"Room_47",
+							"Room_48",
+							"Room_49",
+							"1_Room_FINAL BOSS"
+						],
+						"subfolders": [],
+						"name": "46-49"
+					},
+					{
+						"items": [
+							"1_Room_SAVE_GIRL"
+						],
+						"subfolders": [],
+						"name": "Save Love 1"
+					},
+					{
+						"items": [
+							"Room_51",
+							"Room_52",
+							"Room_53",
+							"Room_54",
+							"Room_55",
+							"6M_CHECKPOINT"
+						],
+						"subfolders": [],
+						"name": "51-55"
+					},
+					{
+						"items": [
+							"Room_56",
+							"Room_57",
+							"Room_58",
+							"Room_59",
+							"Room_60",
+							"6M_TRANSICION_CASTILLOS"
+						],
+						"subfolders": [],
+						"name": "56-60"
+					},
+					{
+						"items": [
+							"Room_61",
+							"Room_62",
+							"Room_63",
+							"Room_64",
+							"Room_65",
+							"7M_CHECKPOINT"
+						],
+						"subfolders": [],
+						"name": "61-65"
+					},
+					{
+						"items": [
+							"Room_66",
+							"Room_67",
+							"Room_68",
+							"Room_69",
+							"Room_70",
+							"7M_TRANSICION_CASTILLOS"
+						],
+						"subfolders": [],
+						"name": "66-70"
+					},
+					{
+						"items": [
+							"Room_71",
+							"Room_72",
+							"Room_73",
+							"Room_74",
+							"Room_75",
+							"8M_CHECKPOINT"
+						],
+						"subfolders": [],
+						"name": "71-75"
+					},
+					{
+						"items": [
+							"Room_76",
+							"Room_77",
+							"Room_78",
+							"Room_79",
+							"Room_80",
+							"8M_TRANSICION_CASTILLOS"
+						],
+						"subfolders": [],
+						"name": "76-80"
+					},
+					{
+						"items": [
+							"Room_81_O",
+							"Room_82_O",
+							"Room_83_O",
+							"Room_84_O",
+							"Room_85_O",
+							"Room_86_O",
+							"Room_87_O",
+							"Room_88_O",
+							"Room_89_O",
+							"Room_90_O",
+							"9M_CHECKPOINT"
+						],
+						"subfolders": [],
+						"name": "81-85"
+					},
+					{
+						"items": [
+							"Room_91_O",
+							"Room_92_O",
+							"Room_88",
+							"Room_89",
+							"Room_90",
+							"9M_TRANSICION_CASTILLOS"
+						],
+						"subfolders": [],
+						"name": "86-90"
+					},
+					{
+						"items": [
+							"Room_91",
+							"Room_92",
+							"Room_93",
+							"Room_94",
+							"Room_95",
+							"10M_CHECKPOINT"
+						],
+						"subfolders": [],
+						"name": "91-95"
+					},
+					{
+						"items": [
+							"Room_96",
+							"Room_97",
+							"Room_98",
+							"Room_99",
+							"2_Room_FINAL BOSS2"
+						],
+						"subfolders": [],
+						"name": "95-99"
+					},
+					{
+						"items": [
+							"2_Room_SAVE_GIRL"
+						],
+						"subfolders": [],
+						"name": "SAVE LOVE 2"
+					}
+				],
+				"name": "NIVELES"
+			}
+		]
+	},
+	"eventSheets": {
+		"items": [
+			"juego_evento",
+			"variables",
+			"GAME OVER",
+			"e_PORTADA",
+			"enemies",
+			"NIVELES_VISOR",
+			"INTRO_2",
+			"txt_scenes",
+			"Pausa",
+			"FX_sound",
+			"MUSIC_sound",
+			"INTRO_1",
+			"SETTINGS",
+			"EXTRA_LIFES",
+			"Room_FINAL BOSS",
+			"e_LOADING",
+			"Ev_INTRO_JUEGO",
+			"ARREGLO TAMANYOS",
+			"Clasificacion Google Play"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"e_Ending_1",
+					"e_Ending_2",
+					"e_Ending_3",
+					"e_Ending_5",
+					"e_2_Room_FINAL_BOSS2",
+					"e_Ending_4"
+				],
+				"subfolders": [],
+				"name": "ENDING"
+			},
+			{
+				"items": [
+					"Ev_TRANSICIONES_ALL"
+				],
+				"subfolders": [],
+				"name": "TRANSICIONES"
+			},
+			{
+				"items": [
+					"Ev_Transciones_Castillos",
+					"Ev_Transiciones_Castillos_dragon"
+				],
+				"subfolders": [],
+				"name": "TRANSICIONES MUNDOS"
+			},
+			{
+				"items": [
+					"1_SAVE_GIRL",
+					"2_SAVE_GIRL"
+				],
+				"subfolders": [],
+				"name": "SAVE GIRL"
+			},
+			{
+				"items": [
+					"Ev_Portada_nueva"
+				],
+				"subfolders": [],
+				"name": "PORTADA"
+			},
+			{
+				"items": [
+					"Ev_desarrollador"
+				],
+				"subfolders": [],
+				"name": "DESARROLLADOR"
+			},
+			{
+				"items": [
+					"logros_DEMO"
+				],
+				"subfolders": [],
+				"name": "logros DEMO"
+			},
+			{
+				"items": [
+					"E_Capturas_pantalla"
+				],
+				"subfolders": [],
+				"name": "CAPTURAS_PANTALLA"
+			},
+			{
+				"items": [
+					"E_textos_e_idiomas"
+				],
+				"subfolders": [],
+				"name": "TEXTOS E IDIOMAS"
+			},
+			{
+				"items": [
+					"E_slots"
+				],
+				"subfolders": [],
+				"name": "SLOTS"
+			},
+			{
+				"items": [
+					"Ev_SpeedRun_TIME",
+					"Ev_speedrun_SELECTOR",
+					"Ev_Speedrun_Juego",
+					"Ev_Speedrun_DEATH",
+					"Ev_Speedrun_DOOM",
+					"Ev_SpeedRun_Resumen"
+				],
+				"subfolders": [],
+				"name": "SPEED RUN MODE"
+			},
+			{
+				"items": [
+					"e_bola_Roja_o_Rosa"
+				],
+				"subfolders": [],
+				"name": "BOLA ROJA O ROSA"
+			}
+		]
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "Rebote_pelota.m4a",
+					"type": "audio/mp4",
+					"sid": 733757966597478
+				},
+				{
+					"name": "Rebote_pelota.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 862040042089851
+				},
+				{
+					"name": "muerte_ruidito.m4a",
+					"type": "audio/mp4",
+					"sid": 627673316505911
+				},
+				{
+					"name": "muerte_ruidito.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 231804030118131
+				},
+				{
+					"name": "coge_corazones.m4a",
+					"type": "audio/mp4",
+					"sid": 150860666867434
+				},
+				{
+					"name": "coge_corazones.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 304330662825847
+				},
+				{
+					"name": "abre puerta.m4a",
+					"type": "audio/mp4",
+					"sid": 731970634807399
+				},
+				{
+					"name": "abre puerta.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 152311589714999
+				},
+				{
+					"name": "Click_boton.m4a",
+					"type": "audio/mp4",
+					"sid": 932772419931815
+				},
+				{
+					"name": "Click_boton.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 795529857222376
+				},
+				{
+					"name": "Risa_enemigo.m4a",
+					"type": "audio/mp4",
+					"sid": 980121359603481
+				},
+				{
+					"name": "Risa_enemigo.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 467435067337262
+				},
+				{
+					"name": "helice_jefe_final.m4a",
+					"type": "audio/mp4",
+					"sid": 878463538208902
+				},
+				{
+					"name": "helice_jefe_final.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 482759015269265
+				},
+				{
+					"name": "coge_bola_jefe_final.m4a",
+					"type": "audio/mp4",
+					"sid": 447463509238161
+				},
+				{
+					"name": "coge_bola_jefe_final.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 687319167443193
+				},
+				{
+					"name": "salto_bola_intro.m4a",
+					"type": "audio/mp4",
+					"sid": 484651306524184
+				},
+				{
+					"name": "salto_bola_intro.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 163320992129070
+				},
+				{
+					"name": "aparecen corazones grandes.m4a",
+					"type": "audio/mp4",
+					"sid": 151059914061070
+				},
+				{
+					"name": "aparecen corazones grandes.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 451192032769969
+				},
+				{
+					"name": "sierras_explotan.m4a",
+					"type": "audio/mp4",
+					"sid": 625108967609070
+				},
+				{
+					"name": "sierras_explotan.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 962727088833244
+				},
+				{
+					"name": "Powerup.m4a",
+					"type": "audio/mp4",
+					"sid": 333341016251284
+				},
+				{
+					"name": "Powerup.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 437301786132797
+				},
+				{
+					"name": "aplausos_Excellent.m4a",
+					"type": "audio/mp4",
+					"sid": 193933243252227
+				},
+				{
+					"name": "aplausos_Excellent.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 457693159678548
+				},
+				{
+					"name": "captura_share.m4a",
+					"type": "audio/mp4",
+					"sid": 644840591345332
+				},
+				{
+					"name": "captura_share.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 343166231017136
+				},
+				{
+					"name": "Cuando acaba el espiral_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 438599844702721
+				},
+				{
+					"name": "Pop capa de energia explota.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 246390082489197
+				},
+				{
+					"name": "MattOglseby - 5.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 223729103410475
+				},
+				{
+					"name": "piedra golpea suelo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 700824981237655
+				},
+				{
+					"name": "Cadenas_Carcel.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 251095096883432
+				},
+				{
+					"name": "coge_corazones.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 687284529967884
+				},
+				{
+					"name": "abre puerta.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 310925487079403
+				},
+				{
+					"name": "Swipe.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 108905220733895
+				}
+			],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "crea_bola_2.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 253605980967252
+						},
+						{
+							"name": "crea_bola_1.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 211051347048925
+						}
+					],
+					"subfolders": [],
+					"name": "crea bola"
+				},
+				{
+					"items": [
+						{
+							"name": "aleteo dragon.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 508223196125383
+						},
+						{
+							"name": "grito_bola_roja_intro.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 643153972161647
+						},
+						{
+							"name": "musica boda.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 188072667538068
+						}
+					],
+					"subfolders": [],
+					"name": "intro"
+				},
+				{
+					"items": [
+						{
+							"name": "Portada_selector_pasar_opciones.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 629270304454390
+						},
+						{
+							"name": "Portada_Start.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 772669889772660
+						}
+					],
+					"subfolders": [],
+					"name": "Portada"
+				},
+				{
+					"items": [
+						{
+							"name": "logro_sound.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 408784083371729
+						}
+					],
+					"subfolders": [],
+					"name": "logro DEMO"
+				},
+				{
+					"items": [
+						{
+							"name": "Coge_corazon.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 396921223582539
+						}
+					],
+					"subfolders": [],
+					"name": "Corazones"
+				},
+				{
+					"items": [
+						{
+							"name": "bloques_se_rompen_sueltan_piedras.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 797054534295990
+						},
+						{
+							"name": "bloque_tiembla.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 314632305761169
+						},
+						{
+							"name": "Bloques_se_rompen_POP.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 586360893018547
+						}
+					],
+					"subfolders": [],
+					"name": "bloques se rompen"
+				},
+				{
+					"items": [
+						{
+							"name": "Gemas_Pick_up.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 960489306964222
+						}
+					],
+					"subfolders": [],
+					"name": "Gemas"
+				},
+				{
+					"items": [
+						{
+							"name": "muelle_salto_boing.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 402814992921595
+						}
+					],
+					"subfolders": [],
+					"name": "muelle saltarin"
+				},
+				{
+					"items": [
+						{
+							"name": "Transicion_Sonido.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 578611985822708
+						},
+						{
+							"name": "Transicion_Sonido_sale.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 949809703927552
+						}
+					],
+					"subfolders": [],
+					"name": "transiciones"
+				},
+				{
+					"items": [
+						{
+							"name": "Canyon impulse.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 196751513598422
+						}
+					],
+					"subfolders": [],
+					"name": "Canyon Dash"
+				}
+			]
+		},
+		"music": {
+			"items": [],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "Kid_ball_bioma_1.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 759086743374258
+						},
+						{
+							"name": "Kid_ball_bioma_2.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 158370434052708
+						},
+						{
+							"name": "Kid_ball_bioma_3.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 215101519111095
+						},
+						{
+							"name": "Kidball_menu_loop.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 645195908496363
+						},
+						{
+							"name": "Kid_ball_bioma_5.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 106176735379746
+						},
+						{
+							"name": "Kid_ball_bioma_4.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 890729051573516
+						}
+					],
+					"subfolders": [],
+					"name": "biomas"
+				},
+				{
+					"items": [
+						{
+							"name": "intro_music.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 992538291274693
+						}
+					],
+					"subfolders": [],
+					"name": "intro juego"
+				}
+			]
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "TT0205M.TTF",
+					"type": "application/font-sfnt",
+					"sid": 893821716614175
+				},
+				{
+					"name": "BalooThambi2-ExtraBold.ttf",
+					"type": "application/font-sfnt",
+					"sid": 409236071211005
+				},
+				{
+					"name": "BalooThambi2-Bold.ttf",
+					"type": "application/font-sfnt",
+					"sid": 990950535479070
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 196140983881086,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 656801141844334,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-114.png",
+					"type": "image/png",
+					"sid": 690949785545917,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 273193202528367,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 540752850598108,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 295486448359283,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "TRADUCCIONES.json",
+					"type": "application/json",
+					"sid": 586140121317218
+				},
+				{
+					"name": "Array_SPEEDRUN_DATOS_por_nivel.json",
+					"type": "application/json",
+					"sid": 615444469185668
+				},
+				{
+					"name": "Array_10_SLOTS_speedrun.json",
+					"type": "application/json",
+					"sid": 675266447121577
+				},
+				{
+					"name": "DICCIONARIO_SPEEDRUN_10_SLOTS_JSON_GUARDADO.json",
+					"type": "application/json",
+					"sid": 138744112654855
+				}
+			],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"intro_jefe_se_va",
+			"transicion_jefe_se_va",
+			"transicion_M2_M3",
+			"transicion_M3_M4",
+			"transicion_M4_M5"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			},
+			{
+				"items": [
+					"Der_Arriba"
+				],
+				"subfolders": [],
+				"name": "2_FINAL_BOSS"
+			}
+		]
+	},
+	"properties": {
+		"description": "video_juego",
+		"version": "1.0.0",
+		"author": "SpoonBox Studio",
+		"authorEmail": "spoonboxstudio@gmail.com",
+		"authorWebsite": "http://",
+		"appId": "com.spoonboxstudio.red.ball.dark.king",
+		"pixelRounding": true,
+		"useLoaderLayout": true,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "bilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "file",
+		"cordovaAndroidScheme": "file"
+	},
+	"viewportWidth": 854,
+	"viewportHeight": 480,
+	"firstLayout": "LOADING"
+}

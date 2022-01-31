@@ -1,0 +1,5444 @@
+{
+	"name": "e_2_Room_FINAL_BOSS2",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "FB_sale_posicion",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "1=arribaIzq 2=arribaDer 3=abajoIzq 4=abajoDer",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 296056463445540
+		},
+		{
+			"eventType": "variable",
+			"name": "FB_tiempo_entre_salida_y_salida",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "4 por defecto",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 312493511317526
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "juego_evento"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\tEMPIEZA EL JUEGO"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 141092950965537
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "JEFE_FINAL_imagen",
+					"sid": 749013392660034,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 156638480221217
+				},
+				{
+					"type": "comment",
+					"text": "COGE EL ANCHO DEL TEXTO PARA COLOCAR EL BOTON"
+				},
+				{
+					"id": "set-width",
+					"objectClass": "FINAL_BOSS_TUTORIAL",
+					"sid": 348512281677177,
+					"parameters": {
+						"width": "Self.TextWidth"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "FINAL_BOSS_confirmacion_Button",
+					"sid": 596106842522784,
+					"parameters": {
+						"x": "FINAL_BOSS_TUTORIAL.BBoxLeft-30"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "FINAL_BOSS_confirmacion_Button",
+					"sid": 583053213970749,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "TUTORIAL_FINAL_BOSS",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "FINAL_BOSS_TUTORIAL",
+					"sid": 979933881387610,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "TUTORIAL_FINAL_BOSS",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "FINAL_BOSS_TUTORIAL",
+					"sid": 585931617420836,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "TUTORIAL_FINAL_BOSS",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "BTN_FINAL_BOSS_OK",
+					"sid": 386959850078919,
+					"disabled": true,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "TUTORIAL_FINAL_BOSS",
+						"x": false,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "JEFE_FINAL2",
+					"sid": 148222409899048,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "2_JEFE_FINAL",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "Black_ball",
+					"sid": 859559603373355,
+					"behaviorType": "Platform",
+					"parameters": {
+						"input": "start-ignoring"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 234563490427381,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"value": "0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 922681828789288,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "left_BTN",
+					"sid": 106733526280719,
+					"parameters": {
+						"width": "1455",
+						"height": "866"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "left_BTN2",
+					"sid": 995623320144055,
+					"parameters": {
+						"width": "1455",
+						"height": "866"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "left_BTN",
+					"sid": 720171627360399,
+					"parameters": {
+						"x": "ViewportRight(\"fondo\")/2-10000",
+						"y": "ViewportBottom(\"fondo\")/2"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "left_BTN2",
+					"sid": 747897350186957,
+					"parameters": {
+						"x": "ViewportRight(\"fondo\")/2+10000",
+						"y": "ViewportBottom(\"fondo\")/2"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "left_arrow",
+					"sid": 816980036428418,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Right_arrow",
+					"sid": 185475418942863,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "JEFE_FINAL",
+					"sid": 231968235366172,
+					"parameters": {
+						"instance-variable": "DIRECCION",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "JEFE_FINAL",
+					"sid": 208683267239746,
+					"parameters": {
+						"instance-variable": "HA_SIDO_TOCADO",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "JEFE_FINAL",
+					"sid": 700718902371504,
+					"parameters": {
+						"instance-variable": "CONTADOR_HA_SIDO_TOCADO",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 497199441196599,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"value": "5"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 933413346635283,
+					"parameters": {
+						"variable": "TIRA_PINCHOS",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 466185960255254,
+					"parameters": {
+						"variable": "SIERRAS_FINAL_BOSS",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 452266146774399,
+					"parameters": {
+						"variable": "CONTADOR_camara_lenta",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 252959101180959,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"value": "-2"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 405563105038577,
+					"parameters": {
+						"variable": "FB_sale_posicion",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 769691033307458,
+					"parameters": {
+						"variable": "FB_tiempo_entre_salida_y_salida",
+						"value": "4"
+					}
+				}
+			],
+			"sid": 569156064295572
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tSALTO   JEFE  FINAL"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-floor",
+					"objectClass": "JEFE_FINAL",
+					"sid": 407162974149033,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 900296764156074,
+					"disabled": true,
+					"parameters": {
+						"variable": "fx_rebolte_pelota",
+						"value": "1"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "JEFE_FINAL",
+					"sid": 704130251871352,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "JEFE_FINAL",
+					"sid": 990578751903776,
+					"parameters": {
+						"object": "polvo",
+						"layer": "\"pelota\"",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "polvo",
+					"sid": 524269386274237,
+					"parameters": {
+						"angle": "270"
+					}
+				}
+			],
+			"sid": 649181527663540,
+			"disabled": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 490438345061744,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 393972435074793,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 994829709628483
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 230630689679091,
+									"parameters": {
+										"audio-file": "piedra golpea suelo",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX-25",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 272226039851847,
+							"disabled": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 584501769385886,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "-2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 808486682449127,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 327264478605095,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 926333725461915,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 602835047455807
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 570266246681446,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 523252706661934,
+									"parameters": {
+										"audio-file": "Risa_enemigo",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 542372453298652,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "2_JEFE_FINAL",
+									"sid": 682518523404347,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "2_JEFE_FINAL",
+									"sid": 654589137646966,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"coge_llave_FB2\"",
+										"property": "position",
+										"end-x": "llave_final_BOSS.X",
+										"end-y": "llave_final_BOSS.Y-50",
+										"time": "0.7",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 750451410482621,
+									"disabled": true,
+									"parameters": {
+										"variable": "PASOS_FINAL_BOSS",
+										"value": "-1.5"
+									}
+								}
+							],
+							"sid": 835925866228267
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 455275698309683,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 649143873962515,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 416807428414663
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 562939640606569,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "2_JEFE_FINAL",
+									"sid": 870629288551774,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"coge_llave_FB2\"",
+										"property": "position",
+										"end-x": "llave_final_BOSS.X",
+										"end-y": "llave_final_BOSS.Y-50",
+										"time": "0.7",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 584751279691851,
+									"disabled": true,
+									"parameters": {
+										"variable": "PASOS_FINAL_BOSS",
+										"value": "-1.5"
+									}
+								}
+							],
+							"sid": 455284251923169
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "2_JEFE_FINAL",
+					"sid": 369063594188054,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"coge_llave_FB2\""
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 845148223091041,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "-2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 800382163193920,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 221925202657278,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 440484025551748,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 347855584528626
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "llave_final_BOSS",
+									"sid": 541076040557537,
+									"parameters": {
+										"x": "-1000",
+										"y": "-1000"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "RESPLANDOR",
+									"sid": 879558197565744,
+									"parameters": {
+										"x": "-1000",
+										"y": "-1000"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 469801237909424,
+									"disabled": true,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "2_JEFE_FINAL",
+									"sid": 597866664770853,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "-400",
+										"end-y": "-50",
+										"time": "1.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 789894482376899,
+									"parameters": {
+										"audio-file": "coge_bola_jefe_final",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 241936460948070,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 812463084417446,
+									"parameters": {
+										"variable": "PASOS_FINAL_BOSS",
+										"value": "4"
+									}
+								}
+							],
+							"sid": 642291498920218
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 317524727172225,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 519957894672075,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 627271882511995
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 296071363809880,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "2_JEFE_FINAL",
+									"sid": 162036185930811,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "-400",
+										"end-y": "-50",
+										"time": "1.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 190373338748448,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 569668279923350,
+									"parameters": {
+										"variable": "PASOS_FINAL_BOSS",
+										"value": "4"
+									}
+								}
+							],
+							"sid": 847439306215328
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 657167308437418,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 224394100062721,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 720700051813806
+						}
+					],
+					"actions": [],
+					"sid": 486550164421501,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 112425649210163,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "TUTORIAL_FINAL_BOSS",
+									"sid": 919676567251975,
+									"parameters": {
+										"animation": "\"tutorial_2\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "TUTORIAL_FINAL_BOSS",
+									"sid": 179415119857190,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "200",
+										"time": "0.9",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 458616424154635,
+									"parameters": {
+										"variable": "PASOS_FINAL_BOSS",
+										"value": "5"
+									}
+								}
+							],
+							"sid": 188167792882963
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 648739133472331,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "TUTORIAL_FINAL_BOSS",
+									"sid": 191932195767165,
+									"parameters": {
+										"animation": "\"tutorial_2\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "TUTORIAL_FINAL_BOSS",
+									"sid": 843072640075794,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "200",
+										"time": "0.9",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 783699228962965,
+									"parameters": {
+										"audio-file": "Swipe",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 934316312542389,
+									"parameters": {
+										"variable": "PASOS_FINAL_BOSS",
+										"value": "5"
+									}
+								}
+							],
+							"sid": 290655329512759
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 488701071066810,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 261226075707408,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 695388981420387,
+							"parameters": {
+								"object": "BTN_FINAL_BOSS_OK"
+							}
+						},
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 364306389431080,
+							"parameters": {
+								"object": "FINAL_BOSS_TUTORIAL"
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 406689765307995,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 234588442826077,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-x"
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 394692851314827,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [],
+					"sid": 889429572373488,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 935707715928098,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "TUTORIAL_FINAL_BOSS",
+									"sid": 687955483883019,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "973",
+										"time": "0.9",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 231318253242131,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "START_TXT",
+									"sid": 911867321504796,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "255",
+										"time": "0.8",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 473532284263037,
+									"parameters": {
+										"seconds": "1.5"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "START_TXT",
+									"sid": 897012686155442,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "-288",
+										"time": "0.8",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 828537439340902,
+									"parameters": {
+										"variable": "PASOS_FINAL_BOSS",
+										"value": "6"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "JEFE_FINAL",
+									"sid": 175624199941191,
+									"parameters": {
+										"instance-variable": "DIRECCION",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 648971858201031
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 966475197132208,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 572186513182740,
+									"parameters": {
+										"audio-file": "Swipe",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "TUTORIAL_FINAL_BOSS",
+									"sid": 725007261006010,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "973",
+										"time": "0.9",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 455802169093891,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 718799273972306,
+									"parameters": {
+										"audio-file": "Swipe",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "START_TXT",
+									"sid": 240939991563920,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "245",
+										"time": "0.8",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 303430056642477,
+									"parameters": {
+										"seconds": "1.5"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "START_TXT",
+									"sid": 788033925501343,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "-288",
+										"time": "0.8",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 503686375498720,
+									"parameters": {
+										"audio-file": "Swipe",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 655625687903321,
+									"parameters": {
+										"variable": "PASOS_FINAL_BOSS",
+										"value": "6"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "JEFE_FINAL",
+									"sid": 342263803809091,
+									"parameters": {
+										"instance-variable": "DIRECCION",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 838904613725502
+						}
+					],
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 770405756286490,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "6"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 839239489290543,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 155538455061435
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "left_BTN",
+							"sid": 396505469095813,
+							"parameters": {
+								"x": "ViewportRight(\"fondo\")/2",
+								"y": "ViewportBottom(\"fondo\")/2"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "left_BTN2",
+							"sid": 324418142448812,
+							"parameters": {
+								"x": "ViewportRight(\"fondo\")/2",
+								"y": "ViewportBottom(\"fondo\")/2"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "JEFE_FINAL",
+							"sid": 572593116280208,
+							"behaviorType": "Platform",
+							"parameters": {
+								"acceleration": "200"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 132775536382708,
+							"parameters": {
+								"variable": "PASOS_FINAL_BOSS",
+								"value": "7"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 899431934634856,
+							"parameters": {
+								"variable": "FB_sale_posicion",
+								"value": "choose(1,2,3,4)"
+							}
+						},
+						{
+							"callFunction": "FB2 Sale por los lados",
+							"sid": 348258977729257
+						},
+						{
+							"callFunction": "pone Admiracion FB2",
+							"sid": 509479043230549
+						}
+					],
+					"sid": 461179612095126
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 848826845491825,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 2,
+						"value": "7"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "bola",
+					"sid": 523713633685761,
+					"parameters": {
+						"x": "60"
+					}
+				}
+			],
+			"sid": 107744905697660
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ENEMIGO SALE POR LOS LADOS - MECANICA -",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 714101850592446,
+							"parameters": {
+								"variable": "VIDA_FINAL_BOSS",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 518225731987526,
+					"children": [
+						{
+							"functionName": "FB2 Sale por los lados",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 945901340796598,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 700878714946826,
+											"parameters": {
+												"variable": "FB_sale_posicion",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 264297291466500,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 796053360929978
+												}
+											],
+											"actions": [
+												{
+													"id": "set-position",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 206569896655288,
+													"parameters": {
+														"x": "-300",
+														"y": "205"
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 434010934054482,
+													"parameters": {
+														"state": "mirrored"
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 192501777057881,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"se_desplaza\"",
+														"property": "offsetX",
+														"end-value": "1350",
+														"time": "4",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 390582290150706,
+													"parameters": {
+														"variable": "FB_tiempo_entre_salida_y_salida",
+														"value": "FB_tiempo_entre_salida_y_salida>2? FB_tiempo_entre_salida_y_salida-0.1: FB_tiempo_entre_salida_y_salida"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 931159126837225,
+													"parameters": {
+														"seconds": "0.05"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 406426332471974,
+													"parameters": {
+														"variable": "FB_sale_posicion",
+														"value": "choose(2,4)"
+													}
+												}
+											],
+											"sid": 417877983311775
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 262718319760225,
+											"parameters": {
+												"variable": "FB_sale_posicion",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 359603556568130,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 252775311922665
+												}
+											],
+											"actions": [
+												{
+													"id": "set-position",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 992914734644907,
+													"parameters": {
+														"x": "1350",
+														"y": "205"
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 750476824738999,
+													"parameters": {
+														"state": "not-mirrored"
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 775144851888013,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"se_desplaza\"",
+														"property": "offsetX",
+														"end-value": "-300",
+														"time": "4",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 638067911971235,
+													"parameters": {
+														"variable": "FB_tiempo_entre_salida_y_salida",
+														"value": "FB_tiempo_entre_salida_y_salida>2? FB_tiempo_entre_salida_y_salida-0.1: FB_tiempo_entre_salida_y_salida"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 286101303389552,
+													"parameters": {
+														"seconds": "0.05"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 344247939047679,
+													"parameters": {
+														"variable": "FB_sale_posicion",
+														"value": "choose(1,3)"
+													}
+												}
+											],
+											"sid": 273807907473626
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 966057570240068,
+											"parameters": {
+												"variable": "FB_sale_posicion",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 481086130766401,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 560599309290668
+												}
+											],
+											"actions": [
+												{
+													"id": "set-position",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 350992884024147,
+													"parameters": {
+														"x": "-300",
+														"y": "395"
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 468144174541327,
+													"parameters": {
+														"state": "mirrored"
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 333669060709821,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"se_desplaza\"",
+														"property": "offsetX",
+														"end-value": "1350",
+														"time": "4",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 833681501038777,
+													"parameters": {
+														"variable": "FB_tiempo_entre_salida_y_salida",
+														"value": "FB_tiempo_entre_salida_y_salida>2? FB_tiempo_entre_salida_y_salida-0.1: FB_tiempo_entre_salida_y_salida"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 932677266530848,
+													"parameters": {
+														"seconds": "0.05"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 181244715183403,
+													"parameters": {
+														"variable": "FB_sale_posicion",
+														"value": "choose(2,4)"
+													}
+												}
+											],
+											"sid": 395300023026970
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 538300836491838,
+											"parameters": {
+												"variable": "FB_sale_posicion",
+												"comparison": 0,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 197006334184123,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 555928379580303
+												}
+											],
+											"actions": [
+												{
+													"id": "set-position",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 504447323892586,
+													"parameters": {
+														"x": "1350",
+														"y": "395"
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 397767450013965,
+													"parameters": {
+														"state": "not-mirrored"
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "2_JEFE_FINAL",
+													"sid": 491340470297367,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"se_desplaza\"",
+														"property": "offsetX",
+														"end-value": "-300",
+														"time": "4",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 951190496990577,
+													"parameters": {
+														"variable": "FB_tiempo_entre_salida_y_salida",
+														"value": "FB_tiempo_entre_salida_y_salida>2? FB_tiempo_entre_salida_y_salida-0.1: FB_tiempo_entre_salida_y_salida"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 985895110840132,
+													"parameters": {
+														"seconds": "0.05"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 565403349260584,
+													"parameters": {
+														"variable": "FB_sale_posicion",
+														"value": "choose(1,3)"
+													}
+												}
+											],
+											"sid": 335425986052790
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "2_JEFE_FINAL",
+									"sid": 784277124328121,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"se_desplaza\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "start-timer",
+									"objectClass": "2_JEFE_FINAL",
+									"sid": 213729028763958,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "FB_tiempo_entre_salida_y_salida",
+										"type": "once",
+										"tag": "\"tiempo_entre_salida_y_salida\""
+									}
+								}
+							],
+							"sid": 739934714838969
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "2_JEFE_FINAL",
+									"sid": 625155138557326,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"tiempo_entre_salida_y_salida\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "FB2 Sale por los lados",
+									"sid": 897401704966934
+								},
+								{
+									"callFunction": "pone Admiracion FB2",
+									"sid": 977491727556391
+								}
+							],
+							"sid": 606016184763104
+						}
+					]
+				},
+				{
+					"functionName": "pone Admiracion FB2",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 947267747226260,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 291460130268255,
+									"parameters": {
+										"variable": "FB_sale_posicion",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 572280214610872,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 138361182268938
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Admiracion",
+											"sid": 656664374798411,
+											"parameters": {
+												"x": "80",
+												"y": "205"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 247644859775142,
+											"parameters": {
+												"seconds": "1"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Admiracion",
+											"sid": 864763091690622,
+											"parameters": {
+												"x": "-1500",
+												"y": "-1500"
+											}
+										}
+									],
+									"sid": 462605914337442
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 461730131153875,
+									"parameters": {
+										"variable": "FB_sale_posicion",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 430842766337232,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 378422334211938
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Admiracion",
+											"sid": 553759270450710,
+											"parameters": {
+												"x": "780",
+												"y": "205"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 239023562005351,
+											"parameters": {
+												"seconds": "1"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Admiracion",
+											"sid": 464746366370958,
+											"parameters": {
+												"x": "-1500",
+												"y": "-1500"
+											}
+										}
+									],
+									"sid": 923527496701754
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 932240914558297,
+									"parameters": {
+										"variable": "FB_sale_posicion",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 728182437009084,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 847238698564581
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Admiracion",
+											"sid": 479368099206609,
+											"parameters": {
+												"x": "80",
+												"y": "395"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 584881113019394,
+											"parameters": {
+												"seconds": "1"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Admiracion",
+											"sid": 201502171954770,
+											"parameters": {
+												"x": "-1500",
+												"y": "-1500"
+											}
+										}
+									],
+									"sid": 433171730917450
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 291150740576698,
+									"parameters": {
+										"variable": "FB_sale_posicion",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 990753766213804,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 225233047422042
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Admiracion",
+											"sid": 839033677838354,
+											"parameters": {
+												"x": "780",
+												"y": "395"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 404627820292873,
+											"parameters": {
+												"seconds": "1"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Admiracion",
+											"sid": 295123666764690,
+											"parameters": {
+												"x": "-1500",
+												"y": "-1500"
+											}
+										}
+									],
+									"sid": 452514432808309
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 760163250621398
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 597503657721959,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 5,
+						"value": "7"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "JEFE_FINAL",
+					"sid": 757584724246576,
+					"parameters": {
+						"instance-variable": "DIRECCION",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "JEFE_FINAL",
+					"sid": 470905719566129,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 350310395481693,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 109153634916902,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 5,
+						"value": "7"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "JEFE_FINAL",
+					"sid": 314320133684158,
+					"parameters": {
+						"instance-variable": "DIRECCION",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "JEFE_FINAL",
+					"sid": 237626033428226,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 805316647483392,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "JEFE_FINAL",
+					"sid": 888376016040887,
+					"parameters": {
+						"object": "boss_colision_left"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "JEFE_FINAL",
+					"sid": 102208291642330,
+					"parameters": {
+						"instance-variable": "DIRECCION",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "JEFE_FINAL",
+					"sid": 425985758456662,
+					"parameters": {
+						"instance-variable": "DIRECCION",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "JEFE_FINAL",
+					"sid": 194510927510398,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "JEFE_FINAL_imagen",
+					"sid": 396626844202313,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 593316223308528,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "JEFE_FINAL",
+					"sid": 283439379492606,
+					"parameters": {
+						"object": "boss_colision_right"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "JEFE_FINAL",
+					"sid": 630403533624609,
+					"parameters": {
+						"instance-variable": "DIRECCION",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "JEFE_FINAL",
+					"sid": 655196586747185,
+					"parameters": {
+						"instance-variable": "DIRECCION",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "JEFE_FINAL",
+					"sid": 607981628560803,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "JEFE_FINAL_imagen",
+					"sid": 549588207863058,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 847381692956312,
+			"disabled": true
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tGOLPEAS    AL   ENEMIGO   FINAL"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bola_collision",
+					"sid": 872071244186358,
+					"parameters": {
+						"object": "JEFE_FINAL2"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "bola",
+					"sid": 709633129326318,
+					"parameters": {
+						"comparison": 3,
+						"y-co-ordinate": "JEFE_FINAL2.Y-5"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "bola",
+					"sid": 203796950694901,
+					"disabled": true,
+					"parameters": {
+						"comparison": 3,
+						"x-co-ordinate": "JEFE_FINAL2.X+10"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "bola",
+					"sid": 465038351165462,
+					"disabled": true,
+					"parameters": {
+						"comparison": 5,
+						"x-co-ordinate": "JEFE_FINAL2.X-10"
+					}
+				},
+				{
+					"id": "is-falling",
+					"objectClass": "bola",
+					"sid": 937984543961181,
+					"disabled": true,
+					"behaviorType": "Platform"
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "JEFE_FINAL2",
+					"sid": 651772916337633,
+					"parameters": {
+						"instance-variable": "HA_SIDO_TOCADO",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 964141692618070,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 675582345529505
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-y",
+							"objectClass": "bola",
+							"sid": 539582632634073,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "-850"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "bola",
+							"sid": 718917284658059,
+							"disabled": true,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "850"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "bola",
+							"sid": 752001330763717,
+							"disabled": true,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "JEFE_FINAL2",
+							"sid": 369939755977108,
+							"parameters": {
+								"instance-variable": "HA_SIDO_TOCADO",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "JEFE_FINAL2",
+							"sid": 327105348111090,
+							"parameters": {
+								"instance-variable": "CONTADOR_HA_SIDO_TOCADO",
+								"value": "100"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 196349010191765,
+							"parameters": {
+								"variable": "VIDA_FINAL_BOSS",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "bola",
+							"sid": 108599806281417,
+							"disabled": true,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "550"
+							}
+						}
+					],
+					"sid": 721303380658866
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 855801261593943,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 181985210042028,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 839672407126072
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 726248116706358,
+									"parameters": {
+										"audio-file": "coge_bola_jefe_final",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 267448696941459
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bola_collision",
+					"sid": 418721357250771,
+					"parameters": {
+						"object": "JEFE_FINAL2"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "JEFE_FINAL2",
+					"sid": 302286676391351,
+					"parameters": {
+						"instance-variable": "HA_SIDO_TOCADO",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "bola",
+					"sid": 904021967622314,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "JEFE_FINAL2.Y-5"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "bola",
+					"sid": 807558073255068,
+					"disabled": true,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "JEFE_FINAL2.Y"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 528795096179301,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 978203927047072
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 165946682738829,
+							"parameters": {
+								"object": "polvo2",
+								"layer": "\"pelota\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "polvo2",
+							"sid": 652133910147566,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "llave",
+							"sid": 166551344427995,
+							"disabled": true
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 988344797498186,
+							"parameters": {
+								"variable": "VIDAS_1",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "bola",
+							"sid": 259282080063015,
+							"parameters": {
+								"x": "-1000",
+								"y": "-1000"
+							}
+						},
+						{
+							"id": "set-vector-y",
+							"objectClass": "bola",
+							"sid": 462588070908944,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "0"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "bola",
+							"sid": 758101097064347,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "550"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 634840704582883,
+							"parameters": {
+								"variable": "Aparece_bola",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "bola",
+							"sid": 516613291208125,
+							"disabled": true,
+							"parameters": {
+								"x": "101",
+								"y": "239"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "bola",
+							"sid": 886960973629685,
+							"disabled": true,
+							"parameters": {
+								"object": "Inicio_POS",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 964105990137948,
+							"disabled": true
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "puerta",
+							"sid": 172840590117052,
+							"disabled": true,
+							"parameters": {
+								"instance-variable": "abierta",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 464060636502505
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 566576236859063,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 840805170514114,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 642967750731977
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 226204212304686,
+									"parameters": {
+										"variable": "fx_muerte_pelota",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 134778173133274
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tCONTADOR HA SIDO TOCADO"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "JEFE_FINAL2",
+					"sid": 959228829167390,
+					"parameters": {
+						"instance-variable": "CONTADOR_HA_SIDO_TOCADO",
+						"comparison": 4,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "JEFE_FINAL2",
+					"sid": 585882075119251,
+					"parameters": {
+						"instance-variable": "HA_SIDO_TOCADO",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "JEFE_FINAL2",
+					"sid": 883423826731202,
+					"parameters": {
+						"instance-variable": "CONTADOR_HA_SIDO_TOCADO",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 692275720224275,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 168479811094832,
+							"parameters": {
+								"variable": "VIDA_FINAL_BOSS",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 368771651955120,
+							"parameters": {
+								"animation": "\"1_GOLPE\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation-speed",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 520745794839672,
+							"parameters": {
+								"speed": "10"
+							}
+						}
+					],
+					"sid": 876487999702302
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 994035829042904,
+							"parameters": {
+								"variable": "VIDA_FINAL_BOSS",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 527604261622470,
+							"parameters": {
+								"animation": "\"1_GOLPE\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation-speed",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 779897521700362,
+							"parameters": {
+								"speed": "15"
+							}
+						}
+					],
+					"sid": 722312577574135
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 893010827841670,
+							"parameters": {
+								"variable": "VIDA_FINAL_BOSS",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 255900399535108,
+							"parameters": {
+								"animation": "\"1_GOLPE\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation-speed",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 487567967248235,
+							"parameters": {
+								"speed": "20"
+							}
+						}
+					],
+					"sid": 908082350062301
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 639689824010485,
+							"parameters": {
+								"variable": "VIDA_FINAL_BOSS",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 379337913072525,
+							"parameters": {
+								"animation": "\"1_GOLPE\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation-speed",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 875185667547243,
+							"parameters": {
+								"speed": "25"
+							}
+						}
+					],
+					"sid": 194560321615071
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "JEFE_FINAL2",
+					"sid": 414155824647057,
+					"parameters": {
+						"instance-variable": "CONTADOR_HA_SIDO_TOCADO",
+						"comparison": 3,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "JEFE_FINAL2",
+					"sid": 450886224604101,
+					"parameters": {
+						"instance-variable": "HA_SIDO_TOCADO",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "2_JEFE_FINAL",
+					"sid": 626445833695303,
+					"parameters": {
+						"animation": "\"Default\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "JEFE_FINAL2",
+					"sid": 579758798813820,
+					"parameters": {
+						"instance-variable": "HA_SIDO_TOCADO",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 668712867000848
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tANIMACION  BARRA  ENERGIA  FINAL  BOSS"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 727338241539267,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 0,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "VIDA_JEFE_FINAL",
+					"sid": 721976808349525,
+					"parameters": {
+						"animation": "\"5_TOQUES\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 861158068658934
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 655290382249287,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 0,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "VIDA_JEFE_FINAL",
+					"sid": 711607591169251,
+					"parameters": {
+						"animation": "\"4_TOQUES\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 700503585352947
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 159165252338119,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "VIDA_JEFE_FINAL",
+					"sid": 663434211509307,
+					"parameters": {
+						"animation": "\"3_TOQUES\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 745076142085320
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 613280615792276,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "VIDA_JEFE_FINAL",
+					"sid": 553452926614943,
+					"parameters": {
+						"animation": "\"2_TOQUES\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 383261019896463
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 972871189322543,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "VIDA_JEFE_FINAL",
+					"sid": 280106242700176,
+					"parameters": {
+						"animation": "\"1_TOQUE\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 890171545367047
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 412415160348755,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "VIDA_JEFE_FINAL",
+					"sid": 932903967616325,
+					"parameters": {
+						"animation": "\"0_TOQUES\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 297081865238536
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tPONE PICHOS EN EL TECHO"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 218929535355106,
+					"parameters": {
+						"variable": "TIRA_PINCHOS",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 149932593701389,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 478930891031750,
+					"parameters": {
+						"object-to-create": "PINCHO_FINAL_BOSS",
+						"layer": "\"PINCHOS\"",
+						"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
+						"y": "65",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 857970181044530,
+					"parameters": {
+						"angle": "180"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 142423639874178,
+					"parameters": {
+						"opacity": "choose(55,60,65,70,75,80,85,90,95)"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 492778161706186,
+					"parameters": {
+						"object-to-create": "PINCHO_FINAL_BOSS",
+						"layer": "\"PINCHOS\"",
+						"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
+						"y": "65",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 331959210413591,
+					"parameters": {
+						"angle": "180"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 540649011111787,
+					"parameters": {
+						"opacity": "choose(55,60,65,70,75,80,85,90,95)"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 920635456166290,
+					"parameters": {
+						"object-to-create": "PINCHO_FINAL_BOSS",
+						"layer": "\"PINCHOS\"",
+						"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
+						"y": "65",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 318061279626964,
+					"parameters": {
+						"angle": "180"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 807781670618207,
+					"parameters": {
+						"opacity": "choose(55,60,65,70,75,80,85,90,95)"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 453127341664124,
+					"parameters": {
+						"object-to-create": "PINCHO_FINAL_BOSS",
+						"layer": "\"PINCHOS\"",
+						"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
+						"y": "65",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 459046793603464,
+					"parameters": {
+						"angle": "180"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 161639619009755,
+					"parameters": {
+						"opacity": "choose(55,60,65,70,75,80,85,90,95)"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 548704376672713,
+					"parameters": {
+						"object-to-create": "PINCHO_FINAL_BOSS",
+						"layer": "\"PINCHOS\"",
+						"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
+						"y": "65",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 188580805399238,
+					"parameters": {
+						"angle": "180"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 277371326177473,
+					"parameters": {
+						"opacity": "choose(55,60,65,70,75,80,85,90,95)"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 262849386928181,
+					"parameters": {
+						"object-to-create": "PINCHO_FINAL_BOSS",
+						"layer": "\"PINCHOS\"",
+						"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
+						"y": "65",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 913542650940091,
+					"parameters": {
+						"angle": "180"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 701023358474636,
+					"parameters": {
+						"opacity": "choose(55,60,65,70,75,80,85,90,95)"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 876093245048663,
+					"parameters": {
+						"variable": "TIRA_PINCHOS",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 408769608433303
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 143894008202522
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 505707309436528,
+					"parameters": {
+						"comparison": 2,
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 957953735970414,
+					"parameters": {
+						"instance-variable": "SE_CAE_ABAJO",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 430382353316609,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 540808461867020,
+					"parameters": {
+						"opacity": "PINCHO_FINAL_BOSS.Opacity+0.1"
+					}
+				}
+			],
+			"sid": 513154847898961
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 635777269975007
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 732863675569063,
+					"parameters": {
+						"comparison": 5,
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 484223135062954,
+					"parameters": {
+						"instance-variable": "SE_CAE_ABAJO",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 583692837177770,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 435763775059240,
+					"parameters": {
+						"instance-variable": "SE_CAE_ABAJO",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 445140973629029
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 666652844803913
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 718497628004191,
+					"parameters": {
+						"instance-variable": "SE_CAE_ABAJO",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 294486347383211,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "PINCHO_FINAL_BOSS",
+					"sid": 417147676534955,
+					"parameters": {
+						"y": "PINCHO_FINAL_BOSS.Y+8*55*dt"
+					}
+				}
+			],
+			"sid": 356536052375560
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tCADA CUANTO TIEMPO APARECEN LOS PINCHOS EN EL TECHO"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 736257911009032
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 210575375846357,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 5,
+						"value": "7"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 137470709194250,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 758438397192305,
+					"parameters": {
+						"variable": "CONTADOR_PINCHOS",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 928718247869618
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 744867224807613,
+					"parameters": {
+						"variable": "CONTADOR_PINCHOS",
+						"comparison": 5,
+						"value": "250"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 318509534631456,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 481949218723556,
+					"parameters": {
+						"variable": "TIRA_PINCHOS",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 516855141077993,
+					"parameters": {
+						"variable": "CONTADOR_PINCHOS",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 922506667172465
+		},
+		{
+			"eventType": "comment",
+			"text": "******************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "******************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "   \t\tMUELLES    JEFE   FINAL"
+		},
+		{
+			"eventType": "comment",
+			"text": "******************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "******************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "JEFE_FINAL",
+					"sid": 884468518379377,
+					"parameters": {
+						"object": "muelle"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 182016492640439,
+			"disabled": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "muelle",
+							"sid": 637234426014228,
+							"parameters": {
+								"animation": "\"stoped\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "muelle",
+							"sid": 963358621167863,
+							"parameters": {
+								"animation": "\"animated\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "JEFE_FINAL",
+							"sid": 829809320833525,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "muelle.FUERZA_SALTO"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "JEFE_FINAL",
+							"sid": 922488235947452,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 308995255903060,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "JEFE_FINAL",
+							"sid": 404785119528992,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "550"
+							}
+						}
+					],
+					"sid": 495372359993769,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 362175036454396,
+							"parameters": {
+								"variable": "PASOS_FINAL_BOSS",
+								"comparison": 5,
+								"value": "7"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 694729148287495,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 571408115928985,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 231767721835425
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 399533884088483,
+									"parameters": {
+										"audio-file": "muelle_salto_boing",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 240192731754309,
+							"disabled": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "muelle",
+					"sid": 648195776637775,
+					"parameters": {
+						"animation": "\"animated\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "muelle",
+					"sid": 576723826600929,
+					"parameters": {
+						"animation": "\"stoped\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 653919566824626
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tSIERRAS\tFINAL\tBOSS"
+		},
+		{
+			"eventType": "comment",
+			"text": "**********************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 402518073779536,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 5,
+						"value": "7"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 703746331667253,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 4,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 681495641047569,
+					"parameters": {
+						"variable": "SIERRAS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 922868729103288,
+					"parameters": {
+						"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+						"comparison": 2,
+						"value": "350"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 544648160103091,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 466825900686721,
+					"parameters": {
+						"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 807466836665876
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 100477600512390,
+					"parameters": {
+						"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+						"comparison": 5,
+						"value": "350"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 850587381074152,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 978316192016201,
+					"parameters": {
+						"variable": "SIERRAS_FINAL_BOSS",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 699875044720424,
+					"parameters": {
+						"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 920752721951012
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 139903970385221,
+					"parameters": {
+						"variable": "SIERRAS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 806790899226130,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 4,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 903454130089472,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 807691873516766,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 571032407865408
+						}
+					],
+					"actions": [],
+					"sid": 121203126033376,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 985929870536656,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 933795459259339,
+									"parameters": {
+										"object-to-create": "sierras_final_boss",
+										"layer": "\"fondo\"",
+										"x": "276",
+										"y": "1143",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "sierras_final_boss",
+									"sid": 450440411857527,
+									"parameters": {
+										"width": "64",
+										"height": "64"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "sierras_final_boss",
+									"sid": 438380579160107,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "445",
+										"time": "1",
+										"ease": "easeinoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 568053900482919,
+									"parameters": {
+										"object-to-create": "sierras_final_boss2",
+										"layer": "\"fondo\"",
+										"x": "583",
+										"y": "1143",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "sierras_final_boss2",
+									"sid": 399235058373059,
+									"parameters": {
+										"width": "64",
+										"height": "64"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "sierras_final_boss2",
+									"sid": 771566946610491,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "445",
+										"time": "1",
+										"ease": "easeinoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 608979821129506,
+									"parameters": {
+										"variable": "SIERRAS_FINAL_BOSS",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 233873678743567,
+									"parameters": {
+										"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 215153065650410
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 721974299570441,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 475386969010739,
+									"parameters": {
+										"audio-file": "Swipe",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 710830191296435,
+									"parameters": {
+										"object-to-create": "sierras_final_boss",
+										"layer": "\"fondo\"",
+										"x": "276",
+										"y": "1143",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "sierras_final_boss",
+									"sid": 145639380593625,
+									"parameters": {
+										"width": "64",
+										"height": "64"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "sierras_final_boss",
+									"sid": 426207851138957,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "445",
+										"time": "1",
+										"ease": "easeinoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 875377635894188,
+									"parameters": {
+										"object-to-create": "sierras_final_boss2",
+										"layer": "\"fondo\"",
+										"x": "583",
+										"y": "1143",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "sierras_final_boss2",
+									"sid": 791479905742864,
+									"parameters": {
+										"width": "64",
+										"height": "64"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "sierras_final_boss2",
+									"sid": 999784112953373,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "445",
+										"time": "1",
+										"ease": "easeinoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 516184273676292,
+									"parameters": {
+										"variable": "SIERRAS_FINAL_BOSS",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 427563542267505,
+									"parameters": {
+										"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 393845974478877
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 306319927330857,
+					"parameters": {
+						"variable": "SIERRAS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 653335048489237,
+					"parameters": {
+						"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+						"comparison": 2,
+						"value": "60"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 380138550285700,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 4,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 604233375290931,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 999573045090300,
+					"parameters": {
+						"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 927057724013507
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 984872011587255,
+					"parameters": {
+						"variable": "SIERRAS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 319880122509744,
+					"parameters": {
+						"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+						"comparison": 5,
+						"value": "60"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 557597767948829,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 4,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 488546146331510,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 585040335098188,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 576932785389226
+						}
+					],
+					"actions": [],
+					"sid": 912224396695235,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 558379912905117,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "sierras_final_boss",
+									"sid": 168863324894814,
+									"parameters": {
+										"object": "sierras",
+										"layer": "\"fondo\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "sierras",
+									"sid": 421738851806014,
+									"parameters": {
+										"width": "64",
+										"height": "64"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "sierras",
+									"sid": 927387845197992,
+									"parameters": {
+										"instance-variable": "direccion",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "sierras",
+									"sid": 379918806849528,
+									"parameters": {
+										"instance-variable": "velocidad",
+										"value": "2"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "sierras_final_boss2",
+									"sid": 713533908960483,
+									"parameters": {
+										"object": "sierras",
+										"layer": "\"fondo\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "sierras",
+									"sid": 179073477887009,
+									"parameters": {
+										"width": "64",
+										"height": "64"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "sierras",
+									"sid": 175442954210113,
+									"parameters": {
+										"instance-variable": "direccion",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "sierras",
+									"sid": 266247545165958,
+									"parameters": {
+										"instance-variable": "velocidad",
+										"value": "2"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "sierras_final_boss",
+									"sid": 727437432353517
+								},
+								{
+									"id": "destroy",
+									"objectClass": "sierras_final_boss2",
+									"sid": 999246582663522
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 399649364590479,
+									"parameters": {
+										"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 160389652840580,
+									"parameters": {
+										"variable": "SIERRAS_FINAL_BOSS",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 226626922211932,
+									"parameters": {
+										"variable": "contador_desparecen_sierras",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 350078707169960
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 279460317149291,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "sierras_final_boss",
+									"sid": 462715870960267,
+									"parameters": {
+										"object": "sierras",
+										"layer": "\"fondo\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "sierras",
+									"sid": 130038092435145,
+									"parameters": {
+										"width": "64",
+										"height": "64"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "sierras",
+									"sid": 808374299876182,
+									"parameters": {
+										"instance-variable": "direccion",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "sierras",
+									"sid": 312995844590488,
+									"parameters": {
+										"instance-variable": "velocidad",
+										"value": "2"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "sierras_final_boss2",
+									"sid": 464386662632612,
+									"parameters": {
+										"object": "sierras",
+										"layer": "\"fondo\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "sierras",
+									"sid": 569072368549025,
+									"parameters": {
+										"width": "64",
+										"height": "64"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "sierras",
+									"sid": 524236286141054,
+									"parameters": {
+										"instance-variable": "direccion",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "sierras",
+									"sid": 825928676785510,
+									"parameters": {
+										"instance-variable": "velocidad",
+										"value": "2"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "sierras_final_boss",
+									"sid": 838423441053914
+								},
+								{
+									"id": "destroy",
+									"objectClass": "sierras_final_boss2",
+									"sid": 809438763001800
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 301381517176091,
+									"parameters": {
+										"audio-file": "Risa_enemigo",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 517455578805258,
+									"parameters": {
+										"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 267251765911686,
+									"parameters": {
+										"variable": "SIERRAS_FINAL_BOSS",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 893095262826867,
+									"parameters": {
+										"variable": "contador_desparecen_sierras",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 118978888126532
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 508112089608998,
+					"parameters": {
+						"variable": "SIERRAS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 935511728313207,
+					"parameters": {
+						"variable": "contador_desparecen_sierras",
+						"comparison": 2,
+						"value": "750"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 174331610541798,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 4,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 831623549775472,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 660126254528512,
+					"parameters": {
+						"variable": "contador_desparecen_sierras",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 811782887501921
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 867068336495229,
+					"parameters": {
+						"variable": "SIERRAS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 573297090798231,
+					"parameters": {
+						"variable": "contador_desparecen_sierras",
+						"comparison": 5,
+						"value": "750"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 947397828929926,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 4,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 542693843578134,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 480634349771857,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 577531059575075,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "sierras",
+							"sid": 512165754793346,
+							"parameters": {
+								"object": "sierras_destruccion",
+								"layer": "\"pelota\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "sierras_destruccion",
+							"sid": 535759206610312,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "sierras",
+							"sid": 728182066159577
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 931926359188496,
+							"parameters": {
+								"variable": "SIERRAS_FINAL_BOSS",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 360261075809244,
+							"parameters": {
+								"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 242552956842325,
+							"parameters": {
+								"variable": "contador_desparecen_sierras",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 110153140215184
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 526758977220838,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 881330989319557,
+							"parameters": {
+								"audio-file": "sierras_explotan",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "sierras",
+							"sid": 971737718307822,
+							"parameters": {
+								"object": "sierras_destruccion",
+								"layer": "\"pelota\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "sierras_destruccion",
+							"sid": 989739634053959,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "sierras",
+							"sid": 625814281563120
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 718148628584977,
+							"parameters": {
+								"variable": "SIERRAS_FINAL_BOSS",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 233333647928133,
+							"parameters": {
+								"variable": "CONTADOR_SIERRAS_FINAL_BOSS",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 184148756427033,
+							"parameters": {
+								"variable": "contador_desparecen_sierras",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 496952137232525
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "******************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "******************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tMUERTE  FINAL  BOSS"
+		},
+		{
+			"eventType": "comment",
+			"text": "******************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "******************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 759148510236258,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 5,
+						"value": "7"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 276309493073116,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 3,
+						"value": "0"
+					}
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "JEFE_FINAL2",
+					"sid": 966056376212245
+				}
+			],
+			"actions": [],
+			"sid": 523550501106451,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 235720857100299,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "JEFE_FINAL2",
+							"sid": 348766016587023,
+							"parameters": {
+								"object": "muerte_FB_2",
+								"layer": "\"pelota\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "muerte_FB_2",
+							"sid": 246961556545392,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 125201378177694
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JEFE_FINAL2",
+							"sid": 571092550925240
+						},
+						{
+							"id": "set-position",
+							"objectClass": "llave",
+							"sid": 657812999039273,
+							"parameters": {
+								"x": "454",
+								"y": "360"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "llave",
+							"sid": 803540630959197,
+							"parameters": {
+								"object": "RESPLANDOR",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "RESPLANDOR",
+							"sid": 474257722621514,
+							"parameters": {
+								"where": "behind",
+								"object": "llave"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 148206376646157,
+							"disabled": true,
+							"parameters": {
+								"variable": "Nivel_actual_1",
+								"value": "50"
+							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 678910123374627,
+							"disabled": true,
+							"parameters": {
+								"key": "\"Nivel_actual_1\"",
+								"value": "Nivel_actual_1"
+							}
+						}
+					],
+					"sid": 654388812871748
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 641187943542230,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 603761430457114,
+							"parameters": {
+								"audio-file": "sierras_explotan",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "JEFE_FINAL2",
+							"sid": 460574465198222,
+							"parameters": {
+								"object": "muerte_FB_2",
+								"layer": "\"pelota\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "muerte_FB_2",
+							"sid": 755788542427465,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 113083170533264
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JEFE_FINAL2",
+							"sid": 231085186565771
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 637587604231775,
+							"parameters": {
+								"audio-file": "Powerup",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "llave",
+							"sid": 950338677643420,
+							"parameters": {
+								"x": "454",
+								"y": "360"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "llave",
+							"sid": 403021505109286,
+							"parameters": {
+								"object": "RESPLANDOR",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "RESPLANDOR",
+							"sid": 191414629191231,
+							"parameters": {
+								"where": "behind",
+								"object": "llave"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 280346113318046,
+							"disabled": true,
+							"parameters": {
+								"variable": "Nivel_actual_1",
+								"value": "50"
+							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 425760206884513,
+							"disabled": true,
+							"parameters": {
+								"key": "\"MUSICA\"",
+								"value": "MUSIC_sound"
+							}
+						}
+					],
+					"sid": 876617377046805
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 651135992888131,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 5,
+						"value": "7"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 122011057411930,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 3,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 838618509719434,
+					"disabled": true,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 104162232585674,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PINCHO_FINAL_BOSS",
+							"sid": 763855501290879,
+							"parameters": {
+								"object": "FINAL_BOOS_ELIMINA_OBJETOS"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "PINCHO_FINAL_BOSS",
+							"sid": 688954934500441
+						}
+					],
+					"sid": 494009747333106
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sierras_final_boss",
+							"sid": 784023302320993,
+							"parameters": {
+								"object": "FINAL_BOOS_ELIMINA_OBJETOS"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "sierras_final_boss",
+							"sid": 338856245977037
+						}
+					],
+					"sid": 298918674923593
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sierras_final_boss2",
+							"sid": 152651690409781,
+							"parameters": {
+								"object": "FINAL_BOOS_ELIMINA_OBJETOS"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "sierras_final_boss2",
+							"sid": 348829254205667
+						}
+					],
+					"sid": 343888979963534
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sierras",
+							"sid": 697676968311970,
+							"parameters": {
+								"object": "FINAL_BOOS_ELIMINA_OBJETOS"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "sierras",
+							"sid": 780116394572247
+						}
+					],
+					"sid": 301377047284942
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "muerte_jefe_final",
+					"sid": 142765858323371,
+					"disabled": true
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 724924190350586,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 5,
+						"value": "7"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 895749955460578,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 3,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 864582055152616,
+					"parameters": {
+						"variable": "CONTADOR_camara_lenta",
+						"comparison": 2,
+						"value": "150"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 300339262057937,
+					"parameters": {
+						"time-scale": "0.3"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 793070439676744,
+					"parameters": {
+						"variable": "CONTADOR_camara_lenta",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 129289563363474
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "muerte_jefe_final",
+					"sid": 180606437862813,
+					"disabled": true
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 922555989818401,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 5,
+						"value": "7"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 118764758080555,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"comparison": 3,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 712633771842543,
+					"parameters": {
+						"variable": "CONTADOR_camara_lenta",
+						"comparison": 5,
+						"value": "150"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 501730600428537,
+					"parameters": {
+						"time-scale": "1"
+					}
+				}
+			],
+			"sid": 554827949696881
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 147268928926709,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "JEFE_FINAL",
+					"sid": 207643228231017,
+					"behaviorType": "Platform",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 415771391782453,
+			"disabled": true
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "sonido aleteo dragon e_ROOM_FINAL_BOSS2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 345484626260117
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "2_JEFE_FINAL",
+							"sid": 496801158244171,
+							"parameters": {
+								"comparison": 0,
+								"number": "5"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 599753401825935,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 917945289444905,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 323933303882304,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 374264923422177
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 645644712720147,
+											"parameters": {
+												"audio-file": "aleteo dragon",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 421383792018696
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 391818912300862
+		}
+	],
+	"sid": 364804839493952
+}

@@ -1,0 +1,102 @@
+{
+	"name": "pantalla_nivel",
+	"plugin-id": "Sprite",
+	"sid": 146641253080112,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "nivel",
+			"type": "number",
+			"desc": "",
+			"sid": 789599659621982
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 31,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 166581778153549,
+				"name": "siguiente",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\RED BALL VS KING\\ventana_nueva.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 32,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 880941800067672,
+				"name": "actual",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\edficio_nivel.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 33,
+						"collisionPoly": {
+							"points": [
+								0.0151515,
+								0.0151515,
+								0.984848,
+								0.0151515,
+								0.984848,
+								0.984848,
+								0.0151515,
+								0.984848
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 828210338756361,
+				"name": "hechaYa",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,137 @@
+{
+	"name": "txt_scenes",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "puerta",
+					"sid": 441892531985414
+				}
+			],
+			"actions": [],
+			"sid": 720999368488629,
+			"disabled": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 528176167489326,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 1,
+								"second-value": "\"2_Room_SAVE_GIRL\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 209483467357457,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 1,
+								"second-value": "\"1_Room_FINAL BOSS\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 263046396282075,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 1,
+								"second-value": "\"2_Room_FINAL BOSS2\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 405148655722796,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 632191947279402
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "SCENE_TXT",
+									"sid": 493904609133169,
+									"parameters": {
+										"text": "replace(LayoutName,\"Room_\",Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" \")"
+									}
+								}
+							],
+							"sid": 522393527087249,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 434918579820992,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"1_Room_FINAL BOSS\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SCENE_TXT",
+							"sid": 513359093758096,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" 50\""
+							}
+						}
+					],
+					"sid": 239473243171352,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 137426654266466,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"2_Room_FINAL BOSS2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SCENE_TXT",
+							"sid": 790567299276369,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" 100\""
+							}
+						}
+					],
+					"sid": 402900373039694,
+					"disabled": true
+				}
+			]
+		}
+	],
+	"sid": 742130967902760
+}

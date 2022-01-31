@@ -1,0 +1,1897 @@
+{
+	"name": "Ev_Speedrun_DOOM",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 690731311595654
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 669641855475818,
+					"parameters": {
+						"variable": "SpeedRun_Borrado_Archivo",
+						"value": "false"
+					}
+				},
+				{
+					"callFunction": "SPEEDRUN reescritura de los guardados DOOM",
+					"sid": 963479946864320
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 547643202971533
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 380442827281534,
+					"parameters": {
+						"layer": "\"sobreescribir file\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 528854337160462,
+					"parameters": {
+						"object-to-create": "SpeedRun_Sobreescribir_Panel",
+						"layer": "\"sobreescribir file\"",
+						"x": "426",
+						"y": "260",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 818348018441223,
+					"parameters": {
+						"object-to-create": "Botones_Consola_iconos_A",
+						"layer": "\"sobreescribir file\"",
+						"x": "210",
+						"y": "315",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 256906774647405,
+					"parameters": {
+						"object-to-create": "Botones_Consola_iconos_B",
+						"layer": "\"sobreescribir file\"",
+						"x": "650",
+						"y": "315",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 761872058955807,
+					"parameters": {
+						"object-to-create": "SpeedRun_Sobreescribir_Panel_TXT",
+						"layer": "\"sobreescribir file\"",
+						"x": "426",
+						"y": "245",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 102232825653539,
+					"parameters": {
+						"object-to-create": "SpeedRun_Sobreescribir_Panel_Continue_TXT",
+						"layer": "\"sobreescribir file\"",
+						"x": "332",
+						"y": "315",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 506608710381327,
+					"parameters": {
+						"object-to-create": "SpeedRun_Sobreescribir_Panel_Continue_TXT2",
+						"layer": "\"sobreescribir file\"",
+						"x": "522",
+						"y": "315",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Sobreescribir_Panel_TXT",
+					"sid": 470337443985189,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,52)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Sobreescribir_Panel_Continue_TXT",
+					"sid": 160493474390879,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,53)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_Sobreescribir_Panel_Continue_TXT2",
+					"sid": 723853901750681,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,54)"
+					}
+				}
+			],
+			"sid": 159069656866433
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MOVIMIENTO FONDO LOGOS SPEEDRUN TIME CLASSIC2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 890685795669113
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "portada_imagenes_5",
+							"sid": 863832247718455,
+							"parameters": {
+								"x": "Self.X-20*dt"
+							}
+						}
+					],
+					"sid": 138637564154785,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "portada_imagenes_5",
+									"sid": 483081444216983,
+									"parameters": {
+										"comparison": 3,
+										"x-co-ordinate": "-200"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "portada_imagenes_5",
+									"sid": 635721406761833,
+									"parameters": {
+										"x": "1085"
+									}
+								}
+							],
+							"sid": 629648602550707
+						}
+					]
+				}
+			],
+			"sid": 616195772184430
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PANEL DE TEXTOS PARA LA INFO - MODE DOOM",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 648757445153590
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_File",
+							"sid": 256703544381388,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,30)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_MaxRoom",
+							"sid": 887693052867397,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,31)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TotalTime",
+							"sid": 450513645938469,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,32)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TotalKills",
+							"sid": 955347120152616,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,33)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TotalGems",
+							"sid": 380594902916686,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,34)"
+							}
+						}
+					],
+					"sid": 564241657167487
+				}
+			],
+			"sid": 158632360579376
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 649207288269286,
+					"parameters": {
+						"variable": "SpeedRun_Borrado_Archivo"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 401921479436495,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "SELECTOR DE FILAS - MODE DOOM",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 835389677773439,
+									"parameters": {
+										"variable": "GAMEPAD_CENTER",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 696827595623292,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "ABAJO"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 354215058288214,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-down"
+											}
+										},
+										{
+											"id": "compare-axis",
+											"objectClass": "Gamepad",
+											"sid": 226264407787261,
+											"parameters": {
+												"gamepad": "0",
+												"axis": "left-analog-y-axis",
+												"comparison": 4,
+												"value": "90"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 349559697873893,
+											"parameters": {
+												"key": 40
+											}
+										}
+									],
+									"actions": [],
+									"sid": 250221053763003,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 364389686163420,
+													"parameters": {
+														"variable": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"comparison": 2,
+														"value": "9"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 787007835903805,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 792696005003803,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 579599459317739,
+													"parameters": {
+														"variable": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 791551387727555
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 199223802803180,
+													"parameters": {
+														"variable": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"comparison": 5,
+														"value": "9"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 235955215494386,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 159854128086969,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 633389375109738,
+													"parameters": {
+														"variable": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 886384843286540
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 937304235305623,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 217882086951591,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 930586584067551
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 280480647385615,
+															"parameters": {
+																"audio-file": "Portada_selector_pasar_opciones",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 373219883257239
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "comment",
+									"text": "ARRIBA"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 179629098891452,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-up"
+											}
+										},
+										{
+											"id": "compare-axis",
+											"objectClass": "Gamepad",
+											"sid": 697713892427397,
+											"parameters": {
+												"gamepad": "0",
+												"axis": "left-analog-y-axis",
+												"comparison": 2,
+												"value": "-90"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 947050031314681,
+											"parameters": {
+												"key": 38
+											}
+										}
+									],
+									"actions": [],
+									"sid": 917729542114575,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 169050247053958,
+													"parameters": {
+														"variable": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"comparison": 3,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 128406670710671,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 942172270138398,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 982294316182303,
+													"parameters": {
+														"variable": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "9"
+													}
+												}
+											],
+											"sid": 978285417360628
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 189935816713186,
+													"parameters": {
+														"variable": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"comparison": 4,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 691857817024713,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 606493869714108,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "subtract-from-eventvar",
+													"objectClass": "System",
+													"sid": 885711704745251,
+													"parameters": {
+														"variable": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 701494767963765
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 857960112416087,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 723866726057318,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 680826040411146
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 987407047538237,
+															"parameters": {
+																"audio-file": "Portada_selector_pasar_opciones",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 695662319479354
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "comment",
+									"text": "ELIGE UNA OPCION"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 415676756081004,
+											"parameters": {
+												"gamepad": "0",
+												"button": "button-a"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 900952098852763,
+											"parameters": {
+												"key": 65
+											}
+										}
+									],
+									"actions": [],
+									"sid": 755444974559299,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "SELECCIONAR ARCHIVO DE FILA",
+											"background-color": [
+												0,
+												1,
+												0.11764705882352941,
+												1
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "SpeedRun_MaxRoom_num",
+													"sid": 861511889349389,
+													"parameters": {
+														"instance-variable": "profundidad",
+														"comparison": 0,
+														"value": "SPEEDRUN_Slot_Z_Depth_SELECTOR"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 758476532496005,
+											"children": [
+												{
+													"eventType": "comment",
+													"text": "ESTA LLENO"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xy",
+															"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+															"sid": 238157085229812,
+															"parameters": {
+																"x": "SpeedRun_MaxRoom_num.fila",
+																"y": "SpeedRun_MaxRoom_num.profundidad",
+																"comparison": 4,
+																"value": "0"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 720056348163603,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 100359994869009
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 393736053368169,
+																	"parameters": {
+																		"variable": "GAMEPAD_CENTER",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 494411587752868,
+																	"parameters": {
+																		"seconds": "0.01"
+																	}
+																},
+																{
+																	"id": "set-layer-visible",
+																	"objectClass": "System",
+																	"sid": 705169392736356,
+																	"parameters": {
+																		"layer": "\"sobreescribir file\"",
+																		"visibility": "visible"
+																	}
+																},
+																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 461399687684918,
+																	"parameters": {
+																		"variable": "SpeedRun_Borrado_Archivo",
+																		"value": "true"
+																	}
+																}
+															],
+															"sid": 286429710355274
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-eventvar",
+																	"objectClass": "System",
+																	"sid": 196393318482526,
+																	"parameters": {
+																		"variable": "FX_sound",
+																		"comparison": 0,
+																		"value": "1"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 404737548105132,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "trigger-once-while-true",
+																			"objectClass": "System",
+																			"sid": 628395918495358
+																		}
+																	],
+																	"actions": [],
+																	"sid": 867137602699192
+																}
+															]
+														}
+													]
+												},
+												{
+													"eventType": "comment",
+													"text": "ESTA VACIO"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xy",
+															"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+															"sid": 719358861857400,
+															"parameters": {
+																"x": "SpeedRun_MaxRoom_num.fila",
+																"y": "SpeedRun_MaxRoom_num.profundidad",
+																"comparison": 0,
+																"value": "0"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 650688278941170,
+													"children": [
+														{
+															"eventType": "comment",
+															"text": "SELECCIONAR ARCHIVO DE FILA",
+															"background-color": [
+																0,
+																1,
+																0.11764705882352941,
+																1
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 242171356450847
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 106459370709089,
+																	"parameters": {
+																		"variable": "GAMEPAD_CENTER",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "play-by-name",
+																	"objectClass": "Audio",
+																	"sid": 181648075891412,
+																	"parameters": {
+																		"folder": "sounds",
+																		"audio-file-name": "FX_sound=1? \"Portada_Start\":\"\"",
+																		"loop": "not-looping",
+																		"volume": "SonidoFX_Volumen_Master",
+																		"tag-optional": "\"\""
+																	}
+																},
+																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 687783032397582,
+																	"parameters": {
+																		"object-to-create": "Transicion_Animacion",
+																		"layer": "\"transicion\"",
+																		"x": "431",
+																		"y": "240",
+																		"create-hierarchy": false
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 629129999670498,
+																	"parameters": {
+																		"variable": "0_NIVEL_MAXIMO",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 671602088585856,
+																	"parameters": {
+																		"variable": "1_TIEMPO_TOTAL_JUEGO",
+																		"value": "\"\""
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 264646352241661,
+																	"parameters": {
+																		"variable": "2_MUERTES_TOTALES",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 317719121782309,
+																	"parameters": {
+																		"variable": "3_SUMA_GEMAS_COGIDA",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 136958543886936,
+																	"parameters": {
+																		"variable": "4_SUMA_GEMAS_TOTALES",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 429787409560207,
+																	"parameters": {
+																		"variable": "SpeedRun_muertes",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 919491433207358,
+																	"parameters": {
+																		"variable": "SpeedRun_gemas_cogidas",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 381963518724408,
+																	"parameters": {
+																		"variable": "SpeedRun_gemas_totales_juego",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 488071743472520,
+																	"parameters": {
+																		"variable": "SpeedRun_tiempo_nivel",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 341531960079604,
+																	"parameters": {
+																		"variable": "SpeedRun_tiempo_total",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "fade-volume",
+																	"objectClass": "Audio",
+																	"sid": 681975831627685,
+																	"parameters": {
+																		"tag": "\"Musica_portada\"",
+																		"db": "VOLUMEN_MASTER_MUSIC-100",
+																		"duration": "1.5",
+																		"ending": "stop"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 523448308742048,
+																	"parameters": {
+																		"seconds": "1.5"
+																	}
+																},
+																{
+																	"id": "go-to-layout",
+																	"objectClass": "System",
+																	"sid": 845615393543356,
+																	"parameters": {
+																		"layout": "INTRO JUEGO"
+																	}
+																}
+															],
+															"sid": 589527993970736
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 496427205944951
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 585599430257421,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "play-by-name",
+													"objectClass": "Audio",
+													"sid": 609460537349263,
+													"parameters": {
+														"folder": "sounds",
+														"audio-file-name": "FX_sound=1? \"Portada_Start\":\"\"",
+														"loop": "not-looping",
+														"volume": "SonidoFX_Volumen_Master",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 378213207008611,
+													"parameters": {
+														"object-to-create": "Transicion_Animacion",
+														"layer": "\"transicion\"",
+														"x": "431",
+														"y": "240",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 932308838969693,
+													"parameters": {
+														"variable": "0_NIVEL_MAXIMO",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 996138414288958,
+													"parameters": {
+														"variable": "1_TIEMPO_TOTAL_JUEGO",
+														"value": "\"\""
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 351913053435702,
+													"parameters": {
+														"variable": "2_MUERTES_TOTALES",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 981484578340222,
+													"parameters": {
+														"variable": "3_SUMA_GEMAS_COGIDA",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 226353501332953,
+													"parameters": {
+														"variable": "4_SUMA_GEMAS_TOTALES",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 683107225214351,
+													"parameters": {
+														"variable": "SpeedRun_muertes",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 569501543466309,
+													"parameters": {
+														"variable": "SpeedRun_gemas_cogidas",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 827533261691731,
+													"parameters": {
+														"variable": "SpeedRun_gemas_totales_juego",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 336710142881133,
+													"parameters": {
+														"variable": "SpeedRun_tiempo_nivel",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 910805161438066,
+													"parameters": {
+														"variable": "SpeedRun_tiempo_total",
+														"value": "0"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 576840627528964,
+													"parameters": {
+														"tag": "\"Musica_portada\"",
+														"db": "VOLUMEN_MASTER_MUSIC-100",
+														"duration": "1.5",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 195791329556481,
+													"parameters": {
+														"seconds": "1.5"
+													}
+												},
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 531429789076592,
+													"parameters": {
+														"layout": "INTRO JUEGO"
+													}
+												}
+											],
+											"sid": 638024475059249,
+											"disabled": true
+										}
+									],
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 813158416164349
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "SALIR DEL MENU - DESDE DOOM",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 385093857251802,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-b"
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 478757278107811,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [],
+							"sid": 701415875392044,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "SELECCIONAR ARCHIVO DE FILA",
+									"background-color": [
+										0,
+										1,
+										0.11764705882352941,
+										1
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 968447248303993
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 981008603005996,
+											"parameters": {
+												"variable": "GAMEPAD_CENTER",
+												"value": "1"
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 579821401545448,
+											"parameters": {
+												"layout": "SpeedRun_SELECTOR"
+											}
+										}
+									],
+									"sid": 638874930088601
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 396273442832237,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 353994494721475,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 825725361656450
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 706704006159386,
+													"parameters": {
+														"audio-file": "Swipe",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 684644035653115
+										}
+									]
+								}
+							],
+							"isOrBlock": true
+						}
+					],
+					"sid": 686306683364339
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SITUACION DE LA FLECHA - MODE DOOM",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "POSICIONAMIENTO_INICIAL",
+					"type": "number",
+					"initialValue": "172",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 599784034546842
+				},
+				{
+					"eventType": "variable",
+					"name": "MULTIPLICADOR_DISTANCIA",
+					"type": "number",
+					"initialValue": "28",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 671052571111255
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 670266157836014
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "SpeedRun_SelectorFlecha",
+							"sid": 483452322451831,
+							"parameters": {
+								"y": "POSICIONAMIENTO_INICIAL+(MULTIPLICADOR_DISTANCIA*SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "SpeedRun_FlechaSeleccion",
+							"sid": 172391009569955,
+							"parameters": {
+								"y": "POSICIONAMIENTO_INICIAL+(MULTIPLICADOR_DISTANCIA*SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+							}
+						}
+					],
+					"sid": 294911001596496
+				}
+			],
+			"sid": 696897483323063
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GAMEPAD CENTER SPEEDRUN DOOM",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 913887903056501,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 2,
+								"value": "50"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 109642902625631,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 4,
+								"value": "-50"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 128118521045069,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 4,
+								"value": "-50"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 963961681820917,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 2,
+								"value": "50"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 552449190564543,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 2,
+								"value": "50"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 461807481523815,
+							"parameters": {
+								"variable": "GAMEPAD_CENTER",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 867375975049509
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Gamepad",
+							"sid": 469162383659168,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						},
+						{
+							"id": "on-button-released",
+							"objectClass": "Gamepad",
+							"sid": 818626015425729,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-x"
+							}
+						},
+						{
+							"id": "on-button-released",
+							"objectClass": "Gamepad",
+							"sid": 168610066004417,
+							"parameters": {
+								"gamepad": "0",
+								"button": "start-menu"
+							}
+						},
+						{
+							"id": "on-button-released",
+							"objectClass": "Gamepad",
+							"sid": 127758014320621,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-up"
+							}
+						},
+						{
+							"id": "on-button-released",
+							"objectClass": "Gamepad",
+							"sid": 520186886062584,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-down"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 519209586810117,
+							"parameters": {
+								"variable": "GAMEPAD_CENTER",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 970174946004362,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-key-released",
+							"objectClass": "Keyboard",
+							"sid": 148047866660248
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 451927511575832,
+							"parameters": {
+								"variable": "GAMEPAD_CENTER",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 840728680790625
+				}
+			],
+			"sid": 929803389393369
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ESCRITURA DE LOS TEXTOS DOOM MODE",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "SPEEDRUN reescritura de los guardados DOOM",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_MaxRoom_num",
+							"sid": 402268378582311,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,41)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TotalTime_num",
+							"sid": 367578068768677,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TotalKills_num",
+							"sid": 583917515021383,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TotalGems_num",
+							"sid": 249902181701101,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_MaxRoom_num",
+							"sid": 279651781015351,
+							"parameters": {
+								"text": "Array_SPR_10_SLOTS_3_DOOM.At(SpeedRun_MaxRoom_num.fila,SpeedRun_MaxRoom_num.profundidad)>0? Array_SPR_10_SLOTS_3_DOOM.At(SpeedRun_MaxRoom_num.fila,SpeedRun_MaxRoom_num.profundidad):\"Empty\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TotalTime_num",
+							"sid": 950309864994970,
+							"parameters": {
+								"text": "Array_SPR_10_SLOTS_3_DOOM.At(SpeedRun_MaxRoom_num.fila,SpeedRun_MaxRoom_num.profundidad)>0? Array_SPR_10_SLOTS_3_DOOM.At(SpeedRun_TotalTime_num.fila,SpeedRun_TotalTime_num.profundidad):\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TotalKills_num",
+							"sid": 900091485341973,
+							"parameters": {
+								"text": "Array_SPR_10_SLOTS_3_DOOM.At(SpeedRun_MaxRoom_num.fila,SpeedRun_MaxRoom_num.profundidad)>0? Array_SPR_10_SLOTS_3_DOOM.At(SpeedRun_TotalKills_num.fila,SpeedRun_TotalKills_num.profundidad):\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TotalGems_num",
+							"sid": 764117654386008,
+							"parameters": {
+								"text": "Array_SPR_10_SLOTS_3_DOOM.At(SpeedRun_MaxRoom_num.fila,SpeedRun_MaxRoom_num.profundidad)>0? Array_SPR_10_SLOTS_3_DOOM.At(SpeedRun_TotalGems_num.fila,SpeedRun_TotalGems_num.profundidad)&\"/\"&Array_SPR_10_SLOTS_3_DOOM.At(SpeedRun_TotalGems_num.fila+1,SpeedRun_TotalGems_num.profundidad):\"\""
+							}
+						}
+					],
+					"sid": 532648605109131
+				}
+			],
+			"sid": 168310514933905
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "CUANDO ESTA LA CAPA DE SOBREESCRIBIR ARCHIVO ESTA VISIBLE2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 260959313582669,
+							"parameters": {
+								"variable": "SpeedRun_Borrado_Archivo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 324082680485109,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "ELIGE UNA OPCION"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 482874053281751,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-b"
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 931917216398852,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [],
+							"sid": 389898457769466,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 238088536694661
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 261104272704940,
+											"parameters": {
+												"variable": "GAMEPAD_CENTER",
+												"value": "1"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 429305699957461,
+											"parameters": {
+												"seconds": "0.01"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 548609576266358,
+											"parameters": {
+												"layer": "\"sobreescribir file\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 113244068639146,
+											"parameters": {
+												"variable": "SpeedRun_Borrado_Archivo",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 826907581420970
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 264295720181463,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 471344558687355,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 116833448157648
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 359297340212029,
+													"parameters": {
+														"audio-file": "Swipe",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 576408800808616
+										}
+									]
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "comment",
+							"text": "ELIGE UNA OPCION"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 393015355683143,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-a"
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 336800185949295,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+									"sid": 668544749847331,
+									"parameters": {
+										"x": "0",
+										"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+									"sid": 470531724516659,
+									"parameters": {
+										"x": "1",
+										"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+									"sid": 634678083638440,
+									"parameters": {
+										"x": "2",
+										"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+									"sid": 876510197682850,
+									"parameters": {
+										"x": "3",
+										"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+									"sid": 998106896048406,
+									"parameters": {
+										"x": "4",
+										"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+										"value": "0"
+									}
+								},
+								{
+									"callFunction": "SPEEDRUN reescritura de los guardados DOOM",
+									"sid": 336730931510973
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 121503689905089,
+									"parameters": {
+										"layer": "\"sobreescribir file\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 951740761781031,
+									"parameters": {
+										"variable": "SpeedRun_Borrado_Archivo",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 561889225166526,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 978018339210143,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 149266790943023,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 780818050619357
+												}
+											],
+											"actions": [],
+											"sid": 367533886966575
+										}
+									]
+								}
+							],
+							"isOrBlock": true
+						}
+					]
+				}
+			],
+			"sid": 673443403257133
+		}
+	],
+	"sid": 377690673717951
+}

@@ -1,0 +1,73 @@
+{
+	"name": "2_JEFE_FINAL2",
+	"plugin-id": "Sprite",
+	"sid": 834582509269345,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "ESTA_CAYENDOSE",
+			"type": "number",
+			"desc": "",
+			"sid": 689835781671040
+		},
+		{
+			"name": "DIRECCION",
+			"type": "number",
+			"desc": "0;DERECHA   1;IZQUIERDA",
+			"sid": 471824354877294
+		},
+		{
+			"name": "HA_SIDO_TOCADO",
+			"type": "number",
+			"desc": "0;INACTIVO  1;ACTIVO",
+			"sid": 288414200658102
+		},
+		{
+			"name": "CONTADOR_HA_SIDO_TOCADO",
+			"type": "number",
+			"desc": "",
+			"sid": 438787684388382
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 267234745786580
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 699976205179874
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 63,
+						"height": 65,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9527963,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 200627558736956,
+				"name": "Default",
+				"isLooping": true,
+				"isPingPong": true,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,97 @@
+{
+	"name": "puerta_M2_Falsa2",
+	"plugin-id": "Sprite",
+	"sid": 276046096512017,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "abierta",
+			"type": "boolean",
+			"desc": "",
+			"sid": 960535978841805
+		},
+		{
+			"name": "PANTALLA",
+			"type": "number",
+			"desc": "",
+			"sid": 268837816407919
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 80,
+						"height": 84,
+						"originX": 0.5102040816326531,
+						"originY": 0.9827586206896551,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\puerta.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2235256,
+						"collisionPoly": {
+							"points": [
+								0.2721275634666313,
+								0.2801724137931032,
+								0.728932143537999,
+								0.2801724137931032,
+								0.7493403068033058,
+								0.9827586206896551,
+								0.25682144101765186,
+								0.9827586206896551
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 903661911447274,
+				"name": "cerrada",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 80,
+						"height": 84,
+						"originX": 0.5102040816326531,
+						"originY": 0.9827586206896551,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\puerta_ABIERTA.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5763197,
+						"collisionPoly": {
+							"points": [
+								0.2721275634666313,
+								0.2801724137931032,
+								0.728932143537999,
+								0.2801724137931032,
+								0.7493403068033058,
+								0.9827586206896551,
+								0.25682144101765186,
+								0.9827586206896551
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 802912688379987,
+				"name": "abierta",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

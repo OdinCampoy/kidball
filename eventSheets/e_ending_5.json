@@ -1,0 +1,370 @@
+{
+	"name": "e_Ending_5",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 437746246758617
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "bola",
+					"sid": 858641211317287,
+					"parameters": {
+						"animation": "\"derecha_rosa\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "bola",
+					"sid": 680174263919220,
+					"parameters": {
+						"object": "ending_JEFE_FINAL",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "bola",
+					"sid": 447002809081178,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "ending_JEFE_FINAL",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "ending_JEFE_FINAL",
+					"sid": 968953035759115,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"pasa_enemigo\"",
+						"property": "offsetX",
+						"end-value": "-250",
+						"time": "5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 891496726209997
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-tweens-finished",
+					"objectClass": "ending_JEFE_FINAL",
+					"sid": 492194862315378,
+					"behaviorType": "Tween"
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 914819721916149,
+					"parameters": {
+						"layout": "ENDING_VOLADOR_2"
+					}
+				}
+			],
+			"sid": 353606167769368,
+			"disabled": true
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "sonido aleteo dragon e_ENDING4",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "ending_JEFE_FINAL",
+							"sid": 172504914319434
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "ending_JEFE_FINAL",
+							"sid": 489066762682015,
+							"parameters": {
+								"comparison": 0,
+								"number": "5"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 183158534399620,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 151544461613817,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 458814847244501,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 638989566527714
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 125013809307468,
+											"parameters": {
+												"audio-file": "aleteo dragon",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 997835032839420
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 144170496204186
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "CAMARA",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "ending_JEFE_FINAL",
+							"sid": 515734986295591,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "camara_transiciones.X"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "camara_transiciones",
+							"sid": 554919417574331,
+							"parameters": {
+								"x": "ending_JEFE_FINAL.X"
+							}
+						}
+					],
+					"sid": 794979637544884
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "ending_JEFE_FINAL",
+							"sid": 810431214582247,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "130"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 992681089116597,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 592638075674527
+								}
+							],
+							"actions": [
+								{
+									"id": "unpin",
+									"objectClass": "bola",
+									"sid": 178606578101205,
+									"behaviorType": "Pin"
+								},
+								{
+									"id": "set-vector-y",
+									"objectClass": "bola",
+									"sid": 123162653060372,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-y": "-200"
+									}
+								}
+							],
+							"sid": 753575879488736,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 346644173171965,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 222730970990913,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 441390342276012
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 297060684347182,
+													"parameters": {
+														"audio-file": "coge_bola_jefe_final",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 460629365104252
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 260055675289553
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SALIDA",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "bola",
+							"sid": 709037580807689,
+							"parameters": {
+								"comparison": 5,
+								"y-co-ordinate": "600"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 836446901971458,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 234716427104152
+								}
+							],
+							"actions": [
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Intro_transicion",
+									"sid": 657275275922100,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "2"
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "Intro_transicion",
+									"sid": 576972272140429,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 184545042933356,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "stop-all",
+									"objectClass": "Audio",
+									"sid": 633857979518139
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 741553930399952,
+									"parameters": {
+										"layout": "Room_51"
+									}
+								}
+							],
+							"sid": 973340297150718
+						}
+					]
+				}
+			],
+			"sid": 216147804447922
+		}
+	],
+	"sid": 717617528116770
+}

@@ -1,0 +1,715 @@
+{
+	"name": "GAME OVER",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "GAME_OVER_ESPERA",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 987469744332648
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tGAME OVER "
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tRESETEA  LAS  VIDAS  RECOMPENSA  A  CERO"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 299554543644867
+				}
+			],
+			"actions": [
+				{
+					"id": "create-interstitial",
+					"objectClass": "MobileAdvert_intersticial",
+					"sid": 519197214206922,
+					"disabled": true,
+					"parameters": {
+						"advert-id": "\"ca-app-pub-3105875612398005/3419498086\"",
+						"show": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 904623074292455,
+					"parameters": {
+						"variable": "VidasRecompensa",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 789854379678927,
+					"parameters": {
+						"variable": "GAME_OVER_ESPERA",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 366585065643881,
+					"parameters": {
+						"variable": "OBTENER_VIDAS",
+						"value": "\"disponible\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 276750471471549,
+					"parameters": {
+						"tag": "\"pelota\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 943662864228169,
+					"parameters": {
+						"seconds": "0.9"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 561460168362231,
+					"parameters": {
+						"audio-file": "Risa_enemigo",
+						"loop": "not-looping",
+						"volume": "VOLUMEN_MASTER_FX",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 467234957237328
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 963828529941074,
+					"parameters": {
+						"variable": "GAME_OVER_ESPERA",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 741262073637778,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 310911783121617
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 337247885731993,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 643063224663580,
+							"parameters": {
+								"variable": "GAME_OVER_ESPERA",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 303152984750926
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 764880352503926,
+					"parameters": {
+						"variable": "GAME_OVER_ESPERA",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 740789700228523,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 633424203665789
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "game_over_touch_again",
+							"sid": 291348051690148,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "volver_a_jugar",
+							"sid": 819327084896384,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "volver_a_jugar",
+							"sid": 532045822892778,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 143591374258313,
+							"parameters": {
+								"seconds": "1.4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 753173209109632,
+							"parameters": {
+								"variable": "GAME_OVER_ESPERA",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 726671110069218
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 532434416991661,
+					"parameters": {
+						"variable": "GAME_OVER_ESPERA",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 380805336082660,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 802383314612543
+						}
+					],
+					"actions": [
+						{
+							"id": "show-interstitial",
+							"objectClass": "MobileAdvert_intersticial",
+							"sid": 602363774690242,
+							"disabled": true
+						}
+					],
+					"sid": 167117021202130
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 270800799307782,
+					"parameters": {
+						"object": "Ladrillos_fondo"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 658091335927680,
+					"parameters": {
+						"variable": "GAME_OVER_ESPERA",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 512770008484838,
+					"parameters": {
+						"variable": "VIDAS_1",
+						"value": "9"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 455288730136906,
+					"parameters": {
+						"variable": "PULSA_PARA_CONTINUAR",
+						"value": "0"
+					}
+				},
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 938542251108053,
+					"disabled": true,
+					"parameters": {
+						"key": "\"Nivel_actual_1\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 239868256618331,
+					"disabled": true,
+					"parameters": {
+						"variable": "Nivel_actual_1",
+						"value": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 497071468794624,
+					"parameters": {
+						"layout": "PORTADA_NUEVA"
+					}
+				}
+			],
+			"sid": 885308857925930
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tLA BOLA ROSA  SALTA"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-floor",
+					"objectClass": "bola_ROSA",
+					"sid": 629544415686545,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "bola_ROSA",
+					"sid": 147207927485194,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "bola_ROSA",
+					"sid": 636526828514043,
+					"disabled": true,
+					"parameters": {
+						"object": "polvo",
+						"layer": "\"pelota\"",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "polvo",
+					"sid": 398153549598343,
+					"disabled": true,
+					"parameters": {
+						"angle": "270"
+					}
+				}
+			],
+			"sid": 264627263964080
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-jumping",
+					"objectClass": "bola_ROSA",
+					"sid": 748057233352653,
+					"behaviorType": "Platform"
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "bola_ROSA",
+					"sid": 170384264290249,
+					"parameters": {
+						"instance-variable": "CAE_TIRA_HELP",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "bola_ROSA",
+					"sid": 728974518423359,
+					"parameters": {
+						"instance-variable": "CAE_TIRA_HELP",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 803339704999672
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-falling",
+					"objectClass": "bola_ROSA",
+					"sid": 676766773515846,
+					"behaviorType": "Platform"
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "bola_ROSA",
+					"sid": 135561756093464,
+					"parameters": {
+						"instance-variable": "CAE_TIRA_HELP",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "bola_ROSA",
+					"sid": 399298416999615,
+					"parameters": {
+						"object": "TXT_HELP",
+						"layer": "\"fondo\"",
+						"image-point": "3",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "bola_ROSA",
+					"sid": 825331549922809,
+					"parameters": {
+						"instance-variable": "CAE_TIRA_HELP",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 999538001532385
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "TXT_HELP",
+					"sid": 481146741679753,
+					"disabled": true
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "TXT_HELP",
+					"sid": 956132114454917,
+					"parameters": {
+						"comparison": 4,
+						"opacity": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TXT_HELP",
+					"sid": 751574667905748,
+					"parameters": {
+						"y": "TXT_HELP.Y-0.8*55*dt"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TXT_HELP",
+					"sid": 527898932547132,
+					"parameters": {
+						"opacity": "TXT_HELP.Opacity-1"
+					}
+				}
+			],
+			"sid": 335729494351067
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "TXT_HELP",
+					"sid": 816721671280626,
+					"disabled": true
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "TXT_HELP",
+					"sid": 251471212499968,
+					"parameters": {
+						"comparison": 3,
+						"opacity": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "TXT_HELP",
+					"sid": 176003910573309
+				}
+			],
+			"sid": 842211462375486
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tJEFE  FINAL  SALTANDO"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-floor",
+					"objectClass": "JEFE_FINAL",
+					"sid": 839957754940103,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [],
+			"sid": 284545184654175,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "JEFE_FINAL",
+							"sid": 227149810394175,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "JEFE_FINAL",
+							"sid": 373399550237774,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "JEFE_FINAL",
+							"sid": 673632476733518,
+							"parameters": {
+								"object": "polvo",
+								"layer": "\"pelota\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "polvo",
+							"sid": 199029889420350,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 233109802510907,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "JEFE_FINAL",
+							"sid": 682954395424020,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 855153375706727
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "JEFE_FINAL",
+							"sid": 165493946074033
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "JEFE_FINAL",
+							"sid": 496972562465517,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "JEFE_FINAL",
+							"sid": 396124321743246,
+							"parameters": {
+								"object": "polvo",
+								"layer": "\"pelota\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "polvo",
+							"sid": 959418713814613,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 460377747800306,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "JEFE_FINAL",
+							"sid": 260659559924913,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 532638967691223
+				}
+			]
+		}
+	],
+	"sid": 785488445166261
+}

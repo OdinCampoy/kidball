@@ -1,0 +1,282 @@
+{
+	"name": "JEFE_FINAL_imagen",
+	"plugin-id": "Sprite",
+	"sid": 634490169229084,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "ESTA_CAYENDOSE",
+			"type": "number",
+			"desc": "",
+			"sid": 284205550124228
+		},
+		{
+			"name": "DIRECCION",
+			"type": "number",
+			"desc": "0;DERECHA   1;IZQUIERDA",
+			"sid": 975291964205350
+		},
+		{
+			"name": "HA_SIDO_TOCADO",
+			"type": "number",
+			"desc": "0;INACTIVO  1;ACTIVO",
+			"sid": 547056391915669
+		},
+		{
+			"name": "CONTADOR_HA_SIDO_TOCADO",
+			"type": "number",
+			"desc": "",
+			"sid": 831782662447739
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 423341722162195
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 57,
+						"height": 53,
+						"originX": 0.5,
+						"originY": 0.50505,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\jefe_final_intro_animation\\JEFE_FINAL_SOLO.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4398940,
+						"collisionPoly": {
+							"points": [
+								0.24582331161236443,
+								0.2762051174004193,
+								0.4861114269005852,
+								0.19461488399720478,
+								0.7683265939849625,
+								0.2721472026554856,
+								0.9062234720133668,
+								0.5218969385045419,
+								0.8785502798663326,
+								0.7488089643605873,
+								0.7371030430242272,
+								0.9082849636617749,
+								0.5,
+								0.979798,
+								0.3093935116959068,
+								0.9099327407407408,
+								0.17658777527151204,
+								0.7651635681341723,
+								0.1561195021720969,
+								0.49263418518518515
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Imagepoint 1",
+								"x": 0.5,
+								"y": 1
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 760804388119839,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 57,
+						"height": 53,
+						"originX": 0.5,
+						"originY": 0.50505,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2617392,
+						"collisionPoly": {
+							"points": [
+								0.24582331161236443,
+								0.2762051174004193,
+								0.4861114269005852,
+								0.19461488399720478,
+								0.7683265939849625,
+								0.2721472026554856,
+								0.9062234720133668,
+								0.5218969385045419,
+								0.8785502798663326,
+								0.7488089643605873,
+								0.7371030430242272,
+								0.9082849636617749,
+								0.5,
+								0.979798,
+								0.3093935116959068,
+								0.9099327407407408,
+								0.17658777527151204,
+								0.7651635681341723,
+								0.1561195021720969,
+								0.49263418518518515
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Imagepoint 1",
+								"x": 0.5,
+								"y": 1
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 57,
+						"height": 53,
+						"originX": 0.5,
+						"originY": 0.50505,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9245198,
+						"collisionPoly": {
+							"points": [
+								0.24582331161236443,
+								0.2762051174004193,
+								0.4861114269005852,
+								0.19461488399720478,
+								0.7683265939849625,
+								0.2721472026554856,
+								0.9062234720133668,
+								0.5218969385045419,
+								0.8785502798663326,
+								0.7488089643605873,
+								0.7371030430242272,
+								0.9082849636617749,
+								0.5,
+								0.979798,
+								0.3093935116959068,
+								0.9099327407407408,
+								0.17658777527151204,
+								0.7651635681341723,
+								0.1561195021720969,
+								0.49263418518518515
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Imagepoint 1",
+								"x": 0.5,
+								"y": 1
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 57,
+						"height": 53,
+						"originX": 0.5,
+						"originY": 0.50505,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2504455,
+						"collisionPoly": {
+							"points": [
+								0.24582331161236443,
+								0.2762051174004193,
+								0.4861114269005852,
+								0.19461488399720478,
+								0.7683265939849625,
+								0.2721472026554856,
+								0.9062234720133668,
+								0.5218969385045419,
+								0.8785502798663326,
+								0.7488089643605873,
+								0.7371030430242272,
+								0.9082849636617749,
+								0.5,
+								0.979798,
+								0.3093935116959068,
+								0.9099327407407408,
+								0.17658777527151204,
+								0.7651635681341723,
+								0.1561195021720969,
+								0.49263418518518515
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Imagepoint 1",
+								"x": 0.5,
+								"y": 1
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 57,
+						"height": 53,
+						"originX": 0.5,
+						"originY": 0.50505,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8114671,
+						"collisionPoly": {
+							"points": [
+								0.24582331161236443,
+								0.2762051174004193,
+								0.4861114269005852,
+								0.19461488399720478,
+								0.7683265939849625,
+								0.2721472026554856,
+								0.9062234720133668,
+								0.5218969385045419,
+								0.8785502798663326,
+								0.7488089643605873,
+								0.7371030430242272,
+								0.9082849636617749,
+								0.5,
+								0.979798,
+								0.3093935116959068,
+								0.9099327407407408,
+								0.17658777527151204,
+								0.7651635681341723,
+								0.1561195021720969,
+								0.49263418518518515
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Imagepoint 1",
+								"x": 0.5,
+								"y": 1
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 413657485946633,
+				"name": "1_GOLPE",
+				"isLooping": true,
+				"isPingPong": true,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			}
+		],
+		"subfolders": []
+	}
+}

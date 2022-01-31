@@ -1,0 +1,166 @@
+{
+	"name": "e_Ending_4",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 880191968342573
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "bola",
+					"sid": 947319332790295,
+					"parameters": {
+						"animation": "\"derecha_rosa\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "bola",
+					"sid": 382855138653681,
+					"parameters": {
+						"object": "ending_JEFE_FINAL",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "bola",
+					"sid": 662086347599737,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "ending_JEFE_FINAL",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "ending_JEFE_FINAL",
+					"sid": 651327989390903,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"pasa_enemigo\"",
+						"property": "offsetX",
+						"end-value": "-250",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 227800015161643
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-tweens-finished",
+					"objectClass": "ending_JEFE_FINAL",
+					"sid": 727196867351968,
+					"behaviorType": "Tween"
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 238628056664154,
+					"parameters": {
+						"layout": "ENDING_VOLADOR_5"
+					}
+				}
+			],
+			"sid": 283008045194094
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "sonido aleteo dragon e_ENDING5",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "ending_JEFE_FINAL",
+							"sid": 225975050529620
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "ending_JEFE_FINAL",
+							"sid": 464147966940713,
+							"parameters": {
+								"comparison": 0,
+								"number": "5"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 895695473186641,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 235716613140465,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 340194461040704,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 779978585160809
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 974607513745706,
+											"parameters": {
+												"audio-file": "aleteo dragon",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 112993653680754
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 917837016583701
+		}
+	],
+	"sid": 331799935507217
+}

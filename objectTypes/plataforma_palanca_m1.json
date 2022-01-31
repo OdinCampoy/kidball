@@ -1,0 +1,269 @@
+{
+	"name": "Plataforma_palanca_M1",
+	"plugin-id": "Sprite",
+	"sid": 187096650001458,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Num_Plataforma",
+			"type": "number",
+			"desc": "",
+			"sid": 182510901425156
+		},
+		{
+			"name": "POS_x_final",
+			"type": "number",
+			"desc": "",
+			"sid": 303906073349977
+		},
+		{
+			"name": "POS_x_inicial",
+			"type": "number",
+			"desc": "",
+			"sid": 327395758388991
+		},
+		{
+			"name": "POS_Y_final",
+			"type": "number",
+			"desc": "",
+			"sid": 881615795218531
+		},
+		{
+			"name": "POS_Y_inicial",
+			"type": "number",
+			"desc": "",
+			"sid": 662573748690615
+		},
+		{
+			"name": "Ida_tiempo_tween",
+			"type": "number",
+			"desc": "",
+			"sid": 981456633523046
+		},
+		{
+			"name": "Vuelta_tiempo_tween",
+			"type": "number",
+			"desc": "",
+			"sid": 451337745577028
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 815659718677118
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 825550722335333
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 73,
+						"height": 27,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3592150,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 82,
+						"height": 27,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8426992,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 86,
+						"height": 27,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9178923,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 783886556447645,
+				"name": "mundo 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 82,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 355891,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 88,
+						"height": 32,
+						"originX": 0.5000000000000001,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 609460,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.9886363636363636,
+								0,
+								0.9886363636363636,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 92,
+						"height": 32,
+						"originX": 0.5217391304347826,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6549077,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 96,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7114494,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 82,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8971579,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 702341908554468,
+				"name": "mundo 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 82,
+						"height": 29,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1356285,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 88,
+						"height": 29,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7996100,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 92,
+						"height": 29,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6958368,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 96,
+						"height": 29,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3080359,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 82,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 160687,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 576136534271534,
+				"name": "mundo 3",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

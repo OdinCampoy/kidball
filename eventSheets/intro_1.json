@@ -1,0 +1,2617 @@
+{
+	"name": "INTRO_1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "CONTADOR_INTRO_1",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 496577026456309
+		},
+		{
+			"eventType": "variable",
+			"name": "intro_bola_cae",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 434333620048495
+		},
+		{
+			"eventType": "variable",
+			"name": "INTRO_1_Scroll_Y",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 223385020354487
+		},
+		{
+			"eventType": "variable",
+			"name": "INTRO_1_PASOS",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 353002068317083
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tAL INICIO DE LA INTRO"
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 652263202391061
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 719871676960088,
+					"parameters": {
+						"object-to-create": "SKIP_INTRO",
+						"layer": "\"HUD_INTRO\"",
+						"x": "0",
+						"y": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "portada_scroll",
+					"sid": 980093371645660,
+					"disabled": true,
+					"parameters": {
+						"x": "ViewportRight(\"fondo\")/2",
+						"y": "1900"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 173546098068083,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 330134424808675,
+					"parameters": {
+						"variable": "INTRO_1_Scroll_Y",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "bola",
+					"sid": 145284803948641,
+					"behaviorType": "Platform",
+					"parameters": {
+						"max-speed": "100"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "bola_ROSA",
+					"sid": 494414873000961,
+					"behaviorType": "Platform",
+					"parameters": {
+						"max-speed": "100"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 269883250060949,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "set-layer-scale",
+					"objectClass": "System",
+					"sid": 921529266618729,
+					"parameters": {
+						"layer": "0",
+						"scale": "0.8"
+					}
+				},
+				{
+					"id": "set-layer-scale",
+					"objectClass": "System",
+					"sid": 987397611185460,
+					"parameters": {
+						"layer": "1",
+						"scale": "0.8"
+					}
+				},
+				{
+					"id": "set-layer-scale",
+					"objectClass": "System",
+					"sid": 491089125183768,
+					"parameters": {
+						"layer": "2",
+						"scale": "0.8"
+					}
+				},
+				{
+					"id": "set-layer-scale",
+					"objectClass": "System",
+					"sid": 303434770072742,
+					"parameters": {
+						"layer": "3",
+						"scale": "0.8"
+					}
+				},
+				{
+					"id": "set-layer-scale",
+					"objectClass": "System",
+					"sid": 344871811996290,
+					"parameters": {
+						"layer": "4",
+						"scale": "0.8"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 742115493587442,
+					"parameters": {
+						"tag": "\"MUSICA_JUEGO\""
+					}
+				}
+			],
+			"sid": 560938691494906,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 397663042006869,
+							"parameters": {
+								"variable": "MUSIC_sound",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 286431491934451
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 680011016538681,
+							"parameters": {
+								"variable": "MUSIC_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 340222451166614,
+							"disabled": true,
+							"parameters": {
+								"audio-file": "abre puerta",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"MUSICA_INTRO\""
+							}
+						}
+					],
+					"sid": 911468043499580
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tLA BOLA SALTA"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-floor",
+					"objectClass": "bola",
+					"sid": 162217368868355,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [],
+			"sid": 718997326413003,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 674359334096657,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "bola",
+							"sid": 610188864107445,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 577038638476536,
+							"parameters": {
+								"object": "polvo",
+								"layer": "\"pelota\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "polvo",
+							"sid": 741339310310536,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "IMAN",
+							"sid": 140801346694667,
+							"parameters": {
+								"object": "jefe_final_INTRO",
+								"image-point-optional": "1"
+							}
+						},
+						{
+							"id": "pin-to-object",
+							"objectClass": "IMAN",
+							"sid": 470302712617094,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "jefe_final_INTRO",
+								"mode": "position-only"
+							}
+						}
+					],
+					"sid": 377692366228193
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 114806389293027,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 550597852354026,
+							"parameters": {
+								"audio-file": "Rebote_pelota",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX-15",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "bola",
+							"sid": 615862079083304,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 565497171002914,
+							"parameters": {
+								"object": "polvo",
+								"layer": "\"pelota\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "polvo",
+							"sid": 743555955812317,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "IMAN",
+							"sid": 863052795073006,
+							"parameters": {
+								"object": "jefe_final_INTRO",
+								"image-point-optional": "1"
+							}
+						},
+						{
+							"id": "pin-to-object",
+							"objectClass": "IMAN",
+							"sid": 232594777113026,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "jefe_final_INTRO",
+								"mode": "position-only"
+							}
+						}
+					],
+					"sid": 219734340704243
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-floor",
+					"objectClass": "bola_ROSA",
+					"sid": 551175882619981,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "bola_ROSA",
+					"sid": 734063752613360,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "bola_ROSA",
+					"sid": 452868162273250,
+					"parameters": {
+						"object": "polvo",
+						"layer": "\"pelota\"",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "polvo",
+					"sid": 179720577200515,
+					"parameters": {
+						"angle": "270"
+					}
+				}
+			],
+			"sid": 392093162096266
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tPASOS   TUTORIAL"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 705251730190616,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 460894101265867,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 448754783067742
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 544403127859232,
+							"parameters": {
+								"variable": "INTRO_1_PASOS",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 665703315097417
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 515558295238733,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "bola",
+					"sid": 595681207787282,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "555"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "bola",
+					"sid": 589078374388386,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "bola_ROSA",
+					"sid": 764961575947421,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 258023176569962
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 376724961786797,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "bola",
+					"sid": 316746233502880,
+					"parameters": {
+						"comparison": 5,
+						"x-co-ordinate": "555"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 974028379720615,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 253645846631310
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 872408927127002,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 729889432193461,
+							"parameters": {
+								"variable": "INTRO_1_PASOS",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 388115403056461
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 589451956976148,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 122487797580104,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-falling",
+							"objectClass": "bola",
+							"sid": 804605407081022,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 620428011196774,
+							"parameters": {
+								"variable": "intro_bola_cae",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola",
+							"sid": 106552504931138,
+							"parameters": {
+								"object": "CORAZONES_INTRO",
+								"layer": "\"edificio\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola_ROSA",
+							"sid": 994317655768949,
+							"parameters": {
+								"object": "CORAZONES_INTRO",
+								"layer": "\"edificio\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 821946624492721,
+							"parameters": {
+								"variable": "intro_bola_cae",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 553970472285273
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-jumping",
+							"objectClass": "bola",
+							"sid": 921130125918269,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 575093824287757,
+							"parameters": {
+								"variable": "intro_bola_cae",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 616087317561807,
+							"parameters": {
+								"variable": "intro_bola_cae",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 861204337281866
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tCORAZONES DESAPARECEN HACIA ARRIB"
+		},
+		{
+			"eventType": "comment",
+			"text": "************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "CORAZONES_INTRO",
+					"sid": 708111279589598
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "CORAZONES_INTRO",
+					"sid": 256013875989208,
+					"parameters": {
+						"comparison": 4,
+						"opacity": "5"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 513147321530393,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "CORAZONES_INTRO",
+					"sid": 606122836824674,
+					"parameters": {
+						"y": "CORAZONES_INTRO.Y-1*55*dt"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "CORAZONES_INTRO",
+					"sid": 130645378637535,
+					"parameters": {
+						"opacity": "CORAZONES_INTRO.Opacity-0.7"
+					}
+				}
+			],
+			"sid": 607255969261731
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "CORAZONES_INTRO",
+					"sid": 193800023096449
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "CORAZONES_INTRO",
+					"sid": 812990876755411,
+					"parameters": {
+						"comparison": 3,
+						"opacity": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "CORAZONES_INTRO",
+					"sid": 589897723407244
+				}
+			],
+			"sid": 292092776337864
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tPASO   3  "
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 382882041495893,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 974423016548866,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-falling",
+							"objectClass": "bola",
+							"sid": 920589839072610,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 860163596223064,
+							"parameters": {
+								"variable": "intro_bola_cae",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 321754921692313,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 299047707855977,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 863220665146049,
+									"parameters": {
+										"object-to-create": "CORAZONES_INTRO",
+										"layer": "\"edificio\"",
+										"x": "600",
+										"y": "bola.Y-30",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 547008344967824,
+									"parameters": {
+										"width": "60",
+										"height": "50"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 455196395535631,
+									"parameters": {
+										"variable": "intro_bola_cae",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 898674309581694
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 644745578172385,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 271434547975692,
+									"parameters": {
+										"audio-file": "aparecen corazones grandes",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX-5",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 526431224138479,
+									"parameters": {
+										"object-to-create": "CORAZONES_INTRO",
+										"layer": "\"edificio\"",
+										"x": "600",
+										"y": "bola.Y-30",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 919327706337766,
+									"parameters": {
+										"width": "60",
+										"height": "50"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 674989112323276,
+									"parameters": {
+										"variable": "intro_bola_cae",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 867294122817024
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-jumping",
+							"objectClass": "bola",
+							"sid": 282147769817423,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 831144159663537,
+							"parameters": {
+								"variable": "intro_bola_cae",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 811817415117457,
+							"parameters": {
+								"variable": "intro_bola_cae",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 256354415949095
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "CORAZONES_INTRO",
+					"sid": 669994722356928
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "CORAZONES_INTRO",
+					"sid": 941552078055928,
+					"parameters": {
+						"comparison": 4,
+						"opacity": "5"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 403133968746260,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 214800392002271,
+							"parameters": {
+								"variable": "INTRO_1_PASOS",
+								"comparison": 0,
+								"value": "3"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 490796512010294,
+							"parameters": {
+								"variable": "INTRO_1_PASOS",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "CORAZONES_INTRO",
+							"sid": 932417281109256,
+							"parameters": {
+								"y": "CORAZONES_INTRO.Y-2.3*55*dt"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "CORAZONES_INTRO",
+							"sid": 855700864117006,
+							"parameters": {
+								"opacity": "CORAZONES_INTRO.Opacity-1.2"
+							}
+						}
+					],
+					"sid": 501516780337364,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 447862377713459,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 680619273658339,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"comparison": 2,
+						"value": "150"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 866924958445800,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 741608568430686
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 480691905715394,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 216699981758867,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"comparison": 5,
+						"value": "150"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 462387595040374,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"value": "4"
+					}
+				}
+			],
+			"sid": 691862408951440
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tPASO   4  "
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 733104540105733,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 399017737763367,
+					"parameters": {
+						"comparison": 2,
+						"y-co-ordinate": "1840"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 637927073875889,
+					"parameters": {
+						"y": "jefe_final_INTRO.Y+2.3*55*dt"
+					}
+				}
+			],
+			"sid": 138386477533578
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 407848447857647,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 405221405639305,
+					"parameters": {
+						"comparison": 5,
+						"y-co-ordinate": "1840"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 768535730053668,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"value": "5"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 230370125888675,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 366578085677113
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tPASO   5"
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 375554099836685,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "5"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 258745271591756,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"comparison": 2,
+						"value": "75"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "IMAN",
+					"sid": 492231757568731,
+					"parameters": {
+						"animation": "\"CONRAYOS\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 723380304122420,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 406647659958489
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 120015821263865,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "5"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 522128262153203,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"comparison": 5,
+						"value": "75"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 719038323523616,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 251209831688502
+						}
+					],
+					"actions": [],
+					"sid": 220420036251699,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 502293165512389,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "IMAN",
+									"sid": 259855095415633,
+									"parameters": {
+										"animation": "\"PARADO\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "bola_ROSA",
+									"sid": 679677562711273,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "bola_ROSA",
+									"sid": 713501996784704,
+									"parameters": {
+										"object": "IMAN",
+										"image-point-optional": "\"bola_rosa\""
+									}
+								},
+								{
+									"id": "pin-to-object",
+									"objectClass": "bola_ROSA",
+									"sid": 530477387676892,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "IMAN",
+										"mode": "position-only"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 965645578362319,
+									"parameters": {
+										"variable": "INTRO_1_PASOS",
+										"value": "6"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 354223518811345,
+									"parameters": {
+										"variable": "CONTADOR_INTRO_1",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 423351937508244
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 578930319032270,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 826460411783055,
+									"parameters": {
+										"audio-file": "coge_bola_jefe_final",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "IMAN",
+									"sid": 505007182784488,
+									"parameters": {
+										"animation": "\"PARADO\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "bola_ROSA",
+									"sid": 202718617399081,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "bola_ROSA",
+									"sid": 825861862404908,
+									"parameters": {
+										"object": "IMAN",
+										"image-point-optional": "\"bola_rosa\""
+									}
+								},
+								{
+									"id": "pin-to-object",
+									"objectClass": "bola_ROSA",
+									"sid": 479023121407955,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "IMAN",
+										"mode": "position-only"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 855105897451153,
+									"parameters": {
+										"variable": "INTRO_1_PASOS",
+										"value": "6"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 383430084492430,
+									"parameters": {
+										"variable": "CONTADOR_INTRO_1",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 567937742614538
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tPASO   6  "
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 860193861223765,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "6"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 874558979385551,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"comparison": 2,
+						"value": "80"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "INTRO_TXT_1",
+					"sid": 306728156531343,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 634288261964866,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 230003438763510
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 820010039681355,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "6"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 997421774010897,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"comparison": 5,
+						"value": "80"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "INTRO_TXT_1",
+					"sid": 899620877522328,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 507649328561174,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"value": "7"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 362495127306942,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 561005319626875
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tPASO   7  "
+		},
+		{
+			"eventType": "comment",
+			"text": "***************************************************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 117858976692010,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "7"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 902481355301857,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"comparison": 2,
+						"value": "95"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "INTRO_TXT_2",
+					"sid": 435186298584993,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 351611331860690,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 616556915151152,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 315722025282574
+						}
+					],
+					"actions": [],
+					"sid": 272080980721629,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 440018586482430,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 906039253783397,
+									"parameters": {
+										"audio-file": "Risa_enemigo",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 245781149639494
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 335044880524371,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "7"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 158693876441464,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"comparison": 5,
+						"value": "95"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "INTRO_TXT_2",
+					"sid": 353458828597652,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 267905262241045,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"value": "10"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 897834604703176,
+					"parameters": {
+						"variable": "CONTADOR_INTRO_1",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 720239015323486
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 761075000748847,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 5,
+						"value": "8"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 180251330260722,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 2,
+						"value": "12"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 663926197345436,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 429088006834631,
+							"parameters": {
+								"interval-seconds": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola_ROSA",
+							"sid": 443015720904115,
+							"parameters": {
+								"object": "TXT_HELP",
+								"layer": "\"pantallas\"",
+								"image-point": "2",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 935579414044392
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "TXT_HELP",
+					"sid": 457711435721622
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "TXT_HELP",
+					"sid": 247939636396671,
+					"parameters": {
+						"comparison": 4,
+						"opacity": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TXT_HELP",
+					"sid": 524793930188528,
+					"parameters": {
+						"y": "TXT_HELP.Y-0.8*55*dt"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TXT_HELP",
+					"sid": 523659913748653,
+					"parameters": {
+						"opacity": "TXT_HELP.Opacity-1"
+					}
+				}
+			],
+			"sid": 859699993041518
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "TXT_HELP",
+					"sid": 733488808487083
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "TXT_HELP",
+					"sid": 655064052966865,
+					"parameters": {
+						"comparison": 3,
+						"opacity": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "TXT_HELP",
+					"sid": 279446744097461
+				}
+			],
+			"sid": 859857455818922
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 372211804414153,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "9"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 527360637597386,
+			"disabled": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 543883074988934
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "INTRO_TXT_2",
+							"sid": 910075354064088,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 288809638501483,
+							"disabled": true,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "portada_scroll",
+							"sid": 579082916063181,
+							"disabled": true,
+							"parameters": {
+								"object": "jefe_final_INTRO",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "portada_scroll",
+							"sid": 858160062726475,
+							"disabled": true,
+							"parameters": {
+								"y": "portada_scroll.Y+50"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 940037646131425,
+							"parameters": {
+								"variable": "INTRO_1_PASOS",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 577828010564201
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 710328153244421,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "10"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 260779022343195,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "1818"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 666833436195193,
+					"parameters": {
+						"x": "jefe_final_INTRO.X+7*55*dt"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 835859921974662,
+					"parameters": {
+						"angle": "14"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "IMAN",
+					"sid": 438874325940984,
+					"parameters": {
+						"angle": "14"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "portada_scroll",
+					"sid": 808509262562678,
+					"parameters": {
+						"x": "jefe_final_INTRO.X"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "bola",
+					"sid": 249091725286922,
+					"behaviorType": "Platform",
+					"parameters": {
+						"max-speed": "60"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "bola",
+					"sid": 752484640381181,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 324516909060781
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 622591724547478,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "10"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 170990809395391,
+					"parameters": {
+						"comparison": 5,
+						"x-co-ordinate": "1818"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 801318702139394,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"value": "11"
+					}
+				}
+			],
+			"sid": 259952312482525
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 696974713935171,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "10"
+					}
+				},
+				{
+					"id": "is-mirrored",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 490831654839280
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 685291770375962,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 184006443023552
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 851000700240116,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "11"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 670950758831470,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "790"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 866925422977308,
+					"parameters": {
+						"y": "jefe_final_INTRO.Y-6.2*55*dt"
+					}
+				},
+				{
+					"id": "set-y",
+					"objectClass": "portada_scroll",
+					"sid": 129450413227896,
+					"parameters": {
+						"y": "portada_scroll.Y-6.2*55*dt"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 728984208843347,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "IMAN",
+					"sid": 893744492868351,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 341436743562719,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 529120071289385,
+					"disabled": true,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"value": "11"
+					}
+				}
+			],
+			"sid": 912187269279107
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 382595563851101,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "11"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 154332274074887,
+					"parameters": {
+						"comparison": 3,
+						"y-co-ordinate": "790"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-layer",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 235778776038425,
+					"parameters": {
+						"layer": "\"fondo\""
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "IMAN",
+					"sid": 217970332795439,
+					"parameters": {
+						"layer": "\"fondo\""
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "bola_ROSA",
+					"sid": 883617538774265,
+					"parameters": {
+						"layer": "\"fondo\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 641730179820410,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"value": "12"
+					}
+				}
+			],
+			"sid": 920844444429589
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 783716269005266,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "12"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 925864139376012,
+					"parameters": {
+						"comparison": 2,
+						"y-co-ordinate": "1180"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 938047477875182,
+					"parameters": {
+						"y": "jefe_final_INTRO.Y+2*55*dt"
+					}
+				}
+			],
+			"sid": 493436819490480
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 443976407790868,
+					"parameters": {
+						"variable": "INTRO_1_PASOS",
+						"comparison": 0,
+						"value": "12"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 216191150077657,
+					"parameters": {
+						"comparison": 5,
+						"y-co-ordinate": "1180"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 144741044413320,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 817373560964509
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 367590586693361,
+							"parameters": {
+								"tag": "\"jefe_final\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 613483525434079,
+							"parameters": {
+								"seconds": "0.4"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "jefe_final_INTRO",
+							"sid": 760869930284879
+						},
+						{
+							"id": "destroy",
+							"objectClass": "bola_ROSA",
+							"sid": 237576254467165
+						},
+						{
+							"id": "destroy",
+							"objectClass": "IMAN",
+							"sid": 436593722789373
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 660240119954781,
+							"parameters": {
+								"variable": "INTRO_1_PASOS",
+								"value": "14"
+							}
+						}
+					],
+					"sid": 356739543287838
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "jefe_final_INTRO",
+					"sid": 641127944129678
+				}
+			],
+			"actions": [],
+			"sid": 564348034655354,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 477423654026282
+						}
+					],
+					"actions": [],
+					"sid": 347143309947470,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 702950716833049,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 232709606232615,
+									"parameters": {
+										"audio-file": "helice_jefe_final",
+										"loop": "looping",
+										"volume": "VOLUMEN_MASTER_FX-8",
+										"tag-optional": "\"jefe_final\""
+									}
+								}
+							],
+							"sid": 370453822712731
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\t\tSALTAR  LA   INTRO"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 198216109709018,
+					"parameters": {
+						"object": "SKIP_INTRO"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "FUNDIDO_A_NEGRO",
+					"sid": 248406912406873,
+					"parameters": {
+						"x": "ViewportRight(\"HUD_INTRO\")/2",
+						"y": "ViewportBottom(\"HUD_INTRO\")/2"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "FUNDIDO_A_NEGRO",
+					"sid": 791343931862098,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 271115034554642,
+					"parameters": {
+						"variable": "Nivel_actual_1",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 398475521221273,
+					"parameters": {
+						"key": "\"Nivel_actual_1\"",
+						"value": "Nivel_actual_1"
+					}
+				}
+			],
+			"sid": 252161908531305
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "FUNDIDO_A_NEGRO",
+					"sid": 566633427691384
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "FUNDIDO_A_NEGRO",
+					"sid": 925814440929302,
+					"parameters": {
+						"comparison": 2,
+						"opacity": "95"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "FUNDIDO_A_NEGRO",
+					"sid": 816956869798854,
+					"parameters": {
+						"opacity": "FUNDIDO_A_NEGRO.Opacity+0.9"
+					}
+				}
+			],
+			"sid": 107787408876439
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "FUNDIDO_A_NEGRO",
+					"sid": 706931559372768
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "FUNDIDO_A_NEGRO",
+					"sid": 452879210191806,
+					"parameters": {
+						"comparison": 5,
+						"opacity": "95"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 658114074240052
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 739385802673189,
+					"parameters": {
+						"layout": "Room_1"
+					}
+				}
+			],
+			"sid": 404326616339087
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": " \tCADENA  ASCENSOR"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 426399009267361
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Punto_ascensor",
+					"sid": 753278002325485,
+					"parameters": {
+						"instance-variable": "distancia",
+						"value": "distance(0,Punto_ascensor.Y,0,ASCENSOR.Y-20)"
+					}
+				},
+				{
+					"id": "set-height",
+					"objectClass": "Punto_ascensor",
+					"sid": 672360091419200,
+					"parameters": {
+						"height": "Punto_ascensor.distancia"
+					}
+				}
+			],
+			"sid": 902491943326931
+		}
+	],
+	"sid": 433881757830730
+}

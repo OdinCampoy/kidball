@@ -1,0 +1,95 @@
+{
+	"name": "Bloque_se_rompe_M2",
+	"plugin-id": "Sprite",
+	"sid": 303970738451569,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "tocado",
+			"type": "number",
+			"desc": "",
+			"sid": 183119991330279
+		},
+		{
+			"name": "tiempo",
+			"type": "number",
+			"desc": "",
+			"sid": 168370835803005
+		},
+		{
+			"name": "inicial_X",
+			"type": "number",
+			"desc": "",
+			"sid": 949759001287204
+		},
+		{
+			"name": "inicial_Y",
+			"type": "number",
+			"desc": "",
+			"sid": 105283320181679
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 309370151789813
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 502444413796514
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine2",
+			"sid": 284389111432848
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 361505997301538
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 738982410889638
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8385337,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 990639746750360,
+				"name": "normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

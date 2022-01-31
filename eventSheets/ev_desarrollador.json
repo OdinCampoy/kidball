@@ -1,0 +1,175 @@
+{
+	"name": "Ev_desarrollador",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "DESARROLLADOR",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 498831500658429,
+							"parameters": {
+								"key": 8
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "clear-storage",
+							"objectClass": "LocalStorage",
+							"sid": 638859989313894
+						}
+					],
+					"sid": 401342880966325
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 835408329041687,
+							"parameters": {
+								"key": 46
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "clear-storage",
+							"objectClass": "LocalStorage",
+							"sid": 817089939701993
+						}
+					],
+					"sid": 902070171882960
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 519107165541442,
+							"parameters": {
+								"interval-seconds": "0.2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "FPS_TXT",
+							"sid": 720423892428385,
+							"parameters": {
+								"text": "fps"
+							}
+						}
+					],
+					"sid": 876170485492920
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 160108888540915,
+							"parameters": {
+								"key": 81
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "bola",
+							"sid": 424988843818774,
+							"parameters": {
+								"x": "llave.X",
+								"y": "llave.Y"
+							}
+						}
+					],
+					"sid": 465550208236426
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 275377421319770,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "bola",
+							"sid": 395280952281561,
+							"parameters": {
+								"x": "puerta.X",
+								"y": "puerta.Y"
+							}
+						}
+					],
+					"sid": 380505352367878
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 970868790316556,
+							"parameters": {
+								"key": 48
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 656067100899663,
+							"parameters": {
+								"variable": "VIDAS_1",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 794182246809709,
+							"parameters": {
+								"variable": "VIDAS_2",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 341887947894441,
+							"parameters": {
+								"variable": "VIDAS_3",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 229889269262201
+				}
+			],
+			"sid": 442816640533803
+		}
+	],
+	"sid": 281696972513490
+}

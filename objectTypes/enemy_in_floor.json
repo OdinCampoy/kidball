@@ -1,0 +1,114 @@
+{
+	"name": "enemy_in_floor",
+	"plugin-id": "Sprite",
+	"sid": 791357935190329,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "direccion",
+			"type": "number",
+			"desc": "0= der    1= izq",
+			"sid": 857812518781666
+		},
+		{
+			"name": "velocidad",
+			"type": "number",
+			"desc": "",
+			"sid": 598719306139181
+		},
+		{
+			"name": "IZQ_tope",
+			"type": "number",
+			"desc": "",
+			"sid": 600820789734657
+		},
+		{
+			"name": "DER_tope",
+			"type": "number",
+			"desc": "",
+			"sid": 424597169830685
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 206321304320311
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 31,
+						"height": 31,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\RED BALL VS KING\\ENEMIGO.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9765052,
+						"collisionPoly": {
+							"points": [
+								0.166667,
+								0.164384,
+								0.5,
+								0.0273973,
+								0.833333,
+								0.164384,
+								0.986111,
+								0.493151,
+								0.833333,
+								0.835616,
+								0.5,
+								0.972603,
+								0.166667,
+								0.835616,
+								0.0138889,
+								0.493151
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Imagepoint 1",
+								"x": 0.0972222,
+								"y": 0.972603
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 31,
+						"height": 31,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1493959,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Imagepoint 1",
+								"x": 0.0972222,
+								"y": 0.972603
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 204774918043043,
+				"name": "Default",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 4
+			}
+		],
+		"subfolders": []
+	}
+}

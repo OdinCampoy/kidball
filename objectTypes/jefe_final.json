@@ -1,0 +1,261 @@
+{
+	"name": "JEFE_FINAL",
+	"plugin-id": "Sprite",
+	"sid": 614287025002783,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "ESTA_CAYENDOSE",
+			"type": "number",
+			"desc": "",
+			"sid": 936259965244411
+		},
+		{
+			"name": "DIRECCION",
+			"type": "number",
+			"desc": "0;DERECHA   1;IZQUIERDA",
+			"sid": 363685914902637
+		},
+		{
+			"name": "HA_SIDO_TOCADO",
+			"type": "number",
+			"desc": "0;INACTIVO  1;ACTIVO",
+			"sid": 574147906569511
+		},
+		{
+			"name": "CONTADOR_HA_SIDO_TOCADO",
+			"type": "number",
+			"desc": "",
+			"sid": 295678782530996
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 562812431827812
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 42,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\jefe_final_intro_animation\\JEFE_FINAL_SOLO.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9283982,
+						"collisionPoly": {
+							"points": [
+								0.2398276210852336,
+								0.29385865112236026,
+								0.4742550506347173,
+								0.21425842341190712,
+								0.749586920960939,
+								0.28989970990779085,
+								0.8841204605008457,
+								0.5335579887849189,
+								0.8571222242598368,
+								0.7549355749859389,
+								0.7191249200236363,
+								0.9105219157675852,
+								0.4878048780487805,
+								0.980290731707317,
+								0.3018473284838115,
+								0.9121295031616984,
+								0.17228075636245077,
+								0.7708912859845584,
+								0.1523117094361921,
+								0.5050089611562781
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Imagepoint 1",
+								"x": 0.4878571428571428,
+								"y": 0.9761904761904762
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 472217812948458,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 42,
+						"height": 54,
+						"originX": 0.5,
+						"originY": 0.50505,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\JEFE FINAL_NORMAL.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9417424,
+						"collisionPoly": {
+							"points": [
+								0.23120342857142875,
+								0.3611107777777778,
+								0.4978073333333336,
+								0.2952438148148148,
+								0.7770985238095239,
+								0.3413295925925925,
+								0.9354632380952381,
+								0.5250415925925922,
+								0.9194859523809521,
+								0.7676768888888892,
+								0.7692667857142855,
+								0.9177189259259259,
+								0.5,
+								0.979798,
+								0.22752216666666678,
+								0.9099327407407408,
+								0.08302052380952375,
+								0.7683082222222226,
+								0.07424815714285714,
+								0.49263418518518515
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Imagepoint 1",
+								"x": 0.5,
+								"y": 1
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 42,
+						"height": 54,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7240843,
+						"collisionPoly": {
+							"points": [
+								0.23120342857142875,
+								0.3611107777777778,
+								0.4978073333333336,
+								0.2952438148148148,
+								0.7770985238095239,
+								0.3413295925925925,
+								0.9354632380952381,
+								0.5250415925925922,
+								0.9194859523809521,
+								0.7676768888888892,
+								0.7692667857142855,
+								0.9177189259259259,
+								0.5,
+								0.979798,
+								0.22752216666666678,
+								0.9099327407407408,
+								0.08302052380952375,
+								0.7683082222222226,
+								0.07424815714285714,
+								0.49263418518518515
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 42,
+						"height": 54,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2662146,
+						"collisionPoly": {
+							"points": [
+								0.23120342857142875,
+								0.3611107777777778,
+								0.4978073333333336,
+								0.2952438148148148,
+								0.7770985238095239,
+								0.3413295925925925,
+								0.9354632380952381,
+								0.5250415925925922,
+								0.9194859523809521,
+								0.7676768888888892,
+								0.7692667857142855,
+								0.9177189259259259,
+								0.5,
+								0.979798,
+								0.22752216666666678,
+								0.9099327407407408,
+								0.08302052380952375,
+								0.7683082222222226,
+								0.07424815714285714,
+								0.49263418518518515
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 42,
+						"height": 54,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5068732,
+						"collisionPoly": {
+							"points": [
+								0.23120342857142875,
+								0.3611107777777778,
+								0.4978073333333336,
+								0.2952438148148148,
+								0.7770985238095239,
+								0.3413295925925925,
+								0.9354632380952381,
+								0.5250415925925922,
+								0.9194859523809521,
+								0.7676768888888892,
+								0.7692667857142855,
+								0.9177189259259259,
+								0.5,
+								0.979798,
+								0.22752216666666678,
+								0.9099327407407408,
+								0.08302052380952375,
+								0.7683082222222226,
+								0.07424815714285714,
+								0.49263418518518515
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 830202325545998,
+				"name": "1_GOLPE",
+				"isLooping": true,
+				"isPingPong": true,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			}
+		],
+		"subfolders": []
+	}
+}

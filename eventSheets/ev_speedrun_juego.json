@@ -1,0 +1,1597 @@
+{
+	"name": "Ev_Speedrun_Juego",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 226893052336189
+				}
+			],
+			"actions": [],
+			"sid": 956288429688245,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 949671118255781,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 858204756431786,
+							"parameters": {
+								"object-to-create": "SpeedRun_TXT_in_Levels",
+								"layer": "\"HUD\"",
+								"x": "500",
+								"y": "5",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 798219378580954,
+							"disabled": true,
+							"parameters": {
+								"variable": "SpeedRun_tiempo_nivel",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 904822056460061,
+							"disabled": true,
+							"parameters": {
+								"variable": "SpeedRun_gemas_cogidas",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 275440641618435,
+							"disabled": true,
+							"parameters": {
+								"variable": "SpeedRun_muertes",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 999728785068688,
+							"parameters": {
+								"variable": "speedrun_activo_parado",
+								"value": "\"activo\""
+							}
+						},
+						{
+							"type": "comment",
+							"text": "coge el numero de nivel y ACTIVA el TIEMPO"
+						},
+						{
+							"callFunction": "SpeedRun_Coge_Numero_Nivel",
+							"sid": 214108249736784
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 314231499580703
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 212144342346955,
+							"parameters": {
+								"variable": "SpeedRun_gemas_totales_juego",
+								"value": "Gema_currency.Count"
+							}
+						}
+					],
+					"sid": 408522886107458
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 188677734167459,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 613801667714811,
+							"parameters": {
+								"variable": "speedrun_activo_parado",
+								"value": "\"parado\""
+							}
+						},
+						{
+							"type": "comment",
+							"text": "coge el numero de nivel y ACTIVA el TIEMPO"
+						},
+						{
+							"callFunction": "SpeedRun_Coge_Numero_Nivel",
+							"sid": 952297789415553,
+							"disabled": true
+						}
+					],
+					"sid": 801895680447316
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "COGE EL NUMERO DE NIVEL",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "SpeedRun_Coge_Numero_Nivel",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 385923731503694,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 307058597265579,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"1M_CHECKPOINT\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 872248489741611,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"1M_TRANSICION_CASTILLOS\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 291786474525895,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"2M_CHECKPOINT\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 839224378523777,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"2M_TRANSICION_CASTILLOS\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 102443033191605,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"3M_CHECKPOINT\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 884110732615125,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"3M_TRANSICION_CASTILLOS\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 600005887312230,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"4M_CHECKPOINT\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 538304375885474,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"4M_TRANSICION_CASTILLOS\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 648952313585181,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"5M_CHECKPOINT\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 370240913659077,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"1_Room_SAVE_GIRL\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 571172841810090,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"6M_CHECKPOINT\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 654539436007615,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"6M_TRANSICION_CASTILLOS\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 656376430346616,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"7M_CHECKPOINT\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 843031614313118,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"7M_TRANSICION_CASTILLOS\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 281255958222575,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"8M_CHECKPOINT\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 753728152896342,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"8M_TRANSICION_CASTILLOS\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 584652978976646,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"9M_CHECKPOINT\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 806609039386126,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"9M_TRANSICION_CASTILLOS\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 825040916020101,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"2_Room_SAVE_GIRL\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 493816570288262,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"1_Room_FINAL BOSS\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 749657825478591,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"2_Room_FINAL BOSS2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 833978111584320,
+									"parameters": {
+										"variable": "SpeedRun_Nivel_maximo",
+										"value": "tokenat(LayoutName,1,\"_\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 883586329136649,
+									"parameters": {
+										"variable": "SpeedRun_Nivel_actual",
+										"value": "int(SpeedRun_Nivel_maximo)"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "DESACTIVA EL TIEMPO PERO LO MUESTRA EN PANTALLA"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 646595811962332,
+									"disabled": true,
+									"parameters": {
+										"variable": "speedrun_activo_parado",
+										"value": "\"parado\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_TXT_in_Levels",
+									"sid": 533354673993357,
+									"parameters": {
+										"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+									}
+								}
+							],
+							"sid": 405837922665730
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 561680005631234
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "ACTIVA EL TIEMPO EN PANTALLA"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 494960625979887,
+									"parameters": {
+										"variable": "speedrun_activo_parado",
+										"value": "\"activo\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_TXT_in_Levels",
+									"sid": 262246477546888,
+									"parameters": {
+										"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+									}
+								}
+							],
+							"sid": 808122468811493
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 731228682413962,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"1_Room_FINAL BOSS\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 335106186684328,
+									"parameters": {
+										"variable": "SpeedRun_Nivel_maximo",
+										"value": "50"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 438698390933298,
+									"parameters": {
+										"variable": "SpeedRun_Nivel_actual",
+										"value": "int(SpeedRun_Nivel_maximo)"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "ACTIVA EL TIEMPO EN PANTALLA"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 877576907697317,
+									"parameters": {
+										"variable": "speedrun_activo_parado",
+										"value": "\"activo\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_TXT_in_Levels",
+									"sid": 118960232899244,
+									"parameters": {
+										"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+									}
+								}
+							],
+							"sid": 412446885042347
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 455193314160976,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"2_Room_FINAL BOSS2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 228694924569173,
+									"parameters": {
+										"variable": "SpeedRun_Nivel_maximo",
+										"value": "100"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 774421397329958,
+									"parameters": {
+										"variable": "SpeedRun_Nivel_actual",
+										"value": "int(SpeedRun_Nivel_maximo)"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "ACTIVA EL TIEMPO EN PANTALLA"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 226770293322113,
+									"parameters": {
+										"variable": "speedrun_activo_parado",
+										"value": "\"activo\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SpeedRun_TXT_in_Levels",
+									"sid": 343830634958334,
+									"parameters": {
+										"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+									}
+								}
+							],
+							"sid": 561827951060878
+						}
+					]
+				}
+			],
+			"sid": 916050871036453
+		},
+		{
+			"eventType": "variable",
+			"name": "hours",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 418088523467765
+		},
+		{
+			"eventType": "variable",
+			"name": "minutes",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 690420688313668
+		},
+		{
+			"eventType": "variable",
+			"name": "seconds",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 268883540856012
+		},
+		{
+			"eventType": "variable",
+			"name": "millisecs",
+			"type": "string",
+			"initialValue": "00",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 628917917982296
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SPEED RUNNER TEMPORIZADOR",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 825843723193077,
+							"parameters": {
+								"variable": "speedrun_activo_parado",
+								"comparison": 0,
+								"value": "\"activo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 787346488690181,
+							"parameters": {
+								"variable": "SpeedRun_tiempo_total",
+								"value": "dt"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 490029790743820,
+							"parameters": {
+								"variable": "SpeedRun_tiempo_nivel",
+								"value": "dt"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 180246186542693,
+							"parameters": {
+								"variable": "hours",
+								"value": "zeropad(floor(floor(SpeedRun_tiempo_total/60)/60)%24,2)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 190338324203062,
+							"parameters": {
+								"variable": "minutes",
+								"value": "zeropad(floor(SpeedRun_tiempo_total/60)%60,2)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 752276337133766,
+							"parameters": {
+								"variable": "seconds",
+								"value": "zeropad(int((SpeedRun_tiempo_total)%60),2)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 192093750036111,
+							"parameters": {
+								"variable": "millisecs",
+								"value": "mid(tokenat(str(SpeedRun_tiempo_total),1,\".\"),0,2)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TXT_in_Levels",
+							"sid": 875887131442233,
+							"parameters": {
+								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 821149880210421,
+							"parameters": {
+								"variable": "Castillo_Speedrun_time_1",
+								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 192510171637722,
+							"parameters": {
+								"variable": "Castillo_Speedrun_time_2",
+								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 580845936943854,
+							"parameters": {
+								"variable": "Castillo_Speedrun_time_3",
+								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 556063285688653,
+							"parameters": {
+								"variable": "Castillo_Speedrun_time_4",
+								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 290968757676751,
+							"parameters": {
+								"variable": "Castillo_Speedrun_time_5",
+								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 650378435303235,
+							"parameters": {
+								"variable": "Castillo_Speedrun_time_6",
+								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 101185283951845,
+							"parameters": {
+								"variable": "Castillo_Speedrun_time_7",
+								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 373864915912228,
+							"parameters": {
+								"variable": "Castillo_Speedrun_time_8",
+								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 740918870420347,
+							"parameters": {
+								"variable": "Castillo_Speedrun_time_9",
+								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 841002695427169,
+							"parameters": {
+								"variable": "Castillo_Speedrun_time_10",
+								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						}
+					],
+					"sid": 393283917768206
+				}
+			],
+			"sid": 948953226426571
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "GUARDA EN EL ARRAY LOS DATOS DE LAS PARTIDAS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 467699914430061,
+							"parameters": {
+								"key": 90
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "CARGAR DATOS DEL ARRAY TIME MODE",
+							"sid": 385169729128431
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 185864636399823
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "Array_SPR_10_SLOTS_2_DEATH",
+							"sid": 544415573026316,
+							"parameters": {
+								"x": "0",
+								"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+								"value": "0_NIVEL_MAXIMO"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "Array_SPR_10_SLOTS_2_DEATH",
+							"sid": 910956979422775,
+							"parameters": {
+								"x": "1",
+								"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+								"value": "1_TIEMPO_TOTAL_JUEGO"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "Array_SPR_10_SLOTS_2_DEATH",
+							"sid": 951108578851655,
+							"parameters": {
+								"x": "2",
+								"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+								"value": "2_MUERTES_TOTALES"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "Array_SPR_10_SLOTS_2_DEATH",
+							"sid": 497033261525295,
+							"parameters": {
+								"x": "3",
+								"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+								"value": "3_SUMA_GEMAS_COGIDA"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "Array_SPR_10_SLOTS_2_DEATH",
+							"sid": 401630201004889,
+							"parameters": {
+								"x": "4",
+								"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+								"value": "4_SUMA_GEMAS_TOTALES"
+							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 482706089381336,
+							"parameters": {
+								"key": "\"SpeedRun_Guardado_time\"",
+								"value": "Array_SPR_10_SLOTS_2_DEATH.AsJSON"
+							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 202698601807514,
+							"parameters": {
+								"key": "\"SpeedRun_Guardado_10_slots_TIME\"",
+								"value": "Array_SPR_10_SLOTS_2_DEATH.AsJSON"
+							}
+						}
+					],
+					"sid": 647150919376646
+				}
+			],
+			"sid": 230802844724574
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "RECOGIDA DE DATOS DEL ARRAY PARA LAS FILAS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "CARGAR DATOS DEL ARRAY TIME MODE",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 630285363089372,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 294628058884063,
+									"parameters": {
+										"count": "Array_1_SPR_DATOS_por_nivel_TIME.Height"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 850967880724723,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "nivel_maximo_1"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 783887932241392
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 458426976149964,
+											"parameters": {
+												"variable": "0_NIVEL_MAXIMO",
+												"value": "Array_1_SPR_DATOS_por_nivel_TIME.At(0,loopindex(Array_1_SPR_DATOS_por_nivel_TIME.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										}
+									],
+									"sid": 415867095667380,
+									"disabled": true
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_tiempo_total_1",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 914480770542944
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 627787413349037
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 604974746509378,
+											"parameters": {
+												"variable": "sumas_tiempo_total_1",
+												"value": "Array_1_SPR_DATOS_por_nivel_TIME.At(1,loopindex(Array_1_SPR_DATOS_por_nivel_TIME.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 604090395713378,
+											"parameters": {
+												"variable": "1_TIEMPO_TOTAL",
+												"value": "sumas_tiempo_total_1"
+											}
+										}
+									],
+									"sid": 278608196578270,
+									"disabled": true
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_muertes_por_nivel_2",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 426260168230276
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 595429749836058
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 707221819587709,
+											"parameters": {
+												"variable": "sumas_muertes_por_nivel_2",
+												"value": "Array_1_SPR_DATOS_por_nivel_TIME.At(2,loopindex(Array_1_SPR_DATOS_por_nivel_TIME.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 314109770255827,
+											"parameters": {
+												"variable": "2_MUERTES_TOTALES",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 393845187115979,
+									"disabled": true
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_gemas_cogidas_3",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 494531072796726
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 679367192008330
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 129453599654378,
+											"parameters": {
+												"variable": "sumas_gemas_cogidas_3",
+												"value": "Array_1_SPR_DATOS_por_nivel_TIME.At(3,loopindex(Array_1_SPR_DATOS_por_nivel_TIME.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 732302231443816,
+											"parameters": {
+												"variable": "3_SUMA_GEMAS_COGIDA",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 182679597589018,
+									"disabled": true
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_gemas_gemas_totales_4",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 224868188949843
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 274802051672907
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 521565210608913,
+											"parameters": {
+												"variable": "sumas_gemas_gemas_totales_4",
+												"value": "Array_1_SPR_DATOS_por_nivel_TIME.At(4,loopindex(Array_1_SPR_DATOS_por_nivel_TIME.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 556012767329741,
+											"parameters": {
+												"variable": "4_SUMA_GEMAS_TOTALES",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 941966781333523,
+									"disabled": true
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "CARGAR DATOS DEL ARRAY -NO DEATH - MODE",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 929436943054617,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 790119474137190,
+									"parameters": {
+										"count": "Array_2_SPR_DATOS_por_NO_DEATH.Height"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 201093356342505,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "nivel_maximo_1"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 323349926618042
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 674344532717897,
+											"parameters": {
+												"variable": "0_NIVEL_MAXIMO",
+												"value": "Array_2_SPR_DATOS_por_NO_DEATH.At(0,loopindex(Array_2_SPR_DATOS_por_NO_DEATH.CurY-1),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										}
+									],
+									"sid": 583898913559852
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_tiempo_total_1",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 480374527810737
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 619618752085056
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 790375347438593,
+											"parameters": {
+												"variable": "sumas_tiempo_total_1",
+												"value": "Array_2_SPR_DATOS_por_NO_DEATH.At(1,loopindex(Array_2_SPR_DATOS_por_NO_DEATH.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 175537256165151,
+											"parameters": {
+												"variable": "1_TIEMPO_TOTAL",
+												"value": "sumas_tiempo_total_1"
+											}
+										}
+									],
+									"sid": 636663419919865
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_muertes_por_nivel_2",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 142505487056347
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 197801069480610
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 903864863695920,
+											"parameters": {
+												"variable": "sumas_muertes_por_nivel_2",
+												"value": "Array_2_SPR_DATOS_por_NO_DEATH.At(2,loopindex(Array_2_SPR_DATOS_por_NO_DEATH.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 867346946055897,
+											"parameters": {
+												"variable": "2_MUERTES_TOTALES",
+												"value": "sumas_muertes_por_nivel_2"
+											}
+										}
+									],
+									"sid": 771615458639497
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_gemas_cogidas_3",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 489977095349846
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 752632613331026
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 445577639170537,
+											"parameters": {
+												"variable": "sumas_gemas_cogidas_3",
+												"value": "Array_2_SPR_DATOS_por_NO_DEATH.At(3,loopindex(Array_2_SPR_DATOS_por_NO_DEATH.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 212906674916532,
+											"parameters": {
+												"variable": "3_SUMA_GEMAS_COGIDA",
+												"value": "sumas_gemas_cogidas_3"
+											}
+										}
+									],
+									"sid": 834977623198526
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_gemas_gemas_totales_4",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 920271391570227
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 678411889581371
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 763888866684772,
+											"parameters": {
+												"variable": "sumas_gemas_gemas_totales_4",
+												"value": "Array_2_SPR_DATOS_por_NO_DEATH.At(4,loopindex(Array_2_SPR_DATOS_por_NO_DEATH.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 543140399429612,
+											"parameters": {
+												"variable": "4_SUMA_GEMAS_TOTALES",
+												"value": "sumas_gemas_gemas_totales_4"
+											}
+										}
+									],
+									"sid": 408191399563591
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "CARGAR DATOS DEL ARRAY - DOOM - MODE",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 669422337105886,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 314518437596359,
+									"parameters": {
+										"count": "Array_3_SPR_DATOS_por_DOOM_MODE.Height"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 242622127942929,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "nivel_maximo_1"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 162843315008625
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 257452525935116,
+											"parameters": {
+												"variable": "0_NIVEL_MAXIMO",
+												"value": "Array_3_SPR_DATOS_por_DOOM_MODE.At(0,loopindex(Array_3_SPR_DATOS_por_DOOM_MODE.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										}
+									],
+									"sid": 308580392957512
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_tiempo_total_1",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 568134807613323
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 478007828227441
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 615099850951147,
+											"parameters": {
+												"variable": "sumas_tiempo_total_1",
+												"value": "Array_3_SPR_DATOS_por_DOOM_MODE.At(1,loopindex(Array_3_SPR_DATOS_por_DOOM_MODE.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 628542562200301,
+											"parameters": {
+												"variable": "1_TIEMPO_TOTAL",
+												"value": "sumas_tiempo_total_1"
+											}
+										}
+									],
+									"sid": 676982393996572
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_muertes_por_nivel_2",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 778212282598602
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 791822146345673
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 988370985711229,
+											"parameters": {
+												"variable": "sumas_muertes_por_nivel_2",
+												"value": "Array_3_SPR_DATOS_por_DOOM_MODE.At(2,loopindex(Array_3_SPR_DATOS_por_DOOM_MODE.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 353314501813632,
+											"parameters": {
+												"variable": "2_MUERTES_TOTALES",
+												"value": "sumas_muertes_por_nivel_2"
+											}
+										}
+									],
+									"sid": 916341619089130
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_gemas_cogidas_3",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 478943479809689
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 326959482743864
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 228688808139508,
+											"parameters": {
+												"variable": "sumas_gemas_cogidas_3",
+												"value": "Array_3_SPR_DATOS_por_DOOM_MODE.At(3,loopindex(Array_3_SPR_DATOS_por_DOOM_MODE.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 780786244810190,
+											"parameters": {
+												"variable": "3_SUMA_GEMAS_COGIDA",
+												"value": "sumas_gemas_cogidas_3"
+											}
+										}
+									],
+									"sid": 600619811811978
+								},
+								{
+									"eventType": "variable",
+									"name": "sumas_gemas_gemas_totales_4",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 206938248974124
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 465892185286660
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 927707662915672,
+											"parameters": {
+												"variable": "sumas_gemas_gemas_totales_4",
+												"value": "Array_3_SPR_DATOS_por_DOOM_MODE.At(4,loopindex(Array_3_SPR_DATOS_por_DOOM_MODE.CurY),SPEEDRUN_Slot_Z_Depth_SELECTOR)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 698831650837822,
+											"parameters": {
+												"variable": "4_SUMA_GEMAS_TOTALES",
+												"value": "sumas_gemas_gemas_totales_4"
+											}
+										}
+									],
+									"sid": 217840223937087
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 862678002589324
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "CUANDO TERMINAN LA PARTIDA EN EL MODO SPEED RUNNER",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "TERMINA EL MODO SPEED RUN CUALQUIER TIPO",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 117547761386842
+				}
+			],
+			"sid": 242608988041764
+		}
+	],
+	"sid": 756136531574761
+}

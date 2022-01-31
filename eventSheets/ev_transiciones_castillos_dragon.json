@@ -1,0 +1,584 @@
+{
+	"name": "Ev_Transiciones_Castillos_dragon",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "MUSIC_sound"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "FX_sound"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Pausa"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 856777390329566
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 566627138454666,
+					"parameters": {
+						"variable": "Timing_Transicion_mundos",
+						"value": "-1"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 227317776692789,
+					"parameters": {
+						"tag": "\"MUSICA_INTRO\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "bola",
+					"sid": 221799332778320,
+					"parameters": {
+						"animation": "\"DERECHA_4\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bola",
+					"sid": 283220195419045,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Intro_JEFE_FINAL",
+					"sid": 408820965614605,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "bola_ROSA",
+					"sid": 889666584674993,
+					"parameters": {
+						"object": "Intro_JEFE_FINAL",
+						"image-point-optional": "2"
+					}
+				},
+				{
+					"id": "pin-to-object",
+					"objectClass": "bola_ROSA",
+					"sid": 849063479682124,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Intro_JEFE_FINAL",
+						"mode": "position-only"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 428516695961372,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 499490584102853,
+					"parameters": {
+						"variable": "Timing_Transicion_mundos",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 873560578011571,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 458811505564137,
+							"parameters": {
+								"variable": "VIDAS_1",
+								"comparison": 2,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 950340566227563,
+							"parameters": {
+								"variable": "VIDAS_1",
+								"value": "9"
+							}
+						}
+					],
+					"sid": 101843489710258
+				},
+				{
+					"eventType": "comment",
+					"text": "CALL GUARDADO EN CHECKPOINT ESTA ALOJADO EN       \"Ev_TRANSICIONES_ALL\""
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 320930002006947,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"6M_TRANSICION_CASTILLOS\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 642750621317668,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "60"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 160262424809033
+						}
+					],
+					"sid": 605512843308224
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 167865443981767,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"7M_TRANSICION_CASTILLOS\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 828324481358632,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "70"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 234451316073103
+						}
+					],
+					"sid": 346517658443546
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 612172361058189,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"8M_TRANSICION_CASTILLOS\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 395895364822147,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "80"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 239662830169973
+						}
+					],
+					"sid": 914007814782672
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 171381352835616,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"9M_TRANSICION_CASTILLOS\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 636139326546801,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "90"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 705005576013757
+						}
+					],
+					"sid": 606221863312380
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "\tCONTROL DE LA BOLA"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "comment",
+			"text": "********************************************************************"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-floor",
+					"objectClass": "bola",
+					"sid": 948634880987268,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 163362008282900,
+					"parameters": {
+						"variable": "fx_rebolte_pelota",
+						"value": "1"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "bola",
+					"sid": 354908573551858,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "bola",
+					"sid": 359224304895823,
+					"parameters": {
+						"object": "polvo",
+						"layer": "\"pelota\"",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "polvo",
+					"sid": 728562977864027,
+					"parameters": {
+						"angle": "270"
+					}
+				}
+			],
+			"sid": 682125400329357
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "bola",
+					"sid": 885101397844007,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "1760"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "bola",
+					"sid": 489661256810640,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 358260196734519
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "bola",
+					"sid": 288546068868085,
+					"parameters": {
+						"comparison": 5,
+						"x-co-ordinate": "1760"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "bola",
+					"sid": 963005223372602,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 717349077992808,
+					"parameters": {
+						"variable": "Timing_Transicion_mundos",
+						"value": "5"
+					}
+				}
+			],
+			"sid": 515152060130445
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "bola",
+					"sid": 127573252937588,
+					"parameters": {
+						"comparison": 5,
+						"x-co-ordinate": "camara_transiciones.X"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "bola",
+					"sid": 352949198651709,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "1185"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "camara_transiciones",
+					"sid": 198791299399307,
+					"parameters": {
+						"x": "bola.X"
+					}
+				}
+			],
+			"sid": 646016995160077
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 943339359673285,
+					"parameters": {
+						"variable": "Timing_Transicion_mundos",
+						"comparison": 0,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 631725217952088,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 513762126889209
+						}
+					],
+					"actions": [
+						{
+							"id": "set-fade-in-time",
+							"objectClass": "Intro_transicion",
+							"sid": 800867578467713,
+							"behaviorType": "Fade",
+							"parameters": {
+								"fade-in-time": "1.5"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "Intro_transicion",
+							"sid": 578528379812614,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 894949670684616,
+							"parameters": {
+								"variable": "Timing_Transicion_mundos",
+								"value": "6"
+							}
+						}
+					],
+					"sid": 926619734645271
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-fade-in-finished",
+					"objectClass": "Intro_transicion",
+					"sid": 986621603049154,
+					"behaviorType": "Fade"
+				}
+			],
+			"actions": [],
+			"sid": 273699767888125,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 587506897610305
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Intro_transicion",
+							"sid": 168965858525896,
+							"parameters": {
+								"object": "Intro_transicion2",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Intro_transicion",
+							"sid": 260778294238312
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 132711859364526,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 477714233004903,
+							"parameters": {
+								"tag": "\"MUSICA_bioma_1\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 650670402088552,
+							"parameters": {
+								"tag": "\"MUSICA_bioma_2\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 896906685995150,
+							"parameters": {
+								"tag": "\"MUSICA_bioma_3\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 200301813456639,
+							"parameters": {
+								"tag": "\"MUSICA_bioma_4\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 726238603996375,
+							"parameters": {
+								"tag": "\"MUSICA_bioma_5\""
+							}
+						},
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 421898237441454,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 555368588531343
+				}
+			]
+		}
+	],
+	"sid": 959522515158355
+}

@@ -1,0 +1,439 @@
+{
+	"name": "E_textos_e_idiomas",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "OPCIONES LENGUAJE TEXTO PARA TODO EL JUEGO",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "IDIOMA - JUEGO",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 380636839194516,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 832440524061933
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "MENU PRINCIPAL"
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_play_TXT",
+									"sid": 887476175420533,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,1)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_setting_TXT",
+									"sid": 809693303014386,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,2)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_credits_TXT",
+									"sid": 857747191447624,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,3)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_Opc_SoundFx_txt",
+									"sid": 974365615569091,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,4)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_Opc_Music_txt",
+									"sid": 299784621747533,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,5)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_Opc_Leng_txt",
+									"sid": 721591467491049,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,6)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_Opc_Exit_txt",
+									"sid": 279282134905054,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,7)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+									"sid": 997818435146875,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,10)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_txt_choose",
+									"sid": 103861756871763,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,12)"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "SLOTS LEYENDA DE ABAJO"
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_txt_leyenda_Select",
+									"sid": 459856197298373,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,8)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_txt_leyenda_bACK",
+									"sid": 710739231155050,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,9)"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "SLOT 1"
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_1",
+									"sid": 263392749099641,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,13)&\" 1\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_lastSaved_1",
+									"sid": 426441365916946,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,14)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_ROOM_TXT_1",
+									"sid": 910146344874248,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" \"&Nivel_actual_1+1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_txt_NEWGAME_1",
+									"sid": 888615713926166,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,18)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_1",
+									"sid": 475741411960760,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,16)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_startgame_1",
+									"sid": 817565551716033,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,17)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_NEWGAME_1",
+									"sid": 101797314528876,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,18)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_PLAY_1",
+									"sid": 901135820821860,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,19)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_DELETE_1",
+									"sid": 888692901773899,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,20)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_borrarJuego_pregunta_1",
+									"sid": 598526812998287,
+									"parameters": {
+										"text": "replace(Array_Traducciones_IDOMAS.At(Idioma_numerico,21),\"º\",\"1\")"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_borrarJuego_NO_1",
+									"sid": 832451660804257,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,22)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_borrarJuego_SI_1",
+									"sid": 705751064090285,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,23)"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "SLOT 2"
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_2",
+									"sid": 121697366038266,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,13)&\" 2\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_lastSaved_2",
+									"sid": 936659783847827,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,14)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_ROOM_TXT_2",
+									"sid": 980670201947992,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" \"&Nivel_actual_2+1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_txt_NEWGAME_2",
+									"sid": 264975790386428,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,18)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_2",
+									"sid": 846624390029042,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,16)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_startgame_2",
+									"sid": 304121154138017,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,17)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_NEWGAME_2",
+									"sid": 114022864310837,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,18)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_PLAY_2",
+									"sid": 898906604508337,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,19)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_DELETE_2",
+									"sid": 454841317304973,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,20)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_borrarJuego_pregunta_2",
+									"sid": 984104856491213,
+									"parameters": {
+										"text": "replace(Array_Traducciones_IDOMAS.At(Idioma_numerico,21),\"º\",\"2\")"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_borrarJuego_NO_2",
+									"sid": 273005465158386,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,22)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_borrarJuego_SI_2",
+									"sid": 329026885372488,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,23)"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "SLOT 3"
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_3",
+									"sid": 802990851762055,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,13)&\" 3\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_lastSaved_3",
+									"sid": 913679129769109,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,14)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_ROOM_TXT_3",
+									"sid": 805172216069013,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" \"&Nivel_actual_3+1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_txt_NEWGAME_3",
+									"sid": 531619387649073,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,18)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_3",
+									"sid": 582318077595964,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,16)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_startgame_3",
+									"sid": 921089935597402,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,17)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_NEWGAME_3",
+									"sid": 839368308332608,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,18)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_PLAY_3",
+									"sid": 520231969681731,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,19)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_description_DELETE_3",
+									"sid": 826648070924813,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,20)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_borrarJuego_pregunta_3",
+									"sid": 317078815311161,
+									"parameters": {
+										"text": "replace(Array_Traducciones_IDOMAS.At(Idioma_numerico,21),\"º\",\"3\")"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_borrarJuego_NO_3",
+									"sid": 622841080845796,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,22)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_borrarJuego_SI_3",
+									"sid": 679487115640525,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,23)"
+									}
+								}
+							],
+							"sid": 157314959161855
+						}
+					]
+				}
+			],
+			"sid": 195733883686826
+		}
+	],
+	"sid": 487276116847402
+}

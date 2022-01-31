@@ -1,0 +1,6649 @@
+{
+	"name": "Ev_Portada_nueva",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "GAMEPAD_CENTER",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "VUELVE AL CENTRO EL GAME PAD",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 597165077673635
+		},
+		{
+			"eventType": "variable",
+			"name": "Portada_Maquina_Estado",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 268321936490059
+		},
+		{
+			"eventType": "variable",
+			"name": "Portada_portada_seleccion",
+			"type": "string",
+			"initialValue": "vacio",
+			"comment": "jugar ; opciones ; creditos",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 722042568371775
+		},
+		{
+			"eventType": "variable",
+			"name": "Portada_opciones_seleccion",
+			"type": "string",
+			"initialValue": "vacio",
+			"comment": "sonido; musica; idioma ; salir",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 619295880322318
+		},
+		{
+			"eventType": "variable",
+			"name": "Portada_Opcion_Elegida",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 899014128471058
+		},
+		{
+			"eventType": "variable",
+			"name": "Game_Manager_Portada",
+			"type": "string",
+			"initialValue": "portada",
+			"comment": "portada ; opciones ; creditos",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 421319017314428
+		},
+		{
+			"eventType": "comment",
+			"text": "VARIABLES DE GUARDADO PRINCIPAL"
+		},
+		{
+			"eventType": "variable",
+			"name": "SonidoFX_Volumen_Master",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "Volumen de los FX",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 678339618676951
+		},
+		{
+			"eventType": "variable",
+			"name": "VOLUMEN_MASTER_FX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "VOLUMEN MAESTRO",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 348747428205406
+		},
+		{
+			"eventType": "variable",
+			"name": "Musica_Volumen_Master",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "Volumen de la musica",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 658640485492147
+		},
+		{
+			"eventType": "variable",
+			"name": "VOLUMEN_MASTER_MUSIC",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "VOLUMEN MAESTRO",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 381685451648487
+		},
+		{
+			"eventType": "variable",
+			"name": "Idoma_Master",
+			"type": "string",
+			"initialValue": "ING",
+			"comment": "ING ; ESP ; ALE ; FRA ; JAP",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 224052622346868
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 638192072681619
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "PORTADA_play_TXT",
+					"sid": 963693596561612,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,1)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "PORTADA_speedrun_TXT",
+					"sid": 969308131269528,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,51)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "PORTADA_setting_TXT",
+					"sid": 672292232578041,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,2)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "PORTADA_credits_TXT",
+					"sid": 616976711188946,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,3)"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 789275901896229,
+					"parameters": {
+						"variable": "SPEEDRUN_mode_TRUE_FALSE",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 169363210727431,
+					"parameters": {
+						"variable": "GAMEPAD_CENTER",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 232601605500265,
+					"parameters": {
+						"variable": "Portada_Opcion_Elegida",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 812452059891483,
+					"parameters": {
+						"variable": "Portada_Maquina_Estado",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 589324920096568,
+					"parameters": {
+						"variable": "Portada_portada_seleccion",
+						"value": "\"vacio\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 371050591260502,
+					"parameters": {
+						"variable": "Portada_opciones_seleccion",
+						"value": "\"vacio\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 994813848112610,
+					"parameters": {
+						"variable": "Game_Manager_Portada",
+						"value": "\"vacio\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 417338912703822,
+					"parameters": {
+						"seconds": "0.4"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "portada_imagenes_5",
+					"sid": 617037082002840,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"sale_titulo_juego\"",
+						"property": "offsetY",
+						"end-value": "100",
+						"time": "1",
+						"ease": "easeoutbounce",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 976844329737381,
+					"parameters": {
+						"seconds": "0.25"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "PORTADA_play_TXT",
+					"sid": 598059090985499,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetX",
+						"end-value": "600",
+						"time": "0.6",
+						"ease": "easeoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 472364044031153,
+					"parameters": {
+						"seconds": "0.25"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "PORTADA_speedrun_TXT",
+					"sid": 531977623922836,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetX",
+						"end-value": "600",
+						"time": "0.6",
+						"ease": "easeoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 374233966816871,
+					"parameters": {
+						"seconds": "0.25"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "PORTADA_setting_TXT",
+					"sid": 112715650301580,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetX",
+						"end-value": "600",
+						"time": "0.6",
+						"ease": "easeoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 437964229871086,
+					"parameters": {
+						"seconds": "0.25"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "PORTADA_credits_TXT",
+					"sid": 863546797403329,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"sale_texto_credits\"",
+						"property": "offsetX",
+						"end-value": "600",
+						"time": "0.6",
+						"ease": "easeoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_SoundFx_txt",
+					"sid": 116547918602340,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_SoundFx_icon",
+					"sid": 175803230837670,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_SoundFx_icon_L",
+					"sid": 867729635866524,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_SoundFx_icon_R",
+					"sid": 860268895875234,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Music_txt",
+					"sid": 942862309345833,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Music_icon",
+					"sid": 539644732474678,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Music_icon_L",
+					"sid": 917842400201801,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Music_icon_R",
+					"sid": 875644152416166,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Leng_txt",
+					"sid": 559150596982528,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+					"sid": 423784417094269,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Leng_Icon_left",
+					"sid": 671742847505045,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Leng_Icon_left2",
+					"sid": 188249315703237,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Exit_txt",
+					"sid": 804435966447119,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Button_Leyend",
+					"sid": 535491639195071,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Selected_txt",
+					"sid": 878780347347361,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_opciones",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Creditos_1",
+					"sid": 766052191443101,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_creditos",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Creditos_2",
+					"sid": 425419199668295,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_creditos",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_Opc_Creditos_Back",
+					"sid": 900988821901862,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_creditos",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PORTADA_creditos_Button_Leyend",
+					"sid": 228782868254260,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Portada_Tablon_creditos",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 690087466170982,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "Portada_Tablon_creditos",
+					"sid": 505955168726757,
+					"parameters": {
+						"x": "431"
+					}
+				}
+			],
+			"sid": 863344647005912
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 706536976436611,
+					"parameters": {
+						"variable": "Portada_portada_seleccion",
+						"comparison": 0,
+						"value": "\"vacio\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 692693529695227,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 112719209142982,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 851498855127853,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 297165755760082
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 760396710866128,
+									"parameters": {
+										"seconds": "0.7"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 210430408764541,
+									"parameters": {
+										"audio-file": "piedra golpea suelo",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 620118576903222
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 294244445759498,
+							"parameters": {
+								"variable": "MUSIC_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 793539826119925,
+							"parameters": {
+								"tag": "\"Musica_portada\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 381032021687845,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 970306372133618
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 432023572310301,
+									"parameters": {
+										"audio-file": "Kidball_menu_loop",
+										"loop": "looping",
+										"volume": "VOLUMEN_MASTER_MUSIC",
+										"tag-optional": "\"Musica_portada\"\r\n"
+									}
+								}
+							],
+							"sid": 301424025935528
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "portada_imagenes_5",
+					"sid": 864158949148192,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"sale_titulo_juego\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-active",
+					"objectClass": "portada_imagenes_5",
+					"sid": 330519183596775,
+					"behaviorType": "Sine",
+					"parameters": {
+						"state": "active"
+					}
+				}
+			],
+			"sid": 109274502627492,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 604407763373135,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 570488685941139,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 779644575613299
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 114547798380528,
+									"parameters": {
+										"audio-file": "piedra golpea suelo",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 304140397380440,
+							"disabled": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "PORTADA_credits_TXT",
+					"sid": 128411077154559,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"sale_texto_credits\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "PORTADA_SELECTOR_ICONO",
+					"sid": 659798250314770,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 618696733248543,
+					"parameters": {
+						"variable": "Portada_portada_seleccion",
+						"value": "\"jugar\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 197865531205589,
+					"parameters": {
+						"variable": "Game_Manager_Portada",
+						"value": "\"portada\""
+					}
+				}
+			],
+			"sid": 591633848946615
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "NUBES FONDO PASANDO",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "portada_nubes",
+							"sid": 217743971974771,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 698005925845528,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "portada_nubes",
+									"sid": 263593231663051,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "830"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "portada_nubes",
+									"sid": 686109716958892,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 308466296730212
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "portada_nubes",
+									"sid": 855435680153890,
+									"parameters": {
+										"comparison": 5,
+										"x-co-ordinate": "830"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "portada_nubes",
+									"sid": 638064248253196,
+									"parameters": {
+										"x": "-105"
+									}
+								}
+							],
+							"sid": 738801879333861
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "portada_nubes",
+							"sid": 125858473319914,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 211803787774902,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "portada_nubes",
+									"sid": 417274545858748,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "-105"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "portada_nubes",
+									"sid": 605959770989280,
+									"disabled": true,
+									"parameters": {
+										"x": "portada_nubes.X-5*dt"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "portada_nubes",
+									"sid": 200376012258542,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 339468305428213
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "portada_nubes",
+									"sid": 393990902268707,
+									"parameters": {
+										"comparison": 3,
+										"x-co-ordinate": "-105"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "portada_nubes",
+									"sid": 887676048239052,
+									"parameters": {
+										"x": "840"
+									}
+								}
+							],
+							"sid": 469391995243785
+						}
+					]
+				}
+			],
+			"sid": 229005662063294
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Saltos Bolas",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "portada_imagenes_4",
+							"sid": 559670146327704,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "portada_imagenes_4",
+							"sid": 708204386919375,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 903705274870149
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "portada_imagenes_2",
+							"sid": 924892239084074,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "portada_imagenes_2",
+							"sid": 730525777640024,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 825029479717629
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "portada_imagenes_3",
+							"sid": 989566335375780,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "portada_imagenes_3",
+							"sid": 334098339649662,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 526473700555214
+				}
+			],
+			"sid": 181921000276017
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 996205577683312,
+					"parameters": {
+						"variable": "Game_Manager_Portada",
+						"comparison": 0,
+						"value": "\"portada\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 627316727951879,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "PORTADA SELECTOR",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-touched-object",
+									"objectClass": "Touch",
+									"sid": 680580495763426,
+									"parameters": {
+										"object": "PORTADA_play_TXT"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 145283124293587,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "JUGAR CON TOUCH",
+									"background-color": [
+										0,
+										1,
+										0.11764705882352941,
+										1
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 172255453552864,
+											"parameters": {
+												"variable": "Portada_portada_seleccion",
+												"comparison": 0,
+												"value": "\"jugar\""
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 216596404567054,
+											"parameters": {
+												"variable": "Portada_Opcion_Elegida",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 814406373301414,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 236424731255260
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 400635991632572,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 683623110255797,
+													"parameters": {
+														"variable": "Portada_Opcion_Elegida",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Intro_transicion",
+													"sid": 916718003766164,
+													"disabled": true,
+													"parameters": {
+														"x": "407",
+														"y": "281"
+													}
+												},
+												{
+													"id": "set-fade-in-time",
+													"objectClass": "Intro_transicion",
+													"sid": 980743207783310,
+													"disabled": true,
+													"behaviorType": "Fade",
+													"parameters": {
+														"fade-in-time": "2"
+													}
+												},
+												{
+													"id": "restart-fade",
+													"objectClass": "Intro_transicion",
+													"sid": 786550580017557,
+													"disabled": true,
+													"behaviorType": "Fade"
+												},
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 778254894596513,
+													"parameters": {
+														"layout": "SLOTS"
+													}
+												}
+											],
+											"sid": 360644726135075
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 663062579700795,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 665128643299112,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 115955507432891
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 896068152294338,
+															"parameters": {
+																"audio-file": "Portada_Start",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 892223127642574
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 476848851588677,
+									"parameters": {
+										"variable": "GAMEPAD_CENTER",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 651250106720795,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "ABAJO"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 139100808736152,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-down"
+											}
+										},
+										{
+											"id": "compare-axis",
+											"objectClass": "Gamepad",
+											"sid": 680876948878309,
+											"parameters": {
+												"gamepad": "0",
+												"axis": "left-analog-y-axis",
+												"comparison": 4,
+												"value": "90"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 939655058072008,
+											"parameters": {
+												"key": 40
+											}
+										}
+									],
+									"actions": [],
+									"sid": 273932389122142,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 628466386465948,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"jugar\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 326117093661240,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 828643484330483,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 554259375727608,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"value": "\"speedrun\""
+													}
+												}
+											],
+											"sid": 501075240649259
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 993027780796015,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"speedrun\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 465964488235147,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 959500596971543,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 282008081527802,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"value": "\"opciones\""
+													}
+												}
+											],
+											"sid": 970871274949754
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 158467214097061,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"opciones\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 450703480187990,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 973126912156259,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 730099982429400,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"value": "\"creditos\""
+													}
+												}
+											],
+											"sid": 166441212993817
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 708470634938812,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"creditos\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 494730414893529,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 701456050953943,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 926429557188722,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"value": "\"jugar\""
+													}
+												}
+											],
+											"sid": 626966662253261
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 569350842818668,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 794544176397062,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 192957117351847
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 667101129171289,
+															"parameters": {
+																"audio-file": "Portada_selector_pasar_opciones",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 570954846233535
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "comment",
+									"text": "ARRIBA"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 350170378813753,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-up"
+											}
+										},
+										{
+											"id": "compare-axis",
+											"objectClass": "Gamepad",
+											"sid": 710581549865475,
+											"parameters": {
+												"gamepad": "0",
+												"axis": "left-analog-y-axis",
+												"comparison": 2,
+												"value": "-90"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 636012442159584,
+											"parameters": {
+												"key": 38
+											}
+										}
+									],
+									"actions": [],
+									"sid": 805723778993296,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 841529047145391,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"jugar\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 160187541397145,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 483361238468709,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 337917762797170,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"value": "\"creditos\""
+													}
+												}
+											],
+											"sid": 725468670335024
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 613379303407718,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"speedrun\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 953232354202410,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 134631006564944,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 405230282857250,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"value": "\"jugar\""
+													}
+												}
+											],
+											"sid": 466249084705116
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 407047549180355,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"opciones\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 711799233369120,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 281302635886103,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 413796794086906,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"value": "\"speedrun\""
+													}
+												}
+											],
+											"sid": 697921761277495
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 633568381989864,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"creditos\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 929051695091417,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 461486672527811,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 345073209687489,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"value": "\"opciones\""
+													}
+												}
+											],
+											"sid": 500895167435512
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 144871773374591,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 728104869196078,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 686804183945261
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 517569687608195,
+															"parameters": {
+																"audio-file": "Portada_selector_pasar_opciones",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 852812062585368
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "comment",
+									"text": "ELIGE UNA OPCION"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 100443649695621,
+											"parameters": {
+												"gamepad": "0",
+												"button": "button-a"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 841921909445087,
+											"parameters": {
+												"key": 65
+											}
+										}
+									],
+									"actions": [],
+									"sid": 751791778205014,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "JUGAR",
+											"background-color": [
+												0,
+												1,
+												0.11764705882352941,
+												1
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 498575409771447,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"jugar\""
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 616103892738002,
+													"parameters": {
+														"variable": "Portada_Opcion_Elegida",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 250433136373368,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 322551926010367
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 697408926442263,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 878280378404537,
+															"parameters": {
+																"variable": "Portada_Opcion_Elegida",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "Intro_transicion",
+															"sid": 991398491626652,
+															"disabled": true,
+															"parameters": {
+																"x": "407",
+																"y": "281"
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Intro_transicion",
+															"sid": 990081359268607,
+															"disabled": true,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "2"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Intro_transicion",
+															"sid": 563406115610939,
+															"disabled": true,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "go-to-layout",
+															"objectClass": "System",
+															"sid": 416878349969728,
+															"parameters": {
+																"layout": "SLOTS"
+															}
+														}
+													],
+													"sid": 696483804887417
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 588690214886653,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 551618698248836,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 259291205632943
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 333937145751990,
+																	"parameters": {
+																		"audio-file": "Portada_Start",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 515437515024824
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "comment",
+											"text": "SPEED RUN MODE",
+											"background-color": [
+												0,
+												1,
+												0.11764705882352941,
+												1
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 361789645419222,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"speedrun\""
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 716060863965543,
+													"parameters": {
+														"variable": "Portada_Opcion_Elegida",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 209494110052729,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 488556933859046
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 217536632944651,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 584818404099848,
+															"parameters": {
+																"variable": "Portada_Opcion_Elegida",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "Intro_transicion",
+															"sid": 547891173947773,
+															"disabled": true,
+															"parameters": {
+																"x": "407",
+																"y": "281"
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Intro_transicion",
+															"sid": 653311819053220,
+															"disabled": true,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "2"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Intro_transicion",
+															"sid": 106945703696524,
+															"disabled": true,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "go-to-layout",
+															"objectClass": "System",
+															"sid": 661613651815957,
+															"parameters": {
+																"layout": "SpeedRun_SELECTOR"
+															}
+														}
+													],
+													"sid": 312001278057233
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 419217772212769,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 906150583636004,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 470934177777656
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 231538507845262,
+																	"parameters": {
+																		"audio-file": "Portada_Start",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 265804376044169
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "comment",
+											"text": "OPCIONES",
+											"background-color": [
+												0,
+												1,
+												0.11764705882352941,
+												1
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 552119868189939,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"opciones\""
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 166542039846665,
+													"parameters": {
+														"variable": "Portada_Opcion_Elegida",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 805477812286875,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 659228883709937
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 182663435518188,
+															"parameters": {
+																"variable": "Portada_Opcion_Elegida",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "Portada_Fondo_Opciones",
+															"sid": 256834071238533,
+															"parameters": {
+																"x": "431.5",
+																"y": "241"
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "Portada_Tablon_opciones",
+															"sid": 236445811250565,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"entra_panel_opciones\"",
+																"property": "offsetY",
+																"end-value": "225",
+																"time": "0.7",
+																"ease": "easeoutexpo",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 210077106174041,
+															"parameters": {
+																"variable": "Game_Manager_Portada",
+																"value": "\"vacio\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 973610869732898,
+															"parameters": {
+																"variable": "Portada_opciones_seleccion",
+																"value": "\"sonido\""
+															}
+														}
+													],
+													"sid": 965233553394646
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 225585680125690,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 930215044026533,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 803029134271241
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 290046013933648,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 920828141284301,
+																	"parameters": {
+																		"seconds": "0.1"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 548227487007503,
+																	"parameters": {
+																		"audio-file": "Swipe",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 267407646835922
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "comment",
+											"text": "CREDITOS",
+											"background-color": [
+												0,
+												1,
+												0.11764705882352941,
+												1
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 545208483294182,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"creditos\""
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 395926471004868,
+													"parameters": {
+														"variable": "Portada_Opcion_Elegida",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 939921368781630,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 117044078904157
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 701637629861763,
+															"parameters": {
+																"variable": "Portada_Opcion_Elegida",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "Portada_Fondo_Opciones",
+															"sid": 995016428637713,
+															"parameters": {
+																"x": "431.5",
+																"y": "241"
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "Portada_Tablon_creditos",
+															"sid": 584744131054553,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"creditos_entran\"",
+																"property": "offsetY",
+																"end-value": "225",
+																"time": "0.7",
+																"ease": "easeoutexpo",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 464036446538900,
+															"parameters": {
+																"variable": "Game_Manager_Portada",
+																"value": "\"vacio\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 393439372127877,
+															"parameters": {
+																"variable": "Portada_opciones_seleccion",
+																"value": "\"sonido\""
+															}
+														}
+													],
+													"sid": 265308468591370
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 364809501152961,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 678456840352184,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 834375484810545
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 967127219389354,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 709177453959703,
+																	"parameters": {
+																		"seconds": "0.1"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 162013464492142,
+																	"parameters": {
+																		"audio-file": "Swipe",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 691004333829499
+														}
+													]
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 683717158829240
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "POSICION DE LA BOLA SELECCION PORTADA",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "POSICION DE LA BOLA SELECTOR"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 149562718038695,
+									"parameters": {
+										"variable": "Portada_portada_seleccion",
+										"comparison": 0,
+										"value": "\"jugar\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "PORTADA_SELECTOR_ICONO",
+									"sid": 737501850953940,
+									"parameters": {
+										"y": "PORTADA_PLAY_TXT.Y-2"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_play_TXT",
+									"sid": 853565071028692,
+									"parameters": {
+										"color": "rgbEx255(245,245,245)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_speedrun_TXT",
+									"sid": 905423921049767,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_setting_TXT",
+									"sid": 172402819762905,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_credits_TXT",
+									"sid": 332340382683743,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								}
+							],
+							"sid": 436047961146079
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 144510541939571,
+									"parameters": {
+										"variable": "Portada_portada_seleccion",
+										"comparison": 0,
+										"value": "\"speedrun\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "PORTADA_SELECTOR_ICONO",
+									"sid": 649379631280778,
+									"parameters": {
+										"y": "PORTADA_speedrun_TXT.Y-2"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_play_TXT",
+									"sid": 872293536626440,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_speedrun_TXT",
+									"sid": 511360296948955,
+									"parameters": {
+										"color": "rgbEx255(245,245,245)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_setting_TXT",
+									"sid": 368890485413095,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_credits_TXT",
+									"sid": 695539669534092,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								}
+							],
+							"sid": 960427463571577
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 275256864124948,
+									"parameters": {
+										"variable": "Portada_portada_seleccion",
+										"comparison": 0,
+										"value": "\"opciones\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "PORTADA_SELECTOR_ICONO",
+									"sid": 852337621916739,
+									"parameters": {
+										"y": "PORTADA_setting_TXT.Y-2"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_play_TXT",
+									"sid": 257025497844052,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_speedrun_TXT",
+									"sid": 345491935328312,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_setting_TXT",
+									"sid": 885214584325960,
+									"parameters": {
+										"color": "rgbEx255(245,245,245)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_credits_TXT",
+									"sid": 239389913400338,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								}
+							],
+							"sid": 722671250234912
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 222205485353712,
+									"parameters": {
+										"variable": "Portada_portada_seleccion",
+										"comparison": 0,
+										"value": "\"creditos\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "PORTADA_SELECTOR_ICONO",
+									"sid": 807739967251302,
+									"parameters": {
+										"y": "PORTADA_credits_TXT.Y-2"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_speedrun_TXT",
+									"sid": 124705034541106,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_play_TXT",
+									"sid": 640407854940575,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_setting_TXT",
+									"sid": 526013342698985,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_credits_TXT",
+									"sid": 199071022378133,
+									"parameters": {
+										"color": "rgbEx255(245,245,245)"
+									}
+								}
+							],
+							"sid": 511984840681142
+						}
+					],
+					"sid": 364877028147965
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "Portada_Tablon_opciones",
+					"sid": 292668559717002,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"entra_panel_opciones\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 674656987887922,
+					"parameters": {
+						"variable": "Game_Manager_Portada",
+						"value": "\"opciones\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 571865287248356,
+					"parameters": {
+						"variable": "Portada_Opcion_Elegida",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 113981141801144
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "Portada_Tablon_creditos",
+					"sid": 972124486495627,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"creditos_entran\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 490634113436206,
+					"parameters": {
+						"variable": "Game_Manager_Portada",
+						"value": "\"creditos\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 571661709195822,
+					"parameters": {
+						"variable": "Portada_Opcion_Elegida",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 839029593960914
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 227265555202320,
+					"parameters": {
+						"variable": "Game_Manager_Portada",
+						"comparison": 0,
+						"value": "\"opciones\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 998552221536357,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "OPCIONES SELECTOR",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 571286807506661,
+									"parameters": {
+										"variable": "GAMEPAD_CENTER",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 474552472408161,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "ABAJO"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 231814379302090,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-down"
+											}
+										},
+										{
+											"id": "compare-axis",
+											"objectClass": "Gamepad",
+											"sid": 405005371953261,
+											"parameters": {
+												"gamepad": "0",
+												"axis": "left-analog-y-axis",
+												"comparison": 4,
+												"value": "90"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 481550524708765,
+											"parameters": {
+												"key": 40
+											}
+										}
+									],
+									"actions": [],
+									"sid": 424866740821663,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 232846667897224,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"sonido\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 246957970145217,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 152542904716655,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 544291500839677,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"value": "\"musica\""
+													}
+												}
+											],
+											"sid": 849007922082346
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 730425929325318,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"musica\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 932442088889385,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 213284628756404,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 941787184042964,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"value": "\"idioma\""
+													}
+												}
+											],
+											"sid": 171931391281970
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 597669631913635,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"idioma\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 695509023079449,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 163858415627731,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 192191358760144,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"value": "\"salir\""
+													}
+												}
+											],
+											"sid": 398978309170252
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 817545716444045,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"salir\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 126327481623209,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 404239057089406,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 141562614051688,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"value": "\"sonido\""
+													}
+												}
+											],
+											"sid": 272288991495877
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 417355058814141,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 427535781105150,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 628542830042141
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 308520450992330,
+															"parameters": {
+																"audio-file": "Portada_selector_pasar_opciones",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 162139892101994
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "comment",
+									"text": "ARRIBA"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 314986668790975,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-up"
+											}
+										},
+										{
+											"id": "compare-axis",
+											"objectClass": "Gamepad",
+											"sid": 501145091420664,
+											"parameters": {
+												"gamepad": "0",
+												"axis": "left-analog-y-axis",
+												"comparison": 2,
+												"value": "-90"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 796691622303968,
+											"parameters": {
+												"key": 38
+											}
+										}
+									],
+									"actions": [],
+									"sid": 537587751607868,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 943341422415803,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"sonido\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 936095594465389,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 946285381127024,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 665642377289738,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"value": "\"salir\""
+													}
+												}
+											],
+											"sid": 326329903196108
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 534440640637419,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"musica\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 529036224769967,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 330825233109127,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 138972146905249,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"value": "\"sonido\""
+													}
+												}
+											],
+											"sid": 898602011312034
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 715651736714296,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"idioma\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 526399644005001,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 856489076596646,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 709081610697802,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"value": "\"musica\""
+													}
+												}
+											],
+											"sid": 490767497834986
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 820690421210820,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"salir\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 323473462222430,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 591488614735506,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 552763830151105,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"value": "\"idioma\""
+													}
+												}
+											],
+											"sid": 725619423897868
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 165306893934871,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 293420484113101,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 435095012815530
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 378158415026246,
+															"parameters": {
+																"audio-file": "Portada_selector_pasar_opciones",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 982114715715404
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "comment",
+									"text": "DERECHA"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 221322213823780,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-right"
+											}
+										},
+										{
+											"id": "compare-axis",
+											"objectClass": "Gamepad",
+											"sid": 640679400848669,
+											"parameters": {
+												"gamepad": "0",
+												"axis": "left-analog-x-axis",
+												"comparison": 4,
+												"value": "90"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 579694666706686,
+											"parameters": {
+												"key": 39
+											}
+										}
+									],
+									"actions": [],
+									"sid": 480026988718694,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 105161257864908,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"sonido\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 355132003194129,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 966357136152786,
+															"parameters": {
+																"variable": "SonidoFX_Volumen_Master",
+																"comparison": 2,
+																"value": "10"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 564773926628919,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 124478259445290,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "add-to-eventvar",
+															"objectClass": "System",
+															"sid": 475622148019905,
+															"parameters": {
+																"variable": "SonidoFX_Volumen_Master",
+																"value": "1"
+															}
+														},
+														{
+															"callFunction": "VOLUMEN MASTER SONIDO FX",
+															"sid": 904365511208548
+														}
+													],
+													"sid": 970211333027315,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-eventvar",
+																	"objectClass": "System",
+																	"sid": 424188358660092,
+																	"parameters": {
+																		"variable": "FX_sound",
+																		"comparison": 0,
+																		"value": "1"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 849553473748897,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "trigger-once-while-true",
+																			"objectClass": "System",
+																			"sid": 743730632340754
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "play",
+																			"objectClass": "Audio",
+																			"sid": 811539810614187,
+																			"parameters": {
+																				"audio-file": "Portada_selector_pasar_opciones",
+																				"loop": "not-looping",
+																				"volume": "VOLUMEN_MASTER_FX",
+																				"tag-optional": "\"\""
+																			}
+																		}
+																	],
+																	"sid": 743024702076952
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 772188176909793,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"musica\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 529101887004671,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 393694427939154,
+															"parameters": {
+																"variable": "Musica_Volumen_Master",
+																"comparison": 2,
+																"value": "10"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 317696125401282,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 917564328858587,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "add-to-eventvar",
+															"objectClass": "System",
+															"sid": 296704131602747,
+															"parameters": {
+																"variable": "Musica_Volumen_Master",
+																"value": "1"
+															}
+														},
+														{
+															"callFunction": "VOLUMEN MASTER MUSICA",
+															"sid": 272831105303550
+														}
+													],
+													"sid": 718888021163521,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-eventvar",
+																	"objectClass": "System",
+																	"sid": 817196669239647,
+																	"parameters": {
+																		"variable": "FX_sound",
+																		"comparison": 0,
+																		"value": "1"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 629057450571243,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "trigger-once-while-true",
+																			"objectClass": "System",
+																			"sid": 184683441508629
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "play",
+																			"objectClass": "Audio",
+																			"sid": 134125380069314,
+																			"parameters": {
+																				"audio-file": "Portada_selector_pasar_opciones",
+																				"loop": "not-looping",
+																				"volume": "VOLUMEN_MASTER_FX",
+																				"tag-optional": "\"\""
+																			}
+																		}
+																	],
+																	"sid": 589577663650827
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 149243969283257,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"idioma\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 234374096096056,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 470292219288371,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 600996659683115,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 512108238658951,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 683454489701415,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 932030030319523
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 375379895595917,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 388401294010913,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 517500257762921,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 848202526607635,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "2"
+															}
+														}
+													],
+													"sid": 820070225647182
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 648432913416434,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"comparison": 0,
+																"value": "\"ALE\""
+															}
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 504924278267154,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 765518788123815,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 603658893809062,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 605481886632504,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"value": "\"FRA\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 573754488229603,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "3"
+															}
+														}
+													],
+													"sid": 552806660962164
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 768835427181658,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"comparison": 0,
+																"value": "\"FRA\""
+															}
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 925408726841745,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "3"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 584124686050362,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 537640418492538,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 419354576044229,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"value": "\"JAP\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 723519748898402,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "4"
+															}
+														}
+													],
+													"sid": 681532873889667
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 953511578377078,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"comparison": 0,
+																"value": "\"JAP\""
+															}
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 240307991822301,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "4"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 833291237078836,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 343783702898678,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 792786701452780,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"value": "\"ING\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 784723621097406,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 596725936717104
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 382414332026954,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 395980412767202,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 947909150935464
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 780461179070358,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 665926775404740
+														}
+													]
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "comment",
+									"text": "IZQUIERDA"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 758832349970849,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-left"
+											}
+										},
+										{
+											"id": "compare-axis",
+											"objectClass": "Gamepad",
+											"sid": 383587405247974,
+											"parameters": {
+												"gamepad": "0",
+												"axis": "left-analog-x-axis",
+												"comparison": 2,
+												"value": "-90"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 265686684519158,
+											"parameters": {
+												"key": 37
+											}
+										}
+									],
+									"actions": [],
+									"sid": 971181280029917,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 645364379043008,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"sonido\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 484832838121624,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 722843058495734,
+															"parameters": {
+																"variable": "SonidoFX_Volumen_Master",
+																"comparison": 4,
+																"value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 735803963067791,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 104623211046784,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "subtract-from-eventvar",
+															"objectClass": "System",
+															"sid": 314880035418196,
+															"parameters": {
+																"variable": "SonidoFX_Volumen_Master",
+																"value": "1"
+															}
+														},
+														{
+															"callFunction": "VOLUMEN MASTER SONIDO FX",
+															"sid": 146138933270268
+														}
+													],
+													"sid": 570536746112489,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-eventvar",
+																	"objectClass": "System",
+																	"sid": 665160828327245,
+																	"parameters": {
+																		"variable": "FX_sound",
+																		"comparison": 0,
+																		"value": "1"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 174073061742836,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "trigger-once-while-true",
+																			"objectClass": "System",
+																			"sid": 424263156993176
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "play",
+																			"objectClass": "Audio",
+																			"sid": 450458546279811,
+																			"parameters": {
+																				"audio-file": "Portada_selector_pasar_opciones",
+																				"loop": "not-looping",
+																				"volume": "VOLUMEN_MASTER_FX",
+																				"tag-optional": "\"\""
+																			}
+																		}
+																	],
+																	"sid": 425035935171365
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 495002659051704,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"musica\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 671284543972786,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 821810385267594,
+															"parameters": {
+																"variable": "Musica_Volumen_Master",
+																"comparison": 4,
+																"value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 460491899945458,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 823815245209429,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "subtract-from-eventvar",
+															"objectClass": "System",
+															"sid": 315984670767643,
+															"parameters": {
+																"variable": "Musica_Volumen_Master",
+																"value": "1"
+															}
+														},
+														{
+															"callFunction": "VOLUMEN MASTER MUSICA",
+															"sid": 137372103051428
+														}
+													],
+													"sid": 877488354627655,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-eventvar",
+																	"objectClass": "System",
+																	"sid": 236823020092756,
+																	"parameters": {
+																		"variable": "FX_sound",
+																		"comparison": 0,
+																		"value": "1"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 251147574789003,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "trigger-once-while-true",
+																			"objectClass": "System",
+																			"sid": 312882422019070
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "play",
+																			"objectClass": "Audio",
+																			"sid": 122595750040332,
+																			"parameters": {
+																				"audio-file": "Portada_selector_pasar_opciones",
+																				"loop": "not-looping",
+																				"volume": "VOLUMEN_MASTER_FX",
+																				"tag-optional": "\"\""
+																			}
+																		}
+																	],
+																	"sid": 645547213560430
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 447703668892962,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"idioma\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 657043089701146,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 704144490952683,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"comparison": 0,
+																"value": "\"ING\""
+															}
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 388310411263158,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 794408290714574,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 521560653982482,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 894689792265256,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"value": "\"JAP\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 718308055382247,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "4"
+															}
+														}
+													],
+													"sid": 374765061389850
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 413515218635015,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"comparison": 0,
+																"value": "\"JAP\""
+															}
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 691136656124799,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "4"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 100025227563387,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 103970463239065,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 855361921223857,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"value": "\"FRA\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 561560447060502,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "3"
+															}
+														}
+													],
+													"sid": 511344784113020
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 536644740848653,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"comparison": 0,
+																"value": "\"FRA\""
+															}
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 780495396969564,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "3"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 269282065786095,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 266418642630551,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 324076623591119,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"value": "\"ALE\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 639676855557483,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "2"
+															}
+														}
+													],
+													"sid": 675490622805950
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 715338326293509,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"comparison": 0,
+																"value": "\"ALE\""
+															}
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 369221598545679,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 217719975453210,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 737332659695200,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 523176500446498,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"value": "\"ESP\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 752302795226029,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 740542017651363
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 431884420758833,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"comparison": 0,
+																"value": "\"ESP\""
+															}
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 563128580816886,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 358822599011611,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 740823947022453,
+															"parameters": {
+																"seconds": "0.01"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 637987732513141,
+															"disabled": true,
+															"parameters": {
+																"variable": "Idoma_Master",
+																"value": "\"ING\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 145992346954685,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 722933455101356
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 941858331974566,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 234810819305858,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 904323686351724
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 282906551533373,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 677141923439942
+														}
+													]
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "comment",
+									"text": "SALIR Y GUARDAR"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 392809367804737,
+											"parameters": {
+												"gamepad": "0",
+												"button": "button-a"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 832471805365520,
+											"parameters": {
+												"key": 65
+											}
+										}
+									],
+									"actions": [],
+									"sid": 827654884567418,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 411767773497387,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"salir\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 697849925675900,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 364587937727025
+														}
+													],
+													"actions": [
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 262200858940477,
+															"parameters": {
+																"key": "\"Idoma_Master\"",
+																"value": "Idoma_Master"
+															}
+														},
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 515462878526868,
+															"parameters": {
+																"key": "\"Idioma_numerico\"",
+																"value": "Idioma_numerico"
+															}
+														},
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 479055473848786,
+															"parameters": {
+																"key": "\"SonidoFX_Volumen_Master\"",
+																"value": "SonidoFX_Volumen_Master"
+															}
+														},
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 695646819827006,
+															"parameters": {
+																"key": "\"Musica_Volumen_Master\"",
+																"value": "Musica_Volumen_Master"
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "Portada_Tablon_opciones",
+															"sid": 600162052324637,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"portada_opciones_ee_va\"",
+																"property": "offsetY",
+																"end-value": "-345",
+																"time": "0.4",
+																"ease": "easeoutexpo",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 131588598395840,
+															"parameters": {
+																"variable": "Game_Manager_Portada",
+																"value": "\"vacio\""
+															}
+														}
+													],
+													"sid": 475415421427063
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 719655082245702,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 687091327108279,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 765365452948007
+																}
+															],
+															"actions": [
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 118933045834971,
+																	"disabled": true,
+																	"parameters": {
+																		"seconds": "0.3"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 495080136994504,
+																	"parameters": {
+																		"variable": "Portada_Opcion_Elegida",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 968984573232460,
+																	"parameters": {
+																		"variable": "GAMEPAD_CENTER",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 498000366802358,
+																	"parameters": {
+																		"audio-file": "Swipe",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 528758251202044
+														}
+													]
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 155077061950365
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "Portada_Tablon_opciones",
+					"sid": 297063573100981,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"portada_opciones_ee_va\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 565959555822517,
+					"parameters": {
+						"variable": "Portada_Opcion_Elegida",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 622185090795744,
+					"parameters": {
+						"variable": "Game_Manager_Portada",
+						"value": "\"portada\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Portada_Fondo_Opciones",
+					"sid": 900455503441797,
+					"parameters": {
+						"x": "-50000",
+						"y": "-50000"
+					}
+				}
+			],
+			"sid": 491297590198195
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 760075714099436,
+					"parameters": {
+						"variable": "Game_Manager_Portada",
+						"comparison": 0,
+						"value": "\"creditos\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 295600984231768,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "OPCIONES CREDITOS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 998539979897012,
+									"parameters": {
+										"variable": "GAMEPAD_CENTER",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 877046116015823,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "SALIR DE CREDITOS"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 681022505751583,
+											"parameters": {
+												"gamepad": "0",
+												"button": "button-b"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 488820783637140,
+											"parameters": {
+												"key": 83
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 195143220699056,
+											"parameters": {
+												"key": 27
+											}
+										}
+									],
+									"actions": [],
+									"sid": 618408786651510,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 397960555024477,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 391076163011378,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 784604345959748
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 240016533991279,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 671095204306186,
+															"disabled": true,
+															"parameters": {
+																"seconds": "0.3"
+															}
+														},
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 451253049045294,
+															"parameters": {
+																"audio-file": "Swipe",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 112363234039429
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 531655690397289
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-one-property",
+													"objectClass": "Portada_Tablon_creditos",
+													"sid": 210629615029799,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"creditos_se_van\"",
+														"property": "offsetY",
+														"end-value": "-345",
+														"time": "0.4",
+														"ease": "easeoutexpo",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 786516567753898,
+													"parameters": {
+														"variable": "Game_Manager_Portada",
+														"value": "\"vacio\""
+													}
+												}
+											],
+											"sid": 740079261554116
+										}
+									],
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 887783239763658
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "Portada_Tablon_creditos",
+					"sid": 918105337121032,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"creditos_se_van\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 666335027458132,
+					"parameters": {
+						"variable": "Portada_Opcion_Elegida",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 798638371458847,
+					"parameters": {
+						"variable": "Game_Manager_Portada",
+						"value": "\"portada\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Portada_Fondo_Opciones",
+					"sid": 347087758023699,
+					"parameters": {
+						"x": "-50000",
+						"y": "-50000"
+					}
+				}
+			],
+			"sid": 701709799290804
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "OPCIONES BOLA SELECCION",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 957572565744105,
+							"parameters": {
+								"variable": "Portada_opciones_seleccion",
+								"comparison": 0,
+								"value": "\"sonido\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "PORTADA_Opc_Selector",
+							"sid": 490939591049532,
+							"parameters": {
+								"y": "PORTADA_Opc_SoundFx_txt.Y-2"
+							}
+						}
+					],
+					"sid": 802355304314184
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 165957828472350,
+							"parameters": {
+								"variable": "Portada_opciones_seleccion",
+								"comparison": 0,
+								"value": "\"musica\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "PORTADA_Opc_Selector",
+							"sid": 523450189278954,
+							"parameters": {
+								"y": "PORTADA_Opc_Music_txt.Y-2"
+							}
+						}
+					],
+					"sid": 302763276413601
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 661473799166908,
+							"parameters": {
+								"variable": "Portada_opciones_seleccion",
+								"comparison": 0,
+								"value": "\"idioma\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "PORTADA_Opc_Selector",
+							"sid": 185245354893925,
+							"parameters": {
+								"y": "PORTADA_Opc_Leng_txt.Y-2"
+							}
+						}
+					],
+					"sid": 317416542563714
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 191015435088588,
+							"parameters": {
+								"variable": "Portada_opciones_seleccion",
+								"comparison": 0,
+								"value": "\"salir\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "PORTADA_Opc_Selector",
+							"sid": 384257472678702,
+							"parameters": {
+								"y": "PORTADA_Opc_Exit_txt.Y-2"
+							}
+						}
+					],
+					"sid": 189116090648409
+				}
+			],
+			"sid": 178411093098784
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "OPCIONES SONIDO FX ICON",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "PORTADA_Opc_SoundFx_icon",
+							"sid": 120809150727112
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PORTADA_Opc_SoundFx_icon",
+							"sid": 873031105122652,
+							"parameters": {
+								"frame-number": "SonidoFX_Volumen_Master"
+							}
+						}
+					],
+					"sid": 688799317762806,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 879561481580977,
+									"parameters": {
+										"variable": "SonidoFX_Volumen_Master",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "PORTADA_Opc_SoundFx_icon_L",
+									"sid": 192891864258104,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 679054281035454
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 484742193085885,
+									"parameters": {
+										"variable": "SonidoFX_Volumen_Master",
+										"comparison": 0,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "PORTADA_Opc_SoundFx_icon_R",
+									"sid": 517968792572818,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 402897933097710
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 630658350596885,
+									"parameters": {
+										"variable": "SonidoFX_Volumen_Master",
+										"comparison": 4,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 738820472027773,
+									"parameters": {
+										"variable": "SonidoFX_Volumen_Master",
+										"comparison": 2,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "PORTADA_Opc_SoundFx_icon_L",
+									"sid": 142410417951169,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "PORTADA_Opc_SoundFx_icon_R",
+									"sid": 394424454248595,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 469873476541668
+						}
+					]
+				}
+			],
+			"sid": 635886214696643
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "OPCIONES MUSICA ICON",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "PORTADA_Opc_Music_icon",
+							"sid": 715624827160948
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PORTADA_Opc_Music_icon",
+							"sid": 805644583526039,
+							"parameters": {
+								"frame-number": "Musica_Volumen_Master"
+							}
+						}
+					],
+					"sid": 654013119882644,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 929655582943474,
+									"parameters": {
+										"variable": "Musica_Volumen_Master",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "PORTADA_Opc_Music_icon_L",
+									"sid": 944428543304438,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 956489089499651
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 299718072645699,
+									"parameters": {
+										"variable": "Musica_Volumen_Master",
+										"comparison": 0,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "PORTADA_Opc_Music_icon_R",
+									"sid": 130957391675329,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 198468930992516
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 665746825956085,
+									"parameters": {
+										"variable": "Musica_Volumen_Master",
+										"comparison": 4,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 862508831606568,
+									"parameters": {
+										"variable": "Musica_Volumen_Master",
+										"comparison": 2,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "PORTADA_Opc_Music_icon_L",
+									"sid": 703372199177935,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "PORTADA_Opc_Music_icon_R",
+									"sid": 886165370097704,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 942132007642937
+						}
+					]
+				}
+			],
+			"sid": 803786088731389
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GAMEPAD CENTER ",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 428818137124802,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 2,
+								"value": "50"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 457425441305530,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 4,
+								"value": "-50"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 296394077551532,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 4,
+								"value": "-50"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 539308098957581,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 2,
+								"value": "50"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 391676892540611,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 2,
+								"value": "50"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 704881096350693,
+							"parameters": {
+								"variable": "GAMEPAD_CENTER",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 845748503707313
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Gamepad",
+							"sid": 381958841544267,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						},
+						{
+							"id": "on-button-released",
+							"objectClass": "Gamepad",
+							"sid": 239546142001794,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-x"
+							}
+						},
+						{
+							"id": "on-button-released",
+							"objectClass": "Gamepad",
+							"sid": 145878155676286,
+							"parameters": {
+								"gamepad": "0",
+								"button": "start-menu"
+							}
+						},
+						{
+							"id": "on-button-released",
+							"objectClass": "Gamepad",
+							"sid": 242965350614804,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-up"
+							}
+						},
+						{
+							"id": "on-button-released",
+							"objectClass": "Gamepad",
+							"sid": 756346550808196,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-down"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 298023589641430,
+							"parameters": {
+								"variable": "GAMEPAD_CENTER",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 838813848995848,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-key-released",
+							"objectClass": "Keyboard",
+							"sid": 552222636031842
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 806865593955761,
+							"parameters": {
+								"variable": "GAMEPAD_CENTER",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 647645779160003
+				}
+			],
+			"sid": 983414783248437
+		},
+		{
+			"functionName": "VOLUMEN MASTER SONIDO FX",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 986390351874359,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 543438305082275,
+							"parameters": {
+								"variable": "SonidoFX_Volumen_Master",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 189240092800678,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 773000485851238
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 726829503895798,
+									"parameters": {
+										"variable": "VOLUMEN_MASTER_FX",
+										"value": "-25+(SonidoFX_Volumen_Master*5)"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 168112029219378,
+									"parameters": {
+										"variable": "FX_sound",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 762053911306796
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 677785082305045,
+							"parameters": {
+								"variable": "SonidoFX_Volumen_Master",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 922220991536955,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 378570946901722
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 380659045721039,
+									"parameters": {
+										"variable": "VOLUMEN_MASTER_FX",
+										"value": "-25+(SonidoFX_Volumen_Master*5)"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 626997147651462,
+									"parameters": {
+										"variable": "FX_sound",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 108527736868426
+						}
+					]
+				}
+			]
+		},
+		{
+			"functionName": "VOLUMEN MASTER MUSICA",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 753491070916701,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 637775849021882,
+							"parameters": {
+								"variable": "Musica_Volumen_Master",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 246914868174040,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 483146636654437,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_1\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 654542400526962,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 474780526530328
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 550223362646179,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 607911195126589,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 398582286174691,
+											"parameters": {
+												"tag": "\"MUSICA_bioma_1\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 822070461454917,
+											"parameters": {
+												"tag": "\"MUSICA_bioma_1\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										}
+									],
+									"sid": 497768355655706
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 802820321944663,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_2\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 166921319474821,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 192068478852467
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 615469477515375,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 767219463935891,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 872048822612730,
+											"parameters": {
+												"tag": "\"MUSICA_bioma_2\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										}
+									],
+									"sid": 841870532352691
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 395758191814629,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_3\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 857266697447283,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 307674685978553
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 110793154576143,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 682365989802731,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 496768039545888,
+											"parameters": {
+												"tag": "\"MUSICA_bioma_3\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										}
+									],
+									"sid": 157933430676407
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 219188692584447,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_4\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 753048824930383,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 588093931507310
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 154150280654168,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 277481388074076,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 181869612560796,
+											"parameters": {
+												"tag": "\"MUSICA_bioma_4\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										}
+									],
+									"sid": 827310853030428
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 285210619829849,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_5\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 555932561259968,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 170481191668372
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 829242415032635,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 714041522940495,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 708644219606904,
+											"parameters": {
+												"tag": "\"MUSICA_bioma_5\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										}
+									],
+									"sid": 298691199901367
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 929503820464260,
+									"parameters": {
+										"tag": "\"Musica_portada\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 694822552739892,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 126661591611861
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 594328374405836,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 490994644173623,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 559778946870171,
+											"parameters": {
+												"tag": "\"Musica_portada\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										}
+									],
+									"sid": 476065061660438
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 641743153588776,
+									"parameters": {
+										"tag": "\"Musica_Introduccion\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 738731381050119,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 683154658107851
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 178764551788068,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 452180505888888,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 891203874769455,
+											"parameters": {
+												"tag": "\"Musica_Introduccion\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										}
+									],
+									"sid": 542110455810328
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 113469400346149,
+							"parameters": {
+								"variable": "Musica_Volumen_Master",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 307194346220898,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 438498613387939,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_1\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 520411118744456,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 715681653764486
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 388690428890499,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 960223388670917,
+											"parameters": {
+												"tag": "\"MUSICA_bioma_1\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 638374394309527,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 319100376074063
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 884025198743689,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_2\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 177113761723675,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 123632022167318
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 310349193906644,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 410014156836141,
+											"parameters": {
+												"tag": "\"MUSICA_bioma_2\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 667934479050112,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 314884585449226
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 863796573884914,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_3\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 233656940804526,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 388235048423745
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 701489844336979,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 439865489365823,
+											"parameters": {
+												"tag": "\"MUSICA_bioma_3\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 834042496685726,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 294508871076537
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 800233255038323,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_4\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 624973190270308,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 386371084671605
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 159495744908855,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 582651160826987,
+											"parameters": {
+												"tag": "\"MUSICA_bioma_4\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 331192251890122,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 105685588249329
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 404574928778299,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_5\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 635530007889570,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 557517619997296
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 751320229711172,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 454574216947618,
+											"parameters": {
+												"tag": "\"MUSICA_bioma_5\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 163565281245939,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 849985572369946
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 487684546014733,
+									"parameters": {
+										"tag": "\"Musica_portada\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 246681455427918,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 717608780955393
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 250700390263647,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 610098607118032,
+											"parameters": {
+												"tag": "\"Musica_portada\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 408704635886175,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 366196614638721
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 787131208216764,
+									"parameters": {
+										"tag": "\"Musica_Introduccion\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 180688487767558,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 805048912233890
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 609540703932590,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-25+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 339588369401099,
+											"parameters": {
+												"tag": "\"Musica_Introduccion\"",
+												"db": "VOLUMEN_MASTER_MUSIC-25"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 283434621972060,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 856628120797262
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"sid": 712945447984638
+}

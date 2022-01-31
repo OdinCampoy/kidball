@@ -1,0 +1,85 @@
+{
+	"name": "puerta_INTRO",
+	"plugin-id": "Sprite",
+	"sid": 929139691936618,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "abierta",
+			"type": "boolean",
+			"desc": "",
+			"sid": 739531341235766
+		},
+		{
+			"name": "PANTALLA",
+			"type": "number",
+			"desc": "",
+			"sid": 800229776763216
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 61,
+						"height": 65,
+						"originX": 0.557377,
+						"originY": 0.507692,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\puerta_ABIERTA.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 35,
+						"collisionPoly": {
+							"points": [
+								0.786885,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.786885,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 850487067984027,
+				"name": "abierta",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 61,
+						"height": 65,
+						"originX": 0.557377,
+						"originY": 0.507692,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\puerta.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 36,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 953229542749479,
+				"name": "cerrada",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

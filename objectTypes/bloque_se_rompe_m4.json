@@ -1,0 +1,114 @@
+{
+	"name": "Bloque_se_rompe_M4",
+	"plugin-id": "Sprite",
+	"sid": 865135939533586,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "tocado",
+			"type": "number",
+			"desc": "",
+			"sid": 264215102380317
+		},
+		{
+			"name": "tiempo",
+			"type": "number",
+			"desc": "",
+			"sid": 700966644066599
+		},
+		{
+			"name": "inicial_X",
+			"type": "number",
+			"desc": "",
+			"sid": 917703592488653
+		},
+		{
+			"name": "inicial_Y",
+			"type": "number",
+			"desc": "",
+			"sid": 457746542476888
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 337538534827793
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 682597113400540
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine2",
+			"sid": 270511098241114
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 202540006726734
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 109609860208191
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 891977,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 33,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4024683,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 369298541191684,
+				"name": "normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

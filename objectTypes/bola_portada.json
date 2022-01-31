@@ -1,0 +1,70 @@
+{
+	"name": "bola_portada",
+	"plugin-id": "Sprite",
+	"sid": 936276823469748,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "direccion",
+			"type": "number",
+			"desc": "",
+			"sid": 640942567048114
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 640399357627768
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 25,
+						"height": 25,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\RED BALL VS KING\\PERSONAJE.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 112769,
+						"collisionPoly": {
+							"points": [
+								0.15,
+								0.15,
+								0.5,
+								0.01,
+								0.85,
+								0.15,
+								0.99,
+								0.5,
+								0.85,
+								0.85,
+								0.5,
+								0.98,
+								0.15,
+								0.85,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 429888109343236,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

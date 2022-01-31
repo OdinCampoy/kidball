@@ -1,0 +1,66 @@
+{
+	"name": "PINCHO_FINAL_BOSS",
+	"plugin-id": "Sprite",
+	"sid": 418224887623697,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OPACIDAD_INICIAL",
+			"type": "number",
+			"desc": "",
+			"sid": 315268829664136
+		},
+		{
+			"name": "SE_CAE_ABAJO",
+			"type": "number",
+			"desc": "0;INACTIVO    1;ACTIVO",
+			"sid": 181006125251346
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 603546240246444
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 128,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Javier\\Desktop\\CONSTRUCT JUEGOS\\Ball_adventure\\pinchos_con_efecto.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 242,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0,
+								1,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 630857072611752,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

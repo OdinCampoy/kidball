@@ -1,0 +1,977 @@
+{
+	"name": "Ev_TRANSICIONES_ALL",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "MUSIC_sound"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "FX_sound"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Pausa"
+		},
+		{
+			"eventType": "variable",
+			"name": "AA_numero_de_nivel_para_guardado",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Esta variable solo sirve para guardar el numero de nivel y luego transferirlo al nivel_actual corresopondiente en el slot correspondiente",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 989365216033032
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 239860161093083
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "left_BTN",
+					"sid": 172078108492790,
+					"parameters": {
+						"width": "1455",
+						"height": "866"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "left_BTN2",
+					"sid": 312320521812439,
+					"parameters": {
+						"width": "1455",
+						"height": "866"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "bola",
+					"sid": 809251425067847,
+					"parameters": {
+						"animation": "\"DERECHA_4\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "left_BTN",
+					"sid": 743997037175599,
+					"parameters": {
+						"x": "ViewportRight(\"fondo\")/2",
+						"y": "ViewportBottom(\"fondo\")/2"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "left_BTN2",
+					"sid": 725907140184285,
+					"parameters": {
+						"x": "ViewportRight(\"fondo\")/2",
+						"y": "ViewportBottom(\"fondo\")/2"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "left_arrow",
+					"sid": 592708522424531,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Right_arrow",
+					"sid": 107256842024763,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "puerta",
+					"sid": 148131082683659,
+					"parameters": {
+						"instance-variable": "abierta",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "puerta",
+					"sid": 738230814503808,
+					"parameters": {
+						"animation": "\"abierta\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 622451489222609,
+					"parameters": {
+						"variable": "LLAVE_POS_X",
+						"value": "llave.X"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 952682435206663,
+					"parameters": {
+						"variable": "LLAVE_POS_Y",
+						"value": "llave.Y"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bola",
+					"sid": 660381924723493,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 446253679106829,
+					"parameters": {
+						"variable": "OPCIONES_MUERTE",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 378746850047776,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 834227554339284,
+							"parameters": {
+								"variable": "VIDAS_1",
+								"comparison": 2,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 697364336288368,
+							"parameters": {
+								"variable": "VIDAS_1",
+								"value": "9"
+							}
+						}
+					],
+					"sid": 377442412025022
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 731807337917973,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"1M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 526353398217380,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "5"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 842686138446550
+						}
+					],
+					"sid": 864394923945751
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 297862712900705,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"2M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 182806222129221,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "15"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 461524097035597
+						}
+					],
+					"sid": 645799996360339
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 826651012284387,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"3M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 342854108919545,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "25"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 799609504853970
+						}
+					],
+					"sid": 117497178420317
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 634096689083271,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"4M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 851821024181638,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "35"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 786371485538326
+						}
+					],
+					"sid": 831979286412642
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 402729475535846,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"5M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 452730518594379,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "45"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 555585132670411
+						}
+					],
+					"sid": 399203322266928
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 336757515862605,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"6M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 645307842743619,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "55"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 235716876107808
+						}
+					],
+					"sid": 149953736065705
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 204824418733357,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"7M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 621460508857385,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "65"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 529606054620649
+						}
+					],
+					"sid": 528284691704585
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 469185008336686,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"8M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 319667316213656,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "75"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 477600746812290
+						}
+					],
+					"sid": 877185456717306
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 905267565836390,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"9M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 999806781690437,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "85"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 505212594153180
+						}
+					],
+					"sid": 531955532667844
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 843626505185624,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"10M_CHECKPOINT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 124871747348373,
+							"parameters": {
+								"variable": "AA_numero_de_nivel_para_guardado",
+								"value": "95"
+							}
+						},
+						{
+							"callFunction": "GUARDADO EN CHECKPOINT",
+							"sid": 123475171766704
+						}
+					],
+					"sid": 691471017447954
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 189146135948604,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 829452187055477,
+							"parameters": {
+								"variable": "speedrun_activo_parado",
+								"value": "\"parado\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 492120530119570,
+							"parameters": {
+								"object-to-create": "SpeedRun_TXT_in_Levels",
+								"layer": "\"HUD\"",
+								"x": "364",
+								"y": "437",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TXT_in_Levels",
+							"sid": 593808352572947,
+							"parameters": {
+								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+							}
+						}
+					],
+					"sid": 754336607281317
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "\tCONTROL DE LA BOLA"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-floor",
+					"objectClass": "bola",
+					"sid": 221835192630252,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 585124768521156,
+					"parameters": {
+						"variable": "fx_rebolte_pelota",
+						"value": "1"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "bola",
+					"sid": 604766615881618,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-vector-y",
+					"objectClass": "bola",
+					"sid": 544719008568454,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "-550"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "bola",
+					"sid": 629120690648566,
+					"parameters": {
+						"object": "polvo",
+						"layer": "\"pelota\"",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "polvo",
+					"sid": 839151436646204,
+					"parameters": {
+						"angle": "270"
+					}
+				}
+			],
+			"sid": 302468046903544
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-enabled",
+					"objectClass": "bola",
+					"sid": 215274748777865,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "bola",
+					"sid": 786186481095327,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "bola",
+					"sid": 221273140389270,
+					"parameters": {
+						"animation": "\"DERECHA_4\"",
+						"from": "current-frame"
+					}
+				}
+			],
+			"sid": 313265763677861
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bola",
+					"sid": 357221399744394,
+					"parameters": {
+						"object": "puerta"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 206220986823002,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 184201052246973
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "bola",
+							"sid": 404161739485409,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "bola",
+							"sid": 592341238280966,
+							"parameters": {
+								"x": "2000"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 573024599654147,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "show-interstitial",
+							"objectClass": "MobileAdvert_intersticial",
+							"sid": 544556813646968,
+							"disabled": true
+						},
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 599453405507917,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 456592774288065
+				}
+			]
+		},
+		{
+			"functionName": "GUARDADO EN CHECKPOINT",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 714169221779632,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 670864998286427,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 272236960170125,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 876833501528289,
+									"parameters": {
+										"variable": "SLOTS_Seleccionado_1_2_o_3",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 605985464418200,
+									"parameters": {
+										"variable": "Nivel_actual_1",
+										"value": "AA_numero_de_nivel_para_guardado"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 674925177177987,
+									"parameters": {
+										"key": "\"Nivel_actual_1\"",
+										"value": "Nivel_actual_1"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 571531187146825,
+									"parameters": {
+										"key": "\"GEMAS_1\"",
+										"value": "GEMAS_1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 980282989450786,
+									"parameters": {
+										"variable": "VIDAS_1",
+										"value": "VIDAS_1<9? \"9\":VIDAS_1"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 989285059938514,
+									"parameters": {
+										"key": "\"VIDAS_1\"",
+										"value": "VIDAS_1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 508913795906643,
+									"parameters": {
+										"variable": "Last_Save",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 551316711834837,
+									"parameters": {
+										"key": "\"Last_Save\"",
+										"value": "Last_Save"
+									}
+								}
+							],
+							"sid": 102383689130132
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 503795399119863,
+									"parameters": {
+										"variable": "SLOTS_Seleccionado_1_2_o_3",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 503715323557141,
+									"parameters": {
+										"variable": "Nivel_actual_2",
+										"value": "AA_numero_de_nivel_para_guardado"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 268199722531100,
+									"parameters": {
+										"key": "\"Nivel_actual_2\"",
+										"value": "Nivel_actual_2"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 872777509468636,
+									"parameters": {
+										"key": "\"GEMAS_2\"",
+										"value": "GEMAS_2"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 344120562470445,
+									"parameters": {
+										"variable": "VIDAS_2",
+										"value": "VIDAS_2<9? \"9\":VIDAS_2"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 915142081522510,
+									"parameters": {
+										"key": "\"VIDAS_2\"",
+										"value": "VIDAS_2"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 100190655056160,
+									"parameters": {
+										"variable": "Last_Save",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 503219136903265,
+									"parameters": {
+										"key": "\"Last_Save\"",
+										"value": "Last_Save"
+									}
+								}
+							],
+							"sid": 934707432951488
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 827877642282175,
+									"parameters": {
+										"variable": "SLOTS_Seleccionado_1_2_o_3",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 409345447385284,
+									"parameters": {
+										"variable": "Nivel_actual_3",
+										"value": "AA_numero_de_nivel_para_guardado"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 892547314081174,
+									"parameters": {
+										"key": "\"Nivel_actual_3\"",
+										"value": "Nivel_actual_3"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 232799073502722,
+									"parameters": {
+										"key": "\"GEMAS_3\"",
+										"value": "GEMAS_3"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 322803336770862,
+									"parameters": {
+										"variable": "VIDAS_3",
+										"value": "VIDAS_3<9? \"9\":VIDAS_3"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 452688271960179,
+									"parameters": {
+										"key": "\"VIDAS_3\"",
+										"value": "VIDAS_3"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 120217445325804,
+									"parameters": {
+										"variable": "Last_Save",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 959156413980772,
+									"parameters": {
+										"key": "\"Last_Save\"",
+										"value": "Last_Save"
+									}
+								}
+							],
+							"sid": 440699710582118
+						}
+					]
+				}
+			]
+		}
+	],
+	"sid": 842083193181098
+}

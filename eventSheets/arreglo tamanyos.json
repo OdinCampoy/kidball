@@ -1,0 +1,127 @@
+{
+	"name": "ARREGLO TAMANYOS",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 101558156661218
+				}
+			],
+			"actions": [
+				{
+					"id": "set-object-time-scale",
+					"objectClass": "System",
+					"sid": 519116435851348,
+					"parameters": {
+						"object": "bola",
+						"time-scale": "0.98"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "torchFire",
+					"sid": 757417164057601,
+					"parameters": {
+						"width": "25",
+						"height": "46"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "bola",
+					"sid": 225582980630773,
+					"parameters": {
+						"width": "29",
+						"height": "29"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "enemy_in_floor",
+					"sid": 720887013743614,
+					"parameters": {
+						"width": "31",
+						"height": "31"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "enemy_VOLADOR",
+					"sid": 742287620178506,
+					"parameters": {
+						"width": "45",
+						"height": "31"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Black_ball",
+					"sid": 488583035252799,
+					"parameters": {
+						"width": "36",
+						"height": "36"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "muelle",
+					"sid": 886255362092046,
+					"parameters": {
+						"width": "44",
+						"height": "44"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "vidas",
+					"sid": 252262206857608,
+					"parameters": {
+						"width": "32",
+						"height": "32"
+					}
+				},
+				{
+					"id": "set-movement",
+					"objectClass": "vidas",
+					"sid": 714269292817374,
+					"behaviorType": "Sine",
+					"parameters": {
+						"movement": "vertical"
+					}
+				},
+				{
+					"id": "set-period",
+					"objectClass": "vidas",
+					"sid": 417534013868022,
+					"behaviorType": "Sine",
+					"parameters": {
+						"period": "0.9"
+					}
+				},
+				{
+					"id": "set-magnitude",
+					"objectClass": "vidas",
+					"sid": 109938112145362,
+					"behaviorType": "Sine",
+					"parameters": {
+						"magnitude": "2"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "sierras_palo",
+					"sid": 471271995564327,
+					"parameters": {
+						"width": "133",
+						"height": "50"
+					}
+				}
+			],
+			"sid": 314901062540804
+		}
+	],
+	"sid": 665978550481671
+}
