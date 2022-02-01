@@ -2493,49 +2493,417 @@
 					"functionParameters": [],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [
+					"actions": [],
+					"sid": 117547761386842,
+					"children": [
 						{
-							"id": "play-by-name",
-							"objectClass": "Audio",
-							"sid": 389117235081772,
-							"parameters": {
-								"folder": "sounds",
-								"audio-file-name": "FX_sound=1? \"Transicion_Sonido\":\"nada\"",
-								"loop": "not-looping",
-								"volume": "VOLUMEN_MASTER_FX",
-								"tag-optional": "\"\""
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 159258340780396
+								}
+							],
+							"actions": [
+								{
+									"id": "play-by-name",
+									"objectClass": "Audio",
+									"sid": 954747249380722,
+									"parameters": {
+										"folder": "sounds",
+										"audio-file-name": "FX_sound=1? \"Transicion_Sonido\":\"nada\"",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 266132410982546,
+									"parameters": {
+										"object-to-create": "Transicion_Animacion",
+										"layer": "\"salida\"",
+										"x": "431",
+										"y": "240",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 516807381936676,
+									"parameters": {
+										"seconds": "1.5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 162859496147429,
+									"parameters": {
+										"audio-file": "Kidball_menu_loop",
+										"loop": "looping",
+										"volume": "VOLUMEN_MASTER_MUSIC",
+										"tag-optional": "\"Musica_portada\"\r\n"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 786077782818641,
+									"parameters": {
+										"layout": "SpeedRun_Resumen"
+									}
+								}
+							],
+							"sid": 823365520991147
 						},
 						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 377766287989467,
-							"parameters": {
-								"object-to-create": "Transicion_Animacion",
-								"layer": "\"salida\"",
-								"x": "431",
-								"y": "240",
-								"create-hierarchy": false
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 880972185926763,
+									"parameters": {
+										"variable": "MUSIC_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 527148590444996,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_1\"",
+										"db": "-100",
+										"duration": "1",
+										"ending": "stop"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 231525389315307,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_2\"",
+										"db": "-100",
+										"duration": "1",
+										"ending": "stop"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 103380103153142,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_3\"",
+										"db": "-100",
+										"duration": "1",
+										"ending": "stop"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 309613947214865,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_4\"",
+										"db": "-100",
+										"duration": "1",
+										"ending": "stop"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 375152544189290,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_5\"",
+										"db": "-100",
+										"duration": "1",
+										"ending": "stop"
+									}
+								}
+							],
+							"sid": 853615903198271
 						},
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 749491135989141,
-							"parameters": {
-								"seconds": "1.5"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 165979908244976,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 341133321917327,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_1",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 990226847411901
 						},
 						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 860687051494615,
-							"parameters": {
-								"layout": "SpeedRun_Resumen"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 957725078619360,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 498570221822751,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_2",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 135771879626113
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 618819407421146,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 532692732075102,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_3",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 682838195446897
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 327001092379857,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 260644434506633,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_4",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 162931104493832
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 947080731777703,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 787508650545405,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_5",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 181296776074464
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 490133381389826,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 860223840881639,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_6",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 707636946542718
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 161543735837119,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 432204647607538,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_7",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 873558151530307
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 786699314248765,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "8"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 440236592642858,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_8",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 755391332220297
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 939594243114422,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "9"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 157300491052430,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_9",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 393651446238495
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 378154740667769,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 692497815609668,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_10",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 740453964672934
 						}
-					],
-					"sid": 117547761386842
+					]
 				}
 			],
 			"sid": 242608988041764
@@ -2587,60 +2955,6 @@
 										"variable": "Castillo_Speedrun_time_1",
 										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
 									}
-								},
-								{
-									"type": "comment",
-									"text": "reseteo de contador de tiempo para el siguiente castillo"
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 643851235381393,
-									"disabled": true,
-									"parameters": {
-										"variable": "speedrun_tiempo_por_castillo",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 223893904629192,
-									"disabled": true,
-									"parameters": {
-										"variable": "hours_por_castillo",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 848797183143059,
-									"disabled": true,
-									"parameters": {
-										"variable": "minutes_por_castillo",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 169234210008665,
-									"disabled": true,
-									"parameters": {
-										"variable": "seconds_por_castillo",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 170777477811997,
-									"disabled": true,
-									"parameters": {
-										"variable": "millisecs_por_castillo",
-										"value": "0"
-									}
 								}
 							],
 							"sid": 487742150503588
@@ -2661,17 +2975,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 755524098765201,
-							"parameters": {
-								"variable": "Castillo_Speedrun_time_2",
-								"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 759142157652404,
 					"children": [
 						{
@@ -2683,7 +2987,17 @@
 									"sid": 371901759805948
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 329561655213136,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_2",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
 							"sid": 411074117931280
 						}
 					]
@@ -2702,17 +3016,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 590033328121922,
-							"parameters": {
-								"variable": "Castillo_Speedrun_time_3",
-								"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 293344907803305,
 					"children": [
 						{
@@ -2724,7 +3028,17 @@
 									"sid": 681576615896035
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 200858926015716,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_3",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
 							"sid": 733084790690344
 						}
 					]
@@ -2743,17 +3057,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 225444909356840,
-							"parameters": {
-								"variable": "Castillo_Speedrun_time_4",
-								"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 712273649877126,
 					"children": [
 						{
@@ -2765,7 +3069,17 @@
 									"sid": 756340355359959
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 499037653187411,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_4",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
 							"sid": 580234608914670
 						}
 					]
@@ -2784,17 +3098,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 736726051109949,
-							"parameters": {
-								"variable": "Castillo_Speedrun_time_5",
-								"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 652352520481270,
 					"children": [
 						{
@@ -2806,7 +3110,17 @@
 									"sid": 440134832791749
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 704142438583197,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_5",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
 							"sid": 328669247782230
 						}
 					]
@@ -2825,17 +3139,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 196142566240210,
-							"parameters": {
-								"variable": "Castillo_Speedrun_time_6",
-								"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 532034665246491,
 					"children": [
 						{
@@ -2847,7 +3151,17 @@
 									"sid": 589492637335463
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 812338025190150,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_6",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
 							"sid": 592719054256861
 						}
 					]
@@ -2866,17 +3180,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 996561130207663,
-							"parameters": {
-								"variable": "Castillo_Speedrun_time_7",
-								"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 146558628959986,
 					"children": [
 						{
@@ -2888,7 +3192,17 @@
 									"sid": 354607759583539
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 270464802619494,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_7",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
 							"sid": 627628798736841
 						}
 					]
@@ -2907,17 +3221,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 597963027953268,
-							"parameters": {
-								"variable": "Castillo_Speedrun_time_8",
-								"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 862975041024196,
 					"children": [
 						{
@@ -2929,7 +3233,17 @@
 									"sid": 526649441046721
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 485446228462123,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_8",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
 							"sid": 304393511476071
 						}
 					]
@@ -2948,17 +3262,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 809053780505778,
-							"parameters": {
-								"variable": "Castillo_Speedrun_time_9",
-								"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 177818902081292,
 					"children": [
 						{
@@ -2970,7 +3274,17 @@
 									"sid": 789578595999762
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 351697377041907,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_9",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
 							"sid": 351613655803020
 						}
 					]
@@ -2989,17 +3303,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 422713471808206,
-							"parameters": {
-								"variable": "Castillo_Speedrun_time_10",
-								"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 785539789021965,
 					"children": [
 						{
@@ -3011,7 +3315,17 @@
 									"sid": 710771486552847
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 611601704587706,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_10",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
 							"sid": 341490088815098
 						}
 					]

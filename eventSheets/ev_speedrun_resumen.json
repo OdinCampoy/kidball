@@ -118,7 +118,61 @@
 					}
 				}
 			],
-			"sid": 340306145439853
+			"sid": 340306145439853,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 943834031668575,
+							"parameters": {
+								"variable": "MUSIC_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 928586512775935,
+							"parameters": {
+								"tag": "\"Musica_portada\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 229274793511566,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 778166451560618
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 546387611566502,
+									"parameters": {
+										"audio-file": "Kidball_menu_loop",
+										"loop": "looping",
+										"volume": "VOLUMEN_MASTER_MUSIC",
+										"tag-optional": "\"Musica_portada\"\r\n"
+									}
+								}
+							],
+							"sid": 370040471428663
+						}
+					]
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -192,9 +246,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpeedRun_Resumen_Castillo_txt",
-					"sid": 531550837207685,
+					"sid": 587985481260286,
 					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_1&\"[/color]\""
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":  \"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_1&\"[/color]\""
 					}
 				}
 			],
@@ -218,9 +272,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpeedRun_Resumen_Castillo_txt",
-					"sid": 848975813817519,
+					"sid": 786233528651025,
 					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_2&\"[/color]\""
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":  \"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_2&\"[/color]\""
 					}
 				}
 			],
@@ -244,9 +298,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpeedRun_Resumen_Castillo_txt",
-					"sid": 559072646808526,
+					"sid": 383577968519816,
 					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_3&\"[/color]\""
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":  \"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_3&\"[/color]\""
 					}
 				}
 			],
@@ -270,9 +324,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpeedRun_Resumen_Castillo_txt",
-					"sid": 410423786497196,
+					"sid": 834900666796888,
 					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_4&\"[/color]\""
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":  \"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_4&\"[/color]\""
 					}
 				}
 			],
@@ -296,9 +350,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpeedRun_Resumen_Castillo_txt",
-					"sid": 158905152241781,
+					"sid": 853288900112640,
 					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_5&\"[/color]\""
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":  \"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_5&\"[/color]\""
 					}
 				}
 			],
@@ -322,9 +376,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpeedRun_Resumen_Castillo_txt",
-					"sid": 510871982738791,
+					"sid": 234681796674079,
 					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_6&\"[/color]\""
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":  \"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_6&\"[/color]\""
 					}
 				}
 			],
@@ -348,9 +402,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpeedRun_Resumen_Castillo_txt",
-					"sid": 664539315614205,
+					"sid": 797019224437742,
 					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_7&\"[/color]\""
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":  \"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_7&\"[/color]\""
 					}
 				}
 			],
@@ -374,9 +428,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpeedRun_Resumen_Castillo_txt",
-					"sid": 689814949850213,
+					"sid": 310807842020266,
 					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_8&\"[/color]\""
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":  \"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_8&\"[/color]\""
 					}
 				}
 			],
@@ -400,9 +454,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpeedRun_Resumen_Castillo_txt",
-					"sid": 977307601358418,
+					"sid": 658962205865636,
 					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_9&\"[/color]\""
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":  \"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_9&\"[/color]\""
 					}
 				}
 			],
@@ -426,9 +480,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpeedRun_Resumen_Castillo_txt",
-					"sid": 382288110501419,
+					"sid": 179533310837390,
 					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":\"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_10&\"[/color]\""
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,67)&\" \"&Self.Castillo_num&\":  \"&\"[color=#FFFFFF]\"&Castillo_Speedrun_time_10&\"[/color]\""
 					}
 				}
 			],
