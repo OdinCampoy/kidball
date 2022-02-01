@@ -22,6 +22,30 @@
 			],
 			"actions": [
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 155941150135244,
+					"parameters": {
+						"object-to-create": "Transicion_Animacion_entrada",
+						"layer": "\"transicion\"",
+						"x": "431",
+						"y": "240",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 293868141728995,
+					"parameters": {
+						"folder": "sounds",
+						"audio-file-name": "FX_sound=1? \"Transicion_Sonido_sale\":\"nada\"",
+						"loop": "not-looping",
+						"volume": "VOLUMEN_MASTER_FX",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 778898585034106,
@@ -128,6 +152,27 @@
 				}
 			],
 			"sid": 206493789751184
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Transicion_Animacion_entrada",
+					"sid": 212722907852364,
+					"parameters": {
+						"animation": "\"Animation 1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Transicion_Animacion_entrada",
+					"sid": 509949443804243
+				}
+			],
+			"sid": 972108562697505
 		},
 		{
 			"eventType": "block",

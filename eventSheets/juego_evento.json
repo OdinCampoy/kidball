@@ -4461,29 +4461,22 @@
 															}
 														},
 														{
-															"id": "wait-for-previous-actions",
-															"objectClass": "System",
-															"sid": 192840194854360
-														},
-														{
 															"id": "wait",
 															"objectClass": "System",
 															"sid": 304551288963199,
+															"disabled": true,
 															"parameters": {
 																"seconds": "1"
 															}
 														},
 														{
-															"callFunction": "TERMINA EL MODO SPEED RUN CUALQUIER TIPO",
-															"sid": 184439875187641
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 382785790917369
 														},
 														{
-															"id": "go-to-layout",
-															"objectClass": "System",
-															"sid": 937710700125140,
-															"parameters": {
-																"layout": "SpeedRun_DEATH"
-															}
+															"callFunction": "TERMINA EL MODO SPEED RUN CUALQUIER TIPO",
+															"sid": 184439875187641
 														}
 													],
 													"sid": 639267583079842
@@ -9992,6 +9985,7 @@
 											"id": "set-time-scale",
 											"objectClass": "System",
 											"sid": 442382821875073,
+											"disabled": true,
 											"parameters": {
 												"time-scale": "0"
 											}
@@ -10000,12 +9994,28 @@
 											"id": "create-object",
 											"objectClass": "System",
 											"sid": 562762154374049,
+											"disabled": true,
 											"parameters": {
 												"object-to-create": "GAME_OVER_Fondo",
 												"layer": "\"HUD\"",
 												"x": "431",
 												"y": "240",
 												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 603052289219425,
+											"disabled": true
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 398427026622431,
+											"disabled": true,
+											"parameters": {
+												"seconds": "1"
 											}
 										},
 										{
@@ -10171,6 +10181,7 @@
 											"id": "set-time-scale",
 											"objectClass": "System",
 											"sid": 332720631377442,
+											"disabled": true,
 											"parameters": {
 												"time-scale": "0"
 											}
@@ -10179,12 +10190,28 @@
 											"id": "create-object",
 											"objectClass": "System",
 											"sid": 665131237125165,
+											"disabled": true,
 											"parameters": {
 												"object-to-create": "GAME_OVER_Fondo",
 												"layer": "\"HUD\"",
 												"x": "431",
 												"y": "240",
 												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 659277488680853,
+											"disabled": true
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 873978821427870,
+											"disabled": true,
+											"parameters": {
+												"seconds": "1"
 											}
 										},
 										{
@@ -11569,14 +11596,6 @@
 									"sid": 730516760606106,
 									"parameters": {
 										"key": 66
-									}
-								},
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 613577347723164,
-									"parameters": {
-										"key": 27
 									}
 								}
 							],
@@ -14158,6 +14177,7 @@
 													"id": "add-to-eventvar",
 													"objectClass": "System",
 													"sid": 762317159657994,
+													"disabled": true,
 													"parameters": {
 														"variable": "ROOM_NUMERO",
 														"value": "1"
@@ -14167,9 +14187,22 @@
 													"id": "go-to-layout-by-name",
 													"objectClass": "System",
 													"sid": 351413713571573,
+													"disabled": true,
 													"parameters": {
 														"layout": "\"Room_\"&ROOM_NUMERO"
 													}
+												},
+												{
+													"id": "go-to-nextprevious-layout",
+													"objectClass": "System",
+													"sid": 441892459875076,
+													"parameters": {
+														"which": "next"
+													}
+												},
+												{
+													"type": "comment",
+													"text": "guarda nivel maximo"
 												},
 												{
 													"type": "comment",
@@ -14267,14 +14300,6 @@
 														"value": "0",
 														"axis": "y"
 													}
-												},
-												{
-													"id": "go-to-nextprevious-layout",
-													"objectClass": "System",
-													"sid": 816349642352173,
-													"parameters": {
-														"which": "next"
-													}
 												}
 											],
 											"sid": 722383284704423
@@ -14364,7 +14389,7 @@
 												{
 													"id": "add-to-eventvar",
 													"objectClass": "System",
-													"sid": 752610353117877,
+													"sid": 889292575552391,
 													"disabled": true,
 													"parameters": {
 														"variable": "ROOM_NUMERO",
@@ -14378,6 +14403,14 @@
 													"disabled": true,
 													"parameters": {
 														"layout": "\"Room_\"&ROOM_NUMERO"
+													}
+												},
+												{
+													"id": "go-to-nextprevious-layout",
+													"objectClass": "System",
+													"sid": 206201308650275,
+													"parameters": {
+														"which": "next"
 													}
 												},
 												{
@@ -14475,14 +14508,6 @@
 														"where": "back",
 														"value": "0",
 														"axis": "y"
-													}
-												},
-												{
-													"id": "go-to-nextprevious-layout",
-													"objectClass": "System",
-													"sid": 973240738042055,
-													"parameters": {
-														"which": "next"
 													}
 												}
 											],
@@ -14590,6 +14615,14 @@
 													}
 												},
 												{
+													"id": "go-to-nextprevious-layout",
+													"objectClass": "System",
+													"sid": 215151400048462,
+													"parameters": {
+														"which": "next"
+													}
+												},
+												{
 													"type": "comment",
 													"text": "guarda nivel maximo"
 												},
@@ -14685,19 +14718,38 @@
 														"value": "0",
 														"axis": "y"
 													}
-												},
-												{
-													"id": "go-to-nextprevious-layout",
-													"objectClass": "System",
-													"sid": 241581856756594,
-													"parameters": {
-														"which": "next"
-													}
 												}
 											],
 											"sid": 720368575023624
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 295092444707760
+										}
+									],
+									"actions": [
+										{
+											"type": "comment",
+											"text": "GUARDA EL TIEMPO AL ENTRAR POR LA ULTIMA PUERTA DEL CASTILLO",
+											"background-color": [
+												0.16862745098039217,
+												1,
+												0,
+												1
+											]
+										},
+										{
+											"callFunction": "SPEEDRUN - Guarda el tiempo de cada Castillo para el resumen",
+											"sid": 381289732783361
+										}
+									],
+									"sid": 119615097075495
 								}
 							]
 						}
