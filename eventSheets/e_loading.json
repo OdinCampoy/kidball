@@ -34,6 +34,20 @@
 					}
 				},
 				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 882688263482300,
+					"parameters": {
+						"tag": "\"Traducciones\"",
+						"file": "TRADUCCIONES.json"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 556954859584115
+				},
+				{
 					"type": "comment",
 					"text": "SLOTS 1"
 				},
@@ -487,15 +501,6 @@
 					}
 				},
 				{
-					"id": "request-project-file",
-					"objectClass": "AJAX",
-					"sid": 532975553094209,
-					"parameters": {
-						"tag": "\"Traducciones\"",
-						"file": "TRADUCCIONES.json"
-					}
-				},
-				{
 					"id": "set-animation",
 					"objectClass": "bola",
 					"sid": 523675228742162,
@@ -695,6 +700,36 @@
 				}
 			],
 			"sid": 438069072872123
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 600663363973460,
+					"parameters": {
+						"tag": "\"SPEEDRUN_10_SLOTS_JSON_GUARDADO\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Array_SPR_10_SLOTS_1_TIME",
+					"sid": 444665766040317,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 695302582295935
+				}
+			],
+			"sid": 428438432312341,
+			"disabled": true
 		},
 		{
 			"eventType": "block",

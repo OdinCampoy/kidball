@@ -2500,6 +2500,70 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 121860677409094,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 844465065408370,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 445464119271497,
+											"parameters": {
+												"tag": "\"transicion_FX\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 780934271690737,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 935066513754057
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 404564987115364,
+													"parameters": {
+														"audio-file": "Transicion_Sonido",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"transicion_FX\""
+													}
+												}
+											],
+											"sid": 369041466296483,
+											"disabled": true
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "trigger-once-while-true",
 									"objectClass": "System",
 									"sid": 159258340780396
@@ -2509,13 +2573,13 @@
 								{
 									"id": "play-by-name",
 									"objectClass": "Audio",
-									"sid": 954747249380722,
+									"sid": 184933036589357,
 									"parameters": {
 										"folder": "sounds",
 										"audio-file-name": "FX_sound=1? \"Transicion_Sonido\":\"nada\"",
 										"loop": "not-looping",
 										"volume": "VOLUMEN_MASTER_FX",
-										"tag-optional": "\"\""
+										"tag-optional": "\"transicion_FX\""
 									}
 								},
 								{
@@ -2533,9 +2597,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 516807381936676,
+									"sid": 690504009161725,
 									"parameters": {
-										"seconds": "1.5"
+										"seconds": "1.2"
 									}
 								},
 								{

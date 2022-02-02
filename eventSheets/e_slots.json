@@ -140,10 +140,15 @@
 					"id": "request-project-file",
 					"objectClass": "AJAX",
 					"sid": 854274146733461,
+					"disabled": true,
 					"parameters": {
 						"tag": "\"Traducciones\"",
 						"file": "TRADUCCIONES.json"
 					}
+				},
+				{
+					"callFunction": "IDIOMA - JUEGO",
+					"sid": 483145994223861
 				}
 			],
 			"sid": 642467183171678,
@@ -1129,13 +1134,10 @@
 					"id": "wait-for-previous-actions",
 					"objectClass": "System",
 					"sid": 542517997627560
-				},
-				{
-					"callFunction": "IDIOMA - JUEGO",
-					"sid": 203835269801076
 				}
 			],
-			"sid": 670467204381259
+			"sid": 670467204381259,
+			"disabled": true
 		},
 		{
 			"eventType": "group",

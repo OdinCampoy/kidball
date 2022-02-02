@@ -759,6 +759,58 @@
 					"sid": 280792258616418
 				},
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 843595256541213,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "LIFES_TXT",
+							"sid": 443292660676394,
+							"parameters": {
+								"text": "Vidas_Speedrun"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Gema_Currency_TXT",
+							"sid": 396120653269921,
+							"parameters": {
+								"text": "Gemas_Speedrun&\"/5\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 147363808932803,
+							"disabled": true,
+							"parameters": {
+								"variable": "Vidas_Speedrun",
+								"value": "9"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 823186031385246,
+							"disabled": true,
+							"parameters": {
+								"variable": "Gemas_Speedrun",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 830087702954273
+				},
+				{
 					"eventType": "comment",
 					"text": "PONE EL NOMBRE DE LA ROOM AL PRINCIPIO DEL NIVEL"
 				},
@@ -3778,18 +3830,18 @@
 																{
 																	"id": "subtract-from-eventvar",
 																	"objectClass": "System",
-																	"sid": 303487704344500,
+																	"sid": 534868181895088,
 																	"parameters": {
-																		"variable": "VIDAS_1",
+																		"variable": "Vidas_Speedrun",
 																		"value": "1"
 																	}
 																},
 																{
 																	"id": "set-text",
 																	"objectClass": "LIFES_TXT",
-																	"sid": 494478622378233,
+																	"sid": 817810808412628,
 																	"parameters": {
-																		"text": "VIDAS_1"
+																		"text": "Vidas_Speedrun"
 																	}
 																},
 																{
@@ -3800,9 +3852,9 @@
 																{
 																	"id": "set-text",
 																	"objectClass": "LIFES_SOMBRA",
-																	"sid": 380871557752140,
+																	"sid": 474828154575461,
 																	"parameters": {
-																		"text": "\"LIFES : \"&VIDAS_1"
+																		"text": "\"LIFES : \"&Vidas_Speedrun"
 																	}
 																},
 																{
@@ -4007,18 +4059,18 @@
 																{
 																	"id": "subtract-from-eventvar",
 																	"objectClass": "System",
-																	"sid": 251732057002658,
+																	"sid": 709317908213617,
 																	"parameters": {
-																		"variable": "VIDAS_1",
+																		"variable": "Vidas_Speedrun",
 																		"value": "1"
 																	}
 																},
 																{
 																	"id": "set-text",
 																	"objectClass": "LIFES_TXT",
-																	"sid": 889282930284774,
+																	"sid": 974042022560657,
 																	"parameters": {
-																		"text": "VIDAS_1"
+																		"text": "Vidas_Speedrun"
 																	}
 																},
 																{
@@ -4029,9 +4081,9 @@
 																{
 																	"id": "set-text",
 																	"objectClass": "LIFES_SOMBRA",
-																	"sid": 762771786823729,
+																	"sid": 478408495086261,
 																	"parameters": {
-																		"text": "\"LIFES : \"&VIDAS_1"
+																		"text": "\"LIFES : \"&Vidas_Speedrun"
 																	}
 																},
 																{
@@ -9813,9 +9865,9 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 837103952952172,
+									"sid": 955565866342257,
 									"parameters": {
-										"variable": "VIDAS_1",
+										"variable": "Vidas_Speedrun",
 										"comparison": 2,
 										"value": "0"
 									}
@@ -10026,6 +10078,15 @@
 										{
 											"callFunction": "TERMINA EL MODO SPEED RUN CUALQUIER TIPO",
 											"sid": 468811559217211
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 325046153790115,
+											"parameters": {
+												"variable": "OPCIONES_MUERTE",
+												"value": "100"
+											}
 										}
 									],
 									"sid": 185799414755359
@@ -10222,6 +10283,15 @@
 										{
 											"callFunction": "TERMINA EL MODO SPEED RUN CUALQUIER TIPO",
 											"sid": 266669857057778
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 888091173627797,
+											"parameters": {
+												"variable": "OPCIONES_MUERTE",
+												"value": "100"
+											}
 										}
 									],
 									"sid": 830224024580349
@@ -12679,77 +12749,17 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
+									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 805390498584628,
+									"sid": 403711932608068,
 									"parameters": {
-										"variable": "SLOTS_Seleccionado_1_2_o_3",
-										"comparison": 0,
-										"value": "1"
-									}
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
 								}
 							],
-							"actions": [
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 829054103390884,
-									"parameters": {
-										"variable": "GEMAS_1",
-										"value": "1"
-									}
-								},
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 304086463493537,
-									"parameters": {
-										"variable": "SpeedRun_gemas_cogidas",
-										"value": "1"
-									}
-								},
-								{
-									"id": "set-text",
-									"objectClass": "Gema_Currency_TXT",
-									"sid": 746370388510406,
-									"parameters": {
-										"text": "GEMAS_1&\"/5\""
-									}
-								},
-								{
-									"id": "spawn-another-object",
-									"objectClass": "Gema_currency",
-									"sid": 320522532917306,
-									"parameters": {
-										"object": "Gemas_particles",
-										"layer": "Self.LayerName",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
-								},
-								{
-									"id": "set-angle",
-									"objectClass": "Gemas_particles",
-									"sid": 376729198757941,
-									"parameters": {
-										"angle": "270"
-									}
-								},
-								{
-									"id": "set-collisions-enabled",
-									"objectClass": "Gema_currency",
-									"sid": 835976835417281,
-									"parameters": {
-										"collisions": "disabled"
-									}
-								},
-								{
-									"id": "destroy",
-									"objectClass": "Gema_currency",
-									"sid": 533259740006667
-								}
-							],
-							"sid": 900520266750416,
+							"actions": [],
+							"sid": 895695640034296,
 							"children": [
 								{
 									"eventType": "block",
@@ -12757,247 +12767,137 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 770631866697477,
+											"sid": 850158431727593,
 											"parameters": {
-												"variable": "FX_sound",
+												"variable": "SLOTS_Seleccionado_1_2_o_3",
 												"comparison": 0,
 												"value": "1"
 											}
 										}
 									],
-									"actions": [],
-									"sid": 432299794146215,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "trigger-once-while-true",
-													"objectClass": "System",
-													"sid": 662574898239002
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 731495660612415,
-													"parameters": {
-														"audio-file": "Gemas_Pick_up",
-														"loop": "not-looping",
-														"volume": "0",
-														"tag-optional": "\"\""
-													}
-												}
-											],
-											"sid": 777087190928201
-										}
-									]
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 426896063079040,
-									"parameters": {
-										"variable": "GEMAS_1",
-										"comparison": 5,
-										"value": "5"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 114113159831454,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 463544856125160
-										}
-									],
 									"actions": [
 										{
-											"id": "play-by-name",
-											"objectClass": "Audio",
-											"sid": 364655677761480,
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 417644573261200,
 											"parameters": {
-												"folder": "sounds",
-												"audio-file-name": "FX_sound=1? \"Coge_corazon\":\"\"",
-												"loop": "not-looping",
-												"volume": "VOLUMEN_MASTER_FX",
-												"tag-optional": "\"\""
+												"variable": "GEMAS_1",
+												"value": "1"
 											}
 										},
 										{
-											"id": "set-eventvar-value",
+											"id": "add-to-eventvar",
 											"objectClass": "System",
-											"sid": 424997217269526,
+											"sid": 473792413513258,
 											"parameters": {
-												"variable": "GEMAS_1",
-												"value": "0"
+												"variable": "SpeedRun_gemas_cogidas",
+												"value": "1"
 											}
 										},
 										{
 											"id": "set-text",
 											"objectClass": "Gema_Currency_TXT",
-											"sid": 345734252018769,
+											"sid": 153429603545103,
 											"parameters": {
 												"text": "GEMAS_1&\"/5\""
 											}
 										},
 										{
-											"id": "tween-one-property",
-											"objectClass": "LIFES_TXT",
-											"sid": 444459804713635,
-											"behaviorType": "Tween",
+											"id": "spawn-another-object",
+											"objectClass": "Gema_currency",
+											"sid": 868584903340590,
 											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetY",
-												"end-value": "-30",
-												"time": "0.2",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no"
+												"object": "Gemas_particles",
+												"layer": "Self.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false
 											}
 										},
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 244218102670458,
+											"id": "set-angle",
+											"objectClass": "Gemas_particles",
+											"sid": 669962961694794,
 											"parameters": {
-												"seconds": "0.3"
+												"angle": "270"
 											}
 										},
 										{
-											"id": "add-to-eventvar",
-											"objectClass": "System",
-											"sid": 141325609187108,
+											"id": "set-collisions-enabled",
+											"objectClass": "Gema_currency",
+											"sid": 112559644464082,
 											"parameters": {
-												"variable": "VIDAS_1",
-												"value": "1"
+												"collisions": "disabled"
 											}
 										},
 										{
-											"id": "set-text",
-											"objectClass": "LIFES_TXT",
-											"sid": 436977858017866,
-											"parameters": {
-												"text": "VIDAS_1"
-											}
-										},
-										{
-											"id": "wait-for-previous-actions",
-											"objectClass": "System",
-											"sid": 633075307599254
-										},
-										{
-											"id": "set-y",
-											"objectClass": "LIFES_TXT",
-											"sid": 637983484416188,
-											"parameters": {
-												"y": "23"
-											}
+											"id": "destroy",
+											"objectClass": "Gema_currency",
+											"sid": 683571684365923
 										}
 									],
-									"sid": 579654613252155
-								}
-							]
-						},
-						{
-							"eventType": "comment",
-							"text": "SLOT 2 - GUARDADO"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 928015355471365,
-									"parameters": {
-										"variable": "SLOTS_Seleccionado_1_2_o_3",
-										"comparison": 0,
-										"value": "2"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 677088745060146,
-									"parameters": {
-										"variable": "GEMAS_2",
-										"value": "1"
-									}
+									"sid": 571065450099552,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 900108841666937,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 738204235626007,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 581507884661751
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 895738224959716,
+															"parameters": {
+																"audio-file": "Gemas_Pick_up",
+																"loop": "not-looping",
+																"volume": "0",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 170060567414738
+												}
+											]
+										}
+									]
 								},
-								{
-									"id": "set-text",
-									"objectClass": "Gema_Currency_TXT",
-									"sid": 111859486347867,
-									"parameters": {
-										"text": "GEMAS_2&\"/5\""
-									}
-								},
-								{
-									"id": "spawn-another-object",
-									"objectClass": "Gema_currency",
-									"sid": 357609868691720,
-									"parameters": {
-										"object": "Gemas_particles",
-										"layer": "Self.LayerName",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
-								},
-								{
-									"id": "set-angle",
-									"objectClass": "Gemas_particles",
-									"sid": 896056523355098,
-									"parameters": {
-										"angle": "270"
-									}
-								},
-								{
-									"id": "set-collisions-enabled",
-									"objectClass": "Gema_currency",
-									"sid": 796625308608142,
-									"parameters": {
-										"collisions": "disabled"
-									}
-								},
-								{
-									"id": "destroy",
-									"objectClass": "Gema_currency",
-									"sid": 382459249010856
-								}
-							],
-							"sid": 904130455314660,
-							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 812784599169964,
+											"sid": 950818020703197,
 											"parameters": {
-												"variable": "FX_sound",
-												"comparison": 0,
-												"value": "1"
+												"variable": "GEMAS_1",
+												"comparison": 5,
+												"value": "5"
 											}
 										}
 									],
 									"actions": [],
-									"sid": 981575138043328,
+									"sid": 205097794666156,
 									"children": [
 										{
 											"eventType": "block",
@@ -13005,230 +12905,230 @@
 												{
 													"id": "trigger-once-while-true",
 													"objectClass": "System",
-													"sid": 687416189979606
+													"sid": 932359744247749
 												}
 											],
 											"actions": [
 												{
-													"id": "play",
+													"id": "play-by-name",
 													"objectClass": "Audio",
-													"sid": 946979710831915,
+													"sid": 604408665404404,
 													"parameters": {
-														"audio-file": "Gemas_Pick_up",
+														"folder": "sounds",
+														"audio-file-name": "FX_sound=1? \"Coge_corazon\":\"\"",
 														"loop": "not-looping",
-														"volume": "0",
+														"volume": "VOLUMEN_MASTER_FX",
 														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 758910265973844,
+													"parameters": {
+														"variable": "GEMAS_1",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "Gema_Currency_TXT",
+													"sid": 748404461480634,
+													"parameters": {
+														"text": "GEMAS_1&\"/5\""
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "LIFES_TXT",
+													"sid": 299565904174080,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"\"",
+														"property": "offsetY",
+														"end-value": "-30",
+														"time": "0.2",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 377535933705734,
+													"parameters": {
+														"seconds": "0.3"
+													}
+												},
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 114966412232172,
+													"parameters": {
+														"variable": "VIDAS_1",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "LIFES_TXT",
+													"sid": 859502495573699,
+													"parameters": {
+														"text": "VIDAS_1"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 239196897471811
+												},
+												{
+													"id": "set-y",
+													"objectClass": "LIFES_TXT",
+													"sid": 388633335585670,
+													"parameters": {
+														"y": "23"
 													}
 												}
 											],
-											"sid": 482163120345508
+											"sid": 861793708984985
 										}
 									]
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
+								},
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 691051973847479,
-									"parameters": {
-										"variable": "GEMAS_2",
-										"comparison": 5,
-										"value": "5"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 844084367826907,
-							"children": [
+									"eventType": "comment",
+									"text": "SLOT 2 - GUARDADO"
+								},
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "trigger-once-while-true",
+											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 367737098745172
+											"sid": 489009795150125,
+											"parameters": {
+												"variable": "SLOTS_Seleccionado_1_2_o_3",
+												"comparison": 0,
+												"value": "2"
+											}
 										}
 									],
 									"actions": [
 										{
-											"id": "play-by-name",
-											"objectClass": "Audio",
-											"sid": 333239935858074,
-											"parameters": {
-												"folder": "sounds",
-												"audio-file-name": "FX_sound=1? \"Coge_corazon\":\"\"",
-												"loop": "not-looping",
-												"volume": "VOLUMEN_MASTER_FX",
-												"tag-optional": "\"\""
-											}
-										},
-										{
-											"id": "set-eventvar-value",
+											"id": "add-to-eventvar",
 											"objectClass": "System",
-											"sid": 947283921956852,
+											"sid": 815178810237611,
 											"parameters": {
 												"variable": "GEMAS_2",
-												"value": "0"
+												"value": "1"
 											}
 										},
 										{
 											"id": "set-text",
 											"objectClass": "Gema_Currency_TXT",
-											"sid": 356771861471609,
+											"sid": 974325183111132,
 											"parameters": {
 												"text": "GEMAS_2&\"/5\""
 											}
 										},
 										{
-											"id": "tween-one-property",
-											"objectClass": "LIFES_TXT",
-											"sid": 228546306515321,
-											"behaviorType": "Tween",
+											"id": "spawn-another-object",
+											"objectClass": "Gema_currency",
+											"sid": 810750631791289,
 											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetY",
-												"end-value": "-30",
-												"time": "0.2",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no"
+												"object": "Gemas_particles",
+												"layer": "Self.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false
 											}
 										},
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 473974695499337,
+											"id": "set-angle",
+											"objectClass": "Gemas_particles",
+											"sid": 744084999013814,
 											"parameters": {
-												"seconds": "0.3"
+												"angle": "270"
 											}
 										},
 										{
-											"id": "add-to-eventvar",
-											"objectClass": "System",
-											"sid": 240209622529284,
+											"id": "set-collisions-enabled",
+											"objectClass": "Gema_currency",
+											"sid": 583587158422036,
 											"parameters": {
-												"variable": "VIDAS_2",
-												"value": "1"
+												"collisions": "disabled"
 											}
 										},
 										{
-											"id": "set-text",
-											"objectClass": "LIFES_TXT",
-											"sid": 825437661786845,
-											"parameters": {
-												"text": "VIDAS_2"
-											}
-										},
-										{
-											"id": "wait-for-previous-actions",
-											"objectClass": "System",
-											"sid": 485903971283504
-										},
-										{
-											"id": "set-y",
-											"objectClass": "LIFES_TXT",
-											"sid": 978920113614227,
-											"parameters": {
-												"y": "23"
-											}
+											"id": "destroy",
+											"objectClass": "Gema_currency",
+											"sid": 881715863873101
 										}
 									],
-									"sid": 699826056475610
-								}
-							]
-						},
-						{
-							"eventType": "comment",
-							"text": "SLOT 3 - GUARDADO"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 146892183683972,
-									"parameters": {
-										"variable": "SLOTS_Seleccionado_1_2_o_3",
-										"comparison": 0,
-										"value": "3"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 227873800575062,
-									"parameters": {
-										"variable": "GEMAS_3",
-										"value": "1"
-									}
+									"sid": 443228628859796,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 218629932077140,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 454603389363558,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 370887452724282
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 454164448583315,
+															"parameters": {
+																"audio-file": "Gemas_Pick_up",
+																"loop": "not-looping",
+																"volume": "0",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 976707495439386
+												}
+											]
+										}
+									]
 								},
-								{
-									"id": "set-text",
-									"objectClass": "Gema_Currency_TXT",
-									"sid": 634560602546710,
-									"parameters": {
-										"text": "GEMAS_3&\"/5\""
-									}
-								},
-								{
-									"id": "spawn-another-object",
-									"objectClass": "Gema_currency",
-									"sid": 451048832272299,
-									"parameters": {
-										"object": "Gemas_particles",
-										"layer": "Self.LayerName",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
-								},
-								{
-									"id": "set-angle",
-									"objectClass": "Gemas_particles",
-									"sid": 492445352142848,
-									"parameters": {
-										"angle": "270"
-									}
-								},
-								{
-									"id": "set-collisions-enabled",
-									"objectClass": "Gema_currency",
-									"sid": 282740121874616,
-									"parameters": {
-										"collisions": "disabled"
-									}
-								},
-								{
-									"id": "destroy",
-									"objectClass": "Gema_currency",
-									"sid": 290657531152187
-								}
-							],
-							"sid": 996002868580950,
-							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 337128266377184,
+											"sid": 844041702349526,
 											"parameters": {
-												"variable": "FX_sound",
-												"comparison": 0,
-												"value": "1"
+												"variable": "GEMAS_2",
+												"comparison": 5,
+												"value": "5"
 											}
 										}
 									],
 									"actions": [],
-									"sid": 463128496356765,
+									"sid": 240883979898461,
 									"children": [
 										{
 											"eventType": "block",
@@ -13236,23 +13136,326 @@
 												{
 													"id": "trigger-once-while-true",
 													"objectClass": "System",
-													"sid": 369646168261626
+													"sid": 906823449874846
 												}
 											],
 											"actions": [
 												{
-													"id": "play",
+													"id": "play-by-name",
 													"objectClass": "Audio",
-													"sid": 830957738886415,
+													"sid": 862464776880825,
 													"parameters": {
-														"audio-file": "Gemas_Pick_up",
+														"folder": "sounds",
+														"audio-file-name": "FX_sound=1? \"Coge_corazon\":\"\"",
 														"loop": "not-looping",
-														"volume": "0",
+														"volume": "VOLUMEN_MASTER_FX",
 														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 915897751375236,
+													"parameters": {
+														"variable": "GEMAS_2",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "Gema_Currency_TXT",
+													"sid": 896711122846394,
+													"parameters": {
+														"text": "GEMAS_2&\"/5\""
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "LIFES_TXT",
+													"sid": 375139300211044,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"\"",
+														"property": "offsetY",
+														"end-value": "-30",
+														"time": "0.2",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 830932648172221,
+													"parameters": {
+														"seconds": "0.3"
+													}
+												},
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 937517643160647,
+													"parameters": {
+														"variable": "VIDAS_2",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "LIFES_TXT",
+													"sid": 752171137095974,
+													"parameters": {
+														"text": "VIDAS_2"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 992826666815284
+												},
+												{
+													"id": "set-y",
+													"objectClass": "LIFES_TXT",
+													"sid": 228799222078728,
+													"parameters": {
+														"y": "23"
 													}
 												}
 											],
-											"sid": 743557150305164
+											"sid": 898418307088960
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "SLOT 3 - GUARDADO"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 830289267518360,
+											"parameters": {
+												"variable": "SLOTS_Seleccionado_1_2_o_3",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 164559447141667,
+											"parameters": {
+												"variable": "GEMAS_3",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Gema_Currency_TXT",
+											"sid": 703408958897851,
+											"parameters": {
+												"text": "GEMAS_3&\"/5\""
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Gema_currency",
+											"sid": 938473414178184,
+											"parameters": {
+												"object": "Gemas_particles",
+												"layer": "Self.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "Gemas_particles",
+											"sid": 670193008863517,
+											"parameters": {
+												"angle": "270"
+											}
+										},
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "Gema_currency",
+											"sid": 135193747191646,
+											"parameters": {
+												"collisions": "disabled"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Gema_currency",
+											"sid": 462357893605174
+										}
+									],
+									"sid": 168843844450551,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 605459274216987,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 405361102617510,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 789530221667338
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 144374167241780,
+															"parameters": {
+																"audio-file": "Gemas_Pick_up",
+																"loop": "not-looping",
+																"volume": "0",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 891888564531765
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 853060289658491,
+											"parameters": {
+												"variable": "GEMAS_3",
+												"comparison": 5,
+												"value": "5"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 725280706888799,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 801119179538656
+												}
+											],
+											"actions": [
+												{
+													"id": "play-by-name",
+													"objectClass": "Audio",
+													"sid": 818986818152669,
+													"parameters": {
+														"folder": "sounds",
+														"audio-file-name": "FX_sound=1? \"Coge_corazon\":\"\"",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 738487365453098,
+													"parameters": {
+														"variable": "GEMAS_3",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "Gema_Currency_TXT",
+													"sid": 506631323027240,
+													"parameters": {
+														"text": "GEMAS_3&\"/5\""
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "LIFES_TXT",
+													"sid": 768152082859175,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"\"",
+														"property": "offsetY",
+														"end-value": "-30",
+														"time": "0.2",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 841478246551843,
+													"parameters": {
+														"seconds": "0.3"
+													}
+												},
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 308338570202698,
+													"parameters": {
+														"variable": "VIDAS_3",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "LIFES_TXT",
+													"sid": 299336558809321,
+													"parameters": {
+														"text": "VIDAS_3"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 601232867662203
+												},
+												{
+													"id": "set-y",
+													"objectClass": "LIFES_TXT",
+													"sid": 991476923540217,
+													"parameters": {
+														"y": "23"
+													}
+												}
+											],
+											"sid": 574327343352463
 										}
 									]
 								}
@@ -13262,18 +13465,16 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
+									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 523630682061269,
+									"sid": 971683105094668,
 									"parameters": {
-										"variable": "GEMAS_3",
-										"comparison": 5,
-										"value": "5"
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
 									}
 								}
 							],
 							"actions": [],
-							"sid": 420637370228869,
+							"sid": 557309249728326,
 							"children": [
 								{
 									"eventType": "block",
@@ -13281,95 +13482,230 @@
 										{
 											"id": "trigger-once-while-true",
 											"objectClass": "System",
-											"sid": 823555270646734
+											"sid": 260956975487045
 										}
 									],
 									"actions": [
 										{
-											"id": "play-by-name",
-											"objectClass": "Audio",
-											"sid": 370383968427149,
-											"parameters": {
-												"folder": "sounds",
-												"audio-file-name": "FX_sound=1? \"Coge_corazon\":\"\"",
-												"loop": "not-looping",
-												"volume": "VOLUMEN_MASTER_FX",
-												"tag-optional": "\"\""
-											}
-										},
-										{
-											"id": "set-eventvar-value",
+											"id": "add-to-eventvar",
 											"objectClass": "System",
-											"sid": 139842059704538,
+											"sid": 123010747168594,
 											"parameters": {
-												"variable": "GEMAS_3",
-												"value": "0"
-											}
-										},
-										{
-											"id": "set-text",
-											"objectClass": "Gema_Currency_TXT",
-											"sid": 965022755087270,
-											"parameters": {
-												"text": "GEMAS_3&\"/5\""
-											}
-										},
-										{
-											"id": "tween-one-property",
-											"objectClass": "LIFES_TXT",
-											"sid": 617407216955319,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetY",
-												"end-value": "-30",
-												"time": "0.2",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no"
-											}
-										},
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 102567484707443,
-											"parameters": {
-												"seconds": "0.3"
+												"variable": "SpeedRun_gemas_cogidas",
+												"value": "1"
 											}
 										},
 										{
 											"id": "add-to-eventvar",
 											"objectClass": "System",
-											"sid": 154846113433602,
+											"sid": 947789320529853,
 											"parameters": {
-												"variable": "VIDAS_3",
+												"variable": "Gemas_Speedrun",
 												"value": "1"
 											}
 										},
 										{
 											"id": "set-text",
-											"objectClass": "LIFES_TXT",
-											"sid": 120839015769892,
+											"objectClass": "Gema_Currency_TXT",
+											"sid": 786250089030317,
 											"parameters": {
-												"text": "VIDAS_3"
+												"text": "Gemas_Speedrun&\"/5\""
 											}
 										},
 										{
-											"id": "wait-for-previous-actions",
-											"objectClass": "System",
-											"sid": 925951722268812
+											"id": "spawn-another-object",
+											"objectClass": "Gema_currency",
+											"sid": 861547720264790,
+											"parameters": {
+												"object": "Gemas_particles",
+												"layer": "Self.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
 										},
 										{
-											"id": "set-y",
-											"objectClass": "LIFES_TXT",
-											"sid": 184510633014779,
+											"id": "set-angle",
+											"objectClass": "Gemas_particles",
+											"sid": 468662566192138,
 											"parameters": {
-												"y": "23"
+												"angle": "270"
+											}
+										},
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "Gema_currency",
+											"sid": 457576808303874,
+											"parameters": {
+												"collisions": "disabled"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Gema_currency",
+											"sid": 340947877268947
+										}
+									],
+									"sid": 625723180344532,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 408583289701901,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 278280123083915,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 692338395624191
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 848577732578012,
+															"parameters": {
+																"audio-file": "Gemas_Pick_up",
+																"loop": "not-looping",
+																"volume": "0",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 512849034372910
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 724010364236172,
+											"parameters": {
+												"variable": "Gemas_Speedrun",
+												"comparison": 5,
+												"value": "5"
 											}
 										}
 									],
-									"sid": 419271773055362
+									"actions": [],
+									"sid": 143881745696448,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 473462700843660
+												}
+											],
+											"actions": [
+												{
+													"id": "play-by-name",
+													"objectClass": "Audio",
+													"sid": 640762569134851,
+													"parameters": {
+														"folder": "sounds",
+														"audio-file-name": "FX_sound=1? \"Coge_corazon\":\"\"",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 355360361902101,
+													"parameters": {
+														"variable": "Gemas_Speedrun",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "Gema_Currency_TXT",
+													"sid": 831566614041617,
+													"parameters": {
+														"text": "Gemas_Speedrun&\"/5\""
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "LIFES_TXT",
+													"sid": 644147018375275,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"\"",
+														"property": "offsetY",
+														"end-value": "-30",
+														"time": "0.2",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 267602416552488,
+													"parameters": {
+														"seconds": "0.3"
+													}
+												},
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 277154429862958,
+													"parameters": {
+														"variable": "Vidas_Speedrun",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "LIFES_TXT",
+													"sid": 217321421953815,
+													"parameters": {
+														"text": "Vidas_Speedrun"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 396666693493298
+												},
+												{
+													"id": "set-y",
+													"objectClass": "LIFES_TXT",
+													"sid": 270589131011232,
+													"parameters": {
+														"y": "23"
+													}
+												}
+											],
+											"sid": 766822531102757
+										}
+									]
 								}
 							]
 						}

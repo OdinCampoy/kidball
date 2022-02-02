@@ -116,6 +116,34 @@
 			"sid": 224052622346868
 		},
 		{
+			"eventType": "comment",
+			"text": "VARIABLE DE SELECCION EN PORTADA QUE NO SE PUEDA ELEGIR UNA OPCION 2 VECES"
+		},
+		{
+			"eventType": "variable",
+			"name": "OPCION_ELEGIDA_YA",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "PARA CUANDO ELIGES UNA OPCION EN MENU NO PODER VOLVERLA A ELEGIR",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 542047413294386
+		},
+		{
+			"eventType": "comment",
+			"text": "VARIABLE DE PARA LA ANIMACION DE PORTADA SOLO LA HAGA LA PRIMERA VEZ"
+		},
+		{
+			"eventType": "variable",
+			"name": "ANIMACION_PORTADA",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "HACE LA ANIMACION DE PORTADA UNA SOLA VEZ",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 442164752577802
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -124,525 +152,1126 @@
 					"sid": 638192072681619
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 863344647005912,
+			"children": [
 				{
-					"id": "set-text",
-					"objectClass": "PORTADA_play_TXT",
-					"sid": 963693596561612,
-					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,1)"
-					}
+					"eventType": "comment",
+					"text": "LA PRIMERA VEZ QUE ENTRA AL MENU"
 				},
 				{
-					"id": "set-text",
-					"objectClass": "PORTADA_speedrun_TXT",
-					"sid": 969308131269528,
-					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,51)"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 919070133219487,
+							"parameters": {
+								"variable": "ANIMACION_PORTADA"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 543475700264050,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 587470863468212
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 153214474559500,
+									"parameters": {
+										"variable": "OPCION_ELEGIDA_YA",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_play_TXT",
+									"sid": 859483264667867,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,1)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_speedrun_TXT",
+									"sid": 853220646939905,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,51)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_setting_TXT",
+									"sid": 144275540812003,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,2)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_credits_TXT",
+									"sid": 587904963278250,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,3)"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 436676236939306,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 537366786200197,
+									"parameters": {
+										"variable": "GAMEPAD_CENTER",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 981695639435631,
+									"parameters": {
+										"variable": "Portada_Opcion_Elegida",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 281638972199120,
+									"parameters": {
+										"variable": "Portada_Maquina_Estado",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 797332484995606,
+									"parameters": {
+										"variable": "Portada_portada_seleccion",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 115988175448867,
+									"parameters": {
+										"variable": "Portada_opciones_seleccion",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 204524406955437,
+									"parameters": {
+										"variable": "Game_Manager_Portada",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 957221704554444,
+									"parameters": {
+										"seconds": "0.4"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "portada_imagenes_5",
+									"sid": 456989831618381,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"sale_titulo_juego\"",
+										"property": "offsetY",
+										"end-value": "100",
+										"time": "1",
+										"ease": "easeoutbounce",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 468928177635895,
+									"parameters": {
+										"seconds": "0.25"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "PORTADA_play_TXT",
+									"sid": 657493699160576,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "600",
+										"time": "0.6",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 352425724903769,
+									"parameters": {
+										"seconds": "0.25"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "PORTADA_speedrun_TXT",
+									"sid": 422988055082730,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "600",
+										"time": "0.6",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 286952865891512,
+									"parameters": {
+										"seconds": "0.25"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "PORTADA_setting_TXT",
+									"sid": 491583718075020,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "600",
+										"time": "0.6",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 339342553540321,
+									"parameters": {
+										"seconds": "0.25"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "PORTADA_credits_TXT",
+									"sid": 924992020733509,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"sale_texto_credits\"",
+										"property": "offsetX",
+										"end-value": "600",
+										"time": "0.6",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_SoundFx_txt",
+									"sid": 628615283609224,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_SoundFx_icon",
+									"sid": 599643975273860,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_SoundFx_icon_L",
+									"sid": 709039380461377,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_SoundFx_icon_R",
+									"sid": 271700643999411,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Music_txt",
+									"sid": 779047487456237,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Music_icon",
+									"sid": 878699046648774,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Music_icon_L",
+									"sid": 403286037648321,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Music_icon_R",
+									"sid": 802542712283217,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Leng_txt",
+									"sid": 496586488063263,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+									"sid": 737424978005840,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Leng_Icon_left",
+									"sid": 172101451012199,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Leng_Icon_left2",
+									"sid": 130026339305497,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Exit_txt",
+									"sid": 116508406069245,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Button_Leyend",
+									"sid": 589693150521817,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Selected_txt",
+									"sid": 135396699525437,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Creditos_1",
+									"sid": 366354778516406,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_creditos",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Creditos_2",
+									"sid": 720267412556896,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_creditos",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Creditos_Back",
+									"sid": 117643983354915,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_creditos",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_creditos_Button_Leyend",
+									"sid": 427767528457505,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_creditos",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 212389340967369,
+									"parameters": {
+										"seconds": "0.2"
+									}
+								},
+								{
+									"id": "set-x",
+									"objectClass": "Portada_Tablon_creditos",
+									"sid": 127722406672373,
+									"parameters": {
+										"x": "431"
+									}
+								}
+							],
+							"sid": 487101863104762
+						}
+					]
 				},
 				{
-					"id": "set-text",
-					"objectClass": "PORTADA_setting_TXT",
-					"sid": 672292232578041,
-					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,2)"
-					}
+					"eventType": "comment",
+					"text": "PARA LAS OTRAS VECES QUE ACCEDES AL LAYOUT TODO ESTARA EN SU SITIO YA"
 				},
 				{
-					"id": "set-text",
-					"objectClass": "PORTADA_credits_TXT",
-					"sid": 616976711188946,
-					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,3)"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 789275901896229,
-					"parameters": {
-						"variable": "SPEEDRUN_mode_TRUE_FALSE",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 169363210727431,
-					"parameters": {
-						"variable": "GAMEPAD_CENTER",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 232601605500265,
-					"parameters": {
-						"variable": "Portada_Opcion_Elegida",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 812452059891483,
-					"parameters": {
-						"variable": "Portada_Maquina_Estado",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 589324920096568,
-					"parameters": {
-						"variable": "Portada_portada_seleccion",
-						"value": "\"vacio\""
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 371050591260502,
-					"parameters": {
-						"variable": "Portada_opciones_seleccion",
-						"value": "\"vacio\""
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 994813848112610,
-					"parameters": {
-						"variable": "Game_Manager_Portada",
-						"value": "\"vacio\""
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 417338912703822,
-					"parameters": {
-						"seconds": "0.4"
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "portada_imagenes_5",
-					"sid": 617037082002840,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"sale_titulo_juego\"",
-						"property": "offsetY",
-						"end-value": "100",
-						"time": "1",
-						"ease": "easeoutbounce",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 976844329737381,
-					"parameters": {
-						"seconds": "0.25"
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "PORTADA_play_TXT",
-					"sid": 598059090985499,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\"",
-						"property": "offsetX",
-						"end-value": "600",
-						"time": "0.6",
-						"ease": "easeoutexpo",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 472364044031153,
-					"parameters": {
-						"seconds": "0.25"
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "PORTADA_speedrun_TXT",
-					"sid": 531977623922836,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\"",
-						"property": "offsetX",
-						"end-value": "600",
-						"time": "0.6",
-						"ease": "easeoutexpo",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 374233966816871,
-					"parameters": {
-						"seconds": "0.25"
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "PORTADA_setting_TXT",
-					"sid": 112715650301580,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\"",
-						"property": "offsetX",
-						"end-value": "600",
-						"time": "0.6",
-						"ease": "easeoutexpo",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 437964229871086,
-					"parameters": {
-						"seconds": "0.25"
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "PORTADA_credits_TXT",
-					"sid": 863546797403329,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"sale_texto_credits\"",
-						"property": "offsetX",
-						"end-value": "600",
-						"time": "0.6",
-						"ease": "easeoutexpo",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no"
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_SoundFx_txt",
-					"sid": 116547918602340,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_SoundFx_icon",
-					"sid": 175803230837670,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_SoundFx_icon_L",
-					"sid": 867729635866524,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_SoundFx_icon_R",
-					"sid": 860268895875234,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Music_txt",
-					"sid": 942862309345833,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Music_icon",
-					"sid": 539644732474678,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Music_icon_L",
-					"sid": 917842400201801,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Music_icon_R",
-					"sid": 875644152416166,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Leng_txt",
-					"sid": 559150596982528,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Leng_Txt_Center",
-					"sid": 423784417094269,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Leng_Icon_left",
-					"sid": 671742847505045,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Leng_Icon_left2",
-					"sid": 188249315703237,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Exit_txt",
-					"sid": 804435966447119,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Button_Leyend",
-					"sid": 535491639195071,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Selected_txt",
-					"sid": 878780347347361,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_opciones",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Creditos_1",
-					"sid": 766052191443101,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_creditos",
-						"x": true,
-						"y": true,
-						"angle": true,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Creditos_2",
-					"sid": 425419199668295,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_creditos",
-						"x": true,
-						"y": true,
-						"angle": true,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_Opc_Creditos_Back",
-					"sid": 900988821901862,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_creditos",
-						"x": true,
-						"y": true,
-						"angle": true,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PORTADA_creditos_Button_Leyend",
-					"sid": 228782868254260,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Portada_Tablon_creditos",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 690087466170982,
-					"parameters": {
-						"seconds": "0.2"
-					}
-				},
-				{
-					"id": "set-x",
-					"objectClass": "Portada_Tablon_creditos",
-					"sid": 505955168726757,
-					"parameters": {
-						"x": "431"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 438090613193706,
+							"parameters": {
+								"variable": "ANIMACION_PORTADA"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 980853183537433,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 514035952492552
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 182005981867778,
+									"parameters": {
+										"variable": "OPCION_ELEGIDA_YA",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_play_TXT",
+									"sid": 467545669166155,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,1)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_speedrun_TXT",
+									"sid": 628338794231420,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,51)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_setting_TXT",
+									"sid": 491978513336864,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,2)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_credits_TXT",
+									"sid": 656271873019716,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,3)"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 313104458471375,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 221286479628749,
+									"parameters": {
+										"variable": "GAMEPAD_CENTER",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 361314816864398,
+									"parameters": {
+										"variable": "Portada_Opcion_Elegida",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 568475075279108,
+									"parameters": {
+										"variable": "Portada_Maquina_Estado",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 575826333495719,
+									"parameters": {
+										"variable": "Portada_portada_seleccion",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 526822155777590,
+									"parameters": {
+										"variable": "Portada_opciones_seleccion",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 981196853992859,
+									"parameters": {
+										"variable": "Game_Manager_Portada",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 671603110431789,
+									"disabled": true,
+									"parameters": {
+										"seconds": "0.4"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "portada_imagenes_5",
+									"sid": 834359126669973,
+									"parameters": {
+										"x": "Self.X",
+										"y": "100"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "PORTADA_play_TXT",
+									"sid": 902431836903714,
+									"parameters": {
+										"x": "600",
+										"y": "Self.Y"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 475615527332034,
+									"disabled": true,
+									"parameters": {
+										"seconds": "0.25"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "PORTADA_speedrun_TXT",
+									"sid": 132829445837634,
+									"parameters": {
+										"x": "600",
+										"y": "Self.Y"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 750178048315153,
+									"disabled": true,
+									"parameters": {
+										"seconds": "0.25"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "PORTADA_setting_TXT",
+									"sid": 418524401861985,
+									"parameters": {
+										"x": "600",
+										"y": "Self.Y"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 827858414271214,
+									"disabled": true,
+									"parameters": {
+										"seconds": "0.25"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "PORTADA_credits_TXT",
+									"sid": 452450463082051,
+									"parameters": {
+										"x": "600",
+										"y": "Self.Y"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "portada_imagenes_5",
+									"sid": 865536010733859,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "active"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_SoundFx_txt",
+									"sid": 103853283726961,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_SoundFx_icon",
+									"sid": 895822058939764,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_SoundFx_icon_L",
+									"sid": 277584360055844,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_SoundFx_icon_R",
+									"sid": 394554265413239,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Music_txt",
+									"sid": 824230442184655,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Music_icon",
+									"sid": 507975114884818,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Music_icon_L",
+									"sid": 687992281049281,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Music_icon_R",
+									"sid": 966927655288295,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Leng_txt",
+									"sid": 938331010761598,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+									"sid": 452038778047112,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Leng_Icon_left",
+									"sid": 706978078735849,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Leng_Icon_left2",
+									"sid": 143707455325561,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Exit_txt",
+									"sid": 826046706135839,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Button_Leyend",
+									"sid": 683314912488444,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Selected_txt",
+									"sid": 283833308382559,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Creditos_1",
+									"sid": 142916457470723,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_creditos",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Creditos_2",
+									"sid": 218630059214423,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_creditos",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_Creditos_Back",
+									"sid": 309514319894005,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_creditos",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_creditos_Button_Leyend",
+									"sid": 715265888482107,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_creditos",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 825665892097282,
+									"disabled": true,
+									"parameters": {
+										"seconds": "0.2"
+									}
+								},
+								{
+									"id": "set-x",
+									"objectClass": "Portada_Tablon_creditos",
+									"sid": 483514835858175,
+									"parameters": {
+										"x": "431"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "PORTADA_SELECTOR_ICONO",
+									"sid": 732288459551448,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 295214887169724,
+									"parameters": {
+										"variable": "Portada_portada_seleccion",
+										"value": "\"jugar\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 232063178272767,
+									"parameters": {
+										"variable": "Game_Manager_Portada",
+										"value": "\"portada\""
+									}
+								}
+							],
+							"sid": 275296335894036
+						}
+					]
 				}
-			],
-			"sid": 863344647005912
+			]
 		},
 		{
 			"eventType": "block",
@@ -843,44 +1472,71 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tweens-finished",
-					"objectClass": "PORTADA_credits_TXT",
-					"sid": 128411077154559,
-					"behaviorType": "Tween",
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 427136238039331,
 					"parameters": {
-						"tags": "\"sale_texto_credits\""
-					}
+						"variable": "ANIMACION_PORTADA"
+					},
+					"isInverted": true
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 288099092771818,
+			"children": [
 				{
-					"id": "set-visible",
-					"objectClass": "PORTADA_SELECTOR_ICONO",
-					"sid": 659798250314770,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 618696733248543,
-					"parameters": {
-						"variable": "Portada_portada_seleccion",
-						"value": "\"jugar\""
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 197865531205589,
-					"parameters": {
-						"variable": "Game_Manager_Portada",
-						"value": "\"portada\""
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "PORTADA_credits_TXT",
+							"sid": 510011784995067,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"sale_texto_credits\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PORTADA_SELECTOR_ICONO",
+							"sid": 308850304316195,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 159031103948313,
+							"parameters": {
+								"variable": "Portada_portada_seleccion",
+								"value": "\"jugar\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 827590161821556,
+							"parameters": {
+								"variable": "Game_Manager_Portada",
+								"value": "\"portada\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 477379603134170,
+							"parameters": {
+								"variable": "ANIMACION_PORTADA",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 657674517395161
 				}
-			],
-			"sid": 591633848946615
+			]
 		},
 		{
 			"eventType": "group",
@@ -1207,20 +1863,20 @@
 											],
 											"actions": [
 												{
-													"id": "set-eventvar-value",
+													"id": "set-boolean-eventvar",
 													"objectClass": "System",
-													"sid": 400635991632572,
+													"sid": 513343091048487,
 													"parameters": {
-														"variable": "GAMEPAD_CENTER",
-														"value": "1"
+														"variable": "OPCION_ELEGIDA_YA",
+														"value": "true"
 													}
 												},
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 683623110255797,
+													"sid": 400635991632572,
 													"parameters": {
-														"variable": "Portada_Opcion_Elegida",
+														"variable": "GAMEPAD_CENTER",
 														"value": "1"
 													}
 												},
