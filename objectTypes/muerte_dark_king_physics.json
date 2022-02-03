@@ -1,35 +1,46 @@
 {
-	"name": "boss_colision_right",
+	"name": "muerte_DARK_KING_physics",
 	"plugin-id": "Sprite",
-	"sid": 858679976854293,
+	"sid": 404833806979339,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 832900574732665
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 103242063736552
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 32,
-						"height": 32,
+						"width": 12,
+						"height": 12,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1.3333333333333333,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8926449,
+						"imageSpriteId": 581917,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 590617821744522,
-				"name": "Default",
+				"sid": 833005478667595,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 0
 			}
 		],
 		"subfolders": []

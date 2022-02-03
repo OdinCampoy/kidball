@@ -49,6 +49,15 @@
 					}
 				},
 				{
+					"id": "set-animation",
+					"objectClass": "bola_ROSA",
+					"sid": 898394548355518,
+					"parameters": {
+						"animation": "\"rosa\"",
+						"from": "beginning"
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 960826719338656,
@@ -191,10 +200,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 824476422247599,
+									"sid": 394584531460265,
 									"parameters": {
 										"variable": "Nivel_actual_1",
-										"value": "50"
+										"value": "94"
 									}
 								},
 								{
@@ -290,10 +299,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 118843037979838,
+									"sid": 302115897733081,
 									"parameters": {
 										"variable": "Nivel_actual_2",
-										"value": "50"
+										"value": "94"
 									}
 								},
 								{
@@ -389,10 +398,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 513282860045964,
+									"sid": 947336017469608,
 									"parameters": {
 										"variable": "Nivel_actual_3",
-										"value": "50"
+										"value": "94"
 									}
 								},
 								{
@@ -605,6 +614,14 @@
 							}
 						},
 						{
+							"id": "start-animation",
+							"objectClass": "bola",
+							"sid": 578088295399240,
+							"parameters": {
+								"from": "beginning"
+							}
+						},
+						{
 							"id": "set-vector-y",
 							"objectClass": "bola",
 							"sid": 512201659735447,
@@ -659,9 +676,17 @@
 			],
 			"actions": [
 				{
+					"id": "start-animation",
+					"objectClass": "bola_ROSA",
+					"sid": 700396185377403,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
 					"id": "simulate-control",
 					"objectClass": "bola_ROSA",
-					"sid": 948584907471220,
+					"sid": 647202425884136,
 					"behaviorType": "Platform",
 					"parameters": {
 						"control": "jump"
@@ -670,7 +695,7 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "bola_ROSA",
-					"sid": 368713817545665,
+					"sid": 309963352414191,
 					"parameters": {
 						"object": "polvo",
 						"layer": "\"pelota\"",
@@ -681,7 +706,7 @@
 				{
 					"id": "set-angle",
 					"objectClass": "polvo",
-					"sid": 537392827824561,
+					"sid": 244793357697773,
 					"parameters": {
 						"angle": "270"
 					}
