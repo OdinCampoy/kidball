@@ -2,6 +2,16 @@
 	"name": "Ev_Speedrun_Juego",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "SpeedRun_numero_de_Castillo_para_Tiempo",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Segun el nivel se asigna un numero de castillo para que el tiempo en la partida de speedrun se guarde por castillo jugado",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 843704947783337
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -100,7 +110,769 @@
 							}
 						}
 					],
-					"sid": 408522886107458
+					"sid": 408522886107458,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 828917808517608,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Room_1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 254292470827312,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"value": "1"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "reseteo de contador de tiempo para el siguiente castillo"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 700474146798592,
+									"parameters": {
+										"variable": "speedrun_tiempo_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 525017016100435,
+									"parameters": {
+										"variable": "hours_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 676707159090786,
+									"parameters": {
+										"variable": "minutes_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 234850822417816,
+									"parameters": {
+										"variable": "seconds_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 273124498951852,
+									"parameters": {
+										"variable": "millisecs_por_castillo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 106870178747846
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 122637790162893,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Room_11\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 889824492003328,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"value": "2"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "reseteo de contador de tiempo para el siguiente castillo"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 904108835358041,
+									"parameters": {
+										"variable": "speedrun_tiempo_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 293832181944447,
+									"parameters": {
+										"variable": "hours_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 350309394009280,
+									"parameters": {
+										"variable": "minutes_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 591437298637200,
+									"parameters": {
+										"variable": "seconds_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 673558339593490,
+									"parameters": {
+										"variable": "millisecs_por_castillo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 384508636300159
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 406067656027874,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Room_21\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 253234167759691,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"value": "3"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "reseteo de contador de tiempo para el siguiente castillo"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 362806569809447,
+									"parameters": {
+										"variable": "speedrun_tiempo_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 319935988227963,
+									"parameters": {
+										"variable": "hours_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 824456595100261,
+									"parameters": {
+										"variable": "minutes_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 870056832878247,
+									"parameters": {
+										"variable": "seconds_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 870967956613700,
+									"parameters": {
+										"variable": "millisecs_por_castillo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 447782967938555
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 596187585041424,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Room_31\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 232675571036858,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"value": "4"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "reseteo de contador de tiempo para el siguiente castillo"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 151265370445374,
+									"parameters": {
+										"variable": "speedrun_tiempo_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 746642286665169,
+									"parameters": {
+										"variable": "hours_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 611795590126610,
+									"parameters": {
+										"variable": "minutes_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 331599250894244,
+									"parameters": {
+										"variable": "seconds_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 344380578222337,
+									"parameters": {
+										"variable": "millisecs_por_castillo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 598651990034139
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 461156564353126,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Room_41\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 940806137954618,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"value": "5"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "reseteo de contador de tiempo para el siguiente castillo"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 225128041621574,
+									"parameters": {
+										"variable": "speedrun_tiempo_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 989315717465014,
+									"parameters": {
+										"variable": "hours_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 797086004220331,
+									"parameters": {
+										"variable": "minutes_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 153173016114288,
+									"parameters": {
+										"variable": "seconds_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 995024527736662,
+									"parameters": {
+										"variable": "millisecs_por_castillo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 515682936098799
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 123398816011504,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Room_51\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 567702900768495,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"value": "6"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "reseteo de contador de tiempo para el siguiente castillo"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 232083914687765,
+									"parameters": {
+										"variable": "speedrun_tiempo_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 903307105389254,
+									"parameters": {
+										"variable": "hours_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 952881936801133,
+									"parameters": {
+										"variable": "minutes_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 765318801978592,
+									"parameters": {
+										"variable": "seconds_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 531927930330523,
+									"parameters": {
+										"variable": "millisecs_por_castillo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 577886068430169
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 913066544076207,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Room_61\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 210724854208661,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"value": "7"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "reseteo de contador de tiempo para el siguiente castillo"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 587197135669012,
+									"parameters": {
+										"variable": "speedrun_tiempo_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 677088832312078,
+									"parameters": {
+										"variable": "hours_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 345635537730295,
+									"parameters": {
+										"variable": "minutes_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 435606537901986,
+									"parameters": {
+										"variable": "seconds_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 595182215479785,
+									"parameters": {
+										"variable": "millisecs_por_castillo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 874500996618405
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 741916761535140,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Room_71\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 333385867913663,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"value": "8"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "reseteo de contador de tiempo para el siguiente castillo"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 387062162340218,
+									"parameters": {
+										"variable": "speedrun_tiempo_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 502569374151910,
+									"parameters": {
+										"variable": "hours_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 559984068181946,
+									"parameters": {
+										"variable": "minutes_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 567264560800430,
+									"parameters": {
+										"variable": "seconds_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 539379359271808,
+									"parameters": {
+										"variable": "millisecs_por_castillo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 593390363292625
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 418166081196070,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Room_81\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 567725735014049,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"value": "9"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "reseteo de contador de tiempo para el siguiente castillo"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 769427409505253,
+									"parameters": {
+										"variable": "speedrun_tiempo_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 875280101581578,
+									"parameters": {
+										"variable": "hours_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 443872316391074,
+									"parameters": {
+										"variable": "minutes_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 272943418905075,
+									"parameters": {
+										"variable": "seconds_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 776802514466435,
+									"parameters": {
+										"variable": "millisecs_por_castillo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 951953080556023
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 157578295559643,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Room_91\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 743806040336165,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"value": "10"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "reseteo de contador de tiempo para el siguiente castillo"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 612293119690317,
+									"parameters": {
+										"variable": "speedrun_tiempo_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 243644431448328,
+									"parameters": {
+										"variable": "hours_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 378592504766384,
+									"parameters": {
+										"variable": "minutes_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 292981434347569,
+									"parameters": {
+										"variable": "seconds_por_castillo",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 540907563841132,
+									"parameters": {
+										"variable": "millisecs_por_castillo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 565269841160325
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -339,6 +1111,16 @@
 										"first-value": "LayoutName",
 										"comparison": 1,
 										"second-value": "\"9M_TRANSICION_CASTILLOS\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 582211689590545,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 1,
+										"second-value": "\"10M_CHECKPOINT\""
 									}
 								},
 								{
@@ -610,6 +1392,56 @@
 			"sid": 628917917982296
 		},
 		{
+			"eventType": "variable",
+			"name": "hours_por_castillo",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 985178209103997
+		},
+		{
+			"eventType": "variable",
+			"name": "minutes_por_castillo",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 539130044152766
+		},
+		{
+			"eventType": "variable",
+			"name": "seconds_por_castillo",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 723643693030050
+		},
+		{
+			"eventType": "variable",
+			"name": "millisecs_por_castillo",
+			"type": "string",
+			"initialValue": "00",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 299203548019630
+		},
+		{
+			"eventType": "variable",
+			"name": "speedrun_tiempo_por_castillo",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "coge el tiempo del DT para el tiempo de cada castillo",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 755300049693147
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "SPEED RUNNER TEMPORIZADOR",
@@ -646,6 +1478,15 @@
 							"sid": 490029790743820,
 							"parameters": {
 								"variable": "SpeedRun_tiempo_nivel",
+								"value": "dt"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 221112185359810,
+							"parameters": {
+								"variable": "speedrun_tiempo_por_castillo",
 								"value": "dt"
 							}
 						},
@@ -696,7 +1537,44 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
+							"sid": 248319829617672,
+							"parameters": {
+								"variable": "hours_por_castillo",
+								"value": "zeropad(floor(floor(speedrun_tiempo_por_castillo/60)/60)%24,2)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 104631391154700,
+							"parameters": {
+								"variable": "minutes_por_castillo",
+								"value": "zeropad(floor(speedrun_tiempo_por_castillo/60)%60,2)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 149130494821690,
+							"parameters": {
+								"variable": "seconds_por_castillo",
+								"value": "zeropad(int((speedrun_tiempo_por_castillo)%60),2)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 479637915194457,
+							"parameters": {
+								"variable": "millisecs_por_castillo",
+								"value": "mid(tokenat(str(speedrun_tiempo_por_castillo),1,\".\"),0,2)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
 							"sid": 821149880210421,
+							"disabled": true,
 							"parameters": {
 								"variable": "Castillo_Speedrun_time_1",
 								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
@@ -706,6 +1584,7 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 192510171637722,
+							"disabled": true,
 							"parameters": {
 								"variable": "Castillo_Speedrun_time_2",
 								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
@@ -715,6 +1594,7 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 580845936943854,
+							"disabled": true,
 							"parameters": {
 								"variable": "Castillo_Speedrun_time_3",
 								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
@@ -724,6 +1604,7 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 556063285688653,
+							"disabled": true,
 							"parameters": {
 								"variable": "Castillo_Speedrun_time_4",
 								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
@@ -733,6 +1614,7 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 290968757676751,
+							"disabled": true,
 							"parameters": {
 								"variable": "Castillo_Speedrun_time_5",
 								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
@@ -742,6 +1624,7 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 650378435303235,
+							"disabled": true,
 							"parameters": {
 								"variable": "Castillo_Speedrun_time_6",
 								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
@@ -751,6 +1634,7 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 101185283951845,
+							"disabled": true,
 							"parameters": {
 								"variable": "Castillo_Speedrun_time_7",
 								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
@@ -760,6 +1644,7 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 373864915912228,
+							"disabled": true,
 							"parameters": {
 								"variable": "Castillo_Speedrun_time_8",
 								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
@@ -769,6 +1654,7 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 740918870420347,
+							"disabled": true,
 							"parameters": {
 								"variable": "Castillo_Speedrun_time_9",
 								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
@@ -778,13 +1664,34 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 841002695427169,
+							"disabled": true,
 							"parameters": {
 								"variable": "Castillo_Speedrun_time_10",
 								"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
 							}
 						}
 					],
-					"sid": 393283917768206
+					"sid": 393283917768206,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 606854016097446,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 996321492455342,
+							"disabled": true
+						}
+					]
 				}
 			],
 			"sid": 948953226426571
@@ -1587,10 +2494,843 @@
 					"eventType": "function-block",
 					"conditions": [],
 					"actions": [],
-					"sid": 117547761386842
+					"sid": 117547761386842,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 159258340780396
+								}
+							],
+							"actions": [
+								{
+									"id": "play-by-name",
+									"objectClass": "Audio",
+									"sid": 954747249380722,
+									"parameters": {
+										"folder": "sounds",
+										"audio-file-name": "FX_sound=1? \"Transicion_Sonido\":\"nada\"",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 266132410982546,
+									"parameters": {
+										"object-to-create": "Transicion_Animacion",
+										"layer": "\"salida\"",
+										"x": "431",
+										"y": "240",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 516807381936676,
+									"parameters": {
+										"seconds": "1.5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 162859496147429,
+									"parameters": {
+										"audio-file": "Kidball_menu_loop",
+										"loop": "looping",
+										"volume": "VOLUMEN_MASTER_MUSIC",
+										"tag-optional": "\"Musica_portada\"\r\n"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 786077782818641,
+									"parameters": {
+										"layout": "SpeedRun_Resumen"
+									}
+								}
+							],
+							"sid": 823365520991147
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 880972185926763,
+									"parameters": {
+										"variable": "MUSIC_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 527148590444996,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_1\"",
+										"db": "-100",
+										"duration": "1",
+										"ending": "stop"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 231525389315307,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_2\"",
+										"db": "-100",
+										"duration": "1",
+										"ending": "stop"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 103380103153142,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_3\"",
+										"db": "-100",
+										"duration": "1",
+										"ending": "stop"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 309613947214865,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_4\"",
+										"db": "-100",
+										"duration": "1",
+										"ending": "stop"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 375152544189290,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_5\"",
+										"db": "-100",
+										"duration": "1",
+										"ending": "stop"
+									}
+								}
+							],
+							"sid": 853615903198271
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 165979908244976,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 341133321917327,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_1",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 990226847411901
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 957725078619360,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 498570221822751,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_2",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 135771879626113
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 618819407421146,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 532692732075102,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_3",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 682838195446897
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 327001092379857,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 260644434506633,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_4",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 162931104493832
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 947080731777703,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 787508650545405,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_5",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 181296776074464
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 490133381389826,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 860223840881639,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_6",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 707636946542718
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 161543735837119,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 432204647607538,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_7",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 873558151530307
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 786699314248765,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "8"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 440236592642858,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_8",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 755391332220297
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 939594243114422,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "9"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 157300491052430,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_9",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 393651446238495
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 378154740667769,
+									"parameters": {
+										"variable": "SpeedRun_numero_de_Castillo_para_Tiempo",
+										"comparison": 0,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 692497815609668,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_10",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 740453964672934
+						}
+					]
 				}
 			],
 			"sid": 242608988041764
+		},
+		{
+			"functionName": "SPEEDRUN - Guarda el tiempo de cada Castillo para el resumen",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 849448116196589,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 629588174955314,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Room_10\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 174113731117275,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 716629885927023
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 221161078384198,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_1",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 487742150503588
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 271726086130720,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Room_20\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 759142157652404,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 371901759805948
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 329561655213136,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_2",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 411074117931280
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 399773736086424,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Room_30\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 293344907803305,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 681576615896035
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 200858926015716,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_3",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 733084790690344
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 762606900619052,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Room_40\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 712273649877126,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 756340355359959
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 499037653187411,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_4",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 580234608914670
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 424791822298273,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"1_Room_FINAL BOSS\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 652352520481270,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 440134832791749
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 704142438583197,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_5",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 328669247782230
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 498011240044837,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Room_60\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 532034665246491,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 589492637335463
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 812338025190150,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_6",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 592719054256861
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 172194904480236,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Room_70\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 146558628959986,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 354607759583539
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 270464802619494,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_7",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 627628798736841
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 529282923215061,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Room_80\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 862975041024196,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 526649441046721
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 485446228462123,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_8",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 304393511476071
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 653230754310254,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Room_90\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 177818902081292,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 789578595999762
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 351697377041907,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_9",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 351613655803020
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 578458689707508,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"2_Room_FINAL BOSS2\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 785539789021965,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 710771486552847
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 611601704587706,
+									"parameters": {
+										"variable": "Castillo_Speedrun_time_10",
+										"value": "hours_por_castillo&\":\"& minutes_por_castillo & \":\" & seconds_por_castillo & \":\" & millisecs_por_castillo"
+									}
+								}
+							],
+							"sid": 341490088815098
+						}
+					]
+				}
+			]
 		}
 	],
 	"sid": 756136531574761

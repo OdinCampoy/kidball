@@ -4429,6 +4429,11 @@
 															}
 														},
 														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 736657544713354
+														},
+														{
 															"id": "set-item",
 															"objectClass": "LocalStorage",
 															"sid": 674024117356547,
@@ -4461,14 +4466,10 @@
 															}
 														},
 														{
-															"id": "wait-for-previous-actions",
-															"objectClass": "System",
-															"sid": 192840194854360
-														},
-														{
 															"id": "wait",
 															"objectClass": "System",
 															"sid": 304551288963199,
+															"disabled": true,
 															"parameters": {
 																"seconds": "1"
 															}
@@ -4476,14 +4477,6 @@
 														{
 															"callFunction": "TERMINA EL MODO SPEED RUN CUALQUIER TIPO",
 															"sid": 184439875187641
-														},
-														{
-															"id": "go-to-layout",
-															"objectClass": "System",
-															"sid": 937710700125140,
-															"parameters": {
-																"layout": "SpeedRun_DEATH"
-															}
 														}
 													],
 													"sid": 639267583079842
@@ -9989,9 +9982,15 @@
 											}
 										},
 										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 573813013530931
+										},
+										{
 											"id": "set-time-scale",
 											"objectClass": "System",
 											"sid": 442382821875073,
+											"disabled": true,
 											"parameters": {
 												"time-scale": "0"
 											}
@@ -10000,6 +9999,7 @@
 											"id": "create-object",
 											"objectClass": "System",
 											"sid": 562762154374049,
+											"disabled": true,
 											"parameters": {
 												"object-to-create": "GAME_OVER_Fondo",
 												"layer": "\"HUD\"",
@@ -10011,7 +10011,17 @@
 										{
 											"id": "wait-for-previous-actions",
 											"objectClass": "System",
-											"sid": 759279611538466
+											"sid": 603052289219425,
+											"disabled": true
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 398427026622431,
+											"disabled": true,
+											"parameters": {
+												"seconds": "1"
+											}
 										},
 										{
 											"callFunction": "TERMINA EL MODO SPEED RUN CUALQUIER TIPO",
@@ -10158,6 +10168,11 @@
 											}
 										},
 										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 176388783969825
+										},
+										{
 											"id": "set-item",
 											"objectClass": "LocalStorage",
 											"sid": 508842914392971,
@@ -10171,6 +10186,7 @@
 											"id": "set-time-scale",
 											"objectClass": "System",
 											"sid": 332720631377442,
+											"disabled": true,
 											"parameters": {
 												"time-scale": "0"
 											}
@@ -10179,6 +10195,7 @@
 											"id": "create-object",
 											"objectClass": "System",
 											"sid": 665131237125165,
+											"disabled": true,
 											"parameters": {
 												"object-to-create": "GAME_OVER_Fondo",
 												"layer": "\"HUD\"",
@@ -10190,7 +10207,17 @@
 										{
 											"id": "wait-for-previous-actions",
 											"objectClass": "System",
-											"sid": 743363604353229
+											"sid": 659277488680853,
+											"disabled": true
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 873978821427870,
+											"disabled": true,
+											"parameters": {
+												"seconds": "1"
+											}
 										},
 										{
 											"callFunction": "TERMINA EL MODO SPEED RUN CUALQUIER TIPO",
@@ -11569,14 +11596,6 @@
 									"sid": 730516760606106,
 									"parameters": {
 										"key": 66
-									}
-								},
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 613577347723164,
-									"parameters": {
-										"key": 27
 									}
 								}
 							],
@@ -14158,6 +14177,7 @@
 													"id": "add-to-eventvar",
 													"objectClass": "System",
 													"sid": 762317159657994,
+													"disabled": true,
 													"parameters": {
 														"variable": "ROOM_NUMERO",
 														"value": "1"
@@ -14167,9 +14187,22 @@
 													"id": "go-to-layout-by-name",
 													"objectClass": "System",
 													"sid": 351413713571573,
+													"disabled": true,
 													"parameters": {
 														"layout": "\"Room_\"&ROOM_NUMERO"
 													}
+												},
+												{
+													"id": "go-to-nextprevious-layout",
+													"objectClass": "System",
+													"sid": 441892459875076,
+													"parameters": {
+														"which": "next"
+													}
+												},
+												{
+													"type": "comment",
+													"text": "guarda nivel maximo"
 												},
 												{
 													"type": "comment",
@@ -14267,14 +14300,6 @@
 														"value": "0",
 														"axis": "y"
 													}
-												},
-												{
-													"id": "go-to-nextprevious-layout",
-													"objectClass": "System",
-													"sid": 816349642352173,
-													"parameters": {
-														"which": "next"
-													}
 												}
 											],
 											"sid": 722383284704423
@@ -14364,7 +14389,7 @@
 												{
 													"id": "add-to-eventvar",
 													"objectClass": "System",
-													"sid": 752610353117877,
+													"sid": 889292575552391,
 													"disabled": true,
 													"parameters": {
 														"variable": "ROOM_NUMERO",
@@ -14378,6 +14403,14 @@
 													"disabled": true,
 													"parameters": {
 														"layout": "\"Room_\"&ROOM_NUMERO"
+													}
+												},
+												{
+													"id": "go-to-nextprevious-layout",
+													"objectClass": "System",
+													"sid": 206201308650275,
+													"parameters": {
+														"which": "next"
 													}
 												},
 												{
@@ -14475,14 +14508,6 @@
 														"where": "back",
 														"value": "0",
 														"axis": "y"
-													}
-												},
-												{
-													"id": "go-to-nextprevious-layout",
-													"objectClass": "System",
-													"sid": 973240738042055,
-													"parameters": {
-														"which": "next"
 													}
 												}
 											],
@@ -14590,6 +14615,14 @@
 													}
 												},
 												{
+													"id": "go-to-nextprevious-layout",
+													"objectClass": "System",
+													"sid": 215151400048462,
+													"parameters": {
+														"which": "next"
+													}
+												},
+												{
 													"type": "comment",
 													"text": "guarda nivel maximo"
 												},
@@ -14685,19 +14718,38 @@
 														"value": "0",
 														"axis": "y"
 													}
-												},
-												{
-													"id": "go-to-nextprevious-layout",
-													"objectClass": "System",
-													"sid": 241581856756594,
-													"parameters": {
-														"which": "next"
-													}
 												}
 											],
 											"sid": 720368575023624
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 295092444707760
+										}
+									],
+									"actions": [
+										{
+											"type": "comment",
+											"text": "GUARDA EL TIEMPO AL ENTRAR POR LA ULTIMA PUERTA DEL CASTILLO",
+											"background-color": [
+												0.16862745098039217,
+												1,
+												0,
+												1
+											]
+										},
+										{
+											"callFunction": "SPEEDRUN - Guarda el tiempo de cada Castillo para el resumen",
+											"sid": 381289732783361
+										}
+									],
+									"sid": 119615097075495
 								}
 							]
 						}
@@ -14735,6 +14787,118 @@
 					"actions": [],
 					"sid": 921715374020956,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 543490233239093,
+									"parameters": {
+										"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+										"comparison": 0,
+										"value": "\"ROJA\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 425289596508981,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 880100669793587
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "bola",
+											"sid": 162919562134362,
+											"parameters": {
+												"animation": "\"DERECHA_4\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "bola",
+											"sid": 141624910849051,
+											"parameters": {
+												"object": "bola_estela_roja",
+												"layer": "Self.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "bola_estela_roja",
+											"sid": 182151855404598,
+											"parameters": {
+												"where": "behind",
+												"object": "bola"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "bola_estela_roja",
+											"sid": 713699383632846,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "bola",
+												"x": true,
+												"y": true,
+												"angle": false,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "bola",
+											"sid": 766156141868361,
+											"parameters": {
+												"frame-number": "3"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "bola",
+											"sid": 319154219259991,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 967098661312186,
+											"parameters": {
+												"object-to-create": "Bola_HUD",
+												"layer": "\"HUD\"",
+												"x": "50",
+												"y": "20",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Bola_HUD",
+											"sid": 632263145107242,
+											"parameters": {
+												"frame-number": "0"
+											}
+										}
+									],
+									"sid": 306087003107453
+								}
+							]
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -14844,118 +15008,6 @@
 										}
 									],
 									"sid": 194216854131156
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 549067117642342,
-									"parameters": {
-										"variable": "bola_ROJA_o_ROSA_sin_SLOT",
-										"comparison": 0,
-										"value": "\"ROJA\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 750022614923100,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 324291832021249
-										}
-									],
-									"actions": [
-										{
-											"id": "set-animation",
-											"objectClass": "bola",
-											"sid": 784598119778734,
-											"parameters": {
-												"animation": "\"DERECHA_4\"",
-												"from": "beginning"
-											}
-										},
-										{
-											"id": "spawn-another-object",
-											"objectClass": "bola",
-											"sid": 574387123629485,
-											"parameters": {
-												"object": "bola_estela_roja",
-												"layer": "Self.LayerName",
-												"image-point": "0",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "move-to-object",
-											"objectClass": "bola_estela_roja",
-											"sid": 956305632857508,
-											"parameters": {
-												"where": "behind",
-												"object": "bola"
-											}
-										},
-										{
-											"id": "pin-to-object-properties",
-											"objectClass": "bola_estela_roja",
-											"sid": 832933200205744,
-											"behaviorType": "Pin",
-											"parameters": {
-												"pin-to": "bola",
-												"x": true,
-												"y": true,
-												"angle": false,
-												"width-type": "no",
-												"height-type": "no",
-												"z": false
-											}
-										},
-										{
-											"id": "set-animation-frame",
-											"objectClass": "bola",
-											"sid": 950259626682378,
-											"parameters": {
-												"frame-number": "3"
-											}
-										},
-										{
-											"id": "set-visible",
-											"objectClass": "bola",
-											"sid": 907788289339153,
-											"parameters": {
-												"visibility": "visible"
-											}
-										},
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 398837633279448,
-											"parameters": {
-												"object-to-create": "Bola_HUD",
-												"layer": "\"HUD\"",
-												"x": "50",
-												"y": "20",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "set-animation-frame",
-											"objectClass": "Bola_HUD",
-											"sid": 463141274656607,
-											"parameters": {
-												"frame-number": "0"
-											}
-										}
-									],
-									"sid": 848918630650650
 								}
 							]
 						}

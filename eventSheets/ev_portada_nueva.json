@@ -69,7 +69,7 @@
 			"eventType": "variable",
 			"name": "SonidoFX_Volumen_Master",
 			"type": "number",
-			"initialValue": "8",
+			"initialValue": "10",
 			"comment": "Volumen de los FX",
 			"isStatic": false,
 			"isConstant": false,
@@ -89,7 +89,7 @@
 			"eventType": "variable",
 			"name": "Musica_Volumen_Master",
 			"type": "number",
-			"initialValue": "8",
+			"initialValue": "10",
 			"comment": "Volumen de la musica",
 			"isStatic": false,
 			"isConstant": false,
@@ -5713,10 +5713,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 726829503895798,
+									"sid": 494016698574732,
 									"parameters": {
 										"variable": "VOLUMEN_MASTER_FX",
-										"value": "-25+(SonidoFX_Volumen_Master*5)"
+										"value": "-35+(SonidoFX_Volumen_Master*5)"
 									}
 								},
 								{
@@ -5763,10 +5763,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 380659045721039,
+									"sid": 537674581519127,
 									"parameters": {
 										"variable": "VOLUMEN_MASTER_FX",
-										"value": "-25+(SonidoFX_Volumen_Master*5)"
+										"value": "-35+(SonidoFX_Volumen_Master*5)"
 									}
 								},
 								{
@@ -5851,28 +5851,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 607911195126589,
+											"sid": 114630864631063,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 398582286174691,
+											"sid": 532334831257550,
 											"parameters": {
 												"tag": "\"MUSICA_bioma_1\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
-											}
-										},
-										{
-											"id": "set-volume",
-											"objectClass": "Audio",
-											"sid": 822070461454917,
-											"parameters": {
-												"tag": "\"MUSICA_bioma_1\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC"
 											}
 										}
 									],
@@ -5917,19 +5908,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 767219463935891,
+											"sid": 129621344191666,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 872048822612730,
+											"sid": 439706153485666,
 											"parameters": {
 												"tag": "\"MUSICA_bioma_2\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC"
 											}
 										}
 									],
@@ -5974,19 +5965,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 682365989802731,
+											"sid": 727740302524331,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 496768039545888,
+											"sid": 791562913726452,
 											"parameters": {
 												"tag": "\"MUSICA_bioma_3\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC"
 											}
 										}
 									],
@@ -6031,19 +6022,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 277481388074076,
+											"sid": 878345377464945,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 181869612560796,
+											"sid": 918891965511217,
 											"parameters": {
 												"tag": "\"MUSICA_bioma_4\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC"
 											}
 										}
 									],
@@ -6088,19 +6079,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 714041522940495,
+											"sid": 387556430744118,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 708644219606904,
+											"sid": 644557896264861,
 											"parameters": {
 												"tag": "\"MUSICA_bioma_5\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC"
 											}
 										}
 									],
@@ -6145,19 +6136,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 490994644173623,
+											"sid": 598434527034058,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 559778946870171,
+											"sid": 897673976274168,
 											"parameters": {
 												"tag": "\"Musica_portada\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC"
 											}
 										}
 									],
@@ -6202,19 +6193,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 452180505888888,
+											"sid": 342389649360256,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 891203874769455,
+											"sid": 540279584752918,
 											"parameters": {
 												"tag": "\"Musica_Introduccion\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC"
 											}
 										}
 									],
@@ -6230,10 +6221,10 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 113469400346149,
+							"sid": 453885927492425,
 							"parameters": {
 								"variable": "Musica_Volumen_Master",
-								"comparison": 0,
+								"comparison": 3,
 								"value": "0"
 							}
 						}
@@ -6269,19 +6260,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 388690428890499,
+											"sid": 510910910850569,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 960223388670917,
+											"sid": 710577734603070,
 											"parameters": {
 												"tag": "\"MUSICA_bioma_1\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC-100"
 											}
 										},
 										{
@@ -6326,19 +6317,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 310349193906644,
+											"sid": 996787202661900,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 410014156836141,
+											"sid": 380859133720446,
 											"parameters": {
 												"tag": "\"MUSICA_bioma_2\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC-100"
 											}
 										},
 										{
@@ -6383,19 +6374,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 701489844336979,
+											"sid": 586334959273385,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 439865489365823,
+											"sid": 936962805454749,
 											"parameters": {
 												"tag": "\"MUSICA_bioma_3\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC-100"
 											}
 										},
 										{
@@ -6440,19 +6431,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 159495744908855,
+											"sid": 365491428534562,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 582651160826987,
+											"sid": 773708445734843,
 											"parameters": {
 												"tag": "\"MUSICA_bioma_4\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC-100"
 											}
 										},
 										{
@@ -6497,19 +6488,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 751320229711172,
+											"sid": 809436746493824,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 454574216947618,
+											"sid": 363989496411959,
 											"parameters": {
 												"tag": "\"MUSICA_bioma_5\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC-100"
 											}
 										},
 										{
@@ -6554,19 +6545,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 250700390263647,
+											"sid": 899940012060912,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 610098607118032,
+											"sid": 771863660264828,
 											"parameters": {
 												"tag": "\"Musica_portada\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC-100"
 											}
 										},
 										{
@@ -6611,19 +6602,19 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 609540703932590,
+											"sid": 610651568370437,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-25+(Musica_Volumen_Master*5)"
+												"value": "-35+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 339588369401099,
+											"sid": 504388065144444,
 											"parameters": {
 												"tag": "\"Musica_Introduccion\"",
-												"db": "VOLUMEN_MASTER_MUSIC-25"
+												"db": "VOLUMEN_MASTER_MUSIC-100"
 											}
 										},
 										{
