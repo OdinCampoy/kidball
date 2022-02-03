@@ -91,6 +91,15 @@
 					}
 				},
 				{
+					"id": "set-vector-y",
+					"objectClass": "bola",
+					"sid": 470913995243834,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "-420"
+					}
+				},
+				{
 					"id": "set-animation",
 					"objectClass": "bola_ROSA",
 					"sid": 303367570720526,
@@ -200,6 +209,10 @@
 			"sid": 513462485865869,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "NO HACE FALTA GUARDAR NADA PORQUE YA HA GUARDADO EN EL ULTIMO CHECKPOINT"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -214,6 +227,7 @@
 					],
 					"actions": [],
 					"sid": 739718290163181,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -312,7 +326,8 @@
 									}
 								}
 							],
-							"sid": 759309721339872
+							"sid": 759309721339872,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -411,7 +426,8 @@
 									}
 								}
 							],
-							"sid": 596660316787085
+							"sid": 596660316787085,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -510,7 +526,8 @@
 									}
 								}
 							],
-							"sid": 754902797801027
+							"sid": 754902797801027,
+							"disabled": true
 						}
 					]
 				},
@@ -656,15 +673,6 @@
 			],
 			"actions": [
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 507185138209912,
-					"parameters": {
-						"variable": "fx_rebolte_pelota",
-						"value": "1"
-					}
-				},
-				{
 					"id": "set-vector-y",
 					"objectClass": "bola",
 					"sid": 184101497726730,
@@ -674,13 +682,11 @@
 					}
 				},
 				{
-					"id": "simulate-control",
+					"id": "start-animation",
 					"objectClass": "bola",
-					"sid": 879083838380920,
-					"disabled": true,
-					"behaviorType": "Platform",
+					"sid": 724504251469350,
 					"parameters": {
-						"control": "jump"
+						"from": "beginning"
 					}
 				},
 				{
@@ -703,7 +709,62 @@
 					}
 				}
 			],
-			"sid": 674399505538562
+			"sid": 674399505538562,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 592699317650994,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 355076784941061,
+							"parameters": {
+								"variable": "PASOS_SAVE_THE_GIRL",
+								"comparison": 1,
+								"value": "20"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 169840249134043,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 561683531314082
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 808530113926240,
+									"parameters": {
+										"audio-file": "Rebote_pelota",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 803554380225338
+						}
+					]
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -920,6 +981,14 @@
 										"layer": "\"pelota\"",
 										"image-point": "3",
 										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "TXT_HELP",
+									"sid": 925631880982972,
+									"parameters": {
+										"frame-number": "1"
 									}
 								},
 								{
@@ -1921,10 +1990,10 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 316224058146770,
+							"sid": 778019784072130,
 							"parameters": {
 								"variable": "PASOS_SAVE_THE_GIRL",
-								"comparison": 0,
+								"comparison": 5,
 								"value": "5"
 							}
 						},
@@ -2179,7 +2248,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "EL DRAGON SE LLEVA LA BOLA ROSA"
+					"text": "FUNDIDO A BLANCO"
 				},
 				{
 					"eventType": "block",
@@ -2209,53 +2278,52 @@
 							],
 							"actions": [
 								{
-									"id": "tween-two-properties",
-									"objectClass": "ending_JEFE_FINAL",
-									"sid": 558828736261733,
-									"behaviorType": "Tween",
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 720987401616352,
 									"parameters": {
-										"tags": "\"\"",
-										"property": "position",
-										"end-x": "bola_ROSA.X-40",
-										"end-y": "bola_ROSA.Y",
-										"time": "2",
-										"ease": "easeinquad",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
+										"seconds": "2"
 									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Final_juego_Transicion_a_blanco",
+									"sid": 643121573995942,
+									"parameters": {
+										"x": "427",
+										"y": "240"
+									}
+								},
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Final_juego_Transicion_a_blanco",
+									"sid": 503667125843837,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "2"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Final_juego_Transicion_a_blanco",
+									"sid": 634354549197542,
+									"behaviorType": "Fade"
 								},
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 601292659768572,
+									"sid": 118795371197577,
 									"parameters": {
-										"seconds": "1.85"
+										"seconds": "1"
 									}
 								},
 								{
-									"id": "tween-one-property",
-									"objectClass": "carcel_bola_rosa",
-									"sid": 958293071331472,
-									"behaviorType": "Tween",
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 542670542067821,
 									"parameters": {
-										"tags": "\"carcel_cae\"",
-										"property": "offsetY",
-										"end-value": "385",
-										"time": "0.5",
-										"ease": "easeinquad",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "set-jump-strength",
-									"objectClass": "bola",
-									"sid": 465440535682212,
-									"behaviorType": "Platform",
-									"parameters": {
-										"jump-strength": "300"
+										"variable": "PASOS_SAVE_THE_GIRL",
+										"value": "20"
 									}
 								}
 							],
@@ -2277,6 +2345,7 @@
 									],
 									"actions": [],
 									"sid": 376831367194158,
+									"disabled": true,
 									"children": [
 										{
 											"eventType": "block",
@@ -2300,7 +2369,8 @@
 													}
 												}
 											],
-											"sid": 532513432171543
+											"sid": 532513432171543,
+											"disabled": true
 										}
 									]
 								}
@@ -2312,429 +2382,28 @@
 			"sid": 985894014134166
 		},
 		{
-			"eventType": "comment",
-			"text": "COMIENZO"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 479514100609515,
-					"parameters": {
-						"variable": "SALVADO_CHICA",
-						"comparison": 0,
-						"value": "0"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 526150253165142,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "0"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 944313968955541,
-					"parameters": {
-						"variable": "Nivel_actual_1",
-						"comparison": 5,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "bola",
-					"sid": 489707383156660,
-					"parameters": {
-						"x": "50",
-						"y": "113"
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "carcel_bola_rosa",
-					"sid": 139266980977882,
-					"parameters": {
-						"x": "745",
-						"y": "385"
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "bola_ROSA",
-					"sid": 317507562326077,
-					"parameters": {
-						"x": "746",
-						"y": "405"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 277464126164013,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"value": "1"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 704366822275582,
-					"parameters": {
-						"seconds": "3.5"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 738032191455718,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"value": "2"
-					}
-				}
-			],
-			"sid": 679023542108128,
-			"disabled": true
-		},
-		{
-			"eventType": "comment",
-			"text": "SUBE LA CARCEL"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 697934717258879,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "2"
-					}
-				},
-				{
-					"id": "compare-y",
-					"objectClass": "carcel_bola_rosa",
-					"sid": 362821918256134,
-					"parameters": {
-						"comparison": 4,
-						"y-co-ordinate": "260"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-y",
-					"objectClass": "carcel_bola_rosa",
-					"sid": 567637206121453,
-					"parameters": {
-						"y": "carcel_bola_rosa.Y-2*55*dt"
-					}
-				}
-			],
-			"sid": 236336804079981,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 403661073310076,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "2"
-					}
-				},
-				{
-					"id": "compare-y",
-					"objectClass": "carcel_bola_rosa",
-					"sid": 284750032053368,
-					"parameters": {
-						"comparison": 3,
-						"y-co-ordinate": "260"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 541925064282085,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"value": "3"
-					}
-				},
-				{
-					"id": "set-jump-strength",
-					"objectClass": "bola_ROSA",
-					"sid": 734243956387020,
-					"behaviorType": "Platform",
-					"parameters": {
-						"jump-strength": "550"
-					}
-				}
-			],
-			"sid": 574140860120090,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 136952515652979,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "3"
-					}
-				},
-				{
-					"id": "compare-y",
-					"objectClass": "carcel_bola_rosa",
-					"sid": 872285374008803,
-					"parameters": {
-						"comparison": 4,
-						"y-co-ordinate": "120"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-y",
-					"objectClass": "carcel_bola_rosa",
-					"sid": 172003738574006,
-					"parameters": {
-						"y": "carcel_bola_rosa.Y-2*55*dt"
-					}
-				}
-			],
-			"sid": 138956249009128,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 878020946357675,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "3"
-					}
-				},
-				{
-					"id": "compare-y",
-					"objectClass": "carcel_bola_rosa",
-					"sid": 669612736249579,
-					"parameters": {
-						"comparison": 3,
-						"y-co-ordinate": "120"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 752141162011113,
-					"parameters": {
-						"seconds": "0.8"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 769948217345798,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"value": "4"
-					}
-				}
-			],
-			"sid": 505715213552160,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 963001429718607,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "4"
-					}
-				},
-				{
-					"id": "compare-x",
-					"objectClass": "bola",
-					"sid": 406594416773015,
-					"parameters": {
-						"comparison": 2,
-						"x-co-ordinate": "380"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "simulate-control",
-					"objectClass": "bola",
-					"sid": 219542581960973,
-					"behaviorType": "Platform",
-					"parameters": {
-						"control": "right"
-					}
-				},
-				{
-					"id": "simulate-control",
-					"objectClass": "bola_ROSA",
-					"sid": 559966971221353,
-					"behaviorType": "Platform",
-					"parameters": {
-						"control": "left"
-					}
-				}
-			],
-			"sid": 643734390389187,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 807279431767008,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "4"
-					}
-				},
-				{
-					"id": "compare-x",
-					"objectClass": "bola",
-					"sid": 275740605003674,
-					"parameters": {
-						"comparison": 5,
-						"x-co-ordinate": "380"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "CORAZONES_INTRO",
-					"sid": 179752021426966
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 592912198625225,
-					"disabled": true,
-					"parameters": {
-						"seconds": "1"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 712371883911243,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"value": "5"
-					}
-				}
-			],
-			"sid": 679478498536214,
-			"disabled": true
-		},
-		{
-			"eventType": "comment",
-			"text": "CREA CORAZONES GRANDES"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 822687023499143,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "5"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 318335271006294,
-					"parameters": {
-						"variable": "CONTADOR_SALVA_CHICA",
-						"comparison": 2,
-						"value": "275"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 895632763948071,
-					"parameters": {
-						"variable": "CONTADOR_SALVA_CHICA",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 580255719676740,
+			"eventType": "group",
 			"disabled": true,
+			"title": "CARTEL DE \"THE END\" SUBE A PANTALLA",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-falling",
-							"objectClass": "bola",
-							"sid": 402497786886518,
-							"behaviorType": "Platform"
-						},
-						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 327235176775332,
+							"sid": 669018563179922,
 							"parameters": {
-								"variable": "intro_bola_cae",
+								"variable": "PASOS_SAVE_THE_GIRL",
 								"comparison": 0,
-								"value": "1"
+								"value": "7"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 877559835694500,
+					"sid": 319436223565282,
 					"disabled": true,
 					"children": [
 						{
@@ -2743,7 +2412,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 644161853849352,
+									"sid": 701214433929995,
 									"parameters": {
 										"variable": "FX_sound",
 										"comparison": 0,
@@ -2753,37 +2422,32 @@
 							],
 							"actions": [
 								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 837712685822081,
+									"id": "tween-one-property",
+									"objectClass": "THE_END_TXT",
+									"sid": 503335410702536,
+									"behaviorType": "Tween",
 									"parameters": {
-										"object-to-create": "CORAZONES_INTRO",
-										"layer": "\"fondo\"",
-										"x": "bola.X+23",
-										"y": "bola.Y-30",
-										"create-hierarchy": false
-									}
-								},
-								{
-									"id": "set-size",
-									"objectClass": "CORAZONES_INTRO",
-									"sid": 924356166877770,
-									"parameters": {
-										"width": "60",
-										"height": "50"
+										"tags": "\"\"",
+										"property": "offsetY",
+										"end-value": "148",
+										"time": "1.2",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
 									}
 								},
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 950019628416374,
+									"sid": 776768152163573,
 									"parameters": {
-										"variable": "intro_bola_cae",
-										"value": "0"
+										"variable": "PASOS_SAVE_THE_GIRL",
+										"value": "8"
 									}
 								}
 							],
-							"sid": 292254849768160,
+							"sid": 937270644109471,
 							"disabled": true
 						},
 						{
@@ -2792,7 +2456,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 470415171818307,
+									"sid": 732856507200136,
 									"parameters": {
 										"variable": "FX_sound",
 										"comparison": 0,
@@ -2802,210 +2466,14 @@
 							],
 							"actions": [
 								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 143726653105497,
-									"parameters": {
-										"audio-file": "aparecen corazones grandes",
-										"loop": "not-looping",
-										"volume": "VOLUMEN_MASTER_FX-5",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 595980028682992,
-									"parameters": {
-										"object-to-create": "CORAZONES_INTRO",
-										"layer": "\"fondo\"",
-										"x": "bola.X+23",
-										"y": "bola.Y-30",
-										"create-hierarchy": false
-									}
-								},
-								{
-									"id": "set-size",
-									"objectClass": "CORAZONES_INTRO",
-									"sid": 486657528433893,
-									"parameters": {
-										"width": "60",
-										"height": "50"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 483575003399139,
-									"parameters": {
-										"variable": "intro_bola_cae",
-										"value": "0"
-									}
-								}
-							],
-							"sid": 640967094073259,
-							"disabled": true
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-jumping",
-							"objectClass": "bola",
-							"sid": 633958588409893,
-							"behaviorType": "Platform"
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 347027494660179,
-							"parameters": {
-								"variable": "intro_bola_cae",
-								"comparison": 0,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 499790638593530,
-							"parameters": {
-								"variable": "intro_bola_cae",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 467341577387510,
-					"disabled": true
-				}
-			]
-		},
-		{
-			"eventType": "comment",
-			"text": "SALE EL CARTEL DE \" THE END \""
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 501113158090229,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "5"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 325881105745057,
-					"parameters": {
-						"variable": "CONTADOR_SALVA_CHICA",
-						"comparison": 5,
-						"value": "275"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 645945473256152,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"value": "6"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 363421901846289,
-					"parameters": {
-						"variable": "CONTADOR_SALVA_CHICA",
-						"value": "0"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 631976673093751,
-					"parameters": {
-						"seconds": "0.5"
-					}
-				}
-			],
-			"sid": 652286527533750,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 981677466199681,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "6"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 462524647062694,
-			"disabled": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 243300512291299,
-							"parameters": {
-								"variable": "FX_sound",
-								"comparison": 0,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 724772996122734,
-					"disabled": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 243678989700472
-								}
-							],
-							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 580266323697957,
-									"parameters": {
-										"seconds": "0.8"
-									}
-								},
-								{
 									"id": "tween-one-property",
-									"objectClass": "CORAZONES_FINAL",
-									"sid": 653946759557881,
+									"objectClass": "THE_END_TXT",
+									"sid": 283478400139442,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"\"",
 										"property": "offsetY",
-										"end-value": "160",
+										"end-value": "148",
 										"time": "1.2",
 										"ease": "easeoutback",
 										"destroy-on-complete": "no",
@@ -3014,60 +2482,9 @@
 									}
 								},
 								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 623210738183670,
-									"parameters": {
-										"variable": "PASOS_SAVE_THE_GIRL",
-										"value": "7"
-									}
-								}
-							],
-							"sid": 999646151733788,
-							"disabled": true
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 954731539984290,
-							"parameters": {
-								"variable": "FX_sound",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 101199561278779,
-					"disabled": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 680741552688225
-								}
-							],
-							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 640441622681333,
-									"parameters": {
-										"seconds": "0.8"
-									}
-								},
-								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 404659985079438,
+									"sid": 228586539860503,
 									"parameters": {
 										"audio-file": "Swipe",
 										"loop": "not-looping",
@@ -3076,101 +2493,19 @@
 									}
 								},
 								{
-									"id": "tween-one-property",
-									"objectClass": "CORAZONES_FINAL",
-									"sid": 434559868413055,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "160",
-										"time": "1.2",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 517873615635111,
+									"sid": 559251040492713,
 									"parameters": {
 										"variable": "PASOS_SAVE_THE_GIRL",
-										"value": "7"
+										"value": "8"
 									}
 								}
 							],
-							"sid": 170365730778583,
+							"sid": 434422042153143,
 							"disabled": true
 						}
 					]
-				}
-			]
-		},
-		{
-			"eventType": "comment",
-			"text": "SUBEN LAS LETRAS THE END Y "
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 169263957024784,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "7"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 899353800202276,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 407992050898501,
-							"parameters": {
-								"variable": "FX_sound",
-								"comparison": 0,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "tween-one-property",
-							"objectClass": "THE_END_TXT",
-							"sid": 455171635151731,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "offsetY",
-								"end-value": "148",
-								"time": "1.2",
-								"ease": "easeoutback",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 315003853775464,
-							"parameters": {
-								"variable": "PASOS_SAVE_THE_GIRL",
-								"value": "8"
-							}
-						}
-					],
-					"sid": 793581240169982
 				},
 				{
 					"eventType": "block",
@@ -3178,121 +2513,176 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 412611000318565,
-							"parameters": {
-								"variable": "FX_sound",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "tween-one-property",
-							"objectClass": "THE_END_TXT",
-							"sid": 636156485520289,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "offsetY",
-								"end-value": "148",
-								"time": "1.2",
-								"ease": "easeoutback",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 707907241526862,
-							"parameters": {
-								"audio-file": "Swipe",
-								"loop": "not-looping",
-								"volume": "VOLUMEN_MASTER_FX",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 621700709250731,
+							"sid": 604514165717922,
 							"parameters": {
 								"variable": "PASOS_SAVE_THE_GIRL",
+								"comparison": 0,
 								"value": "8"
 							}
 						}
 					],
-					"sid": 123754548523767
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 590929732563368,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "8"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 241391100860484,
-			"children": [
+					"actions": [],
+					"sid": 342398459913772,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 616449921334891
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 827472811254535,
+									"parameters": {
+										"seconds": "0.5"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 525658941167963,
+									"parameters": {
+										"variable": "PASOS_SAVE_THE_GIRL",
+										"value": "9"
+									}
+								}
+							],
+							"sid": 550361314802695,
+							"disabled": true
+						}
+					]
+				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "trigger-once-while-true",
+							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 536406341731290
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 792698378478267,
-							"parameters": {
-								"seconds": "0.5"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 264140249509672,
+							"sid": 906900644037291,
 							"parameters": {
 								"variable": "PASOS_SAVE_THE_GIRL",
+								"comparison": 0,
 								"value": "9"
 							}
 						}
 					],
-					"sid": 700038029070947
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 611846487515167,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "9"
-					}
+					"actions": [],
+					"sid": 386419069809793,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 687636711336514,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 436251749851616,
+									"parameters": {
+										"variable": "PASOS_SAVE_THE_GIRL",
+										"value": "10"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 878313305239868,
+									"disabled": true,
+									"parameters": {
+										"key": "\"SAVE_GIRL\"",
+										"value": "PASOS_SAVE_THE_GIRL"
+									}
+								}
+							],
+							"sid": 823959843281933,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 543936765119435,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 991514239851888,
+									"parameters": {
+										"audio-file": "aplausos_Excellent",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 240174973287756,
+									"parameters": {
+										"variable": "PASOS_SAVE_THE_GIRL",
+										"value": "10"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 345518289657815,
+									"disabled": true,
+									"parameters": {
+										"key": "\"SAVE_GIRL\"",
+										"value": "PASOS_SAVE_THE_GIRL"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 732378581789671,
+									"parameters": {
+										"variable": "SALVADO_CHICA",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 775080907712514,
+							"disabled": true
+						}
+					]
 				}
 			],
-			"actions": [],
-			"sid": 422002331244885,
+			"sid": 902524798766933
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "MOVIL - SUBEN BOTONES PARA MOVIL DESPUES DE CINEMATICA",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
@@ -3300,9 +2690,211 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 337948632074962,
+							"sid": 304459168656542,
 							"parameters": {
-								"variable": "FX_sound",
+								"variable": "PASOS_SAVE_THE_GIRL",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 444117442241815,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 166147614100546
+								}
+							],
+							"actions": [],
+							"sid": 101328069500310,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 400679345326432,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 323180951773432,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "250",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game",
+											"sid": 844159124799145,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "729",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Exit",
+											"sid": 132577099510407,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "400",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 433971373770017,
+											"parameters": {
+												"variable": "PASOS_SAVE_THE_GIRL",
+												"value": "11"
+											}
+										}
+									],
+									"sid": 780808536864558,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 268290213496109,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 556996446911370,
+											"parameters": {
+												"audio-file": "Swipe",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 211460761416272,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "250",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game",
+											"sid": 176765547039566,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "729",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Exit",
+											"sid": 773669143345709,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "400",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 718147887225286,
+											"parameters": {
+												"variable": "PASOS_SAVE_THE_GIRL",
+												"value": "11"
+											}
+										}
+									],
+									"sid": 186170749592753,
+									"disabled": true
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "\tOPCIONES  DE  BOTONES"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 322819158440083,
+							"parameters": {
+								"variable": "Nivel_actual_1",
 								"comparison": 0,
 								"value": "0"
 							}
@@ -3312,511 +2904,1351 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 165440821493118,
-							"parameters": {
-								"variable": "PASOS_SAVE_THE_GIRL",
-								"value": "10"
-							}
-						},
-						{
-							"id": "set-item",
-							"objectClass": "LocalStorage",
-							"sid": 428332474630079,
-							"disabled": true,
-							"parameters": {
-								"key": "\"SAVE_GIRL\"",
-								"value": "PASOS_SAVE_THE_GIRL"
-							}
-						}
-					],
-					"sid": 102762141754653
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 163662547602974,
-							"parameters": {
-								"variable": "FX_sound",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 643807002067417,
-							"parameters": {
-								"audio-file": "aplausos_Excellent",
-								"loop": "not-looping",
-								"volume": "VOLUMEN_MASTER_FX",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 975297450960116,
-							"parameters": {
-								"variable": "PASOS_SAVE_THE_GIRL",
-								"value": "10"
-							}
-						},
-						{
-							"id": "set-item",
-							"objectClass": "LocalStorage",
-							"sid": 702430467783399,
-							"disabled": true,
-							"parameters": {
-								"key": "\"SAVE_GIRL\"",
-								"value": "PASOS_SAVE_THE_GIRL"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 892589845520837,
-							"parameters": {
-								"variable": "SALVADO_CHICA",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 980604965516588
-				}
-			]
-		},
-		{
-			"eventType": "comment",
-			"text": "SUBEN BOTONES SHARE AND RESET GAME EXIT MENU"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 932158482557270,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 0,
-						"value": "10"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 215044590707072,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 171629274857939
-						}
-					],
-					"actions": [],
-					"sid": 170377000408706,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 164510522956340,
-									"parameters": {
-										"variable": "FX_sound",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 213914092954478,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "250",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game",
-									"sid": 980037740961739,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "729",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Exit",
-									"sid": 602357781261529,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "400",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 687031125859635,
-									"parameters": {
-										"variable": "PASOS_SAVE_THE_GIRL",
-										"value": "11"
-									}
-								}
-							],
-							"sid": 383870522333180
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 377859745743385,
-									"parameters": {
-										"variable": "FX_sound",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 720369211215137,
-									"parameters": {
-										"audio-file": "Swipe",
-										"loop": "not-looping",
-										"volume": "VOLUMEN_MASTER_FX",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 510572011874489,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "250",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game",
-									"sid": 709197553044477,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "729",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Exit",
-									"sid": 479296375728437,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "400",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 878957301286082,
-									"parameters": {
-										"variable": "PASOS_SAVE_THE_GIRL",
-										"value": "11"
-									}
-								}
-							],
-							"sid": 540565969853618
-						}
-					]
-				}
-			]
-		},
-		{
-			"eventType": "comment",
-			"text": "\tOPCIONES  DE  BOTONES"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 670777375648405,
-					"parameters": {
-						"variable": "Nivel_actual_1",
-						"comparison": 0,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 514118500798851,
-					"parameters": {
-						"variable": "RESET_GAME_ON_OFF",
-						"value": "\"OFF\""
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "FINAL_reset_game",
-					"sid": 252189873383236,
-					"parameters": {
-						"animation": "\"OFF\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 343498438377262
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 314550918208199,
-					"parameters": {
-						"variable": "Nivel_actual_1",
-						"comparison": 4,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 335129323016238,
-					"parameters": {
-						"variable": "RESET_GAME_ON_OFF",
-						"value": "\"ON\""
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "FINAL_reset_game",
-					"sid": 868875380897675,
-					"parameters": {
-						"animation": "\"ON\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 139819076574951
-		},
-		{
-			"eventType": "comment",
-			"text": "TODAS LAS OPCIONES TOUCH"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 525597938415230,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 5,
-						"value": "10"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 839958844536769,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-tap-object",
-							"objectClass": "Touch",
-							"sid": 186177962428681,
-							"parameters": {
-								"object": "FINAL_Exit"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 176167378605733,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 855994294888846,
-									"parameters": {
-										"variable": "FX_sound",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-ignoring-input",
-									"objectClass": "bola",
-									"sid": 924118891578910,
-									"behaviorType": "Platform",
-									"parameters": {
-										"input": "stop-ignoring"
-									}
-								},
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 909943270141678,
-									"parameters": {
-										"layout": "PORTADA_NUEVA"
-									}
-								}
-							],
-							"sid": 378213830514090
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 664816869425911,
-									"parameters": {
-										"variable": "FX_sound",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-ignoring-input",
-									"objectClass": "bola",
-									"sid": 118283328385542,
-									"behaviorType": "Platform",
-									"parameters": {
-										"input": "stop-ignoring"
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 425524981397339,
-									"parameters": {
-										"audio-file": "Click_boton",
-										"loop": "not-looping",
-										"volume": "VOLUMEN_MASTER_FX",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 308741773146681,
-									"parameters": {
-										"layout": "PORTADA_NUEVA"
-									}
-								}
-							],
-							"sid": 869657452202183
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-tap-object",
-							"objectClass": "Touch",
-							"sid": 732345938537363,
-							"parameters": {
-								"object": "FINAL_reset_game"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 434042205313701,
+							"sid": 873084968166734,
 							"parameters": {
 								"variable": "RESET_GAME_ON_OFF",
-								"comparison": 0,
+								"value": "\"OFF\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "FINAL_reset_game",
+							"sid": 175183624647724,
+							"parameters": {
+								"animation": "\"OFF\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 291084788607913,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 607466241688217,
+							"parameters": {
+								"variable": "Nivel_actual_1",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 346744401564037,
+							"parameters": {
+								"variable": "RESET_GAME_ON_OFF",
 								"value": "\"ON\""
 							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "FINAL_reset_game",
+							"sid": 980236890515817,
+							"parameters": {
+								"animation": "\"ON\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 793099021834867,
+					"disabled": true
+				}
+			],
+			"sid": 590863646844359
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "MOVIL - OPCIONES DE TOUCH CUANDO LO SUPERAS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 863629157136400,
+							"parameters": {
+								"variable": "PASOS_SAVE_THE_GIRL",
+								"comparison": 5,
+								"value": "10"
+							}
 						}
 					],
 					"actions": [],
-					"sid": 229261921738942,
+					"sid": 139727947809194,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 195253952818882,
+									"parameters": {
+										"object": "FINAL_Exit"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 138189098428646,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 239646814527033,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-ignoring-input",
+											"objectClass": "bola",
+											"sid": 634282036855804,
+											"behaviorType": "Platform",
+											"parameters": {
+												"input": "stop-ignoring"
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 679014806364645,
+											"parameters": {
+												"layout": "PORTADA_NUEVA"
+											}
+										}
+									],
+									"sid": 637757996712848,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 575425495507168,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-ignoring-input",
+											"objectClass": "bola",
+											"sid": 873866773957415,
+											"behaviorType": "Platform",
+											"parameters": {
+												"input": "stop-ignoring"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 996736048915186,
+											"parameters": {
+												"audio-file": "Click_boton",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 603881484408062,
+											"parameters": {
+												"layout": "PORTADA_NUEVA"
+											}
+										}
+									],
+									"sid": 365467693136867,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 695265362551781,
+									"parameters": {
+										"object": "FINAL_reset_game"
+									}
+								},
+								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 676887234108463,
+									"sid": 908448839109841,
 									"parameters": {
-										"variable": "FX_sound",
+										"variable": "RESET_GAME_ON_OFF",
+										"comparison": 0,
+										"value": "\"ON\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 557570157684393,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 935958661847691,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 245984047094044,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "-557",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game",
+											"sid": 969898171405101,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "1411",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Exit",
+											"sid": 143874882801318,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "1057",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game_panel",
+											"sid": 491233238207260,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "222",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										}
+									],
+									"sid": 741952615778374,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 306602385806593,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 953292801719966,
+											"parameters": {
+												"audio-file": "Swipe",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 325006296942197,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "-557",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game",
+											"sid": 642178093301294,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "1411",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Exit",
+											"sid": 765030321065423,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "1057",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game_panel",
+											"sid": 691688655276355,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "222",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										}
+									],
+									"sid": 953194597442492,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 867529830963087,
+									"parameters": {
+										"object": "FINAL_reset_game_NO"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 211659649282345,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 977473502822232,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game_panel",
+											"sid": 153062502964410,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "-328",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 427528320494105,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "250",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game",
+											"sid": 517002960937591,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "729",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Exit",
+											"sid": 773084625877840,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "400",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 409338415306713,
+											"disabled": true,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "180",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Exit",
+											"sid": 371662567026574,
+											"disabled": true,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "390",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game",
+											"sid": 410685248746884,
+											"disabled": true,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "689",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										}
+									],
+									"sid": 156247420865632,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 652019526327636,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game_panel",
+											"sid": 601071368725775,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "-328",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 538482093049348,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "250",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game",
+											"sid": 592772823733696,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "729",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Exit",
+											"sid": 216988292234391,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "400",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 425554643693059,
+											"disabled": true,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "180",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Exit",
+											"sid": 312958640389755,
+											"disabled": true,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "390",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game",
+											"sid": 151408566368014,
+											"disabled": true,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "689",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 605862253394745,
+											"parameters": {
+												"audio-file": "Swipe",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 737442966902051,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 453142580927214,
+									"parameters": {
+										"object": "FINAL_reset_game_YES"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 344909414464536,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 135243236124808,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 127381244139769,
+											"disabled": true,
+											"parameters": {
+												"variable": "Nivel_actual_1",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 496713473244160,
+											"disabled": true,
+											"parameters": {
+												"key": "\"Nivel_actual_1\"",
+												"value": "Nivel_actual_1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 975560644494646,
+											"parameters": {
+												"variable": "PASOS_SAVE_THE_GIRL",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 462126157709239,
+											"disabled": true,
+											"parameters": {
+												"key": "\"SAVE_GIRL\"",
+												"value": "PASOS_SAVE_THE_GIRL"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game_panel",
+											"sid": 375839701871061,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "-328",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 609950820258160,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "250",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game",
+											"sid": 825677128686595,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "729",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Exit",
+											"sid": 107308709409823,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "400",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										}
+									],
+									"sid": 147049586420909,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 237110175409336,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 778704614792496,
+											"parameters": {
+												"audio-file": "Powerup",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 972755890946663,
+											"disabled": true,
+											"parameters": {
+												"variable": "Nivel_actual_1",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 710987127126543,
+											"disabled": true,
+											"parameters": {
+												"key": "\"Nivel_actual_1\"",
+												"value": "Nivel_actual_1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 912305565728748,
+											"parameters": {
+												"variable": "PASOS_SAVE_THE_GIRL",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 167137451516810,
+											"disabled": true,
+											"parameters": {
+												"key": "\"SAVE_GIRL\"",
+												"value": "PASOS_SAVE_THE_GIRL"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 873060726293282,
+											"parameters": {
+												"audio-file": "Swipe",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game_panel",
+											"sid": 478369795742355,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "-328",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 888399339885679,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "250",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_reset_game",
+											"sid": 202418892520839,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetX",
+												"end-value": "729",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "FINAL_Exit",
+											"sid": 151214121838030,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "400",
+												"time": "1",
+												"ease": "easeoutback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no"
+											}
+										}
+									],
+									"sid": 345325409602911,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 356641970984505,
+									"parameters": {
+										"object": "FINAL_Share_screenshoot"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 354455332071379,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 615948467033133,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_reset_game",
+											"sid": 456748049754993,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 168821830389447,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_Exit",
+											"sid": 954880553559896,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "snapshot-canvas",
+											"objectClass": "System",
+											"sid": 237088500615279,
+											"parameters": {
+												"format": "png",
+												"jpeg-quality": "50",
+												"x": "0",
+												"y": "0",
+												"width": "0",
+												"height": "0"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 755871794502563
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 691924196447884,
+											"parameters": {
+												"variable": "Aparece_bola",
+												"value": "CanvasSnapshot"
+											}
+										},
+										{
+											"id": "load-image-from-url",
+											"objectClass": "SlotScreenshotSprite_1",
+											"sid": 246366876814990,
+											"parameters": {
+												"uri": "CanvasSnapshot",
+												"size": "keep-current-size",
+												"cross-origin": "anonymous"
+											}
+										},
+										{
+											"id": "set-response-binary",
+											"objectClass": "AJAX",
+											"sid": 460764779637688,
+											"parameters": {
+												"destination": "BinaryData"
+											}
+										},
+										{
+											"id": "request-url",
+											"objectClass": "AJAX",
+											"sid": 250848025725460,
+											"parameters": {
+												"tag": "\"load-screenshot\"",
+												"url": "CanvasSnapshot"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_reset_game",
+											"sid": 774636039613381,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 836820117473733,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_Exit",
+											"sid": 617378641737555,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 374546116944223,
+											"parameters": {
+												"seconds": "0.8"
+											}
+										},
+										{
+											"callFunction": "Share_captura",
+											"sid": 695951639719550
+										}
+									],
+									"sid": 887796943337531,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 897679140521984,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_reset_game",
+											"sid": 755819958193211,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 624800096078123,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_Exit",
+											"sid": 329500582479255,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "snapshot-canvas",
+											"objectClass": "System",
+											"sid": 611791783426491,
+											"parameters": {
+												"format": "png",
+												"jpeg-quality": "50",
+												"x": "0",
+												"y": "0",
+												"width": "0",
+												"height": "0"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 830153984969108
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 231438141379964,
+											"parameters": {
+												"audio-file": "captura_share",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "load-image-from-url",
+											"objectClass": "SlotScreenshotSprite_1",
+											"sid": 269779002506201,
+											"parameters": {
+												"uri": "CanvasSnapshot",
+												"size": "keep-current-size",
+												"cross-origin": "anonymous"
+											}
+										},
+										{
+											"id": "set-response-binary",
+											"objectClass": "AJAX",
+											"sid": 722321481268350,
+											"parameters": {
+												"destination": "BinaryData"
+											}
+										},
+										{
+											"id": "request-url",
+											"objectClass": "AJAX",
+											"sid": 182684239220846,
+											"parameters": {
+												"tag": "\"load-screenshot\"",
+												"url": "CanvasSnapshot"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_reset_game",
+											"sid": 271420616679728,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_Share_screenshoot",
+											"sid": 171528007416173,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "FINAL_Exit",
+											"sid": 195616009181192,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 706399181907639,
+											"parameters": {
+												"seconds": "0.8"
+											}
+										},
+										{
+											"callFunction": "Share_captura",
+											"sid": 659578114974891
+										}
+									],
+									"sid": 889845124854553,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"functionName": "Share_captura",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "add-file",
+									"objectClass": "Share",
+									"sid": 415272824241700,
+									"parameters": {
+										"filename": "\"myscreenshot.png\"",
+										"type": "\"image/png\"",
+										"data": "BinaryData"
+									}
+								},
+								{
+									"id": "share-text",
+									"objectClass": "Share",
+									"sid": 329523861121494,
+									"parameters": {
+										"text": "\"Red Ball Vs Green King outdone !! Look how many deaths I have had, can you beat this record ?\"",
+										"title": "\"\"",
+										"url": "\"com.yodagames.redballvsgreenKing\""
+									}
+								}
+							],
+							"sid": 962797724329033,
+							"disabled": true
+						}
+					]
+				}
+			],
+			"sid": 575894007370170
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "CORAZONES PEQUENYOS PARA CADA BOLA",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 831406901658559,
+							"parameters": {
+								"variable": "PASOS_SAVE_THE_GIRL",
+								"comparison": 2,
+								"value": "3"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 591668082796337,
+							"parameters": {
+								"variable": "SALVADO_CHICA",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 508445370270043,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-jumping",
+									"objectClass": "bola",
+									"sid": 262536357518484,
+									"behaviorType": "Platform"
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 879956545943293,
+									"parameters": {
+										"variable": "intro_bola_cae",
 										"comparison": 0,
 										"value": "0"
 									}
@@ -3824,164 +4256,16 @@
 							],
 							"actions": [
 								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 761072620133193,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "-557",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game",
-									"sid": 797914693381713,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "1411",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Exit",
-									"sid": 680005169653299,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "1057",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game_panel",
-									"sid": 599739351413613,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "222",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								}
-							],
-							"sid": 322666862950566
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
+									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 781364856390668,
+									"sid": 307997455377316,
 									"parameters": {
-										"variable": "FX_sound",
-										"comparison": 0,
+										"variable": "intro_bola_cae",
 										"value": "1"
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 607476238570915,
-									"parameters": {
-										"audio-file": "Swipe",
-										"loop": "not-looping",
-										"volume": "VOLUMEN_MASTER_FX",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 694550204955355,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "-557",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game",
-									"sid": 290988612785195,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "1411",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Exit",
-									"sid": 575786362353191,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "1057",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game_panel",
-									"sid": 637983328362222,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "222",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								}
-							],
-							"sid": 722466253661319
+							"sid": 224135711429518
 						}
 					]
 				},
@@ -3989,159 +4273,45 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-tap-object",
-							"objectClass": "Touch",
-							"sid": 615487671608015,
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 246429922215759,
 							"parameters": {
-								"object": "FINAL_reset_game_NO"
+								"variable": "PASOS_SAVE_THE_GIRL",
+								"comparison": 5,
+								"value": "3"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 690835673764955,
+							"parameters": {
+								"variable": "PASOS_SAVE_THE_GIRL",
+								"comparison": 2,
+								"value": "7"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 919092438160214,
+					"sid": 735461627694180,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 315515098186165,
-									"parameters": {
-										"variable": "FX_sound",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game_panel",
-									"sid": 183938280700544,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "-328",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
+									"id": "is-falling",
+									"objectClass": "bola",
+									"sid": 395218613072905,
+									"behaviorType": "Platform"
 								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 842973876558113,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "250",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game",
-									"sid": 709209552061747,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "729",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Exit",
-									"sid": 684919790644062,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "400",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 999343785340937,
-									"disabled": true,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "180",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Exit",
-									"sid": 378460279324586,
-									"disabled": true,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "390",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game",
-									"sid": 879424558024066,
-									"disabled": true,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "689",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								}
-							],
-							"sid": 298084636604427
-						},
-						{
-							"eventType": "block",
-							"conditions": [
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 271819619450448,
+									"sid": 814200379299333,
 									"parameters": {
-										"variable": "FX_sound",
+										"variable": "intro_bola_cae",
 										"comparison": 0,
 										"value": "1"
 									}
@@ -4149,133 +4319,205 @@
 							],
 							"actions": [
 								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game_panel",
-									"sid": 310635779982456,
-									"behaviorType": "Tween",
+									"id": "spawn-another-object",
+									"objectClass": "bola",
+									"sid": 248858320220092,
 									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "-328",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
+										"object": "CORAZONES_INTRO",
+										"layer": "\"fondo\"",
+										"image-point": "0",
+										"create-hierarchy": false
 									}
 								},
 								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 367628129430422,
-									"behaviorType": "Tween",
+									"id": "set-size",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 426049284135269,
 									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "250",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
+										"width": "30",
+										"height": "25"
 									}
 								},
 								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game",
-									"sid": 465434638468708,
-									"behaviorType": "Tween",
+									"id": "spawn-another-object",
+									"objectClass": "bola_ROSA",
+									"sid": 276215832709267,
 									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "729",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
+										"object": "CORAZONES_INTRO",
+										"layer": "\"fondo\"",
+										"image-point": "0",
+										"create-hierarchy": false
 									}
 								},
 								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Exit",
-									"sid": 606422248901437,
-									"behaviorType": "Tween",
+									"id": "set-size",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 561408835631156,
 									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "400",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
+										"width": "30",
+										"height": "25"
 									}
 								},
 								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 922587462411338,
-									"disabled": true,
-									"behaviorType": "Tween",
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 660643628633405,
 									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "180",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Exit",
-									"sid": 781495203241289,
-									"disabled": true,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "390",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game",
-									"sid": 667046762856728,
-									"disabled": true,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "689",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 139337415273346,
-									"parameters": {
-										"audio-file": "Swipe",
-										"loop": "not-looping",
-										"volume": "VOLUMEN_MASTER_FX",
-										"tag-optional": "\"\""
+										"variable": "intro_bola_cae",
+										"value": "0"
 									}
 								}
 							],
-							"sid": 463098105227861
+							"sid": 314480026963191,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-jumping",
+									"objectClass": "bola",
+									"sid": 838551421230400,
+									"behaviorType": "Platform"
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 936274562580086,
+									"parameters": {
+										"variable": "intro_bola_cae",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 486096610109919,
+									"parameters": {
+										"variable": "intro_bola_cae",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 333615080558631,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "************************************************************************************"
+				},
+				{
+					"eventType": "comment",
+					"text": "************************************************************************************"
+				},
+				{
+					"eventType": "comment",
+					"text": "\t\tCORAZONES DESAPARECEN HACIA ARRIB"
+				},
+				{
+					"eventType": "comment",
+					"text": "************************************************************************************"
+				},
+				{
+					"eventType": "comment",
+					"text": "************************************************************************************"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 771639052214822,
+							"parameters": {
+								"variable": "PASOS_SAVE_THE_GIRL",
+								"comparison": 5,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 214594360871168,
+							"parameters": {
+								"variable": "PASOS_SAVE_THE_GIRL",
+								"comparison": 2,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 202768224482237,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-screen",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 892416923452006
+								},
+								{
+									"id": "compare-opacity",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 535097828921264,
+									"parameters": {
+										"comparison": 4,
+										"opacity": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 855247916848033,
+									"parameters": {
+										"y": "CORAZONES_INTRO.Y-1*55*dt"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 681754171627568,
+									"parameters": {
+										"opacity": "CORAZONES_INTRO.Opacity-0.7"
+									}
+								}
+							],
+							"sid": 558022752126982
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-screen",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 788670631153984
+								},
+								{
+									"id": "compare-opacity",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 170108777051243,
+									"parameters": {
+										"comparison": 3,
+										"opacity": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 233548849835156
+								}
+							],
+							"sid": 975074728487518
 						}
 					]
 				},
@@ -4283,580 +4525,200 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-tap-object",
-							"objectClass": "Touch",
-							"sid": 258357646282474,
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 721535190221538,
 							"parameters": {
-								"object": "FINAL_reset_game_YES"
+								"variable": "PASOS_SAVE_THE_GIRL",
+								"comparison": 5,
+								"value": "5"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 701338020923725,
+					"sid": 945372069047442,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 336050223780488,
+									"id": "is-on-screen",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 377196572567512
+								},
+								{
+									"id": "compare-opacity",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 300935196824343,
 									"parameters": {
-										"variable": "FX_sound",
-										"comparison": 0,
-										"value": "0"
+										"comparison": 4,
+										"opacity": "5"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 671805810315816,
-									"disabled": true,
+									"id": "set-y",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 150623280432800,
 									"parameters": {
-										"variable": "Nivel_actual_1",
-										"value": "0"
+										"y": "CORAZONES_INTRO.Y-1.8*55*dt"
 									}
 								},
 								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 948500235759446,
-									"disabled": true,
+									"id": "set-opacity",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 357571844319162,
 									"parameters": {
-										"key": "\"Nivel_actual_1\"",
-										"value": "Nivel_actual_1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 282911314240559,
-									"parameters": {
-										"variable": "PASOS_SAVE_THE_GIRL",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 237405576718104,
-									"disabled": true,
-									"parameters": {
-										"key": "\"SAVE_GIRL\"",
-										"value": "PASOS_SAVE_THE_GIRL"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game_panel",
-									"sid": 935803322895865,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "-328",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 352565513302393,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "250",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game",
-									"sid": 670024034875580,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "729",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Exit",
-									"sid": 358840445834943,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "400",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
+										"opacity": "CORAZONES_INTRO.Opacity-0.7"
 									}
 								}
 							],
-							"sid": 126721322735612
+							"sid": 768669454422193
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 987463772938567,
+									"id": "is-on-screen",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 170368046781209
+								},
+								{
+									"id": "compare-opacity",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 680978833796754,
 									"parameters": {
-										"variable": "FX_sound",
-										"comparison": 0,
-										"value": "1"
+										"comparison": 3,
+										"opacity": "5"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 375084035146486,
-									"parameters": {
-										"audio-file": "Powerup",
-										"loop": "not-looping",
-										"volume": "VOLUMEN_MASTER_FX",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 976654337855650,
-									"disabled": true,
-									"parameters": {
-										"variable": "Nivel_actual_1",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 116638875758117,
-									"disabled": true,
-									"parameters": {
-										"key": "\"Nivel_actual_1\"",
-										"value": "Nivel_actual_1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 688587146664564,
-									"parameters": {
-										"variable": "PASOS_SAVE_THE_GIRL",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 761459777332723,
-									"disabled": true,
-									"parameters": {
-										"key": "\"SAVE_GIRL\"",
-										"value": "PASOS_SAVE_THE_GIRL"
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 631894285120124,
-									"parameters": {
-										"audio-file": "Swipe",
-										"loop": "not-looping",
-										"volume": "VOLUMEN_MASTER_FX",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game_panel",
-									"sid": 194179289364023,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "-328",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 825395823224902,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "250",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_reset_game",
-									"sid": 864176668853266,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "729",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "FINAL_Exit",
-									"sid": 288372780089543,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetY",
-										"end-value": "400",
-										"time": "1",
-										"ease": "easeoutback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no"
-									}
+									"id": "destroy",
+									"objectClass": "CORAZONES_INTRO",
+									"sid": 163331224116327
 								}
 							],
-							"sid": 451589783411987
+							"sid": 268637532347506
 						}
 					]
-				},
+				}
+			],
+			"sid": 112340620994746
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "CAPTURA DE PANTALLA MOVIL",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-tap-object",
-							"objectClass": "Touch",
-							"sid": 131567711931776,
-							"parameters": {
-								"object": "FINAL_Share_screenshoot"
-							}
+							"id": "on-canvas-snapshot",
+							"objectClass": "System",
+							"sid": 378804696162613
 						}
 					],
-					"actions": [],
-					"sid": 526885477626751,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 914476915475788,
-									"parameters": {
-										"variable": "FX_sound",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_reset_game",
-									"sid": 597955444457072,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 648220379492230,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_Exit",
-									"sid": 553428096641029,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "snapshot-canvas",
-									"objectClass": "System",
-									"sid": 980311820856940,
-									"parameters": {
-										"format": "png",
-										"jpeg-quality": "50",
-										"x": "0",
-										"y": "0",
-										"width": "0",
-										"height": "0"
-									}
-								},
-								{
-									"id": "wait-for-previous-actions",
-									"objectClass": "System",
-									"sid": 665723138171317
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 620939488154622,
-									"parameters": {
-										"variable": "Aparece_bola",
-										"value": "CanvasSnapshot"
-									}
-								},
-								{
-									"id": "load-image-from-url",
-									"objectClass": "SlotScreenshotSprite_1",
-									"sid": 567551531771956,
-									"parameters": {
-										"uri": "CanvasSnapshot",
-										"size": "keep-current-size",
-										"cross-origin": "anonymous"
-									}
-								},
-								{
-									"id": "set-response-binary",
-									"objectClass": "AJAX",
-									"sid": 472110446835134,
-									"parameters": {
-										"destination": "BinaryData"
-									}
-								},
-								{
-									"id": "request-url",
-									"objectClass": "AJAX",
-									"sid": 690771950098297,
-									"parameters": {
-										"tag": "\"load-screenshot\"",
-										"url": "CanvasSnapshot"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_reset_game",
-									"sid": 462532069967132,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 829825263318815,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_Exit",
-									"sid": 930526017123758,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 525280871580154,
-									"parameters": {
-										"seconds": "0.8"
-									}
-								},
-								{
-									"callFunction": "Share_captura",
-									"sid": 862349678132349
-								}
-							],
-							"sid": 672096338456052
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 483467413979902,
-									"parameters": {
-										"variable": "FX_sound",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_reset_game",
-									"sid": 800183064147225,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 844888147287038,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_Exit",
-									"sid": 415456002952969,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "snapshot-canvas",
-									"objectClass": "System",
-									"sid": 897677955647183,
-									"parameters": {
-										"format": "png",
-										"jpeg-quality": "50",
-										"x": "0",
-										"y": "0",
-										"width": "0",
-										"height": "0"
-									}
-								},
-								{
-									"id": "wait-for-previous-actions",
-									"objectClass": "System",
-									"sid": 171194871841677
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 696478733975271,
-									"parameters": {
-										"audio-file": "captura_share",
-										"loop": "not-looping",
-										"volume": "VOLUMEN_MASTER_FX",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "load-image-from-url",
-									"objectClass": "SlotScreenshotSprite_1",
-									"sid": 442108967597634,
-									"parameters": {
-										"uri": "CanvasSnapshot",
-										"size": "keep-current-size",
-										"cross-origin": "anonymous"
-									}
-								},
-								{
-									"id": "set-response-binary",
-									"objectClass": "AJAX",
-									"sid": 345965666749231,
-									"parameters": {
-										"destination": "BinaryData"
-									}
-								},
-								{
-									"id": "request-url",
-									"objectClass": "AJAX",
-									"sid": 522420066126675,
-									"parameters": {
-										"tag": "\"load-screenshot\"",
-										"url": "CanvasSnapshot"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_reset_game",
-									"sid": 261071116563642,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_Share_screenshoot",
-									"sid": 334118314974456,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "FINAL_Exit",
-									"sid": 104069575059378,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 787081018325475,
-									"parameters": {
-										"seconds": "0.8"
-									}
-								},
-								{
-									"callFunction": "Share_captura",
-									"sid": 670848263872963
-								}
-							],
-							"sid": 283374394963800
-						}
-					]
-				},
-				{
-					"functionName": "Share_captura",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
 					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "FINAL_reset_game",
+							"sid": 376732434463625,
+							"disabled": true,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FINAL_Share_screenshoot",
+							"sid": 982244768367295,
+							"disabled": true,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FINAL_Exit",
+							"sid": 180811751010838,
+							"disabled": true,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-canvas-size",
+							"objectClass": "System",
+							"sid": 871978693046217,
+							"parameters": {
+								"width": "854",
+								"height": "480"
+							}
+						},
+						{
+							"id": "snapshot-canvas",
+							"objectClass": "System",
+							"sid": 414566497681079,
+							"parameters": {
+								"format": "png",
+								"jpeg-quality": "90",
+								"x": "0",
+								"y": "0",
+								"width": "0",
+								"height": "0"
+							}
+						},
+						{
+							"id": "set-fullscreen-scaling",
+							"objectClass": "System",
+							"sid": 925682352178936,
+							"parameters": {
+								"fullscreen-scaling": "low-quality"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 394178360330970
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "SlotScreenshotSprite_1",
+							"sid": 498509068682170,
+							"parameters": {
+								"uri": "CanvasSnapshot",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "set-response-binary",
+							"objectClass": "AJAX",
+							"sid": 991405471435130,
+							"parameters": {
+								"destination": "BinaryData"
+							}
+						},
+						{
+							"id": "request-url",
+							"objectClass": "AJAX",
+							"sid": 581007168893286,
+							"parameters": {
+								"tag": "\"load-screenshot\"",
+								"url": "CanvasSnapshot"
+							}
+						},
 						{
 							"id": "add-file",
 							"objectClass": "Share",
-							"sid": 945821637671958,
+							"sid": 904195024601275,
+							"disabled": true,
 							"parameters": {
 								"filename": "\"myscreenshot.png\"",
 								"type": "\"image/png\"",
@@ -4864,711 +4726,85 @@
 							}
 						},
 						{
-							"id": "share-text",
-							"objectClass": "Share",
-							"sid": 753279962044239,
-							"parameters": {
-								"text": "\"Red Ball Vs Green King outdone !! Look how many deaths I have had, can you beat this record ?\"",
-								"title": "\"\"",
-								"url": "\"com.yodagames.redballvsgreenKing\""
-							}
-						}
-					],
-					"sid": 152636858939999
-				}
-			]
-		},
-		{
-			"eventType": "comment",
-			"text": "************************************************************************************"
-		},
-		{
-			"eventType": "comment",
-			"text": "************************************************************************************"
-		},
-		{
-			"eventType": "comment",
-			"text": "\t\tCORAZONES BOLA AZUL Y BOLA ROSA"
-		},
-		{
-			"eventType": "comment",
-			"text": "************************************************************************************"
-		},
-		{
-			"eventType": "comment",
-			"text": "************************************************************************************"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 648163409092883,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 2,
-						"value": "3"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 967242088448049,
-					"parameters": {
-						"variable": "SALVADO_CHICA",
-						"comparison": 0,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 334460453610186,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-jumping",
-							"objectClass": "bola",
-							"sid": 918411209793476,
-							"behaviorType": "Platform"
-						},
-						{
-							"id": "compare-eventvar",
+							"id": "wait-for-previous-actions",
 							"objectClass": "System",
-							"sid": 421668127044860,
-							"parameters": {
-								"variable": "intro_bola_cae",
-								"comparison": 0,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 410793144829657,
-							"parameters": {
-								"variable": "intro_bola_cae",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 651202402584587
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-falling",
-							"objectClass": "bola",
-							"sid": 222304930427143,
-							"behaviorType": "Platform"
+							"sid": 517925325111518
 						},
 						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 951009784912957,
-							"parameters": {
-								"variable": "intro_bola_cae",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "bola",
-							"sid": 608661608991862,
-							"parameters": {
-								"object": "CORAZONES_INTRO",
-								"layer": "\"fondo\"",
-								"image-point": "0",
-								"create-hierarchy": false
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 974258236925719,
-							"parameters": {
-								"width": "30",
-								"height": "25"
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "bola_ROSA",
-							"sid": 976182863106292,
+							"id": "set-visible",
+							"objectClass": "FINAL_reset_game",
+							"sid": 692341422278498,
 							"disabled": true,
 							"parameters": {
-								"object": "CORAZONES_INTRO",
-								"layer": "\"edificio\"",
-								"image-point": "0",
-								"create-hierarchy": false
+								"visibility": "visible"
 							}
 						},
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 779782984569207,
+							"id": "set-visible",
+							"objectClass": "FINAL_Share_screenshoot",
+							"sid": 902723116906331,
+							"disabled": true,
 							"parameters": {
-								"variable": "intro_bola_cae",
-								"value": "0"
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FINAL_Exit",
+							"sid": 392055278956118,
+							"disabled": true,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 945932308193279,
+							"disabled": true,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "share-text",
+							"objectClass": "Share",
+							"sid": 906783625142241,
+							"disabled": true,
+							"parameters": {
+								"text": "\"Take a look at this screenshot!\"",
+								"title": "\"\"",
+								"url": "\"\""
 							}
 						}
 					],
-					"sid": 844741708592475
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 948703621170279,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 5,
-						"value": "3"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 815338746611929,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 2,
-						"value": "5"
-					}
+					"sid": 659044370219026,
+					"disabled": true
 				}
 			],
-			"actions": [],
-			"sid": 643606084181817,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-falling",
-							"objectClass": "bola",
-							"sid": 626249468582146,
-							"behaviorType": "Platform"
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 884188477973552,
-							"parameters": {
-								"variable": "intro_bola_cae",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "bola",
-							"sid": 361368748241110,
-							"parameters": {
-								"object": "CORAZONES_INTRO",
-								"layer": "\"fondo\"",
-								"image-point": "0",
-								"create-hierarchy": false
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 990088288697814,
-							"parameters": {
-								"width": "30",
-								"height": "25"
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "bola_ROSA",
-							"sid": 979578760538306,
-							"parameters": {
-								"object": "CORAZONES_INTRO",
-								"layer": "\"fondo\"",
-								"image-point": "0",
-								"create-hierarchy": false
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 265027091348344,
-							"parameters": {
-								"width": "30",
-								"height": "25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 761266284204145,
-							"parameters": {
-								"variable": "intro_bola_cae",
-								"value": "0"
-							}
-						}
-					],
-					"sid": 842369898605895
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-jumping",
-							"objectClass": "bola",
-							"sid": 435460361031397,
-							"behaviorType": "Platform"
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 516183441034785,
-							"parameters": {
-								"variable": "intro_bola_cae",
-								"comparison": 0,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 499785682446353,
-							"parameters": {
-								"variable": "intro_bola_cae",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 654499111608945
-				}
-			]
-		},
-		{
-			"eventType": "comment",
-			"text": "************************************************************************************"
-		},
-		{
-			"eventType": "comment",
-			"text": "************************************************************************************"
-		},
-		{
-			"eventType": "comment",
-			"text": "\t\tCORAZONES DESAPARECEN HACIA ARRIB"
-		},
-		{
-			"eventType": "comment",
-			"text": "************************************************************************************"
-		},
-		{
-			"eventType": "comment",
-			"text": "************************************************************************************"
+			"sid": 309353999498178
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 888685203935822,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 5,
-						"value": "0"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 729595585477719,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 2,
-						"value": "5"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 493704227833207,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-on-screen",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 411514841651158
-						},
-						{
-							"id": "compare-opacity",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 887827953977111,
-							"parameters": {
-								"comparison": 4,
-								"opacity": "5"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 927132183938073,
-							"parameters": {
-								"y": "CORAZONES_INTRO.Y-1*55*dt"
-							}
-						},
-						{
-							"id": "set-opacity",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 617369872779538,
-							"parameters": {
-								"opacity": "CORAZONES_INTRO.Opacity-0.7"
-							}
-						}
-					],
-					"sid": 806389689663174
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-on-screen",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 382502262805599
-						},
-						{
-							"id": "compare-opacity",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 578583390523700,
-							"parameters": {
-								"comparison": 3,
-								"opacity": "5"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 202277492323779
-						}
-					],
-					"sid": 252396882057134
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 223718131870179,
-					"parameters": {
-						"variable": "PASOS_SAVE_THE_GIRL",
-						"comparison": 5,
-						"value": "5"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 106704283203280,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-on-screen",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 659108099373986
-						},
-						{
-							"id": "compare-opacity",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 919108598053654,
-							"parameters": {
-								"comparison": 4,
-								"opacity": "5"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 263808096304706,
-							"parameters": {
-								"y": "CORAZONES_INTRO.Y-1.8*55*dt"
-							}
-						},
-						{
-							"id": "set-opacity",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 378943758126183,
-							"parameters": {
-								"opacity": "CORAZONES_INTRO.Opacity-0.7"
-							}
-						}
-					],
-					"sid": 877086191754137
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-on-screen",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 953069554925003
-						},
-						{
-							"id": "compare-opacity",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 122169837503707,
-							"parameters": {
-								"comparison": 3,
-								"opacity": "5"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "CORAZONES_INTRO",
-							"sid": 764456755408156
-						}
-					],
-					"sid": 615014824442800
-				}
-			]
-		},
-		{
-			"eventType": "comment",
-			"text": "*********************************************************************************************************"
-		},
-		{
-			"eventType": "comment",
-			"text": "*********************************************************************************************************"
-		},
-		{
-			"eventType": "comment",
-			"text": "\t\tCAPTURA  DE  PANTALLA"
-		},
-		{
-			"eventType": "comment",
-			"text": "*********************************************************************************************************"
-		},
-		{
-			"eventType": "comment",
-			"text": "*********************************************************************************************************"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-canvas-snapshot",
-					"objectClass": "System",
-					"sid": 987160206230117
+					"id": "on-fade-in-finished",
+					"objectClass": "Final_juego_Transicion_a_blanco",
+					"sid": 461556967730572,
+					"behaviorType": "Fade"
 				}
 			],
 			"actions": [
 				{
-					"id": "set-visible",
-					"objectClass": "FINAL_reset_game",
-					"sid": 345475801006969,
-					"disabled": true,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "FINAL_Share_screenshoot",
-					"sid": 159964553651637,
-					"disabled": true,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "FINAL_Exit",
-					"sid": 403373076383131,
-					"disabled": true,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-canvas-size",
+					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 464357670137452,
+					"sid": 421855694681392,
 					"parameters": {
-						"width": "854",
-						"height": "480"
-					}
-				},
-				{
-					"id": "snapshot-canvas",
-					"objectClass": "System",
-					"sid": 188765270735394,
-					"parameters": {
-						"format": "png",
-						"jpeg-quality": "90",
-						"x": "0",
-						"y": "0",
-						"width": "0",
-						"height": "0"
-					}
-				},
-				{
-					"id": "set-fullscreen-scaling",
-					"objectClass": "System",
-					"sid": 415027438324617,
-					"parameters": {
-						"fullscreen-scaling": "low-quality"
-					}
-				},
-				{
-					"id": "wait-for-previous-actions",
-					"objectClass": "System",
-					"sid": 351975566879960
-				},
-				{
-					"id": "load-image-from-url",
-					"objectClass": "SlotScreenshotSprite_1",
-					"sid": 385070249701168,
-					"parameters": {
-						"uri": "CanvasSnapshot",
-						"size": "keep-current-size",
-						"cross-origin": "anonymous"
-					}
-				},
-				{
-					"id": "set-response-binary",
-					"objectClass": "AJAX",
-					"sid": 234708077654556,
-					"parameters": {
-						"destination": "BinaryData"
-					}
-				},
-				{
-					"id": "request-url",
-					"objectClass": "AJAX",
-					"sid": 622182327881828,
-					"parameters": {
-						"tag": "\"load-screenshot\"",
-						"url": "CanvasSnapshot"
-					}
-				},
-				{
-					"id": "add-file",
-					"objectClass": "Share",
-					"sid": 804563108280584,
-					"disabled": true,
-					"parameters": {
-						"filename": "\"myscreenshot.png\"",
-						"type": "\"image/png\"",
-						"data": "BinaryData"
-					}
-				},
-				{
-					"id": "wait-for-previous-actions",
-					"objectClass": "System",
-					"sid": 597774696113244
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "FINAL_reset_game",
-					"sid": 598574745045149,
-					"disabled": true,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "FINAL_Share_screenshoot",
-					"sid": 888739902528706,
-					"disabled": true,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "FINAL_Exit",
-					"sid": 332361887040191,
-					"disabled": true,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 628031100784196,
-					"disabled": true,
-					"parameters": {
-						"seconds": "0.5"
-					}
-				},
-				{
-					"id": "share-text",
-					"objectClass": "Share",
-					"sid": 449619809804216,
-					"disabled": true,
-					"parameters": {
-						"text": "\"Take a look at this screenshot!\"",
-						"title": "\"\"",
-						"url": "\"\""
+						"layout": "FINAL_JUEGO"
 					}
 				}
 			],
-			"sid": 174022067954700,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-released",
-					"objectClass": "Keyboard",
-					"sid": 715281721976514,
-					"parameters": {
-						"key": 70
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "invoke-download",
-					"objectClass": "Browser",
-					"sid": 525552446320969,
-					"parameters": {
-						"url": "CanvasSnapshot",
-						"filename": "\"myscreenshot.png\""
-					}
-				}
-			],
-			"sid": 369142552474186,
-			"disabled": true
+			"sid": 311744025628420
 		}
 	],
 	"sid": 900059314522095

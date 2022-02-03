@@ -58,6 +58,15 @@
 					}
 				},
 				{
+					"id": "set-vector-y",
+					"objectClass": "bola",
+					"sid": 201717082128659,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "-420"
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 960826719338656,
@@ -200,10 +209,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 394584531460265,
+									"sid": 265570182044938,
 									"parameters": {
 										"variable": "Nivel_actual_1",
-										"value": "94"
+										"value": "50"
 									}
 								},
 								{
@@ -299,10 +308,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 302115897733081,
+									"sid": 788748802507052,
 									"parameters": {
 										"variable": "Nivel_actual_2",
-										"value": "94"
+										"value": "50"
 									}
 								},
 								{
@@ -398,10 +407,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 947336017469608,
+									"sid": 613857082492883,
 									"parameters": {
 										"variable": "Nivel_actual_3",
-										"value": "94"
+										"value": "50"
 									}
 								},
 								{
@@ -869,6 +878,14 @@
 										"layer": "\"pelota\"",
 										"image-point": "3",
 										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "TXT_HELP",
+									"sid": 613794565130056,
+									"parameters": {
+										"frame-number": "0"
 									}
 								},
 								{
