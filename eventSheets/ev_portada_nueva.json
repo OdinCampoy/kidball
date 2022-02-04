@@ -7290,6 +7290,30 @@
 					]
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 505276304872511,
+					"parameters": {
+						"key": 89
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 854037982702273,
+					"parameters": {
+						"layout": "FINAL_JUEGO"
+					}
+				}
+			],
+			"sid": 168388058612670
 		}
 	],
 	"sid": 712945447984638
