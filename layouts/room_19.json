@@ -2030,6 +2030,35 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "sombra",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1176,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 627.4065092460306,
+						"y": 375.85068563298455,
+						"width": 40,
+						"height": 40,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 887392893388979,
@@ -2063,7 +2092,63 @@
 			"name": "ladrillos sombra",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "SOLIDO_M2",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 15412,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						}
+					},
+					"ownData": {
+						"tilemapData": {
+							"width": 33,
+							"height": 19,
+							"max-width": 50,
+							"max-height": 27,
+							"data": "27x0,19x8,8x0,19x8,8x0,2x8,15,5x9,42,6x9,10,3x8,8x0,2x8,13,5x0,18,6x0,3,3x8,8x0,2x8,13,5x0,18,6x0,3,3x8,8x0,2x8,13,5x0,18,6x0,3,3x8,8x0,2x8,13,5x0,18,6x0,3,3x8,8x0,2x8,13,5x0,19,6x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,11,9x7,12,2x0,3,3x8,8x0,3x8,87,15,7x9,14,2x0,3,3x8,8x0,2x8,15,9,14,10x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,4x0,17,7x0,3,3x8,8x0,2x8,13,3x0,25,18,5x0,2x7,3,3x8,8x0,2x8,13,4x0,36,7x7,6,3x8,8x0,2x8,13,4x0,37,3x9,42,3x9,10,3x8,8x0,2x8,13,4x0,18,3x0,18,3x0,3,3x8,8x0,2x8,13,4x0,18,3x0,18,3x0,3,3x8,8x0,2x8,13,4x0,18,3x0,19,3x0,3,3x8,8x0,2x8,13,4x0,18,7x0,3,3x8,8x0,2x8,13,4x0,18,7x0,3,3x8,8x0,2x8,13,4x0,18,7x0,3,3x8,8x0,2x8,13,3x0,24,18,7x0,3,3x8,8x0,2x8,13,4x0,19,7x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,11,12x7,6,3x8,8x0,19x8,8x0,19x8,8x0,19x8,35x0,2x8,457x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": -73,
+						"y": -23,
+						"width": 1072,
+						"height": 627,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							0,
+							0,
+							0,
+							0.3
+						],
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 203870790919739,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -2522,35 +2607,6 @@
 					"world": {
 						"x": 413,
 						"y": 389,
-						"width": 40,
-						"height": 40,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "sombra",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 1176,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 626.4065092460306,
-						"y": 375.85068563298455,
 						"width": 40,
 						"height": 40,
 						"originX": 0.5,
