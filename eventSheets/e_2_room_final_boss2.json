@@ -56,6 +56,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 142359004663758,
+					"parameters": {
+						"variable": "FinalBoss_pulsar_tutorial",
+						"value": "false"
+					}
+				},
+				{
 					"id": "pin-to-object-properties",
 					"objectClass": "VIDA_JEFE_FINAL",
 					"sid": 816338794931212,
@@ -913,10 +922,10 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "TUTORIAL_FINAL_BOSS",
-									"sid": 289016580401835,
+									"sid": 874108539908082,
 									"behaviorType": "Tween",
 									"parameters": {
-										"tags": "\"\"",
+										"tags": "\"sube_tutorial_2\"",
 										"property": "offsetY",
 										"end-value": "250",
 										"time": "0.9",
@@ -965,10 +974,10 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "TUTORIAL_FINAL_BOSS",
-									"sid": 831216916353027,
+									"sid": 508162185987274,
 									"behaviorType": "Tween",
 									"parameters": {
-										"tags": "\"\"",
+										"tags": "\"sube_tutorial_2\"",
 										"property": "offsetY",
 										"end-value": "250",
 										"time": "0.9",
@@ -1016,6 +1025,35 @@
 						"variable": "PASOS_FINAL_BOSS",
 						"comparison": 0,
 						"value": "5"
+					}
+				},
+				{
+					"id": "is-playing",
+					"objectClass": "TUTORIAL_FINAL_BOSS",
+					"sid": 891944032205228,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"sube_tutorial_2\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 436527437401297,
+					"parameters": {
+						"variable": "FinalBoss_pulsar_tutorial"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 508270462358443,
+					"parameters": {
+						"variable": "PAUSA",
+						"comparison": 0,
+						"value": "0"
 					}
 				}
 			],
@@ -1077,6 +1115,15 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 177471606242488,
+									"parameters": {
+										"variable": "FinalBoss_pulsar_tutorial",
+										"value": "true"
+									}
+								},
 								{
 									"id": "tween-one-property",
 									"objectClass": "TUTORIAL_FINAL_BOSS",
@@ -1177,6 +1224,15 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 937247967303078,
+									"parameters": {
+										"variable": "FinalBoss_pulsar_tutorial",
+										"value": "true"
+									}
+								},
 								{
 									"id": "play",
 									"objectClass": "Audio",
@@ -2457,7 +2513,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "bola_collision",
+							"objectClass": "bola",
 							"sid": 175358788919584,
 							"parameters": {
 								"object": "JEFE_FINAL2"
