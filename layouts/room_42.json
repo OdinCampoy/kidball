@@ -7,50 +7,31 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "FONDO_M5",
+					"type": "fondo_mundo_5_corto",
 					"properties": {
 						"initially-visible": true,
-						"tile-width": 32,
-						"tile-height": 32,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0,
-						"tile-x-drawing-offset": 0,
-						"tile-y-drawing-offset": 0,
-						"drawing-mode": "top-to-right"
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
 					},
-					"uid": 3169,
+					"uid": 16047,
 					"instanceVariables": {},
 					"behaviors": {},
-					"ownData": {
-						"tilemapData": {
-							"width": 36,
-							"height": 21,
-							"max-width": 200,
-							"max-height": 181,
-							"data": "21x2hv,160x0,21x2hv,160x0,21x2hv,160x0,4x2hv,121,141,15x2hv,160x0,4x2hv,122,142,15x2hv,160x0,4x2hv,123,143,6x2hv,22,42,7x2hv,160x0,12x2hv,23,43,7x2hv,160x0,21x2hv,160x0,21x2hv,160x0,8x2hv,21,41,11x2hv,160x0,8x2hv,22,42,4x2hv,21,41,5x2hv,160x0,8x2hv,23,43,4x2hv,22,42,5x2hv,160x0,14x2hv,23,43,5x2hv,160x0,4x2hv,50,13x70,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,52,13x72,3x2hv,160x0,15x2hv,21,41,4x2hv,160x0,15x2hv,22,42,4x2hv,160x0,15x2hv,23,43,4x2hv,160x0,21x2hv,160x0,8x2hv,122,142,141,10x2hv,160x0,8x2hv,123,143,2,3x2hv,21,41,5x2hv,160x0,9x2hv,2x2,3x2hv,22,42,5x2hv,160x0,14x2hv,23,43,5x2hv,160x0,21x2hv,160x0,21x2hv,160x0,21x2hv,160x0,21x2hv,160x0,21x2hv,160x0,21x2hv,160x0,21x2hv,29844x0"
-						},
-						"tile-width": 32,
-						"tile-height": 32,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0
-					},
 					"world": {
-						"x": -116,
-						"y": -55,
-						"width": 1153,
-						"height": 675,
-						"originX": 0,
-						"originY": 0,
+						"x": 427,
+						"y": 241,
+						"width": 946,
+						"height": 485.00000000000006,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
 							1,
 							1
 						],
+						"angle": 0,
 						"zElevation": 0
 					}
 				},
@@ -109,6 +90,54 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "FONDO_M5",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 16032,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 36,
+							"height": 21,
+							"max-width": 200,
+							"max-height": 181,
+							"data": "21x2hv,160x0,21x2hv,160x0,21x2hv,160x0,4x2hv,121,141,15x2hv,160x0,4x2hv,122,142,15x2hv,160x0,4x2hv,123,143,6x2hv,22,42,7x2hv,160x0,12x2hv,23,43,7x2hv,160x0,21x2hv,160x0,21x2hv,160x0,8x2hv,21,41,11x2hv,160x0,8x2hv,22,42,4x2hv,21,41,5x2hv,160x0,8x2hv,23,43,4x2hv,22,42,5x2hv,160x0,14x2hv,23,43,5x2hv,160x0,4x2hv,50,13x70,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,51,13x71,3x2hv,160x0,4x2hv,52,13x72,3x2hv,160x0,15x2hv,21,41,4x2hv,160x0,15x2hv,22,42,4x2hv,160x0,15x2hv,23,43,4x2hv,160x0,21x2hv,160x0,8x2hv,122,142,141,10x2hv,160x0,8x2hv,123,143,2,3x2hv,21,41,5x2hv,160x0,9x2hv,2x2,3x2hv,22,42,5x2hv,160x0,14x2hv,23,43,5x2hv,160x0,21x2hv,160x0,21x2hv,160x0,21x2hv,160x0,21x2hv,160x0,21x2hv,160x0,21x2hv,160x0,21x2hv,29844x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 33,
+						"y": -16,
+						"width": 1153,
+						"height": 675,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
 						"zElevation": 0
 					}
 				}
@@ -401,9 +430,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -430,9 +459,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -496,9 +525,9 @@
 						"originX": 0,
 						"originY": 0,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -525,9 +554,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -554,9 +583,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -931,9 +960,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -960,9 +989,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -993,9 +1022,9 @@
 						"originX": 0,
 						"originY": 0,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -1212,9 +1241,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -1241,9 +1270,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -1274,9 +1303,9 @@
 						"originX": 0,
 						"originY": 0,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -1365,9 +1394,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -1394,9 +1423,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -1427,9 +1456,9 @@
 						"originX": 0,
 						"originY": 0,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -1625,8 +1654,8 @@
 					"world": {
 						"x": 687,
 						"y": 364,
-						"width": 98.18018104622956,
-						"height": 98.18018104622956,
+						"width": 98,
+						"height": 98,
 						"originX": 0.5,
 						"originY": 0.56383,
 						"color": [
@@ -1688,9 +1717,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -1717,9 +1746,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -1746,9 +1775,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -1775,9 +1804,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
@@ -1804,9 +1833,9 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.7843137254901961,
+							0.7843137254901961,
+							0.7843137254901961,
 							1
 						],
 						"angle": 0,
