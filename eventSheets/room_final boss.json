@@ -82,6 +82,16 @@
 			"sid": 207081822993096
 		},
 		{
+			"eventType": "variable",
+			"name": "FinalBoss_pulsar_tutorial",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 431729965187489
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "juego_evento"
 		},
@@ -115,6 +125,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 250532353763025,
+					"parameters": {
+						"variable": "FinalBoss_pulsar_tutorial",
+						"value": "false"
+					}
+				},
 				{
 					"id": "pin-to-object-properties",
 					"objectClass": "VIDA_JEFE_FINAL",
@@ -1252,10 +1271,10 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "TUTORIAL_FINAL_BOSS",
-									"sid": 252499967434657,
+									"sid": 344290857520945,
 									"behaviorType": "Tween",
 									"parameters": {
-										"tags": "\"\"",
+										"tags": "\"sube_tutorial_1\"",
 										"property": "offsetY",
 										"end-value": "250",
 										"time": "0.9",
@@ -1320,10 +1339,10 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "TUTORIAL_FINAL_BOSS",
-									"sid": 635696943977181,
+									"sid": 603478531249386,
 									"behaviorType": "Tween",
 									"parameters": {
-										"tags": "\"\"",
+										"tags": "\"sube_tutorial_1\"",
 										"property": "offsetY",
 										"end-value": "250",
 										"time": "0.9",
@@ -1372,6 +1391,25 @@
 						"comparison": 0,
 						"value": "5"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 200831683587741,
+					"parameters": {
+						"variable": "FinalBoss_pulsar_tutorial"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-playing",
+					"objectClass": "TUTORIAL_FINAL_BOSS",
+					"sid": 827229575649424,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"sube_tutorial_1\""
+					},
+					"isInverted": true
 				},
 				{
 					"id": "compare-eventvar",
@@ -1442,6 +1480,15 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 563305512815230,
+									"parameters": {
+										"variable": "FinalBoss_pulsar_tutorial",
+										"value": "true"
+									}
+								},
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
@@ -2142,7 +2189,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "bola_collision",
+							"objectClass": "bola",
 							"sid": 314699762494469,
 							"parameters": {
 								"object": "JEFE_FINAL"

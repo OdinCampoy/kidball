@@ -31,15 +31,6 @@
 				},
 				{
 					"id": "set-size",
-					"objectClass": "bola",
-					"sid": 225582980630773,
-					"parameters": {
-						"width": "29",
-						"height": "29"
-					}
-				},
-				{
-					"id": "set-size",
 					"objectClass": "enemy_in_floor",
 					"sid": 720887013743614,
 					"parameters": {
@@ -120,7 +111,63 @@
 					}
 				}
 			],
-			"sid": 314901062540804
+			"sid": 314901062540804,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 255495795924264,
+							"parameters": {
+								"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+								"comparison": 0,
+								"value": "\"ROJA\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "bola",
+							"sid": 889727409417267,
+							"parameters": {
+								"width": "35",
+								"height": "29"
+							}
+						}
+					],
+					"sid": 510187823905181
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 733281879113847,
+							"parameters": {
+								"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+								"comparison": 0,
+								"value": "\"ROSA\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "bola",
+							"sid": 371407119992384,
+							"parameters": {
+								"width": "29",
+								"height": "29"
+							}
+						}
+					],
+					"sid": 920651330716523
+				}
+			]
 		}
 	],
 	"sid": 665978550481671

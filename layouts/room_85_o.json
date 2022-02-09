@@ -7,6 +7,35 @@
 			"subLayers": [],
 			"instances": [
 				{
+					"type": "fondo_mundo_4_corto",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 15536,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 427,
+						"y": 241,
+						"width": 946,
+						"height": 485.00000000000006,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "atasco_saltarines_DER",
 					"properties": {
 						"initially-visible": false,
@@ -1628,39 +1657,6 @@
 					}
 				},
 				{
-					"type": "Mundo_4_pilar_de3",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 15536,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 1198,
-						"y": -106,
-						"width": 96,
-						"height": 731,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Mundo_4_contrafuerte_dcha",
 					"properties": {
 						"initially-visible": true,
@@ -2092,9 +2088,9 @@
 					"behaviors": {},
 					"world": {
 						"x": -281,
-						"y": 592,
-						"width": 32.058769562825574,
-						"height": 42.74502608376747,
+						"y": 591.1274869581163,
+						"width": 32,
+						"height": 57,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3659,7 +3655,63 @@
 			"name": "ladrillos sombra",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "SOLIDO_M3",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 15963,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						}
+					},
+					"ownData": {
+						"tilemapData": {
+							"width": 33,
+							"height": 19,
+							"max-width": 50,
+							"max-height": 27,
+							"data": "27x0,19x8,8x0,19x8,8x0,2x8,6,6x9,41,5x9,11,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,4x0,2,15,3x8,8x0,2x8,13,6x0,49,4x0,3,4x8,8x0,2x8,13,6x0,49,4x0,4,11,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,49,5x0,3,3x8,8x0,2x8,13,6x0,50,5x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,10,12x7,15,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": -90,
+						"y": -22,
+						"width": 1072,
+						"height": 627,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							0,
+							0,
+							0,
+							0.3
+						],
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 442986159482678,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -6821,9 +6873,9 @@
 					"world": {
 						"x": 144,
 						"y": 184,
-						"width": 30.16,
+						"width": 36.4,
 						"height": 30.16,
-						"originX": 0.5,
+						"originX": 0.5714285714285714,
 						"originY": 0.5,
 						"color": [
 							1,
