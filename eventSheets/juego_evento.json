@@ -80,6 +80,24 @@
 					"text": "COGE EL NUMERO DE NIVEL PARA EL COLOR DE LA BOLA SEGUN EL LAYOUT"
 				},
 				{
+					"id": "set-text",
+					"objectClass": "LIFES_TXT",
+					"sid": 244938620305907,
+					"disabled": true,
+					"parameters": {
+						"text": "\"[outline=#000000][lineThickness=\" &1& \"] \"&VIDAS_1&\"[/lineThickness][/outline]\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "LIFES_TXT",
+					"sid": 631821404402530,
+					"disabled": true,
+					"parameters": {
+						"text": "\"[outline=#000000][lineThickness=\" &2& \"] \"&VIDAS_1&\"[/lineThickness][/outline]\""
+					}
+				},
+				{
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 787885871760067,
@@ -454,11 +472,11 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 633894260046787,
+					"sid": 962795205141356,
 					"parameters": {
 						"object-to-create": "LIFES_TXT",
 						"layer": "\"HUD\"",
-						"x": "80",
+						"x": "90",
 						"y": "28",
 						"create-hierarchy": false
 					}
@@ -675,7 +693,7 @@
 						{
 							"id": "set-text",
 							"objectClass": "LIFES_TXT",
-							"sid": 432377013018089,
+							"sid": 663909010388879,
 							"parameters": {
 								"text": "VIDAS_1"
 							}
@@ -683,9 +701,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Gema_Currency_TXT",
-							"sid": 128798054140873,
+							"sid": 631663792548874,
 							"parameters": {
-								"text": "GEMAS_1&\"/5\""
+								"text": "GEMAS_1"
 							}
 						}
 					],
@@ -717,9 +735,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Gema_Currency_TXT",
-							"sid": 350819754918305,
+							"sid": 138014700163028,
 							"parameters": {
-								"text": "GEMAS_2&\"/5\""
+								"text": "GEMAS_2"
 							}
 						}
 					],
@@ -751,9 +769,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Gema_Currency_TXT",
-							"sid": 520666072828211,
+							"sid": 335655701690521,
 							"parameters": {
-								"text": "GEMAS_3&\"/5\""
+								"text": "GEMAS_3"
 							}
 						}
 					],
@@ -783,9 +801,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Gema_Currency_TXT",
-							"sid": 396120653269921,
+							"sid": 515897146651988,
 							"parameters": {
-								"text": "Gemas_Speedrun&\"/5\""
+								"text": "Gemas_Speedrun"
 							}
 						},
 						{
@@ -969,16 +987,6 @@
 								"comparison": 0,
 								"value": "1"
 							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 968446217757146,
-							"parameters": {
-								"variable": "VIDAS_1",
-								"comparison": 5,
-								"value": "0"
-							}
 						}
 					],
 					"actions": [],
@@ -988,140 +996,513 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "trigger-once-while-true",
+									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 114150765818972
-								}
-							],
-							"actions": [
-								{
-									"id": "spawn-another-object",
-									"objectClass": "Inicio_POS",
-									"sid": 233276564077373,
+									"sid": 775893586237869,
 									"parameters": {
-										"object": "bola_aparece_1",
-										"layer": "\"pelota\"",
-										"image-point": "0",
-										"create-hierarchy": false
+										"variable": "SLOTS_Seleccionado_1_2_o_3",
+										"comparison": 0,
+										"value": "1"
 									}
 								},
 								{
-									"id": "set-angle",
-									"objectClass": "bola_aparece_1",
-									"sid": 202019689558633,
-									"parameters": {
-										"angle": "0"
-									}
-								},
-								{
-									"id": "spawn-another-object",
-									"objectClass": "Inicio_POS",
-									"sid": 107186135370024,
-									"parameters": {
-										"object": "bola_aparece_2",
-										"layer": "\"pelota\"",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
-								},
-								{
-									"id": "set-angle",
-									"objectClass": "bola_aparece_2",
-									"sid": 707626383955394,
-									"parameters": {
-										"angle": "90"
-									}
-								},
-								{
-									"id": "spawn-another-object",
-									"objectClass": "Inicio_POS",
-									"sid": 679616266640872,
-									"parameters": {
-										"object": "bola_aparece_3",
-										"layer": "\"pelota\"",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
-								},
-								{
-									"id": "set-angle",
-									"objectClass": "bola_aparece_3",
-									"sid": 256039637299175,
-									"parameters": {
-										"angle": "180"
-									}
-								},
-								{
-									"id": "spawn-another-object",
-									"objectClass": "Inicio_POS",
-									"sid": 826081392896227,
-									"parameters": {
-										"object": "bola_aparece_4",
-										"layer": "\"pelota\"",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
-								},
-								{
-									"id": "set-angle",
-									"objectClass": "bola_aparece_4",
-									"sid": 982437886072486,
-									"parameters": {
-										"angle": "270"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
+									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 260813443961840,
+									"sid": 515447138276580,
 									"parameters": {
-										"variable": "Aparece_bola",
-										"value": "2"
+										"variable": "VIDAS_1",
+										"comparison": 5,
+										"value": "1"
 									}
 								}
 							],
-							"sid": 914846567170423,
+							"actions": [],
+							"sid": 896800375644672,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-eventvar",
+											"id": "trigger-once-while-true",
 											"objectClass": "System",
-											"sid": 108652602125281,
+											"sid": 411433459962898
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 733671181602556,
 											"parameters": {
-												"variable": "FX_sound",
-												"comparison": 0,
-												"value": "1"
+												"object": "bola_aparece_1",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_1",
+											"sid": 664372448554463,
+											"parameters": {
+												"angle": "0"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 910500529048769,
+											"parameters": {
+												"object": "bola_aparece_2",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_2",
+											"sid": 358880608817058,
+											"parameters": {
+												"angle": "90"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 111032982239789,
+											"parameters": {
+												"object": "bola_aparece_3",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_3",
+											"sid": 323941626309355,
+											"parameters": {
+												"angle": "180"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 982968881251375,
+											"parameters": {
+												"object": "bola_aparece_4",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_4",
+											"sid": 905812064139758,
+											"parameters": {
+												"angle": "270"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 786559011998101,
+											"parameters": {
+												"variable": "Aparece_bola",
+												"value": "2"
 											}
 										}
 									],
-									"actions": [],
-									"sid": 518301166829913,
+									"sid": 331110600669352,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "trigger-once-while-true",
+													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 652540090742606
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 655459147646077,
+													"sid": 411301923096991,
 													"parameters": {
-														"audio-file": "crea_bola_2",
-														"loop": "not-looping",
-														"volume": "VOLUMEN_MASTER_FX",
-														"tag-optional": "\"\""
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
 													}
 												}
 											],
-											"sid": 986934783752671
+											"actions": [],
+											"sid": 689707193548244,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 336697876554961
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 251977395747027,
+															"parameters": {
+																"audio-file": "crea_bola_2",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 148934128779811
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 690931393923126,
+									"parameters": {
+										"variable": "SLOTS_Seleccionado_1_2_o_3",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 395117579659280,
+									"parameters": {
+										"variable": "VIDAS_2",
+										"comparison": 5,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 723835942454133,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 147180594848344
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 486522512357191,
+											"parameters": {
+												"object": "bola_aparece_1",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_1",
+											"sid": 114977257480404,
+											"parameters": {
+												"angle": "0"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 845225544095730,
+											"parameters": {
+												"object": "bola_aparece_2",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_2",
+											"sid": 710645697095154,
+											"parameters": {
+												"angle": "90"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 206943830789078,
+											"parameters": {
+												"object": "bola_aparece_3",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_3",
+											"sid": 428507411619152,
+											"parameters": {
+												"angle": "180"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 427611116801110,
+											"parameters": {
+												"object": "bola_aparece_4",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_4",
+											"sid": 282109873742225,
+											"parameters": {
+												"angle": "270"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 269067287384456,
+											"parameters": {
+												"variable": "Aparece_bola",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 738804335459748,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 628008830208872,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 267822952070926,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 512632791712676
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 118714453430002,
+															"parameters": {
+																"audio-file": "crea_bola_2",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 225175877366555
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 993864081836595,
+									"parameters": {
+										"variable": "SLOTS_Seleccionado_1_2_o_3",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 742044014219872,
+									"parameters": {
+										"variable": "VIDAS_3",
+										"comparison": 5,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 296350551724789,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 925050444202099
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 688746566899191,
+											"parameters": {
+												"object": "bola_aparece_1",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_1",
+											"sid": 460908071090688,
+											"parameters": {
+												"angle": "0"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 528383264266976,
+											"parameters": {
+												"object": "bola_aparece_2",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_2",
+											"sid": 188930558250980,
+											"parameters": {
+												"angle": "90"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 266696438608698,
+											"parameters": {
+												"object": "bola_aparece_3",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_3",
+											"sid": 539444063619420,
+											"parameters": {
+												"angle": "180"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inicio_POS",
+											"sid": 438027332440073,
+											"parameters": {
+												"object": "bola_aparece_4",
+												"layer": "\"pelota\"",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bola_aparece_4",
+											"sid": 860116377537394,
+											"parameters": {
+												"angle": "270"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 425369808025756,
+											"parameters": {
+												"variable": "Aparece_bola",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 722622909828739,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 395302780129194,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 114472361540061,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 109726234132670
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 337149020756867,
+															"parameters": {
+																"audio-file": "crea_bola_2",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 751797270721004
+												}
+											]
 										}
 									]
 								}
@@ -2445,11 +2826,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 446761588445689,
+							"sid": 317412656435320,
 							"parameters": {
 								"variable": "VIDAS_1",
 								"comparison": 5,
-								"value": "0"
+								"value": "1"
 							}
 						}
 					],
@@ -9688,11 +10069,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 213997575991939,
+									"sid": 908239010550149,
 									"parameters": {
 										"variable": "VIDAS_1",
 										"comparison": 5,
-										"value": "0"
+										"value": "1"
 									}
 								}
 							],
@@ -9748,11 +10129,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 905479049942849,
+									"sid": 339507868493233,
 									"parameters": {
 										"variable": "VIDAS_2",
 										"comparison": 5,
-										"value": "0"
+										"value": "1"
 									}
 								}
 							],
@@ -9808,11 +10189,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 124453648469799,
+									"sid": 731558873342622,
 									"parameters": {
 										"variable": "VIDAS_3",
 										"comparison": 5,
-										"value": "0"
+										"value": "1"
 									}
 								}
 							],
@@ -9866,11 +10247,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 955565866342257,
+									"sid": 171878662760058,
 									"parameters": {
 										"variable": "Vidas_Speedrun",
 										"comparison": 2,
-										"value": "0"
+										"value": "1"
 									}
 								},
 								{
@@ -10329,11 +10710,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 419149972758661,
+									"sid": 426230079758279,
 									"parameters": {
 										"variable": "VIDAS_1",
 										"comparison": 2,
-										"value": "0"
+										"value": "1"
 									}
 								},
 								{
@@ -10683,11 +11064,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 722461594547622,
+									"sid": 635753425676732,
 									"parameters": {
 										"variable": "VIDAS_2",
 										"comparison": 2,
-										"value": "0"
+										"value": "1"
 									}
 								},
 								{
@@ -11037,11 +11418,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 579615567917998,
+									"sid": 981427441181076,
 									"parameters": {
 										"variable": "VIDAS_3",
 										"comparison": 2,
-										"value": "0"
+										"value": "1"
 									}
 								},
 								{
@@ -11739,10 +12120,10 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 494255713497110,
+													"sid": 858522937635763,
 													"parameters": {
 														"variable": "VIDAS_1",
-														"value": "9"
+														"value": "10"
 													}
 												},
 												{
@@ -11931,10 +12312,10 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 294936851153966,
+													"sid": 773472840369146,
 													"parameters": {
 														"variable": "VIDAS_2",
-														"value": "9"
+														"value": "10"
 													}
 												},
 												{
@@ -12123,10 +12504,10 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 159096941568510,
+													"sid": 213948992035087,
 													"parameters": {
 														"variable": "VIDAS_3",
-														"value": "9"
+														"value": "10"
 													}
 												},
 												{
@@ -12330,10 +12711,10 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 209974068287794,
+													"sid": 989988627016836,
 													"parameters": {
 														"variable": "VIDAS_1",
-														"value": "9"
+														"value": "10"
 													}
 												},
 												{
@@ -12459,10 +12840,10 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 206787344688197,
+													"sid": 331502161972275,
 													"parameters": {
 														"variable": "VIDAS_2",
-														"value": "9"
+														"value": "10"
 													}
 												},
 												{
@@ -12588,10 +12969,10 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 789415292593819,
+													"sid": 858260833340029,
 													"parameters": {
 														"variable": "VIDAS_3",
-														"value": "9"
+														"value": "10"
 													}
 												},
 												{
@@ -12798,9 +13179,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "Gema_Currency_TXT",
-											"sid": 153429603545103,
+											"sid": 915437991982303,
 											"parameters": {
-												"text": "GEMAS_1&\"/5\""
+												"text": "GEMAS_1"
 											}
 										},
 										{
@@ -12889,11 +13270,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 950818020703197,
+											"sid": 378138665800116,
 											"parameters": {
 												"variable": "GEMAS_1",
 												"comparison": 5,
-												"value": "5"
+												"value": "10"
 											}
 										}
 									],
@@ -12934,9 +13315,9 @@
 												{
 													"id": "set-text",
 													"objectClass": "Gema_Currency_TXT",
-													"sid": 748404461480634,
+													"sid": 820670559492747,
 													"parameters": {
-														"text": "GEMAS_1&\"/5\""
+														"text": "GEMAS_1"
 													}
 												},
 												{
@@ -13029,9 +13410,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "Gema_Currency_TXT",
-											"sid": 974325183111132,
+											"sid": 782336424482043,
 											"parameters": {
-												"text": "GEMAS_2&\"/5\""
+												"text": "GEMAS_2"
 											}
 										},
 										{
@@ -13120,11 +13501,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 844041702349526,
+											"sid": 784434181813126,
 											"parameters": {
 												"variable": "GEMAS_2",
 												"comparison": 5,
-												"value": "5"
+												"value": "10"
 											}
 										}
 									],
@@ -13165,9 +13546,9 @@
 												{
 													"id": "set-text",
 													"objectClass": "Gema_Currency_TXT",
-													"sid": 896711122846394,
+													"sid": 990034194567360,
 													"parameters": {
-														"text": "GEMAS_2&\"/5\""
+														"text": "GEMAS_2"
 													}
 												},
 												{
@@ -13260,9 +13641,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "Gema_Currency_TXT",
-											"sid": 703408958897851,
+											"sid": 391886597475385,
 											"parameters": {
-												"text": "GEMAS_3&\"/5\""
+												"text": "GEMAS_3"
 											}
 										},
 										{
@@ -13351,11 +13732,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 853060289658491,
+											"sid": 949242949563996,
 											"parameters": {
 												"variable": "GEMAS_3",
 												"comparison": 5,
-												"value": "5"
+												"value": "10"
 											}
 										}
 									],
@@ -13396,9 +13777,9 @@
 												{
 													"id": "set-text",
 													"objectClass": "Gema_Currency_TXT",
-													"sid": 506631323027240,
+													"sid": 520643001872985,
 													"parameters": {
-														"text": "GEMAS_3&\"/5\""
+														"text": "GEMAS_3"
 													}
 												},
 												{
@@ -13508,9 +13889,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "Gema_Currency_TXT",
-											"sid": 786250089030317,
+											"sid": 172362684162693,
 											"parameters": {
-												"text": "Gemas_Speedrun&\"/5\""
+												"text": "Gemas_Speedrun"
 											}
 										},
 										{
@@ -13599,11 +13980,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 724010364236172,
+											"sid": 431504805937746,
 											"parameters": {
 												"variable": "Gemas_Speedrun",
 												"comparison": 5,
-												"value": "5"
+												"value": "10"
 											}
 										}
 									],
@@ -13644,9 +14025,9 @@
 												{
 													"id": "set-text",
 													"objectClass": "Gema_Currency_TXT",
-													"sid": 831566614041617,
+													"sid": 269554846916151,
 													"parameters": {
-														"text": "Gemas_Speedrun&\"/5\""
+														"text": "Gemas_Speedrun"
 													}
 												},
 												{
@@ -13743,26 +14124,6 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
-				{
-					"eventType": "comment",
-					"text": "********************************************************************"
-				},
-				{
-					"eventType": "comment",
-					"text": "********************************************************************"
-				},
-				{
-					"eventType": "comment",
-					"text": "\t\tCOGER LA LLAVE"
-				},
-				{
-					"eventType": "comment",
-					"text": "********************************************************************"
-				},
-				{
-					"eventType": "comment",
-					"text": "********************************************************************"
-				},
 				{
 					"eventType": "block",
 					"conditions": [

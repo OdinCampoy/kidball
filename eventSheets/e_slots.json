@@ -56,6 +56,54 @@
 			],
 			"actions": [
 				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 530441023619758,
+					"parameters": {
+						"key": "\"VIDAS_1\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 517391073979709,
+					"parameters": {
+						"key": "\"VIDAS_2\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 841116245788520,
+					"parameters": {
+						"key": "\"VIDAS_3\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 931237807571802,
+					"parameters": {
+						"key": "\"GEMAS_1\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 151528359634625,
+					"parameters": {
+						"key": "\"GEMAS_2\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 832320081255167,
+					"parameters": {
+						"key": "\"GEMAS_3\""
+					}
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 111636116382963,
@@ -1138,6 +1186,396 @@
 			],
 			"sid": 670467204381259,
 			"disabled": true
+		},
+		{
+			"eventType": "comment",
+			"text": "-----------------------------------------------------------------------------"
+		},
+		{
+			"eventType": "comment",
+			"text": "RECUPERA VIDAS"
+		},
+		{
+			"eventType": "comment",
+			"text": "-----------------------------------------------------------------------------"
+		},
+		{
+			"eventType": "comment",
+			"text": "VIDAS slot 1"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 342905168205700,
+					"parameters": {
+						"key": "\"VIDAS_1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 267377041262190,
+					"parameters": {
+						"key": "\"VIDAS_1\""
+					}
+				}
+			],
+			"sid": 782675272985034
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 997202268898835,
+					"parameters": {
+						"key": "\"VIDAS_1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 912868770341574,
+					"parameters": {
+						"variable": "VIDAS_1",
+						"value": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SLOTS_LIFE_TXT_1",
+					"sid": 180053247836480,
+					"parameters": {
+						"text": "\"X \"&VIDAS_1"
+					}
+				}
+			],
+			"sid": 332883179007280
+		},
+		{
+			"eventType": "comment",
+			"text": "VIDAS slot 2"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 152256746997678,
+					"parameters": {
+						"key": "\"VIDAS_2\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 659421058016071,
+					"parameters": {
+						"key": "\"VIDAS_2\""
+					}
+				}
+			],
+			"sid": 874044919409669
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 797580690797373,
+					"parameters": {
+						"key": "\"VIDAS_2\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 361788752866966,
+					"parameters": {
+						"variable": "VIDAS_2",
+						"value": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SLOTS_LIFE_TXT_2",
+					"sid": 842037904506050,
+					"parameters": {
+						"text": "\"X \"&VIDAS_2"
+					}
+				}
+			],
+			"sid": 209804838460159
+		},
+		{
+			"eventType": "comment",
+			"text": "VIDAS slot 3"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 898379674087374,
+					"parameters": {
+						"key": "\"VIDAS_3\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 254767896875047,
+					"parameters": {
+						"key": "\"VIDAS_3\""
+					}
+				}
+			],
+			"sid": 851827835078885
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 540805172687964,
+					"parameters": {
+						"key": "\"VIDAS_3\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 444931522080736,
+					"parameters": {
+						"variable": "VIDAS_3",
+						"value": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SLOTS_LIFE_TXT_3",
+					"sid": 860286521092151,
+					"parameters": {
+						"text": "\"X \"&VIDAS_3"
+					}
+				}
+			],
+			"sid": 265882397484535
+		},
+		{
+			"eventType": "comment",
+			"text": "-----------------------------------------------------------------------------"
+		},
+		{
+			"eventType": "comment",
+			"text": "RECUPERA GEMAS"
+		},
+		{
+			"eventType": "comment",
+			"text": "-----------------------------------------------------------------------------"
+		},
+		{
+			"eventType": "comment",
+			"text": "GEMAS slot 1"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 118827638567935,
+					"parameters": {
+						"key": "\"GEMAS_1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 254190576696192,
+					"parameters": {
+						"key": "\"GEMAS_1\""
+					}
+				}
+			],
+			"sid": 726248161795515
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 642421507063804,
+					"parameters": {
+						"key": "\"GEMAS_1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 854662219200828,
+					"parameters": {
+						"variable": "GEMAS_1",
+						"value": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SLOTS_GEMAS_TXT_1",
+					"sid": 834379639370497,
+					"parameters": {
+						"text": "GEMAS_1&\"/10\""
+					}
+				}
+			],
+			"sid": 174527837971921
+		},
+		{
+			"eventType": "comment",
+			"text": "GEMAS slot 2"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 532949228418046,
+					"parameters": {
+						"key": "\"GEMAS_2\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 125180748048375,
+					"parameters": {
+						"key": "\"GEMAS_2\""
+					}
+				}
+			],
+			"sid": 667440852841590
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 490880947029809,
+					"parameters": {
+						"key": "\"GEMAS_2\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 364678282639021,
+					"parameters": {
+						"variable": "GEMAS_2",
+						"value": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SLOTS_GEMAS_TXT_2",
+					"sid": 969565320868749,
+					"parameters": {
+						"text": "GEMAS_2&\"/10\""
+					}
+				}
+			],
+			"sid": 555201321286582
+		},
+		{
+			"eventType": "comment",
+			"text": "GEMAS slot 3"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 809946354212890,
+					"parameters": {
+						"key": "\"GEMAS_3\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 508735747691975,
+					"parameters": {
+						"key": "\"GEMAS_3\""
+					}
+				}
+			],
+			"sid": 858241041304021
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 595407007833265,
+					"parameters": {
+						"key": "\"GEMAS_3\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 793678383071550,
+					"parameters": {
+						"variable": "GEMAS_3",
+						"value": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SLOTS_GEMAS_TXT_3",
+					"sid": 544927396326367,
+					"parameters": {
+						"text": "GEMAS_3&\"/10\""
+					}
+				}
+			],
+			"sid": 362641189419515
 		},
 		{
 			"eventType": "group",
@@ -4102,6 +4540,49 @@
 														}
 													],
 													"sid": 868335468897698
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 488964019251813,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 469324180659892,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 284906692812680
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 707113390981806,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 890127538987129
+														}
+													]
 												}
 											]
 										},
@@ -4169,6 +4650,49 @@
 														}
 													],
 													"sid": 370277002549244
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 229299637662228,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 432156331768897,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 960237906093890
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 543965030697952,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 648736711689286
+														}
+													]
 												}
 											]
 										},
@@ -4236,6 +4760,49 @@
 														}
 													],
 													"sid": 227244519979207
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 468899503796310,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 576043934475808,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 622987542986039
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 225757585097027,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 685199171034771
+														}
+													]
 												}
 											]
 										}
@@ -4345,6 +4912,49 @@
 														}
 													],
 													"sid": 125610822831898
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 455955444764845,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 269564472367860,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 346746570316381
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 478533297218858,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 494763256512645
+														}
+													]
 												}
 											]
 										},
@@ -4412,6 +5022,49 @@
 														}
 													],
 													"sid": 785117753395715
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 590295011813524,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 104661487721044,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 261653140325969
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 259852811084533,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 404173965456976
+														}
+													]
 												}
 											]
 										},
@@ -4659,6 +5312,58 @@
 														}
 													],
 													"sid": 497787514160216
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 900330535735495,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 370818809629339,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 671338500159117
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 561176783390424,
+																	"parameters": {
+																		"variable": "GAMEPAD_CENTER",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 644641478886079,
+																	"parameters": {
+																		"audio-file": "Portada_Start",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 282433293010010
+														}
+													]
 												}
 											],
 											"isOrBlock": true
@@ -4762,6 +5467,58 @@
 														}
 													],
 													"sid": 943006423528686
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 659088833222373,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 257661400394286,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 365844179966226
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 519007570469049,
+																	"parameters": {
+																		"variable": "GAMEPAD_CENTER",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 946169483187627,
+																	"parameters": {
+																		"audio-file": "Portada_Start",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 624420633002754
+														}
+													]
 												}
 											],
 											"isOrBlock": true
@@ -4910,7 +5667,52 @@
 															}
 														}
 													],
-													"sid": 938722776470539
+													"sid": 938722776470539,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-eventvar",
+																	"objectClass": "System",
+																	"sid": 806690306725743,
+																	"parameters": {
+																		"variable": "FX_sound",
+																		"comparison": 0,
+																		"value": "1"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 746851913010529,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "trigger-once-while-true",
+																			"objectClass": "System",
+																			"sid": 587064073056232
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "play",
+																			"objectClass": "Audio",
+																			"sid": 278147105988659,
+																			"parameters": {
+																				"audio-file": "Portada_selector_pasar_opciones",
+																				"loop": "not-looping",
+																				"volume": "VOLUMEN_MASTER_FX",
+																				"tag-optional": "\"\""
+																			}
+																		}
+																	],
+																	"sid": 374030599040775
+																}
+															]
+														}
+													]
 												}
 											]
 										},
@@ -5059,6 +5861,49 @@
 														}
 													],
 													"sid": 378476731918345
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 148743340838458,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 267888364956300,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 105900766045309
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 733543948236612,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 826138213567014
+														}
+													]
 												}
 											]
 										},
@@ -5207,6 +6052,49 @@
 														}
 													],
 													"sid": 921994339238700
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 588893004442915,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 851017431753811,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 945524129663093
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 813805633564868,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 524870312152010
+														}
+													]
 												}
 											]
 										}
@@ -5232,615 +6120,11 @@
 											"parameters": {
 												"key": 83
 											}
-										},
-										{
-											"id": "on-key-pressed",
-											"objectClass": "Keyboard",
-											"sid": 153255306765830,
-											"parameters": {
-												"key": 27
-											}
 										}
 									],
 									"actions": [],
 									"sid": 541368008108048,
 									"children": [
-										{
-											"eventType": "group",
-											"disabled": true,
-											"title": "SLOT 1 BACK - CANCELAR BORRADO2",
-											"description": "",
-											"isActiveOnStart": true,
-											"children": [
-												{
-													"eventType": "comment",
-													"text": "CANCELAR SLOT 1"
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 563150257678094,
-															"parameters": {
-																"variable": "SLOTS_slot_seleccion_subopciones",
-																"comparison": 0,
-																"value": "\"delete SI slot 1\""
-															}
-														},
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 265698043182232,
-															"parameters": {
-																"variable": "SLOTS_slot_seleccion_subopciones",
-																"comparison": 0,
-																"value": "\"delete NO slot 1\""
-															}
-														}
-													],
-													"actions": [],
-													"sid": 725635236091236,
-													"disabled": true,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "trigger-once-while-true",
-																	"objectClass": "System",
-																	"sid": 710456191041743
-																}
-															],
-															"actions": [
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 776467175873726,
-																	"parameters": {
-																		"seconds": "0.01"
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 839910762809548,
-																	"parameters": {
-																		"variable": "GAMEPAD_CENTER",
-																		"value": "1"
-																	}
-																},
-																{
-																	"type": "comment",
-																	"text": "suena sonido de BORRADO CANCELADO"
-																},
-																{
-																	"id": "play-by-name",
-																	"objectClass": "Audio",
-																	"sid": 367443310789057,
-																	"parameters": {
-																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
-																		"loop": "not-looping",
-																		"volume": "0",
-																		"tag-optional": "\"\""
-																	}
-																},
-																{
-																	"type": "comment",
-																	"text": "HACE TODOS LOS DTOS DE LOS SLOTS"
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_borrarJuego_pregunta_1",
-																	"sid": 165851331960853,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_borrarJuego_NO_1",
-																	"sid": 906241387038886,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_borrarJuego_SI_1",
-																	"sid": 492331188643895,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"type": "comment",
-																	"text": "HACE INVISIBLE TODAS LAS SUB OPCIONES"
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_description_1",
-																	"sid": 460243938001556,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_description_PLAY_1",
-																	"sid": 596385792754142,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_description_DELETE_1",
-																	"sid": 108228772390026,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOT_selector_descrition_1",
-																	"sid": 494922750824709,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_juego_borrado_1",
-																	"sid": 321717970635365,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"callFunction": "IDIOMA - JUEGO",
-																	"sid": 829772446388441
-																},
-																{
-																	"type": "comment",
-																	"text": "REINICIA TODOS LOS ESTADOS Y LOS DEVULEVE AL ORIGEN"
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 831158349892608,
-																	"parameters": {
-																		"variable": "SLOTS_slot_seleccion_estado",
-																		"value": "\"sub-opciones\""
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 496776736092526,
-																	"parameters": {
-																		"variable": "SLOTS_slot_seleccion_subopciones",
-																		"value": "\"continue_1\""
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 625046370543432,
-																	"parameters": {
-																		"variable": "SLOTS_slot_seleccion_principal_bola",
-																		"value": "1"
-																	}
-																}
-															],
-															"sid": 742936164631909,
-															"disabled": true
-														}
-													],
-													"isOrBlock": true
-												}
-											],
-											"sid": 183590901407961
-										},
-										{
-											"eventType": "group",
-											"disabled": true,
-											"title": "SLOT 2 BACK - CANCELAR BORRADO2",
-											"description": "",
-											"isActiveOnStart": true,
-											"children": [
-												{
-													"eventType": "comment",
-													"text": "CANCELAR SLOT 2"
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 451840765093704,
-															"parameters": {
-																"variable": "SLOTS_slot_seleccion_subopciones",
-																"comparison": 0,
-																"value": "\"delete SI slot 2\""
-															}
-														},
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 907353747612758,
-															"parameters": {
-																"variable": "SLOTS_slot_seleccion_subopciones",
-																"comparison": 0,
-																"value": "\"delete NO slot 2\""
-															}
-														}
-													],
-													"actions": [],
-													"sid": 903513420854108,
-													"disabled": true,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "trigger-once-while-true",
-																	"objectClass": "System",
-																	"sid": 247240290122217
-																}
-															],
-															"actions": [
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 887893263146249,
-																	"parameters": {
-																		"seconds": "0.01"
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 654869039514353,
-																	"parameters": {
-																		"variable": "GAMEPAD_CENTER",
-																		"value": "1"
-																	}
-																},
-																{
-																	"type": "comment",
-																	"text": "suena sonido de BORRADO CANCELADO"
-																},
-																{
-																	"id": "play-by-name",
-																	"objectClass": "Audio",
-																	"sid": 574109492152925,
-																	"parameters": {
-																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
-																		"loop": "not-looping",
-																		"volume": "0",
-																		"tag-optional": "\"\""
-																	}
-																},
-																{
-																	"type": "comment",
-																	"text": "HACE TODOS LOS DTOS DE LOS SLOTS"
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_borrarJuego_pregunta_2",
-																	"sid": 721184798953680,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_borrarJuego_NO_2",
-																	"sid": 116547416555197,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_borrarJuego_SI_2",
-																	"sid": 367525144295432,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"type": "comment",
-																	"text": "HACE INVISIBLE TODAS LAS SUB OPCIONES"
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_description_2",
-																	"sid": 359339164033396,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_description_PLAY_2",
-																	"sid": 220864003536945,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_description_DELETE_2",
-																	"sid": 172863099315020,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOT_selector_descrition_2",
-																	"sid": 444404007239743,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_juego_borrado_2",
-																	"sid": 125929553916510,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"callFunction": "IDIOMA - JUEGO",
-																	"sid": 606814136277636
-																},
-																{
-																	"type": "comment",
-																	"text": "REINICIA TODOS LOS ESTADOS Y LOS DEVULEVE AL ORIGEN"
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 133818607488775,
-																	"parameters": {
-																		"variable": "SLOTS_slot_seleccion_estado",
-																		"value": "\"sub-opciones\""
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 589572991540628,
-																	"parameters": {
-																		"variable": "SLOTS_slot_seleccion_subopciones",
-																		"value": "\"continue_2\""
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 571916221854292,
-																	"parameters": {
-																		"variable": "SLOTS_slot_seleccion_principal_bola",
-																		"value": "2"
-																	}
-																}
-															],
-															"sid": 964013459518079,
-															"disabled": true
-														}
-													],
-													"isOrBlock": true
-												}
-											],
-											"sid": 278897194536792
-										},
-										{
-											"eventType": "group",
-											"disabled": true,
-											"title": "SLOT 3 BACK - CANCELAR BORRADO2",
-											"description": "",
-											"isActiveOnStart": true,
-											"children": [
-												{
-													"eventType": "comment",
-													"text": "CANCELAR SLOT 3"
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 680167660403841,
-															"parameters": {
-																"variable": "SLOTS_slot_seleccion_subopciones",
-																"comparison": 0,
-																"value": "\"delete SI slot 3\""
-															}
-														},
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 787775030454046,
-															"parameters": {
-																"variable": "SLOTS_slot_seleccion_subopciones",
-																"comparison": 0,
-																"value": "\"delete NO slot 3\""
-															}
-														}
-													],
-													"actions": [],
-													"sid": 678173115653986,
-													"disabled": true,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "trigger-once-while-true",
-																	"objectClass": "System",
-																	"sid": 832594885387732
-																}
-															],
-															"actions": [
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 924507003524104,
-																	"parameters": {
-																		"seconds": "0.01"
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 542303204596057,
-																	"parameters": {
-																		"variable": "GAMEPAD_CENTER",
-																		"value": "1"
-																	}
-																},
-																{
-																	"type": "comment",
-																	"text": "suena sonido de BORRADO CANCELADO"
-																},
-																{
-																	"id": "play-by-name",
-																	"objectClass": "Audio",
-																	"sid": 820866834254710,
-																	"parameters": {
-																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
-																		"loop": "not-looping",
-																		"volume": "0",
-																		"tag-optional": "\"\""
-																	}
-																},
-																{
-																	"type": "comment",
-																	"text": "HACE TODOS LOS DTOS DE LOS SLOTS"
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_borrarJuego_pregunta_3",
-																	"sid": 670792517674897,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_borrarJuego_NO_3",
-																	"sid": 766297512166333,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_borrarJuego_SI_3",
-																	"sid": 322722132824078,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"type": "comment",
-																	"text": "HACE INVISIBLE TODAS LAS SUB OPCIONES"
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_description_3",
-																	"sid": 597312512995372,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_description_PLAY_3",
-																	"sid": 440958465646547,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_description_DELETE_3",
-																	"sid": 628452522826150,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOT_selector_descrition_3",
-																	"sid": 890181936405006,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "SLOTS_TXT_juego_borrado_3",
-																	"sid": 467611321516221,
-																	"parameters": {
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"callFunction": "IDIOMA - JUEGO",
-																	"sid": 741350052295621
-																},
-																{
-																	"type": "comment",
-																	"text": "REINICIA TODOS LOS ESTADOS Y LOS DEVULEVE AL ORIGEN"
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 943816161518203,
-																	"parameters": {
-																		"variable": "SLOTS_slot_seleccion_estado",
-																		"value": "\"sub-opciones\""
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 640509585456188,
-																	"parameters": {
-																		"variable": "SLOTS_slot_seleccion_subopciones",
-																		"value": "\"continue_3\""
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 303590460493997,
-																	"parameters": {
-																		"variable": "SLOTS_slot_seleccion_principal_bola",
-																		"value": "3"
-																	}
-																}
-															],
-															"sid": 713230627428076,
-															"disabled": true
-														}
-													]
-												}
-											],
-											"sid": 667705542213648
-										},
 										{
 											"eventType": "comment",
 											"text": "SLOT 1"
@@ -5868,14 +6152,14 @@
 														{
 															"id": "trigger-once-while-true",
 															"objectClass": "System",
-															"sid": 809907759780859
+															"sid": 710629024367874
 														}
 													],
 													"actions": [
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 274147667546339,
+															"sid": 227541100841010,
 															"parameters": {
 																"seconds": "0.01"
 															}
@@ -5883,7 +6167,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 792970565040596,
+															"sid": 668971130123638,
 															"parameters": {
 																"variable": "GAMEPAD_CENTER",
 																"value": "1"
@@ -5896,7 +6180,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOTS_TXT_startgame_1",
-															"sid": 974370300817913,
+															"sid": 505043178759520,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -5904,7 +6188,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOTS_TXT_description_NEWGAME_1",
-															"sid": 527874940457159,
+															"sid": 392663332155403,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -5912,7 +6196,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOTS_TXT_description_1",
-															"sid": 251642584226907,
+															"sid": 437407805909684,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -5920,7 +6204,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOTS_TXT_description_PLAY_1",
-															"sid": 132257671257577,
+															"sid": 228720627226714,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -5928,7 +6212,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOTS_TXT_description_DELETE_1",
-															"sid": 315232320759397,
+															"sid": 751578226743318,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -5936,7 +6220,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOT_selector_descrition_1",
-															"sid": 508686840454103,
+															"sid": 455018864556607,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -5944,7 +6228,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "Slot_box_explication_1",
-															"sid": 480949987964952,
+															"sid": 487103165671843,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -5952,7 +6236,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 315428599275328,
+															"sid": 811465256765648,
 															"parameters": {
 																"variable": "SLOTS_slot_seleccion_subopciones",
 																"value": "\"vacio\""
@@ -5961,7 +6245,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 535626076311888,
+															"sid": 832423230584205,
 															"parameters": {
 																"variable": "SLOTS_slot_seleccion_estado",
 																"value": "\"slots\""
@@ -5970,7 +6254,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 744437109335151,
+															"sid": 529129812119337,
 															"parameters": {
 																"variable": "SLOTS_slot_seleccion_principal_bola",
 																"value": "1"
@@ -5979,13 +6263,65 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOT_selector_slot",
-															"sid": 994639537079204,
+															"sid": 999956777107999,
 															"parameters": {
 																"visibility": "visible"
 															}
 														}
 													],
-													"sid": 556066247044321
+													"sid": 300083269140141
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 629085285860684,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 988019610107720,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 324573975466695
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 466345183969816,
+																	"parameters": {
+																		"variable": "GAMEPAD_CENTER",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 962382177844966,
+																	"parameters": {
+																		"audio-file": "Swipe",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 741133457361667
+														}
+													]
 												}
 											]
 										},
@@ -6016,14 +6352,14 @@
 														{
 															"id": "trigger-once-while-true",
 															"objectClass": "System",
-															"sid": 873653068769487
+															"sid": 654061574041530
 														}
 													],
 													"actions": [
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 808066538887477,
+															"sid": 139170913650152,
 															"parameters": {
 																"seconds": "0.01"
 															}
@@ -6031,7 +6367,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 897173622931349,
+															"sid": 139981330574418,
 															"parameters": {
 																"variable": "GAMEPAD_CENTER",
 																"value": "1"
@@ -6044,7 +6380,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOTS_TXT_startgame_2",
-															"sid": 677832683664696,
+															"sid": 808905024028443,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -6052,7 +6388,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOTS_TXT_description_NEWGAME_2",
-															"sid": 851828275792562,
+															"sid": 287403041097723,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -6060,7 +6396,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOTS_TXT_description_2",
-															"sid": 659334175737206,
+															"sid": 305134273605183,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -6068,7 +6404,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOTS_TXT_description_PLAY_2",
-															"sid": 623721782065028,
+															"sid": 569752865746879,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -6076,7 +6412,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOTS_TXT_description_DELETE_2",
-															"sid": 924934588137078,
+															"sid": 916249027037907,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -6084,7 +6420,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOT_selector_descrition_2",
-															"sid": 786699288429619,
+															"sid": 512103899904143,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -6092,7 +6428,7 @@
 														{
 															"id": "set-visible",
 															"objectClass": "Slot_box_explication_2",
-															"sid": 486470379152025,
+															"sid": 614494161354106,
 															"parameters": {
 																"visibility": "invisible"
 															}
@@ -6100,7 +6436,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 190665758641778,
+															"sid": 241362011937948,
 															"parameters": {
 																"variable": "SLOTS_slot_seleccion_subopciones",
 																"value": "\"vacio\""
@@ -6109,7 +6445,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 891038200025155,
+															"sid": 970500878239958,
 															"parameters": {
 																"variable": "SLOTS_slot_seleccion_estado",
 																"value": "\"slots\""
@@ -6118,7 +6454,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 393057848040439,
+															"sid": 620368156809340,
 															"parameters": {
 																"variable": "SLOTS_slot_seleccion_principal_bola",
 																"value": "2"
@@ -6127,13 +6463,65 @@
 														{
 															"id": "set-visible",
 															"objectClass": "SLOT_selector_slot",
-															"sid": 930797456233485,
+															"sid": 948955618720576,
 															"parameters": {
 																"visibility": "visible"
 															}
 														}
 													],
-													"sid": 448973512871150
+													"sid": 735719008718000
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 820440410514463,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 381890503545449,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 322309605647026
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 748001152882361,
+																	"parameters": {
+																		"variable": "GAMEPAD_CENTER",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 104873936928265,
+																	"parameters": {
+																		"audio-file": "Swipe",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 360566639716122
+														}
+													]
 												}
 											]
 										},
@@ -6158,6 +6546,58 @@
 											"actions": [],
 											"sid": 709216387685314,
 											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 444663955206148,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 566771937236443,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 613048337833705
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 365655381369729,
+																	"parameters": {
+																		"variable": "GAMEPAD_CENTER",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 118218646980766,
+																	"parameters": {
+																		"audio-file": "Swipe",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 725807853587327
+														}
+													]
+												},
 												{
 													"eventType": "block",
 													"conditions": [
@@ -6396,6 +6836,49 @@
 													"eventType": "block",
 													"conditions": [
 														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 197878608589545,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 154756248236858,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 775701624653263
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 679287912990440,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 363238962722032
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
 															"id": "trigger-once-while-true",
 															"objectClass": "System",
 															"sid": 457971686947228
@@ -6463,6 +6946,49 @@
 													"eventType": "block",
 													"conditions": [
 														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 469794946202025,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 554041848248307,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 722206807932344
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 625169653250611,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 272239745917981
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
 															"id": "trigger-once-while-true",
 															"objectClass": "System",
 															"sid": 433894109990095
@@ -6526,6 +7052,49 @@
 											"actions": [],
 											"sid": 109203894528396,
 											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 245919121417421,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 657271296545843,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 877120383282027
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 189782880510452,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 602727156105085
+														}
+													]
+												},
 												{
 													"eventType": "block",
 													"conditions": [
@@ -6639,6 +7208,49 @@
 													"eventType": "block",
 													"conditions": [
 														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 926707488749242,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 734210868891445,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 790986238412223
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 192187653674886,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 169245274064460
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
 															"id": "trigger-once-while-true",
 															"objectClass": "System",
 															"sid": 730214506378392
@@ -6702,6 +7314,49 @@
 											"actions": [],
 											"sid": 195782935890732,
 											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 286848839549999,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 748620415277723,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 782735637401076
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 103158159877323,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 223541910285018
+														}
+													]
+												},
 												{
 													"eventType": "block",
 													"conditions": [
@@ -6773,6 +7428,49 @@
 													"eventType": "block",
 													"conditions": [
 														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 752525490507883,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 446857802563541,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 763881808859976
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 939240266815840,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 445565990725175
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
 															"id": "trigger-once-while-true",
 															"objectClass": "System",
 															"sid": 100537921920949
@@ -6816,49 +7514,6 @@
 														}
 													],
 													"sid": 620925885539939
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 694353837202466,
-													"parameters": {
-														"variable": "FX_sound",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 140134689812159,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "trigger-once-while-true",
-															"objectClass": "System",
-															"sid": 768037232344456
-														}
-													],
-													"actions": [
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 571310870760757,
-															"parameters": {
-																"audio-file": "Portada_selector_pasar_opciones",
-																"loop": "not-looping",
-																"volume": "VOLUMEN_MASTER_FX",
-																"tag-optional": "\"\""
-															}
-														}
-													],
-													"sid": 526872908174678
 												}
 											]
 										}
@@ -6982,10 +7637,10 @@
 																{
 																	"id": "set-eventvar-value",
 																	"objectClass": "System",
-																	"sid": 191212994311910,
+																	"sid": 939707425713944,
 																	"parameters": {
 																		"variable": "VIDAS_1",
-																		"value": "9"
+																		"value": "10"
 																	}
 																},
 																{
@@ -7094,12 +7749,12 @@
 																{
 																	"id": "play-by-name",
 																	"objectClass": "Audio",
-																	"sid": 920510717567585,
+																	"sid": 739551919499962,
 																	"parameters": {
 																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
+																		"audio-file-name": "FX_sound=1? \"Delete slot\":\"\"",
 																		"loop": "not-looping",
-																		"volume": "0",
+																		"volume": "VOLUMEN_MASTER_FX",
 																		"tag-optional": "\"\""
 																	}
 																},
@@ -7384,10 +8039,10 @@
 																{
 																	"id": "play-by-name",
 																	"objectClass": "Audio",
-																	"sid": 642030916713322,
+																	"sid": 597141890837066,
 																	"parameters": {
 																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
+																		"audio-file-name": "FX_sound=1? \"Swipe\":\"\"",
 																		"loop": "not-looping",
 																		"volume": "0",
 																		"tag-optional": "\"\""
@@ -7597,10 +8252,10 @@
 																{
 																	"id": "set-eventvar-value",
 																	"objectClass": "System",
-																	"sid": 384605178820371,
+																	"sid": 882270872620029,
 																	"parameters": {
 																		"variable": "VIDAS_2",
-																		"value": "9"
+																		"value": "10"
 																	}
 																},
 																{
@@ -7709,12 +8364,12 @@
 																{
 																	"id": "play-by-name",
 																	"objectClass": "Audio",
-																	"sid": 103989926872274,
+																	"sid": 684726497012241,
 																	"parameters": {
 																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
+																		"audio-file-name": "FX_sound=1? \"Delete slot\":\"\"",
 																		"loop": "not-looping",
-																		"volume": "0",
+																		"volume": "VOLUMEN_MASTER_FX",
 																		"tag-optional": "\"\""
 																	}
 																},
@@ -7999,10 +8654,10 @@
 																{
 																	"id": "play-by-name",
 																	"objectClass": "Audio",
-																	"sid": 997602216341439,
+																	"sid": 923738704286019,
 																	"parameters": {
 																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
+																		"audio-file-name": "FX_sound=1? \"Swipe\":\"\"",
 																		"loop": "not-looping",
 																		"volume": "0",
 																		"tag-optional": "\"\""
@@ -8212,10 +8867,10 @@
 																{
 																	"id": "set-eventvar-value",
 																	"objectClass": "System",
-																	"sid": 467054753797399,
+																	"sid": 586805447134416,
 																	"parameters": {
 																		"variable": "VIDAS_3",
-																		"value": "9"
+																		"value": "10"
 																	}
 																},
 																{
@@ -8324,12 +8979,12 @@
 																{
 																	"id": "play-by-name",
 																	"objectClass": "Audio",
-																	"sid": 308081444210972,
+																	"sid": 470285321928498,
 																	"parameters": {
 																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
+																		"audio-file-name": "FX_sound=1? \"Delete slot\":\"\"",
 																		"loop": "not-looping",
-																		"volume": "0",
+																		"volume": "VOLUMEN_MASTER_FX",
 																		"tag-optional": "\"\""
 																	}
 																},
@@ -8614,10 +9269,10 @@
 																{
 																	"id": "play-by-name",
 																	"objectClass": "Audio",
-																	"sid": 631179687326226,
+																	"sid": 117693319655152,
 																	"parameters": {
 																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
+																		"audio-file-name": "FX_sound=1? \"Swipe\":\"\"",
 																		"loop": "not-looping",
 																		"volume": "0",
 																		"tag-optional": "\"\""
@@ -8764,14 +9419,6 @@
 											"parameters": {
 												"key": 83
 											}
-										},
-										{
-											"id": "on-key-pressed",
-											"objectClass": "Keyboard",
-											"sid": 699001063741728,
-											"parameters": {
-												"key": 27
-											}
 										}
 									],
 									"actions": [],
@@ -8849,12 +9496,12 @@
 																{
 																	"id": "play-by-name",
 																	"objectClass": "Audio",
-																	"sid": 618428653962335,
+																	"sid": 447377289558775,
 																	"parameters": {
 																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
+																		"audio-file-name": "FX_sound=1? \"Swipe\":\"\"",
 																		"loop": "not-looping",
-																		"volume": "0",
+																		"volume": "VOLUMEN_MASTER_FX",
 																		"tag-optional": "\"\""
 																	}
 																},
@@ -9046,12 +9693,12 @@
 																{
 																	"id": "play-by-name",
 																	"objectClass": "Audio",
-																	"sid": 710147630111178,
+																	"sid": 523210511422523,
 																	"parameters": {
 																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
+																		"audio-file-name": "FX_sound=1? \"Swipe\":\"\"",
 																		"loop": "not-looping",
-																		"volume": "0",
+																		"volume": "VOLUMEN_MASTER_FX",
 																		"tag-optional": "\"\""
 																	}
 																},
@@ -9243,12 +9890,12 @@
 																{
 																	"id": "play-by-name",
 																	"objectClass": "Audio",
-																	"sid": 555794694166440,
+																	"sid": 706591127226075,
 																	"parameters": {
 																		"folder": "sounds",
-																		"audio-file-name": "FX_sound=1? \"\":\"\"",
+																		"audio-file-name": "FX_sound=1? \"Swipe\":\"\"",
 																		"loop": "not-looping",
-																		"volume": "0",
+																		"volume": "VOLUMEN_MASTER_FX",
 																		"tag-optional": "\"\""
 																	}
 																},

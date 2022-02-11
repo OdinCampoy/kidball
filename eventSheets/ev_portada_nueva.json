@@ -1279,6 +1279,58 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
+					"sid": 521811691986521,
+					"parameters": {
+						"variable": "MUSIC_sound",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Audio",
+					"sid": 332985137693747,
+					"parameters": {
+						"tag": "\"Musica_portada\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 819678894361436,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 352918079962823
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 503235201066785,
+							"parameters": {
+								"audio-file": "Kidball_menu_loop",
+								"loop": "looping",
+								"volume": "VOLUMEN_MASTER_MUSIC",
+								"tag-optional": "\"Musica_portada\"\r\n"
+							}
+						}
+					],
+					"sid": 331093466839290
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
 					"sid": 706536976436611,
 					"parameters": {
 						"variable": "Portada_portada_seleccion",
@@ -1366,6 +1418,7 @@
 					],
 					"actions": [],
 					"sid": 381032021687845,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -1389,7 +1442,8 @@
 									}
 								}
 							],
-							"sid": 301424025935528
+							"sid": 301424025935528,
+							"disabled": true
 						}
 					]
 				}
