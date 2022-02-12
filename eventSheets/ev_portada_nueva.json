@@ -576,7 +576,7 @@
 								},
 								{
 									"id": "pin-to-object-properties",
-									"objectClass": "PORTADA_Opc_Leng_Icon_left2",
+									"objectClass": "PORTADA_Opc_Leng_Icon_right",
 									"sid": 130026339305497,
 									"behaviorType": "Pin",
 									"parameters": {
@@ -1105,7 +1105,7 @@
 								},
 								{
 									"id": "pin-to-object-properties",
-									"objectClass": "PORTADA_Opc_Leng_Icon_left2",
+									"objectClass": "PORTADA_Opc_Leng_Icon_right",
 									"sid": 143707455325561,
 									"behaviorType": "Pin",
 									"parameters": {
@@ -4408,12 +4408,9 @@
 															}
 														},
 														{
-															"id": "wait",
+															"id": "wait-for-previous-actions",
 															"objectClass": "System",
-															"sid": 512108238658951,
-															"parameters": {
-																"seconds": "0.01"
-															}
+															"sid": 500073608139579
 														},
 														{
 															"id": "set-eventvar-value",
@@ -4423,6 +4420,10 @@
 																"variable": "Idioma_numerico",
 																"value": "1"
 															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 447841218839351
 														}
 													],
 													"sid": 932030030319523
@@ -4452,12 +4453,9 @@
 															}
 														},
 														{
-															"id": "wait",
+															"id": "wait-for-previous-actions",
 															"objectClass": "System",
-															"sid": 517500257762921,
-															"parameters": {
-																"seconds": "0.01"
-															}
+															"sid": 559308147565898
 														},
 														{
 															"id": "set-eventvar-value",
@@ -4467,6 +4465,10 @@
 																"variable": "Idioma_numerico",
 																"value": "2"
 															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 178720434842016
 														}
 													],
 													"sid": 820070225647182
@@ -4474,17 +4476,6 @@
 												{
 													"eventType": "block",
 													"conditions": [
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 648432913416434,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"comparison": 0,
-																"value": "\"ALE\""
-															}
-														},
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
@@ -4507,22 +4498,9 @@
 															}
 														},
 														{
-															"id": "wait",
+															"id": "wait-for-previous-actions",
 															"objectClass": "System",
-															"sid": 603658893809062,
-															"parameters": {
-																"seconds": "0.01"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 605481886632504,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"value": "\"FRA\""
-															}
+															"sid": 137825032474344
 														},
 														{
 															"id": "set-eventvar-value",
@@ -4532,6 +4510,10 @@
 																"variable": "Idioma_numerico",
 																"value": "3"
 															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 696191519946891
 														}
 													],
 													"sid": 552806660962164
@@ -4539,17 +4521,6 @@
 												{
 													"eventType": "block",
 													"conditions": [
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 768835427181658,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"comparison": 0,
-																"value": "\"FRA\""
-															}
-														},
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
@@ -4572,22 +4543,9 @@
 															}
 														},
 														{
-															"id": "wait",
+															"id": "wait-for-previous-actions",
 															"objectClass": "System",
-															"sid": 537640418492538,
-															"parameters": {
-																"seconds": "0.01"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 419354576044229,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"value": "\"JAP\""
-															}
+															"sid": 425071704538022
 														},
 														{
 															"id": "set-eventvar-value",
@@ -4597,6 +4555,10 @@
 																"variable": "Idioma_numerico",
 																"value": "4"
 															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 908825021844325
 														}
 													],
 													"sid": 681532873889667
@@ -4604,17 +4566,6 @@
 												{
 													"eventType": "block",
 													"conditions": [
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 953511578377078,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"comparison": 0,
-																"value": "\"JAP\""
-															}
-														},
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
@@ -4637,34 +4588,205 @@
 															}
 														},
 														{
-															"id": "wait",
+															"id": "wait-for-previous-actions",
 															"objectClass": "System",
-															"sid": 343783702898678,
-															"parameters": {
-																"seconds": "0.01"
-															}
+															"sid": 151634135251259
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 792786701452780,
-															"disabled": true,
+															"sid": 398287086972477,
 															"parameters": {
-																"variable": "Idoma_Master",
-																"value": "\"ING\""
+																"variable": "Idioma_numerico",
+																"value": "5"
 															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 997196819945151
+														}
+													],
+													"sid": 596725936717104
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 485079580600779,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "5"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 953614816091020,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 712022245893986
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 784723621097406,
+															"sid": 727681694178898,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "6"
+															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 315584627441598
+														}
+													],
+													"sid": 949052567519984
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 505729172245584,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "6"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 783358294156264,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 902858913494812
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 946659903897963,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "7"
+															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 705791562557565
+														}
+													],
+													"sid": 821827930568663
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 948022204956064,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "7"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 561066740449231,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 723798322761155
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 350172229968638,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "8"
+															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 764396786806250
+														}
+													],
+													"sid": 205367324902322
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 333545418913097,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "8"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 873883889500650,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 706589095708590
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 495025445331922,
 															"parameters": {
 																"variable": "Idioma_numerico",
 																"value": "0"
 															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 540058340500779
 														}
 													],
-													"sid": 596725936717104
+													"sid": 545660490629039
 												},
 												{
 													"eventType": "block",
@@ -5000,17 +5122,6 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 704144490952683,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"comparison": 0,
-																"value": "\"ING\""
-															}
-														},
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
 															"sid": 388310411263158,
 															"parameters": {
 																"variable": "Idioma_numerico",
@@ -5030,31 +5141,22 @@
 															}
 														},
 														{
-															"id": "wait",
+															"id": "wait-for-previous-actions",
 															"objectClass": "System",
-															"sid": 521560653982482,
-															"parameters": {
-																"seconds": "0.01"
-															}
+															"sid": 229031708212269
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 894689792265256,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"value": "\"JAP\""
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 718308055382247,
+															"sid": 790352914931983,
 															"parameters": {
 																"variable": "Idioma_numerico",
-																"value": "4"
+																"value": "8"
 															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 635367029885694
 														}
 													],
 													"sid": 374765061389850
@@ -5065,22 +5167,11 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 413515218635015,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"comparison": 0,
-																"value": "\"JAP\""
-															}
-														},
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 691136656124799,
+															"sid": 167854433798383,
 															"parameters": {
 																"variable": "Idioma_numerico",
 																"comparison": 0,
-																"value": "4"
+																"value": "1"
 															}
 														}
 													],
@@ -5095,31 +5186,22 @@
 															}
 														},
 														{
-															"id": "wait",
+															"id": "wait-for-previous-actions",
 															"objectClass": "System",
-															"sid": 103970463239065,
-															"parameters": {
-																"seconds": "0.01"
-															}
+															"sid": 547406886723472
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 855361921223857,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"value": "\"FRA\""
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 561560447060502,
+															"sid": 610803160691392,
 															"parameters": {
 																"variable": "Idioma_numerico",
-																"value": "3"
+																"value": "0"
 															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 258775055769872
 														}
 													],
 													"sid": 511344784113020
@@ -5130,22 +5212,11 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 536644740848653,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"comparison": 0,
-																"value": "\"FRA\""
-															}
-														},
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 780495396969564,
+															"sid": 556630993391824,
 															"parameters": {
 																"variable": "Idioma_numerico",
 																"comparison": 0,
-																"value": "3"
+																"value": "2"
 															}
 														}
 													],
@@ -5160,31 +5231,22 @@
 															}
 														},
 														{
-															"id": "wait",
+															"id": "wait-for-previous-actions",
 															"objectClass": "System",
-															"sid": 266418642630551,
-															"parameters": {
-																"seconds": "0.01"
-															}
+															"sid": 992025444519253
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 324076623591119,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"value": "\"ALE\""
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 639676855557483,
+															"sid": 428595023656123,
 															"parameters": {
 																"variable": "Idioma_numerico",
-																"value": "2"
+																"value": "1"
 															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 828850360228585
 														}
 													],
 													"sid": 675490622805950
@@ -5195,22 +5257,11 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 715338326293509,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"comparison": 0,
-																"value": "\"ALE\""
-															}
-														},
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 369221598545679,
+															"sid": 924109687490855,
 															"parameters": {
 																"variable": "Idioma_numerico",
 																"comparison": 0,
-																"value": "2"
+																"value": "3"
 															}
 														}
 													],
@@ -5225,31 +5276,22 @@
 															}
 														},
 														{
-															"id": "wait",
+															"id": "wait-for-previous-actions",
 															"objectClass": "System",
-															"sid": 737332659695200,
-															"parameters": {
-																"seconds": "0.01"
-															}
+															"sid": 370093907337760
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 523176500446498,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"value": "\"ESP\""
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 752302795226029,
+															"sid": 532636547150814,
 															"parameters": {
 																"variable": "Idioma_numerico",
-																"value": "1"
+																"value": "2"
 															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 267096440274032
 														}
 													],
 													"sid": 740542017651363
@@ -5260,22 +5302,11 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 431884420758833,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"comparison": 0,
-																"value": "\"ESP\""
-															}
-														},
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 563128580816886,
+															"sid": 129060071035087,
 															"parameters": {
 																"variable": "Idioma_numerico",
 																"comparison": 0,
-																"value": "1"
+																"value": "4"
 															}
 														}
 													],
@@ -5290,34 +5321,205 @@
 															}
 														},
 														{
-															"id": "wait",
+															"id": "wait-for-previous-actions",
 															"objectClass": "System",
-															"sid": 740823947022453,
-															"parameters": {
-																"seconds": "0.01"
-															}
+															"sid": 476857938435818
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 637987732513141,
-															"disabled": true,
-															"parameters": {
-																"variable": "Idoma_Master",
-																"value": "\"ING\""
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 145992346954685,
+															"sid": 331716889833365,
 															"parameters": {
 																"variable": "Idioma_numerico",
-																"value": "0"
+																"value": "3"
 															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 591659608981760
 														}
 													],
 													"sid": 722933455101356
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 346093120774971,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "5"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 523998690520028,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 298546278824797
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 486153286685757,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "4"
+															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 736188734633200
+														}
+													],
+													"sid": 510518644226049
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 588635611985719,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "6"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 872755564576632,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 394292842023039
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 626252566733690,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "5"
+															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 789933941618524
+														}
+													],
+													"sid": 934587443905169
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 265724378023415,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "7"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 165893448966676,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 764763013940987
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 489042600605572,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "6"
+															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 130594437250995
+														}
+													],
+													"sid": 916044267328768
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 359991722905102,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"comparison": 0,
+																"value": "8"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 346839651206061,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 647262689948181
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 663810683916109,
+															"parameters": {
+																"variable": "Idioma_numerico",
+																"value": "7"
+															}
+														},
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 402344676479346
+														}
+													],
+													"sid": 617920396107414
 												},
 												{
 													"eventType": "block",
@@ -7346,28 +7548,131 @@
 			]
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "TRADUCCION DE TODOS LOS TEXTOS EN PORTADA",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 505276304872511,
-					"parameters": {
-						"key": 89
-					}
+					"functionName": "TRADUCCION TEXTOS PORTADAS SEGUN IDIOMA ELEGIDO",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_play_TXT",
+							"sid": 589825244436097,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,1)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_speedrun_TXT",
+							"sid": 755762757835398,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,51)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_setting_TXT",
+							"sid": 909934812810051,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,2)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_credits_TXT",
+							"sid": 666935056253307,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,3)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+							"sid": 310330686709627,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,10)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_play_TXT",
+							"sid": 597973453514770,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,1)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_setting_TXT",
+							"sid": 840274007472643,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,2)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_credits_TXT",
+							"sid": 633505988807372,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,3)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_Opc_SoundFx_txt",
+							"sid": 561808811199264,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,4)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_Opc_Music_txt",
+							"sid": 581901888940917,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,5)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_Opc_Leng_txt",
+							"sid": 154909523522536,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,6)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_Opc_Exit_txt",
+							"sid": 402780869244273,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,7)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SLOTS_txt_choose",
+							"sid": 634411077879098,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,12)"
+							}
+						}
+					],
+					"sid": 242513702011026
 				}
 			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 854037982702273,
-					"parameters": {
-						"layout": "FINAL_JUEGO"
-					}
-				}
-			],
-			"sid": 168388058612670
+			"sid": 641215008152684
 		}
 	],
 	"sid": 712945447984638

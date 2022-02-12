@@ -46,6 +46,10 @@
 			"includeSheet": "Ev_Speedrun_Juego"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "e_tutorial_textos"
+		},
+		{
 			"eventType": "variable",
 			"name": "AAA_numero_de_nivel_para_bola_texto",
 			"type": "string",
@@ -429,13 +433,13 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 959825960069114,
+					"sid": 991901473114991,
 					"disabled": true,
 					"parameters": {
 						"object-to-create": "Bola_HUD",
 						"layer": "\"HUD\"",
-						"x": "46",
-						"y": "26",
+						"x": "80",
+						"y": "24",
 						"create-hierarchy": false
 					}
 				},
@@ -472,49 +476,157 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 962795205141356,
+					"sid": 669805652913042,
 					"parameters": {
 						"object-to-create": "LIFES_TXT",
 						"layer": "\"HUD\"",
-						"x": "90",
-						"y": "28",
+						"x": "125",
+						"y": "30",
 						"create-hierarchy": false
 					}
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 341538627392816,
+					"sid": 148107466961609,
+					"parameters": {
+						"object-to-create": "LIFES_TXT_shadow",
+						"layer": "\"HUD\"",
+						"x": "127",
+						"y": "32",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "LIFES_TXT_shadow",
+					"sid": 541180986670185,
+					"parameters": {
+						"where": "behind",
+						"object": "LIFES_TXT"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "LIFES_TXT_shadow",
+					"sid": 400347418791647,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "LIFES_TXT",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 908777168169852,
 					"parameters": {
 						"object-to-create": "Gema_HUD",
 						"layer": "\"HUD\"",
-						"x": "146",
-						"y": "25",
+						"x": "194",
+						"y": "24",
 						"create-hierarchy": false
 					}
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 269235170042587,
+					"sid": 116471725285617,
 					"parameters": {
 						"object-to-create": "Gema_Currency_TXT",
 						"layer": "\"HUD\"",
-						"x": "188",
-						"y": "28",
+						"x": "245",
+						"y": "30",
 						"create-hierarchy": false
 					}
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 203742138303596,
+					"sid": 737474993323670,
+					"parameters": {
+						"object-to-create": "Gema_Currency_TXT_shadow",
+						"layer": "\"HUD\"",
+						"x": "247",
+						"y": "32",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "Gema_Currency_TXT_shadow",
+					"sid": 534134640135105,
+					"parameters": {
+						"where": "behind",
+						"object": "Gema_Currency_TXT"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Gema_Currency_TXT_shadow",
+					"sid": 679180008309835,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Gema_Currency_TXT",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 195550261629407,
 					"parameters": {
 						"object-to-create": "SCENE_TXT",
 						"layer": "\"HUD\"",
 						"x": "685",
-						"y": "24",
+						"y": "29",
 						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 978741294521810,
+					"parameters": {
+						"object-to-create": "SCENE_TXT_shadow",
+						"layer": "\"HUD\"",
+						"x": "687",
+						"y": "31",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "SCENE_TXT_shadow",
+					"sid": 571071263029970,
+					"parameters": {
+						"where": "behind",
+						"object": "SCENE_TXT"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "SCENE_TXT_shadow",
+					"sid": 130688014075575,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "SCENE_TXT",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
 					}
 				},
 				{
@@ -700,8 +812,24 @@
 						},
 						{
 							"id": "set-text",
+							"objectClass": "LIFES_TXT_shadow",
+							"sid": 784198303138654,
+							"parameters": {
+								"text": "VIDAS_1"
+							}
+						},
+						{
+							"id": "set-text",
 							"objectClass": "Gema_Currency_TXT",
 							"sid": 631663792548874,
+							"parameters": {
+								"text": "GEMAS_1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Gema_Currency_TXT_shadow",
+							"sid": 479887642766868,
 							"parameters": {
 								"text": "GEMAS_1"
 							}
@@ -734,8 +862,24 @@
 						},
 						{
 							"id": "set-text",
+							"objectClass": "LIFES_TXT_shadow",
+							"sid": 702391434897028,
+							"parameters": {
+								"text": "VIDAS_2"
+							}
+						},
+						{
+							"id": "set-text",
 							"objectClass": "Gema_Currency_TXT",
 							"sid": 138014700163028,
+							"parameters": {
+								"text": "GEMAS_2"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Gema_Currency_TXT_shadow",
+							"sid": 935497519123935,
 							"parameters": {
 								"text": "GEMAS_2"
 							}
@@ -768,8 +912,24 @@
 						},
 						{
 							"id": "set-text",
+							"objectClass": "LIFES_TXT_shadow",
+							"sid": 231565105943479,
+							"parameters": {
+								"text": "VIDAS_3"
+							}
+						},
+						{
+							"id": "set-text",
 							"objectClass": "Gema_Currency_TXT",
-							"sid": 335655701690521,
+							"sid": 441686649901870,
+							"parameters": {
+								"text": "GEMAS_3"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Gema_Currency_TXT_shadow",
+							"sid": 737050499429549,
 							"parameters": {
 								"text": "GEMAS_3"
 							}
@@ -800,8 +960,24 @@
 						},
 						{
 							"id": "set-text",
+							"objectClass": "LIFES_TXT_shadow",
+							"sid": 497451463577489,
+							"parameters": {
+								"text": "Vidas_Speedrun"
+							}
+						},
+						{
+							"id": "set-text",
 							"objectClass": "Gema_Currency_TXT",
 							"sid": 515897146651988,
+							"parameters": {
+								"text": "Gemas_Speedrun"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Gema_Currency_TXT_shadow",
+							"sid": 981802310375009,
 							"parameters": {
 								"text": "Gemas_Speedrun"
 							}
@@ -887,6 +1063,14 @@
 									"parameters": {
 										"text": "replace(LayoutName,\"Room_\",Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" \")"
 									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SCENE_TXT_shadow",
+									"sid": 490167110477451,
+									"parameters": {
+										"text": "replace(LayoutName,\"Room_\",Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" \")"
+									}
 								}
 							],
 							"sid": 309742342034936
@@ -915,6 +1099,14 @@
 							"parameters": {
 								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" 50\""
 							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SCENE_TXT_shadow",
+							"sid": 378006178728766,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" 50\""
+							}
 						}
 					],
 					"sid": 781800718841033
@@ -938,6 +1130,14 @@
 							"id": "set-text",
 							"objectClass": "SCENE_TXT",
 							"sid": 687352465478486,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" 100\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SCENE_TXT_shadow",
+							"sid": 591397207337903,
 							"parameters": {
 								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" 100\""
 							}
@@ -2971,6 +3171,14 @@
 																	}
 																},
 																{
+																	"id": "set-text",
+																	"objectClass": "LIFES_TXT_shadow",
+																	"sid": 528664376541784,
+																	"parameters": {
+																		"text": "VIDAS_1"
+																	}
+																},
+																{
 																	"id": "wait-for-previous-actions",
 																	"objectClass": "System",
 																	"sid": 795513832478649
@@ -3191,6 +3399,14 @@
 																	}
 																},
 																{
+																	"id": "set-text",
+																	"objectClass": "LIFES_TXT_shadow",
+																	"sid": 392265714132954,
+																	"parameters": {
+																		"text": "VIDAS_1"
+																	}
+																},
+																{
 																	"id": "wait-for-previous-actions",
 																	"objectClass": "System",
 																	"sid": 577555005503992
@@ -3370,6 +3586,14 @@
 																	"id": "set-text",
 																	"objectClass": "LIFES_TXT",
 																	"sid": 488874239397089,
+																	"parameters": {
+																		"text": "VIDAS_2"
+																	}
+																},
+																{
+																	"id": "set-text",
+																	"objectClass": "LIFES_TXT_shadow",
+																	"sid": 909999209710873,
 																	"parameters": {
 																		"text": "VIDAS_2"
 																	}
@@ -3595,6 +3819,14 @@
 																	}
 																},
 																{
+																	"id": "set-text",
+																	"objectClass": "LIFES_TXT_shadow",
+																	"sid": 976848703688683,
+																	"parameters": {
+																		"text": "VIDAS_2"
+																	}
+																},
+																{
 																	"id": "wait-for-previous-actions",
 																	"objectClass": "System",
 																	"sid": 462589780427097
@@ -3774,6 +4006,14 @@
 																	"id": "set-text",
 																	"objectClass": "LIFES_TXT",
 																	"sid": 548947497405292,
+																	"parameters": {
+																		"text": "VIDAS_3"
+																	}
+																},
+																{
+																	"id": "set-text",
+																	"objectClass": "LIFES_TXT_shadow",
+																	"sid": 193374029573842,
 																	"parameters": {
 																		"text": "VIDAS_3"
 																	}
@@ -3994,6 +4234,14 @@
 																	"id": "set-text",
 																	"objectClass": "LIFES_TXT",
 																	"sid": 631147978760153,
+																	"parameters": {
+																		"text": "VIDAS_3"
+																	}
+																},
+																{
+																	"id": "set-text",
+																	"objectClass": "LIFES_TXT_shadow",
+																	"sid": 883696025426702,
 																	"parameters": {
 																		"text": "VIDAS_3"
 																	}
@@ -4227,6 +4475,14 @@
 																	}
 																},
 																{
+																	"id": "set-text",
+																	"objectClass": "LIFES_TXT_shadow",
+																	"sid": 653463785698220,
+																	"parameters": {
+																		"text": "Vidas_Speedrun"
+																	}
+																},
+																{
 																	"id": "wait-for-previous-actions",
 																	"objectClass": "System",
 																	"sid": 927114008005737
@@ -4451,6 +4707,14 @@
 																	"id": "set-text",
 																	"objectClass": "LIFES_TXT",
 																	"sid": 974042022560657,
+																	"parameters": {
+																		"text": "Vidas_Speedrun"
+																	}
+																},
+																{
+																	"id": "set-text",
+																	"objectClass": "LIFES_TXT_shadow",
+																	"sid": 293680592174070,
 																	"parameters": {
 																		"text": "Vidas_Speedrun"
 																	}
@@ -4765,10 +5029,10 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 376975108178456,
+															"sid": 334988786753998,
 															"parameters": {
 																"variable": "1_TIEMPO_TOTAL_JUEGO",
-																"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+																"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
 															}
 														},
 														{
@@ -10308,10 +10572,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 548499778545551,
+											"sid": 497125812045735,
 											"parameters": {
 												"variable": "1_TIEMPO_TOTAL_JUEGO",
-												"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+												"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
 											}
 										},
 										{
@@ -10513,10 +10777,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 420558734932548,
+											"sid": 472785457751236,
 											"parameters": {
 												"variable": "1_TIEMPO_TOTAL_JUEGO",
-												"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+												"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
 											}
 										},
 										{
@@ -10962,6 +11226,14 @@
 										},
 										{
 											"id": "set-text",
+											"objectClass": "LIFES_TXT_shadow",
+											"sid": 359854713736234,
+											"parameters": {
+												"text": "0"
+											}
+										},
+										{
+											"id": "set-text",
 											"objectClass": "LIFES_SOMBRA",
 											"sid": 577265365410878,
 											"parameters": {
@@ -11316,6 +11588,14 @@
 										},
 										{
 											"id": "set-text",
+											"objectClass": "LIFES_TXT_shadow",
+											"sid": 986621622095714,
+											"parameters": {
+												"text": "0"
+											}
+										},
+										{
+											"id": "set-text",
 											"objectClass": "LIFES_SOMBRA",
 											"sid": 601798524653737,
 											"parameters": {
@@ -11664,6 +11944,14 @@
 											"id": "set-text",
 											"objectClass": "LIFES_TXT",
 											"sid": 266278438151570,
+											"parameters": {
+												"text": "0"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "LIFES_TXT_shadow",
+											"sid": 750097995146536,
 											"parameters": {
 												"text": "0"
 											}
@@ -13185,6 +13473,14 @@
 											}
 										},
 										{
+											"id": "set-text",
+											"objectClass": "Gema_Currency_TXT_shadow",
+											"sid": 256760339586106,
+											"parameters": {
+												"text": "GEMAS_1"
+											}
+										},
+										{
 											"id": "spawn-another-object",
 											"objectClass": "Gema_currency",
 											"sid": 868584903340590,
@@ -13321,6 +13617,14 @@
 													}
 												},
 												{
+													"id": "set-text",
+													"objectClass": "Gema_Currency_TXT_shadow",
+													"sid": 227855511070097,
+													"parameters": {
+														"text": "GEMAS_1"
+													}
+												},
+												{
 													"id": "tween-one-property",
 													"objectClass": "LIFES_TXT",
 													"sid": 299565904174080,
@@ -13362,6 +13666,14 @@
 													}
 												},
 												{
+													"id": "set-text",
+													"objectClass": "LIFES_TXT_shadow",
+													"sid": 759087000441170,
+													"parameters": {
+														"text": "VIDAS_1"
+													}
+												},
+												{
 													"id": "wait-for-previous-actions",
 													"objectClass": "System",
 													"sid": 239196897471811
@@ -13369,9 +13681,9 @@
 												{
 													"id": "set-y",
 													"objectClass": "LIFES_TXT",
-													"sid": 922892906825584,
+													"sid": 619213854710058,
 													"parameters": {
-														"y": "28"
+														"y": "29"
 													}
 												}
 											],
@@ -13411,6 +13723,14 @@
 											"id": "set-text",
 											"objectClass": "Gema_Currency_TXT",
 											"sid": 782336424482043,
+											"parameters": {
+												"text": "GEMAS_2"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Gema_Currency_TXT_shadow",
+											"sid": 531162000302951,
 											"parameters": {
 												"text": "GEMAS_2"
 											}
@@ -13552,6 +13872,14 @@
 													}
 												},
 												{
+													"id": "set-text",
+													"objectClass": "Gema_Currency_TXT_shadow",
+													"sid": 127694355674326,
+													"parameters": {
+														"text": "GEMAS_2"
+													}
+												},
+												{
 													"id": "tween-one-property",
 													"objectClass": "LIFES_TXT",
 													"sid": 375139300211044,
@@ -13593,6 +13921,14 @@
 													}
 												},
 												{
+													"id": "set-text",
+													"objectClass": "LIFES_TXT_shadow",
+													"sid": 205085690976961,
+													"parameters": {
+														"text": "VIDAS_2"
+													}
+												},
+												{
 													"id": "wait-for-previous-actions",
 													"objectClass": "System",
 													"sid": 992826666815284
@@ -13600,9 +13936,9 @@
 												{
 													"id": "set-y",
 													"objectClass": "LIFES_TXT",
-													"sid": 956706534605411,
+													"sid": 932030457538826,
 													"parameters": {
-														"y": "28"
+														"y": "29"
 													}
 												}
 											],
@@ -13642,6 +13978,14 @@
 											"id": "set-text",
 											"objectClass": "Gema_Currency_TXT",
 											"sid": 391886597475385,
+											"parameters": {
+												"text": "GEMAS_3"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Gema_Currency_TXT_shadow",
+											"sid": 554228951264450,
 											"parameters": {
 												"text": "GEMAS_3"
 											}
@@ -13783,6 +14127,14 @@
 													}
 												},
 												{
+													"id": "set-text",
+													"objectClass": "Gema_Currency_TXT_shadow",
+													"sid": 590959640023112,
+													"parameters": {
+														"text": "GEMAS_3"
+													}
+												},
+												{
 													"id": "tween-one-property",
 													"objectClass": "LIFES_TXT",
 													"sid": 768152082859175,
@@ -13824,6 +14176,14 @@
 													}
 												},
 												{
+													"id": "set-text",
+													"objectClass": "LIFES_TXT_shadow",
+													"sid": 916289651388754,
+													"parameters": {
+														"text": "VIDAS_3"
+													}
+												},
+												{
 													"id": "wait-for-previous-actions",
 													"objectClass": "System",
 													"sid": 601232867662203
@@ -13831,9 +14191,9 @@
 												{
 													"id": "set-y",
 													"objectClass": "LIFES_TXT",
-													"sid": 466951503905584,
+													"sid": 742092148024193,
 													"parameters": {
-														"y": "28"
+														"y": "29"
 													}
 												}
 											],
@@ -13890,6 +14250,14 @@
 											"id": "set-text",
 											"objectClass": "Gema_Currency_TXT",
 											"sid": 172362684162693,
+											"parameters": {
+												"text": "Gemas_Speedrun"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Gema_Currency_TXT_shadow",
+											"sid": 854856253351759,
 											"parameters": {
 												"text": "Gemas_Speedrun"
 											}
@@ -14072,6 +14440,14 @@
 													}
 												},
 												{
+													"id": "set-text",
+													"objectClass": "LIFES_TXT_shadow",
+													"sid": 833087905202178,
+													"parameters": {
+														"text": "Vidas_Speedrun"
+													}
+												},
+												{
 													"id": "wait-for-previous-actions",
 													"objectClass": "System",
 													"sid": 396666693493298
@@ -14079,9 +14455,9 @@
 												{
 													"id": "set-y",
 													"objectClass": "LIFES_TXT",
-													"sid": 619442682628711,
+													"sid": 668649609869212,
 													"parameters": {
-														"y": "28"
+														"y": "29"
 													}
 												}
 											],
@@ -15576,12 +15952,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 433699583170438,
+											"sid": 991478203517121,
 											"parameters": {
 												"object-to-create": "Bola_HUD",
 												"layer": "\"HUD\"",
-												"x": "46",
-												"y": "26",
+												"x": "80",
+												"y": "24",
 												"create-hierarchy": false
 											}
 										},
@@ -15688,12 +16064,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 460859247235057,
+											"sid": 950420315275816,
 											"parameters": {
 												"object-to-create": "Bola_HUD",
 												"layer": "\"HUD\"",
-												"x": "46",
-												"y": "26",
+												"x": "80",
+												"y": "24",
 												"create-hierarchy": false
 											}
 										},

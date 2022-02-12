@@ -2792,6 +2792,14 @@
 															}
 														},
 														{
+															"id": "set-text",
+															"objectClass": "LIFES_TXT_shadow",
+															"sid": 420501953756019,
+															"parameters": {
+																"text": "VIDAS_1"
+															}
+														},
+														{
 															"id": "wait-for-previous-actions",
 															"objectClass": "System",
 															"sid": 177895318639801
@@ -2935,6 +2943,14 @@
 															}
 														},
 														{
+															"id": "set-text",
+															"objectClass": "LIFES_TXT_shadow",
+															"sid": 824179179359584,
+															"parameters": {
+																"text": "VIDAS_2"
+															}
+														},
+														{
 															"id": "wait-for-previous-actions",
 															"objectClass": "System",
 															"sid": 390776530871153
@@ -3073,6 +3089,14 @@
 															"id": "set-text",
 															"objectClass": "LIFES_TXT",
 															"sid": 800122028626524,
+															"parameters": {
+																"text": "VIDAS_3"
+															}
+														},
+														{
+															"id": "set-text",
+															"objectClass": "LIFES_TXT_shadow",
+															"sid": 654520026773797,
 															"parameters": {
 																"text": "VIDAS_3"
 															}
@@ -3267,6 +3291,14 @@
 															}
 														},
 														{
+															"id": "set-text",
+															"objectClass": "LIFES_TXT_shadow",
+															"sid": 961410467940137,
+															"parameters": {
+																"text": "Vidas_Speedrun"
+															}
+														},
+														{
 															"id": "wait-for-previous-actions",
 															"objectClass": "System",
 															"sid": 956417123668012
@@ -3430,6 +3462,14 @@
 															}
 														},
 														{
+															"id": "set-text",
+															"objectClass": "LIFES_TXT_shadow",
+															"sid": 333045230427415,
+															"parameters": {
+																"text": "Vidas_Speedrun"
+															}
+														},
+														{
 															"id": "wait-for-previous-actions",
 															"objectClass": "System",
 															"sid": 506719200389857
@@ -3504,10 +3544,10 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 429929970198041,
+															"sid": 196690397781886,
 															"parameters": {
 																"variable": "1_TIEMPO_TOTAL_JUEGO",
-																"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+																"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
 															}
 														},
 														{

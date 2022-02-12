@@ -867,21 +867,77 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 175155682031683,
+							"sid": 971913834918143,
+							"parameters": {
+								"object-to-create": "Contrarreloj_HUD",
+								"layer": "\"HUD\"",
+								"x": "323",
+								"y": "24",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 896866829694343,
 							"parameters": {
 								"object-to-create": "SpeedRun_TXT_in_Levels",
 								"layer": "\"HUD\"",
-								"x": "427",
-								"y": "28",
+								"x": "437",
+								"y": "30",
 								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 192728245351355,
+							"parameters": {
+								"object-to-create": "SpeedRun_TXT_in_Levels_shadow",
+								"layer": "\"HUD\"",
+								"x": "439",
+								"y": "32",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 141381386002398,
+							"parameters": {
+								"where": "behind",
+								"object": "SpeedRun_TXT_in_Levels"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 714171862336527,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "SpeedRun_TXT_in_Levels",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
 							}
 						},
 						{
 							"id": "set-text",
 							"objectClass": "SpeedRun_TXT_in_Levels",
-							"sid": 593808352572947,
+							"sid": 974254839787979,
 							"parameters": {
-								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 442641628157580,
+							"parameters": {
+								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
 							}
 						}
 					],

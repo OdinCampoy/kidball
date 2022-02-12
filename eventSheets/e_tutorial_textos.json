@@ -1,0 +1,88 @@
+{
+	"name": "e_tutorial_textos",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 469450340941664
+				}
+			],
+			"actions": [],
+			"sid": 628523909849410,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 250850391454498,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Room_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TUTORIAL_TXT_move_left",
+							"sid": 326247432311159,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,78)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TUTORIAL_TXT_or",
+							"sid": 157366046356969,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,80)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TUTORIAL_TXT_move_right",
+							"sid": 111354809783985,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,79)"
+							}
+						}
+					],
+					"sid": 617871100374540
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 754611968549889,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Room_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TUTORIAL_TXT_EXTRA_LIFE",
+							"sid": 859966514429517,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,81)"
+							}
+						}
+					],
+					"sid": 273416207341462
+				}
+			]
+		}
+	],
+	"sid": 990735254403050
+}

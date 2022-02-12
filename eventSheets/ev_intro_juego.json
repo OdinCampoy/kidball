@@ -42,6 +42,40 @@
 			],
 			"actions": [
 				{
+					"id": "set-animation",
+					"objectClass": "bola",
+					"sid": 952862526198284,
+					"parameters": {
+						"animation": "\"DERECHA_4\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "bola",
+					"sid": 809855407223810,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "bola_ROSA",
+					"sid": 685654110463721,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "bola_ROSA",
+					"sid": 255142583490440,
+					"parameters": {
+						"animation": "\"rosa\"",
+						"from": "beginning"
+					}
+				},
+				{
 					"id": "stop",
 					"objectClass": "Audio",
 					"sid": 480657029671373,
@@ -173,15 +207,6 @@
 					"parameters": {
 						"state": "mirrored"
 					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "bola",
-					"sid": 917865543544552,
-					"parameters": {
-						"animation": "\"DERECHA_4\"",
-						"from": "beginning"
-					}
 				}
 			],
 			"sid": 480644155894983,
@@ -211,34 +236,77 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 208182413860640,
-							"disabled": true,
+							"sid": 163040964234365,
 							"parameters": {
-								"object-to-create": "SpeedRun_TXT_in_Levels",
+								"object-to-create": "Contrarreloj_HUD",
 								"layer": "\"HUD\"",
-								"x": "364",
-								"y": "437",
+								"x": "323",
+								"y": "24",
 								"create-hierarchy": false
 							}
 						},
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 250520036572321,
+							"sid": 136016354862831,
 							"parameters": {
 								"object-to-create": "SpeedRun_TXT_in_Levels",
 								"layer": "\"HUD\"",
-								"x": "427",
-								"y": "28",
+								"x": "437",
+								"y": "30",
 								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 619477833012234,
+							"parameters": {
+								"object-to-create": "SpeedRun_TXT_in_Levels_shadow",
+								"layer": "\"HUD\"",
+								"x": "439",
+								"y": "32",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 627389206203093,
+							"parameters": {
+								"where": "behind",
+								"object": "SpeedRun_TXT_in_Levels"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 559505528355016,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "SpeedRun_TXT_in_Levels",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
 							}
 						},
 						{
 							"id": "set-text",
 							"objectClass": "SpeedRun_TXT_in_Levels",
-							"sid": 870393075424135,
+							"sid": 780817214817254,
 							"parameters": {
-								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 376524539727528,
+							"parameters": {
+								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
 							}
 						}
 					],
