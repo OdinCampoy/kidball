@@ -32,6 +32,17 @@
 						"type": "once",
 						"tag": "\"bola_de_fuego\""
 					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "bola_de_fuego_suelo_Up",
+					"sid": 895239606657228,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "Self.tiempo_lanzamiento",
+						"type": "once",
+						"tag": "\"bola_de_fuego\""
+					}
 				}
 			],
 			"sid": 638419130003977,
@@ -3049,6 +3060,148 @@
 						}
 					],
 					"sid": 383128280809379
+				},
+				{
+					"eventType": "comment",
+					"text": "LANZADOR SUELO HACIA ARRIBA"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "bola_de_fuego_suelo_Up",
+							"sid": 837940993475695,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"bola_de_fuego\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bola_de_fuego_suelo_Up",
+							"sid": 151119513388859,
+							"parameters": {
+								"object": "Bola_de_fuego_ENDING_5",
+								"layer": "Self.LayerName",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 597660203322997,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 468037628530257,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 343947683025412,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 509492855694072,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "bola_de_fuego_suelo_Up",
+							"sid": 265275944898509,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "Self.tiempo_lanzamiento",
+								"type": "once",
+								"tag": "\"bola_de_fuego\""
+							}
+						}
+					],
+					"sid": 360403127774765
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 913975369772575,
+							"parameters": {
+								"object": "Solidos"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 919567848471643,
+							"parameters": {
+								"object": "Plataforma_palanca_M1"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 756998612853658,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "-50"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 106472282877976,
+							"parameters": {
+								"collisions": "disabled"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 476717964042452,
+							"parameters": {
+								"seconds": "0.07"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 356477662093611,
+							"parameters": {
+								"object": "Bola_de_fuego_humo",
+								"layer": "Self.LayerName",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 860328240507738
+						}
+					],
+					"sid": 488299492159387,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",

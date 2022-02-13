@@ -356,6 +356,22 @@
 									"parameters": {
 										"layout": "Room_51"
 									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "ending_JEFE_FINAL",
+									"sid": 884109378314486,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"pasa_enemigo\"",
+										"property": "offsetX",
+										"end-value": "-250",
+										"time": "5",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
 								}
 							],
 							"sid": 973340297150718
@@ -364,6 +380,83 @@
 				}
 			],
 			"sid": 216147804447922
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "DISPARA BOLA FUEGO",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "ending_JEFE_FINAL",
+							"sid": 493614068925209,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "800"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 359748921149385,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 679079571624246
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 577062736673909,
+							"parameters": {
+								"object": "ending_JEFE_FINAL"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 308555691545856,
+							"parameters": {
+								"object": "Canyon_Dust",
+								"layer": "Self.LayerName",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Bola_de_fuego_ENDING_5",
+							"sid": 565148752855778
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "ending_JEFE_FINAL",
+							"sid": 875261819405521,
+							"parameters": {
+								"animation": "\"GOLPE_1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 561635347506803
+				}
+			],
+			"sid": 147902820918447
 		}
 	],
 	"sid": 717617528116770

@@ -21,6 +21,16 @@
 					"sid": 380636839194516,
 					"children": [
 						{
+							"eventType": "variable",
+							"name": "anchoTextoIdiomas",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 897916924522183
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -119,27 +129,49 @@
 									"text": "ANYADIR AQUI LAS POSICIONES DE LAS FLECHAS"
 								},
 								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 967994076657694
+								},
+								{
+									"id": "set-width",
+									"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+									"sid": 971125846538101,
+									"disabled": true,
+									"parameters": {
+										"width": "len(Self.Text)*6"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+									"sid": 441670977679133,
+									"parameters": {
+										"width": "Self.TextWidth+len(Self.Text)"
+									}
+								},
+								{
 									"id": "set-text",
 									"objectClass": "PORTADA_Opc_Leng_Txt_Center",
-									"sid": 344596808508122,
+									"sid": 503473167999112,
 									"parameters": {
-										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,10)"
+										"text": "replace(Self.Text,\"*\",\" \")"
 									}
 								},
 								{
 									"id": "set-x",
 									"objectClass": "PORTADA_Opc_Leng_Icon_left",
-									"sid": 552811731892405,
+									"sid": 970947397232510,
 									"parameters": {
-										"x": "0"
+										"x": "PORTADA_Opc_Leng_Txt_Center.BBoxLeft-16"
 									}
 								},
 								{
 									"id": "set-x",
 									"objectClass": "PORTADA_Opc_Leng_Icon_right",
-									"sid": 962709600421565,
+									"sid": 239972749894115,
 									"parameters": {
-										"x": "0"
+										"x": "PORTADA_Opc_Leng_Txt_Center.BBoxRight+16"
 									}
 								},
 								{

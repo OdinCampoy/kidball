@@ -1875,6 +1875,7 @@
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 339372526740917,
+									"disabled": true,
 									"parameters": {
 										"seconds": "0.8"
 									}
@@ -2005,16 +2006,6 @@
 								"comparison": 5,
 								"value": "5"
 							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 866497512170417,
-							"parameters": {
-								"variable": "CONTADOR_SALVA_CHICA",
-								"comparison": 2,
-								"value": "150"
-							}
 						}
 					],
 					"actions": [
@@ -2038,16 +2029,6 @@
 									"objectClass": "bola",
 									"sid": 979651381803269,
 									"behaviorType": "Platform"
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 584420410042956,
-									"parameters": {
-										"variable": "intro_bola_cae",
-										"comparison": 0,
-										"value": "1"
-									}
 								}
 							],
 							"actions": [],
@@ -2057,143 +2038,124 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-eventvar",
+											"id": "trigger-once-while-true",
 											"objectClass": "System",
-											"sid": 103826647977852,
-											"parameters": {
-												"variable": "FX_sound",
-												"comparison": 0,
-												"value": "0"
-											}
+											"sid": 125397087189445
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 775673617741027,
+									"children": [
 										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 643059239607842,
-											"parameters": {
-												"object-to-create": "CORAZONES_INTRO",
-												"layer": "\"fondo\"",
-												"x": "bola.X-30",
-												"y": "bola.Y-30",
-												"create-hierarchy": false
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 155036977576214,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 921761698066305,
+													"parameters": {
+														"object-to-create": "CORAZONES_INTRO",
+														"layer": "\"fondo\"",
+														"x": "420",
+														"y": "280",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "CORAZONES_INTRO",
+													"sid": 201615614249477,
+													"parameters": {
+														"width": "60",
+														"height": "50"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 599745378433161,
+													"parameters": {
+														"variable": "intro_bola_cae",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 963732789907122
 										},
 										{
-											"id": "set-size",
-											"objectClass": "CORAZONES_INTRO",
-											"sid": 608897877410528,
-											"parameters": {
-												"width": "60",
-												"height": "50"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 240856431644552,
-											"parameters": {
-												"variable": "intro_bola_cae",
-												"value": "0"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 899420493301157,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 636153066216137,
+													"parameters": {
+														"audio-file": "aparecen corazones grandes",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX-5",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 457775590509145,
+													"parameters": {
+														"object-to-create": "CORAZONES_INTRO",
+														"layer": "\"fondo\"",
+														"x": "420",
+														"y": "280",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "CORAZONES_INTRO",
+													"sid": 299309589503877,
+													"parameters": {
+														"width": "60",
+														"height": "50"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 810151412336993,
+													"parameters": {
+														"variable": "intro_bola_cae",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 910335770264680
 										}
-									],
-									"sid": 363069787709380
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 464864998328200,
-											"parameters": {
-												"variable": "FX_sound",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 188887646305846,
-											"parameters": {
-												"audio-file": "aparecen corazones grandes",
-												"loop": "not-looping",
-												"volume": "VOLUMEN_MASTER_FX-5",
-												"tag-optional": "\"\""
-											}
-										},
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 184346277757905,
-											"parameters": {
-												"object-to-create": "CORAZONES_INTRO",
-												"layer": "\"fondo\"",
-												"x": "bola.X-30",
-												"y": "bola.Y-30",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "set-size",
-											"objectClass": "CORAZONES_INTRO",
-											"sid": 360543926860368,
-											"parameters": {
-												"width": "60",
-												"height": "50"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 484531124558485,
-											"parameters": {
-												"variable": "intro_bola_cae",
-												"value": "0"
-											}
-										}
-									],
-									"sid": 962957154759105
+									]
 								}
 							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-jumping",
-									"objectClass": "bola",
-									"sid": 875111328444852,
-									"behaviorType": "Platform"
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 791263897066420,
-									"parameters": {
-										"variable": "intro_bola_cae",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 253707095187906,
-									"parameters": {
-										"variable": "intro_bola_cae",
-										"value": "1"
-									}
-								}
-							],
-							"sid": 521909563364752
 						}
 					]
 				},
