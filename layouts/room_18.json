@@ -2011,28 +2011,53 @@
 					}
 				},
 				{
-					"type": "Mundo_2_columna_mid",
+					"type": "Mundo_2_columna_top4",
 					"properties": {
 						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
 					},
-					"uid": 13489,
+					"uid": 5698,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 496,
-						"y": 215,
+						"x": 512,
+						"y": 233,
 						"width": 32,
-						"height": 54,
-						"originX": 0,
-						"originY": 0,
+						"height": 53,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mundo_2_columna_top4",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 5699,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 694,
+						"y": 233,
+						"width": 32,
+						"height": 53,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -2149,39 +2174,6 @@
 						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Mundo_2_columna_mid",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 13494,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 678,
-						"y": 215,
-						"width": 32,
-						"height": 54,
-						"originX": 0,
-						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -2765,7 +2757,7 @@
 							"height": 19,
 							"max-width": 50,
 							"max-height": 27,
-							"data": "27x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,15,5x9,10,8,15,4x9,10,3x8,8x0,2x8,13,5x0,3,8,13,4x0,3,3x8,8x0,2x8,13,5x0,3,8,13,4x0,3,3x8,8x0,2x8,13,5x0,3,8,13,4x0,3,3x8,8x0,2x8,13,3x0,2,7,6,8,11,12,3x0,3,3x8,8x0,2x8,13,3x0,3,84,2x89,94,13,3x0,3,3x8,8x0,2x8,13,3x0,3,85h,2x90h,95h,13,3x0,3,3x8,8x0,2x8,13,3x0,3,84h,2x89h,94h,13,3x0,3,3x8,8x0,2x8,13,3x0,37,4x9,14,3x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,2x0,23,17,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,19,3x0,18,4x0,3,3x8,8x0,2x8,13,7x0,18,4x0,3,3x8,8x0,2x8,13,7x0,18,4x0,3,3x8,8x0,2x8,11,7x7,41,4x7,6,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
+							"data": "27x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,15,4x9,10,2x8,15,4x9,10,3x8,8x0,2x8,13,4x0,3,2x34,13,4x0,3,3x8,8x0,2x8,13,4x0,3,2x34,13,4x0,43,3x8,8x0,2x8,13,4x0,3,2x34,13,4x0,44,3x8,8x0,2x8,13,3x0,2,6,2x34,11,12,3x0,45,3x8,8x0,2x8,13,3x0,3,4x34,13,3x0,3,3x8,8x0,2x8,13,3x0,3,34,2x35,34,13,3x0,3,3x8,8x0,2x8,13,3x0,3,4x34,13,3x0,3,3x8,8x0,2x8,13,3x0,37,4x9,14,3x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,2x0,23,17,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,43,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,44,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,45,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,18,3x0,18,4x0,3,3x8,8x0,2x8,13,3x0,19,3x0,18,4x0,43,3x8,8x0,2x8,13,7x0,18,4x0,45,3x8,8x0,2x8,13,7x0,18,4x0,3,3x8,8x0,2x8,11,7x7,41,4x7,6,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
 						},
 						"tile-width": 32,
 						"tile-height": 32,
@@ -3877,6 +3869,93 @@
 						"width": 36.4,
 						"height": 30.16,
 						"originX": 0.5714285714285714,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mundo1_Argolla",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 9641,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -427,
+						"y": 171,
+						"width": 32,
+						"height": 36,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mundo1_Argolla",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 9644,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 524,
+						"y": 317,
+						"width": 26,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mundo1_Argolla",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 11365,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 684,
+						"y": 317,
+						"width": 26,
+						"height": 30,
+						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,

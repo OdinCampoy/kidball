@@ -42,6 +42,40 @@
 			],
 			"actions": [
 				{
+					"id": "set-animation",
+					"objectClass": "bola",
+					"sid": 952862526198284,
+					"parameters": {
+						"animation": "\"DERECHA_4\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "bola",
+					"sid": 809855407223810,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "bola_ROSA",
+					"sid": 685654110463721,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "bola_ROSA",
+					"sid": 255142583490440,
+					"parameters": {
+						"animation": "\"rosa\"",
+						"from": "beginning"
+					}
+				},
+				{
 					"id": "stop",
 					"objectClass": "Audio",
 					"sid": 480657029671373,
@@ -124,6 +158,15 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
+					"sid": 397295014470417,
+					"parameters": {
+						"variable": "CONTADOR_CORAZONES",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
 					"sid": 812274485600199,
 					"parameters": {
 						"variable": "INTRO_pulsa_saltar_intro",
@@ -157,30 +200,12 @@
 					}
 				},
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 782503861260387,
-					"parameters": {
-						"variable": "CONTADOR_CORAZONES",
-						"value": "0"
-					}
-				},
-				{
 					"id": "set-mirrored",
 					"objectClass": "Intro_JEFE_FINAL",
 					"sid": 769455430180947,
 					"disabled": true,
 					"parameters": {
 						"state": "mirrored"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "bola",
-					"sid": 917865543544552,
-					"parameters": {
-						"animation": "\"DERECHA_4\"",
-						"from": "beginning"
 					}
 				}
 			],
@@ -211,21 +236,77 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 208182413860640,
+							"sid": 163040964234365,
+							"parameters": {
+								"object-to-create": "Contrarreloj_HUD",
+								"layer": "\"HUD\"",
+								"x": "323",
+								"y": "24",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 136016354862831,
 							"parameters": {
 								"object-to-create": "SpeedRun_TXT_in_Levels",
 								"layer": "\"HUD\"",
-								"x": "364",
-								"y": "437",
+								"x": "437",
+								"y": "30",
 								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 619477833012234,
+							"parameters": {
+								"object-to-create": "SpeedRun_TXT_in_Levels_shadow",
+								"layer": "\"HUD\"",
+								"x": "439",
+								"y": "32",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 627389206203093,
+							"parameters": {
+								"where": "behind",
+								"object": "SpeedRun_TXT_in_Levels"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 559505528355016,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "SpeedRun_TXT_in_Levels",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
 							}
 						},
 						{
 							"id": "set-text",
 							"objectClass": "SpeedRun_TXT_in_Levels",
-							"sid": 870393075424135,
+							"sid": 780817214817254,
 							"parameters": {
-								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & millisecs"
+								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 376524539727528,
+							"parameters": {
+								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
 							}
 						}
 					],
@@ -253,6 +334,14 @@
 						"loop": "not-looping",
 						"volume": "VOLUMEN_MASTER_FX-15",
 						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "bola",
+					"sid": 220709105497288,
+					"parameters": {
+						"from": "beginning"
 					}
 				},
 				{
@@ -306,6 +395,14 @@
 						"loop": "not-looping",
 						"volume": "VOLUMEN_MASTER_FX-15",
 						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "bola_ROSA",
+					"sid": 902574576907702,
+					"parameters": {
+						"from": "beginning"
 					}
 				},
 				{
@@ -1878,10 +1975,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 970900736416091,
+									"sid": 582867370877239,
 									"parameters": {
 										"variable": "VIDAS_1",
-										"value": "9"
+										"value": "10"
 									}
 								},
 								{
@@ -2040,10 +2137,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 637047153067401,
+									"sid": 320243535575994,
 									"parameters": {
 										"variable": "VIDAS_2",
-										"value": "9"
+										"value": "10"
 									}
 								},
 								{
@@ -2202,10 +2299,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 707794727596869,
+									"sid": 944742666364125,
 									"parameters": {
 										"variable": "VIDAS_3",
-										"value": "9"
+										"value": "10"
 									}
 								},
 								{

@@ -6,6 +6,16 @@
 			"includeSheet": "Ev_desarrollador"
 		},
 		{
+			"eventType": "variable",
+			"name": "se_ha_cargado_Traducciones",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 648783527106752
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -15,6 +25,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 494816509957282,
+					"parameters": {
+						"tag": "\"Traducciones\"",
+						"file": "TRADUCCIONES.json"
+					}
+				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
@@ -31,15 +50,6 @@
 					"parameters": {
 						"variable": "FECHA_FACEBOOK",
 						"value": "mid(Browser.ExecJS(\"Date()\"),8,2)"
-					}
-				},
-				{
-					"id": "request-project-file",
-					"objectClass": "AJAX",
-					"sid": 882688263482300,
-					"parameters": {
-						"tag": "\"Traducciones\"",
-						"file": "TRADUCCIONES.json"
 					}
 				},
 				{
@@ -756,6 +766,15 @@
 					"id": "wait-for-previous-actions",
 					"objectClass": "System",
 					"sid": 287722763379987
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 786884580726173,
+					"parameters": {
+						"variable": "se_ha_cargado_Traducciones",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 495462801465369
@@ -1428,10 +1447,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 634699791339411,
+							"sid": 364249448831510,
 							"parameters": {
 								"variable": "VIDAS_1",
-								"value": "9"
+								"value": "10"
 							}
 						}
 					],
@@ -1906,10 +1925,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 423146021191530,
+							"sid": 879855705539559,
 							"parameters": {
 								"variable": "VIDAS_2",
-								"value": "9"
+								"value": "10"
 							}
 						}
 					],
@@ -2384,10 +2403,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 482641552529859,
+							"sid": 520326817565089,
 							"parameters": {
 								"variable": "VIDAS_3",
-								"value": "9"
+								"value": "10"
 							}
 						}
 					],

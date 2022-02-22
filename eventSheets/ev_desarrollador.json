@@ -14,6 +14,54 @@
 						{
 							"id": "key-is-down",
 							"objectClass": "Keyboard",
+							"sid": 121651857160011,
+							"parameters": {
+								"key": 220
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 666412122005146,
+							"parameters": {
+								"layout": "2_Room_SAVE_GIRL"
+							}
+						}
+					],
+					"sid": 304331514805759
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 505276304872511,
+							"parameters": {
+								"key": 89
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 854037982702273,
+							"parameters": {
+								"layout": "FINAL_JUEGO"
+							}
+						}
+					],
+					"sid": 168388058612670
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
 							"sid": 498831500658429,
 							"parameters": {
 								"key": 8
@@ -140,28 +188,28 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 656067100899663,
+							"sid": 636314581471212,
 							"parameters": {
 								"variable": "VIDAS_1",
-								"value": "0"
+								"value": "2"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 794182246809709,
+							"sid": 465682562490337,
 							"parameters": {
 								"variable": "VIDAS_2",
-								"value": "0"
+								"value": "2"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 341887947894441,
+							"sid": 791032092562098,
 							"parameters": {
 								"variable": "VIDAS_3",
-								"value": "0"
+								"value": "2"
 							}
 						}
 					],

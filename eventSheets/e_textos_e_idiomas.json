@@ -21,6 +21,16 @@
 					"sid": 380636839194516,
 					"children": [
 						{
+							"eventType": "variable",
+							"name": "anchoTextoIdiomas",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 897916924522183
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -40,6 +50,14 @@
 									"sid": 887476175420533,
 									"parameters": {
 										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,1)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_speedrun_TXT",
+									"sid": 681010422728024,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,51)"
 									}
 								},
 								{
@@ -92,10 +110,68 @@
 								},
 								{
 									"id": "set-text",
+									"objectClass": "PORTADA_Opc_Selected_txt",
+									"sid": 388850475729404,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,8)"
+									}
+								},
+								{
+									"id": "set-text",
 									"objectClass": "PORTADA_Opc_Leng_Txt_Center",
 									"sid": 997818435146875,
 									"parameters": {
 										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,10)"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "ANYADIR AQUI LAS POSICIONES DE LAS FLECHAS"
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 967994076657694
+								},
+								{
+									"id": "set-width",
+									"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+									"sid": 971125846538101,
+									"disabled": true,
+									"parameters": {
+										"width": "len(Self.Text)*6"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+									"sid": 441670977679133,
+									"parameters": {
+										"width": "Self.TextWidth+len(Self.Text)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+									"sid": 503473167999112,
+									"parameters": {
+										"text": "replace(Self.Text,\"*\",\" \")"
+									}
+								},
+								{
+									"id": "set-x",
+									"objectClass": "PORTADA_Opc_Leng_Icon_left",
+									"sid": 970947397232510,
+									"parameters": {
+										"x": "PORTADA_Opc_Leng_Txt_Center.BBoxLeft-16"
+									}
+								},
+								{
+									"id": "set-x",
+									"objectClass": "PORTADA_Opc_Leng_Icon_right",
+									"sid": 239972749894115,
+									"parameters": {
+										"x": "PORTADA_Opc_Leng_Txt_Center.BBoxRight+16"
 									}
 								},
 								{

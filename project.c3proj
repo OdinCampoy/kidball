@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 27602,
-	"name": "Red Ball vs Dark King",
+	"name": "Kid Ball vs Dark King",
 	"runtime": "c3",
 	"useWorker": "dom",
 	"bundleAddons": false,
@@ -622,7 +622,7 @@
 			"PORTADA_Opc_Music_icon",
 			"PORTADA_Opc_Leng_Txt_Center",
 			"PORTADA_Opc_Leng_Icon_left",
-			"PORTADA_Opc_Leng_Icon_left2",
+			"PORTADA_Opc_Leng_Icon_right",
 			"PORTADA_Opc_SoundFx_icon_L",
 			"PORTADA_Opc_SoundFx_icon_R",
 			"PORTADA_Opc_Music_icon_R",
@@ -799,7 +799,7 @@
 			"Speedrun_SELECTOR_selector",
 			"Speedrun_MODE_C",
 			"SpeedRun_TXT_mode_DOOM",
-			"SpeedRun_TXT_mode_NO_DEATH_desc2",
+			"SpeedRun_TXT_mode_DOOM_desc",
 			"Array_2_SPR_DATOS_por_NO_DEATH",
 			"Array_3_SPR_DATOS_por_DOOM_MODE",
 			"Array_SPR_10_SLOTS_2_DEATH",
@@ -886,7 +886,22 @@
 			"FINAL_texto_juego_superado",
 			"FINAL_texto_congratulations",
 			"M2_PlataformaSuelta8",
-			"fondo_mundo_5_corto"
+			"fondo_mundo_5_corto",
+			"Contrarreloj_HUD",
+			"LIFES_TXT_shadow",
+			"Gema_Currency_TXT_shadow",
+			"SpeedRun_TXT_in_Levels_shadow",
+			"SCENE_TXT_shadow",
+			"Tutorial_Extra_Life_Gema",
+			"Tutorial_Extra_life_Number",
+			"TUTORIAL_TXT_EXTRA_LIFE",
+			"Tutorial_Extra_Life_bOLA",
+			"Bola_de_fuego_ENDING_5",
+			"bola_de_fuego_suelo_Up",
+			"SlotScreenshotSprite_Background",
+			"Mundo_2_columna_top4",
+			"logo_SpoonBox",
+			"tapa_PinchosGiratorios"
 		],
 		"subfolders": [
 			{
@@ -1145,6 +1160,16 @@
 				"name": "ENDINGS"
 			},
 			{
+				"items": [
+					"Room_5S",
+					"Room_7S",
+					"Room_61S",
+					"Room_15B"
+				],
+				"subfolders": [],
+				"name": "NIVELES SOBRANTES"
+			},
+			{
 				"items": [],
 				"subfolders": [
 					{
@@ -1152,7 +1177,6 @@
 							"Room_1",
 							"Room_2",
 							"Room_3",
-							"Room_3B",
 							"Room_4",
 							"Room_5",
 							"1M_CHECKPOINT"
@@ -1163,7 +1187,6 @@
 					{
 						"items": [
 							"Room_6",
-							"Room_6B",
 							"Room_7",
 							"Room_8",
 							"Room_9",
@@ -1178,7 +1201,6 @@
 							"Room_11",
 							"Room_12",
 							"Room_13",
-							"Room_13B",
 							"Room_14",
 							"Room_15",
 							"2M_CHECKPOINT"
@@ -1192,7 +1214,6 @@
 							"Room_17",
 							"Room_18",
 							"Room_19",
-							"Room_15B",
 							"Room_20",
 							"2M_TRANSICION_CASTILLOS"
 						],
@@ -1353,16 +1374,11 @@
 					},
 					{
 						"items": [
-							"Room_81_O",
-							"Room_82_O",
-							"Room_83_O",
-							"Room_84_O",
-							"Room_85_O",
-							"Room_86_O",
-							"Room_87_O",
-							"Room_88_O",
-							"Room_89_O",
-							"Room_90_O",
+							"Room_81",
+							"Room_82",
+							"Room_83",
+							"Room_84",
+							"Room_85",
 							"9M_CHECKPOINT"
 						],
 						"subfolders": [],
@@ -1370,11 +1386,11 @@
 					},
 					{
 						"items": [
-							"Room_91_O",
-							"Room_92_O",
-							"Room_93_O",
-							"Room_94_O",
-							"Room_95_O",
+							"Room_86",
+							"Room_87",
+							"Room_88",
+							"Room_89",
+							"Room_90",
 							"9M_TRANSICION_CASTILLOS"
 						],
 						"subfolders": [],
@@ -1382,11 +1398,11 @@
 					},
 					{
 						"items": [
-							"Room_96_O",
-							"Room_97_O",
-							"Room_98_O",
-							"Room_99_O",
-							"Room_100_O",
+							"Room_91",
+							"Room_92",
+							"Room_93",
+							"Room_94",
+							"Room_95",
 							"10M_CHECKPOINT"
 						],
 						"subfolders": [],
@@ -1409,6 +1425,16 @@
 						],
 						"subfolders": [],
 						"name": "SAVE LOVE 2"
+					},
+					{
+						"items": [
+							"X_Room_95",
+							"X_Room_96",
+							"X_Room_97",
+							"X_Room_98"
+						],
+						"subfolders": [],
+						"name": "SCENES_ELIMINAR"
 					}
 				],
 				"name": "NIVELES"
@@ -1540,6 +1566,13 @@
 				],
 				"subfolders": [],
 				"name": "FINAL JUEGO"
+			},
+			{
+				"items": [
+					"e_tutorial_textos"
+				],
+				"subfolders": [],
+				"name": "TUTORIAL_textos"
 			}
 		]
 	},
@@ -1876,6 +1909,17 @@
 					],
 					"subfolders": [],
 					"name": "Canyon Dash"
+				},
+				{
+					"items": [
+						{
+							"name": "Delete slot.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 431921397282233
+						}
+					],
+					"subfolders": [],
+					"name": "SLOTS"
 				}
 			]
 		},
