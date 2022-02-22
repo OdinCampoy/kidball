@@ -56,6 +56,16 @@
 			],
 			"actions": [
 				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 730258250467907
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 836709540310248
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 142359004663758,
@@ -106,7 +116,7 @@
 				},
 				{
 					"id": "set-x",
-					"objectClass": "FINAL_BOSS_confirmacion_Button",
+					"objectClass": "PORTADA_Finalboss_Button_Leyend",
 					"sid": 596106842522784,
 					"parameters": {
 						"x": "FINAL_BOSS_TUTORIAL.BBoxLeft-30"
@@ -114,7 +124,7 @@
 				},
 				{
 					"id": "pin-to-object-properties",
-					"objectClass": "FINAL_BOSS_confirmacion_Button",
+					"objectClass": "PORTADA_Finalboss_Button_Leyend",
 					"sid": 583053213970749,
 					"behaviorType": "Pin",
 					"parameters": {
@@ -354,6 +364,18 @@
 					"parameters": {
 						"variable": "FB_tiempo_entre_salida_y_salida",
 						"value": "4"
+					}
+				},
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 507529563483296,
+					"parameters": {
+						"folder": "music",
+						"audio-file-name": "MUSIC_sound=1? \"Kid_ball_5_boss\":\"\"",
+						"loop": "looping",
+						"volume": "Musica_Volumen_Master",
+						"tag-optional": "\"MUSICA_BOSS\""
 					}
 				}
 			],
@@ -2621,9 +2643,9 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 552148764546341,
+											"sid": 982691788729793,
 											"parameters": {
-												"audio-file": "coge_bola_jefe_final",
+												"audio-file": "danyo_2_dragon",
 												"loop": "not-looping",
 												"volume": "VOLUMEN_MASTER_FX",
 												"tag-optional": "\"\""
@@ -4843,10 +4865,10 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 733486357718519,
+											"sid": 595494951109232,
 											"parameters": {
 												"object-to-create": "sierras_final_boss",
-												"layer": "\"fondo\"",
+												"layer": "\"decoracion\"",
 												"x": "276",
 												"y": "1143",
 												"create-hierarchy": false
@@ -4880,10 +4902,10 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 501086819891787,
+											"sid": 960527115244603,
 											"parameters": {
 												"object-to-create": "sierras_final_boss2",
-												"layer": "\"fondo\"",
+												"layer": "\"decoracion\"",
 												"x": "583",
 												"y": "1143",
 												"create-hierarchy": false
@@ -4964,10 +4986,10 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 573071775633256,
+											"sid": 588517985040032,
 											"parameters": {
 												"object-to-create": "sierras_final_boss",
-												"layer": "\"fondo\"",
+												"layer": "\"decoracion\"",
 												"x": "276",
 												"y": "1143",
 												"create-hierarchy": false
@@ -5001,10 +5023,10 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 922283088965393,
+											"sid": 248622418047033,
 											"parameters": {
 												"object-to-create": "sierras_final_boss2",
-												"layer": "\"fondo\"",
+												"layer": "\"decoracion\"",
 												"x": "583",
 												"y": "1143",
 												"create-hierarchy": false
@@ -5194,10 +5216,10 @@
 										{
 											"id": "spawn-another-object",
 											"objectClass": "sierras_final_boss",
-											"sid": 442881942290354,
+											"sid": 994508633280866,
 											"parameters": {
 												"object": "sierras",
-												"layer": "\"fondo\"",
+												"layer": "\"decoracion\"",
 												"image-point": "0",
 												"create-hierarchy": false
 											}
@@ -5232,10 +5254,10 @@
 										{
 											"id": "spawn-another-object",
 											"objectClass": "sierras_final_boss2",
-											"sid": 782992957071842,
+											"sid": 161701809398590,
 											"parameters": {
 												"object": "sierras",
-												"layer": "\"fondo\"",
+												"layer": "\"decoracion\"",
 												"image-point": "0",
 												"create-hierarchy": false
 											}
@@ -5325,10 +5347,10 @@
 										{
 											"id": "spawn-another-object",
 											"objectClass": "sierras_final_boss",
-											"sid": 157251937743070,
+											"sid": 684031811092896,
 											"parameters": {
 												"object": "sierras",
-												"layer": "\"fondo\"",
+												"layer": "\"decoracion\"",
 												"image-point": "0",
 												"create-hierarchy": false
 											}
@@ -5363,10 +5385,10 @@
 										{
 											"id": "spawn-another-object",
 											"objectClass": "sierras_final_boss2",
-											"sid": 733226863239246,
+											"sid": 927088678458522,
 											"parameters": {
 												"object": "sierras",
-												"layer": "\"fondo\"",
+												"layer": "\"decoracion\"",
 												"image-point": "0",
 												"create-hierarchy": false
 											}
@@ -5829,6 +5851,14 @@
 									}
 								},
 								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 907758052941034,
+									"parameters": {
+										"tag": "\"MUSICA_BOSS\""
+									}
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
 									"sid": 582458893939740,
@@ -5949,6 +5979,14 @@
 									"parameters": {
 										"where": "behind",
 										"object": "llave"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 588800484918397,
+									"parameters": {
+										"tag": "\"MUSICA_BOSS\""
 									}
 								},
 								{

@@ -2325,7 +2325,7 @@
 					"type": "enemy_VOLADOR",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "Mundo_1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2334,6 +2334,7 @@
 					"instanceVariables": {
 						"direccion": 1,
 						"velocidad": 2.5,
+						"activa_TOPES": false,
 						"IZQ_tope": 0,
 						"DER_tope": 0
 					},
@@ -2396,7 +2397,10 @@
 					"uid": 5669,
 					"instanceVariables": {
 						"direccion": 1,
-						"time_scale": 0.6
+						"time_scale": 0.6,
+						"activa_TOPES": false,
+						"IZQ_tope": 0,
+						"DER_tope": 0
 					},
 					"behaviors": {
 						"Platform": {
@@ -2443,7 +2447,10 @@
 					"uid": 5670,
 					"instanceVariables": {
 						"direccion": 1,
-						"time_scale": 0.6
+						"time_scale": 0.6,
+						"activa_TOPES": false,
+						"IZQ_tope": 0,
+						"DER_tope": 0
 					},
 					"behaviors": {
 						"Platform": {
@@ -2490,7 +2497,10 @@
 					"uid": 5671,
 					"instanceVariables": {
 						"direccion": 1,
-						"time_scale": 0.6
+						"time_scale": 0.6,
+						"activa_TOPES": false,
+						"IZQ_tope": 0,
+						"DER_tope": 0
 					},
 					"behaviors": {
 						"Platform": {
@@ -2529,7 +2539,7 @@
 					"type": "enemy_VOLADOR",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "Mundo_1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2538,6 +2548,7 @@
 					"instanceVariables": {
 						"direccion": 1,
 						"velocidad": 1.2,
+						"activa_TOPES": false,
 						"IZQ_tope": 0,
 						"DER_tope": 0
 					},

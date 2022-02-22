@@ -1817,160 +1817,6 @@
 						],
 						"zElevation": 0
 					}
-				}
-			],
-			"sid": 446537116952502,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				1,
-				1,
-				1,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
-			"name": "Ladrillos",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [
-				{
-					"type": "SOLIDO_M1",
-					"properties": {
-						"initially-visible": true,
-						"tile-width": 32,
-						"tile-height": 32,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0,
-						"tile-x-drawing-offset": 0,
-						"tile-y-drawing-offset": 0,
-						"drawing-mode": "top-to-right"
-					},
-					"uid": 3752,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"ownData": {
-						"tilemapData": {
-							"width": 33,
-							"height": 19,
-							"max-width": 50,
-							"max-height": 27,
-							"data": "27x0,19x8,8x0,19x8,8x0,19x8,8x0,6x8,17,8x9,54,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,6x8,13,8x0,3,3x8,8x0,2x8,17,3x9,14,8x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,5x0,2,6x7,52,3x8,8x0,2x8,13,5x0,4,6x9,54,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,19,12x7,52,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
-						},
-						"tile-width": 32,
-						"tile-height": 32,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0
-					},
-					"world": {
-						"x": -96,
-						"y": -32,
-						"width": 1072,
-						"height": 627,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "puerta",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "cerrada",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3753,
-					"instanceVariables": {
-						"abierta": false,
-						"PANTALLA": 2,
-						"sigueinte_nivel": ""
-					},
-					"behaviors": {},
-					"world": {
-						"x": 756,
-						"y": 448,
-						"width": 85,
-						"height": 98,
-						"originX": 0.5,
-						"originY": 1,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Inicio_POS",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3754,
-					"instanceVariables": {
-						"SIN_animacion_Intro": false,
-						"Nivel_1_dificil": false,
-						"pos_Y_nueva_lvl_1_dificil": 0
-					},
-					"behaviors": {},
-					"world": {
-						"x": 92,
-						"y": 337,
-						"width": 32,
-						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
 				},
 				{
 					"type": "PINCHO_GIRATORIOS",
@@ -2067,6 +1913,160 @@
 						"height": 24,
 						"originX": 0.5,
 						"originY": 1.4583333333333333,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 446537116952502,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Ladrillos",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "SOLIDO_M1",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 3752,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"ownData": {
+						"tilemapData": {
+							"width": 33,
+							"height": 19,
+							"max-width": 50,
+							"max-height": 27,
+							"data": "27x0,19x8,8x0,8,2x90,45,40,14x8,8x0,8,2x90,45,40,14x8,8x0,8,2x90,45,40,8,17,2x9,34,39,44,3x9,54,3x8,8x0,8,2x90,45,40,8,13,8x0,3,3x8,8x0,8,2x90,45,40,8,27,8x0,57,3x8,8x0,8,2x90,45,40,8,28,8x0,58,3x8,8x0,8,2x90,45,40,8,29,8x0,59,3x8,8x0,8,2x90,45,40,8,13,8x0,57,3x8,8x0,8,2x90,45,40,8,13,8x0,58,3x8,8x0,8,2x90,45,40,8,13,8x0,59,3x8,8x0,8,2x90,45,40,8,27,8x0,3,3x8,8x0,8,2x90,45,40,8,29,8x0,3,3x8,8x0,8,2x90,45,40,8,13,8x0,3,3x8,8x0,8,2x90,45,40,8,27,8x0,3,3x8,8x0,8,3x45,40,8,28,8x0,57,3x8,8x0,8,4x40,8,29,8x0,59,3x8,8x0,6x8,13,8x0,3,3x8,8x0,2x8,17,3x9,14,8x0,3,3x8,8x0,2x8,13,12x0,57,3x8,8x0,2x8,13,12x0,58,3x8,8x0,2x8,13,12x0,59,3x8,8x0,2x8,13,5x0,2,6x7,52,3x8,8x0,2x8,13,5x0,4,6x9,54,3x8,8x0,2x8,13,12x0,57,3x8,8x0,2x8,13,12x0,58,3x8,8x0,2x8,13,12x0,59,3x8,8x0,2x8,19,7,32,37,42,7,32,7,32,37,42,2x7,52,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": -96,
+						"y": -32,
+						"width": 1072,
+						"height": 627,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "puerta",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "cerrada",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 3753,
+					"instanceVariables": {
+						"abierta": false,
+						"PANTALLA": 2,
+						"sigueinte_nivel": ""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 756,
+						"y": 448,
+						"width": 85,
+						"height": 98,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Inicio_POS",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 3754,
+					"instanceVariables": {
+						"SIN_animacion_Intro": false,
+						"Nivel_1_dificil": false,
+						"pos_Y_nueva_lvl_1_dificil": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 92,
+						"y": 337,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

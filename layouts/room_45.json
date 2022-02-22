@@ -1393,7 +1393,7 @@
 							1,
 							1,
 							1,
-							1
+							0.8
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -1422,7 +1422,7 @@
 							1,
 							1,
 							1,
-							1
+							0.8
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -1451,7 +1451,7 @@
 							1,
 							1,
 							1,
-							1
+							0.8
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -2235,7 +2235,12 @@
 					"uid": 2727,
 					"instanceVariables": {
 						"velocidad": 3,
-						"direccion": 1
+						"direccion": 1,
+						"activa_TOPES": true,
+						"IZQ_tope": 485,
+						"DER_tope": 725,
+						"UP_tope": 0,
+						"DOWN_tope": 0
 					},
 					"behaviors": {
 						"Rotate": {
@@ -2415,7 +2420,7 @@
 							"height": 19,
 							"max-width": 50,
 							"max-height": 27,
-							"data": "27x0,19x8,8x0,19x8,8x0,2x8,15,3x9,42,8x9,20,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,36,4x7,12,3x0,3,3x8,8x0,2x8,13,3x0,3,4x8,13,3x0,3,3x8,8x0,2x8,13,3x0,3,4x8,13,3x0,3,3x8,8x0,2x8,13,2x0,30,4,4x9,14,2x0,30,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,11,12x7,16,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
+							"data": "27x0,19x8,8x0,19x8,8x0,2x8,15,3x9,42,8x9,20,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,53,3x8,8x0,2x8,13,3x0,18,8x0,54,3x8,8x0,2x8,13,3x0,18,8x0,55,3x8,8x0,2x8,13,3x0,18,8x0,53,3x8,8x0,2x8,13,3x0,18,8x0,55,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,53,3x8,8x0,2x8,13,3x0,18,8x0,54,3x8,8x0,2x8,13,3x0,18,8x0,55,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,18,8x0,53,3x8,8x0,2x8,13,3x0,18,8x0,55,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,36,4x7,12,3x0,3,3x8,8x0,2x8,13,3x0,3,4x68,13,3x0,3,3x8,8x0,2x8,13,3x0,3,4x68,13,3x0,3,3x8,8x0,2x8,13,2x0,30,4,4x9,14,2x0,30,53,3x8,8x0,2x8,13,12x0,54,3x8,8x0,2x8,13,12x0,55,3x8,8x0,2x8,11,12x7,16,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
 						},
 						"tile-width": 32,
 						"tile-height": 32,
@@ -4614,72 +4619,10 @@
 					}
 				},
 				{
-					"type": "Enemies_colision",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 2779,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 474,
-						"y": 420,
-						"width": 15.788269043,
-						"height": -58.994384766,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemies_colision",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 2780,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 736,
-						"y": 420,
-						"width": 15.788269043,
-						"height": -58.994384766,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "enemy_VOLADOR",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "Mundo_1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -4688,8 +4631,9 @@
 					"instanceVariables": {
 						"direccion": 0,
 						"velocidad": 2,
-						"IZQ_tope": 0,
-						"DER_tope": 0
+						"activa_TOPES": true,
+						"IZQ_tope": 50,
+						"DER_tope": 705
 					},
 					"behaviors": {
 						"Platform": {
@@ -4726,126 +4670,6 @@
 						"y": 107.62861343383813,
 						"width": 46,
 						"height": 31,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "TOPE_volador_DER",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 470,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 721,
-						"y": 106,
-						"width": 14,
-						"height": -139,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "TOPE_volador_IZQ",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 483,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 55,
-						"y": 107.5,
-						"width": 14,
-						"height": -132,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "atasco_saltarines_DER",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 1319,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 721.0479665467307,
-						"y": 101.867767334,
-						"width": 14,
-						"height": -126.724227905,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "atasco_saltarines_IZQ",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 1320,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 55.547026259239836,
-						"y": 103.739364624,
-						"width": 14,
-						"height": -124.2292099,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

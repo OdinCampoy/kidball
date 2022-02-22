@@ -54,11 +54,11 @@
 					"behaviors": {},
 					"ownData": {
 						"tilemapData": {
-							"width": 38,
+							"width": 35,
 							"height": 19,
-							"max-width": 168,
+							"max-width": 169,
 							"max-height": 106,
-							"data": "428x2,121,141,5x2,121,141,97x2,122,142,4x2,121,122,142,97x2,123,143,4x2,122,123,143,103x2,123,215x2,121,141,96x2,121,7x2,122,142,96x2,122,7x2,123,143,96x2,123,103x2,141,7x2,162,97x2,142,105x2,143,10x2,162,95x2,121,141,104x2,122,142,5x2,121,141,97x2,123,143,5x2,122,142,104x2,123,143,212x2,162,102x2,2x121,104x2,2x122,2x2,121,141,99x2,121,2x123,2x2,122,142,99x2,122,4x2,123,143,99x2,123,98x2,121,141,7x2,121,141,95x2,122,142,7x2,122,142,95x2,123,143,2x2,141,4x2,123,143,2,141,97x2,142,7x2,142,97x2,143,7x2,143,14x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,12795x2"
+							"data": "428x2,121,141,5x2,121,141,97x2,122,142,4x2,121,122,142,97x2,123,143,4x2,122,123,143,103x2,123,215x2,121,141,96x2,121,7x2,122,142,96x2,122,7x2,123,143,96x2,123,103x2,141,7x2,162,97x2,142,105x2,143,10x2,162,95x2,121,141,104x2,122,142,5x2,121,141,97x2,123,143,5x2,122,142,104x2,123,143,212x2,162,102x2,2x121,104x2,2x122,2x2,121,141,99x2,121,2x123,2x2,122,142,99x2,122,4x2,123,143,99x2,123,98x2,121,141,7x2,121,141,95x2,122,142,7x2,122,142,95x2,123,143,2x2,141,4x2,123,143,2,141,97x2,142,7x2,142,97x2,143,7x2,143,14x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,105x2,22,12795x2,106x0"
 						},
 						"tile-width": 32,
 						"tile-height": 32,
@@ -70,7 +70,7 @@
 					"world": {
 						"x": -142,
 						"y": -55,
-						"width": 1219,
+						"width": 1130,
 						"height": 623,
 						"originX": 0,
 						"originY": 0,
@@ -80,6 +80,202 @@
 							1,
 							1
 						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Gema_currency",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "gema",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 3691,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 347.7272727272727,
+						"y": 126,
+						"width": 21,
+						"height": 27,
+						"originX": 0.5,
+						"originY": 0.46296296296296297,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Gema_currency",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "gema",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 3692,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 507.27272727272725,
+						"y": 126,
+						"width": 21,
+						"height": 27,
+						"originX": 0.5,
+						"originY": 0.46296296296296297,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Gema_currency",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "gema",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 3693,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 636.5454545454545,
+						"y": 126,
+						"width": 21,
+						"height": 27,
+						"originX": 0.5,
+						"originY": 0.46296296296296297,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Gema_currency",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "gema",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 3690,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 188.54545454545453,
+						"y": 126,
+						"width": 21,
+						"height": 27,
+						"originX": 0.5,
+						"originY": 0.46296296296296297,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
 						"zElevation": 0
 					}
 				}
@@ -2968,7 +3164,12 @@
 					"uid": 2935,
 					"instanceVariables": {
 						"velocidad": 3.5,
-						"direccion": 0
+						"direccion": 0,
+						"activa_TOPES": true,
+						"IZQ_tope": 170,
+						"DER_tope": 665,
+						"UP_tope": 0,
+						"DOWN_tope": 0
 					},
 					"behaviors": {
 						"Rotate": {
@@ -2982,7 +3183,7 @@
 					},
 					"world": {
 						"x": 636,
-						"y": 153,
+						"y": 156,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -3009,7 +3210,12 @@
 					"uid": 3215,
 					"instanceVariables": {
 						"velocidad": 3.5,
-						"direccion": 1
+						"direccion": 1,
+						"activa_TOPES": true,
+						"IZQ_tope": 170,
+						"DER_tope": 665,
+						"UP_tope": 0,
+						"DOWN_tope": 0
 					},
 					"behaviors": {
 						"Rotate": {
@@ -3023,7 +3229,7 @@
 					},
 					"world": {
 						"x": 188,
-						"y": 154,
+						"y": 157,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -3451,153 +3657,6 @@
 					"world": {
 						"x": 763,
 						"y": 106,
-						"width": 21,
-						"height": 27,
-						"originX": 0.5,
-						"originY": 0.46296296296296297,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Gema_currency",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "gema",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3691,
-					"instanceVariables": {},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "vertical",
-								"wave": "sine",
-								"period": 2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 347.7272727272727,
-						"y": 126,
-						"width": 21,
-						"height": 27,
-						"originX": 0.5,
-						"originY": 0.46296296296296297,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Gema_currency",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "gema",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3692,
-					"instanceVariables": {},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "vertical",
-								"wave": "sine",
-								"period": 2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 507.27272727272725,
-						"y": 126,
-						"width": 21,
-						"height": 27,
-						"originX": 0.5,
-						"originY": 0.46296296296296297,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Gema_currency",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "gema",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3693,
-					"instanceVariables": {},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "vertical",
-								"wave": "sine",
-								"period": 2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 636.5454545454545,
-						"y": 126,
 						"width": 21,
 						"height": 27,
 						"originX": 0.5,
@@ -4235,117 +4294,6 @@
 					}
 				},
 				{
-					"type": "Enemies_colision",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3216,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 684,
-						"y": 153,
-						"width": 25.697696695818195,
-						"height": -51,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemies_colision",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3250,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 140,
-						"y": 153,
-						"width": 25.697696695818195,
-						"height": -51,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Gema_currency",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "gema",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3690,
-					"instanceVariables": {},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "vertical",
-								"wave": "sine",
-								"period": 2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 188.54545454545453,
-						"y": 126,
-						"width": 21,
-						"height": 27,
-						"originX": 0.5,
-						"originY": 0.46296296296296297,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Gema_currency",
 					"properties": {
 						"initially-visible": true,
@@ -4592,7 +4540,7 @@
 						}
 					},
 					"world": {
-						"x": 687.987233614053,
+						"x": 682.987233614053,
 						"y": 436,
 						"width": 24,
 						"height": 24,
@@ -4658,7 +4606,7 @@
 						}
 					},
 					"world": {
-						"x": 754,
+						"x": 749,
 						"y": 436,
 						"width": 24,
 						"height": 24,

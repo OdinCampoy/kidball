@@ -2606,6 +2606,98 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "sierras",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 833,
+					"instanceVariables": {
+						"velocidad": 2.5,
+						"direccion": 0,
+						"activa_TOPES": true,
+						"IZQ_tope": 35,
+						"DER_tope": 370,
+						"UP_tope": 0,
+						"DOWN_tope": 0
+					},
+					"behaviors": {
+						"Rotate": {
+							"properties": {
+								"speed": 180,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 85,
+						"y": 191,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "sierras",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 859,
+					"instanceVariables": {
+						"velocidad": 2.5,
+						"direccion": 0,
+						"activa_TOPES": true,
+						"IZQ_tope": 35,
+						"DER_tope": 370,
+						"UP_tope": 0,
+						"DOWN_tope": 0
+					},
+					"behaviors": {
+						"Rotate": {
+							"properties": {
+								"speed": 180,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 267,
+						"y": 191,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 232652285131049,
@@ -2729,88 +2821,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "sierras",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 833,
-					"instanceVariables": {
-						"velocidad": 2.5,
-						"direccion": 0
-					},
-					"behaviors": {
-						"Rotate": {
-							"properties": {
-								"speed": 180,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 76,
-						"y": 192,
-						"width": 60.23674450588142,
-						"height": 60.23674549576789,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "sierras",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 859,
-					"instanceVariables": {
-						"velocidad": 2.5,
-						"direccion": 0
-					},
-					"behaviors": {
-						"Rotate": {
-							"properties": {
-								"speed": 180,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 257.19020015642644,
-						"y": 192.09032783173762,
-						"width": 60.23674450588142,
-						"height": 60.23674549576789,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "torchFire",
 					"properties": {
 						"initially-visible": true,
@@ -2869,7 +2879,7 @@
 							"height": 19,
 							"max-width": 50,
 							"max-height": 27,
-							"data": "27x0,19x8,8x0,19x8,8x0,2x8,6,4x9,36,6,6x9,11,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,4x0,2,7,15,3x8,8x0,2x8,13,4x0,3,13,2x0,2,7,15,5x8,8x0,2x8,13,4x0,3,13,2x0,4,3x9,11,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,3x0,25,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,4,14,6x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,9x0,2,2x7,15,3x8,8x0,2x8,13,7x0,2,7,15,3x43,3x8,8x0,2x8,13,5x0,2,7,15,5x43,3x8,8x0,2x8,10,5x7,15,7x43,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
+							"data": "27x0,19x8,8x0,19x8,8x0,2x8,6,4x9,11,6,6x9,11,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,4x0,2,7,15,3x8,8x0,2x8,13,4x0,3,13,2x0,2,7,15,5x8,8x0,2x8,13,4x0,3,13,2x0,4,3x9,11,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,3x0,25,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,4,14,6x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,9x0,2,2x7,15,3x8,8x0,2x8,13,7x0,2,7,15,3x43,3x8,8x0,2x8,13,5x0,2,7,15,5x43,3x8,8x0,2x8,10,5x7,15,7x43,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
 						},
 						"tile-width": 32,
 						"tile-height": 32,
@@ -3639,68 +3649,6 @@
 					}
 				},
 				{
-					"type": "Enemies_colision",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 1140,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 8.134704020892215,
-						"y": 189.09032783173762,
-						"width": 37,
-						"height": -65,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemies_colision",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 1144,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 382,
-						"y": 188,
-						"width": 26,
-						"height": -65,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Enemigo_piedra",
 					"properties": {
 						"initially-visible": true,
@@ -3747,7 +3695,10 @@
 					"uid": 2076,
 					"instanceVariables": {
 						"direccion": 1,
-						"time_scale": 0.55
+						"time_scale": 0.6,
+						"activa_TOPES": true,
+						"IZQ_tope": 230,
+						"DER_tope": 725
 					},
 					"behaviors": {
 						"Platform": {
@@ -3755,7 +3706,7 @@
 								"max-speed": 300,
 								"acceleration": 3000,
 								"deceleration": 3000,
-								"jump-strength": 720,
+								"jump-strength": 750,
 								"gravity": 1800,
 								"max-fall-speed": 500,
 								"double-jump": false,
@@ -3772,64 +3723,6 @@
 						"height": 36,
 						"originX": 0.548781,
 						"originY": 0.529412,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "atasco_saltarines_DER",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 1376,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 736,
-						"y": 335,
-						"width": 18.495723779416153,
-						"height": -419.237457275,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "atasco_saltarines_IZQ",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 1394,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 218,
-						"y": 343,
-						"width": 17.85347752521386,
-						"height": -414.375854492,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,

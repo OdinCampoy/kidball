@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 27602,
-	"name": "Kid Ball vs Dark King",
+	"name": "Kid ball adventure",
 	"runtime": "c3",
 	"useWorker": "dom",
 	"bundleAddons": false,
@@ -307,6 +307,14 @@
 			"id": "swirl",
 			"name": "Swirl",
 			"author": "Brad Larson",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "warpobject",
+			"name": "Warp object",
+			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
 		}
@@ -901,7 +909,11 @@
 			"SlotScreenshotSprite_Background",
 			"Mundo_2_columna_top4",
 			"logo_SpoonBox",
-			"tapa_PinchosGiratorios"
+			"tapa_PinchosGiratorios",
+			"PORTADA_options_Button_Leyend",
+			"PORTADA_Finalboss_Button_Leyend",
+			"PLATAFORMA_sombra_boss",
+			"Saving_Game_TXT"
 		],
 		"subfolders": [
 			{
@@ -1095,7 +1107,9 @@
 			"Enemigos_GIRAN",
 			"PAUSA_elementos",
 			"Solidos",
-			"Palancas_Plataformas"
+			"Palancas_Plataformas",
+			"PAUSA_TIMESCALE",
+			"PAUSA_TXT_TIMESCALE"
 		],
 		"subfolders": []
 	},
@@ -1164,7 +1178,9 @@
 					"Room_5S",
 					"Room_7S",
 					"Room_61S",
-					"Room_15B"
+					"Room_15S",
+					"Room_22S",
+					"Room_26B"
 				],
 				"subfolders": [],
 				"name": "NIVELES SOBRANTES"
@@ -1223,7 +1239,6 @@
 					{
 						"items": [
 							"Room_21",
-							"Room_21B",
 							"Room_22",
 							"Room_23",
 							"Room_24",
@@ -1236,7 +1251,6 @@
 					{
 						"items": [
 							"Room_26",
-							"Room_26B",
 							"Room_27",
 							"Room_28",
 							"Room_29",
@@ -1920,6 +1934,27 @@
 					],
 					"subfolders": [],
 					"name": "SLOTS"
+				},
+				{
+					"items": [
+						{
+							"name": "danyo_1_dragon.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 806043507602606
+						},
+						{
+							"name": "danyo_2_dragon.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 647754828978186
+						},
+						{
+							"name": "danyo_greenking.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 545438784904682
+						}
+					],
+					"subfolders": [],
+					"name": "FINAL BOSSES"
 				}
 			]
 		},
@@ -1972,6 +2007,39 @@
 					],
 					"subfolders": [],
 					"name": "intro juego"
+				},
+				{
+					"items": [
+						{
+							"name": "Kid_ball_5_boss.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 363936096721778
+						}
+					],
+					"subfolders": [],
+					"name": "final boss"
+				},
+				{
+					"items": [
+						{
+							"name": "final_a.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 238644119247061
+						}
+					],
+					"subfolders": [],
+					"name": "final primero"
+				},
+				{
+					"items": [
+						{
+							"name": "final_b.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 407280596644885
+						}
+					],
+					"subfolders": [],
+					"name": "final segundo"
 				}
 			]
 		},
@@ -2106,7 +2174,7 @@
 		"author": "SpoonBox Studio",
 		"authorEmail": "spoonboxstudio@gmail.com",
 		"authorWebsite": "http://",
-		"appId": "com.spoonboxstudio.red.ball.dark.king",
+		"appId": "com.spoonboxstudio.kid.ball.adventure.red",
 		"pixelRounding": true,
 		"useLoaderLayout": true,
 		"fullscreenMode": "letterbox-scale",

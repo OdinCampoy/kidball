@@ -144,6 +144,10 @@
 			"sid": 442164752577802
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "Ev_desarrollador"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -228,6 +232,14 @@
 									"sid": 587904963278250,
 									"parameters": {
 										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,3)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_Opc_Creditos_Back",
+									"sid": 743733323096030,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,9)"
 									}
 								},
 								{
@@ -610,7 +622,7 @@
 								},
 								{
 									"id": "pin-to-object-properties",
-									"objectClass": "PORTADA_Opc_Button_Leyend",
+									"objectClass": "PORTADA_options_Button_Leyend",
 									"sid": 589693150521817,
 									"behaviorType": "Pin",
 									"parameters": {
@@ -787,6 +799,14 @@
 									"sid": 656271873019716,
 									"parameters": {
 										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,3)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_Opc_Creditos_Back",
+									"sid": 627304715054250,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,9)"
 									}
 								},
 								{
@@ -1139,7 +1159,7 @@
 								},
 								{
 									"id": "pin-to-object-properties",
-									"objectClass": "PORTADA_Opc_Button_Leyend",
+									"objectClass": "PORTADA_options_Button_Leyend",
 									"sid": 683314912488444,
 									"behaviorType": "Pin",
 									"parameters": {
@@ -5887,6 +5907,7 @@
 											"id": "on-key-pressed",
 											"objectClass": "Keyboard",
 											"sid": 195143220699056,
+											"disabled": true,
 											"parameters": {
 												"key": 27
 											}
@@ -7128,6 +7149,177 @@
 									"sid": 542110455810328
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 567014838924011,
+									"parameters": {
+										"tag": "\"MUSICA_BOSS\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 882667386258845,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 257465187759150
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 645542041907526,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 340993923485683,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-35+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 612099252047379,
+											"parameters": {
+												"tag": "\"MUSICA_BOSS\"",
+												"db": "VOLUMEN_MASTER_MUSIC"
+											}
+										}
+									],
+									"sid": 893603551799358
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 808588937926335,
+									"parameters": {
+										"tag": "\"FINAL_BOLA_ROJA\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 240893642543214,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 643836227908546
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 178447294503177,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 871788885371896,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-35+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 551410650514783,
+											"parameters": {
+												"tag": "\"FINAL_BOLA_ROJA\"",
+												"db": "VOLUMEN_MASTER_MUSIC"
+											}
+										}
+									],
+									"sid": 669073827628741
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 263880626008409,
+									"parameters": {
+										"tag": "\"FINAL_BOLA_ROSA\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 181789064640323,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 296927001110988
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 318990994650261,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 778379019586017,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-35+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 450678899596958,
+											"parameters": {
+												"tag": "\"FINAL_BOLA_ROSA\"",
+												"db": "VOLUMEN_MASTER_MUSIC"
+											}
+										}
+									],
+									"sid": 320783330049350
+								}
+							]
 						}
 					]
 				},
@@ -7496,9 +7688,66 @@
 								{
 									"id": "is-tag-playing",
 									"objectClass": "Audio",
-									"sid": 787131208216764,
+									"sid": 867598561666878,
 									"parameters": {
 										"tag": "\"Musica_Introduccion\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 573780774803700,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 749563090449743
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 488446720701460,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-35+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 682385485346469,
+											"parameters": {
+												"tag": "\"Musica_Introduccion\"",
+												"db": "VOLUMEN_MASTER_MUSIC-100"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 260970032542147,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 606140590468278
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 743972491146596,
+									"parameters": {
+										"tag": "\"MUSICA_BOSS\""
 									}
 								}
 							],
@@ -7527,9 +7776,9 @@
 										{
 											"id": "set-volume",
 											"objectClass": "Audio",
-											"sid": 504388065144444,
+											"sid": 325862718752623,
 											"parameters": {
-												"tag": "\"Musica_Introduccion\"",
+												"tag": "\"MUSICA_BOSS\"",
 												"db": "VOLUMEN_MASTER_MUSIC-100"
 											}
 										},
@@ -7544,6 +7793,120 @@
 										}
 									],
 									"sid": 856628120797262
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 571251158288658,
+									"parameters": {
+										"tag": "\"FINAL_BOLA_ROJA\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 363396665614999,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 972415587745038
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 841718939588660,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-35+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 523486185196525,
+											"parameters": {
+												"tag": "\"FINAL_BOLA_ROJA\"",
+												"db": "VOLUMEN_MASTER_MUSIC-100"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 635462923446061,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 647044788620860
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 768856437290128,
+									"parameters": {
+										"tag": "\"FINAL_BOLA_ROSA\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 116897020286549,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 985521080288374
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 815197255354279,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-35+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 202087224682710,
+											"parameters": {
+												"tag": "\"FINAL_BOLA_ROSA\"",
+												"db": "VOLUMEN_MASTER_MUSIC-100"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 149261116499708,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 588126004690281
 								}
 							]
 						}
@@ -7670,6 +8033,22 @@
 							"sid": 634411077879098,
 							"parameters": {
 								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,12)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_Opc_Creditos_Back",
+							"sid": 392365500231078,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,9)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_Opc_Selected_txt",
+							"sid": 272004285839858,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,8)"
 							}
 						}
 					],

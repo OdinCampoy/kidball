@@ -45,6 +45,10 @@
 					}
 				},
 				{
+					"callFunction": "JUEGO - tamanyo bolas en castillo transicion",
+					"sid": 213734615380705
+				},
+				{
 					"id": "set-animation",
 					"objectClass": "bola",
 					"sid": 558732229461071,
@@ -86,6 +90,44 @@
 					"parameters": {
 						"pin-to": "Intro_JEFE_FINAL",
 						"mode": "position-only"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Saving_Game_Icon",
+					"sid": 380084950284897,
+					"parameters": {
+						"width": "33",
+						"height": "36"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Saving_Game_Icon",
+					"sid": 350903696683489,
+					"parameters": {
+						"x": "820",
+						"y": "452"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 952753136743096,
+					"parameters": {
+						"object-to-create": "Saving_Game_TXT",
+						"layer": "\"VIDAS\"",
+						"x": "555",
+						"y": "446",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Saving_Game_TXT",
+					"sid": 781645249026259,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,86)\n"
 					}
 				},
 				{

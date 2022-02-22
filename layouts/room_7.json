@@ -69,7 +69,7 @@
 					},
 					"world": {
 						"x": -116,
-						"y": -58,
+						"y": -55,
 						"width": 1072,
 						"height": 627,
 						"originX": 0,
@@ -1225,7 +1225,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 424,
+						"x": 485,
 						"y": 316,
 						"width": 12,
 						"height": 101,
@@ -1254,7 +1254,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 443,
+						"x": 380,
 						"y": 297,
 						"width": 38,
 						"height": 38,
@@ -1283,7 +1283,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 417,
+						"x": 478,
 						"y": 297,
 						"width": 38,
 						"height": 38,
@@ -1521,6 +1521,39 @@
 						"height": 64,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mundo1_tlbgnd_izq",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 239,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 361,
+						"y": 316,
+						"width": 12,
+						"height": 108,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -1871,7 +1904,7 @@
 						}
 					},
 					"world": {
-						"x": 373,
+						"x": 379,
 						"y": 322,
 						"width": 21,
 						"height": 27,
@@ -2225,7 +2258,7 @@
 					},
 					"world": {
 						"x": 430,
-						"y": 327,
+						"y": 368,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -2253,8 +2286,9 @@
 					"instanceVariables": {
 						"direccion": 1,
 						"velocidad": 300,
-						"IZQ_tope": 0,
-						"DER_tope": 0
+						"activa_TOPES": true,
+						"IZQ_tope": 315,
+						"DER_tope": 540
 					},
 					"behaviors": {
 						"Platform": {
@@ -2273,8 +2307,8 @@
 						}
 					},
 					"world": {
-						"x": 339.8477723957262,
-						"y": 416.28778865102015,
+						"x": 312,
+						"y": 416,
 						"width": 31,
 						"height": 31,
 						"originX": 0.5,
@@ -2286,101 +2320,6 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemies_colision",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 6471,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 270.13805905543416,
-						"y": 390.7050423019687,
-						"width": 42,
-						"height": -51,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Enemies_colision",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 6472,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 595.1371068846772,
-						"y": 389.5044699689861,
-						"width": 55,
-						"height": -51,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "PINCHO",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 6482,
-					"instanceVariables": {},
-					"behaviors": {
-						"Persist": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 482,
-						"y": 294,
-						"width": 24,
-						"height": 24,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 3.141592653589793,
 						"zElevation": 0
 					}
 				},
@@ -2401,7 +2340,7 @@
 						}
 					},
 					"world": {
-						"x": 374,
+						"x": 429,
 						"y": 294,
 						"width": 24,
 						"height": 24,
