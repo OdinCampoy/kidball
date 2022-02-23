@@ -453,7 +453,52 @@
 							}
 						}
 					],
-					"sid": 561635347506803
+					"sid": 561635347506803,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 308947427440446,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 329544658289126,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 646043910799953
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 265603239440927,
+											"parameters": {
+												"audio-file": "danyo_2_dragon",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 798694407052269
+								}
+							]
+						}
+					]
 				}
 			],
 			"sid": 147902820918447

@@ -40,6 +40,22 @@
 			],
 			"actions": [
 				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 921473872260323
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 671211052843041,
+					"parameters": {
+						"audio-file": "final_a",
+						"loop": "not-looping",
+						"volume": "VOLUMEN_MASTER_MUSIC",
+						"tag-optional": "\"FINAL_BOLA_ROJA\""
+					}
+				},
+				{
 					"id": "set-animation",
 					"objectClass": "bola",
 					"sid": 415445449376320,
@@ -1990,11 +2006,11 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 637318506536926,
+											"sid": 726034956293626,
 											"parameters": {
 												"audio-file": "aparecen corazones grandes",
 												"loop": "not-looping",
-												"volume": "VOLUMEN_MASTER_FX-5",
+												"volume": "VOLUMEN_MASTER_FX",
 												"tag-optional": "\"\""
 											}
 										},

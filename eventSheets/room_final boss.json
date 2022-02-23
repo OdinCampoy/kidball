@@ -126,6 +126,16 @@
 			],
 			"actions": [
 				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 185989038724142
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 876225578662452
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 250532353763025,
@@ -176,7 +186,7 @@
 				},
 				{
 					"id": "set-x",
-					"objectClass": "FINAL_BOSS_confirmacion_Button",
+					"objectClass": "PORTADA_Finalboss_Button_Leyend",
 					"sid": 692569469036138,
 					"parameters": {
 						"x": "FINAL_BOSS_TUTORIAL.BBoxLeft-30"
@@ -184,7 +194,7 @@
 				},
 				{
 					"id": "pin-to-object-properties",
-					"objectClass": "FINAL_BOSS_confirmacion_Button",
+					"objectClass": "PORTADA_Finalboss_Button_Leyend",
 					"sid": 277399613312594,
 					"behaviorType": "Pin",
 					"parameters": {
@@ -391,9 +401,52 @@
 						"variable": "PASOS_FINAL_BOSS",
 						"value": "-2"
 					}
+				},
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 348004284528426,
+					"parameters": {
+						"folder": "music",
+						"audio-file-name": "MUSIC_sound=1? \"Kid_ball_5_boss\":\"\"",
+						"loop": "looping",
+						"volume": "Musica_Volumen_Master",
+						"tag-optional": "\"MUSICA_BOSS\""
+					}
 				}
 			],
 			"sid": 870922073547144
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "RESPLANDOR",
+					"sid": 740084608156140
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 477225383133389,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "RESPLANDOR",
+					"sid": 658520638023764,
+					"parameters": {
+						"y": "Self.Y-15"
+					}
+				}
+			],
+			"sid": 999486638621434
 		},
 		{
 			"eventType": "comment",
@@ -2354,9 +2407,9 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 127933951755674,
+											"sid": 190393230541295,
 											"parameters": {
-												"audio-file": "coge_bola_jefe_final",
+												"audio-file": "danyo_greenking",
 												"loop": "not-looping",
 												"volume": "VOLUMEN_MASTER_FX",
 												"tag-optional": "\"\""
@@ -5656,10 +5709,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "llave",
-									"sid": 599561333527142,
+									"sid": 701047998472697,
 									"parameters": {
-										"x": "454",
-										"y": "360"
+										"x": "438",
+										"y": "350"
 									}
 								},
 								{
@@ -5680,6 +5733,14 @@
 									"parameters": {
 										"where": "behind",
 										"object": "llave"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 801536813120104,
+									"parameters": {
+										"tag": "\"MUSICA_BOSS\""
 									}
 								},
 								{
@@ -5785,10 +5846,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "llave",
-									"sid": 660095873901328,
+									"sid": 315659922810486,
 									"parameters": {
-										"x": "454",
-										"y": "360"
+										"x": "438",
+										"y": "350"
 									}
 								},
 								{
@@ -5809,6 +5870,14 @@
 									"parameters": {
 										"where": "behind",
 										"object": "llave"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 961215811197153,
+									"parameters": {
+										"tag": "\"MUSICA_BOSS\""
 									}
 								},
 								{

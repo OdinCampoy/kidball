@@ -196,105 +196,212 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "enemy_in_floor",
-					"sid": 153759453396511,
-					"parameters": {
-						"object": "Enemies_colision"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "enemy_in_floor",
-					"sid": 240409003317403,
-					"parameters": {
-						"instance-variable": "direccion",
-						"comparison": 0,
-						"value": "0"
-					}
-				},
-				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Enemies_colision",
-					"sid": 391597439396679,
+					"objectClass": "enemy_in_floor",
+					"sid": 255902090657443,
 					"parameters": {
-						"instance-variable": "enables"
-					}
+						"instance-variable": "activa_TOPES"
+					},
+					"isInverted": true
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 929070323532728,
+			"children": [
 				{
-					"id": "set-instvar-value",
-					"objectClass": "enemy_in_floor",
-					"sid": 601740667144362,
-					"parameters": {
-						"instance-variable": "direccion",
-						"value": "1"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_in_floor",
+							"sid": 341637642172471,
+							"parameters": {
+								"object": "Enemies_colision"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_in_floor",
+							"sid": 291754467761132,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Enemies_colision",
+							"sid": 105425933647281,
+							"parameters": {
+								"instance-variable": "enables"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_in_floor",
+							"sid": 720158204974096,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Enemies_colision",
+							"sid": 773000540311081,
+							"parameters": {
+								"instance-variable": "enables",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 988780299403243
 				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Enemies_colision",
-					"sid": 787277268288077,
-					"parameters": {
-						"instance-variable": "enables",
-						"value": "false"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_in_floor",
+							"sid": 444956607946103,
+							"parameters": {
+								"object": "Enemies_colision"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_in_floor",
+							"sid": 915975105107180,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Enemies_colision",
+							"sid": 434347911962710,
+							"parameters": {
+								"instance-variable": "enables"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_in_floor",
+							"sid": 112727854136387,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Enemies_colision",
+							"sid": 355033671263888,
+							"parameters": {
+								"instance-variable": "enables",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 867261292102707
 				}
-			],
-			"sid": 856114612298327
+			]
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "enemy_in_floor",
-					"sid": 890060858572165,
-					"parameters": {
-						"object": "Enemies_colision"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "enemy_in_floor",
-					"sid": 842637721245426,
-					"parameters": {
-						"instance-variable": "direccion",
-						"comparison": 0,
-						"value": "1"
-					}
-				},
-				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Enemies_colision",
-					"sid": 586408050263342,
+					"objectClass": "enemy_in_floor",
+					"sid": 397112716198044,
 					"parameters": {
-						"instance-variable": "enables"
+						"instance-variable": "activa_TOPES"
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 759319398445479,
+			"children": [
 				{
-					"id": "set-instvar-value",
-					"objectClass": "enemy_in_floor",
-					"sid": 606770868411442,
-					"parameters": {
-						"instance-variable": "direccion",
-						"value": "0"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "enemy_in_floor",
+							"sid": 429731433228480,
+							"parameters": {
+								"comparison": 5,
+								"x-co-ordinate": "Self.DER_tope"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_in_floor",
+							"sid": 817353433646707,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_in_floor",
+							"sid": 446882438179970,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 148255152850247
 				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Enemies_colision",
-					"sid": 935770656345480,
-					"parameters": {
-						"instance-variable": "enables",
-						"value": "false"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "enemy_in_floor",
+							"sid": 313248910911939,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "Self.IZQ_tope"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_in_floor",
+							"sid": 280943060025743,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_in_floor",
+							"sid": 102285160524010,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 738871348854913
 				}
-			],
-			"sid": 431509470806980
+			]
 		},
 		{
 			"eventType": "block",
@@ -599,7 +706,8 @@
 					}
 				}
 			],
-			"sid": 441581042273348
+			"sid": 441581042273348,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -651,77 +759,185 @@
 					}
 				}
 			],
-			"sid": 531030448984691
+			"sid": 531030448984691,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
+					"id": "is-boolean-instance-variable-set",
 					"objectClass": "enemy_VOLADOR",
-					"sid": 636487315540241,
+					"sid": 835516023056340,
 					"parameters": {
-						"object": "TOPE_volador_DER"
+						"instance-variable": "activa_TOPES"
 					}
+				}
+			],
+			"actions": [],
+			"sid": 875775524134776,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 327233752761803,
+							"parameters": {
+								"comparison": 5,
+								"x-co-ordinate": "Self.DER_tope"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 170591234851245,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 396320976520526,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 647245342693268
 				},
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "enemy_VOLADOR",
-					"sid": 787968861981676,
-					"parameters": {
-						"instance-variable": "direccion",
-						"comparison": 0,
-						"value": "0"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 721760101283654,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "Self.IZQ_tope"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 326586642884604,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 244152855983144,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 334595135673463
 				}
-			],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "enemy_VOLADOR",
-					"sid": 640936408525215,
-					"parameters": {
-						"instance-variable": "direccion",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 663719525342264
+			]
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
+					"id": "is-boolean-instance-variable-set",
 					"objectClass": "enemy_VOLADOR",
-					"sid": 489237295607248,
+					"sid": 321552170259730,
 					"parameters": {
-						"object": "TOPE_volador_IZQ"
-					}
+						"instance-variable": "activa_TOPES"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 739782710417679,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 968080990634097,
+							"parameters": {
+								"object": "TOPE_volador_DER"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 700294086632898,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 321609993558385,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 223127969452591
 				},
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "enemy_VOLADOR",
-					"sid": 265882663028429,
-					"parameters": {
-						"instance-variable": "direccion",
-						"comparison": 0,
-						"value": "1"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 248619979616750,
+							"parameters": {
+								"object": "TOPE_volador_IZQ"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 144048588764995,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_VOLADOR",
+							"sid": 955916969743528,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 341405400519717
 				}
-			],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "enemy_VOLADOR",
-					"sid": 676344085384072,
-					"parameters": {
-						"instance-variable": "direccion",
-						"value": "0"
-					}
-				}
-			],
-			"sid": 363388443977472
+			]
 		},
 		{
 			"eventType": "block",
@@ -958,209 +1174,388 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "sierras",
-									"sid": 475446071943543,
-									"parameters": {
-										"object": "Enemies_colision"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "sierras",
-									"sid": 959641868723084,
-									"parameters": {
-										"instance-variable": "direccion",
-										"comparison": 0,
-										"value": "0"
-									}
-								},
-								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Enemies_colision",
-									"sid": 135711369928881,
+									"objectClass": "sierras",
+									"sid": 516504892719656,
 									"parameters": {
-										"instance-variable": "enables"
-									}
+										"instance-variable": "activa_TOPES"
+									},
+									"isInverted": true
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 699252245872218,
+							"children": [
 								{
-									"id": "set-instvar-value",
-									"objectClass": "sierras",
-									"sid": 135973292853516,
-									"parameters": {
-										"instance-variable": "direccion",
-										"value": "1"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "sierras",
+											"sid": 363995938999000,
+											"parameters": {
+												"object": "Enemies_colision"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "sierras",
+											"sid": 562699361662402,
+											"parameters": {
+												"instance-variable": "direccion",
+												"comparison": 0,
+												"value": "0"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Enemies_colision",
+											"sid": 303387509736816,
+											"parameters": {
+												"instance-variable": "enables"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "sierras",
+											"sid": 123180790554657,
+											"parameters": {
+												"instance-variable": "direccion",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Enemies_colision",
+											"sid": 137949431443725,
+											"parameters": {
+												"instance-variable": "enables",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 226329757880871
 								},
 								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Enemies_colision",
-									"sid": 305074199569566,
-									"parameters": {
-										"instance-variable": "enables",
-										"value": "false"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "sierras",
+											"sid": 796851809663708,
+											"parameters": {
+												"object": "Enemies_colision"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "sierras",
+											"sid": 313785128679196,
+											"parameters": {
+												"instance-variable": "direccion",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Enemies_colision",
+											"sid": 927199844372228,
+											"parameters": {
+												"instance-variable": "enables"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "sierras",
+											"sid": 474520143762375,
+											"parameters": {
+												"instance-variable": "direccion",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Enemies_colision",
+											"sid": 346313393865014,
+											"parameters": {
+												"instance-variable": "enables",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 869987646466329
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "sierras",
+											"sid": 499721922640588,
+											"parameters": {
+												"object": "Enemies_colision"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "sierras",
+											"sid": 836305725453043,
+											"parameters": {
+												"instance-variable": "direccion",
+												"comparison": 0,
+												"value": "2"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Enemies_colision",
+											"sid": 382044973401473,
+											"parameters": {
+												"instance-variable": "enables"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "sierras",
+											"sid": 769367862173351,
+											"parameters": {
+												"instance-variable": "direccion",
+												"value": "3"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Enemies_colision",
+											"sid": 362891977259682,
+											"parameters": {
+												"instance-variable": "enables",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 172157827041015
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "sierras",
+											"sid": 291677878640403,
+											"parameters": {
+												"object": "Enemies_colision"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "sierras",
+											"sid": 692152228314146,
+											"parameters": {
+												"instance-variable": "direccion",
+												"comparison": 0,
+												"value": "3"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Enemies_colision",
+											"sid": 286767262087889,
+											"parameters": {
+												"instance-variable": "enables"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "sierras",
+											"sid": 451037047104616,
+											"parameters": {
+												"instance-variable": "direccion",
+												"value": "2"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Enemies_colision",
+											"sid": 977788143605411,
+											"parameters": {
+												"instance-variable": "enables",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 908990670449588
 								}
-							],
-							"sid": 827970238722099
+							]
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "sierras",
-									"sid": 275828005615680,
-									"parameters": {
-										"object": "Enemies_colision"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "sierras",
-									"sid": 643519650557963,
-									"parameters": {
-										"instance-variable": "direccion",
-										"comparison": 0,
-										"value": "1"
-									}
-								},
-								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Enemies_colision",
-									"sid": 811964281272741,
+									"objectClass": "sierras",
+									"sid": 544917639712832,
 									"parameters": {
-										"instance-variable": "enables"
+										"instance-variable": "activa_TOPES"
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 112950659200718,
+							"children": [
 								{
-									"id": "set-instvar-value",
-									"objectClass": "sierras",
-									"sid": 997551969058610,
-									"parameters": {
-										"instance-variable": "direccion",
-										"value": "0"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "sierras",
+											"sid": 594758651001217,
+											"parameters": {
+												"comparison": 5,
+												"x-co-ordinate": "Self.DER_tope"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "sierras",
+											"sid": 996423911529691,
+											"parameters": {
+												"instance-variable": "direccion",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "sierras",
+											"sid": 576633348022706,
+											"parameters": {
+												"instance-variable": "direccion",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 370069098449171
 								},
 								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Enemies_colision",
-									"sid": 274295362810311,
-									"parameters": {
-										"instance-variable": "enables",
-										"value": "false"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "sierras",
+											"sid": 222795863288207,
+											"parameters": {
+												"comparison": 3,
+												"x-co-ordinate": "Self.IZQ_tope"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "sierras",
+											"sid": 216952244785426,
+											"parameters": {
+												"instance-variable": "direccion",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "sierras",
+											"sid": 179197348154581,
+											"parameters": {
+												"instance-variable": "direccion",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 143718360939920
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-y",
+											"objectClass": "sierras",
+											"sid": 161087370519738,
+											"parameters": {
+												"comparison": 5,
+												"y-co-ordinate": "Self.DOWN_tope"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "sierras",
+											"sid": 472515211564716,
+											"parameters": {
+												"instance-variable": "direccion",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "sierras",
+											"sid": 778818473729494,
+											"parameters": {
+												"instance-variable": "direccion",
+												"value": "3"
+											}
+										}
+									],
+									"sid": 413725407331095
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-y",
+											"objectClass": "sierras",
+											"sid": 181606968854700,
+											"parameters": {
+												"comparison": 3,
+												"y-co-ordinate": "Self.UP_tope"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "sierras",
+											"sid": 324956397725820,
+											"parameters": {
+												"instance-variable": "direccion",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "sierras",
+											"sid": 896127203439656,
+											"parameters": {
+												"instance-variable": "direccion",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 855643977772991
 								}
-							],
-							"sid": 797802326675729
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "sierras",
-									"sid": 448489462827450,
-									"parameters": {
-										"object": "Enemies_colision"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "sierras",
-									"sid": 517656247810397,
-									"parameters": {
-										"instance-variable": "direccion",
-										"comparison": 0,
-										"value": "2"
-									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Enemies_colision",
-									"sid": 685678888115749,
-									"parameters": {
-										"instance-variable": "enables"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "sierras",
-									"sid": 745124195573220,
-									"parameters": {
-										"instance-variable": "direccion",
-										"value": "3"
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Enemies_colision",
-									"sid": 924188910598025,
-									"parameters": {
-										"instance-variable": "enables",
-										"value": "false"
-									}
-								}
-							],
-							"sid": 612426666327574
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "sierras",
-									"sid": 627042861124279,
-									"parameters": {
-										"object": "Enemies_colision"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "sierras",
-									"sid": 107198073823403,
-									"parameters": {
-										"instance-variable": "direccion",
-										"comparison": 0,
-										"value": "3"
-									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Enemies_colision",
-									"sid": 651427793257271,
-									"parameters": {
-										"instance-variable": "enables"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "sierras",
-									"sid": 447404558986242,
-									"parameters": {
-										"instance-variable": "direccion",
-										"value": "2"
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Enemies_colision",
-									"sid": 248654596446304,
-									"parameters": {
-										"instance-variable": "enables",
-										"value": "false"
-									}
-								}
-							],
-							"sid": 651396535177491
+							]
 						}
 					]
 				}
@@ -1210,9 +1605,9 @@
 				{
 					"id": "set-angle",
 					"objectClass": "PINCHO_GIRATORIOS",
-					"sid": 606838838325855,
+					"sid": 930484164571343,
 					"parameters": {
-						"angle": "PINCHO_GIRATORIOS.Angle+PINCHO_GIRATORIOS.VELOCIDAD"
+						"angle": "PINCHO_GIRATORIOS.Angle+PINCHO_GIRATORIOS.VELOCIDAD*60*dt"
 					}
 				}
 			],
@@ -1381,105 +1776,212 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Black_ball",
-					"sid": 461744208747420,
-					"parameters": {
-						"object": "Enemies_colision"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Black_ball",
-					"sid": 105352693077697,
-					"parameters": {
-						"instance-variable": "direccion",
-						"comparison": 0,
-						"value": "1"
-					}
-				},
-				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Enemies_colision",
-					"sid": 281778826425279,
+					"objectClass": "Black_ball",
+					"sid": 493198166947131,
 					"parameters": {
-						"instance-variable": "enables"
-					}
+						"instance-variable": "activa_TOPES"
+					},
+					"isInverted": true
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 160028619129854,
+			"children": [
 				{
-					"id": "set-instvar-value",
-					"objectClass": "Black_ball",
-					"sid": 444151756775045,
-					"parameters": {
-						"instance-variable": "direccion",
-						"value": "2"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Black_ball",
+							"sid": 154888650259437,
+							"parameters": {
+								"object": "Enemies_colision"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Black_ball",
+							"sid": 175755578709731,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Enemies_colision",
+							"sid": 391121567875681,
+							"parameters": {
+								"instance-variable": "enables"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Black_ball",
+							"sid": 734608364705161,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Enemies_colision",
+							"sid": 938751346692964,
+							"parameters": {
+								"instance-variable": "enables",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 836099091814048
 				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Enemies_colision",
-					"sid": 474929990023684,
-					"parameters": {
-						"instance-variable": "enables",
-						"value": "false"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Black_ball",
+							"sid": 673445596117610,
+							"parameters": {
+								"object": "Enemies_colision"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Black_ball",
+							"sid": 199333725811165,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "2"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Enemies_colision",
+							"sid": 503206247036540,
+							"parameters": {
+								"instance-variable": "enables"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Black_ball",
+							"sid": 135915114052785,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Enemies_colision",
+							"sid": 700125656099616,
+							"parameters": {
+								"instance-variable": "enables",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 177503325842501
 				}
-			],
-			"sid": 688424492949127
+			]
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Black_ball",
-					"sid": 383862528809665,
-					"parameters": {
-						"object": "Enemies_colision"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Black_ball",
-					"sid": 219738627334533,
-					"parameters": {
-						"instance-variable": "direccion",
-						"comparison": 0,
-						"value": "2"
-					}
-				},
-				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Enemies_colision",
-					"sid": 721631959363026,
+					"objectClass": "Black_ball",
+					"sid": 719938465372417,
 					"parameters": {
-						"instance-variable": "enables"
+						"instance-variable": "activa_TOPES"
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 135807102653361,
+			"children": [
 				{
-					"id": "set-instvar-value",
-					"objectClass": "Black_ball",
-					"sid": 306880003256378,
-					"parameters": {
-						"instance-variable": "direccion",
-						"value": "1"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Black_ball",
+							"sid": 598707199107033,
+							"parameters": {
+								"comparison": 5,
+								"x-co-ordinate": "Self.DER_tope"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Black_ball",
+							"sid": 522067188101412,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Black_ball",
+							"sid": 953630283822235,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 193968807959616
 				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Enemies_colision",
-					"sid": 628488585649912,
-					"parameters": {
-						"instance-variable": "enables",
-						"value": "false"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Black_ball",
+							"sid": 507617238159945,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "Self.IZQ_tope"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Black_ball",
+							"sid": 533163463372238,
+							"parameters": {
+								"instance-variable": "direccion",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Black_ball",
+							"sid": 581070411673965,
+							"parameters": {
+								"instance-variable": "direccion",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 912893463503849
 				}
-			],
-			"sid": 380862926097525
+			]
 		},
 		{
 			"eventType": "block",
@@ -2887,7 +3389,70 @@
 							}
 						}
 					],
-					"sid": 529630495078311
+					"sid": 529630495078311,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 461826802840935,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 800199327993004,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 651502914639010,
+											"parameters": {
+												"tag": "\"lanza_bola_fuego\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 865055876349329,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 712861004312161
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 883641466889579,
+													"parameters": {
+														"audio-file": "lanza_bola_fuego",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"lanza_bola_fuego\""
+													}
+												}
+											],
+											"sid": 160321000902529
+										}
+									]
+								}
+							]
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -2944,6 +3509,69 @@
 						}
 					],
 					"sid": 264753341910276,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 789628105847886,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 539808692234674,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 233321174922668,
+											"parameters": {
+												"tag": "\"fuego_impacto\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 876908565274515,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 132630990314791
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 279087081188275,
+													"parameters": {
+														"audio-file": "fuego_impacto",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"fuego_impacto\""
+													}
+												}
+											],
+											"sid": 842825399841531
+										}
+									]
+								}
+							]
+						}
+					],
 					"isOrBlock": true
 				},
 				{
@@ -2973,6 +3601,19 @@
 								"layer": "Self.LayerName",
 								"image-point": "0",
 								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 904392403453193,
+							"disabled": true,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "FX_sound=1? \"lanza_bola_fuego\":\"\"",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -3011,7 +3652,70 @@
 							}
 						}
 					],
-					"sid": 809329071033600
+					"sid": 809329071033600,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 972732427496594,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 696274577724658,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 889538486170750,
+											"parameters": {
+												"tag": "\"lanza_bola_fuego\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 196543354558926,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 365504397558844
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 789885926967515,
+													"parameters": {
+														"audio-file": "lanza_bola_fuego",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"lanza_bola_fuego\""
+													}
+												}
+											],
+											"sid": 963774266289733
+										}
+									]
+								}
+							]
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -3032,6 +3736,19 @@
 							"sid": 650959345185113,
 							"parameters": {
 								"collisions": "disabled"
+							}
+						},
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 526891912617178,
+							"disabled": true,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "FX_sound=1? \"fuego_impacto\":\"\"",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX",
+								"tag-optional": "\"fuego_impacto\""
 							}
 						},
 						{
@@ -3059,7 +3776,70 @@
 							"sid": 557891067787380
 						}
 					],
-					"sid": 383128280809379
+					"sid": 383128280809379,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 920883661022555,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 226150454494547,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 318462958377721,
+											"parameters": {
+												"tag": "\"fuego_impacto\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 353185846674124,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 468963762203069
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 154040602969899,
+													"parameters": {
+														"audio-file": "fuego_impacto",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"fuego_impacto\""
+													}
+												}
+											],
+											"sid": 677161004554512
+										}
+									]
+								}
+							]
+						}
+					]
 				},
 				{
 					"eventType": "comment",
@@ -3135,7 +3915,70 @@
 							}
 						}
 					],
-					"sid": 360403127774765
+					"sid": 360403127774765,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 998438499332072,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 781239270750644,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 806786861372455,
+											"parameters": {
+												"tag": "\"lanza_bola_fuego\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 703792026079443,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 436850599819410
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 717931193434902,
+													"parameters": {
+														"audio-file": "lanza_bola_fuego",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"lanza_bola_fuego\""
+													}
+												}
+											],
+											"sid": 291763373123151
+										}
+									]
+								}
+							]
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -3201,6 +4044,72 @@
 						}
 					],
 					"sid": 488299492159387,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 604779594295116,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 248572779504835,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 926081916347904,
+											"parameters": {
+												"tag": "\"fuego_impacto\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 112092407002610,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 135355527433646
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 984062896739799,
+													"parameters": {
+														"audio-file": "fuego_impacto",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"fuego_impacto\""
+													}
+												}
+											],
+											"sid": 682217010396667,
+											"disabled": true
+										}
+									]
+								}
+							]
+						}
+					],
 					"isOrBlock": true
 				},
 				{
@@ -9242,6 +10151,28 @@
 									}
 								},
 								{
+									"id": "set-acceleration",
+									"objectClass": "bola",
+									"sid": 526393974753497,
+									"behaviorType": "Platform",
+									"parameters": {
+										"acceleration": "0"
+									}
+								},
+								{
+									"id": "set-deceleration",
+									"objectClass": "bola",
+									"sid": 512660649439129,
+									"behaviorType": "Platform",
+									"parameters": {
+										"deceleration": "0"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "COGE EL NUMERO DE NIVEL PARA EL COLOR DE LA BOLA SEGUN EL LAYOUT"
+								},
+								{
 									"id": "set-vector-x",
 									"objectClass": "bola",
 									"sid": 821586533479548,
@@ -9402,6 +10333,11 @@
 											"parameters": {
 												"vector-y": "0"
 											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 464902432946487
 										},
 										{
 											"id": "spawn-another-object",
@@ -9956,9 +10892,27 @@
 									"id": "set-vector-x",
 									"objectClass": "bola",
 									"sid": 239176481219622,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-x": "1000"
+									}
+								},
+								{
+									"id": "set-x",
+									"objectClass": "bola",
+									"sid": 829242577332346,
+									"parameters": {
+										"x": "Self.x+700*dt"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "bola",
+									"sid": 413611663734029,
+									"disabled": true,
+									"parameters": {
+										"y": "Self.Y+500*dt"
 									}
 								}
 							],
@@ -9984,9 +10938,26 @@
 							],
 							"actions": [
 								{
+									"id": "set-x",
+									"objectClass": "bola",
+									"sid": 829236021122864,
+									"parameters": {
+										"x": "Self.x+700*dt"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "bola",
+									"sid": 111123239736648,
+									"parameters": {
+										"y": "Self.Y+450*dt"
+									}
+								},
+								{
 									"id": "set-vector-x",
 									"objectClass": "bola",
 									"sid": 637254054441901,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-x": "12000"
@@ -9996,6 +10967,7 @@
 									"id": "set-vector-y",
 									"objectClass": "bola",
 									"sid": 679975104938902,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-y": "500"
@@ -10024,9 +10996,18 @@
 							],
 							"actions": [
 								{
+									"id": "set-y",
+									"objectClass": "bola",
+									"sid": 808904210759311,
+									"parameters": {
+										"y": "Self.Y+450*dt"
+									}
+								},
+								{
 									"id": "set-vector-y",
 									"objectClass": "bola",
 									"sid": 490954780220580,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-y": "500"
@@ -10055,9 +11036,26 @@
 							],
 							"actions": [
 								{
+									"id": "set-x",
+									"objectClass": "bola",
+									"sid": 948205220967359,
+									"parameters": {
+										"x": "Self.x-700*dt"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "bola",
+									"sid": 288217954333640,
+									"parameters": {
+										"y": "Self.Y+450*dt"
+									}
+								},
+								{
 									"id": "set-vector-x",
 									"objectClass": "bola",
 									"sid": 541916727795647,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-x": "-12000"
@@ -10067,6 +11065,7 @@
 									"id": "set-vector-y",
 									"objectClass": "bola",
 									"sid": 285048332949109,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-y": "500"
@@ -10097,10 +11096,19 @@
 								{
 									"id": "set-vector-x",
 									"objectClass": "bola",
-									"sid": 672913018165406,
+									"sid": 114399868455343,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-x": "-12000"
+									}
+								},
+								{
+									"id": "set-x",
+									"objectClass": "bola",
+									"sid": 432528678721589,
+									"parameters": {
+										"x": "Self.x-700*dt"
 									}
 								}
 							],
@@ -10126,9 +11134,26 @@
 							],
 							"actions": [
 								{
+									"id": "set-x",
+									"objectClass": "bola",
+									"sid": 716268215350875,
+									"parameters": {
+										"x": "Self.x-700*dt"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "bola",
+									"sid": 339486964836927,
+									"parameters": {
+										"y": "Self.Y-450*dt"
+									}
+								},
+								{
 									"id": "set-vector-x",
 									"objectClass": "bola",
 									"sid": 158671313395653,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-x": "-12000"
@@ -10138,6 +11163,7 @@
 									"id": "set-vector-y",
 									"objectClass": "bola",
 									"sid": 982616632980515,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-y": "-500"
@@ -10168,10 +11194,19 @@
 								{
 									"id": "set-vector-y",
 									"objectClass": "bola",
-									"sid": 490311522622244,
+									"sid": 685762867783988,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-y": "-500"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "bola",
+									"sid": 254980150662671,
+									"parameters": {
+										"y": "Self.Y-450*dt"
 									}
 								}
 							],
@@ -10197,9 +11232,26 @@
 							],
 							"actions": [
 								{
+									"id": "set-x",
+									"objectClass": "bola",
+									"sid": 704286201922530,
+									"parameters": {
+										"x": "Self.x+700*dt"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "bola",
+									"sid": 572784111608021,
+									"parameters": {
+										"y": "Self.Y-450*dt"
+									}
+								},
+								{
 									"id": "set-vector-x",
 									"objectClass": "bola",
 									"sid": 848760340833794,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-x": "12000"
@@ -10209,6 +11261,7 @@
 									"id": "set-vector-y",
 									"objectClass": "bola",
 									"sid": 744389701607949,
+									"disabled": true,
 									"behaviorType": "Platform",
 									"parameters": {
 										"vector-y": "-500"
@@ -10225,10 +11278,10 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "bola",
-							"sid": 939878780056101,
+							"sid": 155768392423404,
 							"parameters": {
 								"instance-variable": "tiempo_dash",
-								"comparison": 5,
+								"comparison": 4,
 								"value": "0"
 							}
 						},
@@ -10379,6 +11432,7 @@
 											"id": "set-animation",
 											"objectClass": "bola_aparece_1",
 											"sid": 850843770825623,
+											"disabled": true,
 											"parameters": {
 												"animation": "\"BOLA_ROSA\"",
 												"from": "beginning"
@@ -10414,10 +11468,10 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "bola",
-									"sid": 496807169968153,
+									"sid": 468453308681955,
 									"parameters": {
 										"instance-variable": "tiempo_dash",
-										"comparison": 2,
+										"comparison": 3,
 										"value": "0"
 									}
 								}
@@ -10434,11 +11488,68 @@
 											"sid": 805508205538414
 										}
 									],
+									"actions": [],
+									"sid": 613322813944256
+								},
+								{
+									"eventType": "comment",
+									"text": "DERECHA"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 265030719414514,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
 									"actions": [
+										{
+											"id": "set-max-speed",
+											"objectClass": "bola",
+											"sid": 371723488821326,
+											"behaviorType": "Platform",
+											"parameters": {
+												"max-speed": "250"
+											}
+										},
+										{
+											"id": "set-acceleration",
+											"objectClass": "bola",
+											"sid": 429439645930694,
+											"behaviorType": "Platform",
+											"parameters": {
+												"acceleration": "1500"
+											}
+										},
+										{
+											"id": "set-deceleration",
+											"objectClass": "bola",
+											"sid": 149431498304541,
+											"behaviorType": "Platform",
+											"parameters": {
+												"deceleration": "1500"
+											}
+										},
+										{
+											"id": "set-vector-x",
+											"objectClass": "bola",
+											"sid": 201394222909483,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-x": "1000"
+											}
+										},
 										{
 											"id": "set-instvar-value",
 											"objectClass": "bola",
-											"sid": 134323096577735,
+											"sid": 955749217791598,
 											"parameters": {
 												"instance-variable": "tiempo_dash",
 												"value": "0"
@@ -10447,7 +11558,7 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 487172878526858,
+											"sid": 595573105672130,
 											"parameters": {
 												"variable": "Dash_bola",
 												"value": "0"
@@ -10456,7 +11567,7 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 319601240912107,
+											"sid": 209073904818902,
 											"parameters": {
 												"variable": "Dash_direccion",
 												"value": "0"
@@ -10465,32 +11576,789 @@
 										{
 											"id": "set-gravity",
 											"objectClass": "bola",
-											"sid": 307615943962751,
+											"sid": 293310362554235,
 											"behaviorType": "Platform",
 											"parameters": {
 												"gravity": "1500"
 											}
 										},
 										{
-											"id": "set-max-speed",
-											"objectClass": "bola",
-											"sid": 551236270065994,
-											"behaviorType": "Platform",
-											"parameters": {
-												"max-speed": "250"
-											}
-										},
-										{
 											"id": "set-ignoring-input",
 											"objectClass": "bola",
-											"sid": 366514469633448,
+											"sid": 805572714897321,
 											"behaviorType": "Platform",
 											"parameters": {
 												"input": "stop-ignoring"
 											}
 										}
 									],
-									"sid": 613322813944256
+									"sid": 950882193213685
+								},
+								{
+									"eventType": "comment",
+									"text": "DERECHA-ABAJO"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 620900140352617,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-max-speed",
+											"objectClass": "bola",
+											"sid": 700360448737426,
+											"behaviorType": "Platform",
+											"parameters": {
+												"max-speed": "250"
+											}
+										},
+										{
+											"id": "set-acceleration",
+											"objectClass": "bola",
+											"sid": 472448632622620,
+											"behaviorType": "Platform",
+											"parameters": {
+												"acceleration": "1500"
+											}
+										},
+										{
+											"id": "set-deceleration",
+											"objectClass": "bola",
+											"sid": 756352037637194,
+											"behaviorType": "Platform",
+											"parameters": {
+												"deceleration": "1500"
+											}
+										},
+										{
+											"id": "set-vector-x",
+											"objectClass": "bola",
+											"sid": 638339723160541,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-x": "12000"
+											}
+										},
+										{
+											"id": "set-vector-y",
+											"objectClass": "bola",
+											"sid": 383033750319840,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-y": "500"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "bola",
+											"sid": 955749217791598,
+											"parameters": {
+												"instance-variable": "tiempo_dash",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 595573105672130,
+											"parameters": {
+												"variable": "Dash_bola",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 209073904818902,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-gravity",
+											"objectClass": "bola",
+											"sid": 293310362554235,
+											"behaviorType": "Platform",
+											"parameters": {
+												"gravity": "1500"
+											}
+										},
+										{
+											"id": "set-ignoring-input",
+											"objectClass": "bola",
+											"sid": 805572714897321,
+											"behaviorType": "Platform",
+											"parameters": {
+												"input": "stop-ignoring"
+											}
+										}
+									],
+									"sid": 854110580135014
+								},
+								{
+									"eventType": "comment",
+									"text": "ABAJO"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 442444679627988,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-max-speed",
+											"objectClass": "bola",
+											"sid": 371493719327685,
+											"behaviorType": "Platform",
+											"parameters": {
+												"max-speed": "250"
+											}
+										},
+										{
+											"id": "set-acceleration",
+											"objectClass": "bola",
+											"sid": 877765048958412,
+											"behaviorType": "Platform",
+											"parameters": {
+												"acceleration": "1500"
+											}
+										},
+										{
+											"id": "set-deceleration",
+											"objectClass": "bola",
+											"sid": 203997815146896,
+											"behaviorType": "Platform",
+											"parameters": {
+												"deceleration": "1500"
+											}
+										},
+										{
+											"id": "set-vector-y",
+											"objectClass": "bola",
+											"sid": 830990034391207,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-y": "500"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "bola",
+											"sid": 955749217791598,
+											"parameters": {
+												"instance-variable": "tiempo_dash",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 595573105672130,
+											"parameters": {
+												"variable": "Dash_bola",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 209073904818902,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-gravity",
+											"objectClass": "bola",
+											"sid": 293310362554235,
+											"behaviorType": "Platform",
+											"parameters": {
+												"gravity": "1500"
+											}
+										},
+										{
+											"id": "set-ignoring-input",
+											"objectClass": "bola",
+											"sid": 805572714897321,
+											"behaviorType": "Platform",
+											"parameters": {
+												"input": "stop-ignoring"
+											}
+										}
+									],
+									"sid": 864326126241325
+								},
+								{
+									"eventType": "comment",
+									"text": "ABAJO-IZQUIERDA"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 802632772128285,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"comparison": 0,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-max-speed",
+											"objectClass": "bola",
+											"sid": 372575327379296,
+											"behaviorType": "Platform",
+											"parameters": {
+												"max-speed": "250"
+											}
+										},
+										{
+											"id": "set-acceleration",
+											"objectClass": "bola",
+											"sid": 430373910701917,
+											"behaviorType": "Platform",
+											"parameters": {
+												"acceleration": "1500"
+											}
+										},
+										{
+											"id": "set-deceleration",
+											"objectClass": "bola",
+											"sid": 481919832453926,
+											"behaviorType": "Platform",
+											"parameters": {
+												"deceleration": "1500"
+											}
+										},
+										{
+											"id": "set-vector-x",
+											"objectClass": "bola",
+											"sid": 170590126416592,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-x": "-12000"
+											}
+										},
+										{
+											"id": "set-vector-y",
+											"objectClass": "bola",
+											"sid": 593788666420993,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-y": "500"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "bola",
+											"sid": 955749217791598,
+											"parameters": {
+												"instance-variable": "tiempo_dash",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 595573105672130,
+											"parameters": {
+												"variable": "Dash_bola",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 209073904818902,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-gravity",
+											"objectClass": "bola",
+											"sid": 293310362554235,
+											"behaviorType": "Platform",
+											"parameters": {
+												"gravity": "1500"
+											}
+										},
+										{
+											"id": "set-ignoring-input",
+											"objectClass": "bola",
+											"sid": 805572714897321,
+											"behaviorType": "Platform",
+											"parameters": {
+												"input": "stop-ignoring"
+											}
+										}
+									],
+									"sid": 724032117964538
+								},
+								{
+									"eventType": "comment",
+									"text": "IZQUIERDA"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 123683441470292,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"comparison": 0,
+												"value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-max-speed",
+											"objectClass": "bola",
+											"sid": 608822726785037,
+											"behaviorType": "Platform",
+											"parameters": {
+												"max-speed": "250"
+											}
+										},
+										{
+											"id": "set-acceleration",
+											"objectClass": "bola",
+											"sid": 909817911254245,
+											"behaviorType": "Platform",
+											"parameters": {
+												"acceleration": "1500"
+											}
+										},
+										{
+											"id": "set-deceleration",
+											"objectClass": "bola",
+											"sid": 503476815952224,
+											"behaviorType": "Platform",
+											"parameters": {
+												"deceleration": "1500"
+											}
+										},
+										{
+											"id": "set-vector-x",
+											"objectClass": "bola",
+											"sid": 523217752983527,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-x": "-12000"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "bola",
+											"sid": 955749217791598,
+											"parameters": {
+												"instance-variable": "tiempo_dash",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 595573105672130,
+											"parameters": {
+												"variable": "Dash_bola",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 209073904818902,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-gravity",
+											"objectClass": "bola",
+											"sid": 293310362554235,
+											"behaviorType": "Platform",
+											"parameters": {
+												"gravity": "1500"
+											}
+										},
+										{
+											"id": "set-ignoring-input",
+											"objectClass": "bola",
+											"sid": 805572714897321,
+											"behaviorType": "Platform",
+											"parameters": {
+												"input": "stop-ignoring"
+											}
+										}
+									],
+									"sid": 843096245014398
+								},
+								{
+									"eventType": "comment",
+									"text": "IZQUIERDA-ARRIBA"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 339105048118978,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"comparison": 0,
+												"value": "6"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-max-speed",
+											"objectClass": "bola",
+											"sid": 812075324188715,
+											"behaviorType": "Platform",
+											"parameters": {
+												"max-speed": "250"
+											}
+										},
+										{
+											"id": "set-acceleration",
+											"objectClass": "bola",
+											"sid": 651971475679343,
+											"behaviorType": "Platform",
+											"parameters": {
+												"acceleration": "1500"
+											}
+										},
+										{
+											"id": "set-deceleration",
+											"objectClass": "bola",
+											"sid": 561304382617539,
+											"behaviorType": "Platform",
+											"parameters": {
+												"deceleration": "1500"
+											}
+										},
+										{
+											"id": "set-vector-x",
+											"objectClass": "bola",
+											"sid": 939460646269361,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-x": "-12000"
+											}
+										},
+										{
+											"id": "set-vector-y",
+											"objectClass": "bola",
+											"sid": 851470255393917,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-y": "-500"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "bola",
+											"sid": 955749217791598,
+											"parameters": {
+												"instance-variable": "tiempo_dash",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 595573105672130,
+											"parameters": {
+												"variable": "Dash_bola",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 209073904818902,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-gravity",
+											"objectClass": "bola",
+											"sid": 293310362554235,
+											"behaviorType": "Platform",
+											"parameters": {
+												"gravity": "1500"
+											}
+										},
+										{
+											"id": "set-ignoring-input",
+											"objectClass": "bola",
+											"sid": 805572714897321,
+											"behaviorType": "Platform",
+											"parameters": {
+												"input": "stop-ignoring"
+											}
+										}
+									],
+									"sid": 329796432467982
+								},
+								{
+									"eventType": "comment",
+									"text": "ARRIBA"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 544497779713718,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"comparison": 0,
+												"value": "7"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-max-speed",
+											"objectClass": "bola",
+											"sid": 294065001590641,
+											"behaviorType": "Platform",
+											"parameters": {
+												"max-speed": "250"
+											}
+										},
+										{
+											"id": "set-acceleration",
+											"objectClass": "bola",
+											"sid": 365168414835904,
+											"behaviorType": "Platform",
+											"parameters": {
+												"acceleration": "1500"
+											}
+										},
+										{
+											"id": "set-deceleration",
+											"objectClass": "bola",
+											"sid": 565754529713171,
+											"behaviorType": "Platform",
+											"parameters": {
+												"deceleration": "1500"
+											}
+										},
+										{
+											"id": "set-vector-y",
+											"objectClass": "bola",
+											"sid": 690713730756038,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-y": "-500"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "bola",
+											"sid": 955749217791598,
+											"parameters": {
+												"instance-variable": "tiempo_dash",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 595573105672130,
+											"parameters": {
+												"variable": "Dash_bola",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 209073904818902,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-gravity",
+											"objectClass": "bola",
+											"sid": 293310362554235,
+											"behaviorType": "Platform",
+											"parameters": {
+												"gravity": "1500"
+											}
+										},
+										{
+											"id": "set-ignoring-input",
+											"objectClass": "bola",
+											"sid": 805572714897321,
+											"behaviorType": "Platform",
+											"parameters": {
+												"input": "stop-ignoring"
+											}
+										},
+										{
+											"id": "set-y",
+											"objectClass": "bola",
+											"sid": 384819129862832,
+											"disabled": true,
+											"parameters": {
+												"y": "Self.Y-500*dt"
+											}
+										}
+									],
+									"sid": 468622599887382
+								},
+								{
+									"eventType": "comment",
+									"text": "ARRIBA-DERECHA"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 963083882472542,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"comparison": 0,
+												"value": "8"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-max-speed",
+											"objectClass": "bola",
+											"sid": 143972331767006,
+											"behaviorType": "Platform",
+											"parameters": {
+												"max-speed": "250"
+											}
+										},
+										{
+											"id": "set-acceleration",
+											"objectClass": "bola",
+											"sid": 777485801923376,
+											"behaviorType": "Platform",
+											"parameters": {
+												"acceleration": "1500"
+											}
+										},
+										{
+											"id": "set-deceleration",
+											"objectClass": "bola",
+											"sid": 868235677779960,
+											"behaviorType": "Platform",
+											"parameters": {
+												"deceleration": "1500"
+											}
+										},
+										{
+											"id": "set-vector-x",
+											"objectClass": "bola",
+											"sid": 273666063326850,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-x": "12000"
+											}
+										},
+										{
+											"id": "set-vector-y",
+											"objectClass": "bola",
+											"sid": 241201998780277,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-y": "-500"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "bola",
+											"sid": 955749217791598,
+											"parameters": {
+												"instance-variable": "tiempo_dash",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 595573105672130,
+											"parameters": {
+												"variable": "Dash_bola",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 209073904818902,
+											"parameters": {
+												"variable": "Dash_direccion",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-gravity",
+											"objectClass": "bola",
+											"sid": 293310362554235,
+											"behaviorType": "Platform",
+											"parameters": {
+												"gravity": "1500"
+											}
+										},
+										{
+											"id": "set-ignoring-input",
+											"objectClass": "bola",
+											"sid": 805572714897321,
+											"behaviorType": "Platform",
+											"parameters": {
+												"input": "stop-ignoring"
+											}
+										}
+									],
+									"sid": 805759810735866
 								}
 							]
 						},
@@ -10551,6 +12419,24 @@
 											"parameters": {
 												"variable": "Dash_direccion",
 												"value": "0"
+											}
+										},
+										{
+											"id": "set-acceleration",
+											"objectClass": "bola",
+											"sid": 363504737162137,
+											"behaviorType": "Platform",
+											"parameters": {
+												"acceleration": "1500"
+											}
+										},
+										{
+											"id": "set-deceleration",
+											"objectClass": "bola",
+											"sid": 674849626321380,
+											"behaviorType": "Platform",
+											"parameters": {
+												"deceleration": "1500"
 											}
 										},
 										{

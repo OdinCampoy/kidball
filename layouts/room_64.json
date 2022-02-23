@@ -1729,6 +1729,35 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Mundo_2_contrafuerte_dch_sin",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 16224,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 195,
+						"y": 77,
+						"width": 38,
+						"height": 38,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 198104274509025,
@@ -1881,7 +1910,7 @@
 							"height": 19,
 							"max-width": 50,
 							"max-height": 27,
-							"data": "27x0,19x8,8x0,19x8,8x0,2x8,15,3x9,42,8x9,10,3x8,8x0,2x8,13,3x0,18,8x0,3,3x8,8x0,2x8,13,3x0,19,8x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,11,8x7,12,3x0,3,3x8,8x0,2x8,15,8x9,14,3x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,4x0,2,7x7,6,3x8,8x0,2x8,13,4x0,3,15,6x9,10,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,4,14,6x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,11,4x7,12,7x0,3,3x8,8x0,7x8,13,7x0,3,3x8,8x0,7x8,11,7x7,6,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
+							"data": "27x0,19x8,8x0,19x8,8x0,2x8,15,3x9,42,8x9,10,3x8,8x0,2x8,13,3x0,18,8x0,43,3x8,8x0,2x8,13,3x0,19,8x0,44,3x8,8x0,2x8,13,12x0,45,3x8,8x0,2x8,13,12x0,43,3x8,8x0,2x8,13,12x0,45,3x8,8x0,2x8,11,8x7,12,3x0,3,3x8,8x0,2x8,15,8x9,14,3x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,43,3x8,8x0,2x8,13,12x0,44,3x8,8x0,2x8,13,12x0,45,3x8,8x0,2x8,13,4x0,2,7x7,6,3x8,8x0,2x8,13,4x0,3,15,6x9,10,3x8,8x0,2x8,13,4x0,3,13,6x0,3,3x8,8x0,2x8,13,4x0,4,14,6x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,43,3x8,8x0,2x8,13,12x0,45,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,43,3x8,8x0,2x8,13,12x0,44,3x8,8x0,2x8,13,12x0,45,3x8,8x0,2x8,11,4x7,12,7x0,3,3x8,8x0,2x8,5x34,13,7x0,3,3x8,8x0,2x8,5x34,11,7x7,6,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
 						},
 						"tile-width": 32,
 						"tile-height": 32,
@@ -3225,41 +3254,10 @@
 					}
 				},
 				{
-					"type": "TOPE_volador_IZQ",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 659,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 417,
-						"y": 122,
-						"width": 14,
-						"height": -142.127563477,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "enemy_VOLADOR",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "Mundo_1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3268,8 +3266,9 @@
 					"instanceVariables": {
 						"direccion": 1,
 						"velocidad": 2.1,
-						"IZQ_tope": 0,
-						"DER_tope": 0
+						"activa_TOPES": true,
+						"IZQ_tope": 55,
+						"DER_tope": 195
 					},
 					"behaviors": {
 						"Platform": {
@@ -3319,73 +3318,11 @@
 					}
 				},
 				{
-					"type": "TOPE_volador_IZQ",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 677,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 29,
-						"y": 222,
-						"width": 14,
-						"height": -113,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "TOPE_volador_DER",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 678,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 219,
-						"y": 212,
-						"width": 14,
-						"height": -113,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "PLATAFORMA_LATERAL7",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
-						"initial-frame": 0,
+						"initial-frame": 1,
 						"enable-collisions": true,
 						"live-preview": false
 					},
@@ -3402,7 +3339,7 @@
 							"properties": {
 								"movement": "horizontal",
 								"wave": "sine",
-								"period": 3,
+								"period": 4,
 								"period-random": 0,
 								"period-offset": 0,
 								"period-offset-random": 0,
@@ -3416,7 +3353,7 @@
 					"world": {
 						"x": 693,
 						"y": 385,
-						"width": 50,
+						"width": 64,
 						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -3434,7 +3371,7 @@
 					"type": "enemy_VOLADOR",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "Mundo_1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3443,8 +3380,9 @@
 					"instanceVariables": {
 						"direccion": 1,
 						"velocidad": 2.3,
-						"IZQ_tope": 0,
-						"DER_tope": 0
+						"activa_TOPES": true,
+						"IZQ_tope": 280,
+						"DER_tope": 385
 					},
 					"behaviors": {
 						"Platform": {
@@ -3481,68 +3419,6 @@
 						"y": 298,
 						"width": 45,
 						"height": 31,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "TOPE_volador_IZQ",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 686,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 255,
-						"y": 299,
-						"width": 14,
-						"height": -113,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "TOPE_volador_DER",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 687,
-					"instanceVariables": {
-						"enables": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 407,
-						"y": 306,
-						"width": 14,
-						"height": -113,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

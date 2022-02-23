@@ -2108,9 +2108,9 @@
 					"world": {
 						"x": 733,
 						"y": 91,
-						"width": 30,
-						"height": 30,
-						"originX": 0.439394,
+						"width": 32,
+						"height": 32,
+						"originX": 0.43939400000000006,
 						"originY": 0.641791,
 						"color": [
 							1,
@@ -2370,6 +2370,50 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Saving_Game_Icon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 16377,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "opacity",
+								"wave": "sine",
+								"period": 0.9,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 100,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 40,
+						"y": 40,
+						"width": 48,
+						"height": 51,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 952829844893318,
@@ -2404,50 +2448,6 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
-				{
-					"type": "Saving_Game_Icon",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3543,
-					"instanceVariables": {},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "opacity",
-								"wave": "sine",
-								"period": 0.9,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 100,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 108,
-						"y": 93,
-						"width": 79.65425905646006,
-						"height": 85.83433087980613,
-						"originX": 0.502041,
-						"originY": 0.501901,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "Intro_transicion",
 					"properties": {

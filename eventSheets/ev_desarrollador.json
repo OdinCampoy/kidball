@@ -12,6 +12,31 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 583974690351123,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 632906933325387,
+							"parameters": {
+								"variable": "VIDA_FINAL_BOSS",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 953725296036224
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "key-is-down",
 							"objectClass": "Keyboard",
 							"sid": 121651857160011,

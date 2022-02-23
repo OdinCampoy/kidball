@@ -586,9 +586,9 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 352277987872293,
+							"sid": 379074535450382,
 							"parameters": {
-								"audio-file": "coge_corazones",
+								"audio-file": "aparecen corazones grandes",
 								"loop": "not-looping",
 								"volume": "VOLUMEN_MASTER_FX",
 								"tag-optional": "\"\""
@@ -1868,326 +1868,510 @@
 			"sid": 719947151183732,
 			"children": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 100121574139398,
-							"parameters": {
-								"variable": "SLOTS_Seleccionado_1_2_o_3",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 611381828261508,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 525341055801234
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 979208131574195,
-									"parameters": {
-										"variable": "INTRO_pulsa_saltar_intro",
-										"value": "1"
-									}
-								},
-								{
-									"id": "set-fade-in-time",
-									"objectClass": "Intro_transicion",
-									"sid": 272865856007758,
-									"behaviorType": "Fade",
-									"parameters": {
-										"fade-in-time": "2"
-									}
-								},
-								{
-									"id": "start-fade",
-									"objectClass": "Intro_transicion",
-									"sid": 426313242499104,
-									"behaviorType": "Fade"
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 598118024294841,
-									"parameters": {
-										"variable": "INTRO_HECHA_SI_NO_1",
-										"value": "\"SI\""
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 141213956260442,
-									"parameters": {
-										"key": "\"INTRO_HECHA_SI_NO_1\"",
-										"value": "INTRO_HECHA_SI_NO_1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 506747584554601,
-									"parameters": {
-										"variable": "Nivel_actual_1",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 714718172495756,
-									"parameters": {
-										"key": "\"Nivel_actual_1\"",
-										"value": "Nivel_actual_1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 442817430392812,
-									"parameters": {
-										"variable": "GEMAS_1",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 207580951237186,
-									"parameters": {
-										"key": "\"GEMAS_1\"",
-										"value": "GEMAS_1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 582867370877239,
-									"parameters": {
-										"variable": "VIDAS_1",
-										"value": "10"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 992121426264927,
-									"parameters": {
-										"key": "\"VIDAS_1\"",
-										"value": "VIDAS_1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 207340935515095,
-									"parameters": {
-										"variable": "Last_Save",
-										"value": "1"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 451049150975373,
-									"parameters": {
-										"key": "\"Last_Save\"",
-										"value": "Last_Save"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 681424039454947,
-									"parameters": {
-										"seconds": "2"
-									}
-								},
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 388912889760436,
-									"parameters": {
-										"layout": "Room_1"
-									}
-								}
-							],
-							"sid": 410456945751693
-						}
-					]
+					"eventType": "comment",
+					"text": "MODO DE JUEGO NORMAL"
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-eventvar",
+							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 335381127509146,
+							"sid": 354812867294888,
 							"parameters": {
-								"variable": "SLOTS_Seleccionado_1_2_o_3",
-								"comparison": 0,
-								"value": "2"
-							}
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],
-					"sid": 510504994100745,
+					"sid": 566404244703812,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "trigger-once-while-true",
+									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 452357613532635
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 197553116478429,
+									"sid": 768490506808269,
 									"parameters": {
-										"variable": "INTRO_pulsa_saltar_intro",
+										"variable": "SLOTS_Seleccionado_1_2_o_3",
+										"comparison": 0,
 										"value": "1"
 									}
-								},
+								}
+							],
+							"actions": [],
+							"sid": 341448623010737,
+							"children": [
 								{
-									"id": "set-fade-in-time",
-									"objectClass": "Intro_transicion",
-									"sid": 585145311301117,
-									"behaviorType": "Fade",
-									"parameters": {
-										"fade-in-time": "2"
-									}
-								},
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 994796622361584
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 874187831066819,
+											"parameters": {
+												"variable": "INTRO_pulsa_saltar_intro",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Intro_transicion",
+											"sid": 729972286599922,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "2"
+											}
+										},
+										{
+											"id": "start-fade",
+											"objectClass": "Intro_transicion",
+											"sid": 183032787832690,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 492332282966844,
+											"parameters": {
+												"variable": "INTRO_HECHA_SI_NO_1",
+												"value": "\"SI\""
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 204915157980715,
+											"parameters": {
+												"key": "\"INTRO_HECHA_SI_NO_1\"",
+												"value": "INTRO_HECHA_SI_NO_1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 631869074402041,
+											"parameters": {
+												"variable": "Nivel_actual_1",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 492612386371320,
+											"parameters": {
+												"key": "\"Nivel_actual_1\"",
+												"value": "Nivel_actual_1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 538896654345476,
+											"parameters": {
+												"variable": "GEMAS_1",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 323494909309321,
+											"parameters": {
+												"key": "\"GEMAS_1\"",
+												"value": "GEMAS_1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 479512370296001,
+											"parameters": {
+												"variable": "VIDAS_1",
+												"value": "10"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 590677603077352,
+											"parameters": {
+												"key": "\"VIDAS_1\"",
+												"value": "VIDAS_1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 143841748291796,
+											"parameters": {
+												"variable": "Last_Save",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 511130571340940,
+											"parameters": {
+												"key": "\"Last_Save\"",
+												"value": "Last_Save"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 105600172194742,
+											"parameters": {
+												"seconds": "2"
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 555117766081775,
+											"parameters": {
+												"layout": "Room_1"
+											}
+										}
+									],
+									"sid": 455194523495413
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
 								{
-									"id": "start-fade",
-									"objectClass": "Intro_transicion",
-									"sid": 530845251838041,
-									"behaviorType": "Fade"
-								},
-								{
-									"id": "set-eventvar-value",
+									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 609102539007550,
+									"sid": 945935178879375,
 									"parameters": {
-										"variable": "INTRO_HECHA_SI_NO_2",
-										"value": "\"SI\""
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 933364741077514,
-									"parameters": {
-										"key": "\"INTRO_HECHA_SI_NO_2\"",
-										"value": "INTRO_HECHA_SI_NO_2"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 437458522121129,
-									"parameters": {
-										"variable": "Nivel_actual_2",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 236183837534607,
-									"parameters": {
-										"key": "\"Nivel_actual_2\"",
-										"value": "Nivel_actual_2"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 242833699956057,
-									"parameters": {
-										"variable": "GEMAS_2",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 539972318766296,
-									"parameters": {
-										"key": "\"GEMAS_2\"",
-										"value": "GEMAS_2"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 320243535575994,
-									"parameters": {
-										"variable": "VIDAS_2",
-										"value": "10"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 290649145145611,
-									"parameters": {
-										"key": "\"VIDAS_2\"",
-										"value": "VIDAS_2"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 555229297002608,
-									"parameters": {
-										"variable": "Last_Save",
+										"variable": "SLOTS_Seleccionado_1_2_o_3",
+										"comparison": 0,
 										"value": "2"
 									}
-								},
+								}
+							],
+							"actions": [],
+							"sid": 862742512765757,
+							"children": [
 								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 910549753600275,
-									"parameters": {
-										"key": "\"Last_Save\"",
-										"value": "Last_Save"
-									}
-								},
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 695576602701891
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 694989191080263,
+											"parameters": {
+												"variable": "INTRO_pulsa_saltar_intro",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Intro_transicion",
+											"sid": 340555534055691,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "2"
+											}
+										},
+										{
+											"id": "start-fade",
+											"objectClass": "Intro_transicion",
+											"sid": 872293090401165,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 185001229537041,
+											"parameters": {
+												"variable": "INTRO_HECHA_SI_NO_2",
+												"value": "\"SI\""
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 438193999492077,
+											"parameters": {
+												"key": "\"INTRO_HECHA_SI_NO_2\"",
+												"value": "INTRO_HECHA_SI_NO_2"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 270670722810452,
+											"parameters": {
+												"variable": "Nivel_actual_2",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 359434571738814,
+											"parameters": {
+												"key": "\"Nivel_actual_2\"",
+												"value": "Nivel_actual_2"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 645335926874103,
+											"parameters": {
+												"variable": "GEMAS_2",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 242980217872976,
+											"parameters": {
+												"key": "\"GEMAS_2\"",
+												"value": "GEMAS_2"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 997181521905949,
+											"parameters": {
+												"variable": "VIDAS_2",
+												"value": "10"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 318189798202187,
+											"parameters": {
+												"key": "\"VIDAS_2\"",
+												"value": "VIDAS_2"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 634611059730135,
+											"parameters": {
+												"variable": "Last_Save",
+												"value": "2"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 345615431716225,
+											"parameters": {
+												"key": "\"Last_Save\"",
+												"value": "Last_Save"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 396843031148539,
+											"parameters": {
+												"seconds": "2"
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 243770548164128,
+											"parameters": {
+												"layout": "Room_1"
+											}
+										}
+									],
+									"sid": 499296841125180
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
 								{
-									"id": "wait",
+									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 555866173524368,
+									"sid": 380661405511811,
 									"parameters": {
-										"seconds": "2"
-									}
-								},
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 754886035668258,
-									"parameters": {
-										"layout": "Room_1"
+										"variable": "SLOTS_Seleccionado_1_2_o_3",
+										"comparison": 0,
+										"value": "3"
 									}
 								}
 							],
-							"sid": 608671491406397
+							"actions": [],
+							"sid": 317853266440252,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 264779421384651
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 452056177134287,
+											"parameters": {
+												"variable": "INTRO_pulsa_saltar_intro",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Intro_transicion",
+											"sid": 448007772373504,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "2"
+											}
+										},
+										{
+											"id": "start-fade",
+											"objectClass": "Intro_transicion",
+											"sid": 481469803498817,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 974757077826845,
+											"parameters": {
+												"variable": "INTRO_HECHA_SI_NO_3",
+												"value": "\"SI\""
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 525133710964103,
+											"parameters": {
+												"key": "\"INTRO_HECHA_SI_NO_3\"",
+												"value": "INTRO_HECHA_SI_NO_3"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 161068264603619,
+											"parameters": {
+												"variable": "Nivel_actual_3",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 689814421511430,
+											"parameters": {
+												"key": "\"Nivel_actual_3\"",
+												"value": "Nivel_actual_3"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 875475783345526,
+											"parameters": {
+												"variable": "GEMAS_3",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 872724606471166,
+											"parameters": {
+												"key": "\"GEMAS_3\"",
+												"value": "GEMAS_3"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 302580529624180,
+											"parameters": {
+												"variable": "VIDAS_3",
+												"value": "10"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 706439457604761,
+											"parameters": {
+												"key": "\"VIDAS_3\"",
+												"value": "VIDAS_3"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 529690082185511,
+											"parameters": {
+												"variable": "Last_Save",
+												"value": "3"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 762428818464406,
+											"parameters": {
+												"key": "\"Last_Save\"",
+												"value": "Last_Save"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 999622282882739,
+											"parameters": {
+												"seconds": "2"
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 918556531458475,
+											"parameters": {
+												"layout": "Room_1"
+											}
+										}
+									],
+									"sid": 134757278403698
+								}
+							]
 						}
 					]
 				},
@@ -2195,18 +2379,16 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-eventvar",
+							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 447614344734473,
+							"sid": 807865514091973,
 							"parameters": {
-								"variable": "SLOTS_Seleccionado_1_2_o_3",
-								"comparison": 0,
-								"value": "3"
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 748799315329807,
+					"sid": 583829732330873,
 					"children": [
 						{
 							"eventType": "block",
@@ -2214,14 +2396,14 @@
 								{
 									"id": "trigger-once-while-true",
 									"objectClass": "System",
-									"sid": 391876551662691
+									"sid": 559114441294156
 								}
 							],
 							"actions": [
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 371192939245758,
+									"sid": 223999266621403,
 									"parameters": {
 										"variable": "INTRO_pulsa_saltar_intro",
 										"value": "1"
@@ -2230,7 +2412,7 @@
 								{
 									"id": "set-fade-in-time",
 									"objectClass": "Intro_transicion",
-									"sid": 962957630287324,
+									"sid": 267120055227021,
 									"behaviorType": "Fade",
 									"parameters": {
 										"fade-in-time": "2"
@@ -2239,103 +2421,13 @@
 								{
 									"id": "start-fade",
 									"objectClass": "Intro_transicion",
-									"sid": 192158321506707,
+									"sid": 942698473741322,
 									"behaviorType": "Fade"
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 479214360899081,
-									"parameters": {
-										"variable": "INTRO_HECHA_SI_NO_3",
-										"value": "\"SI\""
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 832600625073939,
-									"parameters": {
-										"key": "\"INTRO_HECHA_SI_NO_3\"",
-										"value": "INTRO_HECHA_SI_NO_3"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 996095148645446,
-									"parameters": {
-										"variable": "Nivel_actual_3",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 432582271767328,
-									"parameters": {
-										"key": "\"Nivel_actual_3\"",
-										"value": "Nivel_actual_3"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 107006311325550,
-									"parameters": {
-										"variable": "GEMAS_3",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 866560871736762,
-									"parameters": {
-										"key": "\"GEMAS_3\"",
-										"value": "GEMAS_3"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 944742666364125,
-									"parameters": {
-										"variable": "VIDAS_3",
-										"value": "10"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 959977064562052,
-									"parameters": {
-										"key": "\"VIDAS_3\"",
-										"value": "VIDAS_3"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 259050746432561,
-									"parameters": {
-										"variable": "Last_Save",
-										"value": "3"
-									}
-								},
-								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 494717395434008,
-									"parameters": {
-										"key": "\"Last_Save\"",
-										"value": "Last_Save"
-									}
 								},
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 583195458188162,
+									"sid": 358278900916986,
 									"parameters": {
 										"seconds": "2"
 									}
@@ -2343,13 +2435,13 @@
 								{
 									"id": "go-to-layout",
 									"objectClass": "System",
-									"sid": 856999485186338,
+									"sid": 661911447688732,
 									"parameters": {
 										"layout": "Room_1"
 									}
 								}
 							],
-							"sid": 416414188020271
+							"sid": 118095151206294
 						}
 					]
 				}
@@ -2569,115 +2661,365 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-eventvar",
+											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 599832649733294,
+											"sid": 961916131552294,
 											"parameters": {
-												"variable": "SLOTS_Seleccionado_1_2_o_3",
-												"comparison": 0,
-												"value": "1"
-											}
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [],
-									"sid": 998080715874485,
+									"sid": 709677751800348,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "trigger-once-while-true",
+													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 434437365715338
-												}
-											],
-											"actions": [
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 566357360377238,
+													"sid": 888213104539976,
 													"parameters": {
-														"variable": "INTRO_pulsa_saltar_intro",
+														"variable": "SLOTS_Seleccionado_1_2_o_3",
+														"comparison": 0,
 														"value": "1"
 													}
-												},
+												}
+											],
+											"actions": [],
+											"sid": 851714690575133,
+											"children": [
 												{
-													"id": "set-fade-in-time",
-													"objectClass": "Intro_transicion",
-													"sid": 602635222378759,
-													"behaviorType": "Fade",
-													"parameters": {
-														"fade-in-time": "2"
-													}
-												},
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 803017161538659
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 703889707820813,
+															"parameters": {
+																"variable": "INTRO_pulsa_saltar_intro",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Intro_transicion",
+															"sid": 519708524352936,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "2"
+															}
+														},
+														{
+															"id": "start-fade",
+															"objectClass": "Intro_transicion",
+															"sid": 792557014115131,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 931773958131132,
+															"parameters": {
+																"variable": "INTRO_HECHA_SI_NO_1",
+																"value": "\"SI\""
+															}
+														},
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 172438373010587,
+															"parameters": {
+																"key": "\"INTRO_HECHA_SI_NO_1\"",
+																"value": "INTRO_HECHA_SI_NO_1"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 738588558689420,
+															"parameters": {
+																"variable": "Nivel_actual_1",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 236662633048226,
+															"parameters": {
+																"key": "\"Nivel_actual_1\"",
+																"value": "Nivel_actual_1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 743085833183093,
+															"parameters": {
+																"seconds": "2"
+															}
+														},
+														{
+															"id": "stop",
+															"objectClass": "Audio",
+															"sid": 758562265907591,
+															"parameters": {
+																"tag": "\"Musica_Introduccion\""
+															}
+														},
+														{
+															"id": "go-to-layout",
+															"objectClass": "System",
+															"sid": 169116228997094,
+															"parameters": {
+																"layout": "Room_1"
+															}
+														}
+													],
+													"sid": 721776080601294
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
 												{
-													"id": "start-fade",
-													"objectClass": "Intro_transicion",
-													"sid": 218301697504236,
-													"behaviorType": "Fade"
-												},
-												{
-													"id": "set-eventvar-value",
+													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 340353921412273,
+													"sid": 895339459376056,
 													"parameters": {
-														"variable": "INTRO_HECHA_SI_NO_1",
-														"value": "\"SI\""
-													}
-												},
-												{
-													"id": "set-item",
-													"objectClass": "LocalStorage",
-													"sid": 380518446854174,
-													"parameters": {
-														"key": "\"INTRO_HECHA_SI_NO_1\"",
-														"value": "INTRO_HECHA_SI_NO_1"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 759214348469312,
-													"parameters": {
-														"variable": "Nivel_actual_1",
-														"value": "0"
-													}
-												},
-												{
-													"id": "set-item",
-													"objectClass": "LocalStorage",
-													"sid": 902408355390330,
-													"parameters": {
-														"key": "\"Nivel_actual_1\"",
-														"value": "Nivel_actual_1"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 332064332904790,
-													"parameters": {
-														"seconds": "2"
-													}
-												},
-												{
-													"id": "stop",
-													"objectClass": "Audio",
-													"sid": 557929666993078,
-													"parameters": {
-														"tag": "\"Musica_Introduccion\""
-													}
-												},
-												{
-													"id": "go-to-layout",
-													"objectClass": "System",
-													"sid": 259351266531750,
-													"parameters": {
-														"layout": "Room_1"
+														"variable": "SLOTS_Seleccionado_1_2_o_3",
+														"comparison": 0,
+														"value": "2"
 													}
 												}
 											],
-											"sid": 472123683960196
+											"actions": [],
+											"sid": 171628398534026,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 278907893769673
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 855378882439641,
+															"parameters": {
+																"variable": "INTRO_pulsa_saltar_intro",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Intro_transicion",
+															"sid": 707209728532892,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "2"
+															}
+														},
+														{
+															"id": "start-fade",
+															"objectClass": "Intro_transicion",
+															"sid": 660373646721565,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 372101814034346,
+															"parameters": {
+																"variable": "INTRO_HECHA_SI_NO_2",
+																"value": "\"SI\""
+															}
+														},
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 311235950031816,
+															"parameters": {
+																"key": "\"INTRO_HECHA_SI_NO_2\"",
+																"value": "INTRO_HECHA_SI_NO_2"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 512212232365104,
+															"parameters": {
+																"variable": "Nivel_actual_2",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 770702010023749,
+															"parameters": {
+																"key": "\"Nivel_actual_2\"",
+																"value": "Nivel_actual_2"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 959735226733819,
+															"parameters": {
+																"seconds": "2"
+															}
+														},
+														{
+															"id": "stop",
+															"objectClass": "Audio",
+															"sid": 693589805627999,
+															"parameters": {
+																"tag": "\"Musica_Introduccion\""
+															}
+														},
+														{
+															"id": "go-to-layout",
+															"objectClass": "System",
+															"sid": 136824570290665,
+															"parameters": {
+																"layout": "Room_1"
+															}
+														}
+													],
+													"sid": 978689075500388
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 867611816330987,
+													"parameters": {
+														"variable": "SLOTS_Seleccionado_1_2_o_3",
+														"comparison": 0,
+														"value": "3"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 939721790792745,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 818555330362407
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 137064841635543,
+															"parameters": {
+																"variable": "INTRO_pulsa_saltar_intro",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Intro_transicion",
+															"sid": 502647667093369,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "2"
+															}
+														},
+														{
+															"id": "start-fade",
+															"objectClass": "Intro_transicion",
+															"sid": 109193664321513,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 486698008112069,
+															"parameters": {
+																"variable": "INTRO_HECHA_SI_NO_3",
+																"value": "\"SI\""
+															}
+														},
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 132033269572274,
+															"parameters": {
+																"key": "\"INTRO_HECHA_SI_NO_3\"",
+																"value": "INTRO_HECHA_SI_NO_3"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 355284752417379,
+															"parameters": {
+																"variable": "Nivel_actual_3",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 372527814278312,
+															"parameters": {
+																"key": "\"Nivel_actual_3\"",
+																"value": "Nivel_actual_3"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 335103483475450,
+															"parameters": {
+																"seconds": "2"
+															}
+														},
+														{
+															"id": "stop",
+															"objectClass": "Audio",
+															"sid": 401455738806882,
+															"parameters": {
+																"tag": "\"Musica_Introduccion\""
+															}
+														},
+														{
+															"id": "go-to-layout",
+															"objectClass": "System",
+															"sid": 237056261962818,
+															"parameters": {
+																"layout": "Room_1"
+															}
+														}
+													],
+													"sid": 577376767032431
+												}
+											]
 										}
 									]
 								},
@@ -2685,18 +3027,16 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-eventvar",
+											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 892691978351595,
+											"sid": 501912612155750,
 											"parameters": {
-												"variable": "SLOTS_Seleccionado_1_2_o_3",
-												"comparison": 0,
-												"value": "2"
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
 											}
 										}
 									],
 									"actions": [],
-									"sid": 323217317845339,
+									"sid": 218723691476877,
 									"children": [
 										{
 											"eventType": "block",
@@ -2704,14 +3044,14 @@
 												{
 													"id": "trigger-once-while-true",
 													"objectClass": "System",
-													"sid": 605022878659519
+													"sid": 510066566743259
 												}
 											],
 											"actions": [
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 852352040988814,
+													"sid": 692713337312835,
 													"parameters": {
 														"variable": "INTRO_pulsa_saltar_intro",
 														"value": "1"
@@ -2720,7 +3060,7 @@
 												{
 													"id": "set-fade-in-time",
 													"objectClass": "Intro_transicion",
-													"sid": 442934833545143,
+													"sid": 983198576027078,
 													"behaviorType": "Fade",
 													"parameters": {
 														"fade-in-time": "2"
@@ -2729,49 +3069,13 @@
 												{
 													"id": "start-fade",
 													"objectClass": "Intro_transicion",
-													"sid": 656523323297836,
+													"sid": 552953957577798,
 													"behaviorType": "Fade"
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 986615398021162,
-													"parameters": {
-														"variable": "INTRO_HECHA_SI_NO_2",
-														"value": "\"SI\""
-													}
-												},
-												{
-													"id": "set-item",
-													"objectClass": "LocalStorage",
-													"sid": 453968885598950,
-													"parameters": {
-														"key": "\"INTRO_HECHA_SI_NO_2\"",
-														"value": "INTRO_HECHA_SI_NO_2"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 676221153107391,
-													"parameters": {
-														"variable": "Nivel_actual_2",
-														"value": "0"
-													}
-												},
-												{
-													"id": "set-item",
-													"objectClass": "LocalStorage",
-													"sid": 471086638927446,
-													"parameters": {
-														"key": "\"Nivel_actual_2\"",
-														"value": "Nivel_actual_2"
-													}
 												},
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 720279482904420,
+													"sid": 873421463274319,
 													"parameters": {
 														"seconds": "2"
 													}
@@ -2779,7 +3083,7 @@
 												{
 													"id": "stop",
 													"objectClass": "Audio",
-													"sid": 752202332277245,
+													"sid": 271922900878127,
 													"parameters": {
 														"tag": "\"Musica_Introduccion\""
 													}
@@ -2787,129 +3091,13 @@
 												{
 													"id": "go-to-layout",
 													"objectClass": "System",
-													"sid": 678570165397700,
+													"sid": 793465124291467,
 													"parameters": {
 														"layout": "Room_1"
 													}
 												}
 											],
-											"sid": 817080188882797
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 704809668010879,
-											"parameters": {
-												"variable": "SLOTS_Seleccionado_1_2_o_3",
-												"comparison": 0,
-												"value": "3"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 286439217606708,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "trigger-once-while-true",
-													"objectClass": "System",
-													"sid": 324879465673776
-												}
-											],
-											"actions": [
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 718783634709742,
-													"parameters": {
-														"variable": "INTRO_pulsa_saltar_intro",
-														"value": "1"
-													}
-												},
-												{
-													"id": "set-fade-in-time",
-													"objectClass": "Intro_transicion",
-													"sid": 969401709718785,
-													"behaviorType": "Fade",
-													"parameters": {
-														"fade-in-time": "2"
-													}
-												},
-												{
-													"id": "start-fade",
-													"objectClass": "Intro_transicion",
-													"sid": 724191560887770,
-													"behaviorType": "Fade"
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 699691641205785,
-													"parameters": {
-														"variable": "INTRO_HECHA_SI_NO_3",
-														"value": "\"SI\""
-													}
-												},
-												{
-													"id": "set-item",
-													"objectClass": "LocalStorage",
-													"sid": 706906606619843,
-													"parameters": {
-														"key": "\"INTRO_HECHA_SI_NO_3\"",
-														"value": "INTRO_HECHA_SI_NO_3"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 301884936602318,
-													"parameters": {
-														"variable": "Nivel_actual_3",
-														"value": "0"
-													}
-												},
-												{
-													"id": "set-item",
-													"objectClass": "LocalStorage",
-													"sid": 723293170013580,
-													"parameters": {
-														"key": "\"Nivel_actual_3\"",
-														"value": "Nivel_actual_3"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 161720674416986,
-													"parameters": {
-														"seconds": "2"
-													}
-												},
-												{
-													"id": "stop",
-													"objectClass": "Audio",
-													"sid": 402248354178001,
-													"parameters": {
-														"tag": "\"Musica_Introduccion\""
-													}
-												},
-												{
-													"id": "go-to-layout",
-													"objectClass": "System",
-													"sid": 786530723365848,
-													"parameters": {
-														"layout": "Room_1"
-													}
-												}
-											],
-											"sid": 712255442519649
+											"sid": 591425169697783
 										}
 									]
 								}

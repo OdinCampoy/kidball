@@ -81,6 +81,36 @@
 			"actions": [
 				{
 					"type": "comment",
+					"text": "para la musica del boss por si has muerto y vuelves a jugar que no se solape"
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 480120941275585,
+					"parameters": {
+						"tag": "\"MUSICA_BOSS\""
+					}
+				},
+				{
+					"id": "set-acceleration",
+					"objectClass": "bola",
+					"sid": 464310841959407,
+					"behaviorType": "Platform",
+					"parameters": {
+						"acceleration": "1500"
+					}
+				},
+				{
+					"id": "set-deceleration",
+					"objectClass": "bola",
+					"sid": 598607636981817,
+					"behaviorType": "Platform",
+					"parameters": {
+						"deceleration": "1500"
+					}
+				},
+				{
+					"type": "comment",
 					"text": "COGE EL NUMERO DE NIVEL PARA EL COLOR DE LA BOLA SEGUN EL LAYOUT"
 				},
 				{
@@ -1196,167 +1226,529 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
+									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 775893586237869,
+									"sid": 778093482393468,
 									"parameters": {
-										"variable": "SLOTS_Seleccionado_1_2_o_3",
-										"comparison": 0,
-										"value": "1"
-									}
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 515447138276580,
-									"parameters": {
-										"variable": "VIDAS_1",
-										"comparison": 5,
-										"value": "1"
-									}
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [],
-							"sid": 896800375644672,
+							"sid": 181842437380926,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "trigger-once-while-true",
+											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 411433459962898
-										}
-									],
-									"actions": [
-										{
-											"id": "spawn-another-object",
-											"objectClass": "Inicio_POS",
-											"sid": 733671181602556,
+											"sid": 386172005071111,
 											"parameters": {
-												"object": "bola_aparece_1",
-												"layer": "\"pelota\"",
-												"image-point": "0",
-												"create-hierarchy": false
+												"variable": "SLOTS_Seleccionado_1_2_o_3",
+												"comparison": 0,
+												"value": "1"
 											}
 										},
 										{
-											"id": "set-angle",
-											"objectClass": "bola_aparece_1",
-											"sid": 664372448554463,
-											"parameters": {
-												"angle": "0"
-											}
-										},
-										{
-											"id": "spawn-another-object",
-											"objectClass": "Inicio_POS",
-											"sid": 910500529048769,
-											"parameters": {
-												"object": "bola_aparece_2",
-												"layer": "\"pelota\"",
-												"image-point": "0",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "set-angle",
-											"objectClass": "bola_aparece_2",
-											"sid": 358880608817058,
-											"parameters": {
-												"angle": "90"
-											}
-										},
-										{
-											"id": "spawn-another-object",
-											"objectClass": "Inicio_POS",
-											"sid": 111032982239789,
-											"parameters": {
-												"object": "bola_aparece_3",
-												"layer": "\"pelota\"",
-												"image-point": "0",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "set-angle",
-											"objectClass": "bola_aparece_3",
-											"sid": 323941626309355,
-											"parameters": {
-												"angle": "180"
-											}
-										},
-										{
-											"id": "spawn-another-object",
-											"objectClass": "Inicio_POS",
-											"sid": 982968881251375,
-											"parameters": {
-												"object": "bola_aparece_4",
-												"layer": "\"pelota\"",
-												"image-point": "0",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "set-angle",
-											"objectClass": "bola_aparece_4",
-											"sid": 905812064139758,
-											"parameters": {
-												"angle": "270"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
+											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 786559011998101,
+											"sid": 952681542302182,
 											"parameters": {
-												"variable": "Aparece_bola",
-												"value": "2"
+												"variable": "VIDAS_1",
+												"comparison": 5,
+												"value": "1"
 											}
 										}
 									],
-									"sid": 331110600669352,
+									"actions": [],
+									"sid": 704683616821580,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-eventvar",
+													"id": "trigger-once-while-true",
 													"objectClass": "System",
-													"sid": 411301923096991,
+													"sid": 729381631583441
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 612567613679195,
 													"parameters": {
-														"variable": "FX_sound",
-														"comparison": 0,
-														"value": "1"
+														"object": "bola_aparece_1",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_1",
+													"sid": 737112095991536,
+													"parameters": {
+														"angle": "0"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 997378599247339,
+													"parameters": {
+														"object": "bola_aparece_2",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_2",
+													"sid": 106202447896321,
+													"parameters": {
+														"angle": "90"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 914460930088252,
+													"parameters": {
+														"object": "bola_aparece_3",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_3",
+													"sid": 316591445431820,
+													"parameters": {
+														"angle": "180"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 178692439018409,
+													"parameters": {
+														"object": "bola_aparece_4",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_4",
+													"sid": 861601764044827,
+													"parameters": {
+														"angle": "270"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 168298535890271,
+													"parameters": {
+														"variable": "Aparece_bola",
+														"value": "2"
 													}
 												}
 											],
-											"actions": [],
-											"sid": 689707193548244,
+											"sid": 706932303575040,
 											"children": [
 												{
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "trigger-once-while-true",
+															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 336697876554961
-														}
-													],
-													"actions": [
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 251977395747027,
+															"sid": 340824820331949,
 															"parameters": {
-																"audio-file": "crea_bola_2",
-																"loop": "not-looping",
-																"volume": "VOLUMEN_MASTER_FX",
-																"tag-optional": "\"\""
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
 															}
 														}
 													],
-													"sid": 148934128779811
+													"actions": [],
+													"sid": 852031157606791,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 549089483053709
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 670925069799577,
+																	"parameters": {
+																		"audio-file": "crea_bola_2",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 778423810900024
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 999835652093860,
+											"parameters": {
+												"variable": "SLOTS_Seleccionado_1_2_o_3",
+												"comparison": 0,
+												"value": "2"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 823189504038931,
+											"parameters": {
+												"variable": "VIDAS_2",
+												"comparison": 5,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 188646588402308,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 412338593107696
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 580628565097403,
+													"parameters": {
+														"object": "bola_aparece_1",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_1",
+													"sid": 840729353501821,
+													"parameters": {
+														"angle": "0"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 169880138947042,
+													"parameters": {
+														"object": "bola_aparece_2",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_2",
+													"sid": 526281191464613,
+													"parameters": {
+														"angle": "90"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 370454068521599,
+													"parameters": {
+														"object": "bola_aparece_3",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_3",
+													"sid": 512544688068403,
+													"parameters": {
+														"angle": "180"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 238060288619158,
+													"parameters": {
+														"object": "bola_aparece_4",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_4",
+													"sid": 572020206782513,
+													"parameters": {
+														"angle": "270"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 799183302040209,
+													"parameters": {
+														"variable": "Aparece_bola",
+														"value": "2"
+													}
+												}
+											],
+											"sid": 592983970005177,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 713964474527181,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 745624552210714,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 732924259503208
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 475137987892427,
+																	"parameters": {
+																		"audio-file": "crea_bola_2",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 115655079340799
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 642915065843592,
+											"parameters": {
+												"variable": "SLOTS_Seleccionado_1_2_o_3",
+												"comparison": 0,
+												"value": "3"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 202912457302652,
+											"parameters": {
+												"variable": "VIDAS_3",
+												"comparison": 5,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 986038910790167,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 439706982143183
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 744050534601691,
+													"parameters": {
+														"object": "bola_aparece_1",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_1",
+													"sid": 668658156599926,
+													"parameters": {
+														"angle": "0"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 975343388410106,
+													"parameters": {
+														"object": "bola_aparece_2",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_2",
+													"sid": 753330843929539,
+													"parameters": {
+														"angle": "90"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 165189499275223,
+													"parameters": {
+														"object": "bola_aparece_3",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_3",
+													"sid": 683360497742742,
+													"parameters": {
+														"angle": "180"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inicio_POS",
+													"sid": 646200887062662,
+													"parameters": {
+														"object": "bola_aparece_4",
+														"layer": "\"pelota\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "bola_aparece_4",
+													"sid": 920477014461157,
+													"parameters": {
+														"angle": "270"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 250087633609864,
+													"parameters": {
+														"variable": "Aparece_bola",
+														"value": "2"
+													}
+												}
+											],
+											"sid": 699186771427449,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 957388047872637,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 977728267483653,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 698242929784160
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 780331674507887,
+																	"parameters": {
+																		"audio-file": "crea_bola_2",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 990861908198303
+														}
+													]
 												}
 											]
 										}
@@ -1368,28 +1760,16 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
+									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 690931393923126,
+									"sid": 266667593850107,
 									"parameters": {
-										"variable": "SLOTS_Seleccionado_1_2_o_3",
-										"comparison": 0,
-										"value": "2"
-									}
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 395117579659280,
-									"parameters": {
-										"variable": "VIDAS_2",
-										"comparison": 5,
-										"value": "1"
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
 									}
 								}
 							],
 							"actions": [],
-							"sid": 723835942454133,
+							"sid": 153345517324964,
 							"children": [
 								{
 									"eventType": "block",
@@ -1397,14 +1777,14 @@
 										{
 											"id": "trigger-once-while-true",
 											"objectClass": "System",
-											"sid": 147180594848344
+											"sid": 265624862687035
 										}
 									],
 									"actions": [
 										{
 											"id": "spawn-another-object",
 											"objectClass": "Inicio_POS",
-											"sid": 486522512357191,
+											"sid": 957461200889679,
 											"parameters": {
 												"object": "bola_aparece_1",
 												"layer": "\"pelota\"",
@@ -1415,7 +1795,7 @@
 										{
 											"id": "set-angle",
 											"objectClass": "bola_aparece_1",
-											"sid": 114977257480404,
+											"sid": 566382706173898,
 											"parameters": {
 												"angle": "0"
 											}
@@ -1423,7 +1803,7 @@
 										{
 											"id": "spawn-another-object",
 											"objectClass": "Inicio_POS",
-											"sid": 845225544095730,
+											"sid": 513480294225742,
 											"parameters": {
 												"object": "bola_aparece_2",
 												"layer": "\"pelota\"",
@@ -1434,7 +1814,7 @@
 										{
 											"id": "set-angle",
 											"objectClass": "bola_aparece_2",
-											"sid": 710645697095154,
+											"sid": 276363878580343,
 											"parameters": {
 												"angle": "90"
 											}
@@ -1442,7 +1822,7 @@
 										{
 											"id": "spawn-another-object",
 											"objectClass": "Inicio_POS",
-											"sid": 206943830789078,
+											"sid": 580172100486823,
 											"parameters": {
 												"object": "bola_aparece_3",
 												"layer": "\"pelota\"",
@@ -1453,7 +1833,7 @@
 										{
 											"id": "set-angle",
 											"objectClass": "bola_aparece_3",
-											"sid": 428507411619152,
+											"sid": 884964908124189,
 											"parameters": {
 												"angle": "180"
 											}
@@ -1461,7 +1841,7 @@
 										{
 											"id": "spawn-another-object",
 											"objectClass": "Inicio_POS",
-											"sid": 427611116801110,
+											"sid": 443230600801443,
 											"parameters": {
 												"object": "bola_aparece_4",
 												"layer": "\"pelota\"",
@@ -1472,7 +1852,7 @@
 										{
 											"id": "set-angle",
 											"objectClass": "bola_aparece_4",
-											"sid": 282109873742225,
+											"sid": 677311980004534,
 											"parameters": {
 												"angle": "270"
 											}
@@ -1480,231 +1860,14 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 269067287384456,
+											"sid": 725361358961439,
 											"parameters": {
 												"variable": "Aparece_bola",
 												"value": "2"
 											}
 										}
 									],
-									"sid": 738804335459748,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 628008830208872,
-													"parameters": {
-														"variable": "FX_sound",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 267822952070926,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "trigger-once-while-true",
-															"objectClass": "System",
-															"sid": 512632791712676
-														}
-													],
-													"actions": [
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 118714453430002,
-															"parameters": {
-																"audio-file": "crea_bola_2",
-																"loop": "not-looping",
-																"volume": "VOLUMEN_MASTER_FX",
-																"tag-optional": "\"\""
-															}
-														}
-													],
-													"sid": 225175877366555
-												}
-											]
-										}
-									]
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 993864081836595,
-									"parameters": {
-										"variable": "SLOTS_Seleccionado_1_2_o_3",
-										"comparison": 0,
-										"value": "3"
-									}
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 742044014219872,
-									"parameters": {
-										"variable": "VIDAS_3",
-										"comparison": 5,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 296350551724789,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 925050444202099
-										}
-									],
-									"actions": [
-										{
-											"id": "spawn-another-object",
-											"objectClass": "Inicio_POS",
-											"sid": 688746566899191,
-											"parameters": {
-												"object": "bola_aparece_1",
-												"layer": "\"pelota\"",
-												"image-point": "0",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "set-angle",
-											"objectClass": "bola_aparece_1",
-											"sid": 460908071090688,
-											"parameters": {
-												"angle": "0"
-											}
-										},
-										{
-											"id": "spawn-another-object",
-											"objectClass": "Inicio_POS",
-											"sid": 528383264266976,
-											"parameters": {
-												"object": "bola_aparece_2",
-												"layer": "\"pelota\"",
-												"image-point": "0",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "set-angle",
-											"objectClass": "bola_aparece_2",
-											"sid": 188930558250980,
-											"parameters": {
-												"angle": "90"
-											}
-										},
-										{
-											"id": "spawn-another-object",
-											"objectClass": "Inicio_POS",
-											"sid": 266696438608698,
-											"parameters": {
-												"object": "bola_aparece_3",
-												"layer": "\"pelota\"",
-												"image-point": "0",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "set-angle",
-											"objectClass": "bola_aparece_3",
-											"sid": 539444063619420,
-											"parameters": {
-												"angle": "180"
-											}
-										},
-										{
-											"id": "spawn-another-object",
-											"objectClass": "Inicio_POS",
-											"sid": 438027332440073,
-											"parameters": {
-												"object": "bola_aparece_4",
-												"layer": "\"pelota\"",
-												"image-point": "0",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "set-angle",
-											"objectClass": "bola_aparece_4",
-											"sid": 860116377537394,
-											"parameters": {
-												"angle": "270"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 425369808025756,
-											"parameters": {
-												"variable": "Aparece_bola",
-												"value": "2"
-											}
-										}
-									],
-									"sid": 722622909828739,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 395302780129194,
-													"parameters": {
-														"variable": "FX_sound",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 114472361540061,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "trigger-once-while-true",
-															"objectClass": "System",
-															"sid": 109726234132670
-														}
-													],
-													"actions": [
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 337149020756867,
-															"parameters": {
-																"audio-file": "crea_bola_2",
-																"loop": "not-looping",
-																"volume": "VOLUMEN_MASTER_FX",
-																"tag-optional": "\"\""
-															}
-														}
-													],
-													"sid": 751797270721004
-												}
-											]
-										}
-									]
+									"sid": 845659230728003
 								}
 							]
 						}
@@ -1873,6 +2036,24 @@
 													"disabled": true,
 													"parameters": {
 														"seconds": "0.1"
+													}
+												},
+												{
+													"id": "set-acceleration",
+													"objectClass": "bola",
+													"sid": 448100069124722,
+													"behaviorType": "Platform",
+													"parameters": {
+														"acceleration": "1500"
+													}
+												},
+												{
+													"id": "set-deceleration",
+													"objectClass": "bola",
+													"sid": 352874790172016,
+													"behaviorType": "Platform",
+													"parameters": {
+														"deceleration": "1500"
 													}
 												},
 												{
@@ -2123,6 +2304,24 @@
 													"disabled": true,
 													"parameters": {
 														"seconds": "0.1"
+													}
+												},
+												{
+													"id": "set-acceleration",
+													"objectClass": "bola",
+													"sid": 811794022500521,
+													"behaviorType": "Platform",
+													"parameters": {
+														"acceleration": "1500"
+													}
+												},
+												{
+													"id": "set-deceleration",
+													"objectClass": "bola",
+													"sid": 768942922903970,
+													"behaviorType": "Platform",
+													"parameters": {
+														"deceleration": "1500"
 													}
 												},
 												{
@@ -12188,22 +12387,6 @@
 									}
 								},
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 220337369667543,
-									"parameters": {
-										"key": 32
-									}
-								},
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 751211186870172,
-									"parameters": {
-										"key": 13
-									}
-								},
-								{
 									"id": "on-touched-object",
 									"objectClass": "Touch",
 									"sid": 514450648111459,
@@ -12333,9 +12516,9 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 730516760606106,
+									"sid": 626183683350762,
 									"parameters": {
-										"key": 66
+										"key": 83
 									}
 								}
 							],
@@ -12466,6 +12649,72 @@
 														"x": "431",
 														"y": "240",
 														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 129804558968170,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_1\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 363534553841300,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_2\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 604836861955352,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_3\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 682830581569938,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_4\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 902742824651606,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_5\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 689217515036658,
+													"parameters": {
+														"tag": "\"MUSICA_BOSS\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
 													}
 												},
 												{
@@ -12661,6 +12910,72 @@
 													}
 												},
 												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 613167952898298,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_1\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 663714120896461,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_2\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 590087866286497,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_3\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 479591007240354,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_4\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 576962108802115,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_5\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 181428632348980,
+													"parameters": {
+														"tag": "\"MUSICA_BOSS\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
 													"id": "wait",
 													"objectClass": "System",
 													"sid": 257795167805467,
@@ -12850,6 +13165,72 @@
 														"x": "431",
 														"y": "240",
 														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 868674061923336,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_1\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 782413742976394,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_2\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 415593157770926,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_3\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 868842680568990,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_4\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 539300923609545,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_5\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
+													}
+												},
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 639555958243663,
+													"parameters": {
+														"tag": "\"MUSICA_BOSS\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
 													}
 												},
 												{
@@ -13065,6 +13446,60 @@
 													"sid": 564680724286309,
 													"parameters": {
 														"seconds": "1"
+													}
+												},
+												{
+													"id": "stop",
+													"objectClass": "Audio",
+													"sid": 962712263193630,
+													"disabled": true,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_1\""
+													}
+												},
+												{
+													"id": "stop",
+													"objectClass": "Audio",
+													"sid": 723103767617274,
+													"disabled": true,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_2\""
+													}
+												},
+												{
+													"id": "stop",
+													"objectClass": "Audio",
+													"sid": 686333709971809,
+													"disabled": true,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_3\""
+													}
+												},
+												{
+													"id": "stop",
+													"objectClass": "Audio",
+													"sid": 387668359624975,
+													"disabled": true,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_4\""
+													}
+												},
+												{
+													"id": "stop",
+													"objectClass": "Audio",
+													"sid": 103946022972305,
+													"disabled": true,
+													"parameters": {
+														"tag": "\"MUSICA_bioma_5\""
+													}
+												},
+												{
+													"id": "stop",
+													"objectClass": "Audio",
+													"sid": 431325723003720,
+													"disabled": true,
+													"parameters": {
+														"tag": "\"MUSICA_BOSS\""
 													}
 												},
 												{
@@ -14394,6 +14829,14 @@
 													"id": "set-text",
 													"objectClass": "Gema_Currency_TXT",
 													"sid": 269554846916151,
+													"parameters": {
+														"text": "Gemas_Speedrun"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "Gema_Currency_TXT_shadow",
+													"sid": 602376237518606,
 													"parameters": {
 														"text": "Gemas_Speedrun"
 													}
@@ -16795,6 +17238,223 @@
 				}
 			],
 			"sid": 448984249050938
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "TRANSICION CASTILLOS REGULA TAMANYO DE BOLA",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "JUEGO - tamanyo bolas en castillo transicion",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 466156264156097,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 697273527717103,
+									"parameters": {
+										"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+										"comparison": 0,
+										"value": "\"ROJA\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 827498657452023,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 367958626073864
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "bola",
+											"sid": 787722391885028,
+											"parameters": {
+												"animation": "\"DERECHA_4\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "bola",
+											"sid": 281652659275309,
+											"parameters": {
+												"object": "bola_estela_roja",
+												"layer": "Self.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "bola_estela_roja",
+											"sid": 894186540440530,
+											"parameters": {
+												"where": "behind",
+												"object": "bola"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "bola_estela_roja",
+											"sid": 338319825525910,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "bola",
+												"x": true,
+												"y": true,
+												"angle": false,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "bola",
+											"sid": 494433321901262,
+											"parameters": {
+												"frame-number": "3"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "bola",
+											"sid": 209747718903403,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 735778261699152
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 152198230222688,
+									"parameters": {
+										"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+										"comparison": 0,
+										"value": "\"ROSA\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 154961334593110,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 864955589065423
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "bola",
+											"sid": 725529252395434,
+											"parameters": {
+												"animation": "\"derecha_rosa\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "bola",
+											"sid": 610088850184376,
+											"parameters": {
+												"width": "29",
+												"height": "29"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "bola",
+											"sid": 393496795692457,
+											"parameters": {
+												"object": "bola_estela_rosa",
+												"layer": "Self.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "bola_estela_rosa",
+											"sid": 495828342763444,
+											"parameters": {
+												"where": "behind",
+												"object": "bola"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "bola_estela_rosa",
+											"sid": 287332070263441,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "bola",
+												"x": true,
+												"y": true,
+												"angle": false,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "bola",
+											"sid": 246592076788505,
+											"parameters": {
+												"frame-number": "3"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "bola",
+											"sid": 505041226288886,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 469595465038760
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 492483983117643
 		}
 	],
 	"sid": 557857670598510

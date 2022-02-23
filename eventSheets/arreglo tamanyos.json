@@ -12,15 +12,6 @@
 			],
 			"actions": [
 				{
-					"id": "set-object-time-scale",
-					"objectClass": "System",
-					"sid": 519116435851348,
-					"parameters": {
-						"object": "bola",
-						"time-scale": "0.98"
-					}
-				},
-				{
 					"id": "set-size",
 					"objectClass": "torchFire",
 					"sid": 757417164057601,
@@ -166,6 +157,142 @@
 						}
 					],
 					"sid": 920651330716523
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 826069581676956,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-object-time-scale",
+							"objectClass": "System",
+							"sid": 986120549331557,
+							"parameters": {
+								"object": "bola",
+								"time-scale": "BOLA_time_scale"
+							}
+						}
+					],
+					"sid": 609126555845107
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 165652603989240,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 813923533374221,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 292261670163851,
+									"parameters": {
+										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+										"comparison": 0,
+										"value": "\"DOOM\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "guardamos la velocidad en esta  variable"
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 484253232243718,
+									"parameters": {
+										"object": "bola",
+										"time-scale": "BOLA_time_scale+0.25"
+									}
+								}
+							],
+							"sid": 980346701351854
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 110098781400034,
+									"parameters": {
+										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+										"comparison": 0,
+										"value": "\"DEATH\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "guardamos la velocidad en esta  variable"
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 675296780959537,
+									"parameters": {
+										"object": "bola",
+										"time-scale": "BOLA_time_scale"
+									}
+								}
+							],
+							"sid": 221238641387304
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 631167788222754,
+									"parameters": {
+										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+										"comparison": 0,
+										"value": "\"TIME\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "guardamos la velocidad en esta  variable"
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 546464679390397,
+									"parameters": {
+										"object": "bola",
+										"time-scale": "BOLA_time_scale"
+									}
+								}
+							],
+							"sid": 255721349097738
+						}
+					]
 				}
 			]
 		}

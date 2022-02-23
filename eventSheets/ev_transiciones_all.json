@@ -56,6 +56,10 @@
 					}
 				},
 				{
+					"callFunction": "JUEGO - tamanyo bolas en castillo transicion",
+					"sid": 861238607913853
+				},
+				{
 					"id": "set-animation",
 					"objectClass": "bola",
 					"sid": 809251425067847,
@@ -149,6 +153,44 @@
 					"parameters": {
 						"variable": "OPCIONES_MUERTE",
 						"value": "0"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Saving_Game_Icon",
+					"sid": 173235703462255,
+					"parameters": {
+						"width": "33",
+						"height": "36"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Saving_Game_Icon",
+					"sid": 994994400177076,
+					"parameters": {
+						"x": "820",
+						"y": "452"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 241552452906092,
+					"parameters": {
+						"object-to-create": "Saving_Game_TXT",
+						"layer": "\"VIDAS\"",
+						"x": "555",
+						"y": "446",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Saving_Game_TXT",
+					"sid": 197147282995570,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,86)\n"
 					}
 				}
 			],
@@ -1219,11 +1261,35 @@
 							}
 						},
 						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 511840348319577,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "FX_sound=1? \"Transicion_Sonido\":\"nada\"",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 459005055766372,
+							"parameters": {
+								"object-to-create": "Transicion_Animacion",
+								"layer": "\"salida\"",
+								"x": "431",
+								"y": "240",
+								"create-hierarchy": false
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 573024599654147,
+							"sid": 530462912246033,
 							"parameters": {
-								"seconds": "1.0"
+								"seconds": "wait_transition"
 							}
 						},
 						{

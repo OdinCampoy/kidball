@@ -664,6 +664,7 @@
 					"instanceVariables": {
 						"direccion": 0,
 						"velocidad": 200,
+						"activa_TOPES": false,
 						"IZQ_tope": 0,
 						"DER_tope": 0
 					},
@@ -815,7 +816,7 @@
 					"type": "enemy_VOLADOR",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "Mundo_1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -824,6 +825,7 @@
 					"instanceVariables": {
 						"direccion": 1,
 						"velocidad": 3,
+						"activa_TOPES": false,
 						"IZQ_tope": 0,
 						"DER_tope": 0
 					},
@@ -915,7 +917,12 @@
 					"uid": 1008,
 					"instanceVariables": {
 						"velocidad": 0,
-						"direccion": 0
+						"direccion": 0,
+						"activa_TOPES": false,
+						"IZQ_tope": 0,
+						"DER_tope": 0,
+						"UP_tope": 0,
+						"DOWN_tope": 0
 					},
 					"behaviors": {
 						"Rotate": {
@@ -1177,7 +1184,10 @@
 					"uid": 1359,
 					"instanceVariables": {
 						"direccion": 0,
-						"time_scale": 0
+						"time_scale": 0,
+						"activa_TOPES": false,
+						"IZQ_tope": 0,
+						"DER_tope": 0
 					},
 					"behaviors": {
 						"Platform": {
@@ -2107,11 +2117,7 @@
 						"OPACIDAD_INICIAL": 0,
 						"SE_CAE_ABAJO": 0
 					},
-					"behaviors": {
-						"Persist": {
-							"properties": {}
-						}
-					},
+					"behaviors": {},
 					"world": {
 						"x": 1001,
 						"y": 83,
@@ -2992,15 +2998,15 @@
 					"world": {
 						"x": 436.40086854743026,
 						"y": 166.80219459294472,
-						"width": 75.98571355677691,
-						"height": 75.98571355677691,
+						"width": 67.67477613650443,
+						"height": 77.17299033110156,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
 							1,
 							1,
-							0.4
+							0.8
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -4651,9 +4657,9 @@
 					"world": {
 						"x": 117,
 						"y": -311,
-						"width": 30.16,
+						"width": 36.4,
 						"height": 30.16,
-						"originX": 0.5,
+						"originX": 0.5714285714285714,
 						"originY": 0.5,
 						"color": [
 							1,
