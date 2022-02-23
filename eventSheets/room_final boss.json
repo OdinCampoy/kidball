@@ -418,6 +418,37 @@
 			"sid": 870922073547144
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "RESPLANDOR",
+					"sid": 740084608156140
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 477225383133389,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "RESPLANDOR",
+					"sid": 658520638023764,
+					"parameters": {
+						"y": "Self.Y-15"
+					}
+				}
+			],
+			"sid": 999486638621434
+		},
+		{
 			"eventType": "comment",
 			"text": "**********************************************************************************************"
 		},
@@ -5678,10 +5709,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "llave",
-									"sid": 599561333527142,
+									"sid": 701047998472697,
 									"parameters": {
-										"x": "454",
-										"y": "360"
+										"x": "438",
+										"y": "350"
 									}
 								},
 								{
@@ -5815,10 +5846,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "llave",
-									"sid": 660095873901328,
+									"sid": 315659922810486,
 									"parameters": {
-										"x": "454",
-										"y": "360"
+										"x": "438",
+										"y": "350"
 									}
 								},
 								{

@@ -3389,7 +3389,70 @@
 							}
 						}
 					],
-					"sid": 529630495078311
+					"sid": 529630495078311,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 461826802840935,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 800199327993004,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 651502914639010,
+											"parameters": {
+												"tag": "\"lanza_bola_fuego\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 865055876349329,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 712861004312161
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 883641466889579,
+													"parameters": {
+														"audio-file": "lanza_bola_fuego",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"lanza_bola_fuego\""
+													}
+												}
+											],
+											"sid": 160321000902529
+										}
+									]
+								}
+							]
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -3446,6 +3509,69 @@
 						}
 					],
 					"sid": 264753341910276,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 789628105847886,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 539808692234674,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 233321174922668,
+											"parameters": {
+												"tag": "\"fuego_impacto\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 876908565274515,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 132630990314791
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 279087081188275,
+													"parameters": {
+														"audio-file": "fuego_impacto",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"fuego_impacto\""
+													}
+												}
+											],
+											"sid": 842825399841531
+										}
+									]
+								}
+							]
+						}
+					],
 					"isOrBlock": true
 				},
 				{
@@ -3475,6 +3601,19 @@
 								"layer": "Self.LayerName",
 								"image-point": "0",
 								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 904392403453193,
+							"disabled": true,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "FX_sound=1? \"lanza_bola_fuego\":\"\"",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -3513,7 +3652,70 @@
 							}
 						}
 					],
-					"sid": 809329071033600
+					"sid": 809329071033600,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 972732427496594,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 696274577724658,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 889538486170750,
+											"parameters": {
+												"tag": "\"lanza_bola_fuego\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 196543354558926,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 365504397558844
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 789885926967515,
+													"parameters": {
+														"audio-file": "lanza_bola_fuego",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"lanza_bola_fuego\""
+													}
+												}
+											],
+											"sid": 963774266289733
+										}
+									]
+								}
+							]
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -3534,6 +3736,19 @@
 							"sid": 650959345185113,
 							"parameters": {
 								"collisions": "disabled"
+							}
+						},
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 526891912617178,
+							"disabled": true,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "FX_sound=1? \"fuego_impacto\":\"\"",
+								"loop": "not-looping",
+								"volume": "VOLUMEN_MASTER_FX",
+								"tag-optional": "\"fuego_impacto\""
 							}
 						},
 						{
@@ -3561,7 +3776,70 @@
 							"sid": 557891067787380
 						}
 					],
-					"sid": 383128280809379
+					"sid": 383128280809379,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 920883661022555,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 226150454494547,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 318462958377721,
+											"parameters": {
+												"tag": "\"fuego_impacto\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 353185846674124,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 468963762203069
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 154040602969899,
+													"parameters": {
+														"audio-file": "fuego_impacto",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"fuego_impacto\""
+													}
+												}
+											],
+											"sid": 677161004554512
+										}
+									]
+								}
+							]
+						}
+					]
 				},
 				{
 					"eventType": "comment",
@@ -3637,7 +3915,70 @@
 							}
 						}
 					],
-					"sid": 360403127774765
+					"sid": 360403127774765,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 998438499332072,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 781239270750644,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 806786861372455,
+											"parameters": {
+												"tag": "\"lanza_bola_fuego\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 703792026079443,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 436850599819410
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 717931193434902,
+													"parameters": {
+														"audio-file": "lanza_bola_fuego",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"lanza_bola_fuego\""
+													}
+												}
+											],
+											"sid": 291763373123151
+										}
+									]
+								}
+							]
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -3703,6 +4044,72 @@
 						}
 					],
 					"sid": 488299492159387,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 604779594295116,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 248572779504835,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 926081916347904,
+											"parameters": {
+												"tag": "\"fuego_impacto\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 112092407002610,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 135355527433646
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 984062896739799,
+													"parameters": {
+														"audio-file": "fuego_impacto",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"fuego_impacto\""
+													}
+												}
+											],
+											"sid": 682217010396667,
+											"disabled": true
+										}
+									]
+								}
+							]
+						}
+					],
 					"isOrBlock": true
 				},
 				{
