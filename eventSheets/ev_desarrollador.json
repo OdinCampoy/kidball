@@ -203,6 +203,54 @@
 						{
 							"id": "key-is-down",
 							"objectClass": "Keyboard",
+							"sid": 813381719326961,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 534513184442373,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 192481669582729
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 326111525830472,
+							"parameters": {
+								"key": 82
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 887351741684870,
+							"parameters": {
+								"layout": "FINAL_JUEGO"
+							}
+						}
+					],
+					"sid": 660150214216099
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
 							"sid": 970868790316556,
 							"parameters": {
 								"key": 48
