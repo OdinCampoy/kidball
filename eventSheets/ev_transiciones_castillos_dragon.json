@@ -93,6 +93,44 @@
 					}
 				},
 				{
+					"id": "set-size",
+					"objectClass": "Saving_Game_Icon",
+					"sid": 175476617555762,
+					"parameters": {
+						"width": "33",
+						"height": "36"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Saving_Game_Icon",
+					"sid": 608903529772726,
+					"parameters": {
+						"x": "820",
+						"y": "452"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 844723896988238,
+					"parameters": {
+						"object-to-create": "Saving_Game_TXT",
+						"layer": "\"VIDAS\"",
+						"x": "555",
+						"y": "446",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Saving_Game_TXT",
+					"sid": 542824799140174,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,86)\n"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 428516695961372,
@@ -409,6 +447,36 @@
 					"sid": 606221863312380
 				}
 			]
+		},
+		{
+			"eventType": "comment",
+			"text": "BORRA EL DISCO Y LA PALABRA SAVING AL SER EL MODO SPEEDRUN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 934854515370647,
+					"parameters": {
+						"variable": "SPEEDRUN_mode_TRUE_FALSE"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Saving_Game_Icon",
+					"sid": 714919838604928
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Saving_Game_TXT",
+					"sid": 694345525224076
+				}
+			],
+			"sid": 156732118814701
 		},
 		{
 			"eventType": "comment",

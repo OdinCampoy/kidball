@@ -61,7 +61,90 @@
 					}
 				}
 			],
-			"sid": 817163949093729
+			"sid": 817163949093729,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 313878861625199,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "Saving_Game_Icon",
+							"sid": 682667041194200,
+							"parameters": {
+								"width": "33",
+								"height": "36"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Saving_Game_Icon",
+							"sid": 395728574493216,
+							"parameters": {
+								"x": "820",
+								"y": "452"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 756445752173060,
+							"parameters": {
+								"object-to-create": "Saving_Game_TXT",
+								"layer": "\"VIDAS\"",
+								"x": "555",
+								"y": "446",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Saving_Game_TXT",
+							"sid": 612862378687900,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,86)\n"
+							}
+						}
+					],
+					"sid": 270783832868725
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 799866407135781,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Saving_Game_Icon",
+							"sid": 819699726069282
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Saving_Game_TXT",
+							"sid": 702172357666345
+						}
+					],
+					"sid": 876599539473028
+				}
+			]
 		},
 		{
 			"eventType": "block",

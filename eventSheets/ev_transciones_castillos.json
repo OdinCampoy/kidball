@@ -551,6 +551,36 @@
 		},
 		{
 			"eventType": "comment",
+			"text": "BORRA EL DISCO Y LA PALABRA SAVING AL SER EL MODO SPEEDRUN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 271145901658176,
+					"parameters": {
+						"variable": "SPEEDRUN_mode_TRUE_FALSE"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Saving_Game_Icon",
+					"sid": 856585570795193
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Saving_Game_TXT",
+					"sid": 474407278257081
+				}
+			],
+			"sid": 171507381169569
+		},
+		{
+			"eventType": "comment",
 			"text": "********************************************************************"
 		},
 		{
