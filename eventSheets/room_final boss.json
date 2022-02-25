@@ -126,6 +126,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 542572823222485,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"value": "5"
+					}
+				},
+				{
 					"id": "stop-all",
 					"objectClass": "Audio",
 					"sid": 185989038724142
@@ -360,15 +369,6 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 618366391354549,
-					"parameters": {
-						"variable": "VIDA_FINAL_BOSS",
-						"value": "5"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
 					"sid": 909938299103990,
 					"parameters": {
 						"variable": "TIRA_PINCHOS",
@@ -428,11 +428,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 477225383133389,
+					"sid": 674511483633550,
 					"parameters": {
 						"variable": "PASOS_FINAL_BOSS",
 						"comparison": 0,
-						"value": "0"
+						"value": "-2"
 					}
 				}
 			],

@@ -69,7 +69,7 @@
 			"eventType": "variable",
 			"name": "SonidoFX_Volumen_Master",
 			"type": "number",
-			"initialValue": "10",
+			"initialValue": "8",
 			"comment": "Volumen de los FX",
 			"isStatic": false,
 			"isConstant": false,
@@ -89,7 +89,7 @@
 			"eventType": "variable",
 			"name": "Musica_Volumen_Master",
 			"type": "number",
-			"initialValue": "10",
+			"initialValue": "8",
 			"comment": "Volumen de la musica",
 			"isStatic": false,
 			"isConstant": false,
@@ -1343,6 +1343,20 @@
 					],
 					"actions": [
 						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 456497635501273
+						},
+						{
+							"callFunction": "VOLUMEN MASTER MUSICA",
+							"sid": 705128924455064
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 719594573704128
+						},
+						{
 							"id": "play",
 							"objectClass": "Audio",
 							"sid": 503235201066785,
@@ -1352,6 +1366,10 @@
 								"volume": "VOLUMEN_MASTER_MUSIC",
 								"tag-optional": "\"Musica_portada\"\r\n"
 							}
+						},
+						{
+							"callFunction": "VOLUMEN MASTER MUSICA",
+							"sid": 230185968736213
 						}
 					],
 					"sid": 331093466839290
@@ -7099,6 +7117,64 @@
 										}
 									],
 									"sid": 476065061660438
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 181290510478372,
+									"parameters": {
+										"tag": "\"Musica_portada\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 259585810511256,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 728259103490050
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 343466648160421,
+											"parameters": {
+												"variable": "MUSIC_sound",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 275815992876370,
+											"parameters": {
+												"variable": "VOLUMEN_MASTER_MUSIC",
+												"value": "-35+(Musica_Volumen_Master*5)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 919063127581490,
+											"parameters": {
+												"tag": "\"Musica_portada\"",
+												"db": "VOLUMEN_MASTER_MUSIC"
+											}
+										}
+									],
+									"sid": 863462249526159
 								}
 							]
 						},

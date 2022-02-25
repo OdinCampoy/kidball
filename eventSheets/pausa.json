@@ -625,6 +625,7 @@
 													"id": "set-paused",
 													"objectClass": "Audio",
 													"sid": 250019998032892,
+													"disabled": true,
 													"parameters": {
 														"tag": "\"Musica_Introduccion\"",
 														"state": "pause"
@@ -634,6 +635,7 @@
 													"id": "set-paused",
 													"objectClass": "Audio",
 													"sid": 294714058077859,
+													"disabled": true,
 													"parameters": {
 														"tag": "\"MUSICA_PORTADA\"",
 														"state": "pause"
@@ -643,6 +645,7 @@
 													"id": "set-paused",
 													"objectClass": "Audio",
 													"sid": 448712189295696,
+													"disabled": true,
 													"parameters": {
 														"tag": "\"MUSICA_bioma_1\"",
 														"state": "pause"
@@ -652,6 +655,7 @@
 													"id": "set-paused",
 													"objectClass": "Audio",
 													"sid": 967053533489374,
+													"disabled": true,
 													"parameters": {
 														"tag": "\"MUSICA_bioma_2\"",
 														"state": "pause"
@@ -661,6 +665,7 @@
 													"id": "set-paused",
 													"objectClass": "Audio",
 													"sid": 670932867117338,
+													"disabled": true,
 													"parameters": {
 														"tag": "\"MUSICA_bioma_3\"",
 														"state": "pause"
@@ -670,6 +675,7 @@
 													"id": "set-paused",
 													"objectClass": "Audio",
 													"sid": 359663321616687,
+													"disabled": true,
 													"parameters": {
 														"tag": "\"MUSICA_bioma_4\"",
 														"state": "pause"
@@ -679,6 +685,7 @@
 													"id": "set-paused",
 													"objectClass": "Audio",
 													"sid": 662078700846280,
+													"disabled": true,
 													"parameters": {
 														"tag": "\"MUSICA_bioma_5\"",
 														"state": "pause"
@@ -688,6 +695,7 @@
 													"id": "set-paused",
 													"objectClass": "Audio",
 													"sid": 450538014277035,
+													"disabled": true,
 													"parameters": {
 														"tag": "\"MUSICA_BOSS\"",
 														"state": "pause"
@@ -697,6 +705,7 @@
 													"id": "set-paused",
 													"objectClass": "Audio",
 													"sid": 804665808339362,
+													"disabled": true,
 													"parameters": {
 														"tag": "\"FINAL_BOLA_ROJA\"",
 														"state": "pause"
@@ -706,6 +715,7 @@
 													"id": "set-paused",
 													"objectClass": "Audio",
 													"sid": 179963240195300,
+													"disabled": true,
 													"parameters": {
 														"tag": "\"FINAL_BOLA_ROSA\"",
 														"state": "pause"
@@ -2171,6 +2181,7 @@
 															"id": "set-paused",
 															"objectClass": "Audio",
 															"sid": 279243625929388,
+															"disabled": true,
 															"parameters": {
 																"tag": "\"Musica_Introduccion\"",
 																"state": "resume"
@@ -2180,6 +2191,7 @@
 															"id": "set-paused",
 															"objectClass": "Audio",
 															"sid": 927057086389661,
+															"disabled": true,
 															"parameters": {
 																"tag": "\"MUSICA_PORTADA\"",
 																"state": "resume"
@@ -2189,6 +2201,7 @@
 															"id": "set-paused",
 															"objectClass": "Audio",
 															"sid": 562993203040907,
+															"disabled": true,
 															"parameters": {
 																"tag": "\"MUSICA_bioma_1\"",
 																"state": "resume"
@@ -2198,6 +2211,7 @@
 															"id": "set-paused",
 															"objectClass": "Audio",
 															"sid": 426146429695872,
+															"disabled": true,
 															"parameters": {
 																"tag": "\"MUSICA_bioma_2\"",
 																"state": "resume"
@@ -2207,6 +2221,7 @@
 															"id": "set-paused",
 															"objectClass": "Audio",
 															"sid": 322007493514708,
+															"disabled": true,
 															"parameters": {
 																"tag": "\"MUSICA_bioma_3\"",
 																"state": "resume"
@@ -2216,6 +2231,7 @@
 															"id": "set-paused",
 															"objectClass": "Audio",
 															"sid": 726631713661995,
+															"disabled": true,
 															"parameters": {
 																"tag": "\"MUSICA_bioma_4\"",
 																"state": "resume"
@@ -2225,6 +2241,7 @@
 															"id": "set-paused",
 															"objectClass": "Audio",
 															"sid": 712862359453147,
+															"disabled": true,
 															"parameters": {
 																"tag": "\"MUSICA_bioma_5\"",
 																"state": "resume"
@@ -2234,6 +2251,7 @@
 															"id": "set-paused",
 															"objectClass": "Audio",
 															"sid": 244859210290648,
+															"disabled": true,
 															"parameters": {
 																"tag": "\"MUSICA_BOSS\"",
 																"state": "resume"
@@ -2243,6 +2261,7 @@
 															"id": "set-paused",
 															"objectClass": "Audio",
 															"sid": 464650786165017,
+															"disabled": true,
 															"parameters": {
 																"tag": "\"FINAL_BOLA_ROJA\"",
 																"state": "resume"
@@ -2252,18 +2271,16 @@
 															"id": "set-paused",
 															"objectClass": "Audio",
 															"sid": 590842180745519,
+															"disabled": true,
 															"parameters": {
 																"tag": "\"FINAL_BOLA_ROSA\"",
 																"state": "resume"
 															}
 														},
 														{
-															"id": "set-time-scale",
+															"id": "wait-for-previous-actions",
 															"objectClass": "System",
-															"sid": 646762501052272,
-															"parameters": {
-																"time-scale": "1"
-															}
+															"sid": 448350989101854
 														},
 														{
 															"id": "set-object-time-scale",
@@ -2454,6 +2471,7 @@
 									"id": "set-paused",
 									"objectClass": "Audio",
 									"sid": 477564364972628,
+									"disabled": true,
 									"parameters": {
 										"tag": "\"Musica_Introduccion\"",
 										"state": "resume"
@@ -2463,6 +2481,7 @@
 									"id": "set-paused",
 									"objectClass": "Audio",
 									"sid": 223627398822450,
+									"disabled": true,
 									"parameters": {
 										"tag": "\"MUSICA_PORTADA\"",
 										"state": "resume"
@@ -2472,6 +2491,7 @@
 									"id": "set-paused",
 									"objectClass": "Audio",
 									"sid": 582420931255624,
+									"disabled": true,
 									"parameters": {
 										"tag": "\"MUSICA_bioma_1\"",
 										"state": "resume"
@@ -2481,6 +2501,7 @@
 									"id": "set-paused",
 									"objectClass": "Audio",
 									"sid": 558672066232763,
+									"disabled": true,
 									"parameters": {
 										"tag": "\"MUSICA_bioma_2\"",
 										"state": "resume"
@@ -2490,6 +2511,7 @@
 									"id": "set-paused",
 									"objectClass": "Audio",
 									"sid": 842481358918282,
+									"disabled": true,
 									"parameters": {
 										"tag": "\"MUSICA_bioma_3\"",
 										"state": "resume"
@@ -2499,6 +2521,7 @@
 									"id": "set-paused",
 									"objectClass": "Audio",
 									"sid": 410980237809091,
+									"disabled": true,
 									"parameters": {
 										"tag": "\"MUSICA_bioma_4\"",
 										"state": "resume"
@@ -2508,6 +2531,7 @@
 									"id": "set-paused",
 									"objectClass": "Audio",
 									"sid": 514821858318485,
+									"disabled": true,
 									"parameters": {
 										"tag": "\"MUSICA_bioma_5\"",
 										"state": "resume"
@@ -2517,6 +2541,7 @@
 									"id": "set-paused",
 									"objectClass": "Audio",
 									"sid": 700742313710195,
+									"disabled": true,
 									"parameters": {
 										"tag": "\"MUSICA_BOSS\"",
 										"state": "resume"
@@ -2526,6 +2551,7 @@
 									"id": "set-paused",
 									"objectClass": "Audio",
 									"sid": 413435225605493,
+									"disabled": true,
 									"parameters": {
 										"tag": "\"FINAL_BOLA_ROJA\"",
 										"state": "resume"
@@ -2535,6 +2561,7 @@
 									"id": "set-paused",
 									"objectClass": "Audio",
 									"sid": 668003280508130,
+									"disabled": true,
 									"parameters": {
 										"tag": "\"FINAL_BOLA_ROSA\"",
 										"state": "resume"
