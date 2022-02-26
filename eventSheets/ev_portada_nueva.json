@@ -148,6 +148,14 @@
 			"includeSheet": "Ev_desarrollador"
 		},
 		{
+			"eventType": "comment",
+			"text": "EVENTOS RATALAIKA"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "e_Ratalaika"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -2980,6 +2988,19 @@
 														}
 													],
 													"actions": [
+														{
+															"callFunction": "IDIOMA - JUEGO",
+															"sid": 978010703280839
+														},
+														{
+															"callFunction": "TRADUCCION TEXTOS PORTADAS SEGUN IDIOMA ELEGIDO",
+															"sid": 246615126338801
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 550350423670818
+														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
