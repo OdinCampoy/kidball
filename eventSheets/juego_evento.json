@@ -514,24 +514,24 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 669805652913042,
+					"sid": 829369129023088,
 					"parameters": {
 						"object-to-create": "LIFES_TXT",
 						"layer": "\"HUD\"",
-						"x": "125",
-						"y": "30",
+						"x": "95",
+						"y": "27",
 						"create-hierarchy": false
 					}
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 148107466961609,
+					"sid": 982951438216536,
 					"parameters": {
 						"object-to-create": "LIFES_TXT_shadow",
 						"layer": "\"HUD\"",
-						"x": "127",
-						"y": "32",
+						"x": "97",
+						"y": "29",
 						"create-hierarchy": false
 					}
 				},
@@ -562,36 +562,41 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 908777168169852,
+					"sid": 804171111829638,
 					"parameters": {
 						"object-to-create": "Gema_HUD",
 						"layer": "\"HUD\"",
-						"x": "194",
+						"x": "196",
 						"y": "24",
 						"create-hierarchy": false
 					}
 				},
 				{
+					"id": "move-to-bottom",
+					"objectClass": "Gema_HUD",
+					"sid": 610010366400930
+				},
+				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 116471725285617,
+					"sid": 635138179689943,
 					"parameters": {
 						"object-to-create": "Gema_Currency_TXT",
 						"layer": "\"HUD\"",
-						"x": "245",
-						"y": "30",
+						"x": "210",
+						"y": "27",
 						"create-hierarchy": false
 					}
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 737474993323670,
+					"sid": 694300971802517,
 					"parameters": {
 						"object-to-create": "Gema_Currency_TXT_shadow",
 						"layer": "\"HUD\"",
-						"x": "247",
-						"y": "32",
+						"x": "212",
+						"y": "29",
 						"create-hierarchy": false
 					}
 				},
@@ -622,31 +627,41 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 195550261629407,
+					"sid": 531819635046290,
 					"parameters": {
-						"object-to-create": "SCENE_TXT",
+						"object-to-create": "ROOM_HUD",
 						"layer": "\"HUD\"",
-						"x": "685",
-						"y": "29",
+						"x": "827",
+						"y": "24",
 						"create-hierarchy": false
 					}
 				},
 				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 978741294521810,
+					"id": "spawn-another-object",
+					"objectClass": "ROOM_HUD",
+					"sid": 335775686760345,
 					"parameters": {
-						"object-to-create": "SCENE_TXT_shadow",
+						"object": "SCENE_TXT",
 						"layer": "\"HUD\"",
-						"x": "687",
-						"y": "31",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "ROOM_HUD",
+					"sid": 493409285476918,
+					"parameters": {
+						"object": "SCENE_TXT_shadow",
+						"layer": "\"HUD\"",
+						"image-point": "2",
 						"create-hierarchy": false
 					}
 				},
 				{
 					"id": "move-to-object",
 					"objectClass": "SCENE_TXT_shadow",
-					"sid": 571071263029970,
+					"sid": 270683606880319,
 					"parameters": {
 						"where": "behind",
 						"object": "SCENE_TXT"
@@ -655,7 +670,7 @@
 				{
 					"id": "pin-to-object-properties",
 					"objectClass": "SCENE_TXT_shadow",
-					"sid": 130688014075575,
+					"sid": 143427952045549,
 					"behaviorType": "Pin",
 					"parameters": {
 						"pin-to": "SCENE_TXT",
@@ -665,6 +680,42 @@
 						"width-type": "no",
 						"height-type": "no",
 						"z": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 644452070141191,
+					"disabled": true,
+					"parameters": {
+						"object-to-create": "SCENE_TXT",
+						"layer": "\"HUD\"",
+						"x": "685",
+						"y": "27",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "SCENE_TXT",
+					"sid": 506170275031517,
+					"disabled": true,
+					"parameters": {
+						"where": "behind",
+						"object": "SCENE_TXT"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 899247611775088,
+					"disabled": true,
+					"parameters": {
+						"object-to-create": "SCENE_TXT_shadow",
+						"layer": "\"HUD\"",
+						"x": "687",
+						"y": "29",
+						"create-hierarchy": false
 					}
 				},
 				{
@@ -14116,9 +14167,9 @@
 												{
 													"id": "set-y",
 													"objectClass": "LIFES_TXT",
-													"sid": 619213854710058,
+													"sid": 934199777618270,
 													"parameters": {
-														"y": "29"
+														"y": "27"
 													}
 												}
 											],
@@ -14371,9 +14422,9 @@
 												{
 													"id": "set-y",
 													"objectClass": "LIFES_TXT",
-													"sid": 932030457538826,
+													"sid": 197026161652864,
 													"parameters": {
-														"y": "29"
+														"y": "27"
 													}
 												}
 											],
@@ -14626,9 +14677,9 @@
 												{
 													"id": "set-y",
 													"objectClass": "LIFES_TXT",
-													"sid": 742092148024193,
+													"sid": 818957595767487,
 													"parameters": {
-														"y": "29"
+														"y": "27"
 													}
 												}
 											],
@@ -14898,9 +14949,9 @@
 												{
 													"id": "set-y",
 													"objectClass": "LIFES_TXT",
-													"sid": 668649609869212,
+													"sid": 168838074239697,
 													"parameters": {
-														"y": "29"
+														"y": "27"
 													}
 												}
 											],
@@ -16407,10 +16458,15 @@
 										{
 											"id": "set-animation-frame",
 											"objectClass": "Bola_HUD",
-											"sid": 632263145107242,
+											"sid": 806280684698195,
 											"parameters": {
 												"frame-number": "0"
 											}
+										},
+										{
+											"id": "move-to-bottom",
+											"objectClass": "Bola_HUD",
+											"sid": 152561203871539
 										}
 									],
 									"sid": 306087003107453
@@ -16532,6 +16588,11 @@
 											"parameters": {
 												"frame-number": "1"
 											}
+										},
+										{
+											"id": "move-to-bottom",
+											"objectClass": "Bola_HUD",
+											"sid": 567007460107633
 										}
 									],
 									"sid": 194216854131156

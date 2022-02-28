@@ -1787,6 +1787,35 @@
 			"subLayers": [],
 			"instances": [
 				{
+					"type": "Fondo_Speedrun",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 719,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 427,
+						"y": 240,
+						"width": 878,
+						"height": 498.00000000000006,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "Speedrun_MODE_C",
 					"properties": {
 						"initially-visible": true,
@@ -1973,9 +2002,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0.3568627450980392,
-							0.1843137254901961,
-							0.9764705882352941,
+							0.12156862745098039,
+							0.7098039215686275,
+							0.984313725490196,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -2048,51 +2077,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center"
-					},
-					"uid": 7873,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 422,
-						"y": 78,
-						"width": 735,
-						"height": 52,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
 							1,
 							1,
 							1,
-							0.2
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SpeedRun_TXT_Choose_MODE",
-					"properties": {
-						"text": "SELECT YOUR SPEEDRUN MODE",
-						"enable-bbcode": true,
-						"font": "BalooThambi2-ExtraBold",
-						"size": 25,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.6235294117647059,
-							0.11372549019607843,
-							0.33725490196078434,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -2157,7 +2144,7 @@
 							1,
 							1,
 							1,
-							0.3
+							0.6
 						],
 						"angle": 0.00008054177751711314,
 						"zElevation": 0
@@ -2199,7 +2186,7 @@
 							1,
 							1,
 							1,
-							0.3
+							0.6
 						],
 						"angle": 0.00008054177751711314,
 						"zElevation": 0
@@ -2301,8 +2288,8 @@
 						"italic": false,
 						"color": [
 							1,
-							0.45098039215686275,
-							0,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -2343,8 +2330,8 @@
 						"italic": false,
 						"color": [
 							1,
-							0.45098039215686275,
-							0,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -2384,9 +2371,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0.3568627450980392,
-							0.1843137254901961,
-							0.9764705882352941,
+							0.12156862745098039,
+							0.7098039215686275,
+							0.984313725490196,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -2426,9 +2413,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0.3568627450980392,
-							0.1843137254901961,
-							0.9764705882352941,
+							0.12156862745098039,
+							0.7098039215686275,
+							0.984313725490196,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -2468,9 +2455,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0.3215686274509804,
-							0.3176470588235294,
-							0.3176470588235294,
+							0.18823529411764706,
+							0.18823529411764706,
+							0.18823529411764706,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -2593,9 +2580,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0.3215686274509804,
-							0.3176470588235294,
-							0.3176470588235294,
+							0.18823529411764706,
+							0.18823529411764706,
+							0.18823529411764706,
 							1
 						],
 						"horizontal-alignment": "right",
@@ -2743,7 +2730,7 @@
 							1,
 							1,
 							1,
-							0.3
+							0.6
 						],
 						"angle": 0.00008054177751711314,
 						"zElevation": 0
@@ -2761,8 +2748,8 @@
 						"italic": false,
 						"color": [
 							1,
-							0.45098039215686275,
-							0,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "center",

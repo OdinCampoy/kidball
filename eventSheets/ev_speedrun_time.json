@@ -243,6 +243,22 @@
 					}
 				},
 				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_TXT_mode_CLASSIC",
+					"sid": 681591401637812,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,45)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpeedRun_TXT_mode_CLASSIC_desc",
+					"sid": 346509095689170,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,44)"
+					}
+				},
+				{
 					"type": "comment",
 					"text": "reseteo de variables de juego speedrun"
 				},
@@ -1749,9 +1765,16 @@
 							"id": "set-text",
 							"objectClass": "SpeedRun_MaxRoom_num",
 							"sid": 382245827830895,
+							"disabled": true,
 							"parameters": {
 								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,41)"
 							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 786131121033210,
+							"disabled": true
 						},
 						{
 							"id": "set-text",
@@ -1808,6 +1831,19 @@
 							"parameters": {
 								"text": "Array_SPR_10_SLOTS_1_TIME.At(SpeedRun_MaxRoom_num.fila,SpeedRun_MaxRoom_num.profundidad)>0? Array_SPR_10_SLOTS_1_TIME.At(SpeedRun_TotalGems_num.fila,SpeedRun_TotalGems_num.profundidad)&\"/\"&Array_SPR_10_SLOTS_1_TIME.At(SpeedRun_TotalGems_num.fila+1,SpeedRun_TotalGems_num.profundidad):\"\""
 							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_MaxRoom_num",
+							"sid": 192173597353373,
+							"parameters": {
+								"text": "replace(Self.Text,\"Empty\",Array_Traducciones_IDOMAS.At(Idioma_numerico,41))"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 860067272559743
 						}
 					],
 					"sid": 967140649054831
