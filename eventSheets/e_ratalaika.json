@@ -51,7 +51,112 @@
 					}
 				}
 			],
-			"sid": 539259772103980
+			"sid": 539259772103980,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 803768855242184,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"PORTADA_NUEVA\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 160268691214908,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 628650078341139,
+									"parameters": {
+										"TestValue": "XBOXONE"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 149912436514800,
+									"parameters": {
+										"TestValue": "SERIESX"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "GameTag_Xbox_Button",
+									"sid": 844255446822344
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Gametag_Xbox_Text",
+									"sid": 938398402156324
+								}
+							],
+							"sid": 674276752694416
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 794134441540688,
+									"parameters": {
+										"TestValue": "XBOXONE"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 771653380614998,
+									"parameters": {
+										"TestValue": "SERIESX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Gametag_Xbox_Text",
+									"sid": 981470122266923,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "GameTag_Xbox_Button",
+									"sid": 125678061805841,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Gametag_Xbox_Text",
+									"sid": 304456522875772,
+									"parameters": {
+										"text": "RG19.GetEnvironment(\"GAMERTAG\")"
+									}
+								}
+							],
+							"sid": 662636330201650
+						}
+					]
+				}
+			]
 		},
 		{
 			"eventType": "group",
@@ -1590,6 +1695,179 @@
 				}
 			],
 			"sid": 139900289483293
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GAMETAG PARA LA PANTALLA DE INICIO",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "GAMETAG SE VE O NO SE VE",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 448017425812202,
+									"parameters": {
+										"TestValue": "PS4"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 990776976432514,
+									"parameters": {
+										"TestValue": "PS5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Gametag_Xbox_Text",
+									"sid": 141252341275166,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "GameTag_Xbox_Button",
+									"sid": 655121532446808,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 149357465839862,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 178080542340558,
+									"parameters": {
+										"TestValue": "SWITCH"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Gametag_Xbox_Text",
+									"sid": 257950202078671,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "GameTag_Xbox_Button",
+									"sid": 899689984412689,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 733638543212491
+						}
+					],
+					"sid": 707953963189274
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "GAMETAG FOR XBOXONE - RATALAIKA -",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 909880348206940,
+									"parameters": {
+										"TestValue": "XBOXONE"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 590365677041254,
+									"parameters": {
+										"TestValue": "SERIESX"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 967054897229023,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-button-down",
+											"objectClass": "Gamepad",
+											"sid": 987721210512847,
+											"parameters": {
+												"gamepad": "0",
+												"button": "button-x"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 440032315003316,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 184580911277785
+												}
+											],
+											"actions": [
+												{
+													"id": "request-account-picker",
+													"objectClass": "RG19",
+													"sid": 918826013865254
+												},
+												{
+													"id": "set-text",
+													"objectClass": "Gametag_Xbox_Text",
+													"sid": 114416999643538,
+													"parameters": {
+														"text": "RG19.GetEnvironment(\"GAMERTAG\")"
+													}
+												}
+											],
+											"sid": 388544571919153
+										}
+									]
+								}
+							],
+							"isOrBlock": true
+						}
+					],
+					"sid": 774877176821287
+				}
+			],
+			"sid": 478576092776310
 		}
 	],
 	"sid": 412271674177163

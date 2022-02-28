@@ -3326,12 +3326,9 @@
 													}
 												},
 												{
-													"id": "wait",
+													"id": "wait-for-previous-actions",
 													"objectClass": "System",
-													"sid": 381148481031938,
-													"parameters": {
-														"seconds": "0.01"
-													}
+													"sid": 670273620908942
 												},
 												{
 													"id": "go-to-layout",
@@ -10489,6 +10486,11 @@
 											}
 										},
 										{
+											"id": "start-story",
+											"objectClass": "RG19",
+											"sid": 208996834437731
+										},
+										{
 											"id": "go-to-layout",
 											"objectClass": "System",
 											"sid": 509711895142613,
@@ -10554,6 +10556,11 @@
 													}
 												},
 												{
+													"id": "start-story",
+													"objectClass": "RG19",
+													"sid": 337695813127562
+												},
+												{
 													"id": "go-to-layout-by-name",
 													"objectClass": "System",
 													"sid": 947211136056602,
@@ -10602,6 +10609,11 @@
 													}
 												},
 												{
+													"id": "start-story",
+													"objectClass": "RG19",
+													"sid": 264794399846062
+												},
+												{
 													"id": "go-to-layout-by-name",
 													"objectClass": "System",
 													"sid": 101615145099947,
@@ -10648,6 +10660,11 @@
 													"parameters": {
 														"tag": "\"MUSICA_PORTADA\""
 													}
+												},
+												{
+													"id": "start-story",
+													"objectClass": "RG19",
+													"sid": 668763455583060
 												},
 												{
 													"id": "go-to-layout-by-name",
