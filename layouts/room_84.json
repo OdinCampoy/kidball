@@ -3468,7 +3468,7 @@
 							"height": 19,
 							"max-width": 50,
 							"max-height": 27,
-							"data": "27x0,19x8,8x0,19x8,8x0,2x8,6,12x9,11,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,10x0,2,7,15,3x8,8x0,2x8,13,10x0,4,9,11,3x8,8x0,2x8,10,4x7,12,7x0,11,3x8,8x0,2x8,6,4x9,14,7x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,9x0,2,2x7,15,3x8,8x0,2x8,13,9x0,4,2x9,11,3x8,8x0,2x8,10,3x7,12,8x0,3,3x8,8x0,2x8,6,3x9,14,8x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,8x0,2,3x7,15,3x8,8x0,2x8,13,8x0,4,3x9,11,3x8,8x0,2x8,10,2x7,12,9x0,3,3x8,8x0,2x8,6,2x9,14,9x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,7x0,2,4x7,15,3x8,8x0,2x8,13,7x0,4,4x9,11,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,3x0,2,12,7x0,3,3x8,8x0,2x8,13,3x0,3,13,7x0,3,3x8,8x0,2x8,10,3x7,15,10,7x7,15,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
+							"data": "27x0,19x8,8x0,19x8,8x0,2x8,6,12x9,11,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,10x0,2,7,15,3x8,8x0,2x8,13,10x0,4,9,11,3x8,8x0,2x8,10,4x7,12,7x0,3,3x8,8x0,2x8,6,4x9,14,7x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,9x0,2,2x7,15,3x8,8x0,2x8,13,9x0,4,2x9,11,3x8,8x0,2x8,10,3x7,12,8x0,3,3x8,8x0,2x8,6,3x9,14,8x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,8x0,2,3x7,15,3x8,8x0,2x8,13,8x0,4,3x9,11,3x8,8x0,2x8,10,2x7,12,9x0,3,3x8,8x0,2x8,6,2x9,14,9x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,7x0,2,4x7,15,3x8,8x0,2x8,13,7x0,4,4x9,11,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,12x0,3,3x8,8x0,2x8,13,3x0,2,12,7x0,3,3x8,8x0,2x8,13,3x0,3,13,7x0,3,3x8,8x0,2x8,10,3x7,15,10,7x7,15,3x8,8x0,19x8,8x0,19x8,8x0,19x8,8x0,2x8,457x0"
 						},
 						"tile-width": 32,
 						"tile-height": 32,
@@ -4219,144 +4219,6 @@
 					}
 				},
 				{
-					"type": "sierras_palo",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 12928,
-					"instanceVariables": {
-						"velocidad": 2.7,
-						"direccion": 0
-					},
-					"behaviors": {
-						"Rotate": {
-							"properties": {
-								"speed": 100,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 573,
-						"y": 133,
-						"width": 134,
-						"height": 50,
-						"originX": 1,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "sierras_palo",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 12929,
-					"instanceVariables": {
-						"velocidad": 2.7,
-						"direccion": 0
-					},
-					"behaviors": {
-						"Rotate": {
-							"properties": {
-								"speed": 100,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 414,
-						"y": 165,
-						"width": 134,
-						"height": 50,
-						"originX": 1,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "sierras_palo",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 12930,
-					"instanceVariables": {
-						"velocidad": 2.7,
-						"direccion": 0
-					},
-					"behaviors": {
-						"Rotate": {
-							"properties": {
-								"speed": 100,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 253,
-						"y": 196,
-						"width": 134,
-						"height": 50,
-						"originX": 1,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Gema_currency",
 					"properties": {
 						"initially-visible": true,
@@ -4548,8 +4410,8 @@
 						}
 					},
 					"world": {
-						"x": 227.449493408,
-						"y": 435.804199219,
+						"x": 227,
+						"y": 436,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -4581,8 +4443,8 @@
 						}
 					},
 					"world": {
-						"x": 255.44949340800002,
-						"y": 435.804199219,
+						"x": 255,
+						"y": 436,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -4614,8 +4476,8 @@
 						}
 					},
 					"world": {
-						"x": 282.858184814,
-						"y": 435.948913574,
+						"x": 283,
+						"y": 436,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -4647,8 +4509,8 @@
 						}
 					},
 					"world": {
-						"x": 308.858184814,
-						"y": 435.948913574,
+						"x": 310,
+						"y": 436,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -4680,8 +4542,8 @@
 						}
 					},
 					"world": {
-						"x": 388.324676514,
-						"y": 435.804229736,
+						"x": 387,
+						"y": 436,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -4713,8 +4575,8 @@
 						}
 					},
 					"world": {
-						"x": 414.324676514,
-						"y": 435.804229736,
+						"x": 414,
+						"y": 436,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -4746,8 +4608,8 @@
 						}
 					},
 					"world": {
-						"x": 441.324676514,
-						"y": 435.804229736,
+						"x": 441,
+						"y": 436,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -4779,8 +4641,8 @@
 						}
 					},
 					"world": {
-						"x": 468.324676514,
-						"y": 435.804229736,
+						"x": 468,
+						"y": 436,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -4812,7 +4674,7 @@
 						}
 					},
 					"world": {
-						"x": 547,
+						"x": 548,
 						"y": 436,
 						"width": 24,
 						"height": 24,
@@ -4845,7 +4707,7 @@
 						}
 					},
 					"world": {
-						"x": 573,
+						"x": 575,
 						"y": 436,
 						"width": 24,
 						"height": 24,
@@ -4878,7 +4740,7 @@
 						}
 					},
 					"world": {
-						"x": 601,
+						"x": 602,
 						"y": 436,
 						"width": 24,
 						"height": 24,
@@ -5081,7 +4943,7 @@
 						}
 					},
 					"world": {
-						"x": 628,
+						"x": 629,
 						"y": 436,
 						"width": 24,
 						"height": 24,
@@ -5310,6 +5172,144 @@
 						"width": 27,
 						"height": 27,
 						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "sierras_palo",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12928,
+					"instanceVariables": {
+						"velocidad": 2.7,
+						"direccion": 0
+					},
+					"behaviors": {
+						"Rotate": {
+							"properties": {
+								"speed": 100,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 573,
+						"y": 133,
+						"width": 134,
+						"height": 50,
+						"originX": 1,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "sierras_palo",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12929,
+					"instanceVariables": {
+						"velocidad": 2.7,
+						"direccion": 0
+					},
+					"behaviors": {
+						"Rotate": {
+							"properties": {
+								"speed": 100,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 414,
+						"y": 165,
+						"width": 134,
+						"height": 50,
+						"originX": 1,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "sierras_palo",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12930,
+					"instanceVariables": {
+						"velocidad": 2.7,
+						"direccion": 0
+					},
+					"behaviors": {
+						"Rotate": {
+							"properties": {
+								"speed": 100,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 253,
+						"y": 196,
+						"width": 134,
+						"height": 50,
+						"originX": 1,
 						"originY": 0.5,
 						"color": [
 							1,

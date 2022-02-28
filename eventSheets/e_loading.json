@@ -6,6 +6,14 @@
 			"includeSheet": "Ev_desarrollador"
 		},
 		{
+			"eventType": "comment",
+			"text": "EVENTOS RATALAIKA"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "e_Ratalaika"
+		},
+		{
 			"eventType": "variable",
 			"name": "se_ha_cargado_Traducciones",
 			"type": "boolean",
@@ -2877,10 +2885,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 203040558721056,
+					"sid": 258619834226018,
 					"parameters": {
 						"variable": "SonidoFX_Volumen_Master",
-						"value": "10"
+						"value": "8"
 					}
 				}
 			],
@@ -2959,10 +2967,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 878132123473366,
+					"sid": 141285633357093,
 					"parameters": {
 						"variable": "Musica_Volumen_Master",
-						"value": "10"
+						"value": "8"
 					}
 				}
 			],
@@ -3015,8 +3023,13 @@
 					}
 				},
 				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 676771752013937
+				},
+				{
 					"callFunction": "VOLUMEN MASTER MUSICA",
-					"sid": 552352885950135
+					"sid": 140995288689522
 				}
 			],
 			"sid": 753886683958083
@@ -3906,7 +3919,8 @@
 					}
 				}
 			],
-			"sid": 882107363412711
+			"sid": 882107363412711,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -3937,7 +3951,8 @@
 					}
 				}
 			],
-			"sid": 148491814072396
+			"sid": 148491814072396,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -3951,11 +3966,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 330405819993664,
+							"sid": 812560509889535,
 							"parameters": {
 								"variable": "CONTADOR_LOADING",
 								"comparison": 2,
-								"value": "350"
+								"value": "320"
 							}
 						}
 					],
@@ -3963,10 +3978,10 @@
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 456770398905200,
+							"sid": 683668679855643,
 							"parameters": {
 								"variable": "CONTADOR_LOADING",
-								"value": "1"
+								"value": "60*dt"
 							}
 						}
 					],
@@ -3978,11 +3993,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 210259847054324,
+							"sid": 369297946790645,
 							"parameters": {
 								"variable": "CONTADOR_LOADING",
 								"comparison": 5,
-								"value": "350"
+								"value": "320"
 							}
 						}
 					],

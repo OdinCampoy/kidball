@@ -2,6 +2,14 @@
 	"name": "e_Final_Juego",
 	"events": [
 		{
+			"eventType": "comment",
+			"text": "EVENTOS RATALAIKA"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "e_Ratalaika"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -525,33 +533,654 @@
 									],
 									"actions": [
 										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 193612120828706,
-											"parameters": {
-												"variable": "OPCION_ELEGIDA_YA",
-												"value": "true"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 844145903908930,
-											"parameters": {
-												"variable": "GAMEPAD_CENTER",
-												"value": "1"
-											}
-										},
-										{
 											"id": "go-to-layout",
 											"objectClass": "System",
 											"sid": 792406291467187,
+											"disabled": true,
 											"parameters": {
 												"layout": "SpeedRun_Resumen"
 											}
 										}
 									],
-									"sid": 501090503848114
+									"sid": 501090503848114,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 463070789840615,
+													"parameters": {
+														"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+														"comparison": 0,
+														"value": "\"TIME\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 975595692888147,
+													"parameters": {
+														"variable": "OPCION_ELEGIDA_YA",
+														"value": "true"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 631265297851909,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"type": "comment",
+													"text": "esta funcion CARGA RECOGE LAS ULTIMAS VARIABLES"
+												},
+												{
+													"callFunction": "SpeedRun_Coge_Numero_Nivel",
+													"sid": 488945933230571
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 810056907235696,
+													"parameters": {
+														"variable": "SpeedRun_Nivel_maximo",
+														"value": "100"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 281744054247704,
+													"parameters": {
+														"variable": "SpeedRun_Nivel_actual",
+														"value": "100"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 145404708905073
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 360606953163333,
+													"parameters": {
+														"variable": "0_NIVEL_MAXIMO",
+														"value": "SpeedRun_Nivel_actual"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 765832207217147,
+													"parameters": {
+														"variable": "1_TIEMPO_TOTAL_JUEGO",
+														"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 128978601094713,
+													"parameters": {
+														"variable": "2_MUERTES_TOTALES",
+														"value": "SpeedRun_muertes"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 425868323783884,
+													"parameters": {
+														"variable": "3_SUMA_GEMAS_COGIDA",
+														"value": "SpeedRun_gemas_cogidas"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 550263924458709,
+													"parameters": {
+														"variable": "4_SUMA_GEMAS_TOTALES",
+														"value": "SpeedRun_gemas_totales_juego"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 802584417304478
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "Array_SPR_10_SLOTS_1_TIME",
+													"sid": 294699773500527,
+													"parameters": {
+														"x": "0",
+														"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "0_NIVEL_MAXIMO"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "Array_SPR_10_SLOTS_1_TIME",
+													"sid": 903859244715311,
+													"parameters": {
+														"x": "1",
+														"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "1_TIEMPO_TOTAL_JUEGO"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "Array_SPR_10_SLOTS_1_TIME",
+													"sid": 773545998851866,
+													"parameters": {
+														"x": "2",
+														"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "2_MUERTES_TOTALES"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "Array_SPR_10_SLOTS_1_TIME",
+													"sid": 406106202254033,
+													"parameters": {
+														"x": "3",
+														"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "3_SUMA_GEMAS_COGIDA"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "Array_SPR_10_SLOTS_1_TIME",
+													"sid": 387224493064876,
+													"parameters": {
+														"x": "4",
+														"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "4_SUMA_GEMAS_TOTALES"
+													}
+												},
+												{
+													"id": "set-item",
+													"objectClass": "LocalStorage",
+													"sid": 903572528070514,
+													"parameters": {
+														"key": "\"SpeedRun_Guardado_10_slots_TIME\"",
+														"value": "Array_SPR_10_SLOTS_1_TIME.AsJSON"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 374293939405417
+												},
+												{
+													"callFunction": "TERMINA EL MODO SPEED RUN CUALQUIER TIPO",
+													"sid": 445046409635164
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 492965789614180,
+													"parameters": {
+														"variable": "OPCIONES_MUERTE",
+														"value": "100"
+													}
+												}
+											],
+											"sid": 467099746948973
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 211208882770321,
+													"parameters": {
+														"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+														"comparison": 0,
+														"value": "\"DOOM\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 132386094362890,
+													"parameters": {
+														"variable": "OPCION_ELEGIDA_YA",
+														"value": "true"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 709276274168880,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"type": "comment",
+													"text": "esta funcion CARGA RECOGE LAS ULTIMAS VARIABLES"
+												},
+												{
+													"callFunction": "SpeedRun_Coge_Numero_Nivel",
+													"sid": 262866662054321
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 570884330834043,
+													"parameters": {
+														"variable": "SpeedRun_Nivel_maximo",
+														"value": "100"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 132719668677359,
+													"parameters": {
+														"variable": "SpeedRun_Nivel_actual",
+														"value": "100"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 871100254077813
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 864483974755247,
+													"parameters": {
+														"variable": "0_NIVEL_MAXIMO",
+														"value": "SpeedRun_Nivel_actual"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 560418786281362,
+													"parameters": {
+														"variable": "1_TIEMPO_TOTAL_JUEGO",
+														"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 456039529613912,
+													"parameters": {
+														"variable": "2_MUERTES_TOTALES",
+														"value": "SpeedRun_muertes"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 623945875384464,
+													"parameters": {
+														"variable": "3_SUMA_GEMAS_COGIDA",
+														"value": "SpeedRun_gemas_cogidas"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 419535349270963,
+													"parameters": {
+														"variable": "4_SUMA_GEMAS_TOTALES",
+														"value": "SpeedRun_gemas_totales_juego"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 629702752511511
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+													"sid": 121701121824915,
+													"parameters": {
+														"x": "0",
+														"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "0_NIVEL_MAXIMO"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+													"sid": 860856908952846,
+													"parameters": {
+														"x": "1",
+														"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "1_TIEMPO_TOTAL_JUEGO"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+													"sid": 756707604651815,
+													"parameters": {
+														"x": "2",
+														"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "2_MUERTES_TOTALES"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+													"sid": 181967677630123,
+													"parameters": {
+														"x": "3",
+														"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "3_SUMA_GEMAS_COGIDA"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "Array_SPR_10_SLOTS_3_DOOM",
+													"sid": 112245560310869,
+													"parameters": {
+														"x": "4",
+														"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+														"value": "4_SUMA_GEMAS_TOTALES"
+													}
+												},
+												{
+													"id": "set-item",
+													"objectClass": "LocalStorage",
+													"sid": 651507715330181,
+													"parameters": {
+														"key": "\"SpeedRun_Guardado_10_slots_DOOM\"",
+														"value": "Array_SPR_10_SLOTS_3_DOOM.AsJSON"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 485133324022922
+												},
+												{
+													"callFunction": "TERMINA EL MODO SPEED RUN CUALQUIER TIPO",
+													"sid": 174590117341048
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 489302815683502,
+													"parameters": {
+														"variable": "OPCIONES_MUERTE",
+														"value": "100"
+													}
+												}
+											],
+											"sid": 219842303947331
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 638845051943286,
+													"parameters": {
+														"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+														"comparison": 0,
+														"value": "\"DEATH\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 504732205121220,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 136796179626682
+														}
+													],
+													"actions": [
+														{
+															"id": "add-to-eventvar",
+															"objectClass": "System",
+															"sid": 901135119217319,
+															"parameters": {
+																"variable": "SpeedRun_muertes",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 129486184955532,
+															"parameters": {
+																"variable": "fx_muerte_pelota",
+																"value": "1"
+															}
+														},
+														{
+															"id": "create-object",
+															"objectClass": "System",
+															"sid": 219311672115078,
+															"parameters": {
+																"object-to-create": "Muerte_sangre",
+																"layer": "0",
+																"x": "bola.X",
+																"y": "bola.Y",
+																"create-hierarchy": false
+															}
+														},
+														{
+															"id": "destroy",
+															"objectClass": "llave",
+															"sid": 493338556739975
+														},
+														{
+															"id": "destroy",
+															"objectClass": "llave_en_cabeza",
+															"sid": 321537037921363
+														},
+														{
+															"id": "set-position",
+															"objectClass": "bola",
+															"sid": 824663348873454,
+															"parameters": {
+																"x": "-1000",
+																"y": "-1000"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 948210908075270,
+															"parameters": {
+																"variable": "Aparece_bola",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "puerta",
+															"sid": 262135057316049,
+															"parameters": {
+																"instance-variable": "abierta",
+																"value": "false"
+															}
+														},
+														{
+															"type": "comment",
+															"text": "esta funcion CARGA RECOGE LAS ULTIMAS VARIABLES"
+														},
+														{
+															"callFunction": "SpeedRun_Coge_Numero_Nivel",
+															"sid": 626058306449271
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 427256475673306,
+															"parameters": {
+																"variable": "SpeedRun_Nivel_maximo",
+																"value": "100"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 366626647719770,
+															"parameters": {
+																"variable": "SpeedRun_Nivel_actual",
+																"value": "100"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 714935746062746
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 803334252553250,
+															"parameters": {
+																"variable": "0_NIVEL_MAXIMO",
+																"value": "SpeedRun_Nivel_actual"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 422276876965672,
+															"parameters": {
+																"variable": "1_TIEMPO_TOTAL_JUEGO",
+																"value": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 166427950275473,
+															"parameters": {
+																"variable": "2_MUERTES_TOTALES",
+																"value": "SpeedRun_muertes"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 685508495242422,
+															"parameters": {
+																"variable": "3_SUMA_GEMAS_COGIDA",
+																"value": "SpeedRun_gemas_cogidas"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 803310198864963,
+															"parameters": {
+																"variable": "4_SUMA_GEMAS_TOTALES",
+																"value": "SpeedRun_gemas_totales_juego"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 188150712655635
+														},
+														{
+															"id": "set-at-xy",
+															"objectClass": "Array_SPR_10_SLOTS_2_DEATH",
+															"sid": 972046969623377,
+															"parameters": {
+																"x": "0",
+																"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+																"value": "0_NIVEL_MAXIMO"
+															}
+														},
+														{
+															"id": "set-at-xy",
+															"objectClass": "Array_SPR_10_SLOTS_2_DEATH",
+															"sid": 216079046474128,
+															"parameters": {
+																"x": "1",
+																"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+																"value": "1_TIEMPO_TOTAL_JUEGO"
+															}
+														},
+														{
+															"id": "set-at-xy",
+															"objectClass": "Array_SPR_10_SLOTS_2_DEATH",
+															"sid": 708443514956742,
+															"parameters": {
+																"x": "2",
+																"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+																"value": "2_MUERTES_TOTALES"
+															}
+														},
+														{
+															"id": "set-at-xy",
+															"objectClass": "Array_SPR_10_SLOTS_2_DEATH",
+															"sid": 966711653151016,
+															"parameters": {
+																"x": "3",
+																"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+																"value": "3_SUMA_GEMAS_COGIDA"
+															}
+														},
+														{
+															"id": "set-at-xy",
+															"objectClass": "Array_SPR_10_SLOTS_2_DEATH",
+															"sid": 193699442724777,
+															"parameters": {
+																"x": "4",
+																"y": "SPEEDRUN_Slot_Z_Depth_SELECTOR",
+																"value": "4_SUMA_GEMAS_TOTALES"
+															}
+														},
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 516736958045269,
+															"parameters": {
+																"key": "\"SpeedRun_Guardado_10_slots_DEATH\"",
+																"value": "Array_SPR_10_SLOTS_2_DEATH.AsJSON"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 264663752469416
+														},
+														{
+															"callFunction": "TERMINA EL MODO SPEED RUN CUALQUIER TIPO",
+															"sid": 403371565115650
+														}
+													],
+													"sid": 256851935825747
+												}
+											]
+										}
+									]
 								},
 								{
 									"eventType": "block",

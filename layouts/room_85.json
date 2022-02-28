@@ -4794,58 +4794,6 @@
 					}
 				},
 				{
-					"type": "PLATAFORMA_con_pincho",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 1,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 4903,
-					"instanceVariables": {
-						"numero": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						},
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 4.5,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 188,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 474,
-						"y": 407,
-						"width": 90,
-						"height": 29,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "M2_PlataformaSuelta5",
 					"properties": {
 						"initially-visible": true,
@@ -6556,7 +6504,7 @@
 					},
 					"uid": 12981,
 					"instanceVariables": {
-						"tiempo_lanzamiento": 2.7
+						"tiempo_lanzamiento": 2.3
 					},
 					"behaviors": {
 						"Timer": {
@@ -6565,7 +6513,7 @@
 					},
 					"world": {
 						"x": 835,
-						"y": 121,
+						"y": 125,
 						"width": 15,
 						"height": 28,
 						"originX": 0.2666666666666667,
@@ -6591,7 +6539,7 @@
 					},
 					"uid": 12982,
 					"instanceVariables": {
-						"tiempo_lanzamiento": 2.7
+						"tiempo_lanzamiento": 2.45
 					},
 					"behaviors": {
 						"Timer": {
@@ -6600,7 +6548,7 @@
 					},
 					"world": {
 						"x": 21,
-						"y": 338,
+						"y": 365,
 						"width": 15,
 						"height": 28,
 						"originX": 0.7333333333333333,
@@ -6856,6 +6804,58 @@
 						"y": 244,
 						"width": 24,
 						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PLATAFORMA_con_pincho",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 4903,
+					"instanceVariables": {
+						"numero": 0
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5.5,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 188,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 474,
+						"y": 416,
+						"width": 90,
+						"height": 29,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

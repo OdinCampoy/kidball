@@ -18,6 +18,14 @@
 			"includeSheet": "ARREGLO TAMANYOS"
 		},
 		{
+			"eventType": "comment",
+			"text": "EVENTOS RATALAIKA"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "e_Ratalaika"
+		},
+		{
 			"eventType": "variable",
 			"name": "AA_numero_de_nivel_para_guardado",
 			"type": "number",
@@ -986,6 +994,36 @@
 					"sid": 754336607281317
 				}
 			]
+		},
+		{
+			"eventType": "comment",
+			"text": "BORRA EL DISCO Y LA PALABRA SAVING AL SER EL MODO SPEEDRUN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 908919300875720,
+					"parameters": {
+						"variable": "SPEEDRUN_mode_TRUE_FALSE"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Saving_Game_Icon",
+					"sid": 937846194143764
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Saving_Game_TXT",
+					"sid": 868667365788727
+				}
+			],
+			"sid": 279638168685091
 		},
 		{
 			"eventType": "comment",

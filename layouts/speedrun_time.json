@@ -2542,7 +2542,7 @@
 					}
 				},
 				{
-					"type": "GAMEOVER_Buttons",
+					"type": "GAMEOVER_Buttons_1",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Xbox",
@@ -2663,43 +2663,6 @@
 						"width": 220,
 						"height": 21,
 						"originX": 0,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "GAMEOVER_Buttons",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Xbox",
-						"initial-frame": 1,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 5944,
-					"instanceVariables": {
-						"Numero": 0
-					},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 928,
-						"y": -252,
-						"width": 40,
-						"height": 40,
-						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -5983,7 +5946,45 @@
 			"name": "transicion",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "GAMEOVER_Buttons_2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Xbox",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 687,
+					"instanceVariables": {
+						"Numero": 0
+					},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 928,
+						"y": -252,
+						"width": 40,
+						"height": 40,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 474441009245216,
 			"effectTypes": [],
 			"isInitiallyVisible": true,

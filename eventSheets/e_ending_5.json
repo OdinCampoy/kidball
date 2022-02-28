@@ -2,6 +2,14 @@
 	"name": "e_Ending_5",
 	"events": [
 		{
+			"eventType": "comment",
+			"text": "EVENTOS RATALAIKA"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "e_Ratalaika"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -61,7 +69,90 @@
 					}
 				}
 			],
-			"sid": 891496726209997
+			"sid": 891496726209997,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 684416662059706,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "Saving_Game_Icon",
+							"sid": 695311230477819,
+							"parameters": {
+								"width": "33",
+								"height": "36"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Saving_Game_Icon",
+							"sid": 745537445594289,
+							"parameters": {
+								"x": "820",
+								"y": "452"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 762663943489278,
+							"parameters": {
+								"object-to-create": "Saving_Game_TXT",
+								"layer": "\"VIDAS\"",
+								"x": "555",
+								"y": "446",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Saving_Game_TXT",
+							"sid": 958801163707835,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,86)\n"
+							}
+						}
+					],
+					"sid": 144826938955356
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 438308948908089,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Saving_Game_Icon",
+							"sid": 979099271380230
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Saving_Game_TXT",
+							"sid": 515138259585196
+						}
+					],
+					"sid": 807882980903372
+				}
+			]
 		},
 		{
 			"eventType": "block",

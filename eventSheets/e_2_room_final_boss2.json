@@ -27,6 +27,14 @@
 		},
 		{
 			"eventType": "comment",
+			"text": "EVENTOS RATALAIKA"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "e_Ratalaika"
+		},
+		{
+			"eventType": "comment",
 			"text": "**********************************************************************************************"
 		},
 		{
@@ -55,6 +63,69 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 395788274612200,
+					"parameters": {
+						"variable": "VIDA_FINAL_BOSS",
+						"value": "5"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 934148780076731,
+					"parameters": {
+						"variable": "TIRA_PINCHOS",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 617715856880165,
+					"parameters": {
+						"variable": "SIERRAS_FINAL_BOSS",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 346055269719375,
+					"parameters": {
+						"variable": "CONTADOR_camara_lenta",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 936457433103671,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"value": "-2"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 641908725142966,
+					"parameters": {
+						"variable": "FB_sale_posicion",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 608926266133800,
+					"parameters": {
+						"variable": "FB_tiempo_entre_salida_y_salida",
+						"value": "4"
+					}
+				},
 				{
 					"id": "stop-all",
 					"objectClass": "Audio",
@@ -211,8 +282,36 @@
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 234563490427381,
+					"disabled": true,
 					"parameters": {
 						"variable": "PASOS_FINAL_BOSS",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "JEFE_FINAL",
+					"sid": 267088135071580,
+					"parameters": {
+						"instance-variable": "DIRECCION",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "JEFE_FINAL",
+					"sid": 934556000556957,
+					"parameters": {
+						"instance-variable": "HA_SIDO_TOCADO",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "JEFE_FINAL",
+					"sid": 690661368475549,
+					"parameters": {
+						"instance-variable": "CONTADOR_HA_SIDO_TOCADO",
 						"value": "0"
 					}
 				},
@@ -274,96 +373,6 @@
 					"sid": 185475418942863,
 					"parameters": {
 						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "JEFE_FINAL",
-					"sid": 231968235366172,
-					"parameters": {
-						"instance-variable": "DIRECCION",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "JEFE_FINAL",
-					"sid": 208683267239746,
-					"parameters": {
-						"instance-variable": "HA_SIDO_TOCADO",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "JEFE_FINAL",
-					"sid": 700718902371504,
-					"parameters": {
-						"instance-variable": "CONTADOR_HA_SIDO_TOCADO",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 497199441196599,
-					"parameters": {
-						"variable": "VIDA_FINAL_BOSS",
-						"value": "5"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 933413346635283,
-					"parameters": {
-						"variable": "TIRA_PINCHOS",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 466185960255254,
-					"parameters": {
-						"variable": "SIERRAS_FINAL_BOSS",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 452266146774399,
-					"parameters": {
-						"variable": "CONTADOR_camara_lenta",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 252959101180959,
-					"parameters": {
-						"variable": "PASOS_FINAL_BOSS",
-						"value": "-2"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 405563105038577,
-					"parameters": {
-						"variable": "FB_sale_posicion",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 769691033307458,
-					"parameters": {
-						"variable": "FB_tiempo_entre_salida_y_salida",
-						"value": "4"
 					}
 				},
 				{

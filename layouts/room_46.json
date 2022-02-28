@@ -2394,52 +2394,6 @@
 					}
 				},
 				{
-					"type": "sierras",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 2830,
-					"instanceVariables": {
-						"velocidad": 2.5,
-						"direccion": 0,
-						"activa_TOPES": true,
-						"IZQ_tope": 445,
-						"DER_tope": 725,
-						"UP_tope": 0,
-						"DOWN_tope": 0
-					},
-					"behaviors": {
-						"Rotate": {
-							"properties": {
-								"speed": 180,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 670.469360352,
-						"y": 451.895690918,
-						"width": 64,
-						"height": 64,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "puerta",
 					"properties": {
 						"initially-visible": false,
@@ -2536,6 +2490,52 @@
 					"world": {
 						"x": 478.089599609,
 						"y": 449.36517334,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "sierras",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 2830,
+					"instanceVariables": {
+						"velocidad": 2.5,
+						"direccion": 0,
+						"activa_TOPES": true,
+						"IZQ_tope": 445,
+						"DER_tope": 725,
+						"UP_tope": 0,
+						"DOWN_tope": 0
+					},
+					"behaviors": {
+						"Rotate": {
+							"properties": {
+								"speed": 180,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 670.469360352,
+						"y": 451.895690918,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,

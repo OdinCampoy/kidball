@@ -1,0 +1,1596 @@
+{
+	"name": "e_Ratalaika",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "BOTONES_TESTEO",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 662067404980977
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 631003539678099
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 576499705955760,
+					"disabled": true,
+					"parameters": {
+						"variable": "BOTONES_TESTEO",
+						"value": "\"XBOX\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 640715453352141,
+					"parameters": {
+						"variable": "BOTONES_TESTEO",
+						"value": "\"PSX\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 769909019346175,
+					"disabled": true,
+					"parameters": {
+						"variable": "BOTONES_TESTEO",
+						"value": "\"SWITCH\""
+					}
+				}
+			],
+			"sid": 539259772103980
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BOTONES SEGUN CONSOLA",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Botones_Consola_iconos_A",
+							"sid": 473570495951372
+						}
+					],
+					"actions": [],
+					"sid": 735580123225773,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 895162809915640,
+									"parameters": {
+										"TestValue": "XBOXONE"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 119024197093492,
+									"parameters": {
+										"TestValue": "SERIESX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_A",
+									"sid": 540343316253276,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 814801313038772,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 268462257634545,
+									"parameters": {
+										"TestValue": "PS4"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 844709459839956,
+									"parameters": {
+										"TestValue": "PS5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_A",
+									"sid": 104129523938416,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 647611431555126,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 186349860222074,
+									"parameters": {
+										"TestValue": "SWITCH"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_A",
+									"sid": 135143383637008,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 497910159753330
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 420337752028359,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"XBOX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_A",
+									"sid": 160935152716617,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 352034608767806,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 801558624563713,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"PSX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_A",
+									"sid": 245318393057809,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 938247453313929,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 570481678228306,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"SWITCH\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_A",
+									"sid": 646434210331260,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 949428944064104,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Botones_Consola_iconos_B",
+							"sid": 452176977211191
+						}
+					],
+					"actions": [],
+					"sid": 704421519216226,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 655918264048239,
+									"parameters": {
+										"TestValue": "XBOXONE"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 661208783307879,
+									"parameters": {
+										"TestValue": "SERIESX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_B",
+									"sid": 937161396127930,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 689089074648426,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 967533158743541,
+									"parameters": {
+										"TestValue": "PS4"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 319574474921424,
+									"parameters": {
+										"TestValue": "PS5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_B",
+									"sid": 809606377359048,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 195462723532575,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 974324510399098,
+									"parameters": {
+										"TestValue": "SWITCH"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_B",
+									"sid": 960447149175021,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 589814887737200
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 596918293613634,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"XBOX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_B",
+									"sid": 655927448887710,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 865873276760968,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 950143455919977,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"PSX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_B",
+									"sid": 406702173264030,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 143908279470854,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 710796399047591,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"SWITCH\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Botones_Consola_iconos_B",
+									"sid": 516624217853045,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 511921793172558,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "GAMEOVER_Buttons_1",
+							"sid": 639409985583200
+						}
+					],
+					"actions": [],
+					"sid": 663834060854475,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 345267976946992,
+									"parameters": {
+										"TestValue": "XBOXONE"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 887121547247978,
+									"parameters": {
+										"TestValue": "SERIESX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_1",
+									"sid": 761925943750378,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 701011604782858,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 132619991976019,
+									"parameters": {
+										"TestValue": "PS4"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 423915293138636,
+									"parameters": {
+										"TestValue": "PS5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_1",
+									"sid": 239752840797587,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 681061777621195,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 849097547625331,
+									"parameters": {
+										"TestValue": "SWITCH"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_1",
+									"sid": 873841174358392,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 556238320950918
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 212298686381648,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"XBOX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_1",
+									"sid": 782602524964518,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 446433902816592,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 694463307795529,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"PSX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_1",
+									"sid": 495527384376371,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 987193073640543,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 525054525668063,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"SWITCH\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_1",
+									"sid": 339896148589253,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 563329065653664,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "GAMEOVER_Buttons_2",
+							"sid": 632290435225180
+						}
+					],
+					"actions": [],
+					"sid": 154396051683462,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 125278436293295,
+									"parameters": {
+										"TestValue": "XBOXONE"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 342317010305907,
+									"parameters": {
+										"TestValue": "SERIESX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_2",
+									"sid": 612898605918919,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 580964387078018,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 940489152627666,
+									"parameters": {
+										"TestValue": "PS4"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 843412122638699,
+									"parameters": {
+										"TestValue": "PS5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_2",
+									"sid": 686326778774997,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 246225157641185,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 338123351232389,
+									"parameters": {
+										"TestValue": "SWITCH"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_2",
+									"sid": 911347329596415,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 267630186142002
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 326937700718183,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"XBOX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_2",
+									"sid": 285569028156222,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 618181856074707,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 439985193924352,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"PSX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_2",
+									"sid": 966440911127278,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 295761331939969,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 913145387808269,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"SWITCH\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "GAMEOVER_Buttons_2",
+									"sid": 694767795787756,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 796050525051304,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Intro_Skip_Button",
+							"sid": 337475988584816
+						}
+					],
+					"actions": [],
+					"sid": 489511813088332,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 189107289057715,
+									"parameters": {
+										"TestValue": "XBOXONE"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 933469636113395,
+									"parameters": {
+										"TestValue": "SERIESX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Intro_Skip_Button",
+									"sid": 657375655530490,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 987307037412925,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 791586866425036,
+									"parameters": {
+										"TestValue": "PS4"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 443947057732330,
+									"parameters": {
+										"TestValue": "PS5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Intro_Skip_Button",
+									"sid": 433050269083824,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 630345272532389,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 723772953718092,
+									"parameters": {
+										"TestValue": "SWITCH"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Intro_Skip_Button",
+									"sid": 530380765825679,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 431403516421056
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 522352434399595,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"XBOX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Intro_Skip_Button",
+									"sid": 435716039172060,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 856449817427781,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 414778774408969,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"PSX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Intro_Skip_Button",
+									"sid": 735344135843953,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 374408568136399,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 518688191801191,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"SWITCH\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Intro_Skip_Button",
+									"sid": 652772991049599,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 753261462021949,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "PORTADA_creditos_Button_Leyend",
+							"sid": 822675483131674
+						}
+					],
+					"actions": [],
+					"sid": 490176685074347,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 318502618088096,
+									"parameters": {
+										"TestValue": "XBOXONE"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 302609876468543,
+									"parameters": {
+										"TestValue": "SERIESX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_creditos_Button_Leyend",
+									"sid": 207651310123864,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 355064403068089,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 900044332877224,
+									"parameters": {
+										"TestValue": "PS4"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 907869697453399,
+									"parameters": {
+										"TestValue": "PS5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_creditos_Button_Leyend",
+									"sid": 163221645749711,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 666251026287451,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 204698050590357,
+									"parameters": {
+										"TestValue": "SWITCH"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_creditos_Button_Leyend",
+									"sid": 989851099421082,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 162828406339824
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 825415264764031,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"XBOX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_creditos_Button_Leyend",
+									"sid": 536304203136589,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 949038636136700,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 771396006678759,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"PSX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_creditos_Button_Leyend",
+									"sid": 325249247677209,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 444127280342868,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 854400755584083,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"SWITCH\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_creditos_Button_Leyend",
+									"sid": 522218224748992,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 779399762896980,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "PORTADA_Finalboss_Button_Leyend",
+							"sid": 761071922873082
+						}
+					],
+					"actions": [],
+					"sid": 569160624900455,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 125373906494109,
+									"parameters": {
+										"TestValue": "XBOXONE"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 485632771111907,
+									"parameters": {
+										"TestValue": "SERIESX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_Finalboss_Button_Leyend",
+									"sid": 695514307968191,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 973389972373556,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 371056251336182,
+									"parameters": {
+										"TestValue": "PS4"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 791789123123974,
+									"parameters": {
+										"TestValue": "PS5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_Finalboss_Button_Leyend",
+									"sid": 847828192707165,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 546783617828869,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 659888896074697,
+									"parameters": {
+										"TestValue": "SWITCH"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_Finalboss_Button_Leyend",
+									"sid": 416893468118005,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 609671463820745
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 728497895363509,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"XBOX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_Finalboss_Button_Leyend",
+									"sid": 211065580594736,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 882848499722899,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 670217154413217,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"PSX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_Finalboss_Button_Leyend",
+									"sid": 679511123398826,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 577865320137066,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 982617778993791,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"SWITCH\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_Finalboss_Button_Leyend",
+									"sid": 535243461972731,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 704684107651379,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "PORTADA_options_Button_Leyend",
+							"sid": 690858399266261
+						}
+					],
+					"actions": [],
+					"sid": 388578236380705,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 619274002685381,
+									"parameters": {
+										"TestValue": "XBOXONE"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 188373503404324,
+									"parameters": {
+										"TestValue": "SERIESX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_options_Button_Leyend",
+									"sid": 855666610717328,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 569099225075611,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 184246267057710,
+									"parameters": {
+										"TestValue": "PS4"
+									}
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 779825943482656,
+									"parameters": {
+										"TestValue": "PS5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_options_Button_Leyend",
+									"sid": 359664418815557,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 387174185713651,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 855677390572880,
+									"parameters": {
+										"TestValue": "SWITCH"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_options_Button_Leyend",
+									"sid": 832158346676320,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 853383796355864
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 404047905311599,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"XBOX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_options_Button_Leyend",
+									"sid": 345547005301955,
+									"parameters": {
+										"animation": "\"Xbox\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 902574323894783,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 637390330314445,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"PSX\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_options_Button_Leyend",
+									"sid": 166481132174683,
+									"parameters": {
+										"animation": "\"Psx\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 485308553519613,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 171434105133000,
+									"parameters": {
+										"variable": "BOTONES_TESTEO",
+										"comparison": 0,
+										"value": "\"SWITCH\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PORTADA_options_Button_Leyend",
+									"sid": 293540118981720,
+									"parameters": {
+										"animation": "\"Switch\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 416451215358635,
+							"isOrBlock": true
+						}
+					]
+				}
+			],
+			"sid": 139900289483293
+		}
+	],
+	"sid": 412271674177163
+}
