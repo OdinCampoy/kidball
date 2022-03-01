@@ -2303,7 +2303,7 @@
 					},
 					"world": {
 						"x": 76,
-						"y": 265,
+						"y": 284,
 						"width": 21,
 						"height": 27,
 						"originX": 0.5,
@@ -2352,7 +2352,7 @@
 					},
 					"world": {
 						"x": 76,
-						"y": 317,
+						"y": 320,
 						"width": 21,
 						"height": 27,
 						"originX": 0.5,
@@ -2451,6 +2451,55 @@
 						"height": 26,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Gema_currency",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "gema",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1134,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 76,
+						"y": 248,
+						"width": 21,
+						"height": 27,
+						"originX": 0.5,
+						"originY": 0.46296296296296297,
 						"color": [
 							1,
 							1,
@@ -3287,7 +3336,7 @@
 							"properties": {
 								"movement": "horizontal",
 								"wave": "sine",
-								"period": 5,
+								"period": 6,
 								"period-random": 0,
 								"period-offset": 2,
 								"period-offset-random": 0,
