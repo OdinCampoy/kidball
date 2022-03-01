@@ -1116,6 +1116,83 @@
 				}
 			],
 			"sid": 854988323311105
+		},
+		{
+			"functionName": "DEMO consigue logro",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "Animacion",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 814492910741094
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 720665002999018,
+					"parameters": {
+						"object-to-create": "Logros_PROVISIONALES",
+						"layer": "\"salida\"",
+						"x": "431",
+						"y": "-100",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Logros_PROVISIONALES",
+					"sid": 654283285504996,
+					"parameters": {
+						"frame-number": "Animacion"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "Logros_PROVISIONALES",
+					"sid": 782724818127170,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"logro\"",
+						"property": "offsetY",
+						"end-value": "31",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 635271838821399,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 253092106819532,
+					"parameters": {
+						"folder": "sounds",
+						"audio-file-name": "FX_sound=1? \"logro_sound\":\"\"",
+						"loop": "not-looping",
+						"volume": "VOLUMEN_MASTER_FX",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 370858353222390
 		}
 	],
 	"sid": 123509842973358

@@ -1966,6 +1966,13 @@
 													"parameters": {
 														"achievement-name": "\"LOGRO 1\""
 													}
+												},
+												{
+													"callFunction": "DEMO consigue logro",
+													"sid": 700661333916941,
+													"parameters": [
+														"0"
+													]
 												}
 											],
 											"sid": 144363953853000
@@ -2014,17 +2021,38 @@
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 411315622050619,
+									"children": [
 										{
-											"id": "set-achievement",
-											"objectClass": "RG19",
-											"sid": 785924213276457,
-											"parameters": {
-												"achievement-name": "\"LOGRO 2\""
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 444514600915801
+												}
+											],
+											"actions": [
+												{
+													"id": "set-achievement",
+													"objectClass": "RG19",
+													"sid": 985430738185526,
+													"parameters": {
+														"achievement-name": "\"LOGRO 2\""
+													}
+												},
+												{
+													"callFunction": "DEMO consigue logro",
+													"sid": 773097797653013,
+													"parameters": [
+														"1"
+													]
+												}
+											],
+											"sid": 344376420797240
 										}
-									],
-									"sid": 411315622050619
+									]
 								}
 							]
 						}
@@ -2088,6 +2116,13 @@
 													"parameters": {
 														"achievement-name": "\"LOGRO 3\""
 													}
+												},
+												{
+													"callFunction": "DEMO consigue logro",
+													"sid": 948789851494483,
+													"parameters": [
+														"2"
+													]
 												}
 											],
 											"sid": 737412961100243
@@ -2230,6 +2265,13 @@
 																					"id": "wait-for-previous-actions",
 																					"objectClass": "System",
 																					"sid": 207397804936393
+																				},
+																				{
+																					"callFunction": "DEMO consigue logro",
+																					"sid": 146109463855406,
+																					"parameters": [
+																						"3"
+																					]
 																				}
 																			],
 																			"sid": 787093491687707
@@ -2282,6 +2324,13 @@
 																					"id": "wait-for-previous-actions",
 																					"objectClass": "System",
 																					"sid": 731929258501312
+																				},
+																				{
+																					"callFunction": "DEMO consigue logro",
+																					"sid": 324167440306101,
+																					"parameters": [
+																						"3"
+																					]
 																				}
 																			],
 																			"sid": 444457914014003
@@ -2432,6 +2481,13 @@
 																					"id": "wait-for-previous-actions",
 																					"objectClass": "System",
 																					"sid": 451272168529514
+																				},
+																				{
+																					"callFunction": "DEMO consigue logro",
+																					"sid": 360285215714064,
+																					"parameters": [
+																						"4"
+																					]
 																				}
 																			],
 																			"sid": 604966686800803
@@ -2450,6 +2506,456 @@
 						}
 					],
 					"sid": 588231878924769
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 6 - COGE 25 GEMAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 820078376242172,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 512830025835042,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 303618128600654,
+											"parameters": {
+												"variable": "GEMAS_LOGROS",
+												"comparison": 0,
+												"value": "25"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 127497324614001,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 731042552848769
+												}
+											],
+											"actions": [
+												{
+													"id": "set-achievement",
+													"objectClass": "RG19",
+													"sid": 634359162526567,
+													"parameters": {
+														"achievement-name": "\"LOGRO 6\""
+													}
+												},
+												{
+													"callFunction": "DEMO consigue logro",
+													"sid": 607636186453643,
+													"parameters": [
+														"5"
+													]
+												}
+											],
+											"sid": 332402307066864
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 888488357857816
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 7 - COMPLETA 10 SALAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 144639857901807
+								}
+							],
+							"actions": [],
+							"sid": 530526696906071,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 464572001891136,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 395679339968354,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 638456997330653,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"1M_TRANSICION_CASTILLOS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-achievement",
+													"objectClass": "RG19",
+													"sid": 943569509681991,
+													"parameters": {
+														"achievement-name": "\"LOGRO 7\""
+													}
+												},
+												{
+													"callFunction": "DEMO consigue logro",
+													"sid": 577681098081025,
+													"parameters": [
+														"6"
+													]
+												}
+											],
+											"sid": 150891839361453
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 798303580961273
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 8 - COGE 50 GEMAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 739231088745449,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 930372579558940,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 576110688540159,
+											"parameters": {
+												"variable": "GEMAS_LOGROS",
+												"comparison": 0,
+												"value": "50"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 757111768436632,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 145828627838716
+												}
+											],
+											"actions": [
+												{
+													"id": "set-achievement",
+													"objectClass": "RG19",
+													"sid": 613988630016061,
+													"parameters": {
+														"achievement-name": "\"LOGRO 8\""
+													}
+												},
+												{
+													"callFunction": "DEMO consigue logro",
+													"sid": 399236627894519,
+													"parameters": [
+														"7"
+													]
+												}
+											],
+											"sid": 231345586417916
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 754569803467800
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 9 - COMPLETA 15 SALAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 643737693307644
+								}
+							],
+							"actions": [],
+							"sid": 527813739923711,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 250718090228315,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 475997157679309,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 556387723572301,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"2M_CHECKPOINT\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-achievement",
+													"objectClass": "RG19",
+													"sid": 978321749454095,
+													"parameters": {
+														"achievement-name": "\"LOGRO 9\""
+													}
+												},
+												{
+													"callFunction": "DEMO consigue logro",
+													"sid": 708168890944260,
+													"parameters": [
+														"8"
+													]
+												}
+											],
+											"sid": 604212339267615
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 762300450944767
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 10 - COGE 75 GEMAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 376785735987330,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 789269594300982,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 453898219502465,
+											"parameters": {
+												"variable": "GEMAS_LOGROS",
+												"comparison": 0,
+												"value": "50"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 944708022980262,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 918088836683177
+												}
+											],
+											"actions": [
+												{
+													"id": "set-achievement",
+													"objectClass": "RG19",
+													"sid": 596339411949876,
+													"parameters": {
+														"achievement-name": "\"LOGRO 10\""
+													}
+												},
+												{
+													"callFunction": "DEMO consigue logro",
+													"sid": 757081799190480,
+													"parameters": [
+														"9"
+													]
+												}
+											],
+											"sid": 404036462713607
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 127519810098642
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 9 - COMPLETA 20 SALAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 672856961056419
+								}
+							],
+							"actions": [],
+							"sid": 677289143917591,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 156949762209552,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 529042715663153,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 361881990294282,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"2M_TRANSICION_CASTILLOS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-achievement",
+													"objectClass": "RG19",
+													"sid": 133443447015338,
+													"parameters": {
+														"achievement-name": "\"LOGRO 11\""
+													}
+												},
+												{
+													"callFunction": "DEMO consigue logro",
+													"sid": 619330945645803,
+													"parameters": [
+														"10"
+													]
+												}
+											],
+											"sid": 957163763145803
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 721139009378691
 				}
 			],
 			"sid": 310460178881833
