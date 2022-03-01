@@ -6,10 +6,40 @@
 			"name": "BOTONES_TESTEO",
 			"type": "string",
 			"initialValue": "",
-			"comment": "",
+			"comment": "TESTE - PONE LOS BOTONES SEGUN CONSOLA",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 662067404980977
+		},
+		{
+			"eventType": "variable",
+			"name": "GEMAS_LOGROS",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "ACUMULA LAS GEMAS PARA LOS LOGROS",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 551842824289886
+		},
+		{
+			"eventType": "variable",
+			"name": "LOGRO_4_HECHO",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "SE ACTIVA CUANDO SE CONSIGUE EL OBJETIVO",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 288876377698905
+		},
+		{
+			"eventType": "variable",
+			"name": "LOGRO_5_HECHO",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "SE ACTIVA CUANDO SE CONSIGUE EL OBJETIVO",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 976360951496160
 		},
 		{
 			"eventType": "block",
@@ -1868,6 +1898,561 @@
 				}
 			],
 			"sid": 478576092776310
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "LOGROS - 11 LOGROS A CONSEGUIR",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 1 - COGE LA PRIMERA LLAVE -",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 123225535487862,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 899208936012827,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 260841996109438,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"Room_1\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 495465615706911,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-collision-with-another-object",
+													"objectClass": "bola",
+													"sid": 406925106962371,
+													"parameters": {
+														"object": "llave"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-achievement",
+													"objectClass": "RG19",
+													"sid": 708930788256038,
+													"parameters": {
+														"achievement-name": "\"LOGRO 1\""
+													}
+												}
+											],
+											"sid": 144363953853000
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 500839055824316
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 2 - COGE 10 GEMAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 927114196223336,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 260712135632417,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 320508722827259,
+											"parameters": {
+												"variable": "GEMAS_LOGROS",
+												"comparison": 0,
+												"value": "10"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-achievement",
+											"objectClass": "RG19",
+											"sid": 785924213276457,
+											"parameters": {
+												"achievement-name": "\"LOGRO 2\""
+											}
+										}
+									],
+									"sid": 411315622050619
+								}
+							]
+						}
+					],
+					"sid": 747508467687082
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 3 - COMPLETA 5 SALAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 477074757753980
+								}
+							],
+							"actions": [],
+							"sid": 286054034089939,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 299130553921394,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 280230493885953,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 317719751699570,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"1M_CHECKPOINT\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-achievement",
+													"objectClass": "RG19",
+													"sid": 874389718505440,
+													"parameters": {
+														"achievement-name": "\"LOGRO 3\""
+													}
+												}
+											],
+											"sid": 737412961100243
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 706504064792304
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 4 - SALTA 1 ENEMIGO AZUL",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 165908560829128,
+									"parameters": {
+										"variable": "LOGRO_4_HECHO"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 298458249145419,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 320097362656650,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 795447643778105,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 785669559490352,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"Room_6\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 245474429500625,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-overlapping-another-object",
+															"objectClass": "bola",
+															"sid": 804700474466018,
+															"parameters": {
+																"object": "LOGRO_3_zone"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 965894605662934,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-x",
+																	"objectClass": "bola",
+																	"sid": 836988607690025,
+																	"parameters": {
+																		"comparison": 2,
+																		"x-co-ordinate": "enemy_in_floor.X"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 375167694182717,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "is-on-floor",
+																			"objectClass": "bola",
+																			"sid": 372342028241305,
+																			"behaviorType": "Platform"
+																		}
+																	],
+																	"actions": [],
+																	"sid": 835689636750396,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "trigger-once-while-true",
+																					"objectClass": "System",
+																					"sid": 800511873391261
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "set-achievement",
+																					"objectClass": "RG19",
+																					"sid": 638455610733338,
+																					"parameters": {
+																						"achievement-name": "\"LOGRO 4\""
+																					}
+																				},
+																				{
+																					"id": "set-boolean-eventvar",
+																					"objectClass": "System",
+																					"sid": 953774176711974,
+																					"parameters": {
+																						"variable": "LOGRO_4_HECHO",
+																						"value": "true"
+																					}
+																				},
+																				{
+																					"id": "wait-for-previous-actions",
+																					"objectClass": "System",
+																					"sid": 207397804936393
+																				}
+																			],
+																			"sid": 787093491687707
+																		}
+																	]
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "on-collision-with-another-object",
+																			"objectClass": "bola",
+																			"sid": 985060253623930,
+																			"parameters": {
+																				"object": "puerta"
+																			}
+																		}
+																	],
+																	"actions": [],
+																	"sid": 822889798508739,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "trigger-once-while-true",
+																					"objectClass": "System",
+																					"sid": 424841092736341
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "set-achievement",
+																					"objectClass": "RG19",
+																					"sid": 968472024535979,
+																					"parameters": {
+																						"achievement-name": "\"LOGRO 4\""
+																					}
+																				},
+																				{
+																					"id": "set-boolean-eventvar",
+																					"objectClass": "System",
+																					"sid": 652286084648987,
+																					"parameters": {
+																						"variable": "LOGRO_4_HECHO",
+																						"value": "true"
+																					}
+																				},
+																				{
+																					"id": "wait-for-previous-actions",
+																					"objectClass": "System",
+																					"sid": 731929258501312
+																				}
+																			],
+																			"sid": 444457914014003
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 663235851613424
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 5 - SALTA 1 ENEMIGO VOLDADOR",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 874788215610982,
+									"parameters": {
+										"variable": "LOGRO_5_HECHO"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 873774884091355,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 161434678849593,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 733178438823359,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 459587481132397,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"Room_9\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 117775800955493,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-overlapping-another-object",
+															"objectClass": "bola",
+															"sid": 185718439090364,
+															"parameters": {
+																"object": "LOGRO_4_zone"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 457250747632925,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-x",
+																	"objectClass": "bola",
+																	"sid": 363554616933161,
+																	"parameters": {
+																		"comparison": 4,
+																		"x-co-ordinate": "enemy_VOLADOR.X"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 233416997599454,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "is-on-floor",
+																			"objectClass": "bola",
+																			"sid": 466401839955761,
+																			"behaviorType": "Platform"
+																		}
+																	],
+																	"actions": [],
+																	"sid": 106979138196876,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "trigger-once-while-true",
+																					"objectClass": "System",
+																					"sid": 789408103480734
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "set-achievement",
+																					"objectClass": "RG19",
+																					"sid": 350389139004080,
+																					"parameters": {
+																						"achievement-name": "\"LOGRO 5\""
+																					}
+																				},
+																				{
+																					"id": "set-boolean-eventvar",
+																					"objectClass": "System",
+																					"sid": 461025556903516,
+																					"parameters": {
+																						"variable": "LOGRO_5_HECHO",
+																						"value": "true"
+																					}
+																				},
+																				{
+																					"id": "wait-for-previous-actions",
+																					"objectClass": "System",
+																					"sid": 451272168529514
+																				}
+																			],
+																			"sid": 604966686800803
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 588231878924769
+				}
+			],
+			"sid": 310460178881833
 		}
 	],
 	"sid": 412271674177163
