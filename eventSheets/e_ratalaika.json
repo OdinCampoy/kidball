@@ -1917,34 +1917,34 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-boolean-eventvar",
+									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 123225535487862,
+									"sid": 844032360318656,
 									"parameters": {
-										"variable": "SPEEDRUN_mode_TRUE_FALSE"
-									},
-									"isInverted": true
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Room_1\""
+									}
 								}
 							],
 							"actions": [],
-							"sid": 899208936012827,
+							"sid": 629428264360913,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-two-values",
+											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 260841996109438,
+											"sid": 380442834300039,
 											"parameters": {
-												"first-value": "LayoutName",
-												"comparison": 0,
-												"second-value": "\"Room_1\""
-											}
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [],
-									"sid": 495465615706911,
+									"sid": 275892837169205,
 									"children": [
 										{
 											"eventType": "block",
@@ -1952,30 +1952,30 @@
 												{
 													"id": "on-collision-with-another-object",
 													"objectClass": "bola",
-													"sid": 406925106962371,
+													"sid": 608631664546411,
 													"parameters": {
-														"object": "llave"
+														"object": "puerta"
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "set-achievement",
-													"objectClass": "RG19",
-													"sid": 708930788256038,
-													"parameters": {
-														"achievement-name": "\"LOGRO 1\""
-													}
-												},
-												{
 													"callFunction": "DEMO consigue logro",
-													"sid": 700661333916941,
+													"sid": 705442465560504,
 													"parameters": [
 														"0"
 													]
+												},
+												{
+													"id": "set-achievement",
+													"objectClass": "RG19",
+													"sid": 412697425005207,
+													"parameters": {
+														"achievement-name": "\"LOGRO 1\""
+													}
 												}
 											],
-											"sid": 144363953853000
+											"sid": 654074086734971
 										}
 									]
 								}
@@ -1987,7 +1987,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 2 - COGE 10 GEMAS",
+					"title": "LOGRO 2 - CONSIGUE UNA VIDA EXTRA",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -2510,7 +2510,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 6 - COGE 25 GEMAS",
+					"title": "LOGRO 6 - COGE 50 GEMAS",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -2536,11 +2536,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 303618128600654,
+											"sid": 584436255905722,
 											"parameters": {
 												"variable": "GEMAS_LOGROS",
 												"comparison": 0,
-												"value": "25"
+												"value": "50"
 											}
 										}
 									],
@@ -2660,7 +2660,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 8 - COGE 50 GEMAS",
+					"title": "LOGRO 8 - COGE 100 GEMAS",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -2686,11 +2686,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 576110688540159,
+											"sid": 461073822888273,
 											"parameters": {
 												"variable": "GEMAS_LOGROS",
 												"comparison": 0,
-												"value": "50"
+												"value": "100"
 											}
 										}
 									],
@@ -2810,7 +2810,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 10 - COGE 75 GEMAS",
+					"title": "LOGRO 10 - COGE 150 GEMAS",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -2836,11 +2836,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 453898219502465,
+											"sid": 563546227664898,
 											"parameters": {
 												"variable": "GEMAS_LOGROS",
 												"comparison": 0,
-												"value": "50"
+												"value": "150"
 											}
 										}
 									],
@@ -2885,7 +2885,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 9 - COMPLETA 20 SALAS",
+					"title": "LOGRO 11 - COMPLETA 20 SALAS",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
