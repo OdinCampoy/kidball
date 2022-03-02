@@ -1917,34 +1917,34 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-two-values",
+									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 844032360318656,
+									"sid": 728090655864537,
 									"parameters": {
-										"first-value": "LayoutName",
-										"comparison": 0,
-										"second-value": "\"Room_1\""
-									}
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [],
-							"sid": 629428264360913,
+							"sid": 766325240444699,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-boolean-eventvar",
+											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 380442834300039,
+											"sid": 995807409197929,
 											"parameters": {
-												"variable": "SPEEDRUN_mode_TRUE_FALSE"
-											},
-											"isInverted": true
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"Room_1\""
+											}
 										}
 									],
 									"actions": [],
-									"sid": 275892837169205,
+									"sid": 830618239554256,
 									"children": [
 										{
 											"eventType": "block",
@@ -1952,7 +1952,7 @@
 												{
 													"id": "on-collision-with-another-object",
 													"objectClass": "bola",
-													"sid": 608631664546411,
+													"sid": 805912643928787,
 													"parameters": {
 														"object": "puerta"
 													}
@@ -1961,7 +1961,7 @@
 											"actions": [
 												{
 													"callFunction": "DEMO consigue logro",
-													"sid": 705442465560504,
+													"sid": 427154877895651,
 													"parameters": [
 														"0"
 													]
@@ -1969,13 +1969,13 @@
 												{
 													"id": "set-achievement",
 													"objectClass": "RG19",
-													"sid": 412697425005207,
+													"sid": 167200657604510,
 													"parameters": {
 														"achievement-name": "\"LOGRO 1\""
 													}
 												}
 											],
-											"sid": 654074086734971
+											"sid": 942443093128096
 										}
 									]
 								}
@@ -2013,9 +2013,29 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 320508722827259,
+											"sid": 261897921682201,
 											"parameters": {
-												"variable": "GEMAS_LOGROS",
+												"variable": "Gemas_para_logros_1",
+												"comparison": 0,
+												"value": "10"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 130078295830424,
+											"parameters": {
+												"variable": "Gemas_para_logros_2",
+												"comparison": 0,
+												"value": "10"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 577273635136067,
+											"parameters": {
+												"variable": "Gemas_para_logros_3",
 												"comparison": 0,
 												"value": "10"
 											}
@@ -2030,29 +2050,30 @@
 												{
 													"id": "trigger-once-while-true",
 													"objectClass": "System",
-													"sid": 444514600915801
+													"sid": 474984920075445
 												}
 											],
 											"actions": [
 												{
 													"id": "set-achievement",
 													"objectClass": "RG19",
-													"sid": 985430738185526,
+													"sid": 560917751249711,
 													"parameters": {
 														"achievement-name": "\"LOGRO 2\""
 													}
 												},
 												{
 													"callFunction": "DEMO consigue logro",
-													"sid": 773097797653013,
+													"sid": 156416392612681,
 													"parameters": [
 														"1"
 													]
 												}
 											],
-											"sid": 344376420797240
+											"sid": 823981516596304
 										}
-									]
+									],
+									"isOrBlock": true
 								}
 							]
 						}
@@ -2147,9 +2168,9 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 165908560829128,
+									"sid": 352548873401896,
 									"parameters": {
-										"variable": "LOGRO_4_HECHO"
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
 									},
 									"isInverted": true
 								}
@@ -2163,9 +2184,9 @@
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 320097362656650,
+											"sid": 566181463493759,
 											"parameters": {
-												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+												"variable": "LOGRO_4_HECHO"
 											},
 											"isInverted": true
 										}
@@ -2363,9 +2384,9 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 874788215610982,
+									"sid": 553107163949645,
 									"parameters": {
-										"variable": "LOGRO_5_HECHO"
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
 									},
 									"isInverted": true
 								}
@@ -2379,9 +2400,9 @@
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 161434678849593,
+											"sid": 619247417535503,
 											"parameters": {
-												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+												"variable": "LOGRO_5_HECHO"
 											},
 											"isInverted": true
 										}
@@ -2536,9 +2557,29 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 584436255905722,
+											"sid": 683036956935504,
 											"parameters": {
-												"variable": "GEMAS_LOGROS",
+												"variable": "Gemas_para_logros_1",
+												"comparison": 0,
+												"value": "50"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 470215683609182,
+											"parameters": {
+												"variable": "Gemas_para_logros_2",
+												"comparison": 0,
+												"value": "50"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 264647239770671,
+											"parameters": {
+												"variable": "Gemas_para_logros_3",
 												"comparison": 0,
 												"value": "50"
 											}
@@ -2575,7 +2616,8 @@
 											],
 											"sid": 332402307066864
 										}
-									]
+									],
+									"isOrBlock": true
 								}
 							]
 						}
@@ -2686,9 +2728,29 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 461073822888273,
+											"sid": 870134471407638,
 											"parameters": {
-												"variable": "GEMAS_LOGROS",
+												"variable": "Gemas_para_logros_1",
+												"comparison": 0,
+												"value": "100"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 434377422680073,
+											"parameters": {
+												"variable": "Gemas_para_logros_2",
+												"comparison": 0,
+												"value": "100"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 450773581182053,
+											"parameters": {
+												"variable": "Gemas_para_logros_3",
 												"comparison": 0,
 												"value": "100"
 											}
@@ -2725,7 +2787,8 @@
 											],
 											"sid": 231345586417916
 										}
-									]
+									],
+									"isOrBlock": true
 								}
 							]
 						}
@@ -2836,9 +2899,29 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 563546227664898,
+											"sid": 457884234188193,
 											"parameters": {
-												"variable": "GEMAS_LOGROS",
+												"variable": "Gemas_para_logros_1",
+												"comparison": 0,
+												"value": "150"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 965278852264898,
+											"parameters": {
+												"variable": "Gemas_para_logros_2",
+												"comparison": 0,
+												"value": "150"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 974447652694408,
+											"parameters": {
+												"variable": "Gemas_para_logros_3",
 												"comparison": 0,
 												"value": "150"
 											}
@@ -2875,7 +2958,8 @@
 											],
 											"sid": 404036462713607
 										}
-									]
+									],
+									"isOrBlock": true
 								}
 							]
 						}

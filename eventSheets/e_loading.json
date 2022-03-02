@@ -118,6 +118,14 @@
 					}
 				},
 				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 252573096635426,
+					"parameters": {
+						"key": "\"Gemas_para_logros_1\""
+					}
+				},
+				{
 					"type": "comment",
 					"text": "SLOTS 2"
 				},
@@ -170,6 +178,14 @@
 					}
 				},
 				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 213262810184243,
+					"parameters": {
+						"key": "\"Gemas_para_logros_2\""
+					}
+				},
+				{
 					"type": "comment",
 					"text": "SLOTS 3"
 				},
@@ -211,6 +227,14 @@
 					"sid": 694163087760985,
 					"parameters": {
 						"key": "\"INTRO_HECHA_SI_NO_3\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 381380772102075,
+					"parameters": {
+						"key": "\"Gemas_para_logros_3\""
 					}
 				},
 				{
@@ -1746,6 +1770,84 @@
 						}
 					],
 					"sid": 960777968806760
+				},
+				{
+					"eventType": "comment",
+					"text": "guarda GEMAS para logros 1"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 813999087099455,
+							"parameters": {
+								"key": "\"Gemas_para_logros_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 872585388118067,
+							"parameters": {
+								"variable": "Gemas_para_logros_1",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 603199247097248
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 722856949732432,
+							"parameters": {
+								"key": "\"Gemas_para_logros_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 355525194070417,
+							"parameters": {
+								"key": "\"Gemas_para_logros_1\""
+							}
+						}
+					],
+					"sid": 845998719898114
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 466471260232303,
+							"parameters": {
+								"key": "\"Gemas_para_logros_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 163830331574091,
+							"parameters": {
+								"variable": "Gemas_para_logros_1",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 453856805179837
 				}
 			],
 			"sid": 219750815797461
@@ -2224,6 +2326,84 @@
 						}
 					],
 					"sid": 598304861155457
+				},
+				{
+					"eventType": "comment",
+					"text": "guarda GEMAS para logros 2"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 290593872901651,
+							"parameters": {
+								"key": "\"Gemas_para_logros_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 417031113179677,
+							"parameters": {
+								"variable": "Gemas_para_logros_2",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 813897743112509
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 842211919206395,
+							"parameters": {
+								"key": "\"Gemas_para_logros_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 377472227016850,
+							"parameters": {
+								"key": "\"Gemas_para_logros_2\""
+							}
+						}
+					],
+					"sid": 611774924389121
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 578142401478078,
+							"parameters": {
+								"key": "\"Gemas_para_logros_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 425198904142133,
+							"parameters": {
+								"variable": "Gemas_para_logros_2",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 365132940324532
 				}
 			],
 			"sid": 563539872754728
@@ -2702,6 +2882,84 @@
 						}
 					],
 					"sid": 392624787456018
+				},
+				{
+					"eventType": "comment",
+					"text": "guarda GEMAS para logros 3"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 429434773566894,
+							"parameters": {
+								"key": "\"Gemas_para_logros_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 931987243270230,
+							"parameters": {
+								"variable": "Gemas_para_logros_3",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 562599598148647
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 184976024146362,
+							"parameters": {
+								"key": "\"Gemas_para_logros_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 633457666801012,
+							"parameters": {
+								"key": "\"Gemas_para_logros_3\""
+							}
+						}
+					],
+					"sid": 926066507998661
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 160220144534991,
+							"parameters": {
+								"key": "\"Gemas_para_logros_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 947489746297330,
+							"parameters": {
+								"variable": "Gemas_para_logros_3",
+								"value": "LocalStorage.ItemValue"
+							}
+						}
+					],
+					"sid": 378732126262706
 				}
 			],
 			"sid": 578887291799314
