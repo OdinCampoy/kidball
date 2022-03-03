@@ -322,54 +322,6 @@
 					}
 				},
 				{
-					"id": "set-animation",
-					"objectClass": "bola",
-					"sid": 249019732038200,
-					"disabled": true,
-					"parameters": {
-						"animation": "\"DERECHA_4\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "spawn-another-object",
-					"objectClass": "bola",
-					"sid": 457801095617056,
-					"disabled": true,
-					"parameters": {
-						"object": "bola_estela_roja",
-						"layer": "Self.LayerName",
-						"image-point": "0",
-						"create-hierarchy": false
-					}
-				},
-				{
-					"id": "move-to-object",
-					"objectClass": "bola_estela_roja",
-					"sid": 696123067506671,
-					"disabled": true,
-					"parameters": {
-						"where": "behind",
-						"object": "bola"
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "bola_estela_roja",
-					"sid": 608315243072475,
-					"disabled": true,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "bola",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
 					"id": "set-opacity",
 					"objectClass": "DECORACION_M1_14",
 					"sid": 382585147217924,
@@ -469,52 +421,18 @@
 					}
 				},
 				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 991901473114991,
-					"disabled": true,
-					"parameters": {
-						"object-to-create": "Bola_HUD",
-						"layer": "\"HUD\"",
-						"x": "80",
-						"y": "24",
-						"create-hierarchy": false
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "LIFES_TXT",
-					"sid": 798960153158720,
-					"disabled": true,
-					"parameters": {
-						"text": "VIDAS_1"
-					}
-				},
-				{
-					"type": "comment",
-					"text": "LA\"X\" QUE VA CON LAS VIDAS"
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 538190136611270,
-					"disabled": true,
-					"parameters": {
-						"object-to-create": "LIFES_x",
-						"layer": "\"HUD\"",
-						"x": "73",
-						"y": "28",
-						"create-hierarchy": false
-					}
-				},
-				{
 					"type": "comment",
 					"text": "EL NUMERO DE VIDAS"
+				},
+				{
+					"callFunction": "crea HUD ",
+					"sid": 211027582453835
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 829369129023088,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "LIFES_TXT",
 						"layer": "\"HUD\"",
@@ -527,6 +445,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 982951438216536,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "LIFES_TXT_shadow",
 						"layer": "\"HUD\"",
@@ -539,6 +458,7 @@
 					"id": "move-to-object",
 					"objectClass": "LIFES_TXT_shadow",
 					"sid": 541180986670185,
+					"disabled": true,
 					"parameters": {
 						"where": "behind",
 						"object": "LIFES_TXT"
@@ -548,6 +468,7 @@
 					"id": "pin-to-object-properties",
 					"objectClass": "LIFES_TXT_shadow",
 					"sid": 400347418791647,
+					"disabled": true,
 					"behaviorType": "Pin",
 					"parameters": {
 						"pin-to": "LIFES_TXT",
@@ -563,6 +484,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 804171111829638,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "Gema_HUD",
 						"layer": "\"HUD\"",
@@ -574,12 +496,14 @@
 				{
 					"id": "move-to-bottom",
 					"objectClass": "Gema_HUD",
-					"sid": 610010366400930
+					"sid": 610010366400930,
+					"disabled": true
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 635138179689943,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "Gema_Currency_TXT",
 						"layer": "\"HUD\"",
@@ -592,6 +516,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 694300971802517,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "Gema_Currency_TXT_shadow",
 						"layer": "\"HUD\"",
@@ -604,6 +529,7 @@
 					"id": "move-to-object",
 					"objectClass": "Gema_Currency_TXT_shadow",
 					"sid": 534134640135105,
+					"disabled": true,
 					"parameters": {
 						"where": "behind",
 						"object": "Gema_Currency_TXT"
@@ -613,6 +539,7 @@
 					"id": "pin-to-object-properties",
 					"objectClass": "Gema_Currency_TXT_shadow",
 					"sid": 679180008309835,
+					"disabled": true,
 					"behaviorType": "Pin",
 					"parameters": {
 						"pin-to": "Gema_Currency_TXT",
@@ -628,6 +555,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 531819635046290,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "ROOM_HUD",
 						"layer": "\"HUD\"",
@@ -640,6 +568,7 @@
 					"id": "spawn-another-object",
 					"objectClass": "ROOM_HUD",
 					"sid": 335775686760345,
+					"disabled": true,
 					"parameters": {
 						"object": "SCENE_TXT",
 						"layer": "\"HUD\"",
@@ -651,6 +580,7 @@
 					"id": "spawn-another-object",
 					"objectClass": "ROOM_HUD",
 					"sid": 493409285476918,
+					"disabled": true,
 					"parameters": {
 						"object": "SCENE_TXT_shadow",
 						"layer": "\"HUD\"",
@@ -662,6 +592,7 @@
 					"id": "move-to-object",
 					"objectClass": "SCENE_TXT_shadow",
 					"sid": 270683606880319,
+					"disabled": true,
 					"parameters": {
 						"where": "behind",
 						"object": "SCENE_TXT"
@@ -671,6 +602,7 @@
 					"id": "pin-to-object-properties",
 					"objectClass": "SCENE_TXT_shadow",
 					"sid": 143427952045549,
+					"disabled": true,
 					"behaviorType": "Pin",
 					"parameters": {
 						"pin-to": "SCENE_TXT",
@@ -680,42 +612,6 @@
 						"width-type": "no",
 						"height-type": "no",
 						"z": false
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 644452070141191,
-					"disabled": true,
-					"parameters": {
-						"object-to-create": "SCENE_TXT",
-						"layer": "\"HUD\"",
-						"x": "685",
-						"y": "27",
-						"create-hierarchy": false
-					}
-				},
-				{
-					"id": "move-to-object",
-					"objectClass": "SCENE_TXT",
-					"sid": 506170275031517,
-					"disabled": true,
-					"parameters": {
-						"where": "behind",
-						"object": "SCENE_TXT"
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 899247611775088,
-					"disabled": true,
-					"parameters": {
-						"object-to-create": "SCENE_TXT_shadow",
-						"layer": "\"HUD\"",
-						"x": "687",
-						"y": "29",
-						"create-hierarchy": false
 					}
 				},
 				{
@@ -1233,6 +1129,580 @@
 						}
 					],
 					"sid": 647243515228062
+				}
+			]
+		},
+		{
+			"functionName": "crea HUD ",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 873933462286759,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 228016644199174,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 530573100915425,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 477700586120482
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "EL NUMERO DE VIDAS"
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 911644515858465,
+									"parameters": {
+										"object-to-create": "Bola_HUD",
+										"layer": "\"HUD\"",
+										"x": "80",
+										"y": "24",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 464498480966133,
+									"parameters": {
+										"object-to-create": "LIFES_TXT",
+										"layer": "\"HUD\"",
+										"x": "95",
+										"y": "27",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 324802023444949,
+									"parameters": {
+										"object-to-create": "LIFES_TXT_shadow",
+										"layer": "\"HUD\"",
+										"x": "97",
+										"y": "29",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "move-to-object",
+									"objectClass": "LIFES_TXT_shadow",
+									"sid": 778365690918048,
+									"parameters": {
+										"where": "behind",
+										"object": "LIFES_TXT"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "LIFES_TXT_shadow",
+									"sid": 565427428604047,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "LIFES_TXT",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 767086999832843,
+									"parameters": {
+										"object-to-create": "Gema_HUD",
+										"layer": "\"HUD\"",
+										"x": "196",
+										"y": "24",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "move-to-bottom",
+									"objectClass": "Gema_HUD",
+									"sid": 207084471090641
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 905382396092830,
+									"parameters": {
+										"object-to-create": "Gema_Currency_TXT",
+										"layer": "\"HUD\"",
+										"x": "210",
+										"y": "27",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 376210282110474,
+									"parameters": {
+										"object-to-create": "Gema_Currency_TXT_shadow",
+										"layer": "\"HUD\"",
+										"x": "212",
+										"y": "29",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "move-to-object",
+									"objectClass": "Gema_Currency_TXT_shadow",
+									"sid": 456768683495032,
+									"parameters": {
+										"where": "behind",
+										"object": "Gema_Currency_TXT"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "Gema_Currency_TXT_shadow",
+									"sid": 396741972351571,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Gema_Currency_TXT",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 233804629278736,
+									"parameters": {
+										"object-to-create": "ROOM_HUD",
+										"layer": "\"HUD\"",
+										"x": "827",
+										"y": "24",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "ROOM_HUD",
+									"sid": 142453871118268,
+									"parameters": {
+										"object": "SCENE_TXT",
+										"layer": "\"HUD\"",
+										"image-point": "1",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "ROOM_HUD",
+									"sid": 990164597994747,
+									"parameters": {
+										"object": "SCENE_TXT_shadow",
+										"layer": "\"HUD\"",
+										"image-point": "2",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "move-to-object",
+									"objectClass": "SCENE_TXT_shadow",
+									"sid": 828167799222439,
+									"parameters": {
+										"where": "behind",
+										"object": "SCENE_TXT"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "SCENE_TXT_shadow",
+									"sid": 356954270896873,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "SCENE_TXT",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								}
+							],
+							"sid": 171704281584843
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 807666940068222,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 941877493217284,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 908005737488506,
+									"parameters": {
+										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+										"comparison": 0,
+										"value": "\"TIME\""
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 188891742130161,
+									"parameters": {
+										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+										"comparison": 0,
+										"value": "\"DOOM\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 110678757491387,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 708257195477836
+										}
+									],
+									"actions": [
+										{
+											"type": "comment",
+											"text": "EL NUMERO DE VIDAS"
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 289166743018502,
+											"parameters": {
+												"object-to-create": "Bola_HUD",
+												"layer": "\"HUD\"",
+												"x": "80",
+												"y": "24",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 136394418035178,
+											"parameters": {
+												"object-to-create": "LIFES_TXT",
+												"layer": "\"HUD\"",
+												"x": "95",
+												"y": "27",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 249759490325491,
+											"parameters": {
+												"object-to-create": "LIFES_TXT_shadow",
+												"layer": "\"HUD\"",
+												"x": "97",
+												"y": "29",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "LIFES_TXT_shadow",
+											"sid": 697156622203114,
+											"parameters": {
+												"where": "behind",
+												"object": "LIFES_TXT"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "LIFES_TXT_shadow",
+											"sid": 225528818467095,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "LIFES_TXT",
+												"x": true,
+												"y": true,
+												"angle": false,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 616777303791847,
+											"parameters": {
+												"object-to-create": "Gema_HUD",
+												"layer": "\"HUD\"",
+												"x": "196",
+												"y": "24",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "move-to-bottom",
+											"objectClass": "Gema_HUD",
+											"sid": 335576612895474
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 433445205651201,
+											"parameters": {
+												"object-to-create": "Gema_Currency_TXT",
+												"layer": "\"HUD\"",
+												"x": "210",
+												"y": "27",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 890330567430214,
+											"parameters": {
+												"object-to-create": "Gema_Currency_TXT_shadow",
+												"layer": "\"HUD\"",
+												"x": "212",
+												"y": "29",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "Gema_Currency_TXT_shadow",
+											"sid": 859264351536159,
+											"parameters": {
+												"where": "behind",
+												"object": "Gema_Currency_TXT"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "Gema_Currency_TXT_shadow",
+											"sid": 474409008372418,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "Gema_Currency_TXT",
+												"x": true,
+												"y": true,
+												"angle": false,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 852146950851487,
+											"parameters": {
+												"object-to-create": "ROOM_HUD",
+												"layer": "\"HUD\"",
+												"x": "827",
+												"y": "24",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "ROOM_HUD",
+											"sid": 951405771355465,
+											"parameters": {
+												"object": "SCENE_TXT",
+												"layer": "\"HUD\"",
+												"image-point": "1",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "ROOM_HUD",
+											"sid": 758086314110737,
+											"parameters": {
+												"object": "SCENE_TXT_shadow",
+												"layer": "\"HUD\"",
+												"image-point": "2",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "SCENE_TXT_shadow",
+											"sid": 816271411491449,
+											"parameters": {
+												"where": "behind",
+												"object": "SCENE_TXT"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "SCENE_TXT_shadow",
+											"sid": 859532087094411,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "SCENE_TXT",
+												"x": true,
+												"y": true,
+												"angle": false,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										}
+									],
+									"sid": 327767265475649
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 107151422721537,
+									"parameters": {
+										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+										"comparison": 0,
+										"value": "\"DEATH\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 680667880169347,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 620077686373071
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 370866037957246,
+											"parameters": {
+												"object-to-create": "ROOM_HUD",
+												"layer": "\"HUD\"",
+												"x": "827",
+												"y": "24",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "ROOM_HUD",
+											"sid": 569905817438483,
+											"parameters": {
+												"object": "SCENE_TXT",
+												"layer": "\"HUD\"",
+												"image-point": "1",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "ROOM_HUD",
+											"sid": 598033137001074,
+											"parameters": {
+												"object": "SCENE_TXT_shadow",
+												"layer": "\"HUD\"",
+												"image-point": "2",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "SCENE_TXT_shadow",
+											"sid": 667691011623750,
+											"parameters": {
+												"where": "behind",
+												"object": "SCENE_TXT"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "SCENE_TXT_shadow",
+											"sid": 804476554437481,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "SCENE_TXT",
+												"x": true,
+												"y": true,
+												"angle": false,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Gema_currency",
+											"sid": 938145349886060
+										}
+									],
+									"sid": 629727715028832
+								}
+							]
+						}
+					]
 				}
 			]
 		},
@@ -16501,6 +16971,7 @@
 											"id": "create-object",
 											"objectClass": "System",
 											"sid": 991478203517121,
+											"disabled": true,
 											"parameters": {
 												"object-to-create": "Bola_HUD",
 												"layer": "\"HUD\"",
@@ -16627,6 +17098,7 @@
 											"id": "create-object",
 											"objectClass": "System",
 											"sid": 950420315275816,
+											"disabled": true,
 											"parameters": {
 												"object-to-create": "Bola_HUD",
 												"layer": "\"HUD\"",
