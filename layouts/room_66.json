@@ -2403,55 +2403,9 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 761,
-					"instanceVariables": {
-						"velocidad": 3,
-						"direccion": 0,
-						"activa_TOPES": true,
-						"IZQ_tope": 215,
-						"DER_tope": 650,
-						"UP_tope": 0,
-						"DOWN_tope": 0
-					},
-					"behaviors": {
-						"Rotate": {
-							"properties": {
-								"speed": 180,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 560,
-						"y": 159,
-						"width": 59,
-						"height": 59,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "sierras",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 762,
 					"instanceVariables": {
-						"velocidad": 3,
+						"velocidad": 4,
 						"direccion": 0,
 						"activa_TOPES": true,
 						"IZQ_tope": 215,
@@ -2470,7 +2424,7 @@
 						}
 					},
 					"world": {
-						"x": 242,
+						"x": 262,
 						"y": 159,
 						"width": 59,
 						"height": 59,
@@ -2497,7 +2451,7 @@
 					},
 					"uid": 763,
 					"instanceVariables": {
-						"velocidad": 3,
+						"velocidad": 4,
 						"direccion": 0,
 						"activa_TOPES": true,
 						"IZQ_tope": 215,
@@ -2516,7 +2470,7 @@
 						}
 					},
 					"world": {
-						"x": 394,
+						"x": 444,
 						"y": 159,
 						"width": 59,
 						"height": 59,
@@ -2858,7 +2812,7 @@
 						"POS_Y_final": 400,
 						"POS_Y_inicial": 0,
 						"Ida_tiempo_tween": 2,
-						"Vuelta_tiempo_tween": 3
+						"Vuelta_tiempo_tween": 1
 					},
 					"behaviors": {
 						"Tween": {
@@ -2970,8 +2924,8 @@
 						"POS_x_inicial": 0,
 						"POS_Y_final": 400,
 						"POS_Y_inicial": 0,
-						"Ida_tiempo_tween": 3,
-						"Vuelta_tiempo_tween": 3
+						"Ida_tiempo_tween": 2,
+						"Vuelta_tiempo_tween": 1
 					},
 					"behaviors": {
 						"Tween": {
