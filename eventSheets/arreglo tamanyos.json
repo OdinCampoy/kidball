@@ -295,6 +295,118 @@
 					]
 				}
 			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ESTELA PARA EL MODO - DOOMSDAY -",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 529337803256022
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 148428408057292,
+					"parameters": {
+						"variable": "SPEEDRUN_mode_TRUE_FALSE"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 353154746934701,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 633633265489966,
+							"parameters": {
+								"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
+								"comparison": 0,
+								"value": "\"DOOM\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "guardamos la velocidad en esta  variable"
+						},
+						{
+							"id": "set-object-time-scale",
+							"objectClass": "System",
+							"sid": 610846833586254,
+							"parameters": {
+								"object": "bola",
+								"time-scale": "BOLA_time_scale+0.18"
+							}
+						}
+					],
+					"sid": 586827125140174,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 309760919002742,
+									"parameters": {
+										"interval-seconds": "0.08"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "bola",
+									"sid": 576136921762489,
+									"parameters": {
+										"object": "bola_estela_Doomsday",
+										"layer": "Self.LayerName",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "bola_estela_Doomsday",
+									"sid": 256463180547405,
+									"parameters": {
+										"animation": "bola.AnimationName",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "bola_estela_Doomsday",
+									"sid": 911830163547466,
+									"parameters": {
+										"frame-number": "3"
+									}
+								},
+								{
+									"id": "move-to-object",
+									"objectClass": "bola_estela_Doomsday",
+									"sid": 724901492100513,
+									"parameters": {
+										"where": "behind",
+										"object": "bola"
+									}
+								}
+							],
+							"sid": 124169527869772
+						}
+					]
+				}
+			]
 		}
 	],
 	"sid": 665978550481671
