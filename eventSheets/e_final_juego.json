@@ -10,6 +10,10 @@
 			"includeSheet": "e_Ratalaika"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "e_fuentes"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -25,126 +29,299 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "trigger-once-while-true",
+							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 641261976921226
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 894067001989675,
+							"sid": 761187686225832,
 							"parameters": {
-								"variable": "OPCION_ELEGIDA_YA",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "SLOTS_txt_leyenda_bACK",
-							"sid": 358072804333247,
-							"parameters": {
-								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,9)"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "FINAL_texto_congratulations",
-							"sid": 921614612628380,
-							"parameters": {
-								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,70)"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "FINAL_texto_juego_superado",
-							"sid": 208709480392175,
-							"parameters": {
-								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,71)\n&newline&newline&\nArray_Traducciones_IDOMAS.At(Idioma_numerico,72)\n&newline&newline&\nArray_Traducciones_IDOMAS.At(Idioma_numerico,73)\n&newline&newline&\nArray_Traducciones_IDOMAS.At(Idioma_numerico,74)\r\n&newline&newline&\n\"[size=18]\"&Array_Traducciones_IDOMAS.At(Idioma_numerico,75)&\"[/size]\"\n"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 272555080975083,
-							"parameters": {
-								"variable": "GAMEPAD_CENTER",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 769236055335516,
-							"parameters": {
-								"variable": "Portada_Opcion_Elegida",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 632059063898699,
-							"parameters": {
-								"variable": "Portada_Maquina_Estado",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 128094915689534,
-							"parameters": {
-								"variable": "Portada_portada_seleccion",
-								"value": "\"vacio\""
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 716663175836178,
-							"parameters": {
-								"variable": "Portada_opciones_seleccion",
-								"value": "\"vacio\""
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 933388442137315,
-							"parameters": {
-								"variable": "Game_Manager_Portada",
-								"value": "\"vacio\""
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 476667175899894,
-							"parameters": {
-								"seconds": "0.4"
-							}
-						},
-						{
-							"id": "tween-one-property",
-							"objectClass": "portada_imagenes_5",
-							"sid": 318064350852168,
-							"disabled": true,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"sale_titulo_juego\"",
-								"property": "offsetY",
-								"end-value": "100",
-								"time": "1",
-								"ease": "easeoutbounce",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no"
+								"variable": "Idioma_numerico",
+								"comparison": 1,
+								"value": "6"
 							}
 						}
 					],
-					"sid": 939356319951859
+					"actions": [],
+					"sid": 966733086140764,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 720124690267069
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 354847632860076,
+									"parameters": {
+										"variable": "OPCION_ELEGIDA_YA",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_txt_leyenda_bACK",
+									"sid": 341525820988628,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,9)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "FINAL_texto_congratulations",
+									"sid": 282849439533996,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,70)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "FINAL_texto_juego_superado",
+									"sid": 459999503882913,
+									"parameters": {
+										"text": "replace(Array_Traducciones_IDOMAS.At(Idioma_numerico,71),\"<\",newline)\n&newline&newline&\nreplace(Array_Traducciones_IDOMAS.At(Idioma_numerico,72),\"<\",newline)\n&newline&newline&\nreplace(Array_Traducciones_IDOMAS.At(Idioma_numerico,73),\"<\",newline)\n&newline&newline&\nreplace(Array_Traducciones_IDOMAS.At(Idioma_numerico,74),\"<\",newline)\r\n&newline&newline&\n\"[size=18]\"&Array_Traducciones_IDOMAS.At(Idioma_numerico,75)&\"[/size]\"\n"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 763106963374077,
+									"parameters": {
+										"variable": "GAMEPAD_CENTER",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 855374318284767,
+									"parameters": {
+										"variable": "Portada_Opcion_Elegida",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 452936740986704,
+									"parameters": {
+										"variable": "Portada_Maquina_Estado",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 578238105523791,
+									"parameters": {
+										"variable": "Portada_portada_seleccion",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 741576425962149,
+									"parameters": {
+										"variable": "Portada_opciones_seleccion",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 935108902938939,
+									"parameters": {
+										"variable": "Game_Manager_Portada",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 711792854353422,
+									"parameters": {
+										"seconds": "0.4"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "portada_imagenes_5",
+									"sid": 974358099012585,
+									"disabled": true,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"sale_titulo_juego\"",
+										"property": "offsetY",
+										"end-value": "100",
+										"time": "1",
+										"ease": "easeoutbounce",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								}
+							],
+							"sid": 713567894696321
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 652710265092923,
+							"parameters": {
+								"variable": "Idioma_numerico",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 930678723032353,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 120792763127960
+								}
+							],
+							"actions": [
+								{
+									"id": "set-font-face",
+									"objectClass": "FINAL_texto_juego_superado",
+									"sid": 743600774963775,
+									"disabled": true,
+									"parameters": {
+										"font-face": "\"MochiyPopOne-Regular\"",
+										"style": "normal"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 474823109870737,
+									"parameters": {
+										"variable": "OPCION_ELEGIDA_YA",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_txt_leyenda_bACK",
+									"sid": 355597166338372,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,9)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "FINAL_texto_congratulations",
+									"sid": 971024239106131,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,70)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "FINAL_texto_juego_superado",
+									"sid": 494112154116647,
+									"parameters": {
+										"text": "replace(Array_Traducciones_IDOMAS.At(Idioma_numerico,71),\"<\",newline)\n&newline&newline&\nreplace(Array_Traducciones_IDOMAS.At(Idioma_numerico,72),\"<\",newline)\n&newline&newline&\nreplace(Array_Traducciones_IDOMAS.At(Idioma_numerico,73),\"<\",newline)\n&newline&newline&\nreplace(Array_Traducciones_IDOMAS.At(Idioma_numerico,74),\"<\",newline)\r\n&newline&newline&\n\"[size=18]\"&Array_Traducciones_IDOMAS.At(Idioma_numerico,75)&\"[/size]\"\n"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 409278708111534,
+									"parameters": {
+										"variable": "GAMEPAD_CENTER",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 270760123327304,
+									"parameters": {
+										"variable": "Portada_Opcion_Elegida",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 405619086171842,
+									"parameters": {
+										"variable": "Portada_Maquina_Estado",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 221615557665305,
+									"parameters": {
+										"variable": "Portada_portada_seleccion",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 925059274338866,
+									"parameters": {
+										"variable": "Portada_opciones_seleccion",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 312144901105314,
+									"parameters": {
+										"variable": "Game_Manager_Portada",
+										"value": "\"vacio\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 737603456506783,
+									"parameters": {
+										"seconds": "0.4"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "portada_imagenes_5",
+									"sid": 147214517273773,
+									"disabled": true,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"sale_titulo_juego\"",
+										"property": "offsetY",
+										"end-value": "100",
+										"time": "1",
+										"ease": "easeoutbounce",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								}
+							],
+							"sid": 894212620822313
+						}
+					]
 				}
 			]
 		},

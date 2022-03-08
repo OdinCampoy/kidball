@@ -156,6 +156,10 @@
 			"includeSheet": "e_Ratalaika"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "e_fuentes"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -213,6 +217,14 @@
 									"parameters": {
 										"variable": "OPCION_ELEGIDA_YA",
 										"value": "false"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_txt_leyenda_Select",
+									"sid": 429728471964853,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,8)"
 									}
 								},
 								{
@@ -353,12 +365,12 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "PORTADA_play_TXT",
-									"sid": 657493699160576,
+									"sid": 341516906187970,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"\"",
 										"property": "offsetX",
-										"end-value": "600",
+										"end-value": "500",
 										"time": "0.6",
 										"ease": "easeoutexpo",
 										"destroy-on-complete": "no",
@@ -377,12 +389,12 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "PORTADA_speedrun_TXT",
-									"sid": 422988055082730,
+									"sid": 399874203289936,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"\"",
 										"property": "offsetX",
-										"end-value": "600",
+										"end-value": "500",
 										"time": "0.6",
 										"ease": "easeoutexpo",
 										"destroy-on-complete": "no",
@@ -401,12 +413,12 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "PORTADA_setting_TXT",
-									"sid": 491583718075020,
+									"sid": 811277822459994,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"\"",
 										"property": "offsetX",
-										"end-value": "600",
+										"end-value": "500",
 										"time": "0.6",
 										"ease": "easeoutexpo",
 										"destroy-on-complete": "no",
@@ -425,12 +437,12 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "PORTADA_credits_TXT",
-									"sid": 924992020733509,
+									"sid": 758868307004615,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"sale_texto_credits\"",
 										"property": "offsetX",
-										"end-value": "600",
+										"end-value": "500",
 										"time": "0.6",
 										"ease": "easeoutexpo",
 										"destroy-on-complete": "no",
@@ -803,6 +815,14 @@
 								},
 								{
 									"id": "set-text",
+									"objectClass": "SLOTS_txt_leyenda_Select",
+									"sid": 563888688078964,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,8)"
+									}
+								},
+								{
+									"id": "set-text",
 									"objectClass": "PORTADA_play_TXT",
 									"sid": 467545669166155,
 									"parameters": {
@@ -925,9 +945,9 @@
 								{
 									"id": "set-position",
 									"objectClass": "PORTADA_play_TXT",
-									"sid": 902431836903714,
+									"sid": 328872604820694,
 									"parameters": {
-										"x": "600",
+										"x": "500",
 										"y": "Self.Y"
 									}
 								},
@@ -943,9 +963,9 @@
 								{
 									"id": "set-position",
 									"objectClass": "PORTADA_speedrun_TXT",
-									"sid": 132829445837634,
+									"sid": 642422059953298,
 									"parameters": {
-										"x": "600",
+										"x": "500",
 										"y": "Self.Y"
 									}
 								},
@@ -961,9 +981,9 @@
 								{
 									"id": "set-position",
 									"objectClass": "PORTADA_setting_TXT",
-									"sid": 418524401861985,
+									"sid": 144069051245101,
 									"parameters": {
-										"x": "600",
+										"x": "500",
 										"y": "Self.Y"
 									}
 								},
@@ -979,9 +999,9 @@
 								{
 									"id": "set-position",
 									"objectClass": "PORTADA_credits_TXT",
-									"sid": 452450463082051,
+									"sid": 792336401002496,
 									"parameters": {
-										"x": "600",
+										"x": "500",
 										"y": "Self.Y"
 									}
 								},
@@ -8191,6 +8211,14 @@
 							"id": "set-text",
 							"objectClass": "PORTADA_Opc_Selected_txt",
 							"sid": 272004285839858,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,8)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SLOTS_txt_leyenda_Select",
+							"sid": 114644480537602,
 							"parameters": {
 								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,8)"
 							}

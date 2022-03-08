@@ -10,6 +10,10 @@
 			"includeSheet": "e_Ratalaika"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "e_fuentes"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -70,11 +74,11 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 292007499864114,
+					"sid": 423029892991116,
 					"parameters": {
 						"object-to-create": "Botones_Consola_iconos_A",
 						"layer": "\"sobreescribir file\"",
-						"x": "210",
+						"x": "650",
 						"y": "315",
 						"create-hierarchy": false
 					}
@@ -82,11 +86,11 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 661707242290161,
+					"sid": 999353138907795,
 					"parameters": {
 						"object-to-create": "Botones_Consola_iconos_B",
 						"layer": "\"sobreescribir file\"",
-						"x": "645",
+						"x": "210",
 						"y": "315",
 						"create-hierarchy": false
 					}
@@ -130,9 +134,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "SpeedRun_Sobreescribir_Panel_TXT",
-					"sid": 871728181907096,
+					"sid": 886276597869267,
 					"parameters": {
-						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,52)"
+						"text": "replace(Array_Traducciones_IDOMAS.At(Idioma_numerico,52),\"<\",newline)"
 					}
 				},
 				{

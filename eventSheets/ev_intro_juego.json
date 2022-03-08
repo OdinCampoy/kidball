@@ -40,6 +40,10 @@
 			"includeSheet": "e_Ratalaika"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "e_fuentes"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -49,6 +53,22 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Intro_Skip_Text",
+					"sid": 267878699314331,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Intro_Skip_Button",
+					"sid": 987375652670541,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
 				{
 					"id": "set-animation",
 					"objectClass": "bola",
@@ -205,6 +225,30 @@
 					"parameters": {
 						"variable": "TEMPO_INTRO_NUEVA",
 						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Intro_Skip_Text",
+					"sid": 671801424004458,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,55)"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Intro_Skip_Text",
+					"sid": 207785470910309,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Intro_Skip_Button",
+					"sid": 133170767647356,
+					"parameters": {
+						"visibility": "visible"
 					}
 				},
 				{

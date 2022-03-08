@@ -20,6 +20,10 @@
 			"includeSheet": "e_Ratalaika"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "e_fuentes"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -380,6 +384,11 @@
 							"parameters": {
 								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,9)"
 							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 971294463109858
 						}
 					],
 					"sid": 972526801441228

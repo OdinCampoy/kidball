@@ -1,0 +1,507 @@
+{
+	"name": "e_fuentes",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "fuentes",
+					"sid": 581066081242019
+				}
+			],
+			"actions": [],
+			"sid": 540257459195614,
+			"disabled": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 945594672819739,
+							"parameters": {
+								"variable": "Idioma_numerico",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-face",
+							"objectClass": "fuentes",
+							"sid": 337912773037003,
+							"parameters": {
+								"font-face": "\"MochiyPopOne-Regular.ttf\"",
+								"style": "normal"
+							}
+						}
+					],
+					"sid": 751631474339711,
+					"disabled": true
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "FUENTES  PARA LOS TEXTOS ADAPTADOS A IDIOMAS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "JAPONES",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 783414032941665,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "6"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 748348563189282,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "fuentes",
+											"sid": 148875845945542
+										}
+									],
+									"actions": [
+										{
+											"id": "set-font-face",
+											"objectClass": "fuentes",
+											"sid": 838384382985733,
+											"parameters": {
+												"font-face": "\"keifont\"",
+												"style": "normal"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+											"sid": 212661058421849,
+											"parameters": {
+												"width": "Self.TextWidth+len(Self.Text)"
+											}
+										},
+										{
+											"id": "set-font-face",
+											"objectClass": "fuentes",
+											"sid": 841855379622633,
+											"disabled": true,
+											"parameters": {
+												"font-face": "\"MochiyPopOne-Regular\"",
+												"style": "normal"
+											}
+										}
+									],
+									"sid": 443621638032258
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "HUD_TXT",
+											"sid": 913368362196674
+										}
+									],
+									"actions": [],
+									"sid": 808782214489842,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 739050525180623,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-font-size",
+													"objectClass": "HUD_TXT",
+													"sid": 625531061635622,
+													"parameters": {
+														"size-pt": "15"
+													}
+												}
+											],
+											"sid": 976737101590983,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 433307583090789,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-font-size",
+													"objectClass": "HUD_TXT",
+													"sid": 333579819494492,
+													"parameters": {
+														"size-pt": "12"
+													}
+												}
+											],
+											"sid": 521779811669436,
+											"disabled": true
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "HUD_TXT",
+											"sid": 912117785228332
+										}
+									],
+									"actions": [],
+									"sid": 460764994153123,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 995734114615299,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "HUD_TXT",
+													"sid": 923929914165169,
+													"parameters": {
+														"y": "Self.Y-3."
+													}
+												}
+											],
+											"sid": 321275577936258,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 120719318864349,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "HUD_TXT",
+													"sid": 416222718077505,
+													"parameters": {
+														"y": "Self.Y+4"
+													}
+												}
+											],
+											"sid": 263529565155729,
+											"disabled": true
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 309168347329125,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 937799168537136,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "fuentes",
+											"sid": 517331522643814
+										}
+									],
+									"actions": [
+										{
+											"id": "set-font-face",
+											"objectClass": "fuentes",
+											"sid": 314886336578572,
+											"parameters": {
+												"font-face": "\"keifont\"",
+												"style": "normal"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+											"sid": 626670082938421,
+											"parameters": {
+												"width": "Self.TextWidth+len(Self.Text)"
+											}
+										},
+										{
+											"id": "set-font-face",
+											"objectClass": "fuentes",
+											"sid": 831045048144984,
+											"disabled": true,
+											"parameters": {
+												"font-face": "\"MochiyPopOne-Regular\"",
+												"style": "normal"
+											}
+										}
+									],
+									"sid": 796194164350122
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "HUD_TXT",
+											"sid": 172331382504523
+										}
+									],
+									"actions": [],
+									"sid": 571664507858771,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 762118921338827,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-font-size",
+													"objectClass": "HUD_TXT",
+													"sid": 297105384936149,
+													"parameters": {
+														"size-pt": "16"
+													}
+												}
+											],
+											"sid": 703648094638323
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 933080798196681,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-font-size",
+													"objectClass": "HUD_TXT",
+													"sid": 155796139476176,
+													"parameters": {
+														"size-pt": "15"
+													}
+												}
+											],
+											"sid": 963127410248843
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "HUD_TXT",
+											"sid": 601435571235484
+										}
+									],
+									"actions": [],
+									"sid": 967143917539208,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 485854891938167,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "HUD_TXT",
+													"sid": 395999043309552,
+													"parameters": {
+														"y": "Self.Y-2"
+													}
+												}
+											],
+											"sid": 354622098600517
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 326485054088252,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "HUD_TXT",
+													"sid": 366457278551123,
+													"parameters": {
+														"y": "Self.Y+4"
+													}
+												}
+											],
+											"sid": 852195488478599
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "SpeedRun_TXT_in_Levels",
+											"sid": 509191305546183
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "SpeedRun_TXT_in_Levels",
+											"sid": 905273130451731,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										},
+										{
+											"id": "set-x",
+											"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+											"sid": 287999439146139,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										}
+									],
+									"sid": 743874718369327
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "Tutorial_Extra_Life_bOLA",
+											"sid": 188788709415037
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "Tutorial_Extra_Life_bOLA",
+											"sid": 820937919679819,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										}
+									],
+									"sid": 581038183652548
+								}
+							]
+						}
+					],
+					"sid": 997779921405096
+				}
+			],
+			"sid": 717449982966319
+		}
+	],
+	"sid": 306114194804570
+}
