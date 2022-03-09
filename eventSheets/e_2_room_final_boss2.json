@@ -136,9 +136,25 @@
 					"sid": 730258250467907
 				},
 				{
+					"id": "set-text",
+					"objectClass": "FINAL_BOSS_TUTORIAL",
+					"sid": 732069161651208,
+					"parameters": {
+						"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,54)"
+					}
+				},
+				{
 					"id": "wait-for-previous-actions",
 					"objectClass": "System",
 					"sid": 836709540310248
+				},
+				{
+					"id": "set-width",
+					"objectClass": "FINAL_BOSS_TUTORIAL",
+					"sid": 418333236763490,
+					"parameters": {
+						"width": "Self.TextWidth"
+					}
 				},
 				{
 					"id": "set-boolean-eventvar",
