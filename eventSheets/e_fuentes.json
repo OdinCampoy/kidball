@@ -1839,6 +1839,24 @@
 											"parameters": {
 												"width": "Self.TextWidth+len(Self.Text)"
 											}
+										},
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "SCENE_TXT",
+											"sid": 910639778942620,
+											"parameters": {
+												"object": "ROOM_HUD",
+												"image-point-optional": "1"
+											}
+										},
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "SCENE_TXT_shadow",
+											"sid": 696255306894825,
+											"parameters": {
+												"object": "ROOM_HUD",
+												"image-point-optional": "2"
+											}
 										}
 									],
 									"sid": 532600052823701,
@@ -1852,26 +1870,7 @@
 													"sid": 297979425450467
 												}
 											],
-											"actions": [
-												{
-													"id": "set-position-to-another-object",
-													"objectClass": "SCENE_TXT",
-													"sid": 913787643960558,
-													"parameters": {
-														"object": "ROOM_HUD",
-														"image-point-optional": "1"
-													}
-												},
-												{
-													"id": "set-position-to-another-object",
-													"objectClass": "SCENE_TXT_shadow",
-													"sid": 120066465139925,
-													"parameters": {
-														"object": "ROOM_HUD",
-														"image-point-optional": "2"
-													}
-												}
-											],
+											"actions": [],
 											"sid": 359532767947401
 										}
 									]
@@ -1892,6 +1891,24 @@
 											"sid": 605029182709560,
 											"parameters": {
 												"y": "Self.Y-1.5"
+											}
+										},
+										{
+											"id": "set-y",
+											"objectClass": "SCENE_TXT",
+											"sid": 500085627902338,
+											"disabled": true,
+											"parameters": {
+												"y": "Self.Y+4"
+											}
+										},
+										{
+											"id": "set-y",
+											"objectClass": "SCENE_TXT_shadow",
+											"sid": 384227958425522,
+											"disabled": true,
+											"parameters": {
+												"y": "Self.Y+4"
 											}
 										},
 										{
