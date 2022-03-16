@@ -37,139 +37,44 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 836076219796288,
-							"parameters": {
-								"key": 220
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 480323788473681,
-							"parameters": {
-								"layout": "2_Room_SAVE_GIRL"
-							}
-						}
-					],
-					"sid": 114198862249269
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 940134020317960,
-							"parameters": {
-								"key": 49
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 348518036442088,
-							"parameters": {
-								"layout": "Room_92"
-							}
-						}
-					],
-					"sid": 304331514805759
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 505276304872511,
+							"sid": 310429518930669,
 							"parameters": {
-								"key": 89
+								"key": 76
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "go-to-layout",
+							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 854037982702273,
+							"sid": 811638333483696,
 							"parameters": {
-								"layout": "FINAL_JUEGO"
+								"variable": "VIDAS_1",
+								"value": "1"
 							}
-						}
-					],
-					"sid": 168388058612670
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+						},
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 498831500658429,
-							"parameters": {
-								"key": 8
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "clear-storage",
-							"objectClass": "LocalStorage",
-							"sid": 638859989313894
-						}
-					],
-					"sid": 401342880966325
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 835408329041687,
-							"parameters": {
-								"key": 46
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "clear-storage",
-							"objectClass": "LocalStorage",
-							"sid": 817089939701993
-						}
-					],
-					"sid": 902070171882960
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-x-seconds",
+							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 519107165541442,
+							"sid": 421311514322958,
 							"parameters": {
-								"interval-seconds": "0.2"
+								"variable": "VIDAS_2",
+								"value": "1"
 							}
-						}
-					],
-					"actions": [
+						},
 						{
-							"id": "set-text",
-							"objectClass": "FPS_TXT",
-							"sid": 720423892428385,
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 424771579195352,
 							"parameters": {
-								"text": "fps"
+								"variable": "VIDAS_3",
+								"value": "1"
 							}
 						}
 					],
-					"sid": 876170485492920
+					"sid": 862170607796792
 				},
 				{
 					"eventType": "block",
@@ -244,73 +149,6 @@
 						}
 					],
 					"sid": 192481669582729
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 326111525830472,
-							"parameters": {
-								"key": 82
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 887351741684870,
-							"parameters": {
-								"layout": "FINAL_JUEGO"
-							}
-						}
-					],
-					"sid": 660150214216099
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 970868790316556,
-							"parameters": {
-								"key": 48
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 636314581471212,
-							"parameters": {
-								"variable": "VIDAS_1",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 465682562490337,
-							"parameters": {
-								"variable": "VIDAS_2",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 791032092562098,
-							"parameters": {
-								"variable": "VIDAS_3",
-								"value": "2"
-							}
-						}
-					],
-					"sid": 229889269262201
 				}
 			],
 			"sid": 442816640533803

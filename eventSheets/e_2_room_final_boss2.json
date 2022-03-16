@@ -275,6 +275,23 @@
 					}
 				},
 				{
+					"id": "set-animation",
+					"objectClass": "TUTORIAL_FINAL_BOSS",
+					"sid": 519948874951782,
+					"parameters": {
+						"animation": "\"tutorial_2\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "TUTORIAL_FINAL_BOSS",
+					"sid": 100779846297482,
+					"parameters": {
+						"frame-number": "Idioma_numerico"
+					}
+				},
+				{
 					"id": "pin-to-object-properties",
 					"objectClass": "JEFE_FINAL2",
 					"sid": 148222409899048,
@@ -380,22 +397,6 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "left_arrow",
-					"sid": 816980036428418,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Right_arrow",
-					"sid": 185475418942863,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
 					"id": "play-by-name",
 					"objectClass": "Audio",
 					"sid": 507529563483296,
@@ -422,6 +423,7 @@
 					"id": "compare-eventvar",
 					"objectClass": "System",
 					"sid": 671713581622906,
+					"disabled": true,
 					"parameters": {
 						"variable": "PASOS_FINAL_BOSS",
 						"comparison": 0,
@@ -433,9 +435,9 @@
 				{
 					"id": "set-y",
 					"objectClass": "RESPLANDOR",
-					"sid": 639398047560598,
+					"sid": 982705430055686,
 					"parameters": {
-						"y": "Self.Y-15"
+						"y": "Self.Y-16"
 					}
 				}
 			],
@@ -993,15 +995,6 @@
 							],
 							"actions": [
 								{
-									"id": "set-animation",
-									"objectClass": "TUTORIAL_FINAL_BOSS",
-									"sid": 919676567251975,
-									"parameters": {
-										"animation": "\"tutorial_2\"",
-										"from": "beginning"
-									}
-								},
-								{
 									"id": "tween-one-property",
 									"objectClass": "TUTORIAL_FINAL_BOSS",
 									"sid": 874108539908082,
@@ -1044,15 +1037,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "TUTORIAL_FINAL_BOSS",
-									"sid": 191932195767165,
-									"parameters": {
-										"animation": "\"tutorial_2\"",
-										"from": "beginning"
-									}
-								},
 								{
 									"id": "tween-one-property",
 									"objectClass": "TUTORIAL_FINAL_BOSS",

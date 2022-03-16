@@ -55,7 +55,6 @@
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 576499705955760,
-					"disabled": true,
 					"parameters": {
 						"variable": "BOTONES_TESTEO",
 						"value": "\"XBOX\""
@@ -65,6 +64,7 @@
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 640715453352141,
+					"disabled": true,
 					"parameters": {
 						"variable": "BOTONES_TESTEO",
 						"value": "\"PSX\""
@@ -83,6 +83,64 @@
 			],
 			"sid": 539259772103980,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 763484014218383,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"INTRO JUEGO\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 598064392005432,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Si no es para Playstation Borra el texto \"OPTIONS\" que sale encima del boton de Playstation"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 502055288083044,
+									"parameters": {
+										"TestValue": "PS4"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-environment-sys",
+									"objectClass": "RG19",
+									"sid": 208280681789229,
+									"parameters": {
+										"TestValue": "PS5"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Intro_OPTIONS_TEXT",
+									"sid": 475594977518624
+								}
+							],
+							"sid": 835864576614125
+						},
+						{
+							"eventType": "comment",
+							"text": "Si no es para Playstation Borra el texto \"OPTIONS\" que sale encima del boton de Playstation"
+						}
+					]
+				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -1909,7 +1967,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 1 - COGE LA PRIMERA LLAVE -",
+					"title": "LOGRO 1 - COGE LA PRIMERA LLAVE",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -1950,32 +2008,47 @@
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "on-collision-with-another-object",
+													"id": "is-overlapping-another-object",
 													"objectClass": "bola",
-													"sid": 805912643928787,
+													"sid": 127416180579472,
 													"parameters": {
-														"object": "puerta"
+														"object": "llave"
 													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 942443093128096,
+											"children": [
 												{
-													"callFunction": "DEMO consigue logro",
-													"sid": 427154877895651,
-													"parameters": [
-														"0"
-													]
-												},
-												{
-													"id": "set-achievement",
-													"objectClass": "RG19",
-													"sid": 167200657604510,
-													"parameters": {
-														"achievement-name": "\"LOGRO 1\""
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 592438066581124
+														}
+													],
+													"actions": [
+														{
+															"id": "set-achievement",
+															"objectClass": "RG19",
+															"sid": 793928934961391,
+															"parameters": {
+																"achievement-name": "\"LOGRO 1\""
+															}
+														},
+														{
+															"callFunction": "DEMO consigue logro",
+															"sid": 977142782917950,
+															"disabled": true,
+															"parameters": [
+																"0"
+															]
+														}
+													],
+													"sid": 112482503658500
 												}
-											],
-											"sid": 942443093128096
+											]
 										}
 									]
 								}
@@ -2065,6 +2138,7 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 156416392612681,
+													"disabled": true,
 													"parameters": [
 														"1"
 													]
@@ -2141,6 +2215,7 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 948789851494483,
+													"disabled": true,
 													"parameters": [
 														"2"
 													]
@@ -2290,6 +2365,7 @@
 																				{
 																					"callFunction": "DEMO consigue logro",
 																					"sid": 146109463855406,
+																					"disabled": true,
 																					"parameters": [
 																						"3"
 																					]
@@ -2349,6 +2425,7 @@
 																				{
 																					"callFunction": "DEMO consigue logro",
 																					"sid": 324167440306101,
+																					"disabled": true,
 																					"parameters": [
 																						"3"
 																					]
@@ -2506,6 +2583,7 @@
 																				{
 																					"callFunction": "DEMO consigue logro",
 																					"sid": 360285215714064,
+																					"disabled": true,
 																					"parameters": [
 																						"4"
 																					]
@@ -2609,6 +2687,7 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 607636186453643,
+													"disabled": true,
 													"parameters": [
 														"5"
 													]
@@ -2685,6 +2764,7 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 577681098081025,
+													"disabled": true,
 													"parameters": [
 														"6"
 													]
@@ -2780,6 +2860,7 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 399236627894519,
+													"disabled": true,
 													"parameters": [
 														"7"
 													]
@@ -2856,6 +2937,7 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 708168890944260,
+													"disabled": true,
 													"parameters": [
 														"8"
 													]
@@ -2951,6 +3033,7 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 757081799190480,
+													"disabled": true,
 													"parameters": [
 														"9"
 													]
@@ -3027,6 +3110,7 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 619330945645803,
+													"disabled": true,
 													"parameters": [
 														"10"
 													]

@@ -69,7 +69,7 @@
 			"eventType": "variable",
 			"name": "SonidoFX_Volumen_Master",
 			"type": "number",
-			"initialValue": "8",
+			"initialValue": "5",
 			"comment": "Volumen de los FX",
 			"isStatic": false,
 			"isConstant": false,
@@ -89,7 +89,7 @@
 			"eventType": "variable",
 			"name": "Musica_Volumen_Master",
 			"type": "number",
-			"initialValue": "8",
+			"initialValue": "5",
 			"comment": "Volumen de la musica",
 			"isStatic": false,
 			"isConstant": false,
@@ -142,6 +142,26 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 442164752577802
+		},
+		{
+			"eventType": "variable",
+			"name": "Volumen_base_musica",
+			"type": "number",
+			"initialValue": "50",
+			"comment": "es la variable para hacer el calculo de la musica",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 235892468407313
+		},
+		{
+			"eventType": "variable",
+			"name": "Volumen_base_sonidoFx",
+			"type": "number",
+			"initialValue": "50",
+			"comment": "es la variable para hacer el calculo de la musica",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 330460278998120
 		},
 		{
 			"eventType": "include",
@@ -204,6 +224,14 @@
 								{
 									"callFunction": "IDIOMA - JUEGO",
 									"sid": 933517655824844
+								},
+								{
+									"callFunction": "VOLUMEN MASTER MUSICA",
+									"sid": 522837199908677
+								},
+								{
+									"callFunction": "VOLUMEN MASTER SONIDO FX",
+									"sid": 102934626464916
 								},
 								{
 									"id": "wait-for-previous-actions",
@@ -6748,10 +6776,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 494016698574732,
+									"sid": 879255094861462,
 									"parameters": {
 										"variable": "VOLUMEN_MASTER_FX",
-										"value": "-35+(SonidoFX_Volumen_Master*5)"
+										"value": "-Volumen_base_sonidoFx+(SonidoFX_Volumen_Master*5)"
 									}
 								},
 								{
@@ -6798,10 +6826,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 537674581519127,
+									"sid": 755686521314155,
 									"parameters": {
 										"variable": "VOLUMEN_MASTER_FX",
-										"value": "-35+(SonidoFX_Volumen_Master*5)"
+										"value": "-Volumen_base_sonidoFx+(SonidoFX_Volumen_Master*5)"
 									}
 								},
 								{
@@ -6886,10 +6914,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 114630864631063,
+											"sid": 150244617757587,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -6943,10 +6971,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 129621344191666,
+											"sid": 100596325294648,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7000,10 +7028,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 727740302524331,
+											"sid": 401591943051413,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7057,10 +7085,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 878345377464945,
+											"sid": 802185585577640,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7114,10 +7142,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 387556430744118,
+											"sid": 565913585158231,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7171,10 +7199,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 598434527034058,
+											"sid": 322241727846748,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7229,10 +7257,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 275815992876370,
+											"sid": 383192210886086,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7286,10 +7314,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 342389649360256,
+											"sid": 331214213847663,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7343,10 +7371,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 340993923485683,
+											"sid": 538110277997883,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7400,10 +7428,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 871788885371896,
+											"sid": 364037688348535,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7457,10 +7485,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 778379019586017,
+											"sid": 518151860283685,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7524,10 +7552,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 510910910850569,
+											"sid": 134804605193562,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7581,10 +7609,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 996787202661900,
+											"sid": 810491583383071,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7638,10 +7666,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 586334959273385,
+											"sid": 793490618704553,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7695,10 +7723,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 365491428534562,
+											"sid": 375818182337726,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7752,10 +7780,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 809436746493824,
+											"sid": 256859434120981,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7809,10 +7837,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 899940012060912,
+											"sid": 271580118142589,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7866,10 +7894,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 488446720701460,
+											"sid": 155819528547858,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7923,10 +7951,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 610651568370437,
+											"sid": 179829291863979,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -7980,10 +8008,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 841718939588660,
+											"sid": 522261635470776,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -8037,10 +8065,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 815197255354279,
+											"sid": 176858757029770,
 											"parameters": {
 												"variable": "VOLUMEN_MASTER_MUSIC",
-												"value": "-35+(Musica_Volumen_Master*5)"
+												"value": "-Volumen_base_musica+(Musica_Volumen_Master*5)"
 											}
 										},
 										{
@@ -8154,9 +8182,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "PORTADA_Opc_SoundFx_txt",
-							"sid": 561808811199264,
+							"sid": 788488525249410,
 							"parameters": {
-								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,4)"
+								"text": "replace(Array_Traducciones_IDOMAS.At(Idioma_numerico,4),\"*\",\" \")"
 							}
 						},
 						{

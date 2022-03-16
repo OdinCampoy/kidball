@@ -370,22 +370,6 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "left_arrow",
-					"sid": 988462502230111,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Right_arrow",
-					"sid": 943578123015209,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
 					"id": "set-boolean-instvar",
 					"objectClass": "puerta",
 					"sid": 225750083290773,
@@ -1048,17 +1032,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "SCENE_TXT",
-									"sid": 966336642715631,
+									"sid": 245211488252317,
 									"parameters": {
-										"text": "replace(LayoutName,\"Room_\",Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" \")"
+										"text": "replace(LayoutName,\"Room_\",Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\"  \")"
 									}
 								},
 								{
 									"id": "set-text",
 									"objectClass": "SCENE_TXT_shadow",
-									"sid": 490167110477451,
+									"sid": 760444083489253,
 									"parameters": {
-										"text": "replace(LayoutName,\"Room_\",Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" \")"
+										"text": "replace(LayoutName,\"Room_\",Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\"  \")"
 									}
 								}
 							],
@@ -1084,17 +1068,17 @@
 						{
 							"id": "set-text",
 							"objectClass": "SCENE_TXT",
-							"sid": 444339956373765,
+							"sid": 617487281706387,
 							"parameters": {
-								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" 50\""
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\"  50\""
 							}
 						},
 						{
 							"id": "set-text",
 							"objectClass": "SCENE_TXT_shadow",
-							"sid": 378006178728766,
+							"sid": 742421104683379,
 							"parameters": {
-								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" 50\""
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\"  50\""
 							}
 						}
 					],
@@ -1118,17 +1102,17 @@
 						{
 							"id": "set-text",
 							"objectClass": "SCENE_TXT",
-							"sid": 687352465478486,
+							"sid": 882745192373729,
 							"parameters": {
-								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" 100\""
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\"  100\""
 							}
 						},
 						{
 							"id": "set-text",
 							"objectClass": "SCENE_TXT_shadow",
-							"sid": 591397207337903,
+							"sid": 339409936836122,
 							"parameters": {
-								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\" 100\""
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,15)&\"  100\""
 							}
 						}
 					],
@@ -11773,12 +11757,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 635431681816794,
+											"sid": 770560984609001,
 											"parameters": {
 												"object-to-create": "GAMEOVER_gameover_TXT",
 												"layer": "\"HUD\"",
 												"x": "431",
-												"y": "-428",
+												"y": "-415",
 												"create-hierarchy": false
 											}
 										},
@@ -11854,12 +11838,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 225930674255884,
+											"sid": 411973042864425,
 											"parameters": {
 												"object-to-create": "GAMEOVER_continue_txt",
 												"layer": "\"HUD\"",
-												"x": "374",
-												"y": "-272",
+												"x": "368",
+												"y": "-269",
 												"create-hierarchy": false
 											}
 										},
@@ -11908,12 +11892,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 446055482149655,
+											"sid": 220203350591244,
 											"parameters": {
 												"object-to-create": "GAMEOVER_Back_txt",
 												"layer": "\"HUD\"",
-												"x": "374",
-												"y": "-222",
+												"x": "368",
+												"y": "-219",
 												"create-hierarchy": false
 											}
 										},
@@ -11981,6 +11965,43 @@
 												"variable": "PAUSA",
 												"value": "1"
 											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_gameover_TXT",
+											"sid": 715262890907263,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,88)"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_tryAgain_TXT",
+											"sid": 294195845383418,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,89)"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_Back_txt",
+											"sid": 755884097478163,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,90)"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_continue_txt",
+											"sid": 103853714666430,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,91)"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 773999925032659
 										},
 										{
 											"id": "wait",
@@ -12127,12 +12148,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 565964534493509,
+											"sid": 315249488599243,
 											"parameters": {
 												"object-to-create": "GAMEOVER_gameover_TXT",
 												"layer": "\"HUD\"",
 												"x": "431",
-												"y": "-428",
+												"y": "-415",
 												"create-hierarchy": false
 											}
 										},
@@ -12208,12 +12229,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 195643337115576,
+											"sid": 430016267736352,
 											"parameters": {
 												"object-to-create": "GAMEOVER_continue_txt",
 												"layer": "\"HUD\"",
-												"x": "374",
-												"y": "-272",
+												"x": "368",
+												"y": "-269",
 												"create-hierarchy": false
 											}
 										},
@@ -12270,12 +12291,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 755062215399139,
+											"sid": 389165040019187,
 											"parameters": {
 												"object-to-create": "GAMEOVER_Back_txt",
 												"layer": "\"HUD\"",
-												"x": "374",
-												"y": "-222",
+												"x": "368",
+												"y": "-219",
 												"create-hierarchy": false
 											}
 										},
@@ -12343,6 +12364,43 @@
 												"variable": "PAUSA",
 												"value": "1"
 											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_gameover_TXT",
+											"sid": 333674744573867,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,88)"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_tryAgain_TXT",
+											"sid": 190195077265725,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,89)"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_Back_txt",
+											"sid": 140186915560818,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,90)"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_continue_txt",
+											"sid": 926983293431080,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,91)"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 895132907069395
 										},
 										{
 											"id": "wait",
@@ -12489,12 +12547,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 561880084623813,
+											"sid": 481476419651277,
 											"parameters": {
 												"object-to-create": "GAMEOVER_gameover_TXT",
 												"layer": "\"HUD\"",
 												"x": "431",
-												"y": "-428",
+												"y": "-415",
 												"create-hierarchy": false
 											}
 										},
@@ -12570,12 +12628,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 753760396941127,
+											"sid": 969804902791731,
 											"parameters": {
 												"object-to-create": "GAMEOVER_continue_txt",
 												"layer": "\"HUD\"",
-												"x": "374",
-												"y": "-272",
+												"x": "368",
+												"y": "-269",
 												"create-hierarchy": false
 											}
 										},
@@ -12632,12 +12690,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 573674172255438,
+											"sid": 812309619705709,
 											"parameters": {
 												"object-to-create": "GAMEOVER_Back_txt",
 												"layer": "\"HUD\"",
-												"x": "374",
-												"y": "-222",
+												"x": "368",
+												"y": "-219",
 												"create-hierarchy": false
 											}
 										},
@@ -12705,6 +12763,43 @@
 												"variable": "PAUSA",
 												"value": "1"
 											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_gameover_TXT",
+											"sid": 679484775270145,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,88)"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_tryAgain_TXT",
+											"sid": 969732266343493,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,89)"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_Back_txt",
+											"sid": 212691003331693,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,90)"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "GAMEOVER_continue_txt",
+											"sid": 386143636243370,
+											"parameters": {
+												"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,91)"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 885805294797727
 										},
 										{
 											"id": "wait",
@@ -14523,11 +14618,11 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 895738224959716,
+															"sid": 482377321059663,
 															"parameters": {
 																"audio-file": "Gemas_Pick_up",
 																"loop": "not-looping",
-																"volume": "0",
+																"volume": "VOLUMEN_MASTER_FX",
 																"tag-optional": "\"\""
 															}
 														}
@@ -14796,11 +14891,11 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 454164448583315,
+															"sid": 644327961328937,
 															"parameters": {
 																"audio-file": "Gemas_Pick_up",
 																"loop": "not-looping",
-																"volume": "0",
+																"volume": "VOLUMEN_MASTER_FX",
 																"tag-optional": "\"\""
 															}
 														}
@@ -15069,11 +15164,11 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 144374167241780,
+															"sid": 460780328450585,
 															"parameters": {
 																"audio-file": "Gemas_Pick_up",
 																"loop": "not-looping",
-																"volume": "0",
+																"volume": "VOLUMEN_MASTER_FX",
 																"tag-optional": "\"\""
 															}
 														}
@@ -15341,11 +15436,11 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 848577732578012,
+															"sid": 106478093952881,
 															"parameters": {
 																"audio-file": "Gemas_Pick_up",
 																"loop": "not-looping",
-																"volume": "0",
+																"volume": "VOLUMEN_MASTER_FX",
 																"tag-optional": "\"\""
 															}
 														}

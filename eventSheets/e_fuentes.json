@@ -2,55 +2,325 @@
 	"name": "e_fuentes",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-on-screen",
-					"objectClass": "fuentes",
-					"sid": 581066081242019
-				}
-			],
-			"actions": [],
-			"sid": 540257459195614,
-			"disabled": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 945594672819739,
-							"parameters": {
-								"variable": "Idioma_numerico",
-								"comparison": 0,
-								"value": "6"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-font-face",
-							"objectClass": "fuentes",
-							"sid": 337912773037003,
-							"parameters": {
-								"font-face": "\"MochiyPopOne-Regular.ttf\"",
-								"style": "normal"
-							}
-						}
-					],
-					"sid": 751631474339711,
-					"disabled": true
-				}
-			]
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "FUENTES  PARA LOS TEXTOS ADAPTADOS A IDIOMAS",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "RUSO",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 223469545422327,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 613940461256792,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "fuentes",
+											"sid": 158221932933893
+										}
+									],
+									"actions": [
+										{
+											"id": "set-font-face",
+											"objectClass": "fuentes",
+											"sid": 922793474382135,
+											"parameters": {
+												"font-face": "\"keifont\"",
+												"style": "normal"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+											"sid": 904266483503344,
+											"parameters": {
+												"width": "Self.TextWidth+len(Self.Text)"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "FINAL_BOSS_TUTORIAL",
+											"sid": 393628295640393,
+											"parameters": {
+												"width": "Self.TextWidth+len(Self.Text)"
+											}
+										}
+									],
+									"sid": 265575017807334
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "HUD_TXT",
+											"sid": 881266204536757
+										}
+									],
+									"actions": [],
+									"sid": 992587963753523,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 422381746918869,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-font-size",
+													"objectClass": "HUD_TXT",
+													"sid": 103952991401833,
+													"parameters": {
+														"size-pt": "16"
+													}
+												}
+											],
+											"sid": 664121234803874
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 241706242102024,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-font-size",
+													"objectClass": "HUD_TXT",
+													"sid": 607923215050432,
+													"parameters": {
+														"size-pt": "15"
+													}
+												}
+											],
+											"sid": 372843586812515
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "HUD_TXT",
+											"sid": 326369211341587
+										}
+									],
+									"actions": [],
+									"sid": 131538320620646,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 511753209803946,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "HUD_TXT",
+													"sid": 812010394255822,
+													"parameters": {
+														"y": "Self.Y-3"
+													}
+												}
+											],
+											"sid": 381632756595127
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 899050992028890,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "HUD_TXT",
+													"sid": 160874147765042,
+													"parameters": {
+														"y": "Self.Y+4"
+													}
+												}
+											],
+											"sid": 425349634972988
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "SpeedRun_TXT_in_Levels",
+											"sid": 923565409808703
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "SpeedRun_TXT_in_Levels",
+											"sid": 277629329803993,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										},
+										{
+											"id": "set-x",
+											"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+											"sid": 149660766705303,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										}
+									],
+									"sid": 670640406731058
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "ROOM_HUD",
+											"sid": 926727710896539
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ROOM_HUD",
+											"sid": 304060387782677,
+											"parameters": {
+												"frame-number": "3"
+											}
+										},
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "SCENE_TXT",
+											"sid": 528825820036685,
+											"parameters": {
+												"object": "ROOM_HUD",
+												"image-point-optional": "1"
+											}
+										},
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "SCENE_TXT_shadow",
+											"sid": 588660516234018,
+											"parameters": {
+												"object": "ROOM_HUD",
+												"image-point-optional": "2"
+											}
+										}
+									],
+									"sid": 134781754118152
+								},
+								{
+									"eventType": "comment",
+									"text": "pregunta en game over"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "GAMEOVER_tryAgain_TXT",
+											"sid": 968682922353752
+										}
+									],
+									"actions": [
+										{
+											"id": "set-font-size",
+											"objectClass": "GAMEOVER_tryAgain_TXT",
+											"sid": 464694835285070,
+											"parameters": {
+												"size-pt": "18"
+											}
+										}
+									],
+									"sid": 186408597612937
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "Tutorial_Extra_Life_bOLA",
+											"sid": 921226391708159
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "Tutorial_Extra_Life_bOLA",
+											"sid": 280558342390176,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										}
+									],
+									"sid": 670759732314648
+								}
+							]
+						}
+					],
+					"sid": 242933374651443
+				},
 				{
 					"eventType": "group",
 					"disabled": false,
@@ -64,7 +334,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 783414032941665,
+									"sid": 393269955740882,
 									"parameters": {
 										"variable": "Idioma_numerico",
 										"comparison": 0,
@@ -73,7 +343,7 @@
 								}
 							],
 							"actions": [],
-							"sid": 748348563189282,
+							"sid": 187211922540009,
 							"children": [
 								{
 									"eventType": "block",
@@ -81,14 +351,14 @@
 										{
 											"id": "is-on-screen",
 											"objectClass": "fuentes",
-											"sid": 148875845945542
+											"sid": 161054961457986
 										}
 									],
 									"actions": [
 										{
 											"id": "set-font-face",
 											"objectClass": "fuentes",
-											"sid": 838384382985733,
+											"sid": 632080978444586,
 											"parameters": {
 												"font-face": "\"keifont\"",
 												"style": "normal"
@@ -97,23 +367,21 @@
 										{
 											"id": "set-width",
 											"objectClass": "PORTADA_Opc_Leng_Txt_Center",
-											"sid": 212661058421849,
+											"sid": 122703862190358,
 											"parameters": {
 												"width": "Self.TextWidth+len(Self.Text)"
 											}
 										},
 										{
-											"id": "set-font-face",
-											"objectClass": "fuentes",
-											"sid": 841855379622633,
-											"disabled": true,
+											"id": "set-width",
+											"objectClass": "FINAL_BOSS_TUTORIAL",
+											"sid": 402507085079548,
 											"parameters": {
-												"font-face": "\"MochiyPopOne-Regular\"",
-												"style": "normal"
+												"width": "Self.TextWidth+len(Self.Text)"
 											}
 										}
 									],
-									"sid": 443621638032258
+									"sid": 231713814232151
 								},
 								{
 									"eventType": "block",
@@ -121,12 +389,11 @@
 										{
 											"id": "is-on-screen",
 											"objectClass": "HUD_TXT",
-											"sid": 913368362196674
+											"sid": 298217033072201
 										}
 									],
 									"actions": [],
-									"sid": 808782214489842,
-									"disabled": true,
+									"sid": 851409542393991,
 									"children": [
 										{
 											"eventType": "block",
@@ -134,7 +401,7 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 739050525180623,
+													"sid": 522629816585979,
 													"parameters": {
 														"first-value": "LayoutName",
 														"comparison": 1,
@@ -146,14 +413,13 @@
 												{
 													"id": "set-font-size",
 													"objectClass": "HUD_TXT",
-													"sid": 625531061635622,
+													"sid": 548834856583023,
 													"parameters": {
-														"size-pt": "15"
+														"size-pt": "16"
 													}
 												}
 											],
-											"sid": 976737101590983,
-											"disabled": true
+											"sid": 953589532593987
 										},
 										{
 											"eventType": "block",
@@ -161,7 +427,7 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 433307583090789,
+													"sid": 742048817338633,
 													"parameters": {
 														"first-value": "LayoutName",
 														"comparison": 0,
@@ -173,14 +439,13 @@
 												{
 													"id": "set-font-size",
 													"objectClass": "HUD_TXT",
-													"sid": 333579819494492,
+													"sid": 904009615860633,
 													"parameters": {
-														"size-pt": "12"
+														"size-pt": "15"
 													}
 												}
 											],
-											"sid": 521779811669436,
-											"disabled": true
+											"sid": 976245092096158
 										}
 									]
 								},
@@ -190,12 +455,11 @@
 										{
 											"id": "on-created",
 											"objectClass": "HUD_TXT",
-											"sid": 912117785228332
+											"sid": 363009598512755
 										}
 									],
 									"actions": [],
-									"sid": 460764994153123,
-									"disabled": true,
+									"sid": 490012543818027,
 									"children": [
 										{
 											"eventType": "block",
@@ -203,7 +467,7 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 995734114615299,
+													"sid": 835780918687042,
 													"parameters": {
 														"first-value": "LayoutName",
 														"comparison": 1,
@@ -215,14 +479,13 @@
 												{
 													"id": "set-y",
 													"objectClass": "HUD_TXT",
-													"sid": 923929914165169,
+													"sid": 728416262917433,
 													"parameters": {
 														"y": "Self.Y-3."
 													}
 												}
 											],
-											"sid": 321275577936258,
-											"disabled": true
+											"sid": 537460617486501
 										},
 										{
 											"eventType": "block",
@@ -230,7 +493,7 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 120719318864349,
+													"sid": 356374104281014,
 													"parameters": {
 														"first-value": "LayoutName",
 														"comparison": 0,
@@ -242,16 +505,976 @@
 												{
 													"id": "set-y",
 													"objectClass": "HUD_TXT",
-													"sid": 416222718077505,
+													"sid": 141433705790123,
 													"parameters": {
 														"y": "Self.Y+4"
 													}
 												}
 											],
-											"sid": 263529565155729,
-											"disabled": true
+											"sid": 842979610457855
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "SpeedRun_TXT_in_Levels",
+											"sid": 894204879765840
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "SpeedRun_TXT_in_Levels",
+											"sid": 273403796215570,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										},
+										{
+											"id": "set-x",
+											"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+											"sid": 251782797920716,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										}
+									],
+									"sid": 922516012360063
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 562621575182361
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 193617904548674,
+											"parameters": {
+												"y": "246"
+											}
+										}
+									],
+									"sid": 222901571069448
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "ROOM_HUD",
+											"sid": 371272654928841
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ROOM_HUD",
+											"sid": 705234794920928,
+											"parameters": {
+												"frame-number": "0"
+											}
+										},
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "SCENE_TXT",
+											"sid": 457046615443037,
+											"parameters": {
+												"object": "ROOM_HUD",
+												"image-point-optional": "1"
+											}
+										},
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "SCENE_TXT_shadow",
+											"sid": 725130674246063,
+											"parameters": {
+												"object": "ROOM_HUD",
+												"image-point-optional": "2"
+											}
+										}
+									],
+									"sid": 864125880617533
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "Tutorial_Extra_Life_bOLA",
+											"sid": 423736931434215
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "Tutorial_Extra_Life_bOLA",
+											"sid": 910150588263587,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										}
+									],
+									"sid": 544549152945700
+								}
+							]
+						}
+					],
+					"sid": 383131816690740
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "COREANO",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 710163524505132,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "7"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 642775029905520,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "fuentes",
+											"sid": 809915106102940
+										}
+									],
+									"actions": [
+										{
+											"id": "set-font-face",
+											"objectClass": "fuentes",
+											"sid": 296193204413384,
+											"parameters": {
+												"font-face": "\"coreano\"",
+												"style": "normal"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+											"sid": 832455848161577,
+											"parameters": {
+												"width": "Self.TextWidth+len(Self.Text)"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "FINAL_BOSS_TUTORIAL",
+											"sid": 455139702747887,
+											"parameters": {
+												"width": "Self.TextWidth+len(Self.Text)"
+											}
+										}
+									],
+									"sid": 526072996322133
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "HUD_TXT",
+											"sid": 661377421132274
+										}
+									],
+									"actions": [],
+									"sid": 992558009004706,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 821370044275872,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-font-size",
+													"objectClass": "HUD_TXT",
+													"sid": 127172708374240,
+													"parameters": {
+														"size-pt": "16"
+													}
+												}
+											],
+											"sid": 177407056213791
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 886846181386397,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-font-size",
+													"objectClass": "HUD_TXT",
+													"sid": 536229404438429,
+													"parameters": {
+														"size-pt": "15"
+													}
+												}
+											],
+											"sid": 331403699581292
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "HUD_TXT",
+											"sid": 892401695948118
+										}
+									],
+									"actions": [],
+									"sid": 572481316047912,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 574216392174575,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "HUD_TXT",
+													"sid": 909098045661478,
+													"parameters": {
+														"y": "Self.Y-3.5"
+													}
+												}
+											],
+											"sid": 597278509883215
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 731133887356522,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "HUD_TXT",
+													"sid": 258851890886185,
+													"parameters": {
+														"y": "Self.Y+4"
+													}
+												}
+											],
+											"sid": 937244575245423
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "SpeedRun_TXT_in_Levels",
+											"sid": 456677417212872
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "SpeedRun_TXT_in_Levels",
+											"sid": 581201270616754,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										},
+										{
+											"id": "set-x",
+											"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+											"sid": 946394994984070,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										}
+									],
+									"sid": 807987685327550
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 213870896979489
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 280441217061960,
+											"parameters": {
+												"y": "250"
+											}
+										}
+									],
+									"sid": 745085254457308
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "ROOM_HUD",
+											"sid": 345022238101363
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ROOM_HUD",
+											"sid": 233918053172178,
+											"parameters": {
+												"frame-number": "4"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "SCENE_TXT",
+											"sid": 125232389571597,
+											"parameters": {
+												"x": "776",
+												"y": "23.5"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "SCENE_TXT_shadow",
+											"sid": 340951770415139,
+											"parameters": {
+												"x": "778",
+												"y": "25.5"
+											}
+										}
+									],
+									"sid": 441148622635580
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "Tutorial_Extra_Life_bOLA",
+											"sid": 625770433216842
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "Tutorial_Extra_Life_bOLA",
+											"sid": 181551186335675,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										}
+									],
+									"sid": 941325641267966,
+									"disabled": true
+								}
+							]
+						}
+					],
+					"sid": 901569276540528
+				},
+				{
+					"eventType": "comment",
+					"text": "PROVISIONAL"
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "CHINO",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 402387007662842,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "8"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 544153048964638,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "fuentes",
+											"sid": 532066617041210
+										}
+									],
+									"actions": [
+										{
+											"id": "set-font-face",
+											"objectClass": "fuentes",
+											"sid": 568534378010692,
+											"parameters": {
+												"font-face": "\"NotoSansTC-Bold\"",
+												"style": "normal"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "PORTADA_Opc_Leng_Txt_Center",
+											"sid": 916864876975908,
+											"parameters": {
+												"width": "Self.TextWidth+len(Self.Text)"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "FINAL_BOSS_TUTORIAL",
+											"sid": 844985361168428,
+											"parameters": {
+												"width": "Self.TextWidth+len(Self.Text)"
+											}
+										}
+									],
+									"sid": 802826077297477
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "LIFES_TXT",
+											"sid": 362050418379123
+										},
+										{
+											"id": "is-any-playing",
+											"objectClass": "LIFES_TXT",
+											"sid": 740133440149290,
+											"behaviorType": "Tween",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "LIFES_TXT",
+											"sid": 195909723892631,
+											"parameters": {
+												"y": "24"
+											}
+										}
+									],
+									"sid": 336362681520608
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "fuentes",
+											"sid": 469370122948926
+										}
+									],
+									"actions": [],
+									"sid": 917735907627251,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 621525011229510,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SpeedRun_TIME\""
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 561794335054927,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SpeedRun_DEATH\""
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 658788508700979,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SpeedRun_DOOM\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "fuentes",
+													"sid": 120040915399090,
+													"parameters": {
+														"y": "Self.Y-2"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "Tutorial_Extra_life_Number",
+													"sid": 163610082772141,
+													"parameters": {
+														"text": "\"x10 =\""
+													}
+												}
+											],
+											"sid": 803953756381234
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 679193247504213,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"FINAL_JUEGO\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "FINAL_texto_juego_superado",
+													"sid": 397552250287812,
+													"parameters": {
+														"y": "Self.Y+5"
+													}
+												}
+											],
+											"sid": 151059037427918
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "HUD_TXT",
+											"sid": 193592795357462
+										}
+									],
+									"actions": [],
+									"sid": 495504134961482,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 556562296377799,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-font-size",
+													"objectClass": "HUD_TXT",
+													"sid": 481976084170036,
+													"parameters": {
+														"size-pt": "16"
+													}
+												}
+											],
+											"sid": 873158860664246
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 948636379133868,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-font-size",
+													"objectClass": "HUD_TXT",
+													"sid": 909418970452230,
+													"parameters": {
+														"size-pt": "14"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "SLOTS_LIFE_TXT_1",
+													"sid": 261769607988641,
+													"parameters": {
+														"text": "\"X\"&VIDAS_1"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "SLOTS_LIFE_TXT_2",
+													"sid": 378956025549683,
+													"parameters": {
+														"text": "\"X\"&VIDAS_2"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "SLOTS_LIFE_TXT_3",
+													"sid": 187142032167914,
+													"parameters": {
+														"text": "\"X\"&VIDAS_3"
+													}
+												}
+											],
+											"sid": 531573776814239
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "HUD_TXT",
+											"sid": 834429518610872
+										}
+									],
+									"actions": [],
+									"sid": 154488404684566,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 420485376490856,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "HUD_TXT",
+													"sid": 886980886188729,
+													"parameters": {
+														"y": "Self.Y-1"
+													}
+												}
+											],
+											"sid": 554969891338749
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 826069010588424,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "HUD_TXT",
+													"sid": 646023044379130,
+													"parameters": {
+														"y": "Self.Y+4"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_1",
+													"sid": 423059834462334,
+													"parameters": {
+														"y": "Self.Y+0.2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_2",
+													"sid": 254825889520074,
+													"parameters": {
+														"y": "Self.Y+0.2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_3",
+													"sid": 352491793697873,
+													"parameters": {
+														"y": "Self.Y+0.2"
+													}
+												}
+											],
+											"sid": 763338285698484
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "ROOM_HUD",
+											"sid": 111751861053520
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ROOM_HUD",
+											"sid": 154122227981696,
+											"parameters": {
+												"frame-number": "0"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "SCENE_TXT",
+											"sid": 745003379530245,
+											"parameters": {
+												"x": "764",
+												"y": "23.5"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "SCENE_TXT_shadow",
+											"sid": 647192218436300,
+											"parameters": {
+												"x": "766",
+												"y": "25.5"
+											}
+										}
+									],
+									"sid": 396561900297754
+								},
+								{
+									"eventType": "comment",
+									"text": "para el tiempo a contra reloj"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "SpeedRun_TXT_in_Levels",
+											"sid": 969760865429672
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "SpeedRun_TXT_in_Levels",
+											"sid": 421604347786911,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										},
+										{
+											"id": "set-x",
+											"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+											"sid": 934671137626525,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										}
+									],
+									"sid": 130313915101193
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "Tutorial_Extra_Life_bOLA",
+											"sid": 422237286834800
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "Tutorial_Extra_Life_bOLA",
+											"sid": 782606520375781,
+											"parameters": {
+												"x": "Self.X+10"
+											}
+										}
+									],
+									"sid": 476296786231580
+								}
+							]
+						}
+					],
+					"sid": 556513279443830
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "OCCIDENTAL",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 108317622187478,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 962799794601025,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "pregunta en game over"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "GAMEOVER_tryAgain_TXT",
+											"sid": 835705590781886
+										}
+									],
+									"actions": [
+										{
+											"id": "set-font-size",
+											"objectClass": "GAMEOVER_tryAgain_TXT",
+											"sid": 901569051159531,
+											"parameters": {
+												"size-pt": "20"
+											}
+										}
+									],
+									"sid": 566831215361681
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "ROOM_HUD",
+											"sid": 332152315112558
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ROOM_HUD",
+											"sid": 308194709561196,
+											"parameters": {
+												"frame-number": "1"
+											}
+										}
+									],
+									"sid": 411562354187159
 								}
 							]
 						},
@@ -261,16 +1484,326 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 309168347329125,
+									"sid": 394464184808066,
 									"parameters": {
 										"variable": "Idioma_numerico",
 										"comparison": 0,
-										"value": "5"
+										"value": "1"
 									}
 								}
 							],
 							"actions": [],
-							"sid": 937799168537136,
+							"sid": 384139026605255,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "ROOM_HUD",
+											"sid": 570476507446690
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ROOM_HUD",
+											"sid": 597148229776832,
+											"parameters": {
+												"frame-number": "1"
+											}
+										}
+									],
+									"sid": 115971824374871
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 360063397767055,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-font-size",
+									"objectClass": "SpeedRun_Resumen_TXT",
+									"sid": 403583347557502,
+									"parameters": {
+										"size-pt": "24"
+									}
+								}
+							],
+							"sid": 340834566149383,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 493124729736357
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 583109927777289,
+											"parameters": {
+												"y": "242"
+											}
+										}
+									],
+									"sid": 438314283153912
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "ROOM_HUD",
+											"sid": 390909318148227
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ROOM_HUD",
+											"sid": 350875074995975,
+											"parameters": {
+												"frame-number": "1"
+											}
+										}
+									],
+									"sid": 558062518108306
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 210076519242675,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-font-size",
+									"objectClass": "TUTORIAL_TXT_move_left",
+									"sid": 138185714842403,
+									"parameters": {
+										"size-pt": "14"
+									}
+								},
+								{
+									"id": "set-font-size",
+									"objectClass": "TUTORIAL_TXT_move_right",
+									"sid": 934416397754741,
+									"parameters": {
+										"size-pt": "14"
+									}
+								}
+							],
+							"sid": 109826963200607,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "SpeedRun_File",
+											"sid": 107900340631475
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "SpeedRun_File",
+											"sid": 499464932603156,
+											"parameters": {
+												"text": "replace(Array_Traducciones_IDOMAS.At(Idioma_numerico,30),\"*\",newline)"
+											}
+										}
+									],
+									"sid": 769613231746201
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 532030198771316
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 865099562452278,
+											"parameters": {
+												"y": "242"
+											}
+										}
+									],
+									"sid": 412616359142104
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "ROOM_HUD",
+											"sid": 978826521369790
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ROOM_HUD",
+											"sid": 527457865370650,
+											"parameters": {
+												"frame-number": "2"
+											}
+										}
+									],
+									"sid": 945653721687094
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 421223438336477,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 455503602107728,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 507077271746038
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 312428738839234,
+											"parameters": {
+												"y": "242"
+											}
+										}
+									],
+									"sid": 366381666000150
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "ROOM_HUD",
+											"sid": 568679302750164
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ROOM_HUD",
+											"sid": 913573804106887,
+											"parameters": {
+												"frame-number": "1"
+											}
+										}
+									],
+									"sid": 862058383994137
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 906726111410499,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 268635995750747,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 752581977770610,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 677153475447695,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 243801438602838,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 547407366759072,
 							"children": [
 								{
 									"eventType": "block",
@@ -278,226 +1811,115 @@
 										{
 											"id": "is-on-screen",
 											"objectClass": "fuentes",
-											"sid": 517331522643814
+											"sid": 221039603258361
 										}
 									],
 									"actions": [
 										{
 											"id": "set-font-face",
 											"objectClass": "fuentes",
-											"sid": 314886336578572,
+											"sid": 966095877232490,
 											"parameters": {
-												"font-face": "\"keifont\"",
+												"font-face": "\"BalooThambi2-ExtraBold\"",
 												"style": "normal"
 											}
 										},
 										{
 											"id": "set-width",
 											"objectClass": "PORTADA_Opc_Leng_Txt_Center",
-											"sid": 626670082938421,
+											"sid": 480596996000949,
 											"parameters": {
 												"width": "Self.TextWidth+len(Self.Text)"
 											}
 										},
 										{
-											"id": "set-font-face",
+											"id": "set-width",
+											"objectClass": "FINAL_BOSS_TUTORIAL",
+											"sid": 477930522042836,
+											"parameters": {
+												"width": "Self.TextWidth+len(Self.Text)"
+											}
+										}
+									],
+									"sid": 532600052823701,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 297979425450467
+												}
+											],
+											"actions": [
+												{
+													"id": "set-position-to-another-object",
+													"objectClass": "SCENE_TXT",
+													"sid": 913787643960558,
+													"parameters": {
+														"object": "ROOM_HUD",
+														"image-point-optional": "1"
+													}
+												},
+												{
+													"id": "set-position-to-another-object",
+													"objectClass": "SCENE_TXT_shadow",
+													"sid": 120066465139925,
+													"parameters": {
+														"object": "ROOM_HUD",
+														"image-point-optional": "2"
+													}
+												}
+											],
+											"sid": 359532767947401
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
 											"objectClass": "fuentes",
-											"sid": 831045048144984,
+											"sid": 243292732244799
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "fuentes",
+											"sid": 605029182709560,
+											"parameters": {
+												"y": "Self.Y-1.5"
+											}
+										},
+										{
+											"id": "set-x",
+											"objectClass": "SCENE_TXT",
+											"sid": 818012173773789,
 											"disabled": true,
 											"parameters": {
-												"font-face": "\"MochiyPopOne-Regular\"",
-												"style": "normal"
-											}
-										}
-									],
-									"sid": 796194164350122
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-on-screen",
-											"objectClass": "HUD_TXT",
-											"sid": 172331382504523
-										}
-									],
-									"actions": [],
-									"sid": 571664507858771,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 762118921338827,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 1,
-														"second-value": "\"SLOTS\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-font-size",
-													"objectClass": "HUD_TXT",
-													"sid": 297105384936149,
-													"parameters": {
-														"size-pt": "16"
-													}
-												}
-											],
-											"sid": 703648094638323
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 933080798196681,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 0,
-														"second-value": "\"SLOTS\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-font-size",
-													"objectClass": "HUD_TXT",
-													"sid": 155796139476176,
-													"parameters": {
-														"size-pt": "15"
-													}
-												}
-											],
-											"sid": 963127410248843
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-created",
-											"objectClass": "HUD_TXT",
-											"sid": 601435571235484
-										}
-									],
-									"actions": [],
-									"sid": 967143917539208,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 485854891938167,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 1,
-														"second-value": "\"SLOTS\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-y",
-													"objectClass": "HUD_TXT",
-													"sid": 395999043309552,
-													"parameters": {
-														"y": "Self.Y-2"
-													}
-												}
-											],
-											"sid": 354622098600517
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 326485054088252,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 0,
-														"second-value": "\"SLOTS\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-y",
-													"objectClass": "HUD_TXT",
-													"sid": 366457278551123,
-													"parameters": {
-														"y": "Self.Y+4"
-													}
-												}
-											],
-											"sid": 852195488478599
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-created",
-											"objectClass": "SpeedRun_TXT_in_Levels",
-											"sid": 509191305546183
-										}
-									],
-									"actions": [
-										{
-											"id": "set-x",
-											"objectClass": "SpeedRun_TXT_in_Levels",
-											"sid": 905273130451731,
-											"parameters": {
-												"x": "Self.X+10"
+												"x": "ROOM_HUD.ImagePointX(1)"
 											}
 										},
 										{
 											"id": "set-x",
-											"objectClass": "SpeedRun_TXT_in_Levels_shadow",
-											"sid": 287999439146139,
+											"objectClass": "SCENE_TXT_shadow",
+											"sid": 647200837875724,
+											"disabled": true,
 											"parameters": {
-												"x": "Self.X+10"
+												"x": "ROOM_HUD.ImagePointX(2)"
 											}
 										}
 									],
-									"sid": 743874718369327
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-created",
-											"objectClass": "Tutorial_Extra_Life_bOLA",
-											"sid": 188788709415037
-										}
-									],
-									"actions": [
-										{
-											"id": "set-x",
-											"objectClass": "Tutorial_Extra_Life_bOLA",
-											"sid": 820937919679819,
-											"parameters": {
-												"x": "Self.X+10"
-											}
-										}
-									],
-									"sid": 581038183652548
+									"sid": 726454976898705
 								}
-							]
+							],
+							"isOrBlock": true
 						}
 					],
-					"sid": 997779921405096
+					"sid": 729784383673713
 				}
 			],
 			"sid": 717449982966319

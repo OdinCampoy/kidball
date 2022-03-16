@@ -457,7 +457,7 @@
 					},
 					"world": {
 						"x": 437,
-						"y": -120,
+						"y": -130,
 						"width": 476,
 						"height": 211,
 						"originX": 0.5,
@@ -505,7 +505,104 @@
 			"name": "texto",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "SLOTS_txt_leyenda_bACK",
+					"properties": {
+						"text": "Back",
+						"enable-bbcode": false,
+						"font": "BalooThambi2-ExtraBold",
+						"size": 14,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "right",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 7003,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 687,
+						"y": 463,
+						"width": 220,
+						"height": 25,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SLOTS_txt_leyenda_Select",
+					"properties": {
+						"text": "Select",
+						"enable-bbcode": false,
+						"font": "BalooThambi2-ExtraBold",
+						"size": 14,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 701,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 168,
+						"y": 463,
+						"width": 220,
+						"height": 25,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 354842229189811,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -595,7 +692,7 @@
 							1,
 							1,
 							1,
-							0.5
+							0
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -763,54 +860,6 @@
 						"y": 388,
 						"width": 363,
 						"height": 100,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SLOTS_txt_choose",
-					"properties": {
-						"text": "SELECT A FILE",
-						"enable-bbcode": false,
-						"font": "BalooThambi2-ExtraBold",
-						"size": 24,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.2196078431372549,
-							0.2196078431372549,
-							0.2196078431372549,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center"
-					},
-					"uid": 6956,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 433,
-						"y": 41,
-						"width": 700,
-						"height": 30,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2248,54 +2297,6 @@
 					}
 				},
 				{
-					"type": "SLOTS_txt_choose",
-					"properties": {
-						"text": "SELECT A FILE",
-						"enable-bbcode": false,
-						"font": "BalooThambi2-ExtraBold",
-						"size": 24,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center"
-					},
-					"uid": 6994,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 430,
-						"y": 38,
-						"width": 700,
-						"height": 30,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "SlotScreenshotSprite_Background",
 					"properties": {
 						"initially-visible": true,
@@ -2370,6 +2371,102 @@
 						"y": 390,
 						"width": 147,
 						"height": 82,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SLOTS_txt_choose",
+					"properties": {
+						"text": "SELECT A FILE",
+						"enable-bbcode": false,
+						"font": "BalooThambi2-ExtraBold",
+						"size": 24,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.2196078431372549,
+							0.2196078431372549,
+							0.2196078431372549,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 1581,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 431,
+						"y": 36,
+						"width": 700,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SLOTS_txt_choose",
+					"properties": {
+						"text": "SELECT A FILE",
+						"enable-bbcode": false,
+						"font": "BalooThambi2-ExtraBold",
+						"size": 24,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 1571,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 430,
+						"y": 34,
+						"width": 700,
+						"height": 42,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2504,102 +2601,6 @@
 					}
 				},
 				{
-					"type": "SLOTS_txt_leyenda_Select",
-					"properties": {
-						"text": "Select",
-						"enable-bbcode": false,
-						"font": "BalooThambi2-ExtraBold",
-						"size": 20,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.3215686274509804,
-							0.3176470588235294,
-							0.3176470588235294,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center"
-					},
-					"uid": 7000,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 186,
-						"y": 467,
-						"width": 234,
-						"height": 30,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SLOTS_txt_leyenda_Select",
-					"properties": {
-						"text": "Select",
-						"enable-bbcode": false,
-						"font": "BalooThambi2-ExtraBold",
-						"size": 20,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center"
-					},
-					"uid": 6999,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 185,
-						"y": 465,
-						"width": 234,
-						"height": 30,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Botones_Consola_iconos_A",
 					"properties": {
 						"initially-visible": true,
@@ -2614,104 +2615,8 @@
 					"world": {
 						"x": 39,
 						"y": 461,
-						"width": 24,
-						"height": 24,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SLOTS_txt_leyenda_bACK",
-					"properties": {
-						"text": "Back",
-						"enable-bbcode": false,
-						"font": "BalooThambi2-ExtraBold",
-						"size": 20,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.3215686274509804,
-							0.3176470588235294,
-							0.3176470588235294,
-							1
-						],
-						"horizontal-alignment": "right",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center"
-					},
-					"uid": 7004,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 677,
-						"y": 466,
-						"width": 234,
-						"height": 30,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SLOTS_txt_leyenda_bACK",
-					"properties": {
-						"text": "Back",
-						"enable-bbcode": false,
-						"font": "BalooThambi2-ExtraBold",
-						"size": 20,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"horizontal-alignment": "right",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center"
-					},
-					"uid": 7003,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 675,
-						"y": 464,
-						"width": 234,
-						"height": 30,
+						"width": 20,
+						"height": 20,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2739,8 +2644,8 @@
 					"world": {
 						"x": 820,
 						"y": 461,
-						"width": 24,
-						"height": 24,
+						"width": 20,
+						"height": 20,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

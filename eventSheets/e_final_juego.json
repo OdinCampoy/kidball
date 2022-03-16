@@ -26,6 +26,10 @@
 			"sid": 134111489474369,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "SI NO ES JAPONES NO HAY \"ENTERS\" EN EL TEXTO PARA PARTIRLO Y QUE NO LO PONGA TODO SEGUIDO."
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -170,6 +174,10 @@
 					]
 				},
 				{
+					"eventType": "comment",
+					"text": "SI ES JAPONES HAY \"ENTERS\" EN EL TEXTO PARA PARTIRLO Y QUE NO LO PONGA TODO SEGUIDO. CON SIMBOLO \"<\""
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -196,16 +204,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "set-font-face",
-									"objectClass": "FINAL_texto_juego_superado",
-									"sid": 743600774963775,
-									"disabled": true,
-									"parameters": {
-										"font-face": "\"MochiyPopOne-Regular\"",
-										"style": "normal"
-									}
-								},
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",

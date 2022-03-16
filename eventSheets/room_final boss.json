@@ -267,6 +267,23 @@
 					}
 				},
 				{
+					"id": "set-animation",
+					"objectClass": "TUTORIAL_FINAL_BOSS",
+					"sid": 682336862147395,
+					"parameters": {
+						"animation": "\"tutorial_1\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "TUTORIAL_FINAL_BOSS",
+					"sid": 526722685213079,
+					"parameters": {
+						"frame-number": "Idioma_numerico"
+					}
+				},
+				{
 					"id": "set-ignoring-input",
 					"objectClass": "Black_ball",
 					"sid": 324728334470947,
@@ -341,22 +358,6 @@
 					"parameters": {
 						"x": "ViewportRight(\"fondo\")/2+10000",
 						"y": "ViewportBottom(\"fondo\")/2"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "left_arrow",
-					"sid": 652210838825306,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Right_arrow",
-					"sid": 781505166165852,
-					"parameters": {
-						"visibility": "invisible"
 					}
 				},
 				{
@@ -449,6 +450,7 @@
 					"id": "compare-eventvar",
 					"objectClass": "System",
 					"sid": 674511483633550,
+					"disabled": true,
 					"parameters": {
 						"variable": "PASOS_FINAL_BOSS",
 						"comparison": 0,
@@ -460,9 +462,9 @@
 				{
 					"id": "set-y",
 					"objectClass": "RESPLANDOR",
-					"sid": 658520638023764,
+					"sid": 562006684850411,
 					"parameters": {
-						"y": "Self.Y-15"
+						"y": "Self.Y-16"
 					}
 				}
 			],

@@ -79,9 +79,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "PORTADA_Opc_SoundFx_txt",
-									"sid": 974365615569091,
+									"sid": 799411065605857,
 									"parameters": {
-										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,4)"
+										"text": "replace(Array_Traducciones_IDOMAS.At(Idioma_numerico,4),\"*\",\" \")"
 									}
 								},
 								{
@@ -319,6 +319,14 @@
 									}
 								},
 								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_juego_borrado_1",
+									"sid": 340078024199408,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,92)"
+									}
+								},
+								{
 									"type": "comment",
 									"text": "SLOT 2"
 								},
@@ -419,6 +427,14 @@
 									}
 								},
 								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_juego_borrado_2",
+									"sid": 168855773113960,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,92)"
+									}
+								},
+								{
 									"type": "comment",
 									"text": "SLOT 3"
 								},
@@ -516,6 +532,14 @@
 									"sid": 679487115640525,
 									"parameters": {
 										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,23)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "SLOTS_TXT_juego_borrado_3",
+									"sid": 468968896341250,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,92)"
 									}
 								}
 							],
