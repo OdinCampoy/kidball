@@ -54,6 +54,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 690906789677190,
+					"parameters": {
+						"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+						"value": "\"ROJA\""
+					}
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "Intro_Skip_Text",
 					"sid": 267878699314331,
@@ -308,11 +317,11 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 638908148763615,
+							"sid": 294148603055969,
 							"parameters": {
 								"object-to-create": "SpeedRun_TXT_in_Levels",
 								"layer": "\"HUD\"",
-								"x": "444",
+								"x": "450",
 								"y": "27",
 								"create-hierarchy": false
 							}
@@ -320,11 +329,11 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 935012847806668,
+							"sid": 476346672909451,
 							"parameters": {
 								"object-to-create": "SpeedRun_TXT_in_Levels_shadow",
 								"layer": "\"HUD\"",
-								"x": "446",
+								"x": "452",
 								"y": "29",
 								"create-hierarchy": false
 							}
@@ -356,7 +365,7 @@
 						{
 							"id": "set-text",
 							"objectClass": "SpeedRun_TXT_in_Levels",
-							"sid": 780817214817254,
+							"sid": 981342677481771,
 							"parameters": {
 								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
 							}

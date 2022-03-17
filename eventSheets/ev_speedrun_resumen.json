@@ -34,6 +34,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 859709496664049,
+					"parameters": {
+						"variable": "SpeedRun_tiempo_nivel",
+						"value": "0"
+					}
+				},
+				{
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 155941150135244,
@@ -920,6 +929,24 @@
 									}
 								},
 								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 984317977459376,
+									"parameters": {
+										"variable": "3_SUMA_GEMAS_COGIDA",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 582429378698590,
+									"parameters": {
+										"variable": "4_SUMA_GEMAS_TOTALES",
+										"value": "0"
+									}
+								},
+								{
 									"id": "set-text",
 									"objectClass": "SpeedRun_Resumen_GEMS",
 									"sid": 481593744638718,
@@ -1293,85 +1320,59 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "SI HAN PASADO LOS SEGUNDO DEL ON START OF LAYOUT YA SE PUEDE PULSAR PORQUE SE PONE A 1 EL VALOR"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-button-pressed",
-							"objectClass": "Gamepad",
-							"sid": 781265885887707,
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 299716542229888,
 							"parameters": {
-								"gamepad": "0",
-								"button": "button-b"
-							}
-						},
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 462664041733670,
-							"parameters": {
-								"key": 83
+								"variable": "SpeedRun_tiempo_nivel",
+								"comparison": 0,
+								"value": "1"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 290837989140079,
+					"sid": 385312671039757,
 					"children": [
 						{
-							"eventType": "comment",
-							"text": "SELECCIONAR ARCHIVO DE FILA",
-							"background-color": [
-								0,
-								1,
-								0.11764705882352941,
-								1
-							]
-						},
-						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 934452186488571,
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 644293821296405,
 									"parameters": {
-										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
-										"comparison": 0,
-										"value": "\"TIME\""
+										"gamepad": "0",
+										"button": "button-b"
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 734761430574942,
+									"parameters": {
+										"key": 83
 									}
 								}
 							],
 							"actions": [],
-							"sid": 862851593669409,
+							"sid": 220430706559453,
 							"children": [
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 947684889835118
-										}
-									],
-									"actions": [
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 828435174820025,
-											"parameters": {
-												"variable": "GAMEPAD_CENTER",
-												"value": "1"
-											}
-										},
-										{
-											"id": "go-to-layout",
-											"objectClass": "System",
-											"sid": 522249280651832,
-											"parameters": {
-												"layout": "SpeedRun_TIME"
-											}
-										}
-									],
-									"sid": 610956434055731
+									"eventType": "comment",
+									"text": "SELECCIONAR ARCHIVO DE FILA",
+									"background-color": [
+										0,
+										1,
+										0.11764705882352941,
+										1
+									]
 								},
 								{
 									"eventType": "block",
@@ -1379,16 +1380,16 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 469049767602458,
+											"sid": 355445162326658,
 											"parameters": {
-												"variable": "FX_sound",
+												"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
 												"comparison": 0,
-												"value": "1"
+												"value": "\"TIME\""
 											}
 										}
 									],
 									"actions": [],
-									"sid": 579619816973413,
+									"sid": 976353376524291,
 									"children": [
 										{
 											"eventType": "block",
@@ -1396,74 +1397,74 @@
 												{
 													"id": "trigger-once-while-true",
 													"objectClass": "System",
-													"sid": 799339364301973
+													"sid": 971713510363218
 												}
 											],
 											"actions": [
 												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 718504464926231,
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 675958838377904,
 													"parameters": {
-														"audio-file": "Swipe",
-														"loop": "not-looping",
-														"volume": "VOLUMEN_MASTER_FX",
-														"tag-optional": "\"\""
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 498554460309923,
+													"parameters": {
+														"layout": "SpeedRun_TIME"
 													}
 												}
 											],
-											"sid": 330028447674982
-										}
-									]
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 162052221727636,
-									"parameters": {
-										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
-										"comparison": 0,
-										"value": "\"DEATH\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 625012032247589,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 258675524892442
-										}
-									],
-									"actions": [
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 514652633508293,
-											"parameters": {
-												"variable": "GAMEPAD_CENTER",
-												"value": "1"
-											}
+											"sid": 421812734827556
 										},
 										{
-											"id": "go-to-layout",
-											"objectClass": "System",
-											"sid": 938292472367608,
-											"parameters": {
-												"layout": "SpeedRun_DEATH"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 950062626508593,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 547213374433057,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 566877505596178
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 452751784590269,
+															"parameters": {
+																"audio-file": "Swipe",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 775820677986322
+												}
+											]
 										}
-									],
-									"sid": 847808384409364
+									]
 								},
 								{
 									"eventType": "block",
@@ -1471,16 +1472,16 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 534072533364516,
+											"sid": 668199890917390,
 											"parameters": {
-												"variable": "FX_sound",
+												"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
 												"comparison": 0,
-												"value": "1"
+												"value": "\"DEATH\""
 											}
 										}
 									],
 									"actions": [],
-									"sid": 734644069191127,
+									"sid": 702751806016292,
 									"children": [
 										{
 											"eventType": "block",
@@ -1488,74 +1489,74 @@
 												{
 													"id": "trigger-once-while-true",
 													"objectClass": "System",
-													"sid": 835746688714039
+													"sid": 363145264472895
 												}
 											],
 											"actions": [
 												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 540394972316712,
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 872642518584262,
 													"parameters": {
-														"audio-file": "Swipe",
-														"loop": "not-looping",
-														"volume": "VOLUMEN_MASTER_FX",
-														"tag-optional": "\"\""
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 530315834554575,
+													"parameters": {
+														"layout": "SpeedRun_DEATH"
 													}
 												}
 											],
-											"sid": 940204049008697
-										}
-									]
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 763558547040571,
-									"parameters": {
-										"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
-										"comparison": 0,
-										"value": "\"DOOM\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 577114559920197,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 438557128475342
-										}
-									],
-									"actions": [
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 501834609565392,
-											"parameters": {
-												"variable": "GAMEPAD_CENTER",
-												"value": "1"
-											}
+											"sid": 704714337469371
 										},
 										{
-											"id": "go-to-layout",
-											"objectClass": "System",
-											"sid": 436204544312071,
-											"parameters": {
-												"layout": "SpeedRun_DOOM"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 732200759036435,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 362033454113287,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 413478415977105
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 430695561790803,
+															"parameters": {
+																"audio-file": "Swipe",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 497208261108283
+												}
+											]
 										}
-									],
-									"sid": 973067108254018
+									]
 								},
 								{
 									"eventType": "block",
@@ -1563,16 +1564,16 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 468980324772371,
+											"sid": 906994530199513,
 											"parameters": {
-												"variable": "FX_sound",
+												"variable": "SPEEDRUN_MODE_TIME_or_DEATH_or_DOOM",
 												"comparison": 0,
-												"value": "1"
+												"value": "\"DOOM\""
 											}
 										}
 									],
 									"actions": [],
-									"sid": 566209243335142,
+									"sid": 754673223419612,
 									"children": [
 										{
 											"eventType": "block",
@@ -1580,30 +1581,79 @@
 												{
 													"id": "trigger-once-while-true",
 													"objectClass": "System",
-													"sid": 201124665828958
+													"sid": 926563646338489
 												}
 											],
 											"actions": [
 												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 663695541007724,
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 375045415106304,
 													"parameters": {
-														"audio-file": "Swipe",
-														"loop": "not-looping",
-														"volume": "VOLUMEN_MASTER_FX",
-														"tag-optional": "\"\""
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 249419097442021,
+													"parameters": {
+														"layout": "SpeedRun_DOOM"
 													}
 												}
 											],
-											"sid": 840594951868987
+											"sid": 621900448364230
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 505756316903468,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 495066189748338,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 849244569759790
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 909438440271146,
+															"parameters": {
+																"audio-file": "Swipe",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 514013872778488
+												}
+											]
 										}
 									]
 								}
-							]
+							],
+							"isOrBlock": true
 						}
-					],
-					"isOrBlock": true
+					]
 				}
 			],
 			"sid": 175157003604561

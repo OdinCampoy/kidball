@@ -30,6 +30,10 @@
 			"includeSheet": "e_fuentes"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "Ev_desarrollador"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -495,11 +499,11 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 691769613136367,
+							"sid": 343666336398096,
 							"parameters": {
 								"object-to-create": "SpeedRun_TXT_in_Levels",
 								"layer": "\"HUD\"",
-								"x": "444",
+								"x": "450",
 								"y": "27",
 								"create-hierarchy": false
 							}
@@ -507,11 +511,11 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 149374055561074,
+							"sid": 172077515071026,
 							"parameters": {
 								"object-to-create": "SpeedRun_TXT_in_Levels_shadow",
 								"layer": "\"HUD\"",
-								"x": "446",
+								"x": "452",
 								"y": "29",
 								"create-hierarchy": false
 							}
@@ -543,9 +547,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "SpeedRun_TXT_in_Levels",
-							"sid": 705977962593330,
+							"sid": 748863411232626,
 							"parameters": {
-								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
+								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,2)"
 							}
 						},
 						{

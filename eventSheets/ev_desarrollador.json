@@ -14,7 +14,28 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 583974690351123,
+							"sid": 343585760873262,
+							"parameters": {
+								"key": 8
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "clear-storage",
+							"objectClass": "LocalStorage",
+							"sid": 649855668445894
+						}
+					],
+					"sid": 953725296036224
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 610345424119255,
 							"parameters": {
 								"key": 32
 							}
@@ -24,14 +45,14 @@
 						{
 							"id": "subtract-from-eventvar",
 							"objectClass": "System",
-							"sid": 632906933325387,
+							"sid": 184527568576195,
 							"parameters": {
 								"variable": "VIDA_FINAL_BOSS",
 								"value": "1"
 							}
 						}
 					],
-					"sid": 953725296036224
+					"sid": 752263754018947
 				},
 				{
 					"eventType": "block",
@@ -75,6 +96,31 @@
 						}
 					],
 					"sid": 862170607796792
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 342418267344117,
+							"parameters": {
+								"key": 89
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 499020494190670,
+							"parameters": {
+								"layout": "FINAL_JUEGO"
+							}
+						}
+					],
+					"sid": 937695006144401,
+					"disabled": true
 				},
 				{
 					"eventType": "block",

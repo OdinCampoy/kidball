@@ -1880,57 +1880,22 @@
 									"conditions": [
 										{
 											"id": "on-created",
-											"objectClass": "fuentes",
-											"sid": 243292732244799
+											"objectClass": "HUD_TXT",
+											"sid": 455342055845710
 										}
 									],
 									"actions": [
 										{
 											"id": "set-y",
-											"objectClass": "fuentes",
-											"sid": 605029182709560,
+											"objectClass": "HUD_TXT",
+											"sid": 614633816750622,
 											"parameters": {
-												"y": "Self.Y-1.5"
-											}
-										},
-										{
-											"id": "set-y",
-											"objectClass": "SCENE_TXT",
-											"sid": 500085627902338,
-											"disabled": true,
-											"parameters": {
-												"y": "Self.Y+4"
-											}
-										},
-										{
-											"id": "set-y",
-											"objectClass": "SCENE_TXT_shadow",
-											"sid": 384227958425522,
-											"disabled": true,
-											"parameters": {
-												"y": "Self.Y+4"
-											}
-										},
-										{
-											"id": "set-x",
-											"objectClass": "SCENE_TXT",
-											"sid": 818012173773789,
-											"disabled": true,
-											"parameters": {
-												"x": "ROOM_HUD.ImagePointX(1)"
-											}
-										},
-										{
-											"id": "set-x",
-											"objectClass": "SCENE_TXT_shadow",
-											"sid": 647200837875724,
-											"disabled": true,
-											"parameters": {
-												"x": "ROOM_HUD.ImagePointX(2)"
+												"y": "Self.Y-1"
 											}
 										}
 									],
-									"sid": 726454976898705
+									"sid": 726454976898705,
+									"disabled": true
 								}
 							],
 							"isOrBlock": true

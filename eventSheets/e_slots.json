@@ -10757,6 +10757,225 @@
 			"sid": 382678779141027
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 703105150378270,
+					"parameters": {
+						"variable": "SLOTS_Seleccionado_1_2_o_3",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 997624259833114,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 123684543677390,
+							"parameters": {
+								"variable": "Nivel_actual_1",
+								"comparison": 3,
+								"value": "49"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 765555141767484,
+							"parameters": {
+								"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+								"value": "\"ROJA\""
+							}
+						}
+					],
+					"sid": 219257544311177
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 429338391344133,
+							"parameters": {
+								"variable": "Nivel_actual_1",
+								"comparison": 4,
+								"value": "49"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 799611585563297,
+							"parameters": {
+								"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+								"value": "\"ROSA\""
+							}
+						}
+					],
+					"sid": 301667981890533
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 227439975786098,
+					"parameters": {
+						"variable": "SLOTS_Seleccionado_1_2_o_3",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 828951195791650,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 738608706851948,
+							"parameters": {
+								"variable": "Nivel_actual_2",
+								"comparison": 3,
+								"value": "49"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 778322681985881,
+							"parameters": {
+								"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+								"value": "\"ROJA\""
+							}
+						}
+					],
+					"sid": 760790778340397
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 548196031678292,
+							"parameters": {
+								"variable": "Nivel_actual_2",
+								"comparison": 4,
+								"value": "49"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 888149415007126,
+							"parameters": {
+								"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+								"value": "\"ROSA\""
+							}
+						}
+					],
+					"sid": 337692366933241
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 909963586525730,
+					"parameters": {
+						"variable": "SLOTS_Seleccionado_1_2_o_3",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 169496378399296,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 749795572756113,
+							"parameters": {
+								"variable": "Nivel_actual_3",
+								"comparison": 3,
+								"value": "49"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 578602745935124,
+							"parameters": {
+								"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+								"value": "\"ROJA\""
+							}
+						}
+					],
+					"sid": 612906407356201
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 883080295836722,
+							"parameters": {
+								"variable": "Nivel_actual_3",
+								"comparison": 4,
+								"value": "49"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 664550059759790,
+							"parameters": {
+								"variable": "bola_ROJA_o_ROSA_sin_SLOT",
+								"value": "\"ROSA\""
+							}
+						}
+					],
+					"sid": 104251575686487
+				}
+			]
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "IMAGENES DE LOS SLOTS",

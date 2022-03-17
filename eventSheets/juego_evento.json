@@ -1686,7 +1686,56 @@
 											"sid": 938145349886060
 										}
 									],
-									"sid": 629727715028832
+									"sid": 629727715028832,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "BORRA EL CARTEL DE LAS VIDAS EXTRAS CUANDO JUEGAS EL MODO SIN MUERTE"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 412975917001595,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"Room_2\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Tutorial_Extra_Life_Gema",
+													"sid": 743034502109910
+												},
+												{
+													"id": "destroy",
+													"objectClass": "TUTORIAL_TXT_EXTRA_LIFE",
+													"sid": 861985342695532
+												},
+												{
+													"id": "destroy",
+													"objectClass": "Tutorial_Extra_life_Number",
+													"sid": 915516206337696
+												},
+												{
+													"id": "destroy",
+													"objectClass": "Tutorial_Extra_Life_bOLA",
+													"sid": 147418496164728
+												},
+												{
+													"id": "destroy",
+													"objectClass": "Tutorial_Panel",
+													"sid": 735082628675497
+												}
+											],
+											"sid": 166697391913926
+										}
+									]
 								}
 							]
 						}
@@ -5763,19 +5812,19 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 967719340562133,
+															"sid": 418846083860642,
 															"parameters": {
 																"variable": "3_SUMA_GEMAS_COGIDA",
-																"value": "SpeedRun_gemas_cogidas"
+																"value": "0"
 															}
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 348591828985698,
+															"sid": 498894990120153,
 															"parameters": {
 																"variable": "4_SUMA_GEMAS_TOTALES",
-																"value": "SpeedRun_gemas_totales_juego"
+																"value": "0"
 															}
 														},
 														{
@@ -14447,6 +14496,186 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "REPOSICIONA NUMERO DE VIDAS DESPUES DE VIDA EXTRA SEGUN IDIOMA",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "LIFES_TXT",
+							"sid": 854303534849612,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"VIDA EXTRA GEMAS COGIDAS\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 347599313233661,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "OCCIDENTAL"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 411917644464414,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 988673012566965,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 812936852326724,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 977264437792224,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 171538353361736,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "LIFES_TXT",
+									"sid": 597021815035807,
+									"parameters": {
+										"y": "27"
+									}
+								}
+							],
+							"sid": 934040748587019,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "comment",
+							"text": "RUSO  JAPONES Y CHINO"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 738420159668770,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "5"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 698468144583370,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "6"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 716100350618084,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "8"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "LIFES_TXT",
+									"sid": 851458295384089,
+									"parameters": {
+										"y": "24"
+									}
+								}
+							],
+							"sid": 459459650576752,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "comment",
+							"text": "KOREANO"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 718203496503825,
+									"parameters": {
+										"variable": "Idioma_numerico",
+										"comparison": 0,
+										"value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "LIFES_TXT",
+									"sid": 202034069913762,
+									"parameters": {
+										"y": "23.5"
+									}
+								}
+							],
+							"sid": 901897883329910
+						}
+					]
+				}
+			],
+			"sid": 705971166467433
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "COGE GEMAS",
 			"description": "",
 			"isActiveOnStart": true,
@@ -14700,10 +14929,10 @@
 												{
 													"id": "tween-one-property",
 													"objectClass": "LIFES_TXT",
-													"sid": 299565904174080,
+													"sid": 914681170114750,
 													"behaviorType": "Tween",
 													"parameters": {
-														"tags": "\"\"",
+														"tags": "\"VIDA EXTRA GEMAS COGIDAS\"",
 														"property": "offsetY",
 														"end-value": "-30",
 														"time": "0.2",
@@ -14750,14 +14979,6 @@
 													"id": "wait-for-previous-actions",
 													"objectClass": "System",
 													"sid": 239196897471811
-												},
-												{
-													"id": "set-y",
-													"objectClass": "LIFES_TXT",
-													"sid": 934199777618270,
-													"parameters": {
-														"y": "27"
-													}
 												}
 											],
 											"sid": 861793708984985
@@ -14973,10 +15194,10 @@
 												{
 													"id": "tween-one-property",
 													"objectClass": "LIFES_TXT",
-													"sid": 375139300211044,
+													"sid": 539985668755368,
 													"behaviorType": "Tween",
 													"parameters": {
-														"tags": "\"\"",
+														"tags": "\"VIDA EXTRA GEMAS COGIDAS\"",
 														"property": "offsetY",
 														"end-value": "-30",
 														"time": "0.2",
@@ -15023,14 +15244,6 @@
 													"id": "wait-for-previous-actions",
 													"objectClass": "System",
 													"sid": 992826666815284
-												},
-												{
-													"id": "set-y",
-													"objectClass": "LIFES_TXT",
-													"sid": 197026161652864,
-													"parameters": {
-														"y": "27"
-													}
 												}
 											],
 											"sid": 898418307088960
@@ -15246,10 +15459,10 @@
 												{
 													"id": "tween-one-property",
 													"objectClass": "LIFES_TXT",
-													"sid": 768152082859175,
+													"sid": 282025907699251,
 													"behaviorType": "Tween",
 													"parameters": {
-														"tags": "\"\"",
+														"tags": "\"VIDA EXTRA GEMAS COGIDAS\"",
 														"property": "offsetY",
 														"end-value": "-30",
 														"time": "0.2",
@@ -15296,14 +15509,6 @@
 													"id": "wait-for-previous-actions",
 													"objectClass": "System",
 													"sid": 601232867662203
-												},
-												{
-													"id": "set-y",
-													"objectClass": "LIFES_TXT",
-													"sid": 818957595767487,
-													"parameters": {
-														"y": "27"
-													}
 												}
 											],
 											"sid": 574327343352463
