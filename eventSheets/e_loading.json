@@ -56,15 +56,6 @@
 					}
 				},
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 924457313904459,
-					"parameters": {
-						"variable": "FECHA_FACEBOOK",
-						"value": "mid(Browser.ExecJS(\"Date()\"),8,2)"
-					}
-				},
-				{
 					"id": "wait-for-previous-actions",
 					"objectClass": "System",
 					"sid": 556954859584115
@@ -876,17 +867,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 175684695727238,
-							"parameters": {
-								"variable": "Valorar_APP",
-								"value": "0"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 385700029557340,
 					"disabled": true
 				},
@@ -927,17 +908,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 779136575767069,
-							"parameters": {
-								"variable": "Valorar_APP",
-								"value": "LocalStorage.ItemValue"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 642437061581587,
 					"disabled": true
 				},

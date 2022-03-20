@@ -1977,7 +1977,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 728090655864537,
+									"sid": 916929466473006,
 									"parameters": {
 										"variable": "SPEEDRUN_mode_TRUE_FALSE"
 									},
@@ -1985,7 +1985,7 @@
 								}
 							],
 							"actions": [],
-							"sid": 766325240444699,
+							"sid": 246182748095409,
 							"children": [
 								{
 									"eventType": "block",
@@ -1993,7 +1993,7 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 995807409197929,
+											"sid": 545086148286034,
 											"parameters": {
 												"first-value": "LayoutName",
 												"comparison": 0,
@@ -2002,7 +2002,7 @@
 										}
 									],
 									"actions": [],
-									"sid": 830618239554256,
+									"sid": 412760093851716,
 									"children": [
 										{
 											"eventType": "block",
@@ -2010,14 +2010,14 @@
 												{
 													"id": "is-overlapping-another-object",
 													"objectClass": "bola",
-													"sid": 127416180579472,
+													"sid": 607168364329930,
 													"parameters": {
 														"object": "llave"
 													}
 												}
 											],
 											"actions": [],
-											"sid": 942443093128096,
+											"sid": 898440469339611,
 											"children": [
 												{
 													"eventType": "block",
@@ -2025,28 +2025,27 @@
 														{
 															"id": "trigger-once-while-true",
 															"objectClass": "System",
-															"sid": 592438066581124
+															"sid": 499350951006007
 														}
 													],
 													"actions": [
 														{
 															"id": "set-achievement",
 															"objectClass": "RG19",
-															"sid": 793928934961391,
+															"sid": 844177411792359,
 															"parameters": {
 																"achievement-name": "\"LOGRO 1\""
 															}
 														},
 														{
 															"callFunction": "DEMO consigue logro",
-															"sid": 977142782917950,
-															"disabled": true,
+															"sid": 182965387520883,
 															"parameters": [
 																"0"
 															]
 														}
 													],
-													"sid": 112482503658500
+													"sid": 670076187429942
 												}
 											]
 										}
@@ -2055,7 +2054,7 @@
 							]
 						}
 					],
-					"sid": 500839055824316
+					"sid": 995915095950560
 				},
 				{
 					"eventType": "group",
@@ -2130,7 +2129,7 @@
 												{
 													"id": "set-achievement",
 													"objectClass": "RG19",
-													"sid": 560917751249711,
+													"sid": 638612202527183,
 													"parameters": {
 														"achievement-name": "\"LOGRO 2\""
 													}
@@ -2138,7 +2137,6 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 156416392612681,
-													"disabled": true,
 													"parameters": [
 														"1"
 													]
@@ -2157,7 +2155,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 3 - COMPLETA 5 SALAS",
+					"title": "LOGRO 3- COMPLETA 5 SALAS",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -2207,7 +2205,7 @@
 												{
 													"id": "set-achievement",
 													"objectClass": "RG19",
-													"sid": 874389718505440,
+													"sid": 575611629947484,
 													"parameters": {
 														"achievement-name": "\"LOGRO 3\""
 													}
@@ -2215,7 +2213,6 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 948789851494483,
-													"disabled": true,
 													"parameters": [
 														"2"
 													]
@@ -2343,7 +2340,7 @@
 																				{
 																					"id": "set-achievement",
 																					"objectClass": "RG19",
-																					"sid": 638455610733338,
+																					"sid": 951029093117496,
 																					"parameters": {
 																						"achievement-name": "\"LOGRO 4\""
 																					}
@@ -2365,73 +2362,12 @@
 																				{
 																					"callFunction": "DEMO consigue logro",
 																					"sid": 146109463855406,
-																					"disabled": true,
 																					"parameters": [
 																						"3"
 																					]
 																				}
 																			],
 																			"sid": 787093491687707
-																		}
-																	]
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "on-collision-with-another-object",
-																			"objectClass": "bola",
-																			"sid": 985060253623930,
-																			"parameters": {
-																				"object": "puerta"
-																			}
-																		}
-																	],
-																	"actions": [],
-																	"sid": 822889798508739,
-																	"children": [
-																		{
-																			"eventType": "block",
-																			"conditions": [
-																				{
-																					"id": "trigger-once-while-true",
-																					"objectClass": "System",
-																					"sid": 424841092736341
-																				}
-																			],
-																			"actions": [
-																				{
-																					"id": "set-achievement",
-																					"objectClass": "RG19",
-																					"sid": 968472024535979,
-																					"parameters": {
-																						"achievement-name": "\"LOGRO 4\""
-																					}
-																				},
-																				{
-																					"id": "set-boolean-eventvar",
-																					"objectClass": "System",
-																					"sid": 652286084648987,
-																					"parameters": {
-																						"variable": "LOGRO_4_HECHO",
-																						"value": "true"
-																					}
-																				},
-																				{
-																					"id": "wait-for-previous-actions",
-																					"objectClass": "System",
-																					"sid": 731929258501312
-																				},
-																				{
-																					"callFunction": "DEMO consigue logro",
-																					"sid": 324167440306101,
-																					"disabled": true,
-																					"parameters": [
-																						"3"
-																					]
-																				}
-																			],
-																			"sid": 444457914014003
 																		}
 																	]
 																}
@@ -2561,7 +2497,7 @@
 																				{
 																					"id": "set-achievement",
 																					"objectClass": "RG19",
-																					"sid": 350389139004080,
+																					"sid": 401082879786875,
 																					"parameters": {
 																						"achievement-name": "\"LOGRO 5\""
 																					}
@@ -2583,7 +2519,6 @@
 																				{
 																					"callFunction": "DEMO consigue logro",
 																					"sid": 360285215714064,
-																					"disabled": true,
 																					"parameters": [
 																						"4"
 																					]
@@ -2679,7 +2614,7 @@
 												{
 													"id": "set-achievement",
 													"objectClass": "RG19",
-													"sid": 634359162526567,
+													"sid": 313114101809511,
 													"parameters": {
 														"achievement-name": "\"LOGRO 6\""
 													}
@@ -2687,7 +2622,6 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 607636186453643,
-													"disabled": true,
 													"parameters": [
 														"5"
 													]
@@ -2756,7 +2690,7 @@
 												{
 													"id": "set-achievement",
 													"objectClass": "RG19",
-													"sid": 943569509681991,
+													"sid": 398843402821549,
 													"parameters": {
 														"achievement-name": "\"LOGRO 7\""
 													}
@@ -2764,7 +2698,6 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 577681098081025,
-													"disabled": true,
 													"parameters": [
 														"6"
 													]
@@ -2852,7 +2785,7 @@
 												{
 													"id": "set-achievement",
 													"objectClass": "RG19",
-													"sid": 613988630016061,
+													"sid": 566485219755613,
 													"parameters": {
 														"achievement-name": "\"LOGRO 8\""
 													}
@@ -2860,7 +2793,6 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 399236627894519,
-													"disabled": true,
 													"parameters": [
 														"7"
 													]
@@ -2929,7 +2861,7 @@
 												{
 													"id": "set-achievement",
 													"objectClass": "RG19",
-													"sid": 978321749454095,
+													"sid": 163338179202832,
 													"parameters": {
 														"achievement-name": "\"LOGRO 9\""
 													}
@@ -2937,7 +2869,6 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 708168890944260,
-													"disabled": true,
 													"parameters": [
 														"8"
 													]
@@ -3025,7 +2956,7 @@
 												{
 													"id": "set-achievement",
 													"objectClass": "RG19",
-													"sid": 596339411949876,
+													"sid": 761922442849983,
 													"parameters": {
 														"achievement-name": "\"LOGRO 10\""
 													}
@@ -3033,7 +2964,6 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 757081799190480,
-													"disabled": true,
 													"parameters": [
 														"9"
 													]
@@ -3102,7 +3032,7 @@
 												{
 													"id": "set-achievement",
 													"objectClass": "RG19",
-													"sid": 133443447015338,
+													"sid": 224085135670115,
 													"parameters": {
 														"achievement-name": "\"LOGRO 11\""
 													}
@@ -3110,7 +3040,6 @@
 												{
 													"callFunction": "DEMO consigue logro",
 													"sid": 619330945645803,
-													"disabled": true,
 													"parameters": [
 														"10"
 													]
@@ -3124,6 +3053,84 @@
 						}
 					],
 					"sid": 721139009378691
+				},
+				{
+					"eventType": "group",
+					"disabled": true,
+					"title": "LOGRO 11 - COMPLETA 25 SALAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 106363193092096
+								}
+							],
+							"actions": [],
+							"sid": 420544128403590,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 887281093275167,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 940573781382114,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 288625911576458,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"3M_CHECKPOINT\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-achievement",
+													"objectClass": "RG19",
+													"sid": 633707843637531,
+													"parameters": {
+														"achievement-name": "\"LOGRO 11\""
+													}
+												},
+												{
+													"callFunction": "DEMO consigue logro",
+													"sid": 506505318739875,
+													"parameters": [
+														"10"
+													]
+												}
+											],
+											"sid": 894685761688033,
+											"disabled": true
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 858429218748717
 				}
 			],
 			"sid": 310460178881833

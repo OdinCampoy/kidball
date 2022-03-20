@@ -426,12 +426,12 @@
 				{
 					"id": "play-by-name",
 					"objectClass": "Audio",
-					"sid": 348004284528426,
+					"sid": 228150684217448,
 					"parameters": {
 						"folder": "music",
 						"audio-file-name": "MUSIC_sound=1? \"Kid_ball_5_boss\":\"\"",
 						"loop": "looping",
-						"volume": "Musica_Volumen_Master",
+						"volume": "VOLUMEN_MASTER_MUSIC",
 						"tag-optional": "\"MUSICA_BOSS\""
 					}
 				}
@@ -6257,6 +6257,97 @@
 				}
 			],
 			"sid": 867505339697864
+		},
+		{
+			"eventType": "comment",
+			"text": "ARREGLO DE REBOTE Y ENGANCHE EN EL SUELO"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 939464185478654,
+					"parameters": {
+						"variable": "PASOS_FINAL_BOSS",
+						"comparison": 5,
+						"value": "5.5"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 585532726072821,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-by-wall",
+							"objectClass": "JEFE_FINAL",
+							"sid": 922233780880700,
+							"behaviorType": "Platform",
+							"parameters": {
+								"side": "left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "JEFE_FINAL",
+							"sid": 770604784998650,
+							"parameters": {
+								"instance-variable": "DIRECCION",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "JEFE_FINAL_imagen",
+							"sid": 362212562804830,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 590383996653577
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-by-wall",
+							"objectClass": "JEFE_FINAL",
+							"sid": 748818334422020,
+							"behaviorType": "Platform",
+							"parameters": {
+								"side": "right"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "JEFE_FINAL",
+							"sid": 219260290921543,
+							"parameters": {
+								"instance-variable": "DIRECCION",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "JEFE_FINAL_imagen",
+							"sid": 140814603111428,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 253313138560972
+				}
+			]
 		}
 	],
 	"sid": 688920596936389
