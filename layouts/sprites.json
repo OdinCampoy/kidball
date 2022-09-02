@@ -253,52 +253,6 @@
 					}
 				},
 				{
-					"type": "bola_portada",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 106,
-					"instanceVariables": {
-						"direccion": 0
-					},
-					"behaviors": {
-						"Platform": {
-							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": true,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 271,
-						"y": -75,
-						"width": 6.114250183,
-						"height": 6.114250183,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "vidas",
 					"properties": {
 						"initially-visible": true,
@@ -3381,6 +3335,7 @@
 				{
 					"type": "DrawingCanvas",
 					"properties": {
+						"resolution-mode": "auto",
 						"initially-visible": true,
 						"origin": "center",
 						"antialiasing": "off"
@@ -4461,8 +4416,8 @@
 					"world": {
 						"x": -50,
 						"y": 38,
-						"width": 36,
-						"height": 28,
+						"width": 50,
+						"height": 40,
 						"originX": 0.9722222222222222,
 						"originY": 0.5,
 						"color": [

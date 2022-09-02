@@ -586,11 +586,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 327264478605095,
+							"sid": 940704891353661,
 							"parameters": {
 								"variable": "FX_sound",
 								"comparison": 0,
-								"value": "1"
+								"value": "0"
 							}
 						}
 					],
@@ -610,28 +610,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 570266246681446,
+									"sid": 741451830745941,
 									"parameters": {
-										"seconds": "1.0"
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 523252706661934,
-									"parameters": {
-										"audio-file": "Risa_enemigo",
-										"loop": "not-looping",
-										"volume": "VOLUMEN_MASTER_FX",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 542372453298652,
-									"parameters": {
-										"seconds": "1.0"
+										"seconds": "2"
 									}
 								},
 								{
@@ -659,16 +640,6 @@
 										"loop": "no",
 										"ping-pong": "no"
 									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 750451410482621,
-									"disabled": true,
-									"parameters": {
-										"variable": "PASOS_FINAL_BOSS",
-										"value": "-1.5"
-									}
 								}
 							],
 							"sid": 835925866228267
@@ -681,16 +652,16 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 455275698309683,
+							"sid": 442158598760000,
 							"parameters": {
 								"variable": "FX_sound",
 								"comparison": 0,
-								"value": "0"
+								"value": "1"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 649143873962515,
+					"sid": 427727666408302,
 					"children": [
 						{
 							"eventType": "block",
@@ -698,22 +669,50 @@
 								{
 									"id": "trigger-once-while-true",
 									"objectClass": "System",
-									"sid": 416807428414663
+									"sid": 560753709164611
 								}
 							],
 							"actions": [
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 562939640606569,
+									"sid": 816753529603737,
 									"parameters": {
 										"seconds": "1.0"
 									}
 								},
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 844444036081279,
+									"parameters": {
+										"audio-file": "risa_enemigo",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 287182086902294,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "2_JEFE_FINAL",
+									"sid": 872123364103144,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								},
+								{
 									"id": "tween-two-properties",
 									"objectClass": "2_JEFE_FINAL",
-									"sid": 870629288551774,
+									"sid": 203046497507868,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"coge_llave_FB2\"",
@@ -726,19 +725,9 @@
 										"loop": "no",
 										"ping-pong": "no"
 									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 584751279691851,
-									"disabled": true,
-									"parameters": {
-										"variable": "PASOS_FINAL_BOSS",
-										"value": "-1.5"
-									}
 								}
 							],
-							"sid": 455284251923169
+							"sid": 551254659373132
 						}
 					]
 				}
@@ -902,11 +891,21 @@
 							],
 							"actions": [
 								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 296071363809880,
+									"id": "set-position",
+									"objectClass": "llave_final_BOSS",
+									"sid": 267126867026007,
 									"parameters": {
-										"seconds": "1.0"
+										"x": "-1000",
+										"y": "-1000"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "RESPLANDOR",
+									"sid": 135978697559871,
+									"parameters": {
+										"x": "-1000",
+										"y": "-1000"
 									}
 								},
 								{
@@ -1133,6 +1132,7 @@
 							"id": "on-tap-object",
 							"objectClass": "Touch",
 							"sid": 695388981420387,
+							"disabled": true,
 							"parameters": {
 								"object": "BTN_FINAL_BOSS_OK"
 							}
@@ -1141,6 +1141,7 @@
 							"id": "on-tap-object",
 							"objectClass": "Touch",
 							"sid": 364306389431080,
+							"disabled": true,
 							"parameters": {
 								"object": "FINAL_BOSS_TUTORIAL"
 							}
@@ -1157,9 +1158,9 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 976874206858166,
+							"sid": 676267660438116,
 							"parameters": {
-								"key": 65
+								"key": 32
 							}
 						}
 					],
@@ -1570,6 +1571,7 @@
 							"functionDescription": "",
 							"functionCategory": "",
 							"functionReturnType": "none",
+							"functionCopyPicked": false,
 							"functionIsAsync": false,
 							"functionParameters": [],
 							"eventType": "function-block",
@@ -2123,6 +2125,7 @@
 					"functionDescription": "",
 					"functionCategory": "",
 					"functionReturnType": "none",
+					"functionCopyPicked": false,
 					"functionIsAsync": false,
 					"functionParameters": [],
 					"eventType": "function-block",
@@ -2805,7 +2808,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -2817,7 +2821,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -2956,7 +2961,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -2968,7 +2974,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3107,7 +3114,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3119,7 +3127,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3304,7 +3313,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3316,7 +3326,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3475,7 +3486,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3487,7 +3499,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3741,7 +3754,8 @@
 																"layer": "\"HUD\"",
 																"x": "431",
 																"y": "240",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -4281,7 +4295,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4309,7 +4324,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4337,7 +4353,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4365,7 +4382,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4393,7 +4411,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4421,7 +4440,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4915,7 +4935,8 @@
 												"layer": "\"decoracion\"",
 												"x": "276",
 												"y": "1143",
-												"create-hierarchy": false
+												"create-hierarchy": false,
+												"template-name": "\"\""
 											}
 										},
 										{
@@ -4952,7 +4973,8 @@
 												"layer": "\"decoracion\"",
 												"x": "583",
 												"y": "1143",
-												"create-hierarchy": false
+												"create-hierarchy": false,
+												"template-name": "\"\""
 											}
 										},
 										{
@@ -5036,7 +5058,8 @@
 												"layer": "\"decoracion\"",
 												"x": "276",
 												"y": "1143",
-												"create-hierarchy": false
+												"create-hierarchy": false,
+												"template-name": "\"\""
 											}
 										},
 										{
@@ -5073,7 +5096,8 @@
 												"layer": "\"decoracion\"",
 												"x": "583",
 												"y": "1143",
-												"create-hierarchy": false
+												"create-hierarchy": false,
+												"template-name": "\"\""
 											}
 										},
 										{
@@ -5479,7 +5503,7 @@
 											"objectClass": "Audio",
 											"sid": 300446170861345,
 											"parameters": {
-												"audio-file": "Risa_enemigo",
+												"audio-file": "risa_enemigo",
 												"loop": "not-looping",
 												"volume": "VOLUMEN_MASTER_FX",
 												"tag-optional": "\"\""
@@ -5886,6 +5910,29 @@
 									}
 								},
 								{
+									"id": "set-y",
+									"objectClass": "RESPLANDOR",
+									"sid": 863171619862454,
+									"parameters": {
+										"y": "Self.Y+12"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "RESPLANDOR",
+									"sid": 947832885508380,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "llave",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
 									"id": "move-to-object",
 									"objectClass": "RESPLANDOR",
 									"sid": 477993135469350,
@@ -5990,7 +6037,7 @@
 									"objectClass": "Audio",
 									"sid": 253849714648206,
 									"parameters": {
-										"audio-file": "Powerup",
+										"audio-file": "powerup",
 										"loop": "not-looping",
 										"volume": "VOLUMEN_MASTER_FX",
 										"tag-optional": "\"\""
@@ -6014,6 +6061,29 @@
 										"layer": "Self.LayerName",
 										"image-point": "0",
 										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "RESPLANDOR",
+									"sid": 742339802888043,
+									"parameters": {
+										"y": "Self.Y+12"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "RESPLANDOR",
+									"sid": 181548015787520,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "llave",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
 									}
 								},
 								{

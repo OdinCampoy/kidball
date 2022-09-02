@@ -135,7 +135,8 @@
 						"layer": "\"VIDAS\"",
 						"x": "555",
 						"y": "446",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -493,7 +494,8 @@
 								"layer": "\"HUD\"",
 								"x": "427",
 								"y": "24",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -505,7 +507,8 @@
 								"layer": "\"HUD\"",
 								"x": "450",
 								"y": "27",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -517,7 +520,8 @@
 								"layer": "\"HUD\"",
 								"x": "452",
 								"y": "29",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -691,134 +695,275 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "trigger-once-while-true",
+							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 714088966680665
+							"sid": 319400202606591,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "0"
+							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 113018898914842,
+					"children": [
 						{
-							"id": "wait",
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 758675351368567
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 888997115941060,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 308286259158880,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 350609077711246,
+									"parameters": {
+										"variable": "Timing_Transicion_mundos",
+										"value": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 986770958947492,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Intro_JEFE_FINAL",
+									"sid": 538403791431630,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "bola_ROSA",
+									"sid": 492335659490045,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "unpin",
+									"objectClass": "bola_ROSA",
+									"sid": 172054265882467,
+									"behaviorType": "Pin"
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "bola_ROSA",
+									"sid": 355006689956356,
+									"parameters": {
+										"object": "Intro_JEFE_FINAL",
+										"image-point-optional": "2"
+									}
+								},
+								{
+									"id": "pin-to-object",
+									"objectClass": "bola_ROSA",
+									"sid": 389651907094296,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Intro_JEFE_FINAL",
+										"mode": "position-only"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Intro_JEFE_FINAL",
+									"sid": 349197580341591,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "1900",
+										"time": "4.2",
+										"ease": "easeinexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								}
+							],
+							"sid": 525991687308390
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 915715140101319,
+							"sid": 535443600535617,
 							"parameters": {
-								"seconds": "1.0"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 954158711349912,
-							"parameters": {
-								"audio-file": "Risa_enemigo",
-								"loop": "not-looping",
-								"volume": "VOLUMEN_MASTER_FX",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 767106277021711,
-							"parameters": {
-								"seconds": "1.0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 982718734634495,
-							"parameters": {
-								"variable": "Timing_Transicion_mundos",
+								"variable": "FX_sound",
+								"comparison": 0,
 								"value": "1"
 							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 930275481804024,
-							"parameters": {
-								"seconds": "1.0"
-							}
-						},
-						{
-							"id": "set-mirrored",
-							"objectClass": "Intro_JEFE_FINAL",
-							"sid": 946873008868509,
-							"parameters": {
-								"state": "not-mirrored"
-							}
-						},
-						{
-							"id": "set-mirrored",
-							"objectClass": "bola_ROSA",
-							"sid": 470652319280178,
-							"parameters": {
-								"state": "mirrored"
-							}
-						},
-						{
-							"id": "unpin",
-							"objectClass": "bola_ROSA",
-							"sid": 696053058892999,
-							"behaviorType": "Pin"
-						},
-						{
-							"id": "set-position-to-another-object",
-							"objectClass": "bola_ROSA",
-							"sid": 365595402155808,
-							"parameters": {
-								"object": "Intro_JEFE_FINAL",
-								"image-point-optional": "2"
-							}
-						},
-						{
-							"id": "pin-to-object",
-							"objectClass": "bola_ROSA",
-							"sid": 264069504701540,
-							"behaviorType": "Pin",
-							"parameters": {
-								"pin-to": "Intro_JEFE_FINAL",
-								"mode": "position-only"
-							}
-						},
-						{
-							"id": "tween-one-property",
-							"objectClass": "Intro_JEFE_FINAL",
-							"sid": 528194384895418,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "offsetX",
-								"end-value": "1900",
-								"time": "4.2",
-								"ease": "easeinexpo",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 536767431786581,
-							"parameters": {
-								"seconds": "3.5"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 608594735459364,
-							"parameters": {
-								"audio-file": "grito_bola_roja_intro",
-								"loop": "not-looping",
-								"volume": "VOLUMEN_MASTER_FX-10",
-								"tag-optional": "\"\""
-							}
 						}
 					],
-					"sid": 266095336684720
+					"actions": [],
+					"sid": 228861143925271,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 478203961364626
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 284499083722766,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 900826650624169,
+									"parameters": {
+										"audio-file": "risa_enemigo",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 903393524428189,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 486067680275547,
+									"parameters": {
+										"variable": "Timing_Transicion_mundos",
+										"value": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 194957562267604,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Intro_JEFE_FINAL",
+									"sid": 357617126600910,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "bola_ROSA",
+									"sid": 213268065667980,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "unpin",
+									"objectClass": "bola_ROSA",
+									"sid": 893868918732651,
+									"behaviorType": "Pin"
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "bola_ROSA",
+									"sid": 846712118986137,
+									"parameters": {
+										"object": "Intro_JEFE_FINAL",
+										"image-point-optional": "2"
+									}
+								},
+								{
+									"id": "pin-to-object",
+									"objectClass": "bola_ROSA",
+									"sid": 289972120831033,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Intro_JEFE_FINAL",
+										"mode": "position-only"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Intro_JEFE_FINAL",
+									"sid": 274027629841170,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "1900",
+										"time": "4.2",
+										"ease": "easeinexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 603366112718579,
+									"parameters": {
+										"seconds": "3.5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 737089024062255,
+									"parameters": {
+										"audio-file": "grito_bola_roja_intro",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX-3",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 493081338846355
+						}
+					]
 				}
 			]
 		},
@@ -1038,7 +1183,7 @@
 							"objectClass": "Audio",
 							"sid": 906945225514622,
 							"parameters": {
-								"audio-file": "Risa_enemigo",
+								"audio-file": "risa_enemigo",
 								"loop": "not-looping",
 								"volume": "VOLUMEN_MASTER_FX-15",
 								"tag-optional": "\"\""

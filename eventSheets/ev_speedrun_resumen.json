@@ -51,7 +51,8 @@
 						"layer": "\"transicion\"",
 						"x": "431",
 						"y": "240",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -752,6 +753,7 @@
 					"functionDescription": "",
 					"functionCategory": "",
 					"functionReturnType": "none",
+					"functionCopyPicked": false,
 					"functionIsAsync": false,
 					"functionParameters": [],
 					"eventType": "function-block",
@@ -1355,9 +1357,17 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 734761430574942,
+									"sid": 738372514038314,
 									"parameters": {
-										"key": 83
+										"key": 27
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 455283968122984,
+									"parameters": {
+										"key": 8
 									}
 								}
 							],

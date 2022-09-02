@@ -311,7 +311,8 @@
 								"layer": "\"HUD\"",
 								"x": "427",
 								"y": "24",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -323,7 +324,8 @@
 								"layer": "\"HUD\"",
 								"x": "450",
 								"y": "27",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -335,7 +337,8 @@
 								"layer": "\"HUD\"",
 								"x": "452",
 								"y": "29",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -399,7 +402,7 @@
 					"objectClass": "Audio",
 					"sid": 255225298264483,
 					"parameters": {
-						"audio-file": "Rebote_pelota",
+						"audio-file": "rebote_pelota",
 						"loop": "not-looping",
 						"volume": "VOLUMEN_MASTER_FX-15",
 						"tag-optional": "\"\""
@@ -460,7 +463,7 @@
 					"objectClass": "Audio",
 					"sid": 801965884594878,
 					"parameters": {
-						"audio-file": "Rebote_pelota",
+						"audio-file": "rebote_pelota",
 						"loop": "not-looping",
 						"volume": "VOLUMEN_MASTER_FX-15",
 						"tag-optional": "\"\""
@@ -672,7 +675,8 @@
 								"layer": "\"RedBall\"",
 								"x": "bola.X",
 								"y": "280",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -693,7 +697,8 @@
 								"layer": "\"RedBall\"",
 								"x": "bola_ROSA.X",
 								"y": "280",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -926,84 +931,194 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "trigger-once-while-true",
+							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 681851238845016
-						}
-					],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 845477291653933,
+							"sid": 406640347376792,
 							"parameters": {
-								"audio-file": "Risa_enemigo",
-								"loop": "not-looping",
-								"volume": "VOLUMEN_MASTER_FX",
-								"tag-optional": "\"risa\""
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 294375540441021,
-							"parameters": {
-								"seconds": "4"
-							}
-						},
-						{
-							"id": "set-active",
-							"objectClass": "Intro_JEFE_FINAL",
-							"sid": 240594268930522,
-							"behaviorType": "Sine",
-							"parameters": {
-								"state": "inactive"
-							}
-						},
-						{
-							"id": "tween-two-properties",
-							"objectClass": "Intro_JEFE_FINAL",
-							"sid": 884936588243979,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"dragon_hacia_rosa\"",
-								"property": "position",
-								"end-x": "bola_ROSA.X",
-								"end-y": "bola_ROSA.Y-20",
-								"time": "1.5",
-								"ease": "easeinquad",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Intro_admircion_rojo",
-							"sid": 320775151293797,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Intro_admircion_rojo2",
-							"sid": 969739045619519,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 536237647420037,
-							"parameters": {
-								"variable": "TEMPO_INTRO_NUEVA",
-								"value": "6"
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "0"
 							}
 						}
 					],
-					"sid": 772297907036674
+					"actions": [],
+					"sid": 635982080618609,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 884115498548350
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 446905122154030,
+									"parameters": {
+										"seconds": "4"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "Intro_JEFE_FINAL",
+									"sid": 365064501996407,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Intro_JEFE_FINAL",
+									"sid": 126309512411777,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"dragon_hacia_rosa\"",
+										"property": "position",
+										"end-x": "bola_ROSA.X",
+										"end-y": "bola_ROSA.Y-20",
+										"time": "1.5",
+										"ease": "easeinquad",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Intro_admircion_rojo",
+									"sid": 959139705189486,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Intro_admircion_rojo2",
+									"sid": 478480498936032,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 108944624750832,
+									"parameters": {
+										"variable": "TEMPO_INTRO_NUEVA",
+										"value": "6"
+									}
+								}
+							],
+							"sid": 871261134836450
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 779397340236838,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 525271465912132,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 107264373078042
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 164595478930468,
+									"parameters": {
+										"audio-file": "risa_enemigo",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"risa\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 964028984471188,
+									"parameters": {
+										"seconds": "4"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "Intro_JEFE_FINAL",
+									"sid": 655850276879451,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Intro_JEFE_FINAL",
+									"sid": 546285989230862,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"dragon_hacia_rosa\"",
+										"property": "position",
+										"end-x": "bola_ROSA.X",
+										"end-y": "bola_ROSA.Y-20",
+										"time": "1.5",
+										"ease": "easeinquad",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Intro_admircion_rojo",
+									"sid": 190711641095525,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Intro_admircion_rojo2",
+									"sid": 517167260870291,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 147851097698420,
+									"parameters": {
+										"variable": "TEMPO_INTRO_NUEVA",
+										"value": "6"
+									}
+								}
+							],
+							"sid": 969373583428694
+						}
+					]
 				}
 			]
 		},
@@ -1375,7 +1490,7 @@
 									"objectClass": "Audio",
 									"sid": 121792563388769,
 									"parameters": {
-										"audio-file": "Risa_enemigo",
+										"audio-file": "risa_enemigo",
 										"loop": "not-looping",
 										"volume": "VOLUMEN_MASTER_FX-10",
 										"tag-optional": "\"risa\""
@@ -1706,7 +1821,7 @@
 							"objectClass": "Audio",
 							"sid": 333243965366310,
 							"parameters": {
-								"audio-file": "Risa_enemigo",
+								"audio-file": "risa_enemigo",
 								"loop": "not-looping",
 								"volume": "VOLUMEN_MASTER_FX",
 								"tag-optional": "\"\""
@@ -2720,6 +2835,14 @@
 									"sid": 559736287949829,
 									"parameters": {
 										"key": 27
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 452530425504993,
+									"parameters": {
+										"key": 8
 									}
 								}
 							],

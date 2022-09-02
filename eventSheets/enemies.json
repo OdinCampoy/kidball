@@ -1840,6 +1840,46 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "compare-instance-variable",
+					"objectClass": "Black_ball",
+					"sid": 777214276660963,
+					"parameters": {
+						"instance-variable": "direccion",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 166008274863921,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 914334851750908
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Black_ball",
+							"sid": 892594791210441,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 903474477885863
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "Black_ball",
 					"sid": 493198166947131,
@@ -1851,6 +1891,7 @@
 			],
 			"actions": [],
 			"sid": 160028619129854,
+			"disabled": true,
 			"children": [
 				{
 					"eventType": "block",
@@ -5223,7 +5264,52 @@
 									}
 								}
 							],
-							"sid": 837015946793588
+							"sid": 837015946793588,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 634374115028748,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 264198549745193,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 840430682077701
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 428636353065949,
+													"parameters": {
+														"audio-file": "Bloques_se_rompen_POP",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 661308459508523
+										}
+									]
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -5374,49 +5460,6 @@
 										}
 									],
 									"sid": 775998726356010
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 183840859361930,
-											"parameters": {
-												"variable": "FX_sound",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 802724310932952,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "trigger-once-while-true",
-													"objectClass": "System",
-													"sid": 839978291289606
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 687393617788837,
-													"parameters": {
-														"audio-file": "Bloques_se_rompen_POP",
-														"loop": "not-looping",
-														"volume": "VOLUMEN_MASTER_FX",
-														"tag-optional": "\"\""
-													}
-												}
-											],
-											"sid": 618732130232228
-										}
-									]
 								}
 							]
 						}
@@ -6020,7 +6063,52 @@
 									}
 								}
 							],
-							"sid": 158052122520228
+							"sid": 158052122520228,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 196216132107357,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 144335731084958,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 581724370158555
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 442781247913725,
+													"parameters": {
+														"audio-file": "Bloques_se_rompen_POP",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 813143326683411
+										}
+									]
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -6171,49 +6259,6 @@
 										}
 									],
 									"sid": 457489239184140
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 298725998483971,
-											"parameters": {
-												"variable": "FX_sound",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 674165458296365,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "trigger-once-while-true",
-													"objectClass": "System",
-													"sid": 106991955590378
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 226570415944662,
-													"parameters": {
-														"audio-file": "Bloques_se_rompen_POP",
-														"loop": "not-looping",
-														"volume": "VOLUMEN_MASTER_FX",
-														"tag-optional": "\"\""
-													}
-												}
-											],
-											"sid": 670791367503698
-										}
-									]
 								}
 							]
 						}
@@ -6817,7 +6862,52 @@
 									}
 								}
 							],
-							"sid": 542903879208018
+							"sid": 542903879208018,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 401351899518667,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 953736964810347,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 123758653733058
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 317567937106720,
+													"parameters": {
+														"audio-file": "Bloques_se_rompen_POP",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 254314591388563
+										}
+									]
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -6968,49 +7058,6 @@
 										}
 									],
 									"sid": 788094294294484
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 772095663420458,
-											"parameters": {
-												"variable": "FX_sound",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 436875253569966,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "trigger-once-while-true",
-													"objectClass": "System",
-													"sid": 529632519106789
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 424791206618604,
-													"parameters": {
-														"audio-file": "Bloques_se_rompen_POP",
-														"loop": "not-looping",
-														"volume": "VOLUMEN_MASTER_FX",
-														"tag-optional": "\"\""
-													}
-												}
-											],
-											"sid": 225388596813486
-										}
-									]
 								}
 							]
 						}
@@ -7614,7 +7661,52 @@
 									}
 								}
 							],
-							"sid": 888631332517357
+							"sid": 888631332517357,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 218719727026276,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 893373460461385,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 704673324611668
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 902671357255573,
+													"parameters": {
+														"audio-file": "Bloques_se_rompen_POP",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 269749102895576
+										}
+									]
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -7765,49 +7857,6 @@
 										}
 									],
 									"sid": 766190406271341
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 810357861288112,
-											"parameters": {
-												"variable": "FX_sound",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 649121873189600,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "trigger-once-while-true",
-													"objectClass": "System",
-													"sid": 239296655255427
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 555265220402357,
-													"parameters": {
-														"audio-file": "Bloques_se_rompen_POP",
-														"loop": "not-looping",
-														"volume": "VOLUMEN_MASTER_FX",
-														"tag-optional": "\"\""
-													}
-												}
-											],
-											"sid": 525014173920446
-										}
-									]
 								}
 							]
 						}
@@ -8411,7 +8460,52 @@
 									}
 								}
 							],
-							"sid": 420218122131950
+							"sid": 420218122131950,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 786970539111531,
+											"parameters": {
+												"variable": "FX_sound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 877602768053393,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 418143775245653
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 885372690567729,
+													"parameters": {
+														"audio-file": "Bloques_se_rompen_POP",
+														"loop": "not-looping",
+														"volume": "VOLUMEN_MASTER_FX",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 718931169832870
+										}
+									]
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -8562,49 +8656,6 @@
 										}
 									],
 									"sid": 951119809409153
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 481420082000932,
-											"parameters": {
-												"variable": "FX_sound",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 135033717072084,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "trigger-once-while-true",
-													"objectClass": "System",
-													"sid": 230350343879899
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 451365553756645,
-													"parameters": {
-														"audio-file": "Bloques_se_rompen_POP",
-														"loop": "not-looping",
-														"volume": "VOLUMEN_MASTER_FX",
-														"tag-optional": "\"\""
-													}
-												}
-											],
-											"sid": 990385514328284
-										}
-									]
 								}
 							]
 						}
@@ -11503,7 +11554,52 @@
 											}
 										}
 									],
-									"sid": 895230272831396
+									"sid": 895230272831396,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "bola",
+													"sid": 289771980295302
+												}
+											],
+											"actions": [
+												{
+													"id": "set-mirrored",
+													"objectClass": "bola_dash",
+													"sid": 617448847531424,
+													"parameters": {
+														"state": "mirrored"
+													}
+												}
+											],
+											"sid": 138981174050129
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "bola",
+													"sid": 592372537814922,
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-mirrored",
+													"objectClass": "bola_dash",
+													"sid": 677473259425269,
+													"parameters": {
+														"state": "not-mirrored"
+													}
+												}
+											],
+											"sid": 573659684134042
+										}
+									]
 								}
 							]
 						}

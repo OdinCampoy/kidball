@@ -42,211 +42,6 @@
 			"sid": 976360951496160
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 631003539678099
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 576499705955760,
-					"parameters": {
-						"variable": "BOTONES_TESTEO",
-						"value": "\"XBOX\""
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 640715453352141,
-					"disabled": true,
-					"parameters": {
-						"variable": "BOTONES_TESTEO",
-						"value": "\"PSX\""
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 769909019346175,
-					"disabled": true,
-					"parameters": {
-						"variable": "BOTONES_TESTEO",
-						"value": "\"SWITCH\""
-					}
-				}
-			],
-			"sid": 539259772103980,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 763484014218383,
-							"parameters": {
-								"first-value": "LayoutName",
-								"comparison": 0,
-								"second-value": "\"INTRO JUEGO\""
-							}
-						}
-					],
-					"actions": [],
-					"sid": 598064392005432,
-					"children": [
-						{
-							"eventType": "comment",
-							"text": "Si no es para Playstation Borra el texto \"OPTIONS\" que sale encima del boton de Playstation"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 502055288083044,
-									"parameters": {
-										"TestValue": "PS4"
-									},
-									"isInverted": true
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 208280681789229,
-									"parameters": {
-										"TestValue": "PS5"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "Intro_OPTIONS_TEXT",
-									"sid": 475594977518624
-								}
-							],
-							"sid": 835864576614125
-						},
-						{
-							"eventType": "comment",
-							"text": "Si no es para Playstation Borra el texto \"OPTIONS\" que sale encima del boton de Playstation"
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 803768855242184,
-							"parameters": {
-								"first-value": "LayoutName",
-								"comparison": 0,
-								"second-value": "\"PORTADA_NUEVA\""
-							}
-						}
-					],
-					"actions": [],
-					"sid": 160268691214908,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 628650078341139,
-									"parameters": {
-										"TestValue": "XBOXONE"
-									},
-									"isInverted": true
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 149912436514800,
-									"parameters": {
-										"TestValue": "SERIESX"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "GameTag_Xbox_Button",
-									"sid": 844255446822344
-								},
-								{
-									"id": "destroy",
-									"objectClass": "Gametag_Xbox_Text",
-									"sid": 938398402156324
-								}
-							],
-							"sid": 674276752694416
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 794134441540688,
-									"parameters": {
-										"TestValue": "XBOXONE"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 771653380614998,
-									"parameters": {
-										"TestValue": "SERIESX"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "Gametag_Xbox_Text",
-									"sid": 981470122266923,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "GameTag_Xbox_Button",
-									"sid": 125678061805841,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-text",
-									"objectClass": "Gametag_Xbox_Text",
-									"sid": 304456522875772,
-									"parameters": {
-										"text": "RG19.GetEnvironment(\"GAMERTAG\")"
-									}
-								}
-							],
-							"sid": 662636330201650
-						}
-					]
-				}
-			]
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "BOTONES SEGUN CONSOLA",
@@ -274,19 +69,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 895162809915640,
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 850092048848789,
 									"parameters": {
-										"TestValue": "XBOXONE"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 119024197093492,
-									"parameters": {
-										"TestValue": "SERIESX"
+										"variable": "mando_o_teclado",
+										"comparison": 0,
+										"value": "\"mando\""
 									}
 								}
 							],
@@ -294,9 +83,9 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Botones_Consola_iconos_A",
-									"sid": 540343316253276,
+									"sid": 976493567310817,
 									"parameters": {
-										"animation": "\"Xbox\"",
+										"animation": "\"Pc_Mando\"",
 										"from": "current-frame"
 									}
 								}
@@ -308,72 +97,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 268462257634545,
-									"parameters": {
-										"TestValue": "PS4"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 844709459839956,
-									"parameters": {
-										"TestValue": "PS5"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Botones_Consola_iconos_A",
-									"sid": 104129523938416,
-									"parameters": {
-										"animation": "\"Psx\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 647611431555126,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 186349860222074,
-									"parameters": {
-										"TestValue": "SWITCH"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Botones_Consola_iconos_A",
-									"sid": 135143383637008,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 497910159753330
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 420337752028359,
+									"sid": 998075992884982,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"XBOX\""
+										"value": "\"teclado\""
 									}
 								}
 							],
@@ -381,70 +111,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Botones_Consola_iconos_A",
-									"sid": 160935152716617,
+									"sid": 700683153864793,
 									"parameters": {
-										"animation": "\"Xbox\"",
+										"animation": "\"PC_Teclado\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 352034608767806,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 801558624563713,
-									"parameters": {
-										"variable": "BOTONES_TESTEO",
-										"comparison": 0,
-										"value": "\"PSX\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Botones_Consola_iconos_A",
-									"sid": 245318393057809,
-									"parameters": {
-										"animation": "\"Psx\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 938247453313929,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 570481678228306,
-									"parameters": {
-										"variable": "BOTONES_TESTEO",
-										"comparison": 0,
-										"value": "\"SWITCH\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Botones_Consola_iconos_A",
-									"sid": 646434210331260,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 949428944064104,
+							"sid": 269979292646699,
 							"isOrBlock": true
 						}
 					],
@@ -471,106 +145,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 655918264048239,
-									"parameters": {
-										"TestValue": "XBOXONE"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 661208783307879,
-									"parameters": {
-										"TestValue": "SERIESX"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Botones_Consola_iconos_B",
-									"sid": 937161396127930,
-									"parameters": {
-										"animation": "\"Xbox\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 689089074648426,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 967533158743541,
-									"parameters": {
-										"TestValue": "PS4"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 319574474921424,
-									"parameters": {
-										"TestValue": "PS5"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Botones_Consola_iconos_B",
-									"sid": 809606377359048,
-									"parameters": {
-										"animation": "\"Psx\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 195462723532575,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 974324510399098,
-									"parameters": {
-										"TestValue": "SWITCH"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Botones_Consola_iconos_B",
-									"sid": 960447149175021,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 589814887737200
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 596918293613634,
+									"sid": 173647527723126,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"XBOX\""
+										"value": "\"mando\""
 									}
 								}
 							],
@@ -578,14 +159,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Botones_Consola_iconos_B",
-									"sid": 655927448887710,
+									"sid": 907906037594278,
 									"parameters": {
-										"animation": "\"Xbox\"",
+										"animation": "\"Pc_Mando\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 865873276760968,
+							"sid": 242624754024008,
 							"isOrBlock": true
 						},
 						{
@@ -594,11 +175,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 950143455919977,
+									"sid": 247427036014467,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"PSX\""
+										"value": "\"teclado\""
 									}
 								}
 							],
@@ -606,42 +187,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Botones_Consola_iconos_B",
-									"sid": 406702173264030,
+									"sid": 569177565372048,
 									"parameters": {
-										"animation": "\"Psx\"",
+										"animation": "\"PC_Teclado\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 143908279470854,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 710796399047591,
-									"parameters": {
-										"variable": "BOTONES_TESTEO",
-										"comparison": 0,
-										"value": "\"SWITCH\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Botones_Consola_iconos_B",
-									"sid": 516624217853045,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 511921793172558,
+							"sid": 517325129314647,
 							"isOrBlock": true
 						}
 					],
@@ -668,106 +221,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 345267976946992,
-									"parameters": {
-										"TestValue": "XBOXONE"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 887121547247978,
-									"parameters": {
-										"TestValue": "SERIESX"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "GAMEOVER_Buttons_1",
-									"sid": 761925943750378,
-									"parameters": {
-										"animation": "\"Xbox\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 701011604782858,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 132619991976019,
-									"parameters": {
-										"TestValue": "PS4"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 423915293138636,
-									"parameters": {
-										"TestValue": "PS5"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "GAMEOVER_Buttons_1",
-									"sid": 239752840797587,
-									"parameters": {
-										"animation": "\"Psx\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 681061777621195,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 849097547625331,
-									"parameters": {
-										"TestValue": "SWITCH"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "GAMEOVER_Buttons_1",
-									"sid": 873841174358392,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 556238320950918
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 212298686381648,
+									"sid": 134498616329450,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"XBOX\""
+										"value": "\"mando\""
 									}
 								}
 							],
@@ -775,14 +235,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "GAMEOVER_Buttons_1",
-									"sid": 782602524964518,
+									"sid": 448453945479789,
 									"parameters": {
-										"animation": "\"Xbox\"",
+										"animation": "\"Pc_Mando\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 446433902816592,
+							"sid": 878147696038503,
 							"isOrBlock": true
 						},
 						{
@@ -791,11 +251,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 694463307795529,
+									"sid": 454025336619997,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"PSX\""
+										"value": "\"teclado\""
 									}
 								}
 							],
@@ -803,42 +263,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "GAMEOVER_Buttons_1",
-									"sid": 495527384376371,
+									"sid": 356071555881861,
 									"parameters": {
-										"animation": "\"Psx\"",
+										"animation": "\"PC_Teclado\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 987193073640543,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 525054525668063,
-									"parameters": {
-										"variable": "BOTONES_TESTEO",
-										"comparison": 0,
-										"value": "\"SWITCH\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "GAMEOVER_Buttons_1",
-									"sid": 339896148589253,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 563329065653664,
+							"sid": 888716164336803,
 							"isOrBlock": true
 						}
 					],
@@ -865,106 +297,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 125278436293295,
-									"parameters": {
-										"TestValue": "XBOXONE"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 342317010305907,
-									"parameters": {
-										"TestValue": "SERIESX"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "GAMEOVER_Buttons_2",
-									"sid": 612898605918919,
-									"parameters": {
-										"animation": "\"Xbox\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 580964387078018,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 940489152627666,
-									"parameters": {
-										"TestValue": "PS4"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 843412122638699,
-									"parameters": {
-										"TestValue": "PS5"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "GAMEOVER_Buttons_2",
-									"sid": 686326778774997,
-									"parameters": {
-										"animation": "\"Psx\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 246225157641185,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 338123351232389,
-									"parameters": {
-										"TestValue": "SWITCH"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "GAMEOVER_Buttons_2",
-									"sid": 911347329596415,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 267630186142002
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 326937700718183,
+									"sid": 313182662822482,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"XBOX\""
+										"value": "\"mando\""
 									}
 								}
 							],
@@ -972,14 +311,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "GAMEOVER_Buttons_2",
-									"sid": 285569028156222,
+									"sid": 354484056359508,
 									"parameters": {
-										"animation": "\"Xbox\"",
+										"animation": "\"Pc_Mando\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 618181856074707,
+							"sid": 533230938988127,
 							"isOrBlock": true
 						},
 						{
@@ -988,11 +327,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 439985193924352,
+									"sid": 389085125898980,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"PSX\""
+										"value": "\"teclado\""
 									}
 								}
 							],
@@ -1000,42 +339,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "GAMEOVER_Buttons_2",
-									"sid": 966440911127278,
+									"sid": 893736230118520,
 									"parameters": {
-										"animation": "\"Psx\"",
+										"animation": "\"PC_Teclado\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 295761331939969,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 913145387808269,
-									"parameters": {
-										"variable": "BOTONES_TESTEO",
-										"comparison": 0,
-										"value": "\"SWITCH\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "GAMEOVER_Buttons_2",
-									"sid": 694767795787756,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 796050525051304,
+							"sid": 203811725652664,
 							"isOrBlock": true
 						}
 					],
@@ -1062,106 +373,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 189107289057715,
-									"parameters": {
-										"TestValue": "XBOXONE"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 933469636113395,
-									"parameters": {
-										"TestValue": "SERIESX"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Intro_Skip_Button",
-									"sid": 657375655530490,
-									"parameters": {
-										"animation": "\"Xbox\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 987307037412925,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 791586866425036,
-									"parameters": {
-										"TestValue": "PS4"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 443947057732330,
-									"parameters": {
-										"TestValue": "PS5"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Intro_Skip_Button",
-									"sid": 433050269083824,
-									"parameters": {
-										"animation": "\"Psx\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 630345272532389,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 723772953718092,
-									"parameters": {
-										"TestValue": "SWITCH"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Intro_Skip_Button",
-									"sid": 530380765825679,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 431403516421056
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 522352434399595,
+									"sid": 807089451183020,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"XBOX\""
+										"value": "\"mando\""
 									}
 								}
 							],
@@ -1169,14 +387,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Intro_Skip_Button",
-									"sid": 435716039172060,
+									"sid": 470112720466434,
 									"parameters": {
-										"animation": "\"Xbox\"",
+										"animation": "\"Pc_Mando\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 856449817427781,
+							"sid": 917250697488425,
 							"isOrBlock": true
 						},
 						{
@@ -1185,11 +403,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 414778774408969,
+									"sid": 891622048949679,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"PSX\""
+										"value": "\"teclado\""
 									}
 								}
 							],
@@ -1197,42 +415,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Intro_Skip_Button",
-									"sid": 735344135843953,
+									"sid": 384402647084311,
 									"parameters": {
-										"animation": "\"Psx\"",
+										"animation": "\"PC_Teclado\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 374408568136399,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 518688191801191,
-									"parameters": {
-										"variable": "BOTONES_TESTEO",
-										"comparison": 0,
-										"value": "\"SWITCH\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Intro_Skip_Button",
-									"sid": 652772991049599,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 753261462021949,
+							"sid": 722014149632129,
 							"isOrBlock": true
 						}
 					],
@@ -1259,106 +449,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 318502618088096,
-									"parameters": {
-										"TestValue": "XBOXONE"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 302609876468543,
-									"parameters": {
-										"TestValue": "SERIESX"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_creditos_Button_Leyend",
-									"sid": 207651310123864,
-									"parameters": {
-										"animation": "\"Xbox\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 355064403068089,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 900044332877224,
-									"parameters": {
-										"TestValue": "PS4"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 907869697453399,
-									"parameters": {
-										"TestValue": "PS5"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_creditos_Button_Leyend",
-									"sid": 163221645749711,
-									"parameters": {
-										"animation": "\"Psx\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 666251026287451,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 204698050590357,
-									"parameters": {
-										"TestValue": "SWITCH"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_creditos_Button_Leyend",
-									"sid": 989851099421082,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 162828406339824
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 825415264764031,
+									"sid": 658251719918933,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"XBOX\""
+										"value": "\"mando\""
 									}
 								}
 							],
@@ -1366,14 +463,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "PORTADA_creditos_Button_Leyend",
-									"sid": 536304203136589,
+									"sid": 522589752431660,
 									"parameters": {
-										"animation": "\"Xbox\"",
+										"animation": "\"Pc_Mando\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 949038636136700,
+							"sid": 255503620593161,
 							"isOrBlock": true
 						},
 						{
@@ -1382,11 +479,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 771396006678759,
+									"sid": 202575248907231,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"PSX\""
+										"value": "\"teclado\""
 									}
 								}
 							],
@@ -1394,42 +491,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "PORTADA_creditos_Button_Leyend",
-									"sid": 325249247677209,
+									"sid": 685190050977217,
 									"parameters": {
-										"animation": "\"Psx\"",
+										"animation": "\"PC_Teclado\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 444127280342868,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 854400755584083,
-									"parameters": {
-										"variable": "BOTONES_TESTEO",
-										"comparison": 0,
-										"value": "\"SWITCH\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_creditos_Button_Leyend",
-									"sid": 522218224748992,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 779399762896980,
+							"sid": 918504445224900,
 							"isOrBlock": true
 						}
 					],
@@ -1456,106 +525,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 125373906494109,
-									"parameters": {
-										"TestValue": "XBOXONE"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 485632771111907,
-									"parameters": {
-										"TestValue": "SERIESX"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_Finalboss_Button_Leyend",
-									"sid": 695514307968191,
-									"parameters": {
-										"animation": "\"Xbox\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 973389972373556,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 371056251336182,
-									"parameters": {
-										"TestValue": "PS4"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 791789123123974,
-									"parameters": {
-										"TestValue": "PS5"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_Finalboss_Button_Leyend",
-									"sid": 847828192707165,
-									"parameters": {
-										"animation": "\"Psx\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 546783617828869,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 659888896074697,
-									"parameters": {
-										"TestValue": "SWITCH"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_Finalboss_Button_Leyend",
-									"sid": 416893468118005,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 609671463820745
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 728497895363509,
+									"sid": 522075401655161,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"XBOX\""
+										"value": "\"mando\""
 									}
 								}
 							],
@@ -1563,14 +539,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "PORTADA_Finalboss_Button_Leyend",
-									"sid": 211065580594736,
+									"sid": 307796814999420,
 									"parameters": {
-										"animation": "\"Xbox\"",
+										"animation": "\"Pc_Mando\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 882848499722899,
+							"sid": 517565486950400,
 							"isOrBlock": true
 						},
 						{
@@ -1579,11 +555,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 670217154413217,
+									"sid": 694810522979659,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"PSX\""
+										"value": "\"teclado\""
 									}
 								}
 							],
@@ -1591,42 +567,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "PORTADA_Finalboss_Button_Leyend",
-									"sid": 679511123398826,
+									"sid": 492378116583197,
 									"parameters": {
-										"animation": "\"Psx\"",
+										"animation": "\"PC_Teclado\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 577865320137066,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 982617778993791,
-									"parameters": {
-										"variable": "BOTONES_TESTEO",
-										"comparison": 0,
-										"value": "\"SWITCH\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_Finalboss_Button_Leyend",
-									"sid": 535243461972731,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 704684107651379,
+							"sid": 816444364004141,
 							"isOrBlock": true
 						}
 					],
@@ -1653,106 +601,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 619274002685381,
-									"parameters": {
-										"TestValue": "XBOXONE"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 188373503404324,
-									"parameters": {
-										"TestValue": "SERIESX"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_options_Button_Leyend",
-									"sid": 855666610717328,
-									"parameters": {
-										"animation": "\"Xbox\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 569099225075611,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 184246267057710,
-									"parameters": {
-										"TestValue": "PS4"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 779825943482656,
-									"parameters": {
-										"TestValue": "PS5"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_options_Button_Leyend",
-									"sid": 359664418815557,
-									"parameters": {
-										"animation": "\"Psx\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 387174185713651,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 855677390572880,
-									"parameters": {
-										"TestValue": "SWITCH"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_options_Button_Leyend",
-									"sid": 832158346676320,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 853383796355864
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 404047905311599,
+									"sid": 381019267716606,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"XBOX\""
+										"value": "\"mando\""
 									}
 								}
 							],
@@ -1760,14 +615,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "PORTADA_options_Button_Leyend",
-									"sid": 345547005301955,
+									"sid": 605187470741635,
 									"parameters": {
-										"animation": "\"Xbox\"",
+										"animation": "\"Pc_Mando\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 902574323894783,
+							"sid": 640215122748702,
 							"isOrBlock": true
 						},
 						{
@@ -1776,11 +631,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 637390330314445,
+									"sid": 311611284535724,
 									"parameters": {
-										"variable": "BOTONES_TESTEO",
+										"variable": "mando_o_teclado",
 										"comparison": 0,
-										"value": "\"PSX\""
+										"value": "\"teclado\""
 									}
 								}
 							],
@@ -1788,42 +643,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "PORTADA_options_Button_Leyend",
-									"sid": 166481132174683,
+									"sid": 348220563734211,
 									"parameters": {
-										"animation": "\"Psx\"",
+										"animation": "\"PC_Teclado\"",
 										"from": "current-frame"
 									}
 								}
 							],
-							"sid": 485308553519613,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 171434105133000,
-									"parameters": {
-										"variable": "BOTONES_TESTEO",
-										"comparison": 0,
-										"value": "\"SWITCH\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "PORTADA_options_Button_Leyend",
-									"sid": 293540118981720,
-									"parameters": {
-										"animation": "\"Switch\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 416451215358635,
+							"sid": 578944638952046,
 							"isOrBlock": true
 						}
 					],
@@ -1831,179 +658,6 @@
 				}
 			],
 			"sid": 139900289483293
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "GAMETAG PARA LA PANTALLA DE INICIO",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "GAMETAG SE VE O NO SE VE",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 448017425812202,
-									"parameters": {
-										"TestValue": "PS4"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 990776976432514,
-									"parameters": {
-										"TestValue": "PS5"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "Gametag_Xbox_Text",
-									"sid": 141252341275166,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "GameTag_Xbox_Button",
-									"sid": 655121532446808,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 149357465839862,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 178080542340558,
-									"parameters": {
-										"TestValue": "SWITCH"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "Gametag_Xbox_Text",
-									"sid": 257950202078671,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "GameTag_Xbox_Button",
-									"sid": 899689984412689,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 733638543212491
-						}
-					],
-					"sid": 707953963189274
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "GAMETAG FOR XBOXONE - RATALAIKA -",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 909880348206940,
-									"parameters": {
-										"TestValue": "XBOXONE"
-									}
-								},
-								{
-									"id": "is-environment-sys",
-									"objectClass": "RG19",
-									"sid": 590365677041254,
-									"parameters": {
-										"TestValue": "SERIESX"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 967054897229023,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-button-down",
-											"objectClass": "Gamepad",
-											"sid": 987721210512847,
-											"parameters": {
-												"gamepad": "0",
-												"button": "button-x"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 440032315003316,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "trigger-once-while-true",
-													"objectClass": "System",
-													"sid": 184580911277785
-												}
-											],
-											"actions": [
-												{
-													"id": "request-account-picker",
-													"objectClass": "RG19",
-													"sid": 918826013865254
-												},
-												{
-													"id": "set-text",
-													"objectClass": "Gametag_Xbox_Text",
-													"sid": 114416999643538,
-													"parameters": {
-														"text": "RG19.GetEnvironment(\"GAMERTAG\")"
-													}
-												}
-											],
-											"sid": 388544571919153
-										}
-									]
-								}
-							],
-							"isOrBlock": true
-						}
-					],
-					"sid": 774877176821287
-				}
-			],
-			"sid": 478576092776310
 		},
 		{
 			"eventType": "group",
@@ -2078,19 +732,12 @@
 													],
 													"actions": [
 														{
-															"id": "set-achievement",
-															"objectClass": "RG19",
-															"sid": 844177411792359,
+															"id": "activate-achievement",
+															"objectClass": "Greenworks",
+															"sid": 671356431375808,
 															"parameters": {
-																"achievement-name": "\"LOGRO 1\""
+																"achievement": "\"achievement_1\""
 															}
-														},
-														{
-															"callFunction": "DEMO consigue logro",
-															"sid": 182965387520883,
-															"parameters": [
-																"0"
-															]
 														}
 													],
 													"sid": 670076187429942
@@ -2175,19 +822,12 @@
 											],
 											"actions": [
 												{
-													"id": "set-achievement",
-													"objectClass": "RG19",
-													"sid": 638612202527183,
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 140134898766303,
 													"parameters": {
-														"achievement-name": "\"LOGRO 2\""
+														"achievement": "\"achievement_2\""
 													}
-												},
-												{
-													"callFunction": "DEMO consigue logro",
-													"sid": 156416392612681,
-													"parameters": [
-														"1"
-													]
 												}
 											],
 											"sid": 823981516596304
@@ -2203,7 +843,157 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 3- COMPLETA 5 SALAS",
+					"title": "LOGRO 3 - SALTA 1 ENEMIGO AZUL",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 547173242269347,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 946756887409159,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 880436158143495,
+											"parameters": {
+												"variable": "LOGRO_4_HECHO"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 422968934176408,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 812579120765395,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"Room_6\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 398576923863833,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-overlapping-another-object",
+															"objectClass": "bola",
+															"sid": 591381122227632,
+															"parameters": {
+																"object": "LOGRO_3_zone"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 474524488876120,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-x",
+																	"objectClass": "bola",
+																	"sid": 845546923437911,
+																	"parameters": {
+																		"comparison": 2,
+																		"x-co-ordinate": "enemy_in_floor.X"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 663678570048927,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "is-on-floor",
+																			"objectClass": "bola",
+																			"sid": 123349217188064,
+																			"behaviorType": "Platform"
+																		}
+																	],
+																	"actions": [],
+																	"sid": 559866503811788,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "trigger-once-while-true",
+																					"objectClass": "System",
+																					"sid": 570864330294532
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "set-boolean-eventvar",
+																					"objectClass": "System",
+																					"sid": 888072506375652,
+																					"parameters": {
+																						"variable": "LOGRO_4_HECHO",
+																						"value": "true"
+																					}
+																				},
+																				{
+																					"id": "wait-for-previous-actions",
+																					"objectClass": "System",
+																					"sid": 164972830412461
+																				},
+																				{
+																					"id": "activate-achievement",
+																					"objectClass": "Greenworks",
+																					"sid": 543511368299391,
+																					"parameters": {
+																						"achievement": "\"achievement_3\""
+																					}
+																				}
+																			],
+																			"sid": 940473167301252
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 169595406989448
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 4- COMPLETA 10 SALAS",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -2241,29 +1031,22 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 317719751699570,
+													"sid": 782402211200147,
 													"parameters": {
 														"first-value": "LayoutName",
 														"comparison": 0,
-														"second-value": "\"1M_CHECKPOINT\""
+														"second-value": "\"1M_TRANSICION_CASTILLOS\""
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "set-achievement",
-													"objectClass": "RG19",
-													"sid": 575611629947484,
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 648144825927242,
 													"parameters": {
-														"achievement-name": "\"LOGRO 3\""
+														"achievement": "\"achievement_4\""
 													}
-												},
-												{
-													"callFunction": "DEMO consigue logro",
-													"sid": 948789851494483,
-													"parameters": [
-														"2"
-													]
 												}
 											],
 											"sid": 737412961100243
@@ -2274,163 +1057,6 @@
 						}
 					],
 					"sid": 706504064792304
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "LOGRO 4 - SALTA 1 ENEMIGO AZUL",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 352548873401896,
-									"parameters": {
-										"variable": "SPEEDRUN_mode_TRUE_FALSE"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [],
-							"sid": 298458249145419,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 566181463493759,
-											"parameters": {
-												"variable": "LOGRO_4_HECHO"
-											},
-											"isInverted": true
-										}
-									],
-									"actions": [],
-									"sid": 795447643778105,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 785669559490352,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 0,
-														"second-value": "\"Room_6\""
-													}
-												}
-											],
-											"actions": [],
-											"sid": 245474429500625,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-overlapping-another-object",
-															"objectClass": "bola",
-															"sid": 804700474466018,
-															"parameters": {
-																"object": "LOGRO_3_zone"
-															}
-														}
-													],
-													"actions": [],
-													"sid": 965894605662934,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-x",
-																	"objectClass": "bola",
-																	"sid": 836988607690025,
-																	"parameters": {
-																		"comparison": 2,
-																		"x-co-ordinate": "enemy_in_floor.X"
-																	}
-																}
-															],
-															"actions": [],
-															"sid": 375167694182717,
-															"children": [
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "is-on-floor",
-																			"objectClass": "bola",
-																			"sid": 372342028241305,
-																			"behaviorType": "Platform"
-																		}
-																	],
-																	"actions": [],
-																	"sid": 835689636750396,
-																	"children": [
-																		{
-																			"eventType": "block",
-																			"conditions": [
-																				{
-																					"id": "trigger-once-while-true",
-																					"objectClass": "System",
-																					"sid": 800511873391261
-																				}
-																			],
-																			"actions": [
-																				{
-																					"id": "set-achievement",
-																					"objectClass": "RG19",
-																					"sid": 951029093117496,
-																					"parameters": {
-																						"achievement-name": "\"LOGRO 4\""
-																					}
-																				},
-																				{
-																					"id": "set-boolean-eventvar",
-																					"objectClass": "System",
-																					"sid": 953774176711974,
-																					"parameters": {
-																						"variable": "LOGRO_4_HECHO",
-																						"value": "true"
-																					}
-																				},
-																				{
-																					"id": "wait-for-previous-actions",
-																					"objectClass": "System",
-																					"sid": 207397804936393
-																				},
-																				{
-																					"callFunction": "DEMO consigue logro",
-																					"sid": 146109463855406,
-																					"parameters": [
-																						"3"
-																					]
-																				}
-																			],
-																			"sid": 787093491687707
-																		}
-																	]
-																}
-															]
-														}
-													]
-												}
-											]
-										}
-									]
-								}
-							]
-						}
-					],
-					"sid": 663235851613424
 				},
 				{
 					"eventType": "group",
@@ -2543,14 +1169,6 @@
 																			],
 																			"actions": [
 																				{
-																					"id": "set-achievement",
-																					"objectClass": "RG19",
-																					"sid": 401082879786875,
-																					"parameters": {
-																						"achievement-name": "\"LOGRO 5\""
-																					}
-																				},
-																				{
 																					"id": "set-boolean-eventvar",
 																					"objectClass": "System",
 																					"sid": 461025556903516,
@@ -2565,11 +1183,12 @@
 																					"sid": 451272168529514
 																				},
 																				{
-																					"callFunction": "DEMO consigue logro",
-																					"sid": 360285215714064,
-																					"parameters": [
-																						"4"
-																					]
+																					"id": "activate-achievement",
+																					"objectClass": "Greenworks",
+																					"sid": 130071403336312,
+																					"parameters": {
+																						"achievement": "\"achievement_5\""
+																					}
 																				}
 																			],
 																			"sid": 604966686800803
@@ -2592,7 +1211,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 6 - COGE 50 GEMAS",
+					"title": "LOGRO 6 - COGE 100 GEMAS",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -2618,31 +1237,31 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 683036956935504,
+											"sid": 836161380237335,
 											"parameters": {
 												"variable": "Gemas_para_logros_1",
 												"comparison": 0,
-												"value": "50"
+												"value": "100"
 											}
 										},
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 470215683609182,
+											"sid": 359247068221454,
 											"parameters": {
 												"variable": "Gemas_para_logros_2",
 												"comparison": 0,
-												"value": "50"
+												"value": "100"
 											}
 										},
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 264647239770671,
+											"sid": 234063225127019,
 											"parameters": {
 												"variable": "Gemas_para_logros_3",
 												"comparison": 0,
-												"value": "50"
+												"value": "100"
 											}
 										}
 									],
@@ -2660,19 +1279,12 @@
 											],
 											"actions": [
 												{
-													"id": "set-achievement",
-													"objectClass": "RG19",
-													"sid": 313114101809511,
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 133004051708821,
 													"parameters": {
-														"achievement-name": "\"LOGRO 6\""
+														"achievement": "\"achievement_6\""
 													}
-												},
-												{
-													"callFunction": "DEMO consigue logro",
-													"sid": 607636186453643,
-													"parameters": [
-														"5"
-													]
 												}
 											],
 											"sid": 332402307066864
@@ -2688,7 +1300,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 7 - COMPLETA 10 SALAS",
+					"title": "LOGRO 7 - COMPLETA 20 SALAS",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -2726,29 +1338,22 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 638456997330653,
+													"sid": 561584664330259,
 													"parameters": {
 														"first-value": "LayoutName",
 														"comparison": 0,
-														"second-value": "\"1M_TRANSICION_CASTILLOS\""
+														"second-value": "\"2M_TRANSICION_CASTILLOS\""
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "set-achievement",
-													"objectClass": "RG19",
-													"sid": 398843402821549,
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 269276018353955,
 													"parameters": {
-														"achievement-name": "\"LOGRO 7\""
+														"achievement": "\"achievement_7\""
 													}
-												},
-												{
-													"callFunction": "DEMO consigue logro",
-													"sid": 577681098081025,
-													"parameters": [
-														"6"
-													]
 												}
 											],
 											"sid": 150891839361453
@@ -2763,103 +1368,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 8 - COGE 100 GEMAS",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 739231088745449,
-									"parameters": {
-										"variable": "SPEEDRUN_mode_TRUE_FALSE"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [],
-							"sid": 930372579558940,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 870134471407638,
-											"parameters": {
-												"variable": "Gemas_para_logros_1",
-												"comparison": 0,
-												"value": "100"
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 434377422680073,
-											"parameters": {
-												"variable": "Gemas_para_logros_2",
-												"comparison": 0,
-												"value": "100"
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 450773581182053,
-											"parameters": {
-												"variable": "Gemas_para_logros_3",
-												"comparison": 0,
-												"value": "100"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 757111768436632,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "trigger-once-while-true",
-													"objectClass": "System",
-													"sid": 145828627838716
-												}
-											],
-											"actions": [
-												{
-													"id": "set-achievement",
-													"objectClass": "RG19",
-													"sid": 566485219755613,
-													"parameters": {
-														"achievement-name": "\"LOGRO 8\""
-													}
-												},
-												{
-													"callFunction": "DEMO consigue logro",
-													"sid": 399236627894519,
-													"parameters": [
-														"7"
-													]
-												}
-											],
-											"sid": 231345586417916
-										}
-									],
-									"isOrBlock": true
-								}
-							]
-						}
-					],
-					"sid": 754569803467800
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "LOGRO 9 - COMPLETA 15 SALAS",
+					"title": "LOGRO 8 - COMPLETA 30 SALAS",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -2897,29 +1406,22 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 556387723572301,
+													"sid": 286858009652307,
 													"parameters": {
 														"first-value": "LayoutName",
 														"comparison": 0,
-														"second-value": "\"2M_CHECKPOINT\""
+														"second-value": "\"3M_TRANSICION_CASTILLOS\""
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "set-achievement",
-													"objectClass": "RG19",
-													"sid": 163338179202832,
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 670547375048882,
 													"parameters": {
-														"achievement-name": "\"LOGRO 9\""
+														"achievement": "\"achievement_8\""
 													}
-												},
-												{
-													"callFunction": "DEMO consigue logro",
-													"sid": 708168890944260,
-													"parameters": [
-														"8"
-													]
 												}
 											],
 											"sid": 604212339267615
@@ -2934,103 +1436,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "LOGRO 10 - COGE 150 GEMAS",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 376785735987330,
-									"parameters": {
-										"variable": "SPEEDRUN_mode_TRUE_FALSE"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [],
-							"sid": 789269594300982,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 457884234188193,
-											"parameters": {
-												"variable": "Gemas_para_logros_1",
-												"comparison": 0,
-												"value": "150"
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 965278852264898,
-											"parameters": {
-												"variable": "Gemas_para_logros_2",
-												"comparison": 0,
-												"value": "150"
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 974447652694408,
-											"parameters": {
-												"variable": "Gemas_para_logros_3",
-												"comparison": 0,
-												"value": "150"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 944708022980262,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "trigger-once-while-true",
-													"objectClass": "System",
-													"sid": 918088836683177
-												}
-											],
-											"actions": [
-												{
-													"id": "set-achievement",
-													"objectClass": "RG19",
-													"sid": 761922442849983,
-													"parameters": {
-														"achievement-name": "\"LOGRO 10\""
-													}
-												},
-												{
-													"callFunction": "DEMO consigue logro",
-													"sid": 757081799190480,
-													"parameters": [
-														"9"
-													]
-												}
-											],
-											"sid": 404036462713607
-										}
-									],
-									"isOrBlock": true
-								}
-							]
-						}
-					],
-					"sid": 127519810098642
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "LOGRO 11 - COMPLETA 20 SALAS",
+					"title": "LOGRO 9 - COMPLETA 40 SALAS",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -3068,29 +1474,22 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 361881990294282,
+													"sid": 207257844495708,
 													"parameters": {
 														"first-value": "LayoutName",
 														"comparison": 0,
-														"second-value": "\"2M_TRANSICION_CASTILLOS\""
+														"second-value": "\"4M_TRANSICION_CASTILLOS\""
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "set-achievement",
-													"objectClass": "RG19",
-													"sid": 224085135670115,
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 199693637253087,
 													"parameters": {
-														"achievement-name": "\"LOGRO 11\""
+														"achievement": "\"achievement_9\""
 													}
-												},
-												{
-													"callFunction": "DEMO consigue logro",
-													"sid": 619330945645803,
-													"parameters": [
-														"10"
-													]
 												}
 											],
 											"sid": 957163763145803
@@ -3104,8 +1503,97 @@
 				},
 				{
 					"eventType": "group",
-					"disabled": true,
-					"title": "LOGRO 11 - COMPLETA 25 SALAS",
+					"disabled": false,
+					"title": "LOGRO 10 - COGE 200 GEMAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 268257072356730,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 506976472367102,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 363226830689954,
+											"parameters": {
+												"variable": "Gemas_para_logros_1",
+												"comparison": 0,
+												"value": "200"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 585644882696478,
+											"parameters": {
+												"variable": "Gemas_para_logros_2",
+												"comparison": 0,
+												"value": "200"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 585216219296569,
+											"parameters": {
+												"variable": "Gemas_para_logros_3",
+												"comparison": 0,
+												"value": "200"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 155676529298299,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 510977038703391
+												}
+											],
+											"actions": [
+												{
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 635546471823192,
+													"parameters": {
+														"achievement": "\"achievement_10\""
+													}
+												}
+											],
+											"sid": 933863777424550
+										}
+									],
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 418841245560633
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 11 - COMPLETA 50 SALAS",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -3115,12 +1603,11 @@
 								{
 									"id": "on-start-of-layout",
 									"objectClass": "System",
-									"sid": 106363193092096
+									"sid": 765130382563932
 								}
 							],
 							"actions": [],
-							"sid": 420544128403590,
-							"disabled": true,
+							"sid": 377192359951712,
 							"children": [
 								{
 									"eventType": "block",
@@ -3128,7 +1615,7 @@
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 887281093275167,
+											"sid": 196007824784433,
 											"parameters": {
 												"variable": "SPEEDRUN_mode_TRUE_FALSE"
 											},
@@ -3136,8 +1623,7 @@
 										}
 									],
 									"actions": [],
-									"sid": 940573781382114,
-									"disabled": true,
+									"sid": 308620302108325,
 									"children": [
 										{
 											"eventType": "block",
@@ -3145,40 +1631,639 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 288625911576458,
+													"sid": 446053849844392,
 													"parameters": {
 														"first-value": "LayoutName",
 														"comparison": 0,
-														"second-value": "\"3M_CHECKPOINT\""
+														"second-value": "\"1_Room_SAVE_GIRL\""
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "set-achievement",
-													"objectClass": "RG19",
-													"sid": 633707843637531,
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 389452593097292,
 													"parameters": {
-														"achievement-name": "\"LOGRO 11\""
+														"achievement": "\"achievement_11\""
 													}
-												},
-												{
-													"callFunction": "DEMO consigue logro",
-													"sid": 506505318739875,
-													"parameters": [
-														"10"
-													]
 												}
 											],
-											"sid": 894685761688033,
-											"disabled": true
+											"sid": 905956070880930
 										}
 									]
 								}
 							]
 						}
 					],
-					"sid": 858429218748717
+					"sid": 997536275072310
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 12 - COMPLETA 60 SALAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 690964903258221
+								}
+							],
+							"actions": [],
+							"sid": 586258366759258,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 759773773615652,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 930438333855974,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 459969506134737,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"6M_TRANSICION_CASTILLOS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 788326266606791,
+													"parameters": {
+														"achievement": "\"achievement_12\""
+													}
+												}
+											],
+											"sid": 331753307258983
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 391693833256675
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 13 - COGE 300 GEMAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 920345980454252,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 293030610143523,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 631552372898288,
+											"parameters": {
+												"variable": "Gemas_para_logros_1",
+												"comparison": 0,
+												"value": "300"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 890957538041234,
+											"parameters": {
+												"variable": "Gemas_para_logros_2",
+												"comparison": 0,
+												"value": "300"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 616314396636642,
+											"parameters": {
+												"variable": "Gemas_para_logros_3",
+												"comparison": 0,
+												"value": "300"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 681941483135042,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 614358204875708
+												}
+											],
+											"actions": [
+												{
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 910212216707614,
+													"parameters": {
+														"achievement": "\"achievement_13\""
+													}
+												}
+											],
+											"sid": 493838559404512
+										}
+									],
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 978899770390876
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 14 - COMPLETA 70 SALAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 466925507482201
+								}
+							],
+							"actions": [],
+							"sid": 691275686144895,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 628797594673524,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 421397668980090,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 567696711662342,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"7M_TRANSICION_CASTILLOS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 764277260470543,
+													"parameters": {
+														"achievement": "\"achievement_14\""
+													}
+												}
+											],
+											"sid": 623402511518335
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 833327179459176
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 15 - COGE 400 GEMAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 461595725225674,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 731747451915319,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 450410814418875,
+											"parameters": {
+												"variable": "Gemas_para_logros_1",
+												"comparison": 0,
+												"value": "400"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 821192727780360,
+											"parameters": {
+												"variable": "Gemas_para_logros_2",
+												"comparison": 0,
+												"value": "400"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 361251160632570,
+											"parameters": {
+												"variable": "Gemas_para_logros_3",
+												"comparison": 0,
+												"value": "400"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 462017576775215,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 832390565768968
+												}
+											],
+											"actions": [
+												{
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 171527081896816,
+													"parameters": {
+														"achievement": "\"achievement_15\""
+													}
+												}
+											],
+											"sid": 787601024857707
+										}
+									],
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 421203706532900
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 16 - COMPLETA 80 SALAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 471987973834013
+								}
+							],
+							"actions": [],
+							"sid": 823155381670570,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 570081576108701,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 141508140454919,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 575878640665799,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"8M_TRANSICION_CASTILLOS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 134934759812547,
+													"parameters": {
+														"achievement": "\"achievement_16\""
+													}
+												}
+											],
+											"sid": 954207404157231
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 953465698279875
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 17 - COGE 500 GEMAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 884513502185715,
+									"parameters": {
+										"variable": "SPEEDRUN_mode_TRUE_FALSE"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 219198850384314,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 191492515278810,
+											"parameters": {
+												"variable": "Gemas_para_logros_1",
+												"comparison": 0,
+												"value": "500"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 654202829549395,
+											"parameters": {
+												"variable": "Gemas_para_logros_2",
+												"comparison": 0,
+												"value": "500"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 324441666569172,
+											"parameters": {
+												"variable": "Gemas_para_logros_3",
+												"comparison": 0,
+												"value": "500"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 486285366946162,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 808529281770619
+												}
+											],
+											"actions": [
+												{
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 939300116264003,
+													"parameters": {
+														"achievement": "\"achievement_17\""
+													}
+												}
+											],
+											"sid": 730099558671274
+										}
+									],
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 508653372191620
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 18 - COMPLETA 90 SALAS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 425414217441335
+								}
+							],
+							"actions": [],
+							"sid": 551948176970759,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 530126862403533,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 626089760702066,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 175705516894951,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"9M_TRANSICION_CASTILLOS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 346081932750010,
+													"parameters": {
+														"achievement": "\"achievement_18\""
+													}
+												}
+											],
+											"sid": 118139816788991
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 470167507060467
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LOGRO 19 - COMPLETA EL JUEGO",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 317787906208657
+								}
+							],
+							"actions": [],
+							"sid": 977791408665787,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 440208564299788,
+											"parameters": {
+												"variable": "SPEEDRUN_mode_TRUE_FALSE"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 623246050640561,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 532542277511300,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"FINAL_JUEGO\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "activate-achievement",
+													"objectClass": "Greenworks",
+													"sid": 547236282861544,
+													"parameters": {
+														"achievement": "\"achievement_19\""
+													}
+												}
+											],
+											"sid": 963467186208741
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 367786184889352
 				}
 			],
 			"sid": 310460178881833

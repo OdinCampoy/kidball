@@ -135,7 +135,8 @@
 						"layer": "\"VIDAS\"",
 						"x": "555",
 						"y": "446",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -461,6 +462,110 @@
 						}
 					],
 					"sid": 606221863312380
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 188122443499617,
+							"parameters": {
+								"variable": "SPEEDRUN_mode_TRUE_FALSE"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 386956229593485,
+							"parameters": {
+								"variable": "speedrun_activo_parado",
+								"value": "\"parado\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 974659098307715,
+							"parameters": {
+								"object-to-create": "Contrarreloj_HUD",
+								"layer": "\"HUD\"",
+								"x": "427",
+								"y": "24",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 122398537204674,
+							"parameters": {
+								"object-to-create": "SpeedRun_TXT_in_Levels",
+								"layer": "\"HUD\"",
+								"x": "450",
+								"y": "27",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 330197517008972,
+							"parameters": {
+								"object-to-create": "SpeedRun_TXT_in_Levels_shadow",
+								"layer": "\"HUD\"",
+								"x": "452",
+								"y": "29",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 899165702718911,
+							"parameters": {
+								"where": "behind",
+								"object": "SpeedRun_TXT_in_Levels"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 434930798685244,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "SpeedRun_TXT_in_Levels",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TXT_in_Levels",
+							"sid": 941848159704212,
+							"parameters": {
+								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,2)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpeedRun_TXT_in_Levels_shadow",
+							"sid": 192281310268350,
+							"parameters": {
+								"text": "hours&\":\"& minutes & \":\" & seconds & \":\" & left(millisecs,1)"
+							}
+						}
+					],
+					"sid": 562288606707161
 				}
 			]
 		},

@@ -391,6 +391,7 @@
 			],
 			"actions": [],
 			"sid": 939575976289621,
+			"disabled": true,
 			"children": [
 				{
 					"eventType": "block",
@@ -408,6 +409,7 @@
 					],
 					"actions": [],
 					"sid": 772942367654244,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -439,7 +441,8 @@
 									}
 								}
 							],
-							"sid": 735919805341333
+							"sid": 735919805341333,
+							"disabled": true
 						}
 					]
 				}
@@ -642,9 +645,17 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 565271795463497,
+									"sid": 544203120631883,
 									"parameters": {
-										"key": 83
+										"key": 27
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 622238752194250,
+									"parameters": {
+										"key": 8
 									}
 								}
 							],
@@ -1170,7 +1181,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{

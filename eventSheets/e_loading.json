@@ -38,6 +38,14 @@
 			],
 			"actions": [
 				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 992307299821195,
+					"parameters": {
+						"cursor-style": "none"
+					}
+				},
+				{
 					"id": "request-project-file",
 					"objectClass": "AJAX",
 					"sid": 494816509957282,
@@ -289,6 +297,14 @@
 					"sid": 987233489665758,
 					"parameters": {
 						"key": "\"SpeedRun_Guardado_10_slots_DOOM\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 933770998978247,
+					"parameters": {
+						"key": "\"mando_o_teclado\""
 					}
 				},
 				{
@@ -555,7 +571,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -567,7 +584,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -579,7 +597,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -591,7 +610,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -603,7 +623,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -615,7 +636,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -627,7 +649,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -639,7 +662,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -651,7 +675,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -663,7 +688,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -675,7 +701,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -687,7 +714,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -699,7 +727,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -711,7 +740,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -723,7 +753,8 @@
 						"layer": "\"fondo\"",
 						"x": "-5000",
 						"y": "-5000",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -733,6 +764,19 @@
 					"parameters": {
 						"tag": "\"SPEEDRUN_10_SLOTS_JSON_GUARDADO\"",
 						"file": "DICCIONARIO_SPEEDRUN_10_SLOTS_JSON_GUARDADO.json"
+					}
+				},
+				{
+					"type": "script",
+					"script": "document.addEventListener('keydown', function(event) {\n if(event.keyCode == 123) {\n\t\tevent.preventDefault();\n }\n if(event.keyCode == 112) {\n\t\tevent.preventDefault();\n }\n}\n);"
+				},
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 211833670398024,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "auto"
 					}
 				}
 			],
@@ -3118,10 +3162,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 275222103667397,
+					"sid": 923179287847625,
 					"parameters": {
 						"variable": "SonidoFX_Volumen_Master",
-						"value": "5"
+						"value": "8"
 					}
 				}
 			],
@@ -3174,8 +3218,18 @@
 					}
 				},
 				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 516679307759793
+				},
+				{
 					"callFunction": "VOLUMEN MASTER SONIDO FX",
 					"sid": 584448994442817
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 808928753118959
 				}
 			],
 			"sid": 699146019252129
@@ -3200,10 +3254,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 487852501641688,
+					"sid": 982085273737816,
 					"parameters": {
 						"variable": "Musica_Volumen_Master",
-						"value": "5"
+						"value": "8"
 					}
 				}
 			],
@@ -3263,6 +3317,11 @@
 				{
 					"callFunction": "VOLUMEN MASTER MUSICA",
 					"sid": 140995288689522
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 189469210510725
 				}
 			],
 			"sid": 753886683958083
@@ -3937,6 +3996,84 @@
 			"sid": 163001054513811
 		},
 		{
+			"eventType": "comment",
+			"text": "SPEED RUN GUARDADO DEL ARRAY DE LOS DATOS DE SPEED RUN"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 126320662158926,
+					"parameters": {
+						"key": "\"mando_o_teclado\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 333530437891850,
+					"parameters": {
+						"variable": "mando_o_teclado",
+						"value": "\"teclado\""
+					}
+				}
+			],
+			"sid": 283963120756553
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 628326562569477,
+					"parameters": {
+						"key": "\"mando_o_teclado\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 874626772075695,
+					"parameters": {
+						"key": "\"mando_o_teclado\""
+					}
+				}
+			],
+			"sid": 451160159979117
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 123726736009047,
+					"parameters": {
+						"key": "\"mando_o_teclado\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 666258009466267,
+					"parameters": {
+						"variable": "mando_o_teclado",
+						"value": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 826874538357504
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "LOGROS PARA LA DEMO",
@@ -4104,91 +4241,6 @@
 		},
 		{
 			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-on-floor",
-					"objectClass": "bola",
-					"sid": 467028808426883,
-					"behaviorType": "Platform"
-				}
-			],
-			"actions": [
-				{
-					"id": "simulate-control",
-					"objectClass": "bola",
-					"sid": 563348321598199,
-					"disabled": true,
-					"behaviorType": "Platform",
-					"parameters": {
-						"control": "jump"
-					}
-				},
-				{
-					"id": "set-vector-y",
-					"objectClass": "bola",
-					"sid": 795500067843886,
-					"behaviorType": "Platform",
-					"parameters": {
-						"vector-y": "-550"
-					}
-				},
-				{
-					"id": "spawn-another-object",
-					"objectClass": "bola",
-					"sid": 850147775548925,
-					"parameters": {
-						"object": "polvo",
-						"layer": "\"TEXTO\"",
-						"image-point": "1",
-						"create-hierarchy": false
-					}
-				},
-				{
-					"id": "set-angle",
-					"objectClass": "polvo",
-					"sid": 249014936983928,
-					"parameters": {
-						"angle": "270"
-					}
-				}
-			],
-			"sid": 882107363412711,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 969642623947789
-				}
-			],
-			"actions": [
-				{
-					"id": "set-max-speed",
-					"objectClass": "bola",
-					"sid": 580450394365905,
-					"behaviorType": "Platform",
-					"parameters": {
-						"max-speed": "200"
-					}
-				},
-				{
-					"id": "simulate-control",
-					"objectClass": "bola",
-					"sid": 442810138582747,
-					"behaviorType": "Platform",
-					"parameters": {
-						"control": "right"
-					}
-				}
-			],
-			"sid": 148491814072396,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
 			"conditions": [],
 			"actions": [],
 			"sid": 121437962880867,
@@ -4235,6 +4287,11 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 346377952662271
+						},
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",

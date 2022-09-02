@@ -68,7 +68,8 @@
 						"layer": "\"sobreescribir file\"",
 						"x": "426",
 						"y": "260",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -80,7 +81,8 @@
 						"layer": "\"sobreescribir file\"",
 						"x": "650",
 						"y": "315",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -92,7 +94,8 @@
 						"layer": "\"sobreescribir file\"",
 						"x": "210",
 						"y": "315",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -104,7 +107,8 @@
 						"layer": "\"sobreescribir file\"",
 						"x": "426",
 						"y": "245",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -116,7 +120,8 @@
 						"layer": "\"sobreescribir file\"",
 						"x": "332",
 						"y": "317",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -128,7 +133,8 @@
 						"layer": "\"sobreescribir file\"",
 						"x": "526",
 						"y": "317",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -546,6 +552,15 @@
 						"variable": "SpeedRun_Borrado_Archivo"
 					},
 					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 606217191304985,
+					"parameters": {
+						"variable": "OPCION_ELEGIDA_YA"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [],
@@ -940,9 +955,9 @@
 										{
 											"id": "on-key-pressed",
 											"objectClass": "Keyboard",
-											"sid": 900952098852763,
+											"sid": 288003772319233,
 											"parameters": {
-												"key": 65
+												"key": 32
 											}
 										}
 									],
@@ -1169,7 +1184,8 @@
 																		"layer": "\"transicion\"",
 																		"x": "431",
 																		"y": "240",
-																		"create-hierarchy": false
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
 																	}
 																},
 																{
@@ -1363,7 +1379,8 @@
 														"layer": "\"transicion\"",
 														"x": "431",
 														"y": "240",
-														"create-hierarchy": false
+														"create-hierarchy": false,
+														"template-name": "\"\""
 													}
 												},
 												{
@@ -1533,9 +1550,17 @@
 										{
 											"id": "on-key-pressed",
 											"objectClass": "Keyboard",
-											"sid": 448311352362146,
+											"sid": 433935944669937,
 											"parameters": {
-												"key": 83
+												"key": 27
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 753896179418257,
+											"parameters": {
+												"key": 8
 											}
 										}
 									],
@@ -1882,6 +1907,7 @@
 					"functionDescription": "",
 					"functionCategory": "",
 					"functionReturnType": "none",
+					"functionCopyPicked": false,
 					"functionIsAsync": false,
 					"functionParameters": [],
 					"eventType": "function-block",
@@ -2011,9 +2037,17 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 931917216398852,
+									"sid": 438975794233163,
 									"parameters": {
-										"key": 83
+										"key": 27
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 345029905158538,
+									"parameters": {
+										"key": 8
 									}
 								}
 							],
@@ -2133,9 +2167,9 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 336800185949295,
+									"sid": 551951786894604,
 									"parameters": {
-										"key": 65
+										"key": 32
 									}
 								}
 							],

@@ -13,6 +13,332 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 950175241577313
+				}
+			],
+			"actions": [],
+			"sid": 862267551815696,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "SOLIDO_M1",
+							"sid": 656433527738276
+						}
+					],
+					"actions": [],
+					"sid": 432178113173693,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 311096954037323,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_1\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 531123655956199,
+									"disabled": true,
+									"parameters": {
+										"audio-file": "Kid_ball_bioma_1",
+										"loop": "looping",
+										"volume": "VOLUMEN_MASTER_FX-5",
+										"tag-optional": "\"MUSICA_bioma_2\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 314300918522705,
+									"parameters": {
+										"audio-file": "Kid_ball_bioma_1",
+										"loop": "looping",
+										"volume": "VOLUMEN_MASTER_MUSIC",
+										"tag-optional": "\"MUSICA_bioma_1\""
+									}
+								}
+							],
+							"sid": 535448522216600
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "SOLIDO_M2",
+							"sid": 418015162299677
+						}
+					],
+					"actions": [],
+					"sid": 554947490690505,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 305239478376330,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_2\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 903134926807958,
+									"parameters": {
+										"audio-file": "Kid_ball_bioma_2",
+										"loop": "looping",
+										"volume": "VOLUMEN_MASTER_MUSIC",
+										"tag-optional": "\"MUSICA_bioma_2\""
+									}
+								}
+							],
+							"sid": 340840391179558
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "SOLIDO_M4",
+							"sid": 242336774196643
+						}
+					],
+					"actions": [],
+					"sid": 634772569595215,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 818007079301597,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_3\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 671059597911392,
+									"parameters": {
+										"audio-file": "Kid_ball_bioma_3",
+										"loop": "looping",
+										"volume": "VOLUMEN_MASTER_MUSIC",
+										"tag-optional": "\"MUSICA_bioma_3\""
+									}
+								}
+							],
+							"sid": 794357165500205
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "SOLIDO_M3",
+							"sid": 932985662114017
+						}
+					],
+					"actions": [],
+					"sid": 153498062835730,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 777521054694802,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_4\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 249280337867967,
+									"parameters": {
+										"audio-file": "Kid_ball_bioma_4",
+										"loop": "looping",
+										"volume": "VOLUMEN_MASTER_MUSIC",
+										"tag-optional": "\"MUSICA_bioma_4\""
+									}
+								}
+							],
+							"sid": 955964793151685
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "SOLIDO_M5",
+							"sid": 763174830681389
+						}
+					],
+					"actions": [],
+					"sid": 981134477598549,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 807006936153719,
+									"parameters": {
+										"tag": "\"MUSICA_bioma_5\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 296068191427119,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 416862132770387,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 1,
+												"second-value": "\"1_Room_FINAL BOSS\""
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 959327540338433,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 1,
+												"second-value": "\"2_Room_FINAL BOSS2\""
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 987558781552063,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 1,
+												"second-value": "\"1_Room_SAVE_GIRL\""
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 844559337241605,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 1,
+												"second-value": "\"2_Room_SAVE_GIRL\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 118180839402630,
+											"parameters": {
+												"audio-file": "Kid_ball_bioma_5",
+												"loop": "looping",
+												"volume": "VOLUMEN_MASTER_MUSIC",
+												"tag-optional": "\"MUSICA_bioma_5\""
+											}
+										}
+									],
+									"sid": 819418954504332
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 896985770378979,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"1_Room_FINAL BOSS\""
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 736930447369852,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"2_Room_FINAL BOSS2\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 136289694410048,
+											"parameters": {
+												"audio-file": "Kid_ball_5_boss",
+												"loop": "looping",
+												"volume": "VOLUMEN_MASTER_MUSIC",
+												"tag-optional": "\"MUSICA_BOSS\""
+											}
+										}
+									],
+									"sid": 152778850165762,
+									"disabled": true,
+									"isOrBlock": true
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
 					"sid": 829245108150374,
@@ -25,334 +351,7 @@
 			],
 			"actions": [],
 			"sid": 522003109646069,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 221669758952410
-						}
-					],
-					"actions": [],
-					"sid": 988904750230913,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-on-screen",
-									"objectClass": "SOLIDO_M1",
-									"sid": 727294664366219
-								}
-							],
-							"actions": [],
-							"sid": 489484255315442,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-tag-playing",
-											"objectClass": "Audio",
-											"sid": 400845889798444,
-											"parameters": {
-												"tag": "\"MUSICA_bioma_1\""
-											},
-											"isInverted": true
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 321134366124708,
-											"disabled": true,
-											"parameters": {
-												"audio-file": "Kid_ball_bioma_1",
-												"loop": "looping",
-												"volume": "VOLUMEN_MASTER_FX-5",
-												"tag-optional": "\"MUSICA_bioma_2\""
-											}
-										},
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 699493117227163,
-											"parameters": {
-												"audio-file": "Kid_ball_bioma_1",
-												"loop": "looping",
-												"volume": "VOLUMEN_MASTER_MUSIC",
-												"tag-optional": "\"MUSICA_bioma_1\""
-											}
-										}
-									],
-									"sid": 614619094992991
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-on-screen",
-									"objectClass": "SOLIDO_M2",
-									"sid": 990913702334184
-								}
-							],
-							"actions": [],
-							"sid": 336484370775630,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-tag-playing",
-											"objectClass": "Audio",
-											"sid": 656452112362602,
-											"parameters": {
-												"tag": "\"MUSICA_bioma_2\""
-											},
-											"isInverted": true
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 420473208764143,
-											"parameters": {
-												"audio-file": "Kid_ball_bioma_2",
-												"loop": "looping",
-												"volume": "VOLUMEN_MASTER_MUSIC",
-												"tag-optional": "\"MUSICA_bioma_2\""
-											}
-										}
-									],
-									"sid": 155739960472016
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-on-screen",
-									"objectClass": "SOLIDO_M4",
-									"sid": 295694480473379
-								}
-							],
-							"actions": [],
-							"sid": 825720507652288,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-tag-playing",
-											"objectClass": "Audio",
-											"sid": 719310219348214,
-											"parameters": {
-												"tag": "\"MUSICA_bioma_3\""
-											},
-											"isInverted": true
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 102956706043654,
-											"parameters": {
-												"audio-file": "Kid_ball_bioma_3",
-												"loop": "looping",
-												"volume": "VOLUMEN_MASTER_MUSIC",
-												"tag-optional": "\"MUSICA_bioma_3\""
-											}
-										}
-									],
-									"sid": 988991830875684
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-on-screen",
-									"objectClass": "SOLIDO_M3",
-									"sid": 471830014020883
-								}
-							],
-							"actions": [],
-							"sid": 839281527920879,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-tag-playing",
-											"objectClass": "Audio",
-											"sid": 914654078746528,
-											"parameters": {
-												"tag": "\"MUSICA_bioma_4\""
-											},
-											"isInverted": true
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 597759121470538,
-											"parameters": {
-												"audio-file": "Kid_ball_bioma_4",
-												"loop": "looping",
-												"volume": "VOLUMEN_MASTER_MUSIC",
-												"tag-optional": "\"MUSICA_bioma_4\""
-											}
-										}
-									],
-									"sid": 379758599193128
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-on-screen",
-									"objectClass": "SOLIDO_M5",
-									"sid": 406005638429065
-								}
-							],
-							"actions": [],
-							"sid": 229400286498910,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-tag-playing",
-											"objectClass": "Audio",
-											"sid": 530932914112981,
-											"parameters": {
-												"tag": "\"MUSICA_bioma_5\""
-											},
-											"isInverted": true
-										}
-									],
-									"actions": [],
-									"sid": 785005555136591,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 268704954524401,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 1,
-														"second-value": "\"1_Room_FINAL BOSS\""
-													}
-												},
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 132870979863617,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 1,
-														"second-value": "\"2_Room_FINAL BOSS2\""
-													}
-												},
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 593408082200018,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 1,
-														"second-value": "\"1_Room_SAVE_GIRL\""
-													}
-												},
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 865395980139813,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 1,
-														"second-value": "\"2_Room_SAVE_GIRL\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 754639419990614,
-													"parameters": {
-														"audio-file": "Kid_ball_bioma_5",
-														"loop": "looping",
-														"volume": "VOLUMEN_MASTER_MUSIC",
-														"tag-optional": "\"MUSICA_bioma_5\""
-													}
-												}
-											],
-											"sid": 939123693427563
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 512610408038949,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 0,
-														"second-value": "\"1_Room_FINAL BOSS\""
-													}
-												},
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 917538072404091,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 0,
-														"second-value": "\"2_Room_FINAL BOSS2\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 805304748861101,
-													"parameters": {
-														"audio-file": "Kid_ball_5_boss",
-														"loop": "looping",
-														"volume": "VOLUMEN_MASTER_MUSIC",
-														"tag-optional": "\"MUSICA_BOSS\""
-													}
-												}
-											],
-											"sid": 569131014133153,
-											"disabled": true,
-											"isOrBlock": true
-										}
-									]
-								}
-							]
-						}
-					]
-				}
-			]
+			"disabled": true
 		},
 		{
 			"eventType": "block",

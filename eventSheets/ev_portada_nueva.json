@@ -69,7 +69,7 @@
 			"eventType": "variable",
 			"name": "SonidoFX_Volumen_Master",
 			"type": "number",
-			"initialValue": "5",
+			"initialValue": "8",
 			"comment": "Volumen de los FX",
 			"isStatic": false,
 			"isConstant": false,
@@ -89,7 +89,7 @@
 			"eventType": "variable",
 			"name": "Musica_Volumen_Master",
 			"type": "number",
-			"initialValue": "5",
+			"initialValue": "8",
 			"comment": "Volumen de la musica",
 			"isStatic": false,
 			"isConstant": false,
@@ -164,6 +164,16 @@
 			"sid": 330460278998120
 		},
 		{
+			"eventType": "variable",
+			"name": "contador_volumen_master",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "contador para controlar la musica de portada",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 355928751209005
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "Ev_desarrollador"
 		},
@@ -188,7 +198,21 @@
 					"sid": 638192072681619
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 423658014682735,
+					"parameters": {
+						"variable": "contador_volumen_master",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "Mando_o_teclado",
+					"sid": 677827713684489
+				}
+			],
 			"sid": 863344647005912,
 			"children": [
 				{
@@ -222,12 +246,17 @@
 							],
 							"actions": [
 								{
-									"callFunction": "VOLUMEN MASTER MUSICA",
-									"sid": 522837199908677
+									"callFunction": "VOLUMEN MASTER SONIDO FX",
+									"sid": 730285203988231
 								},
 								{
-									"callFunction": "VOLUMEN MASTER SONIDO FX",
-									"sid": 102934626464916
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 502844232977508
+								},
+								{
+									"callFunction": "VOLUMEN MASTER MUSICA",
+									"sid": 528633546843418
 								},
 								{
 									"id": "wait-for-previous-actions",
@@ -289,6 +318,14 @@
 									"sid": 743733323096030,
 									"parameters": {
 										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,9)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_exit_TXT",
+									"sid": 845948783907787,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,94)"
 									}
 								},
 								{
@@ -462,6 +499,30 @@
 									"id": "tween-one-property",
 									"objectClass": "PORTADA_credits_TXT",
 									"sid": 758868307004615,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"sale_texto_credits\"",
+										"property": "offsetX",
+										"end-value": "500",
+										"time": "0.6",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 654407653600247,
+									"parameters": {
+										"seconds": "0.25"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "PORTADA_exit_TXT",
+									"sid": 415581702587017,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"sale_texto_credits\"",
@@ -656,6 +717,66 @@
 								},
 								{
 									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_controls",
+									"sid": 987580950812374,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_controls_izq",
+									"sid": 623464134898918,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": false,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "mando_teclado",
+									"sid": 218346744084722,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": false,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_controls_der",
+									"sid": 547626133034471,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": false,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
 									"objectClass": "PORTADA_Opc_Exit_txt",
 									"sid": 116508406069245,
 									"behaviorType": "Pin",
@@ -793,9 +914,64 @@
 								{
 									"callFunction": "IDIOMA - JUEGO",
 									"sid": 524794375671098
+								},
+								{
+									"callFunction": "Mando_o_teclado",
+									"sid": 981469840814886
 								}
 							],
 							"sid": 487101863104762
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 723426212930868,
+									"parameters": {
+										"variable": "FX_sound",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 275671283983181,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 940775717906935
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 892065621433375,
+											"parameters": {
+												"seconds": "0.7"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 743149502777364,
+											"parameters": {
+												"audio-file": "piedra golpea suelo",
+												"loop": "not-looping",
+												"volume": "VOLUMEN_MASTER_FX",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 835842595706424
+								}
+							]
 						}
 					]
 				},
@@ -828,6 +1004,24 @@
 								}
 							],
 							"actions": [
+								{
+									"callFunction": "VOLUMEN MASTER SONIDO FX",
+									"sid": 631949408023059
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 307948565296361
+								},
+								{
+									"callFunction": "VOLUMEN MASTER MUSICA",
+									"sid": 511491399983185
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 430231037655164
+								},
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
@@ -875,6 +1069,14 @@
 									"sid": 656271873019716,
 									"parameters": {
 										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,3)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PORTADA_exit_TXT",
+									"sid": 358471766050549,
+									"parameters": {
+										"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,94)"
 									}
 								},
 								{
@@ -1024,6 +1226,23 @@
 									"id": "set-position",
 									"objectClass": "PORTADA_credits_TXT",
 									"sid": 792336401002496,
+									"parameters": {
+										"x": "500",
+										"y": "Self.Y"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 466166190965319,
+									"parameters": {
+										"seconds": "0.25"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "PORTADA_exit_TXT",
+									"sid": 483246910528421,
 									"parameters": {
 										"x": "500",
 										"y": "Self.Y"
@@ -1220,6 +1439,66 @@
 								},
 								{
 									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_controls",
+									"sid": 948934990918660,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_controls_izq",
+									"sid": 364098044316657,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": false,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "mando_teclado",
+									"sid": 239543477622937,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": false,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PORTADA_Opc_controls_der",
+									"sid": 704877766105868,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Portada_Tablon_opciones",
+										"x": false,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
 									"objectClass": "PORTADA_Opc_Exit_txt",
 									"sid": 826046706135839,
 									"behaviorType": "Pin",
@@ -1384,6 +1663,10 @@
 								{
 									"callFunction": "IDIOMA - JUEGO",
 									"sid": 787898602676605
+								},
+								{
+									"callFunction": "Mando_o_teclado",
+									"sid": 190848759075227
 								}
 							],
 							"sid": 275296335894036
@@ -1456,6 +1739,19 @@
 						{
 							"callFunction": "VOLUMEN MASTER MUSICA",
 							"sid": 230185968736213
+						},
+						{
+							"callFunction": "VOLUMEN MASTER MUSICA",
+							"sid": 323660545127012
+						},
+						{
+							"callFunction": "VOLUMEN MASTER SONIDO FX",
+							"sid": 768173519797903
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 140265141989819
 						}
 					],
 					"sid": 331093466839290
@@ -1478,6 +1774,7 @@
 			],
 			"actions": [],
 			"sid": 692693529695227,
+			"disabled": true,
 			"children": [
 				{
 					"eventType": "block",
@@ -1495,6 +1792,7 @@
 					],
 					"actions": [],
 					"sid": 851498855127853,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -1526,7 +1824,8 @@
 									}
 								}
 							],
-							"sid": 620118576903222
+							"sid": 620118576903222,
+							"disabled": true
 						}
 					]
 				},
@@ -1555,7 +1854,6 @@
 					],
 					"actions": [],
 					"sid": 381032021687845,
-					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -1579,8 +1877,7 @@
 									}
 								}
 							],
-							"sid": 301424025935528,
-							"disabled": true
+							"sid": 301424025935528
 						}
 					]
 				}
@@ -2005,6 +2302,7 @@
 							],
 							"actions": [],
 							"sid": 145283124293587,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "comment",
@@ -2042,6 +2340,7 @@
 									],
 									"actions": [],
 									"sid": 814406373301414,
+									"disabled": true,
 									"children": [
 										{
 											"eventType": "block",
@@ -2107,7 +2406,8 @@
 													}
 												}
 											],
-											"sid": 360644726135075
+											"sid": 360644726135075,
+											"disabled": true
 										},
 										{
 											"eventType": "block",
@@ -2125,6 +2425,7 @@
 											],
 											"actions": [],
 											"sid": 665128643299112,
+											"disabled": true,
 											"children": [
 												{
 													"eventType": "block",
@@ -2148,7 +2449,8 @@
 															}
 														}
 													],
-													"sid": 892223127642574
+													"sid": 892223127642574,
+													"disabled": true
 												}
 											]
 										}
@@ -2379,14 +2681,58 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 926429557188722,
+													"sid": 684711765440611,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"value": "\"salir\""
+													}
+												}
+											],
+											"sid": 626966662253261
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 117837733015780,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"salir\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 381094762889816,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 834902672459369,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 591161620661126,
 													"parameters": {
 														"variable": "Portada_portada_seleccion",
 														"value": "\"jugar\""
 													}
 												}
 											],
-											"sid": 626966662253261
+											"sid": 259177016639379
 										},
 										{
 											"eventType": "block",
@@ -2508,10 +2854,10 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 337917762797170,
+													"sid": 484366056663143,
 													"parameters": {
 														"variable": "Portada_portada_seleccion",
-														"value": "\"creditos\""
+														"value": "\"salir\""
 													}
 												}
 											],
@@ -2611,11 +2957,55 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 633568381989864,
+													"sid": 991497905381805,
 													"parameters": {
 														"variable": "Portada_portada_seleccion",
 														"comparison": 0,
 														"value": "\"creditos\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 245497439126826,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 650005261474405,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 407041653518701,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"value": "\"opciones\""
+													}
+												}
+											],
+											"sid": 116578107264799
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 150226423862184,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"salir\""
 													}
 												}
 											],
@@ -2640,10 +3030,10 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 345073209687489,
+													"sid": 947655536481957,
 													"parameters": {
 														"variable": "Portada_portada_seleccion",
-														"value": "\"opciones\""
+														"value": "\"creditos\""
 													}
 												}
 											],
@@ -2714,9 +3104,9 @@
 										{
 											"id": "on-key-pressed",
 											"objectClass": "Keyboard",
-											"sid": 841921909445087,
+											"sid": 731076910432462,
 											"parameters": {
-												"key": 65
+												"key": 32
 											}
 										}
 									],
@@ -3067,6 +3457,15 @@
 													],
 													"actions": [
 														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 976660145276014,
+															"parameters": {
+																"variable": "OPCION_ELEGIDA_YA",
+																"value": "false"
+															}
+														},
+														{
 															"callFunction": "IDIOMA - JUEGO",
 															"sid": 978010703280839
 														},
@@ -3363,6 +3762,113 @@
 													]
 												}
 											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 106892865234453,
+													"parameters": {
+														"variable": "Portada_portada_seleccion",
+														"comparison": 0,
+														"value": "\"salir\""
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 693244256219109,
+													"parameters": {
+														"variable": "Portada_Opcion_Elegida",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 617167294336917,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 376454598798255
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 676073974862642,
+															"parameters": {
+																"variable": "Portada_Opcion_Elegida",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 496641974937644,
+															"parameters": {
+																"seconds": "0.3"
+															}
+														},
+														{
+															"id": "close",
+															"objectClass": "Browser",
+															"sid": 470221481068100
+														}
+													],
+													"sid": 751713349349123
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 419868524491429,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 205166584495622,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 422057507085192
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 571521317520124,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 755302118859718
+														}
+													]
+												}
+											]
 										}
 									],
 									"isOrBlock": true
@@ -3437,6 +3943,14 @@
 									"parameters": {
 										"color": "rgbEx255(199,199,199)"
 									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_exit_TXT",
+									"sid": 321302848519088,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
 								}
 							],
 							"sid": 436047961146079
@@ -3492,6 +4006,14 @@
 									"id": "set-font-color",
 									"objectClass": "PORTADA_credits_TXT",
 									"sid": 695539669534092,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_exit_TXT",
+									"sid": 702917765072594,
 									"parameters": {
 										"color": "rgbEx255(199,199,199)"
 									}
@@ -3553,6 +4075,14 @@
 									"parameters": {
 										"color": "rgbEx255(199,199,199)"
 									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_exit_TXT",
+									"sid": 786144990614482,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
 								}
 							],
 							"sid": 722671250234912
@@ -3611,9 +4141,83 @@
 									"parameters": {
 										"color": "rgbEx255(245,245,245)"
 									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_exit_TXT",
+									"sid": 691887246065844,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
 								}
 							],
 							"sid": 511984840681142
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 311151091361995,
+									"parameters": {
+										"variable": "Portada_portada_seleccion",
+										"comparison": 0,
+										"value": "\"salir\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "PORTADA_SELECTOR_ICONO",
+									"sid": 867813709903263,
+									"parameters": {
+										"y": "PORTADA_exit_TXT.Y-2"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_speedrun_TXT",
+									"sid": 758309983526054,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_play_TXT",
+									"sid": 748592361313126,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_setting_TXT",
+									"sid": 916718966938231,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_credits_TXT",
+									"sid": 152126238492161,
+									"parameters": {
+										"color": "rgbEx255(199,199,199)"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "PORTADA_exit_TXT",
+									"sid": 217132797654468,
+									"parameters": {
+										"color": "rgbEx255(245,245,245)"
+									}
+								}
+							],
+							"sid": 995145384023153
 						}
 					],
 					"sid": 364877028147965
@@ -3726,6 +4330,15 @@
 										"comparison": 0,
 										"value": "0"
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 951192327006407,
+									"parameters": {
+										"variable": "OPCION_ELEGIDA_YA"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [],
@@ -3893,14 +4506,58 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 192191358760144,
+													"sid": 367371651148397,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"value": "\"controles\""
+													}
+												}
+											],
+											"sid": 398978309170252
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 524321873716296,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"controles\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 464823041883713,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 385976231372351,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 145137544002015,
 													"parameters": {
 														"variable": "Portada_opciones_seleccion",
 														"value": "\"salir\""
 													}
 												}
 											],
-											"sid": 398978309170252
+											"sid": 827391383379241
 										},
 										{
 											"eventType": "block",
@@ -4169,6 +4826,50 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
+													"sid": 629029249326910,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"controles\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 933134390524977,
+													"parameters": {
+														"variable": "GAMEPAD_CENTER",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 990645240781609,
+													"parameters": {
+														"seconds": "0.01"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 143391303295672,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"value": "\"idioma\""
+													}
+												}
+											],
+											"sid": 440004644425937
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
 													"sid": 820690421210820,
 													"parameters": {
 														"variable": "Portada_opciones_seleccion",
@@ -4198,10 +4899,10 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 552763830151105,
+													"sid": 420602643583558,
 													"parameters": {
 														"variable": "Portada_opciones_seleccion",
-														"value": "\"idioma\""
+														"value": "\"controles\""
 													}
 												}
 											],
@@ -4982,6 +5683,158 @@
 													]
 												}
 											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 619160540065189,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"controles\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 430462223177197,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 445805451304127,
+															"parameters": {
+																"variable": "mando_o_teclado",
+																"comparison": 0,
+																"value": "\"mando\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 991566710044127,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 899379284563517
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 452614942332300,
+															"parameters": {
+																"variable": "mando_o_teclado",
+																"value": "\"teclado\""
+															}
+														},
+														{
+															"callFunction": "Mando_o_teclado",
+															"sid": 331336187522913
+														}
+													],
+													"sid": 445190592430862
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 874488791807311,
+															"parameters": {
+																"variable": "mando_o_teclado",
+																"comparison": 0,
+																"value": "\"teclado\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 899628905620298,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 314299760764098
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 704789020286123,
+															"parameters": {
+																"variable": "mando_o_teclado",
+																"value": "\"mando\""
+															}
+														},
+														{
+															"callFunction": "Mando_o_teclado",
+															"sid": 931818445019378
+														}
+													],
+													"sid": 509106692965464
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 641386193504293,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 192214417346039,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 362054586245365
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 680129067548705,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 991861356380352
+														}
+													]
+												}
+											]
 										}
 									],
 									"isOrBlock": true
@@ -5715,6 +6568,158 @@
 													]
 												}
 											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 527010065480895,
+													"parameters": {
+														"variable": "Portada_opciones_seleccion",
+														"comparison": 0,
+														"value": "\"controles\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 633432608854069,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 310392420658261,
+															"parameters": {
+																"variable": "mando_o_teclado",
+																"comparison": 0,
+																"value": "\"mando\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 583732112454502,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 974596014956344
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 257844559552490,
+															"parameters": {
+																"variable": "mando_o_teclado",
+																"value": "\"teclado\""
+															}
+														},
+														{
+															"callFunction": "Mando_o_teclado",
+															"sid": 375283512590750
+														}
+													],
+													"sid": 434407357189949
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 792551669759384,
+															"parameters": {
+																"variable": "mando_o_teclado",
+																"comparison": 0,
+																"value": "\"teclado\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 431764137847941,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait-for-previous-actions",
+															"objectClass": "System",
+															"sid": 430558447360639
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 858057056511526,
+															"parameters": {
+																"variable": "mando_o_teclado",
+																"value": "\"mando\""
+															}
+														},
+														{
+															"callFunction": "Mando_o_teclado",
+															"sid": 187999968715464
+														}
+													],
+													"sid": 143701640890074
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 431699151650857,
+															"parameters": {
+																"variable": "FX_sound",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 895774512770028,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "trigger-once-while-true",
+																	"objectClass": "System",
+																	"sid": 482222663113838
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 979084342039089,
+																	"parameters": {
+																		"audio-file": "Portada_selector_pasar_opciones",
+																		"loop": "not-looping",
+																		"volume": "VOLUMEN_MASTER_FX",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 660021958372740
+														}
+													]
+												}
+											]
 										}
 									],
 									"isOrBlock": true
@@ -5738,9 +6743,9 @@
 										{
 											"id": "on-key-pressed",
 											"objectClass": "Keyboard",
-											"sid": 832471805365520,
+											"sid": 330873809076858,
 											"parameters": {
-												"key": 65
+												"key": 32
 											}
 										}
 									],
@@ -5774,6 +6779,24 @@
 														}
 													],
 													"actions": [
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 347443373995750,
+															"parameters": {
+																"variable": "OPCION_ELEGIDA_YA",
+																"value": "true"
+															}
+														},
+														{
+															"id": "set-item",
+															"objectClass": "LocalStorage",
+															"sid": 946586525265071,
+															"parameters": {
+																"key": "\"mando_o_teclado\"",
+																"value": "mando_o_teclado"
+															}
+														},
 														{
 															"id": "set-item",
 															"objectClass": "LocalStorage",
@@ -5912,6 +6935,207 @@
 										}
 									],
 									"isOrBlock": true
+								},
+								{
+									"eventType": "comment",
+									"text": "SALIR Y GUARDAR PULSANDO VOLVER EN MANDO O TECLADO"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 165581519215844,
+											"parameters": {
+												"gamepad": "0",
+												"button": "button-b"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 425721853050839,
+											"parameters": {
+												"key": 27
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 823947707704768,
+											"parameters": {
+												"key": 8
+											}
+										}
+									],
+									"actions": [],
+									"sid": 234812302502460,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 127623652339618
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 984519616577814,
+													"parameters": {
+														"variable": "OPCION_ELEGIDA_YA",
+														"value": "true"
+													}
+												},
+												{
+													"id": "set-item",
+													"objectClass": "LocalStorage",
+													"sid": 999321650228672,
+													"parameters": {
+														"key": "\"mando_o_teclado\"",
+														"value": "mando_o_teclado"
+													}
+												},
+												{
+													"id": "set-item",
+													"objectClass": "LocalStorage",
+													"sid": 582333279331362,
+													"parameters": {
+														"key": "\"Idoma_Master\"",
+														"value": "Idoma_Master"
+													}
+												},
+												{
+													"id": "set-item",
+													"objectClass": "LocalStorage",
+													"sid": 935178094586542,
+													"parameters": {
+														"key": "\"Idioma_numerico\"",
+														"value": "Idioma_numerico"
+													}
+												},
+												{
+													"id": "set-item",
+													"objectClass": "LocalStorage",
+													"sid": 189697393776278,
+													"parameters": {
+														"key": "\"SonidoFX_Volumen_Master\"",
+														"value": "SonidoFX_Volumen_Master"
+													}
+												},
+												{
+													"id": "set-item",
+													"objectClass": "LocalStorage",
+													"sid": 429768164569451,
+													"parameters": {
+														"key": "\"Musica_Volumen_Master\"",
+														"value": "Musica_Volumen_Master"
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "Portada_Tablon_opciones",
+													"sid": 746621924683788,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"portada_opciones_ee_va\"",
+														"property": "offsetY",
+														"end-value": "-345",
+														"time": "0.4",
+														"ease": "easeoutexpo",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 452754600291303,
+													"parameters": {
+														"variable": "Game_Manager_Portada",
+														"value": "\"vacio\""
+													}
+												}
+											],
+											"sid": 566713481171448
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 797434798371928,
+													"parameters": {
+														"variable": "FX_sound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 910547875912045,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "trigger-once-while-true",
+															"objectClass": "System",
+															"sid": 629495672695857
+														}
+													],
+													"actions": [
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 893399427605839,
+															"disabled": true,
+															"parameters": {
+																"seconds": "0.3"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 530493477867902,
+															"parameters": {
+																"variable": "Portada_Opcion_Elegida",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 616879387446620,
+															"parameters": {
+																"variable": "GAMEPAD_CENTER",
+																"value": "1"
+															}
+														},
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 257440146236289,
+															"parameters": {
+																"audio-file": "Swipe",
+																"loop": "not-looping",
+																"volume": "VOLUMEN_MASTER_FX",
+																"tag-optional": "\"\""
+															}
+														}
+													],
+													"sid": 104806056502880
+												}
+											]
+										}
+									],
+									"isOrBlock": true
 								}
 							]
 						}
@@ -6024,18 +7248,17 @@
 										{
 											"id": "on-key-pressed",
 											"objectClass": "Keyboard",
-											"sid": 488820783637140,
+											"sid": 519515586964480,
 											"parameters": {
-												"key": 83
+												"key": 27
 											}
 										},
 										{
 											"id": "on-key-pressed",
 											"objectClass": "Keyboard",
-											"sid": 195143220699056,
-											"disabled": true,
+											"sid": 164318984847282,
 											"parameters": {
-												"key": 27
+												"key": 8
 											}
 										}
 									],
@@ -6279,6 +7502,32 @@
 						}
 					],
 					"sid": 317416542563714
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 887359878277788,
+							"parameters": {
+								"variable": "Portada_opciones_seleccion",
+								"comparison": 0,
+								"value": "\"controles\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "PORTADA_Opc_Selector",
+							"sid": 210980914861025,
+							"parameters": {
+								"y": "PORTADA_Opc_controls.Y-2"
+							}
+						}
+					],
+					"sid": 604553397873490
 				},
 				{
 					"eventType": "block",
@@ -6739,6 +7988,7 @@
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
@@ -6853,6 +8103,7 @@
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
@@ -7521,7 +8772,17 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 646943369883337,
+							"parameters": {
+								"variable": "MUSIC_sound",
+								"value": "0"
+							}
+						}
+					],
 					"sid": 307194346220898,
 					"children": [
 						{
@@ -8110,6 +9371,7 @@
 					"functionDescription": "",
 					"functionCategory": "",
 					"functionReturnType": "none",
+					"functionCopyPicked": false,
 					"functionIsAsync": false,
 					"functionParameters": [],
 					"eventType": "function-block",
@@ -8145,6 +9407,14 @@
 							"sid": 666935056253307,
 							"parameters": {
 								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,3)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PORTADA_exit_TXT",
+							"sid": 587715875211201,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,94)"
 							}
 						},
 						{
@@ -8205,6 +9475,14 @@
 						},
 						{
 							"id": "set-text",
+							"objectClass": "PORTADA_Opc_controls",
+							"sid": 848407026924303,
+							"parameters": {
+								"text": "Array_Traducciones_IDOMAS.At(Idioma_numerico,93)"
+							}
+						},
+						{
+							"id": "set-text",
 							"objectClass": "PORTADA_Opc_Exit_txt",
 							"sid": 402780869244273,
 							"parameters": {
@@ -8256,6 +9534,266 @@
 				}
 			],
 			"sid": 641215008152684
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ACTUALIZA EL MANDO O TECLADO",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "Mando_o_teclado",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 282165710020220,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 849546362493819,
+									"parameters": {
+										"variable": "mando_o_teclado",
+										"comparison": 0,
+										"value": "\"teclado\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "mando_teclado",
+									"sid": 573303850870078,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 131485717893752
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 226131853545327,
+									"parameters": {
+										"variable": "mando_o_teclado",
+										"comparison": 0,
+										"value": "\"mando\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "mando_teclado",
+									"sid": 589595566708037,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 606293447140309
+						}
+					]
+				}
+			],
+			"sid": 577005513408403
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 609988198842681,
+					"parameters": {
+						"variable": "Game_Manager_Portada",
+						"comparison": 0,
+						"value": "\"portada\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 518695937894269,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 797276775553506,
+							"parameters": {
+								"variable": "mando_o_teclado",
+								"comparison": 0,
+								"value": "\"teclado\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 737671092288963,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 456428623013713,
+									"parameters": {
+										"gamepad": "0"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 903988807800952,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 4,
+										"value": "90"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 415184654669560,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 2,
+										"value": "-90"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 754436229620725,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 2,
+										"value": "-90"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 821113991980974,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 4,
+										"value": "90"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 773814207552692,
+									"parameters": {
+										"variable": "mando_o_teclado",
+										"value": "\"mando\""
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 351993516015954,
+									"parameters": {
+										"key": "\"mando_o_teclado\"",
+										"value": "mando_o_teclado"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "mando_teclado",
+									"sid": 745159300734662,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 535833546018800,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 333785710572795,
+							"parameters": {
+								"variable": "mando_o_teclado",
+								"comparison": 0,
+								"value": "\"mando\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 712442305688089,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-key-released",
+									"objectClass": "Keyboard",
+									"sid": 667113560594468
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 589507871093316,
+									"parameters": {
+										"variable": "mando_o_teclado",
+										"value": "\"teclado\""
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 526273710900477,
+									"parameters": {
+										"key": "\"mando_o_teclado\"",
+										"value": "mando_o_teclado"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "mando_teclado",
+									"sid": 680259995097045,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 446098945461879
+						}
+					]
+				}
+			]
 		}
 	],
 	"sid": 712945447984638

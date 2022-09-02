@@ -3,201 +3,50 @@
 	"events": [
 		{
 			"eventType": "group",
-			"disabled": false,
+			"disabled": true,
 			"title": "DESARROLLADOR",
 			"description": "",
 			"isActiveOnStart": true,
+			"children": [],
+			"sid": 442816640533803
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-gamepad-connected",
+					"objectClass": "Gamepad",
+					"sid": 889832698581380
+				}
+			],
+			"actions": [],
+			"sid": 226973155213354,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 343585760873262,
-							"parameters": {
-								"key": 8
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "clear-storage",
-							"objectClass": "LocalStorage",
-							"sid": 649855668445894
-						}
-					],
-					"sid": 953725296036224
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 610345424119255,
-							"parameters": {
-								"key": 32
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "subtract-from-eventvar",
+							"id": "trigger-once-while-true",
 							"objectClass": "System",
-							"sid": 184527568576195,
-							"parameters": {
-								"variable": "VIDA_FINAL_BOSS",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 752263754018947
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 310429518930669,
-							"parameters": {
-								"key": 76
-							}
+							"sid": 966015090377241
 						}
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 811638333483696,
+							"id": "gamepad-vibrate",
+							"objectClass": "Gamepad",
+							"sid": 149039080291388,
 							"parameters": {
-								"variable": "VIDAS_1",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 421311514322958,
-							"parameters": {
-								"variable": "VIDAS_2",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 424771579195352,
-							"parameters": {
-								"variable": "VIDAS_3",
-								"value": "1"
+								"gamepad": "0",
+								"duration": "500",
+								"weak-magnitude": "100",
+								"strong-magnitude": "100"
 							}
 						}
 					],
-					"sid": 862170607796792
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 342418267344117,
-							"parameters": {
-								"key": 89
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 499020494190670,
-							"parameters": {
-								"layout": "FINAL_JUEGO"
-							}
-						}
-					],
-					"sid": 937695006144401,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 160108888540915,
-							"parameters": {
-								"key": 81
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position",
-							"objectClass": "bola",
-							"sid": 424988843818774,
-							"parameters": {
-								"x": "llave.X",
-								"y": "llave.Y"
-							}
-						}
-					],
-					"sid": 465550208236426
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 275377421319770,
-							"parameters": {
-								"key": 87
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position",
-							"objectClass": "bola",
-							"sid": 395280952281561,
-							"parameters": {
-								"x": "puerta.X",
-								"y": "puerta.Y"
-							}
-						}
-					],
-					"sid": 380505352367878
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 813381719326961,
-							"parameters": {
-								"key": 69
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-nextprevious-layout",
-							"objectClass": "System",
-							"sid": 534513184442373,
-							"parameters": {
-								"which": "next"
-							}
-						}
-					],
-					"sid": 192481669582729
+					"sid": 529579405056615
 				}
-			],
-			"sid": 442816640533803
+			]
 		}
 	],
 	"sid": 281696972513490

@@ -72,7 +72,8 @@
 						"layer": "\"HUD_INTRO\"",
 						"x": "0",
 						"y": "0",
-						"create-hierarchy": false
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				},
 				{
@@ -352,7 +353,7 @@
 							"objectClass": "Audio",
 							"sid": 550597852354026,
 							"parameters": {
-								"audio-file": "Rebote_pelota",
+								"audio-file": "rebote_pelota",
 								"loop": "not-looping",
 								"volume": "VOLUMEN_MASTER_FX-15",
 								"tag-optional": "\"\""
@@ -894,7 +895,8 @@
 										"layer": "\"edificio\"",
 										"x": "600",
 										"y": "bola.Y-30",
-										"create-hierarchy": false
+										"create-hierarchy": false,
+										"template-name": "\"\""
 									}
 								},
 								{
@@ -953,7 +955,8 @@
 										"layer": "\"edificio\"",
 										"x": "600",
 										"y": "bola.Y-30",
-										"create-hierarchy": false
+										"create-hierarchy": false,
+										"template-name": "\"\""
 									}
 								},
 								{
@@ -1706,7 +1709,7 @@
 									"objectClass": "Audio",
 									"sid": 906039253783397,
 									"parameters": {
-										"audio-file": "Risa_enemigo",
+										"audio-file": "risa_enemigo",
 										"loop": "not-looping",
 										"volume": "VOLUMEN_MASTER_FX",
 										"tag-optional": "\"\""
@@ -2407,19 +2410,7 @@
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 232709606232615,
-									"parameters": {
-										"audio-file": "helice_jefe_final",
-										"loop": "looping",
-										"volume": "VOLUMEN_MASTER_FX-8",
-										"tag-optional": "\"jefe_final\""
-									}
-								}
-							],
+							"actions": [],
 							"sid": 370453822712731
 						}
 					]

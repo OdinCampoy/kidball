@@ -185,6 +185,7 @@
 								"deceleration": 500,
 								"directions": "left-right",
 								"set-angle": "no",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -228,6 +229,7 @@
 								"deceleration": 500,
 								"directions": "left-right",
 								"set-angle": "no",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -271,6 +273,7 @@
 								"deceleration": 500,
 								"directions": "left-right",
 								"set-angle": "no",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -343,6 +346,7 @@
 								"deceleration": 500,
 								"directions": "left-right",
 								"set-angle": "no",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -586,7 +590,7 @@
 						}
 					},
 					"world": {
-						"x": 168,
+						"x": 172,
 						"y": 463,
 						"width": 220,
 						"height": 25,
@@ -905,7 +909,7 @@
 					"type": "SLOTS_LIFE_TXT_1",
 					"properties": {
 						"text": "X 9",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 17,
 						"line-height": 0,
@@ -918,21 +922,21 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
-						"origin": "top-left"
+						"origin": "center"
 					},
 					"uid": 6957,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 268,
-						"y": 132,
-						"width": 54,
+						"x": 298,
+						"y": 152,
+						"width": 60,
 						"height": 33,
-						"originX": 0,
-						"originY": 0,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -976,7 +980,7 @@
 					"type": "SLOTS_GEMAS_TXT_1",
 					"properties": {
 						"text": "4/5",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 17,
 						"line-height": 0,
@@ -989,21 +993,21 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
-						"origin": "top-left"
+						"origin": "center"
 					},
 					"uid": 6960,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 360,
-						"y": 132,
+						"x": 381,
+						"y": 152,
 						"width": 47,
 						"height": 33,
-						"originX": 0,
-						"originY": 0,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1018,7 +1022,7 @@
 					"type": "SLOTS_TXT_1",
 					"properties": {
 						"text": "FILE 1",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 12,
 						"line-height": 0,
@@ -1031,21 +1035,21 @@
 							1
 						],
 						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
-						"origin": "top-left"
+						"origin": "center"
 					},
 					"uid": 6961,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 78,
-						"y": 51,
+						"x": 137,
+						"y": 64,
 						"width": 118,
 						"height": 20,
-						"originX": 0,
-						"originY": 0,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1060,7 +1064,7 @@
 					"type": "SLOTS_ROOM_TXT_1",
 					"properties": {
 						"text": "ROOM 99",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 15,
 						"line-height": 0,
@@ -1131,7 +1135,7 @@
 					"type": "SLOTS_TXT_description_1",
 					"properties": {
 						"text": "SELECCIONA UNA OPCION\nSELECCIONA UNA OPCION",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": -4,
@@ -1173,7 +1177,7 @@
 					"type": "SLOTS_TXT_description_PLAY_1",
 					"properties": {
 						"text": "CONTINUE GAME",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -1186,7 +1190,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -1196,7 +1200,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 675.4160451216196,
-						"y": 129,
+						"y": 132,
 						"width": 224.83209024323912,
 						"height": 19,
 						"originX": 0.5,
@@ -1215,7 +1219,7 @@
 					"type": "SLOTS_TXT_description_DELETE_1",
 					"properties": {
 						"text": "DELETE GAME",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -1228,7 +1232,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -1238,7 +1242,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 675.829054093059,
-						"y": 152.8033531608504,
+						"y": 155.8033531608504,
 						"width": 225.01198727423127,
 						"height": 19,
 						"originX": 0.5,
@@ -1257,7 +1261,7 @@
 					"type": "SLOTS_TXT_description_NEWGAME_1",
 					"properties": {
 						"text": "NEW GAME",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 15,
 						"line-height": 0,
@@ -1270,7 +1274,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "center"
@@ -1299,7 +1303,7 @@
 					"type": "SLOTS_TXT_2",
 					"properties": {
 						"text": "FILE 2",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 12,
 						"line-height": 0,
@@ -1312,21 +1316,21 @@
 							1
 						],
 						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
-						"origin": "top-left"
+						"origin": "center"
 					},
 					"uid": 6968,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 78,
-						"y": 184,
+						"x": 137,
+						"y": 197,
 						"width": 118,
 						"height": 20,
-						"originX": 0,
-						"originY": 0,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1341,7 +1345,7 @@
 					"type": "SLOTS_ROOM_TXT_2",
 					"properties": {
 						"text": "ROOM 99",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 15,
 						"line-height": 0,
@@ -1412,7 +1416,7 @@
 					"type": "SLOTS_LIFE_TXT_2",
 					"properties": {
 						"text": "X 9",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 17,
 						"line-height": 0,
@@ -1425,21 +1429,21 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
-						"origin": "top-left"
+						"origin": "center"
 					},
 					"uid": 6971,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 268,
-						"y": 266,
-						"width": 69,
+						"x": 298,
+						"y": 285,
+						"width": 60,
 						"height": 33,
-						"originX": 0,
-						"originY": 0,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1483,7 +1487,7 @@
 					"type": "SLOTS_GEMAS_TXT_2",
 					"properties": {
 						"text": "4/5",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 17,
 						"line-height": 0,
@@ -1496,21 +1500,21 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
-						"origin": "top-left"
+						"origin": "center"
 					},
 					"uid": 6973,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 360,
-						"y": 266,
+						"x": 381,
+						"y": 285,
 						"width": 47,
 						"height": 33,
-						"originX": 0,
-						"originY": 0,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1525,7 +1529,7 @@
 					"type": "SLOTS_TXT_description_2",
 					"properties": {
 						"text": "SELECCIONA UNA OPCION\nSELECCIONA UNA OPCION",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -1567,7 +1571,7 @@
 					"type": "SLOTS_TXT_description_PLAY_2",
 					"properties": {
 						"text": "CONTINUE GAME",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -1580,7 +1584,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -1590,7 +1594,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 675.0844393380873,
-						"y": 262,
+						"y": 265,
 						"width": 224.1688786761747,
 						"height": 19,
 						"originX": 0.5,
@@ -1609,7 +1613,7 @@
 					"type": "SLOTS_TXT_description_NEWGAME_2",
 					"properties": {
 						"text": "NEW GAME",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 15,
 						"line-height": 0,
@@ -1622,7 +1626,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "center"
@@ -1651,7 +1655,7 @@
 					"type": "SLOTS_TXT_description_DELETE_2",
 					"properties": {
 						"text": "DELETE GAME",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -1664,7 +1668,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -1674,7 +1678,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 675.0844393380875,
-						"y": 286,
+						"y": 289,
 						"width": 224.1688786761748,
 						"height": 19,
 						"originX": 0.5,
@@ -1693,7 +1697,7 @@
 					"type": "SLOTS_TXT_3",
 					"properties": {
 						"text": "FILE 3",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 12,
 						"line-height": 0,
@@ -1706,21 +1710,21 @@
 							1
 						],
 						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
-						"origin": "top-left"
+						"origin": "center"
 					},
 					"uid": 6978,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 78,
-						"y": 319,
+						"x": 137,
+						"y": 331,
 						"width": 118,
 						"height": 20,
-						"originX": 0,
-						"originY": 0,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1735,7 +1739,7 @@
 					"type": "SLOTS_ROOM_TXT_3",
 					"properties": {
 						"text": "ROOM 99",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 15,
 						"line-height": 0,
@@ -1777,7 +1781,7 @@
 					"type": "SLOTS_LIFE_TXT_3",
 					"properties": {
 						"text": "X 9",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 17,
 						"line-height": 0,
@@ -1790,21 +1794,21 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
-						"origin": "top-left"
+						"origin": "center"
 					},
 					"uid": 6980,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 268,
-						"y": 399,
-						"width": 69,
+						"x": 298,
+						"y": 419,
+						"width": 60,
 						"height": 33,
-						"originX": 0,
-						"originY": 0,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1819,7 +1823,7 @@
 					"type": "SLOTS_GEMAS_TXT_3",
 					"properties": {
 						"text": "4/10",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 17,
 						"line-height": 0,
@@ -1832,21 +1836,21 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
-						"origin": "top-left"
+						"origin": "center"
 					},
 					"uid": 6981,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 360,
-						"y": 399,
+						"x": 381,
+						"y": 419,
 						"width": 47,
 						"height": 33,
-						"originX": 0,
-						"originY": 0,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1919,7 +1923,7 @@
 					"type": "SLOTS_TXT_description_3",
 					"properties": {
 						"text": "SELECCIONA UNA OPCION\nSELECCIONA UNA OPCION\n",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -1961,7 +1965,7 @@
 					"type": "SLOTS_TXT_description_PLAY_3",
 					"properties": {
 						"text": "CONTINUE GAME",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -1974,7 +1978,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -1984,7 +1988,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 675.6627542722317,
-						"y": 395,
+						"y": 398,
 						"width": 225.32550854446333,
 						"height": 19,
 						"originX": 0.5,
@@ -2003,7 +2007,7 @@
 					"type": "SLOTS_TXT_description_DELETE_3",
 					"properties": {
 						"text": "DELETE GAME",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -2016,7 +2020,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -2026,7 +2030,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 675.6627542722317,
-						"y": 419,
+						"y": 422,
 						"width": 225.32550854446333,
 						"height": 19,
 						"originX": 0.5,
@@ -2074,7 +2078,7 @@
 					"type": "SLOTS_TXT_lastSaved_1",
 					"properties": {
 						"text": "LAST SAVE",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 9,
 						"line-height": 0,
@@ -2116,7 +2120,7 @@
 					"type": "SLOTS_TXT_lastSaved_2",
 					"properties": {
 						"text": "LAST SAVE",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 9,
 						"line-height": 0,
@@ -2158,7 +2162,7 @@
 					"type": "SLOTS_TXT_lastSaved_3",
 					"properties": {
 						"text": "LAST SAVE",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 9,
 						"line-height": 0,
@@ -2200,7 +2204,7 @@
 					"type": "SLOTS_TXT_description_NEWGAME_3",
 					"properties": {
 						"text": "NEW GAME",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 15,
 						"line-height": 0,
@@ -2213,7 +2217,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "center"
@@ -2604,7 +2608,7 @@
 					"type": "Botones_Consola_iconos_A",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Xbox",
+						"initial-animation": "Pc_Mando",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2615,8 +2619,8 @@
 					"world": {
 						"x": 39,
 						"y": 461,
-						"width": 20,
-						"height": 20,
+						"width": 28.88888888888889,
+						"height": 27.222222222222225,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2633,7 +2637,7 @@
 					"type": "Botones_Consola_iconos_B",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Xbox",
+						"initial-animation": "PC_Teclado",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2644,8 +2648,8 @@
 					"world": {
 						"x": 820,
 						"y": 461,
-						"width": 20,
-						"height": 20,
+						"width": 33.333333333333336,
+						"height": 25,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2806,7 +2810,7 @@
 					"type": "SLOTS_TXT_startgame_1",
 					"properties": {
 						"text": "start juego",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": -4,
@@ -2848,7 +2852,7 @@
 					"type": "SLOTS_TXT_startgame_2",
 					"properties": {
 						"text": "start juego",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": -4,
@@ -2890,7 +2894,7 @@
 					"type": "SLOTS_TXT_startgame_3",
 					"properties": {
 						"text": "start juego",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": -4,
@@ -2932,7 +2936,7 @@
 					"type": "SLOTS_TXT_borrarJuego_pregunta_1",
 					"properties": {
 						"text": "¿BORRAR ARCHIVO 1?",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": -4,
@@ -2956,7 +2960,7 @@
 					"world": {
 						"x": 618,
 						"y": 97,
-						"width": 349,
+						"width": 309,
 						"height": 37,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -2974,7 +2978,7 @@
 					"type": "SLOTS_TXT_borrarJuego_pregunta_2",
 					"properties": {
 						"text": "¿BORRAR ARCHIVO 2?",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": -4,
@@ -2998,7 +3002,7 @@
 					"world": {
 						"x": 618,
 						"y": 229,
-						"width": 349,
+						"width": 309,
 						"height": 37,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -3016,7 +3020,7 @@
 					"type": "SLOTS_TXT_borrarJuego_pregunta_3",
 					"properties": {
 						"text": "¿BORRAR ARCHIVO 3?",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": -4,
@@ -3040,7 +3044,7 @@
 					"world": {
 						"x": 618,
 						"y": 362,
-						"width": 349,
+						"width": 309,
 						"height": 37,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -3058,7 +3062,7 @@
 					"type": "SLOTS_TXT_borrarJuego_NO_1",
 					"properties": {
 						"text": "NO",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -3071,7 +3075,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -3081,7 +3085,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 640,
-						"y": 129,
+						"y": 132,
 						"width": 154,
 						"height": 19,
 						"originX": 0.5,
@@ -3100,7 +3104,7 @@
 					"type": "SLOTS_TXT_borrarJuego_SI_1",
 					"properties": {
 						"text": "YES",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -3113,7 +3117,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -3123,7 +3127,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 640,
-						"y": 153,
+						"y": 156,
 						"width": 154,
 						"height": 19,
 						"originX": 0.5,
@@ -3142,7 +3146,7 @@
 					"type": "SLOTS_TXT_borrarJuego_NO_2",
 					"properties": {
 						"text": "NO",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -3155,7 +3159,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -3165,7 +3169,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 640,
-						"y": 262,
+						"y": 265,
 						"width": 154,
 						"height": 19,
 						"originX": 0.5,
@@ -3184,7 +3188,7 @@
 					"type": "SLOTS_TXT_borrarJuego_SI_2",
 					"properties": {
 						"text": "YES",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -3197,7 +3201,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -3207,7 +3211,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 640,
-						"y": 286,
+						"y": 289,
 						"width": 154,
 						"height": 19,
 						"originX": 0.5,
@@ -3226,7 +3230,7 @@
 					"type": "SLOTS_TXT_borrarJuego_NO_3",
 					"properties": {
 						"text": "NO",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -3239,7 +3243,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -3249,7 +3253,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 640,
-						"y": 395,
+						"y": 398,
 						"width": 154,
 						"height": 19,
 						"originX": 0.5,
@@ -3268,7 +3272,7 @@
 					"type": "SLOTS_TXT_borrarJuego_SI_3",
 					"properties": {
 						"text": "YES",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 11,
 						"line-height": 0,
@@ -3281,7 +3285,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": false,
 						"origin": "center"
@@ -3291,7 +3295,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 640,
-						"y": 419,
+						"y": 422,
 						"width": 154,
 						"height": 19,
 						"originX": 0.5,
@@ -3310,7 +3314,7 @@
 					"type": "SLOTS_TXT_juego_borrado_1",
 					"properties": {
 						"text": "ARCHIVO 1 BORRADO",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 12,
 						"line-height": -4,
@@ -3352,7 +3356,7 @@
 					"type": "SLOTS_TXT_juego_borrado_2",
 					"properties": {
 						"text": "ARCHIVO 1 BORRADO",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 12,
 						"line-height": -4,
@@ -3394,7 +3398,7 @@
 					"type": "SLOTS_TXT_juego_borrado_3",
 					"properties": {
 						"text": "ARCHIVO 1 BORRADO",
-						"enable-bbcode": true,
+						"enable-bbcode": false,
 						"font": "BalooThambi2-ExtraBold",
 						"size": 12,
 						"line-height": -4,

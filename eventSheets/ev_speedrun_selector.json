@@ -415,6 +415,15 @@
 								"comparison": 0,
 								"value": "0"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 442289289095671,
+							"parameters": {
+								"variable": "OPCION_ELEGIDA_YA"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],
@@ -920,9 +929,9 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 547033119364667,
+									"sid": 767825877484413,
 									"parameters": {
-										"key": 65
+										"key": 32
 									}
 								}
 							],
@@ -1477,6 +1486,7 @@
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
+			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
@@ -1605,9 +1615,17 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 142516182759590,
+									"sid": 576791121502873,
 									"parameters": {
-										"key": 83
+										"key": 27
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 539100498349091,
+									"parameters": {
+										"key": 8
 									}
 								}
 							],

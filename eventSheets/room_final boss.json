@@ -644,7 +644,7 @@
 									"objectClass": "Audio",
 									"sid": 546515107466665,
 									"parameters": {
-										"audio-file": "Risa_enemigo",
+										"audio-file": "risa_enemigo",
 										"loop": "not-looping",
 										"volume": "VOLUMEN_MASTER_FX+2",
 										"tag-optional": "\"\""
@@ -863,7 +863,7 @@
 									"objectClass": "Audio",
 									"sid": 719134096816279,
 									"parameters": {
-										"audio-file": "Powerup",
+										"audio-file": "powerup",
 										"loop": "not-looping",
 										"volume": "VOLUMEN_MASTER_FX+2",
 										"tag-optional": "\"\""
@@ -1116,56 +1116,157 @@
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 445387281045148,
+			"children": [
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 272280805811539,
-					"parameters": {
-						"audio-file": "coge_bola_jefe_final",
-						"loop": "not-looping",
-						"volume": "VOLUMEN_MASTER_FX",
-						"tag-optional": "\"\""
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 632768128020353,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 335218052228601,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 986243885300828
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "llave_final_BOSS",
+									"sid": 679161198117059
+								},
+								{
+									"id": "destroy",
+									"objectClass": "RESPLANDOR",
+									"sid": 178843230268394
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "JEFE_FINAL",
+									"sid": 667806434717288,
+									"parameters": {
+										"instance-variable": "DIRECCION",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "JEFE_FINAL",
+									"sid": 285810998597433,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 665572228838904,
+									"parameters": {
+										"variable": "PASOS_FINAL_BOSS",
+										"value": "2.5"
+									}
+								}
+							],
+							"sid": 485933318136880
+						}
+					]
 				},
 				{
-					"id": "destroy",
-					"objectClass": "llave_final_BOSS",
-					"sid": 623132229720054
-				},
-				{
-					"id": "destroy",
-					"objectClass": "RESPLANDOR",
-					"sid": 440586484657001
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "JEFE_FINAL",
-					"sid": 898603431337752,
-					"parameters": {
-						"instance-variable": "DIRECCION",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-mirrored",
-					"objectClass": "JEFE_FINAL",
-					"sid": 135425194524301,
-					"parameters": {
-						"state": "not-mirrored"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 970668801127287,
-					"parameters": {
-						"variable": "PASOS_FINAL_BOSS",
-						"value": "2.5"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 762036758187637,
+							"parameters": {
+								"variable": "FX_sound",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 321293995670797,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 117730376984227
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 952221686180520,
+									"parameters": {
+										"audio-file": "coge_bola_jefe_final",
+										"loop": "not-looping",
+										"volume": "VOLUMEN_MASTER_FX",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "llave_final_BOSS",
+									"sid": 990374304432835
+								},
+								{
+									"id": "destroy",
+									"objectClass": "RESPLANDOR",
+									"sid": 745568107737874
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "JEFE_FINAL",
+									"sid": 124870635810193,
+									"parameters": {
+										"instance-variable": "DIRECCION",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "JEFE_FINAL",
+									"sid": 564666247154635,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 894849897840845,
+									"parameters": {
+										"variable": "PASOS_FINAL_BOSS",
+										"value": "2.5"
+									}
+								}
+							],
+							"sid": 552172473569251
+						}
+					]
 				}
-			],
-			"sid": 445387281045148
+			]
 		},
 		{
 			"eventType": "block",
@@ -1507,6 +1608,7 @@
 							"id": "on-tap-object",
 							"objectClass": "Touch",
 							"sid": 164183034253637,
+							"disabled": true,
 							"parameters": {
 								"object": "BTN_FINAL_BOSS_OK"
 							}
@@ -1515,6 +1617,7 @@
 							"id": "on-tap-object",
 							"objectClass": "Touch",
 							"sid": 596371084701244,
+							"disabled": true,
 							"parameters": {
 								"object": "FINAL_BOSS_TUTORIAL"
 							}
@@ -1531,9 +1634,9 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 233487650271055,
+							"sid": 623420576403142,
 							"parameters": {
-								"key": 65
+								"key": 32
 							}
 						}
 					],
@@ -1608,6 +1711,15 @@
 							],
 							"actions": [
 								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 187423608219805,
+									"parameters": {
+										"variable": "FinalBoss_pulsar_tutorial",
+										"value": "true"
+									}
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
 									"sid": 189466483863566,
@@ -1671,11 +1783,6 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 261659483179794
-						},
-						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
 							"sid": 498923872411286,
@@ -1686,44 +1793,47 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 596778402443960,
+					"children": [
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 196630581156476,
-							"parameters": {
-								"seconds": "0.25"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 726537391653740,
-							"parameters": {
-								"audio-file": "Swipe",
-								"loop": "not-looping",
-								"volume": "VOLUMEN_MASTER_FX",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "tween-one-property",
-							"objectClass": "START_TXT",
-							"sid": 771002393503885,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"Entra\"",
-								"property": "offsetY",
-								"end-value": "245",
-								"time": "0.4",
-								"ease": "easeoutexpo",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 905863968409621
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 105769916101990,
+									"parameters": {
+										"seconds": "0.25"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "START_TXT",
+									"sid": 688783465416011,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"Entra\"",
+										"property": "offsetY",
+										"end-value": "245",
+										"time": "0.4",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								}
+							],
+							"sid": 776702974611797
 						}
-					],
-					"sid": 596778402443960
+					]
 				},
 				{
 					"eventType": "block",
@@ -1814,11 +1924,6 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 848390078649874
-						},
-						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
 							"sid": 814413760822732,
@@ -1829,51 +1934,65 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 145333994281789,
+					"children": [
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 514952969714273,
-							"parameters": {
-								"seconds": "1.0"
-							}
-						},
-						{
-							"id": "tween-one-property",
-							"objectClass": "START_TXT",
-							"sid": 834477615108870,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"se_va_\"",
-								"property": "offsetY",
-								"end-value": "-288",
-								"time": "0.5",
-								"ease": "easeoutexpo",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 390210946914672,
-							"parameters": {
-								"variable": "PASOS_FINAL_BOSS",
-								"value": "6"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "JEFE_FINAL",
-							"sid": 127842089944570,
-							"parameters": {
-								"instance-variable": "DIRECCION",
-								"value": "1"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 720892266858342
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 561912729262037,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "START_TXT",
+									"sid": 380677801213848,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"se_va_\"",
+										"property": "offsetY",
+										"end-value": "-288",
+										"time": "0.5",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 445653023210913,
+									"parameters": {
+										"variable": "PASOS_FINAL_BOSS",
+										"value": "6"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "JEFE_FINAL",
+									"sid": 950574965926317,
+									"parameters": {
+										"instance-variable": "DIRECCION",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 502352424667775
 						}
-					],
-					"sid": 145333994281789
+					]
 				},
 				{
 					"eventType": "block",
@@ -2557,7 +2676,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -2569,7 +2689,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -2708,7 +2829,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -2720,7 +2842,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -2859,7 +2982,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -2871,7 +2995,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3056,7 +3181,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3068,7 +3194,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3227,7 +3354,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3239,7 +3367,8 @@
 																"layer": "0",
 																"x": "bola.X",
 																"y": "bola.Y",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -3493,7 +3622,8 @@
 																"layer": "\"HUD\"",
 																"x": "431",
 																"y": "240",
-																"create-hierarchy": false
+																"create-hierarchy": false,
+																"template-name": "\"\""
 															}
 														},
 														{
@@ -4033,7 +4163,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4061,7 +4192,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4089,7 +4221,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4117,7 +4250,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4145,7 +4279,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4173,7 +4308,8 @@
 								"layer": "\"PINCHOS\"",
 								"x": "choose(38+(24*2),38+(24*3),38+(24*4),38+(24*5),38+(24*6),38+(24*7),38+(24*8),38+(24*9),38+(24*10),38+(24*11),38+(24*12),38+(24*13),38+(24*14),38+(24*15),38+(24*16),38+(24*17),38+(24*18),38+(24*19),38+(24*20),38+(24*21),38+(24*22),38+(24*23),38+(24*24),38+(24*25),38+(24*26),38+(24*27),38+(24*28),38+(24*29),38+(24*30),38+(24*31),38+(24*32),38+(24*33))",
 								"y": "65",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
@@ -4781,7 +4917,8 @@
 												"layer": "\"fondo\"",
 												"x": "276",
 												"y": "1143",
-												"create-hierarchy": false
+												"create-hierarchy": false,
+												"template-name": "\"\""
 											}
 										},
 										{
@@ -4818,7 +4955,8 @@
 												"layer": "\"fondo\"",
 												"x": "583",
 												"y": "1143",
-												"create-hierarchy": false
+												"create-hierarchy": false,
+												"template-name": "\"\""
 											}
 										},
 										{
@@ -4903,7 +5041,8 @@
 												"layer": "\"fondo\"",
 												"x": "276",
 												"y": "1143",
-												"create-hierarchy": false
+												"create-hierarchy": false,
+												"template-name": "\"\""
 											}
 										},
 										{
@@ -4940,7 +5079,8 @@
 												"layer": "\"fondo\"",
 												"x": "583",
 												"y": "1143",
-												"create-hierarchy": false
+												"create-hierarchy": false,
+												"template-name": "\"\""
 											}
 										},
 										{
@@ -5331,7 +5471,7 @@
 											"objectClass": "Audio",
 											"sid": 275502429035805,
 											"parameters": {
-												"audio-file": "Risa_enemigo",
+												"audio-file": "risa_enemigo",
 												"loop": "not-looping",
 												"volume": "VOLUMEN_MASTER_FX",
 												"tag-optional": "\"\""
@@ -5749,6 +5889,29 @@
 									}
 								},
 								{
+									"id": "set-y",
+									"objectClass": "RESPLANDOR",
+									"sid": 422678584040969,
+									"parameters": {
+										"y": "Self.Y+12"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "RESPLANDOR",
+									"sid": 968572816560348,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "llave",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
 									"id": "move-to-object",
 									"objectClass": "RESPLANDOR",
 									"sid": 541601533780768,
@@ -5859,7 +6022,7 @@
 									"objectClass": "Audio",
 									"sid": 335364540283895,
 									"parameters": {
-										"audio-file": "Powerup",
+										"audio-file": "powerup",
 										"loop": "not-looping",
 										"volume": "VOLUMEN_MASTER_FX",
 										"tag-optional": "\"\""
@@ -5883,6 +6046,29 @@
 										"layer": "Self.LayerName",
 										"image-point": "0",
 										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "RESPLANDOR",
+									"sid": 665308642210436,
+									"parameters": {
+										"y": "Self.Y+12"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "RESPLANDOR",
+									"sid": 280991538372210,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "llave",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
 									}
 								},
 								{

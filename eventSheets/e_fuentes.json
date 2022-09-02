@@ -4,14 +4,14 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "FUENTES  PARA LOS TEXTOS ADAPTADOS A IDIOMAS",
+			"title": "FONTS FOR TEXTS ADAPTED TO LANGUAGES",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "RUSO",
+					"title": "Russian",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -166,7 +166,7 @@
 												{
 													"id": "set-y",
 													"objectClass": "HUD_TXT",
-													"sid": 812010394255822,
+													"sid": 678298459518856,
 													"parameters": {
 														"y": "Self.Y-3"
 													}
@@ -192,9 +192,57 @@
 												{
 													"id": "set-y",
 													"objectClass": "HUD_TXT",
-													"sid": 160874147765042,
+													"sid": 362099532263554,
 													"parameters": {
-														"y": "Self.Y+4"
+														"y": "Self.Y-3"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_1",
+													"sid": 605940783564010,
+													"parameters": {
+														"y": "Self.Y-0.1"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_2",
+													"sid": 434288897702192,
+													"parameters": {
+														"y": "Self.Y-0.1"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_3",
+													"sid": 343061253833750,
+													"parameters": {
+														"y": "Self.Y-0.1"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_ROOM_TXT_1",
+													"sid": 103051796562236,
+													"parameters": {
+														"y": "Self.Y-0.4"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_ROOM_TXT_2",
+													"sid": 222862989915026,
+													"parameters": {
+														"y": "Self.Y-0.4"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_ROOM_TXT_3",
+													"sid": 214240213055988,
+													"parameters": {
+														"y": "Self.Y-0.4"
 													}
 												}
 											],
@@ -230,6 +278,27 @@
 										}
 									],
 									"sid": 670640406731058
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 895855498713284
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 226434661003720,
+											"parameters": {
+												"y": "240"
+											}
+										}
+									],
+									"sid": 963209942923336
 								},
 								{
 									"eventType": "block",
@@ -324,7 +393,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "JAPONES",
+					"title": "Japanese",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -505,9 +574,81 @@
 												{
 													"id": "set-y",
 													"objectClass": "HUD_TXT",
-													"sid": 141433705790123,
+													"sid": 118277407395730,
 													"parameters": {
-														"y": "Self.Y+4"
+														"y": "Self.Y-2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_1",
+													"sid": 291572648540875,
+													"parameters": {
+														"y": "Self.Y-0.1"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_2",
+													"sid": 455300409792569,
+													"parameters": {
+														"y": "Self.Y-0.1"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_3",
+													"sid": 262156585317517,
+													"parameters": {
+														"y": "Self.Y-0.1"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_lastSaved_1",
+													"sid": 971594133757176,
+													"parameters": {
+														"y": "Self.Y-0.1"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_lastSaved_2",
+													"sid": 503824257461112,
+													"parameters": {
+														"y": "Self.Y-0.1"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_lastSaved_3",
+													"sid": 783691725908903,
+													"parameters": {
+														"y": "Self.Y-0.1"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_ROOM_TXT_1",
+													"sid": 207751951522107,
+													"parameters": {
+														"y": "Self.Y-0.2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_ROOM_TXT_2",
+													"sid": 249573088922956,
+													"parameters": {
+														"y": "Self.Y-0.2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_ROOM_TXT_3",
+													"sid": 672186902258848,
+													"parameters": {
+														"y": "Self.Y-0.2"
 													}
 												}
 											],
@@ -557,9 +698,9 @@
 										{
 											"id": "set-y",
 											"objectClass": "FINAL_texto_juego_superado",
-											"sid": 193617904548674,
+											"sid": 847020491588660,
 											"parameters": {
-												"y": "246"
+												"y": "240"
 											}
 										}
 									],
@@ -633,7 +774,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "COREANO",
+					"title": "Korean",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -814,9 +955,81 @@
 												{
 													"id": "set-y",
 													"objectClass": "HUD_TXT",
-													"sid": 258851890886185,
+													"sid": 730419979605085,
 													"parameters": {
-														"y": "Self.Y+4"
+														"y": "Self.Y-2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_1",
+													"sid": 943438497784641,
+													"parameters": {
+														"y": "Self.Y-0.2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_2",
+													"sid": 128725018130905,
+													"parameters": {
+														"y": "Self.Y-0.2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_3",
+													"sid": 464834936291602,
+													"parameters": {
+														"y": "Self.Y-0.2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_lastSaved_1",
+													"sid": 529438207557167,
+													"parameters": {
+														"y": "Self.Y-0.2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_lastSaved_2",
+													"sid": 673854092546130,
+													"parameters": {
+														"y": "Self.Y-0.2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_TXT_lastSaved_3",
+													"sid": 849047372781193,
+													"parameters": {
+														"y": "Self.Y-0.2"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_ROOM_TXT_1",
+													"sid": 714479606212844,
+													"parameters": {
+														"y": "Self.Y-0.5"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_ROOM_TXT_2",
+													"sid": 532084307978152,
+													"parameters": {
+														"y": "Self.Y-0.5"
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "SLOTS_ROOM_TXT_3",
+													"sid": 253583152538982,
+													"parameters": {
+														"y": "Self.Y-0.5"
 													}
 												}
 											],
@@ -866,9 +1079,9 @@
 										{
 											"id": "set-y",
 											"objectClass": "FINAL_texto_juego_superado",
-											"sid": 280441217061960,
+											"sid": 728622220330301,
 											"parameters": {
-												"y": "250"
+												"y": "240"
 											}
 										}
 									],
@@ -941,13 +1154,9 @@
 					"sid": 901569276540528
 				},
 				{
-					"eventType": "comment",
-					"text": "PROVISIONAL"
-				},
-				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "CHINO",
+					"title": "Chinese",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -1274,9 +1483,9 @@
 												{
 													"id": "set-y",
 													"objectClass": "HUD_TXT",
-													"sid": 646023044379130,
+													"sid": 184605029977988,
 													"parameters": {
-														"y": "Self.Y+4"
+														"y": "Self.Y-2"
 													}
 												},
 												{
@@ -1372,13 +1581,42 @@
 										{
 											"id": "set-x",
 											"objectClass": "SpeedRun_TXT_in_Levels_shadow",
-											"sid": 934671137626525,
+											"sid": 699023868837182,
 											"parameters": {
-												"x": "Self.X+10"
+												"x": "Self.X+12"
 											}
 										}
 									],
 									"sid": 130313915101193
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 208862841490550
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 628111452257671,
+											"parameters": {
+												"y": "238"
+											}
+										},
+										{
+											"id": "set-font-size",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 395953582276593,
+											"parameters": {
+												"size-pt": "11.5"
+											}
+										}
+									],
+									"sid": 608078851286988
 								},
 								{
 									"eventType": "block",
@@ -1409,7 +1647,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "OCCIDENTAL",
+					"title": "english - spanish - german - french - portuguese(br) - (all western languages share the same source)",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -1557,9 +1795,9 @@
 										{
 											"id": "set-y",
 											"objectClass": "FINAL_texto_juego_superado",
-											"sid": 583109927777289,
+											"sid": 971452572402317,
 											"parameters": {
-												"y": "242"
+												"y": "230"
 											}
 										}
 									],
@@ -1656,9 +1894,9 @@
 										{
 											"id": "set-y",
 											"objectClass": "FINAL_texto_juego_superado",
-											"sid": 865099562452278,
+											"sid": 378475802598294,
 											"parameters": {
-												"y": "242"
+												"y": "230"
 											}
 										}
 									],
@@ -1745,6 +1983,27 @@
 										}
 									],
 									"sid": 862058383994137
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 899280813261129
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "FINAL_texto_juego_superado",
+											"sid": 639891268588081,
+											"parameters": {
+												"y": "230"
+											}
+										}
+									],
+									"sid": 743940583841678
 								}
 							]
 						},
@@ -1884,18 +2143,36 @@
 											"sid": 455342055845710
 										}
 									],
-									"actions": [
-										{
-											"id": "set-y",
-											"objectClass": "HUD_TXT",
-											"sid": 614633816750622,
-											"parameters": {
-												"y": "Self.Y-1"
-											}
-										}
-									],
+									"actions": [],
 									"sid": 726454976898705,
-									"disabled": true
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 214992252123618,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 1,
+														"second-value": "\"SLOTS\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-y",
+													"objectClass": "HUD_TXT",
+													"sid": 878996894492147,
+													"parameters": {
+														"y": "Self.Y-1"
+													}
+												}
+											],
+											"sid": 207643868717180
+										}
+									]
 								}
 							],
 							"isOrBlock": true
